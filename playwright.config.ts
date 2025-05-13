@@ -12,7 +12,7 @@ export default defineConfig({
         ignoreHTTPSErrors: true,
         screenshot: 'only-on-failure',
         video: 'retain-on-failure',
-        baseURL: 'BASE_URL'
+        baseURL: 'https://www.kurly.com',
     },
     reporter: [['list'],
      ['allure-playwright'], 
