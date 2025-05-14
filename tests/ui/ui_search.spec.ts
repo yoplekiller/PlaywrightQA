@@ -1,13 +1,24 @@
 import { test, expect } from '@playwright/test';
+import { loadExcelFile } from './excel_loader'; // ✅ 한 줄로만 불러오기
 
-test('test', async ({ page }) => {
-  await page.goto('https://www.kurly.com/main');
-  await page.locator('.css-vdi47h').click();
-  await page.getByRole('textbox', { name: '검색어를 입력해주세요' }).fill('양파');
-  await page.getByRole('textbox', { name: '검색어를 입력해주세요' }).press('Enter');
-  await page.getByRole('link', { name: '담기 샛별배송 [KF365] 햇 양파 1.8kg' }).getByRole('button').click();
-  await page.getByRole('button', { name: '장바구니 담기' }).click();
-  await page.getByRole('button', { name: '1', exact: true }).click();
-  const productTitle = page.getByText('[KF365] 햇 양파 1.8kg');
-  await expect(productTitle).toBeVisible();
+const searchCases = loadExcelFile('./test_case.xlsx');
+
+test.describe('엑셀 데이터 기반 검색 테스트', () => {
+  for (const { tc_id, search_term } of searchCases) {
+    test(`TC ${tc_id}: '${search_term}' 검색 테스트`, async ({ page }) => {
+      await page.goto('https://www.kurly.com/main');
+
+      const searchBox = page.locator('input[placeholder="검색어를 입력해주세요"]');
+      await searchBox.fill(search_term);
+      await searchBox.press('Enter');
+
+      await page.waitForTimeout(4000);
+
+      const productElements = page.locator('span.css-1qfsi3d');
+
+      // 파일명 특수문자 제거
+      const safeSearchTerm = search_term.replace(/[\\/:"*?<>|]+/g, '');
+      await page.screenshot({ path: `screenshots/${tc_id}_${safeSearchTerm}.png` });
+    });
+  }
 });

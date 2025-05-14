@@ -1,10 +1,12 @@
 {
   "dependencies": {
     "dotenv": "^16.5.0",
-    "env": "^0.0.2"
+    "env": "^0.0.2",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@playwright/test": "^1.52.0",
-    "allure-playwright": "^3.2.2"
+    "allure-playwright": "^3.2.2",
+    "typescript": "^5.8.3"
   }
 }
