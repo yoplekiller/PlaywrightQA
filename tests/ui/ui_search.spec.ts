@@ -8,6 +8,6 @@ test('test', async ({ page }) => {
   await page.getByRole('link', { name: '담기 샛별배송 [KF365] 햇 양파 1.8kg' }).getByRole('button').click();
   await page.getByRole('button', { name: '장바구니 담기' }).click();
   await page.getByRole('button', { name: '1', exact: true }).click();
-  const productTitle = page.getByText('text=[KF365] 햇 양파 1.8kg');
+  const productTitle = page.getByText('[KF365] 햇 양파 1.8kg');
   await expect(productTitle).toBeVisible();
 });
