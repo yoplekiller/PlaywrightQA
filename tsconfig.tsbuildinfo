@@ -1,1 +1,1 @@
-{"root":["./excel_loader.ts","./playwright.config.ts","./tests/ui/sample.spec.ts","./tests/ui/ui_login.spec.ts","./tests/ui/ui_search.spec.ts"],"errors":true,"version":"5.8.3"}
+{"root":["./src/excel_loader.ts"],"version":"5.8.3"}
