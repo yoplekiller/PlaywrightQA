@@ -6,6 +6,8 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.18",
+    "@types/xlsx": "^0.0.35",
     "allure-playwright": "^3.2.2",
     "typescript": "^5.8.3"
   }
