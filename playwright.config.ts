@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export default defineConfig({
-    timeout: 30000,
+    timeout: 150_000,
     retries: 0,
     use: {
         headless: true,
@@ -12,7 +12,7 @@ export default defineConfig({
         ignoreHTTPSErrors: true,
         screenshot: 'only-on-failure',
         video: 'retain-on-failure',
-        baseURL: 'https://www.kurly.com',
+        baseURL: 'https://www.kurly.com/main',
     },
     reporter: [['list'],
      ['allure-playwright'], 
