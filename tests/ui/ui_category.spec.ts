@@ -9,7 +9,7 @@ test.describe('카테고리 기능 테스트', () => {
     const searchBox = page.locator('input[placeholder="검색어를 입력해주세요"]');
     await searchBox.fill('과자');
     await searchBox.press('Enter');
-    await page.waitForTimeout(4000);
+    await page.waitForTimeout(12000);
 
     // 카테고리 버튼 테스트 함수
     const categories = [
@@ -26,7 +26,7 @@ test.describe('카테고리 기능 테스트', () => {
         const categoryButton = page.locator(`a:has-text("${name}")`);
         await expect(categoryButton).toBeVisible({ timeout: 5000 });
         await categoryButton.click();
-        await page.waitForTimeout(4000);
+        await page.waitForTimeout(12000);
 
         await page.screenshot({ path: `screenshots_category/${screenshot}.png` });
       } catch (e) {
