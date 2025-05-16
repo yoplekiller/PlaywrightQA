@@ -1,5 +1,9 @@
-// 오타 수정: funciton → function
+// 안전한 현재 시간 문자열을 리턴하는 유틸 함수
 export function getNowString() {
-    // ISO 포맷에서 T를 공백으로, 소수점 이하 및 Z 제거
-    return new Date().toISOString().replace('T', ' ').replace(/\..+/, '').replace('Z', '');
+  return new Date()
+    .toISOString()
+    .replace('T', ' ')
+    .replace(/\..+/, '')
+    .replace('Z', '')
+    .replace(/:/g, '-');
 }
