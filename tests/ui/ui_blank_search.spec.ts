@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { getNowString } from '../../src/utils/dataFormat';
 
-test('공백 입력 시, 팝업 노출 확인', async ({ page }) => {
+test('공백 입력 시, 팝업 노출 확인', async ({ page }, testInfo) => {
     await page.goto('https://www.kurly.com/main');
     await page.setViewportSize({ width: 1280, height: 720 });
 
@@ -18,5 +18,6 @@ test('공백 입력 시, 팝업 노출 확인', async ({ page }) => {
     // await page.waitForTimeout(3000); // 시연용 (최종 코드에서는 주석 처리 ㅇㅇ!)
     // 날짜 포함된 파일명 생성
     const now = getNowString();
+    const browserName = testInfo.project.name;
     await page.screenshot({ path: `screenshots/blank_search_popup_${now}.png` });
 });
