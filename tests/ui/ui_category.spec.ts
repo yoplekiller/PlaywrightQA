@@ -21,6 +21,7 @@ test('카테고리별 정렬 동작 및 검증', async ({ page }) => {
     const firstProduct = page.locator('.css-1dry2r1.e1c07x485').first();
     await expect(firstProduct).toBeVisible();
     const productText = (await firstProduct.textContent())?.trim() || '';
+    await page.waitForTimeout(2000); // Wait for 2 seconds to observe the change
     await page.screenshot({ path: `screenshots/${name}.png` });
   }
 });

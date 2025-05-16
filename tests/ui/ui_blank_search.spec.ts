@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { getNowString } from '../../src/utils/dataFormat';
 
 test('공백 입력 시, 팝업 노출 확인', async ({ page }) => {
     await page.goto('https://www.kurly.com/main');
@@ -15,5 +16,7 @@ test('공백 입력 시, 팝업 노출 확인', async ({ page }) => {
     const popupText = await popup.textContent();
     expect(popupText).toContain('검색어를 입력해주세요');
     // await page.waitForTimeout(3000); // 시연용 (최종 코드에서는 주석 처리 ㅇㅇ!)
-    await page.screenshot({ path: 'screenshots/blank_search_popup.png' });
+    // 날짜 포함된 파일명 생성
+    const now = getNowString();
+    await page.screenshot({ path: `screenshots/blank_search_popup_${now}.png` });
 });
