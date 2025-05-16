@@ -3,6 +3,19 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
+const reporters: [string, any?][] = [
+    ['list'],
+    ['allure-playwright'],
+    ['html', { outputFolder: 'playwright-report', open: 'never' }],
+];
+
+if (process.env.SLACK_WEBHOOK_TS) {
+    reporters.push([
+        './tests/reporters/SlackReporter',
+        { webhookUrl: process.env.SLACK_WEBHOOK_TS },
+    ]);
+}
+
 export default defineConfig({
     timeout: 150_000,
     retries: 0,
@@ -14,12 +27,7 @@ export default defineConfig({
         video: 'retain-on-failure',
         baseURL: 'https://www.kurly.com/main',
     },
-    reporter: [
-        ['list'],
-        ['allure-playwright'],
-        ['html', { outputFolder: 'playwright-report', open: 'never' }],
-        ['./tests/reporters/SlackReporter', { webhookUrl: process.env.SLACK_WEBHOOK_TS }],
-    ],
+    reporter: reporters as any, // type assertion to avoid TS error
     projects: [
         {
             name: 'chromium',
