@@ -72,4 +72,9 @@ jobs:
           name: playwright-test-results-xml
           path: test-results/*.xml
 
+      - name: Run Playwright tests
+        run: npx playwright test
+        env: 
+          SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
+
       

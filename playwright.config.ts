@@ -14,9 +14,11 @@ export default defineConfig({
         video: 'retain-on-failure',
         baseURL: 'https://www.kurly.com/main',
     },
-    reporter: [['list'],
-     ['allure-playwright'], 
-     ['html', { outputFolder: 'playwright-report', open: 'never' }]
+    reporter: [
+        ['list'],
+        ['allure-playwright'],
+        ['html', { outputFolder: 'playwright-report', open: 'never' }],
+        ['./tests/reporters/SlackReporter', { webhookUrl: process.env.SLACK_WEBHOOK_TS }],
     ],
     projects: [
         {
