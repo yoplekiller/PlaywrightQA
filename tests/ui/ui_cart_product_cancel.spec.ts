@@ -1,7 +1,10 @@
 import { test, expect } from '@playwright/test';
 
 test('test', async ({ page }) => {
-  await page.locator('button.css-mxd3pm.ekdqe1a0').click();
+  const myButton = page.locator('button.css-4ypn7b.e17x72af0');
+  await expect(myButton).toBeVisible({ timeout: 7000 }); // 최대 7초 대기
+  await myButton.click();
+
   await page.getByRole('textbox', { name: '뷰티 상품을 검색하세요' }).fill('과자');
   await page.getByRole('textbox', { name: '뷰티 상품을 검색하세요' }).press('Enter');
   await page.getByRole('link', { name: '담기 샛별배송 [아티장 비스킷] 밀러스 베이커 앤 바리스타 비스킷 4종 (택1) 커피와 잘 어울리는 아티장 비스킷 8,800원 188' }).getByRole('button').click();
