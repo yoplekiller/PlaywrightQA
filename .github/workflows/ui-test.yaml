@@ -9,6 +9,8 @@ on:
       - main,
       - develop
   workflow_dispatch:
+  schedule:
+    - cron: '0 */4 * * *' # Every 4 hours
 
 
 jobs:
