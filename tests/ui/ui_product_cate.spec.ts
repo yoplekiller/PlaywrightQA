@@ -1,14 +1,38 @@
-// import { test, expect } from '@playwright/test';
+import { test, expect } from '@playwright/test';
+import{ getNowString } from '../../src/utils/dataFormat';
 
-// test('test', async ({ page }) => {
-//   await page.getByRole('link', { name: '15%쿠폰+증정 담기 [헤라] New' }).getByRole('button').click();
-//   await page.locator('div').filter({ hasText: /^\[헤라\] 블랙 쿠션\(리필 포함\) 13N166,600원74,000원0$/ }).getByLabel('수량올리기').click();
-//   await page.locator('div').filter({ hasText: /^\[헤라\] 블랙 쿠션\(리필 포함\) 17C166,600원74,000원0$/ }).getByLabel('수량올리기').click();
-//   await page.locator('div').filter({ hasText: /^\[헤라\] 블랙 쿠션\(리필 포함\) 17N166,600원74,000원0$/ }).getByLabel('수량올리기').click();
-//   await page.locator('div').filter({ hasText: /^\[헤라\] 블랙 쿠션\(리필 포함\) 21C166,600원74,000원0$/ }).getByLabel('수량올리기').click();
-//   await page.getByRole('button', { name: '장바구니 담기' }).click();
-//   await page.getByRole('button', { name: '상품 이미지 [헤라] 블랙 쿠션(리필 포함) 17C1' }).click();
-//   await page.goto('https://www.kurly.com/cart');
-//   const cartItem = page.locator('div').filter({ hasText: /^\[헤라\] 블랙 쿠션\(리필 포함\) 17C166,600원74,000원0$/ });
-//   await expect(cartItem).toBeVisible();
-//   });
+test(' 검색 후  장바구니 담기가지 확인', async ({page}, testInfo) =>{
+    await page.goto('https://www.kurly.com/main');
+
+    const searchBox = page.getByPlaceholder('검색어를 입력해주세요');
+    await searchBox.click();
+    await searchBox.fill('과자');
+    await searchBox.press('Enter');
+    await page.waitForTimeout(2000);
+
+    // 상품 카드 셀렉터 수정: 공백 → 점으로 연결
+    const firstProduct = page.locator('.css-1dry2r1.e1c07x485').first();
+    await expect(firstProduct).toBeVisible();
+    await firstProduct.click();
+
+    const cartButton = page.locator('button:has-text("장바구니 담기")');
+    await expect(cartButton).toBeVisible();
+    await cartButton.click();
+    await page.waitForTimeout(2000); // Wait for 2 seconds to observe the change
+
+    await page.goto('https://www.kurly.com/cart');
+    await expect(page).toHaveURL('https://www.kurly.com/cart');
+    // 상품명(과자) 텍스트로 장바구니 내 상품 확인 (더 안정적)
+    const cartProduct = page.locator('text=[오리온] 초코칩쿠키 256g');
+    await expect(cartProduct.first()).toBeVisible();
+
+    // cartItems, cartItemCount 부분은 주석 처리 또는 필요시 텍스트 기반으로 수정
+    // const cartItems = page.locator('.css-1dry2r1.e1c07x485');
+    // const cartItemCount = await cartItems.count();
+    // expect(cartItemCount).toBeGreaterThan(0);
+    const now = getNowString();
+    const browserName = testInfo.project.name;
+    await page.screenshot({ path: `screenshots/cart_${browserName}_${now}.png` });
+    await page.waitForTimeout(2000); // Wait for 2 seconds to observe the change
+
+})

@@ -8,7 +8,7 @@ const searchCases = [
   { tc_id: '002', search_term: '바나나' },
 ];
 
-test.describe('엑셀 데이터 기반 검색 테스트', () => {
+test.describe('검색 테스트', () => {
   for (const { tc_id, search_term } of searchCases) {
     test(`TC ${tc_id}: '${search_term}' 검색 테스트`, async ({ page }) => {
       await page.goto('https://www.kurly.com/main');
