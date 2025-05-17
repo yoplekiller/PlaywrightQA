@@ -8,11 +8,18 @@ class SlackReporter implements Reporter {
     this.webhookUrl = options.webhookUrl;
   }
 
-  async onEnd(result: FullResult) {
+  async onEnd(result: FullResult): Promise<void> {
+    const status = result.status.toUpperCase();
+    const emoji = status === 'PASSED' ? '✅' : '❌';
+
+
     const message = {
-      text: `Test run completed with ${result.status}.`,
+      text: `${emoji} *Playwright 테스트 완료*\n\n` +
+            `*상태:* ${status}\n` +
+            `*총 실행 시간:* ${Math.round(result.duration / 1000)}초`,
       attachments: [
         {
+          color: status === 'PASSED' ? 'good' : 'danger',
           title: 'Test Results',
           fields: [
             { title: 'Passed', value: `${result.status === 'passed' ? 1 : 0}`, short: true },
@@ -25,9 +32,9 @@ class SlackReporter implements Reporter {
 
     try {
       await axios.post(this.webhookUrl, message);
-      console.log('Message sent to Slack');
+      console.log('✅ Slack 메시지 전송 완료!');
     } catch (error) {
-      console.error('Error sending message to Slack:', error);
+      console.error('❌ Slack 전송 실패:', error);
     }
   }
 }
