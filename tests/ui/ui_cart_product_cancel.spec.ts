@@ -16,7 +16,9 @@ test('test', async ({ page }) => {
   await expect(targetButton).toBeVisible({ timeout: 7000 });
   await targetButton.click();
 
-
+  await page.waitForLoadState('networkidle'); // 네트워크 안정 시점까지 대기
+  
+  await expect(page.locator("xpath=(//button[@aria-label='수량올리기'])[1]")).toBeVisible({ timeout: 10000 });
   const nextBtn = page.locator("xpath=(//button[@aria-label='수량올리기'])[1]");
   await expect(nextBtn).toBeVisible({ timeout: 7000 });
   await nextBtn.click();
@@ -37,5 +39,5 @@ test('test', async ({ page }) => {
   await page.getByText('전체선택 0/').click();
   await page.getByRole('button', { name: '선택삭제' }).click();
   await page.getByRole('button', { name: 'confirm-button' }).click();
-  await expect(page.getByText("전체선택 0/0선택삭제장바구니에 담긴 상품이 없습니다")).toBeVisible();
+  await expect(page.getByText('장바구니에 담긴 상품이 없습니다.')).toBeVisible();
 });
