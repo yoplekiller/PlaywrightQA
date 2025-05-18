@@ -14,6 +14,10 @@ class SlackReporter implements Reporter {
   private total: number = 0;
   private failedDetails: { title: string, file: string, error?: string }[] = [];
 
+  constructor(options: { webhookUrl: string }) {
+    this.webhookUrl = options.webhookUrl;
+  }
+
   onBegin(config, suite) {
     this.startTime = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
     this.total = suite.allTests().length;
