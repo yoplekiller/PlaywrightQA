@@ -39,4 +39,4 @@ class SlackReporter implements Reporter {
   }
 }
 
-module.exports = SlackReporter;
+export default SlackReporter;
