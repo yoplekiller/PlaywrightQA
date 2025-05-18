@@ -28,8 +28,8 @@ class SlackReporter implements Reporter {
 
     const message = {
       text: `${emoji} *Playwright 테스트 완료*\n\n` +
-            `*📝결과:* ${status}\n` +
-            `*총 실행 시간:* ${Math.round(result.duration / 1000)}초`,
+            `*📝테스트 결과:* ${status}\n` +
+            `*⏲️총 실행 시간:* ${Math.round(result.duration / 1000)}초`,
       attachments: [
         {
           color: status === 'PASSED' ? 'good' : 'danger',
