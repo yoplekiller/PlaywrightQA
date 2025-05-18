@@ -23,6 +23,7 @@ class SlackReporter implements Reporter {
 
   async onEnd(result: FullResult): Promise<void> {
     const status = result.status.toUpperCase();
+    const now = new Date().toLocaleString('ko-KR', {timeZone: 'Asia/Seoul'});
     const emoji = status === 'PASSED' ? '✅' : '❌';
     const allureUrl = process.env.ALLURE_REPORT_URL || '';
     const reportLink = allureUrl ? `\n*🔗 Allure 리포트: <${allureUrl}|바로가기>*` : '';
