@@ -30,11 +30,25 @@ jobs:
 
       - name: Install Playwright browsers
         run: npx playwright install
+
+      
     
       - name: Run Playwright tests
-        run: npx playwright test --config=playwright.config.ts --reporter=html,allure-playwright --trace=on --workers=3
+        run: npx playwright test --config=playwright.config.ts --trace=on --workers=3
         env: 
           SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
+      
+      - name: Deploy Playwright HTML reprot to gh-pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./playwright-report
+          publish_branch: gh-pages
+          destination_dir: playwright-report
+          force_orphan: true
+          keep_files: false
+          commit_message: 'Deploy Playwright HTML report'    
 
       - name: Upload Playwright HTML report
         uses: actions/upload-artifact@v4
