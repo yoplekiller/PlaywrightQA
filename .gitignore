@@ -5,3 +5,12 @@ test-results/
 dist/
 *.js
 memo.md
+dist/
+.cache/
+allure-report/
+*.log
+*.tsbuildinfo
+*.tgz
+*.zip
+node_modules/
+*.tgz  
