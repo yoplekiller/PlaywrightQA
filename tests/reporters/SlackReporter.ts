@@ -20,7 +20,7 @@ class SlackReporter implements Reporter {
     this.total = suite.allTests().length;
   }
 
-  // --- onTestEnd 수정 ---
+
   private failedDetails: { title: string, file: string, error?: string }[] = [];
   onTestEnd(test, result) {
     if (result.status === 'passed') {
@@ -32,7 +32,7 @@ class SlackReporter implements Reporter {
         title: test.title,
         file: test.location?.file || '',
         error: result.errors && result.errors[0]?.message ? result.errors[0].message.split('\n')[0] : ''
-      });
+      }); 
     } else if (result.status === 'skipped') {
       this.skipped++;
     } 
@@ -50,16 +50,18 @@ class SlackReporter implements Reporter {
       failedList = '\n\n*❌ 실패 테스트 목록:*\n' +
         this.failedDetails.map((t, i) => `${i + 1}. [${t.file}] ${t.title}${t.error ? `\n   - Error: ${t.error}` : ''}`).join('\n');
     }
+    // 텍스트 조립을 별도 변수로 분리하여 가독성 개선
+    const text =
+      `${emoji} *Playwright 테스트 완료*\n\n` +
+      `*📝결과:* ${status}\n` +
+      `*⏲️시작:* ${this.startTime}\n` +
+      `*⏲️종료:* ${now}\n` +
+      `*⏳총 소요:* ${Math.round(result.duration / 1000)}초\n` +
+      `\n*총 테스트:* ${this.total} | *성공:* ${this.passed} | *실패:* ${this.failed} | *스킵:* ${this.skipped}` +
+      failedList +
+      reportLink;
     const message = {
-      text:
-`${emoji} *Playwright 테스트 완료*\n\n` +
-`*📝결과:* ${status}\n` +
-`*⏲️시작:* ${this.startTime}\n` +
-`*⏲️종료:* ${now}\n` +
-`*⏳총 소요:* ${Math.round(result.duration / 1000)}초\n` +
-`\n*총 테스트:* ${this.total} | *성공:* ${this.passed} | *실패:* ${this.failed} | *스킵:* ${this.skipped}` +
-failedList +
-reportLink,
+      text,
       attachments: [
         {
           color: status === 'PASSED' ? 'good' : 'danger',
