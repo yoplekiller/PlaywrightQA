@@ -37,7 +37,8 @@ jobs:
         run: npx playwright test --config=playwright.config.ts --trace=on --workers=3
         env: 
           SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
-          ALLURE_REPORT_URL: https://yoplekiller.github.io/QATEST/playwright-report
+          PLAYWRIGHT_REPORT_URL: https://yoplekiller.github.io/QATEST/playwright-report/
+          ALLURE_REPORT_URL: https://yoplekiller.github.io/QATEST/allure-report
 
       
       - name: Deploy Playwright HTML reprot to gh-pages
@@ -48,7 +49,7 @@ jobs:
           publish_dir: ./playwright-report
           publish_branch: gh-pages
           destination_dir: playwright-report
-          force_orphan: true
+          force_orphan: true 
           keep_files: false
           commit_message: 'Deploy Playwright HTML report'    
 

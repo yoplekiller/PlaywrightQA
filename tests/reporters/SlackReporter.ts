@@ -44,7 +44,9 @@ class SlackReporter implements Reporter {
     const now = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
     const emoji = status === 'PASSED' ? '✅' : '❌';
     const allureUrl = process.env.ALLURE_REPORT_URL || '';
+    const playwrightUrl = process.env.PLAYWRIGHT_REPORT_URL || '';
     const reportLink = allureUrl ? `\n*🔗 Allure 리포트: <${allureUrl}|바로가기>*` : '';
+    const playwrightReportLink = playwrightUrl ? `\n*📊 Playwright 리포트: <${playwrightUrl}|결과 보기>*` : '';
     let failedList = '';
     if (this.failedDetails.length > 0) {
       failedList = [
@@ -64,7 +66,8 @@ class SlackReporter implements Reporter {
       '',
       `*총 테스트:* ${this.total} | *성공:* ${this.passed} | *실패:* ${this.failed} | *스킵:* ${this.skipped}`,
       failedList,
-      reportLink
+      reportLink,
+      playwrightReportLink
     ];
     const text = lines.filter(Boolean).join('\n');
 
