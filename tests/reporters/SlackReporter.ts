@@ -9,8 +9,9 @@ class SlackReporter implements Reporter {
   }
 
   async onEnd(result: FullResult) {
+    const now = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
     const message = {
-      text: `Test run completed with ${result.status}.`,
+      text: `테스트 완료 시각: ${now}\nTest run completed with ${result.status}.`,
       attachments: [
         {
           title: 'Test Results',
