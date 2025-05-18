@@ -37,6 +37,7 @@ jobs:
         run: npx playwright test --config=playwright.config.ts --trace=on --workers=3
         env: 
           SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
+          
       
       - name: Deploy Playwright HTML reprot to gh-pages
         if: always()

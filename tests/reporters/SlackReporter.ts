@@ -7,21 +7,15 @@ class SlackReporter implements Reporter {
   private failed = 0;
   private skipped = 0;
   private failedTests: string[] = [];
-
-  // 테스트 시작 시각 저장 (onBegin에서)
-  // 전체 테스트 수 저장 (onBegin에서)
-  // 실패 테스트의 파일명, 에러 메시지 저장 (onTestEnd에서)
-
-  // --- onBegin 추가 ---
   private startTime: string = '';
   private total: number = 0;
+  private failedDetails: { title: string, file: string, error?: string }[] = [];
+
   onBegin(config, suite) {
     this.startTime = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
     this.total = suite.allTests().length;
   }
 
-
-  private failedDetails: { title: string, file: string, error?: string }[] = [];
   onTestEnd(test, result) {
     if (result.status === 'passed') {
       this.passed++;
@@ -32,13 +26,12 @@ class SlackReporter implements Reporter {
         title: test.title,
         file: test.location?.file || '',
         error: result.errors && result.errors[0]?.message ? result.errors[0].message.split('\n')[0] : ''
-      }); 
+      });
     } else if (result.status === 'skipped') {
       this.skipped++;
-    } 
+    }
   }
 
-  // --- onEnd 수정 ---
   async onEnd(result: FullResult): Promise<void> {
     const status = result.status.toUpperCase();
     const now = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
@@ -47,19 +40,27 @@ class SlackReporter implements Reporter {
     const reportLink = allureUrl ? `\n*🔗 Allure 리포트: <${allureUrl}|바로가기>*` : '';
     let failedList = '';
     if (this.failedDetails.length > 0) {
-      failedList = '\n\n*❌ 실패 테스트 목록:*\n' +
-        this.failedDetails.map((t, i) => `${i + 1}. [${t.file}] ${t.title}${t.error ? `\n   - Error: ${t.error}` : ''}`).join('\n');
+      failedList = [
+        '',
+        '*❌ 실패 테스트 목록:*',
+        ...this.failedDetails.map((t, i) => `${i + 1}. [${t.file}] ${t.title}${t.error ? `\n   - Error: ${t.error}` : ''}`)
+      ].join('\n');
     }
-    // 텍스트 조립을 별도 변수로 분리하여 가독성 개선
-    const text =
-      `${emoji} *Playwright 테스트 완료*\n\n` +
-      `*📝결과:* ${status}\n` +
-      `*⏲️시작:* ${this.startTime}\n` +
-      `*⏲️종료:* ${now}\n` +
-      `*⏳총 소요:* ${Math.round(result.duration / 1000)}초\n` +
-      `\n*총 테스트:* ${this.total} | *성공:* ${this.passed} | *실패:* ${this.failed} | *스킵:* ${this.skipped}` +
-      failedList +
-      reportLink;
+
+    const lines = [
+      `${emoji} *Playwright 테스트 완료*`,
+      '',
+      `*📝결과:* ${status}`,
+      `*⏲️시작:* ${this.startTime}`,
+      `*⏲️종료:* ${now}`,
+      `*⏳총 소요:* ${Math.round(result.duration / 1000)}초`,
+      '',
+      `*총 테스트:* ${this.total} | *성공:* ${this.passed} | *실패:* ${this.failed} | *스킵:* ${this.skipped}`,
+      failedList,
+      reportLink
+    ];
+    const text = lines.filter(Boolean).join('\n');
+
     const message = {
       text,
       attachments: [
