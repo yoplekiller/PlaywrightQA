@@ -3,9 +3,22 @@ import axios from 'axios';
 
 class SlackReporter implements Reporter {
   private webhookUrl: string;
+  private passed = 0;
+  private failed = 0;
+  private skipped = 0;
 
   constructor(options: { webhookUrl: string }) {
     this.webhookUrl = options.webhookUrl;
+  }
+
+  onTestEnd(test, result){
+    if (result.status === 'passed') {
+      this.passed++;
+    } else if (result.status === 'failed') {
+      this.failed++;
+    } else if (result.status === 'skipped') {
+      this.skipped++;
+    } 
   }
 
   async onEnd(result: FullResult): Promise<void> {
@@ -22,9 +35,9 @@ class SlackReporter implements Reporter {
           color: status === 'PASSED' ? 'good' : 'danger',
           title: 'Test Results',
           fields: [
-            { title: 'Passed', value: `${result.status === 'passed' ? 1 : 0}`, short: true },
-            { title: 'Failed', value: `${result.status === 'failed' ? 1 : 0}`, short: true },
-            { title: 'Skipped', value: `${result.status === 'timedout' ? 1 : 0}`, short: true },
+            { title: 'Passed', value: `${this.passed}`, short: true },
+            { title: 'Failed', value: `${this.failed}`, short: true },
+            { title: 'Skipped', value: `${this.skipped}`, short: true },
           ],
         },
       ],
