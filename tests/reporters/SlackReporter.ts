@@ -24,12 +24,14 @@ class SlackReporter implements Reporter {
   async onEnd(result: FullResult): Promise<void> {
     const status = result.status.toUpperCase();
     const emoji = status === 'PASSED' ? '✅' : '❌';
-
+    const allureUrl = process.env.ALLURE_REPORT_URL || '';
+    const reportLink = allureUrl ? `\n*🔗 Allure 리포트: <${allureUrl}|바로가기>*` : '';
 
     const message = {
       text: `${emoji} *Playwright 테스트 완료*\n\n` +
             `*📝테스트 결과:* ${status}\n` +
-            `*⏲️총 실행 시간:* ${Math.round(result.duration / 1000)}초`,
+            `*⏲️총 실행 시간:* ${Math.round(result.duration / 1000)}초` +
+            reportLink,
       attachments: [
         {
           color: status === 'PASSED' ? 'good' : 'danger',
