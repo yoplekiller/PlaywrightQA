@@ -1,5 +1,8 @@
 import type { Reporter, FullResult } from '@playwright/test/reporter';
+import dotenv from 'dotenv';
 import axios from 'axios';
+
+dotenv.config();
 
 class SlackReporter implements Reporter {
   private webhookUrl: string;
