@@ -32,7 +32,7 @@ jobs:
         run: npx playwright install
     
       - name: Run Playwright tests
-        run: npx playwright test --config=playwright.config.ts allure-playwright --trace=on --workers=3
+        run: npx playwright test --config=playwright.config.ts --trace=on --workers=3
         env: 
           SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
 
