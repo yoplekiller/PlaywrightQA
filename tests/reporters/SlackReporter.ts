@@ -35,9 +35,9 @@ class SlackReporter implements Reporter {
           color: status === 'PASSED' ? 'good' : 'danger',
           title: 'Test Results',
           fields: [
-            { title: 'Passed', value: `${this.passed}`, short: true },
-            { title: 'Failed', value: `${this.failed}`, short: true },
-            { title: 'Skipped', value: `${this.skipped}`, short: true },
+            { title: '✅Passed', value: `${this.passed}`, short: true },
+            { title: '❌Failed', value: `${this.failed}`, short: true },
+            { title: '⚠️Skipped', value: `${this.skipped}`, short: true },
           ],
         },
       ],
