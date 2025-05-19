@@ -21,7 +21,6 @@ test(' 검색 후  장바구니 담기까지 확인', async ({page}, testInfo) =
     await page.waitForTimeout(2000); // Wait for 2 seconds to observe the change
 
     await page.goto('https://www.kurly.com/cart');
-    await page.waitForLoadState('networkidle');
     await expect(page).toHaveURL('https://www.kurly.com/cart');
     
     const cartProduct = page.locator('text=[오리온] 초코칩쿠키 256g');
