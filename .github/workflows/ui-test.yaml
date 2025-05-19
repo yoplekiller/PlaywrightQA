@@ -54,7 +54,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
-          destination_dir: playwright-report
           force_orphan: true 
           keep_files: false
           commit_message: 'Deploy Playwright HTML report'    
