@@ -12,7 +12,7 @@ test('장바구니에 물건 담고 선택 취소까지', async ({ page }) => {
   await page.getByRole('textbox', { name: '뷰티 상품을 검색하세요' }).press('Enter');
   
   // XPath로 '담기' 버튼을 첫 번째로 찾기
-  const targetButton = page.locator("xpath=(//button[@type='button'][contains(text(),'담기')])[1]");
+  const targetButton = page.locator('.css-18y6jr4.e1hx75jb0');
   await expect(targetButton).toBeVisible({ timeout: 7000 });
   await targetButton.click();
 
