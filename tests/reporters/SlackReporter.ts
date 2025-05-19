@@ -67,7 +67,8 @@ class SlackReporter implements Reporter {
       `*총 테스트:* ${this.total} | *성공:* ${this.passed} | *실패:* ${this.failed} | *스킵:* ${this.skipped}`,
       failedList,
       reportLink,
-      playwrightReportLink
+      playwrightReportLink,
+      
     ];
     const text = lines.filter(Boolean).join('\n');
 
