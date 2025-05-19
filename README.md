@@ -24,7 +24,9 @@
  ┃ ┣ 📂ui
  ┃ ┃ ┗ 📜search_excel.spec.ts
  ┣ 📂src
- ┃ ┗ 📜utils/excel_loader.ts
+ ┃ ┗📂utils
+ ┃
+ ┃   ┗📜utils/excel_loader.ts
  ┣ 📂data
  ┃ ┗ 📜test_case.xlsx
  ┣ 📂screenshots
