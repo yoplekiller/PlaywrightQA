@@ -24,21 +24,22 @@ class SlackReporter implements Reporter {
   }
 
   onTestEnd(test, result) {
-    if (result.status === 'passed') {
-      this.passed++;
-    } else if (result.status === 'failed') {
-      this.failed++;
-      this.failedTests.push(test.title);
-      this.failedDetails.push({
-        title: test.title,
-        file: test.location?.file || '',
-        error: result.errors && result.errors[0]?.message ? result.errors[0].message.split('\n')[0] : ''
-      });
-    } else if (result.status === 'skipped') {
-      this.skipped++;
-    }
-  }
+  const failedStatuses = ['failed', 'timedOut', 'interrupted', 'crashed'];
 
+  if (result.status === 'passed') {
+    this.passed++;
+  } else if (failedStatuses.includes(result.status)) {
+    this.failed++;
+    this.failedTests.push(test.title);
+    this.failedDetails.push({
+      title: test.title,
+      file: test.location?.file || '',
+      error: result.errors?.[0]?.message?.split('\n')[0] || ''
+    });
+  } else if (result.status === 'skipped') {
+    this.skipped++;
+  }
+}
   async onEnd(result: FullResult): Promise<void> {
     const status = result.status.toUpperCase();
     const now = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
