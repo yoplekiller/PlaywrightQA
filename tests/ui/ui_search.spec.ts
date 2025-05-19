@@ -23,5 +23,13 @@ test('🔍 엑셀 기반 상품 검색 테스트', async ({ page }) => {
     const results = page.locator('[class*=product-card]');
     const count = await results.count();
     expect(count).toBeGreaterThan(0);
-  }
-});
+
+    const safeSearchTerm = search_term.replace(/[^a-zA-Z0-9]/g, '_');
+    await page.screenshot({ path: `screenshots/search_${safeSearchTerm}.png` });
+    console.log(`Test Case ID: ${tc_id}, Search Term: ${search_term}, Results Count: ${count}`);
+}
+  await page.close();
+} );
+test.afterAll(async () => {
+  console.log('모든 테스트가 완료되었습니다.');
+} );
