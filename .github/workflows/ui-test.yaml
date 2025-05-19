@@ -2,11 +2,11 @@ name: Playwright UI Tests
 on:
   push:
     branches:
-      - main,
+      - main
       - develop
   pull_request:
     branches:
-      - main,
+      - main
       - develop
   workflow_dispatch:
   schedule:
@@ -34,19 +34,27 @@ jobs:
       
     
       - name: Run Playwright tests
-        run: npx playwright test --config=playwright.config.ts --trace=on --workers=3
+        run: npx playwright test --config=playwright.config.ts --trace=on --workers=1
         env: 
           SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
+          PLAYWRIGHT_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html  
+          ALLURE_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/allure-report/index.html 
+
+      - name: Prepare Combined Report Folder
+        run: |
+          mkdir public
+          cp -r playwright-report public/playwright-report   # ✅ Playwright 리포트 복사
+          cp -r allure-report public/allure-report           # ✅ Allure 리포트 복사
+
       
       - name: Deploy Playwright HTML reprot to gh-pages
         if: always()
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./playwright-report
+          publish_dir: ./public
           publish_branch: gh-pages
-          destination_dir: playwright-report
-          force_orphan: true
+          force_orphan: true 
           keep_files: false
           commit_message: 'Deploy Playwright HTML report'    
 

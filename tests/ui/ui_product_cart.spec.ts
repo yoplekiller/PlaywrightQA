@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import{ getNowString } from '../../src/utils/dataFormat';
 
-test(' 검색 후  장바구니 담기가지 확인', async ({page}, testInfo) =>{
+test(' 검색 후  장바구니 담기까지 확인', async ({page}, testInfo) =>{
     await page.goto('https://www.kurly.com/main');
 
     const searchBox = page.getByPlaceholder('검색어를 입력해주세요');
@@ -22,7 +22,7 @@ test(' 검색 후  장바구니 담기가지 확인', async ({page}, testInfo) =
 
     await page.goto('https://www.kurly.com/cart');
     await expect(page).toHaveURL('https://www.kurly.com/cart');
-    // 상품명(과자) 텍스트로 장바구니 내 상품 확인 (더 안정적)
+    
     const cartProduct = page.locator('text=[오리온] 초코칩쿠키 256g');
     await expect(cartProduct.first()).toBeVisible();
 

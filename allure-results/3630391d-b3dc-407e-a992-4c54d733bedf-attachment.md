@@ -1,0 +1,593 @@
+# Test info
+
+- Name: 10주년 팝업 기능
+- Location: C:\Users\jmlim\OneDrive\Desktop\PlaywrightQA\tests\ui\ui_10th_popup.spec.ts:3:5
+
+# Error details
+
+```
+Error: expect.toBeVisible: Error: strict mode violation: getByText('10주년 굿즈') resolved to 2 elements:
+    1) <p>10주년 굿즈</p> aka getByText('10주년 굿즈', { exact: true })
+    2) <li>이벤트 참여 조건을 충족한 선착순 300명 고객님들께 회원가입 시 입력한 휴대폰 번호로 …</li> aka getByText('이벤트 참여 조건을 충족한 선착순 300')
+
+Call log:
+  - expect.toBeVisible with timeout 5000ms
+  - waiting for getByText('10주년 굿즈')
+
+    at C:\Users\jmlim\OneDrive\Desktop\PlaywrightQA\tests\ui\ui_10th_popup.spec.ts:6:43
+```
+
+# Page snapshot
+
+```yaml
+- link "한정수량 첫 구매 특가, 컬리 인기 상품 100원!":
+  - /url: https://event.kurly.com/lego/event/2023/0911/join/coupon
+- button "배너 하루 안보기":
+  - img
+  - text: 배너 하루 안보기
+- link "회원가입":
+  - /url: https://www.kurly.com/member/signup
+- link "로그인":
+  - /url: https://www.kurly.com/member/login?return_url=https%3A%2F%2Fevent.kurly.com%2Flego%2Fevent%2F2023%2F0911%2Fjoin%2Fcoupon
+- link "고객센터":
+  - /url: https://www.kurly.com/board/notice
+- link "마켓컬리 로고":
+  - /url: https://www.kurly.com/main/
+  - img "마켓컬리 로고"
+- link "마켓컬리":
+  - /url: https://www.kurly.com/main
+- link "뷰티컬리":
+  - /url: https://www.kurly.com/main/beauty
+- textbox "검색어를 입력해주세요"
+- button "submit"
+- button "찜하기"
+- button
+- text: 카테고리
+- list:
+  - listitem:
+    - link "신상품":
+      - /url: https://www.kurly.com/collection-groups/market-newproduct
+  - listitem:
+    - link "베스트":
+      - /url: https://www.kurly.com/collection-groups/market-best
+  - listitem:
+    - link "알뜰쇼핑":
+      - /url: https://www.kurly.com/collection-groups/market-sales-group
+  - listitem:
+    - link "특가/혜택":
+      - /url: https://www.kurly.com/market-benefit
+- link "샛별·하루 배송안내":
+  - /url: https://www.kurly.com/user-guide/delivery
+- list:
+  - listitem:
+    - paragraph: 100원딜
+  - listitem:
+    - paragraph: 10주년 굿즈
+  - listitem:
+    - paragraph: 첫 구매 쿠폰
+- img "상품 이미지"
+- paragraph: "[신규회원이벤트][한끼통살] 소스 닭가슴살 핫양념치킨맛 (4입)"
+- deletion: 10,650원
+- emphasis: 99%
+- strong: 100원
+- img "상품 이미지"
+- paragraph: "[신규회원이벤트][조선호텔] 떡갈비 345g"
+- deletion: 9,900원
+- emphasis: 98%
+- strong: 100원
+- img "상품 이미지"
+- paragraph: "[신규회원 100원딜][컬리X햇반] 향긋한 골든퀸쌀밥 210g*6입"
+- deletion: 9,980원
+- emphasis: 98%
+- strong: 100원
+- img "상품 이미지"
+- paragraph: "[신규회원 100원 딜][Kim's Butcher] 돌돌말이 대패 삼겹살 1kg"
+- deletion: 16,990원
+- emphasis: 99%
+- strong: 100원
+- img "상품 이미지"
+- paragraph: "[신규회원이벤트][탄단지] 곤드레나물밥&돈육숯불구이 (2개입)"
+- deletion: 9,200원
+- emphasis: 98%
+- strong: 100원
+- img "상품 이미지"
+- paragraph: "[신규회원이벤트][99핫도그] 크리스피 소시지 핫도그"
+- deletion: 9,900원
+- emphasis: 98%
+- strong: 100원
+- img "상품 이미지"
+- paragraph: "[신규회원 100원딜][KS365] 2겹 천연펄프 키친타월 (130매 X 6롤)"
+- deletion: 6,200원
+- emphasis: 98%
+- strong: 100원
+- img "상품 이미지"
+- paragraph: "[신규회원 이벤트][고래사어묵] 김치 우동 전골"
+- deletion: 10,800원
+- emphasis: 99%
+- strong: 100원
+- img "상품 이미지"
+- paragraph: "[신규회원이벤트][브리오신] 주방세제 본품 500ml"
+- deletion: 16,000원
+- emphasis: 99%
+- strong: 100원
+- img "상품 이미지"
+- paragraph: "[신규회원이벤트][하이트진로] 석수 생수 (2L X 6개)"
+- deletion: 3,680원
+- emphasis: 97%
+- strong: 100원
+- text: 전체보기
+- button "100원 특가 상품 구매하기"
+- text: 유의사항
+- list:
+  - listitem: • 본 프로모션은 컬리 신규 가입 고객을 대상으로 하며, 5월 1일 0시부터 가입한 신규 가입 고객은 모두 참여 가능합니다.
+  - listitem: • 첫 구매딜 상품은 1인당 최대 1개 구매 가능합니다.
+  - listitem: • 본 프로모션은 ID당 1회에 한해 참여 가능합니다. (중복 참여 불가)
+  - listitem: • 이벤트 상품은 조기 품절될 수 있으며, 품절 시 이벤트 대상에서 제외됩니다.
+  - listitem: • 장바구니에 담은 상품은 재고가 확보되지 않으며, 결제 완료 시점에 재고가 소진될 수 있습니다.
+  - listitem: • 첫 구매딜 상품은 단독 구매가 불가하며, 첫 구매딜 상품 외 다른 상품을 1만원 이상 함께 담아야 결제가 가능합니다. (첫 구매딜 상품은 최소 결제 금액 기준에서 제외됩니다.)
+  - listitem: • 첫 구매딜 혜택은 1회만 주어지며, 탈퇴 후 재가입 시에도 추가 혜택이 제공되지 않습니다.
+  - listitem: • 명의 도용, 중복 참여 등의 부정행위가 확인될 경우 이벤트 참여 시 주문이 취소될 수 있습니다.
+  - listitem: • 금전적 이익을 목적으로 해당 이벤트에 참여할 경우 서비스 이용이 제한될 수 있습니다.
+  - listitem: • 첫 구매딜로 구매한 상품의 부정사용 또는 재판매 행위가 적발될 경우, 서비스 이용이 제한될 수 있습니다.
+  - listitem: • 100원에 구매한 첫 구매딜 상품은 교환 및 환불이 불가하며, 고객님의 사용 또는 일부 소비로 상품의 가치가 훼손된 경우에도 교환이 불가합니다.
+  - listitem: • 물류센터별 입고 물량에 차이가 있을 수 있으며, 지역에 따라 상품의 재고 보유 수량 및 판매 마감 여부가 상이할 수 있습니다.
+  - listitem: • 본 이벤트는 당사의 사정에 의해 사전 예고 없이 변경되거나 조기 종료될 수 있습니다.
+- button "한정판 굿즈 자세히 보기"
+- text: 유의사항
+- list:
+  - listitem: • 100원 특가 상품을 포함하지 않거나, 총 결제 금액이 5만원 미만인 경우 및 증정이벤트 참여 기간 외 주문 건인 경우 컬리 10주년 한정판 피크닉 키트 증정 대상에서 제외됩니다.
+  - listitem: • 총 결제 금액 5만원은 쿠폰 할인 및 적립금 적용 후 실 결제 금액 기준입니다.
+  - listitem: • 컬리 10주년 한정판 피크닉 키트는 이벤트 조건을 충족한 고객 중 주문 결제 완료 순서 기준으로 증정됩니다.
+  - listitem: • 첫 구매딜 상품을 구매한 후, 주문을 취소할 경우 이벤트 증정 대상에서 제외됩니다.
+  - listitem: • 첫 구매딜 상품을 구매한 후, 주문을 부분 취소하여 총 결제 금액이 5만원 미만이 될 경우 이벤트 증정 대상에서 제외될 수 있습니다.
+  - listitem: • 이벤트 참여 조건을 충족한 선착순 300명 고객님들께 회원가입 시 입력한 휴대폰 번호로 개별 연락을 드릴 예정이며, 컬리 10주년 굿즈 증정 내용을 안내드릴 예정입니다.
+  - listitem: • 잘못된 개인정보 입력으로 인한 증정 안내 불가 및 증정 취소 등에 대한 책임은 이벤트 대상자에게 있습니다.
+  - listitem: • 명의 도용, 중복 참여 등의 부정행위가 확인될 경우 이벤트 당첨자 대상에서 제외됩니다.
+  - listitem: • 이벤트 당첨 이후 컬리 10주년 한정판 피크닉 키트의 부정사용 또는 재판매 행위가 적발될 경우, 서비스 이용이 제한될 수 있습니다.
+  - listitem: • 이벤트 당첨을 통해 수령한 컬리 10주년 한정판 피크닉 키트는 교환 및 반품이 불가하며, 고객님의 사용 또는 일부 소비로 상품의 가치가 훼손된 경우에도 교환이 불가합니다.
+  - listitem: • 물류센터별 입고 물량에 따라 차이가 있을 수 있으며, 지역에 따라 상품의 재고 보유 수량 및 판매 마감 여부가 상이할 수 있습니다.
+  - listitem: • 본 이벤트는 당사의 사정에 의해 경품이 사전 예고 없이 변경되거나 혹은 조기 종료될 수 있습니다.
+  - listitem: • [개인정보 수집 및 이용 동의]
+  - listitem: "• 수집 및 이용 목적 : 이벤트 참여자 식별·관리, 당첨자 안내, 관련 소통 진행"
+  - listitem: "• 수집 이용 및 항목 : 컬리 ID, 휴대폰 번호"
+  - listitem: "• 보유기간 : 이벤트 종료 후 1개월 이내 파기"
+  - listitem: • 귀하는 개인정보 수집・이용에 거부하실 권리가 있습니다. 다만, 거부하실 경우 이벤트 참여에 제한이 있을 수 있습니다.
+  - listitem: • 이벤트에 참여하신 경우, [개인정보 수집 및 이용 동의]에 자동 동의하신 것으로 간주됩니다.
+- text: 쿠폰 유의사항
+- list:
+  - listitem: • 쿠폰은 컬리 가입 후 구매 이력이 없는 고객님만 발급 가능합니다.
+  - listitem: • 50% 할인 쿠폰 사용 기한은 쿠폰 발급일로부터 3일 이내이며, 1개 이상 주문 시 사용 가능합니다.
+  - listitem: • 쿠폰 유효 기간 내 미사용으로 인한 재발급은 불가합니다.
+  - listitem: • 본 쿠폰은 1인당 1개 ID로만 다운로드 및 사용 가능합니다.
+  - listitem: • 쿠폰은 중복으로 사용할 수 없으며, 1회 주문 시 1개의 쿠폰만 적용 가능합니다.
+  - listitem: • 1인이 쿠폰을 여러 번 중복 다운로드하거나, 부정 사용이 확인될 경우 구매가 취소될 수 있습니다.
+  - listitem: • 쿠폰 남용 및 ID 중복 생성 등의 행위가 적발될 경우 서비스 이용이 제한될 수 있습니다.
+  - listitem: "• 일부 상품은 쿠폰 적용이 불가할 수 있으니 상품 및 쿠폰 유의사항을 확인 부탁드립니다. (적용 불가 : 탬버린즈, 러쉬, 설치 배송, 여행, 티켓, 가전제품 등)"
+  - listitem: • 쿠폰 발급 여부와 사용 기간은 [마이컬리] > [쿠폰] 에서 확인해주세요.
+  - listitem: • 본 이벤트는 당사의 사정에 의해 조기 종료될 수 있습니다.
+- img "상품 이미지"
+- paragraph: "[KF365] 대추방울토마토 750g"
+- deletion: 10,900원
+- emphasis: 26%
+- strong: 7,990원
+- img "상품 이미지"
+- paragraph: "[사미헌] 갈비탕"
+- strong: 13,000원
+- img "상품 이미지"
+- paragraph: "[KF365] 양념 소불고기 2종 (택1)"
+- deletion: 14,500원
+- emphasis: 10%
+- strong: 12,990원
+- img "상품 이미지"
+- paragraph: "[Kim's butcher] 돌돌말이 대패 삼겹살 1kg(냉동)"
+- deletion: 16,990원
+- emphasis: 30%
+- strong: 11,890원
+- img "상품 이미지"
+- paragraph: "[조선호텔] 떡갈비 345g"
+- deletion: 9,900원
+- emphasis: 17%
+- strong: 8,217원
+- img "상품 이미지"
+- paragraph: "[일일특가][이연복의 목란] 짬뽕 2인분 (맵기선택)"
+- deletion: 13,800원
+- emphasis: 20%
+- strong: 11,040원
+- img "상품 이미지"
+- paragraph: "[베키아에누보] 바질토마토치즈 치아바타 샌드위치 (3입)"
+- deletion: 13,980원
+- emphasis: 14%
+- strong: 11,980원
+- img "상품 이미지"
+- paragraph: "[KF365] 1+등급 무항생제 특란 20구"
+- deletion: 7,390원
+- emphasis: 10%
+- strong: 6,651원
+- img "상품 이미지"
+- paragraph: 세척사과 1.4kg (6~7입)
+- deletion: 19,900원
+- emphasis: 25%
+- strong: 14,900원
+- img "상품 이미지"
+- paragraph: "[브룩클린688] 호주산 목초육 치마살 구이용 300g (냉장)"
+- deletion: 16,590원
+- emphasis: 27%
+- strong: 11,990원
+- img "상품 이미지"
+- paragraph: "[KF365] 무항생제 특란 30구 (15구*2ea)"
+- strong: 9,980원
+- img "상품 이미지"
+- paragraph: "[거대곰탕] 곰탕"
+- deletion: 15,000원
+- emphasis: 24%
+- strong: 11,400원
+- img "상품 이미지"
+- paragraph: "[Kim's butcher] 호주산 소고기 샤브샤브 500g(냉동)"
+- deletion: 14,900원
+- emphasis: 26%
+- strong: 10,990원
+- img "상품 이미지"
+- paragraph: "[압구정주꾸미] 주꾸미 볶음 2종 (택1)"
+- deletion: 8,900원
+- emphasis: 24%
+- strong: 6,700원
+- img "상품 이미지"
+- paragraph: "[KF365] 훈제오리 2종 (2입)"
+- deletion: 17,990원
+- emphasis: 40%
+- strong: 10,790원
+- img "상품 이미지"
+- paragraph: "[KF365] 한돈 삼겹살 구이용 600g~ (냉장)"
+- deletion: 19,100원
+- emphasis: 30%
+- strong: 13,350원
+- img "상품 이미지"
+- paragraph: "[KF365] 1+ 한우 국거리 300g(냉장)"
+- deletion: 15,900원
+- emphasis: 30%
+- strong: 11,120원
+- img "상품 이미지"
+- paragraph: "[KF365] 춘천식 닭갈비 1kg (냉장)"
+- deletion: 15,290원
+- emphasis: 23%
+- strong: 11,691원
+- img "상품 이미지"
+- paragraph: "[자연실록] 무항생제 닭 다리살 (정육) 500g"
+- deletion: 10,200원
+- emphasis: 20%
+- strong: 8,160원
+- img "상품 이미지"
+- paragraph: "[KF365] 햇 감자 1kg"
+- deletion: 7,990원
+- emphasis: 25%
+- strong: 5,990원
+- text: 전체보기
+- list:
+  - listitem: 인기 급상승
+  - listitem: 인기 신상품
+  - listitem: 장보기특가
+  - listitem: 신선식품
+  - listitem: 요즘 베이커리
+  - listitem: 밀키트·간편식
+- img "상품 이미지"
+- paragraph: "[마이노멀] 알룰로스 485g"
+- strong: 8,980원
+- img "상품 이미지"
+- paragraph: "[골라담기] [풀무원] 인기 유부초밥 3종 (택1)"
+- deletion: 5,680원
+- emphasis: 20%
+- strong: 4,540원
+- img "상품 이미지"
+- paragraph: "[2개 이상 구매시, 20%할인] 인기 식단관리 20종 골라담기"
+- deletion: 3,200원
+- emphasis: 20%
+- strong: 2,560원
+- img "상품 이미지"
+- paragraph: "[하겐다즈] 아이스크림 바 80mL X 3개입 5종(택1) - 행사용"
+- deletion: 17,900원
+- emphasis: 40%
+- strong: 10,610원
+- img "상품 이미지"
+- paragraph: "[투다리] 인기 밀키트 8종 골라담기 (택1)"
+- deletion: 14,900원
+- emphasis: 25%
+- strong: 11,175원
+- img "상품 이미지"
+- paragraph: "[마이노멀] 엑스트라 버진 올리브오일 마요네즈"
+- deletion: 10,980원
+- emphasis: 15%
+- strong: 9,290원
+- img "상품 이미지"
+- paragraph: "[태우한우] 1+ 한우 안심 스테이크 200g (냉장)"
+- deletion: 39,700원
+- emphasis: 25%
+- strong: 29,750원
+- img "상품 이미지"
+- paragraph: "[실바트] 국내생산 까리노 IH 인덕션 프라이팬/웍/냄비 33종 (택1)"
+- deletion: 43,020원
+- emphasis: 47%
+- strong: 22,700원
+- img "상품 이미지"
+- paragraph: 산딸기 250g
+- deletion: 24,900원
+- emphasis: 20%
+- strong: 19,900원
+- img "상품 이미지"
+- paragraph: "[KF365] 양념 칼집 목살구이1kg (냉동)"
+- deletion: 15,500원
+- emphasis: 16%
+- strong: 12,990원
+- img "상품 이미지"
+- paragraph: "[KF365] 완숙토마토 2kg"
+- deletion: 10,900원
+- emphasis: 26%
+- strong: 7,990원
+- img "상품 이미지"
+- paragraph: 루비벨 토마토 750g
+- deletion: 13,900원
+- emphasis: 28%
+- strong: 9,990원
+- img "상품 이미지"
+- paragraph: 유기농 혼합 9곡 800g (콩없는 혼합 잡곡)
+- deletion: 9,990원
+- emphasis: 20%
+- strong: 7,990원
+- img "상품 이미지"
+- paragraph: "[하기스](팩) 팬티&밴드 기저귀 1팩단위 BEST 모음전 (택 1)"
+- deletion: 32,900원
+- emphasis: 31%
+- strong: 22,600원
+- img "상품 이미지"
+- paragraph: "[풀무원] 철판 바삭 감자채전 300g"
+- deletion: 5,980원
+- emphasis: 22%
+- strong: 4,605원
+- img "상품 이미지"
+- paragraph: "[테리파머] 스페셜 디자인 선염수건 200g 5장 고중량 호텔수건 (택1)"
+- deletion: 59,800원
+- emphasis: 56%
+- strong: 25,900원
+- img "상품 이미지"
+- paragraph: "[더 조선호텔] NEW 스노우 냉감 침구 13종 (택1)"
+- deletion: 32,000원
+- emphasis: 10%
+- strong: 28,800원
+- img "상품 이미지"
+- paragraph: "[골라담기] [풀무원] 지구식단 인기 두부텐더 4종 (택1)"
+- deletion: 7,980원
+- emphasis: 25%
+- strong: 5,980원
+- img "상품 이미지"
+- paragraph: "[WECK] 실린더 975(340ml) 6개 세트"
+- deletion: 39,000원
+- emphasis: 35%
+- strong: 25,000원
+- img "상품 이미지"
+- paragraph: "[99시리즈] 인기 야식 6종 (택1)"
+- deletion: 9,900원
+- emphasis: 20%
+- strong: 7,920원
+- text: 전체보기
+- button "더 많은 상품 보러가기"
+- button "10주년 BIRTH WEEK 보기"
+- img "좌측 하단 스티커"
+- paragraph: 멤버스1만원쿠폰
+- img "상품 이미지"
+- paragraph: "[방방곡곡] 비빔국수 키트 (2인분)"
+- deletion: 10,500원
+- emphasis: 20%
+- strong: 8,400원
+- paragraph: 멤버스1만원쿠폰
+- img "상품 이미지"
+- paragraph: "[콜린스 다이닝] 문어감자 샐러드"
+- deletion: 10,500원
+- emphasis: 10%
+- strong: 9,450원
+- paragraph: 멤버스1만원쿠폰
+- img "상품 이미지"
+- paragraph: "[콜린스 다이닝] 구운 채소 샐러드"
+- strong: 8,400원
+- paragraph: 멤버스1만원쿠폰
+- img "상품 이미지"
+- paragraph: "[콜린스 다이닝] 문어 보리 샐러드"
+- deletion: 8,900원
+- emphasis: 10%
+- strong: 8,010원
+- paragraph: 멤버스1만원쿠폰
+- img "상품 이미지"
+- paragraph: "[콜린스 다이닝] 브리또볼"
+- strong: 10,800원
+- paragraph: 멤버스1만원쿠폰
+- img "상품 이미지"
+- paragraph: "[마마리] 바질페스토"
+- deletion: 14,900원
+- emphasis: 10%
+- strong: 13,410원
+- paragraph: 멤버스1만원쿠폰
+- img "상품 이미지"
+- paragraph: "[골라담기] 온하루 17종 (택2)"
+- deletion: 4,200원
+- emphasis: 15%
+- strong: 3,570원
+- paragraph: 멤버스1만원쿠폰
+- img "상품 이미지"
+- paragraph: "[니뽕내뽕] 크뽕 (크림 짬뽕)"
+- deletion: 8,900원
+- emphasis: 15%
+- strong: 7,565원
+- paragraph: 멤버스1만원쿠폰
+- img "상품 이미지"
+- paragraph: "[성수동 팩피 : FAGP] 성수동 팩피: FAGP 감바스 파스타"
+- deletion: 9,200원
+- emphasis: 20%
+- strong: 7,280원
+- paragraph: 멤버스1만원쿠폰
+- img "상품 이미지"
+- paragraph: "[또보겠지떡볶이집] 떡볶이 1봉/2봉 (맵기선택)"
+- deletion: 11,300원
+- emphasis: 15%
+- strong: 9,605원
+- paragraph: 멤버스1만원쿠폰
+- img "상품 이미지"
+- paragraph: "[성수동 팩피 : FAGP] 봉골레 오일 파스타"
+- deletion: 8,200원
+- emphasis: 15%
+- strong: 6,970원
+- paragraph: 멤버스1만원쿠폰
+- img "상품 이미지"
+- paragraph: "[방방곡곡] 제주식 비빔고기국수"
+- deletion: 12,900원
+- emphasis: 23%
+- strong: 9,933원
+- paragraph: 멤버스1만원쿠폰
+- img "상품 이미지"
+- paragraph: "[방방곡곡] 정통 부산식 밀면 (2인분)"
+- deletion: 9,900원
+- emphasis: 10%
+- strong: 8,910원
+- paragraph: 멤버스1만원쿠폰
+- img "상품 이미지"
+- paragraph: "[온하루] 초계국수 (2인분)"
+- strong: 14,900원
+- paragraph: 멤버스1만원쿠폰
+- img "좌측 하단 스티커"
+- img "상품 이미지"
+- paragraph: "[성수동분식] 주먹밥 500g 4종"
+- deletion: 8,900원
+- emphasis: 45%
+- strong: 4,895원
+- paragraph: 멤버스1만원쿠폰
+- img "상품 이미지"
+- paragraph: "[콜린스 다이닝] 숙주가득 소고기 쌀국수 2인분"
+- strong: 11,900원
+- paragraph: 멤버스1만원쿠폰
+- img "상품 이미지"
+- paragraph: "[마마리] 삼계탕 900g"
+- deletion: 10,900원
+- emphasis: 10%
+- strong: 9,810원
+- paragraph: 멤버스1만원쿠폰
+- img "상품 이미지"
+- paragraph: "[방방곡곡] 강릉식 장칼국수 (2인분)"
+- strong: 11,900원
+- paragraph: 멤버스1만원쿠폰
+- img "상품 이미지"
+- paragraph: "[마마리] 국산 돼지고기를 가득 담은 짜장소스"
+- deletion: 3,500원
+- emphasis: 15%
+- strong: 2,975원
+- paragraph: 멤버스1만원쿠폰
+- img "상품 이미지"
+- paragraph: "[방방곡곡] 충무로식 닭칼국수 (2인분)"
+- deletion: 11,900원
+- emphasis: 33%
+- strong: 7,973원
+- text: 전체보기
+- button "인기 맛집 밀키트 보러가기"
+- button "적립금 1만원 받기"
+- button "지금 보러가기"
+- paragraph: 공유하기
+- button "카카오톡 공유하기 카카오톡":
+  - img "카카오톡 공유하기"
+  - text: 카카오톡
+- button "URL 공유하기 링크 복사":
+  - img "URL 공유하기"
+  - text: 링크 복사
+- heading "고객행복센터" [level=2]
+- strong: 1644-1107월~토요일 오전 7시 - 오후 6시
+- button "카카오톡 문의"
+- text: 월~토요일
+- img
+- text: 오전 7시 - 오후 6시 일/공휴일
+- img
+- text: 오전 7시 - 오후 1시
+- button "1:1 문의"
+- text: 365일 고객센터 운영시간에 순차적으로 답변드리겠습니다.
+- link "대량주문 문의":
+  - /url: https://docs.google.com/forms/d/e/1FAIpQLScWcjRuN6eWJK-G8x3NwBfE8IyKZIOq7jhD3fUXuKSWwPqzJw/viewform
+- text: 월~금요일
+- img
+- text: 오전 9시 - 오후 6시 점심시간
+- img
+- text: "낮 12시 - 오후 1시 비회원 문의 :"
+- link "help@kurlycorp.com":
+  - /url: mailto:help@kurlycorp.com
+- list:
+  - listitem:
+    - link "컬리소개":
+      - /url: https://www.kurly.com/introduce
+  - listitem:
+    - link "컬리소개영상":
+      - /url: https://www.youtube.com/embed/WEep7BcboMQ?rel=0&showinfo=0&wmode=opaque&enablejsapi=1
+  - listitem:
+    - link "투자정보":
+      - /url: https://ir.kurly.com
+  - listitem:
+    - link "인재채용":
+      - /url: https://kurly.career.greetinghr.com
+  - listitem:
+    - link "이용약관":
+      - /url: https://www.kurly.com/user-terms/agreement
+  - listitem:
+    - link "개인정보처리방침":
+      - /url: https://www.kurly.com/user-terms/privacy-policy
+  - listitem:
+    - link "이용안내":
+      - /url: https://www.kurly.com/user-guide
+- text: "법인명 (상호) : 주식회사 컬리 | 사업자등록번호 : 261-81-23567"
+- link "사업자정보 확인":
+  - /url: https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2618123567&apv_perm_no=
+- text: "통신판매업 : 제 2018-서울강남-01646 호 주소 : 서울특별시 강남구 테헤란로 133, 18층(역삼동) | 대표이사 : 김슬아 채용문의 :"
+- link "recruit@kurlycorp.com":
+  - /url: mailto:recruit@kurlycorp.com
+- text: "팩스: 070 - 7500 - 6098"
+- list:
+  - link "컬리 인스타그램 바로가기":
+    - /url: https://instagram.com/marketkurly
+    - img "컬리 인스타그램 바로가기"
+  - link "컬리 페이스북 바로가기":
+    - /url: https://www.facebook.com/marketkurly
+    - img "컬리 페이스북 바로가기"
+  - link "컬리 네이버블로그 바로가기":
+    - /url: https://blog.naver.com/marketkurly
+    - img "컬리 네이버블로그 바로가기"
+  - link "컬리 네이버포스트 바로가기":
+    - /url: https://m.post.naver.com/marketkurly
+    - img "컬리 네이버포스트 바로가기"
+  - link "컬리 유튜브 바로가기":
+    - /url: https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg
+    - img "컬리 유튜브 바로가기"
+- button "isms 로고 [인증범위] 컬리 쇼핑몰 서비스 개발·운영 (심사받지 않은 물리적 인프라 제외) [유효기간] 2022.01.19 ~ 2025.01.18":
+  - img "isms 로고"
+  - paragraph: "[인증범위] 컬리 쇼핑몰 서비스 개발·운영 (심사받지 않은 물리적 인프라 제외) [유효기간] 2022.01.19 ~ 2025.01.18"
+- button "eprivacy plus 로고 개인정보보호 우수 웹사이트 · 개인정보처리시스템 인증 (ePRIVACY PLUS)":
+  - img "eprivacy plus 로고"
+  - paragraph: 개인정보보호 우수 웹사이트 · 개인정보처리시스템 인증 (ePRIVACY PLUS)
+- button "payments 로고 토스페이먼츠 구매안전(에스크로) 서비스를 이용하실 수 있습니다.":
+  - img "payments 로고"
+  - paragraph: 토스페이먼츠 구매안전(에스크로) 서비스를 이용하실 수 있습니다.
+- button "우리은행 로고 고객님이 현금으로 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.":
+  - img "우리은행 로고"
+  - paragraph: 고객님이 현금으로 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.
+- text: 컬리에서 판매되는 상품 중에는 컬리에 입점한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다. 마켓플레이스(오픈마켓) 상품의 경우 컬리는 통신판매중개자로서 통신판매의 당사자가 아닙니다. 컬리는 해당 상품의 주문, 품질, 교환/환불 등 의무와 책임을 부담하지 않습니다.
+- emphasis: © KURLY CORP. ALL RIGHTS RESERVED
+- alert
+```
+
+# Test source
+
+```ts
+   1 | import { test, expect } from '@playwright/test';
+   2 |
+   3 | test('10주년 팝업 기능', async ({ page }) => {
+   4 |   await page.goto('https://www.kurly.com/main');
+   5 |   await page.getByRole('paragraph').filter({ hasText: /^$/ }).getByRole('link').click();
+>  6 |   await expect(page.getByText("10주년 굿즈")).toBeVisible();
+     |                                           ^ Error: expect.toBeVisible: Error: strict mode violation: getByText('10주년 굿즈') resolved to 2 elements:
+   7 |
+   8 |   
+   9 |   });
+  10 |   
+  11 |
+  12 |
+```
