@@ -38,7 +38,8 @@ jobs:
         env: 
           SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
           PLAYWRIGHT_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html  
-          ALLURE_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/allure-report/index.html 
+          ALLURE_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/allure-report/index.html
+        continue-on-error: true
 
       - name: Prepare Combined Report Folder
         run: |
