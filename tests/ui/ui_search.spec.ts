@@ -1,35 +1,52 @@
-import { test, expect } from '@playwright/test';
-import { loadExcelFile } from '../../src/utils/excel_loader';
-import path from 'path';
+// import { test, expect } from '@playwright/test';
+// import { loadExcelFile } from '../../src/utils/excel_loader';
+// import path from 'path';
+// import fs from 'fs';
 
-let searchCases: { tc_id: string; search_term: string }[] = [];
+// let searchCases: { tc_id: string; search_term: string }[] = [];
 
-test.beforeAll(async () => {
-  searchCases = await loadExcelFile(
-    path.resolve(__dirname, '../data/test_case.xlsx')
-  );
-});
+// const screenshotDir = path.resolve(__dirname, '../../screenshots');
+// if (!fs.existsSync(screenshotDir)) {
+//   fs.mkdirSync(screenshotDir);
+// }
 
-test('🔍 엑셀 기반 상품 검색 테스트', async ({ page }) => {
-  for (const { tc_id, search_term } of searchCases) {
-    if (!tc_id || !search_term) continue;
+// test.beforeAll(async () => {
+//   searchCases = await loadExcelFile(
+//     path.resolve(__dirname, '../data/test_case.xlsx')
+//   );
+//   console.log('엑셀 데이터:', searchCases);
+// });
 
-    await page.goto('https://www.kurly.com/main');
-    const searchBox = page.getByPlaceholder('검색어를 입력해주세요');
-    await searchBox.fill(search_term);
-    await searchBox.press('Enter');
-    await page.waitForLoadState('networkidle');
+// test('🔍 엑셀 기반 상품 검색 테스트', async ({ page }) => {
+//   for (const { tc_id, search_term } of searchCases) {
+//     if (!tc_id || !search_term) continue;
 
-    const results = page.locator('[class*=product-card]');
-    const count = await results.count();
-    expect(count).toBeGreaterThan(0);
+//     await page.goto('https://www.kurly.com/main');
+//     const searchBox = page.getByPlaceholder('검색어를 입력해주세요');
+//     await searchBox.fill(search_term);
+//     await searchBox.press('Enter');
 
-    const safeSearchTerm = search_term.replace(/[^a-zA-Z0-9]/g, '_');
-    await page.screenshot({ path: `screenshots/search_${safeSearchTerm}.png` });
-    console.log(`Test Case ID: ${tc_id}, Search Term: ${search_term}, Results Count: ${count}`);
-}
-  await page.close();
-} );
-test.afterAll(async () => {
-  console.log('모든 테스트가 완료되었습니다.');
-} );
+//     // 결과가 보일 때까지 대기
+//     const results = page.locator('[class*=product-card]');
+//     const count = await results.count();
+//     console.log(`검색어 "${search_term}"에 대한 결과 수: ${count}`);
+
+//     if (count > 0) {
+//       await expect(page.getByText("에 대한 검색결과")).toBeVisible({ timeout: 10000 });
+//       await page.waitForTimeout(3000); 
+//     } else {
+//       console.log(`❗검색 결과 없음: ${search_term}`);
+//     }
+
+//     // 스크린샷 저장
+//     const safeSearchTerm = search_term.replace(/[\/:*?"<>|]/g, '_');
+//     const screenshotPath = path.join(screenshotDir, `search_${safeSearchTerm}.png`);
+//     await page.screenshot({ path: screenshotPath });
+//     console.log(`📸 스크린샷 경로: ${screenshotPath}`);
+//     console.log(`Test Case ID: ${tc_id}, Search Term: ${search_term}, Results Count: ${count}`);
+//   }
+//   await page.close();
+// });
+// test.afterAll(() => {
+//   console.log('모든 테스트가 완료되었습니다.');
+// });

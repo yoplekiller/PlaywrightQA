@@ -16,7 +16,7 @@
   `Playwright`, `TypeScript`, `Excel(xlsx)`, `Slack Webhook`, `Allure Report`, `GitHub Actions`
 
 ---
-
+<pre>
 ## 📂 디렉토리 구조
 📦 PLAYWRIGHTQA
 ├── 📁.github
@@ -53,4 +53,4 @@
 ├── 📜 playwright.config.ts
 ├── 📜 README.md
 ├── 📜 tree.txt
-└── 📜 tsconfig.json
+└── 📜 tsconfig.json</pre>
