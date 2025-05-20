@@ -28,6 +28,13 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
+      - name: Clean previous Allure results
+        run: |
+          rm -rf allure-results
+          rm -rf allure-report
+          rm -rf playwright-report
+          rm -rf public
+
       - name: Run Playwright tests
         run: npx playwright test --config=playwright.config.ts --trace=on --workers=1
         env: 
