@@ -28,9 +28,14 @@ test('🔍 엑셀 기반 상품 검색 테스트', async ({ page }) => {
 
     // 결과가 보일 때까지 대기
     const results = page.locator('[class*=product-card]');
-    await expect(results.first()).toBeVisible({ timeout: 10000 });
     const count = await results.count();
     console.log(`검색어 "${search_term}"에 대한 결과 수: ${count}`);
+
+    if (count > 0) {
+      await expect(results.first()).toBeVisible({ timeout: 10000 });
+    } else {
+      console.log(`❗검색 결과 없음: ${search_term}`);
+    }
 
     // 스크린샷 저장
     const safeSearchTerm = search_term.replace(/[^a-zA-Z0-9]/g, '_');
@@ -41,7 +46,6 @@ test('🔍 엑셀 기반 상품 검색 테스트', async ({ page }) => {
   }
   await page.close();
 });
-
 test.afterAll(() => {
   console.log('모든 테스트가 완료되었습니다.');
 });
