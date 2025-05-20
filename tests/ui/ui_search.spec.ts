@@ -14,6 +14,7 @@ test.beforeAll(async () => {
   searchCases = await loadExcelFile(
     path.resolve(__dirname, '../data/test_case.xlsx')
   );
+  console.log('엑셀 데이터:', searchCases);
 });
 
 test('🔍 엑셀 기반 상품 검색 테스트', async ({ page }) => {
@@ -24,22 +25,23 @@ test('🔍 엑셀 기반 상품 검색 테스트', async ({ page }) => {
     const searchBox = page.getByPlaceholder('검색어를 입력해주세요');
     await searchBox.fill(search_term);
     await searchBox.press('Enter');
-    await page.waitForLoadState('networkidle');
 
+    // 결과가 보일 때까지 대기
     const results = page.locator('[class*=product-card]');
+    await expect(results.first()).toBeVisible({ timeout: 10000 });
     const count = await results.count();
-    expect(count).toBeGreaterThan(0);
+    console.log(`검색어 "${search_term}"에 대한 결과 수: ${count}`);
 
+    // 스크린샷 저장
     const safeSearchTerm = search_term.replace(/[^a-zA-Z0-9]/g, '_');
     const screenshotPath = path.join(screenshotDir, `search_${safeSearchTerm}.png`);
-    console.log("📸 스크린샷 경로:", screenshotPath); // ✅ 실제 저장 위치 로그
     await page.screenshot({ path: screenshotPath });
+    console.log(`📸 스크린샷 경로: ${screenshotPath}`);
     console.log(`Test Case ID: ${tc_id}, Search Term: ${search_term}, Results Count: ${count}`);
   }
-
-  await page.close(); // ✅ 이제 for 루프 밖에서 정확히 실행됨
+  await page.close();
 });
 
-test.afterAll(async () => {
+test.afterAll(() => {
   console.log('모든 테스트가 완료되었습니다.');
 });
