@@ -38,8 +38,7 @@ test('🔍 엑셀 기반 상품 검색 테스트', async ({ page }) => {
     const safeSearchTerm = search_term.replace(/[\/:*?"<>|]/g, '_');
     const screenshotPath = path.join(screenshotDir, `search_${safeSearchTerm}.png`);
     await page.screenshot({ path: screenshotPath });
-    console.log(`📸 스크린샷 경로: ${screenshotPath}`);
-    console.log(`Test Case ID: ${tc_id}, Search Term: ${search_term}, Results Count: ${count}`);
+
   }
   await page.close();
 });
