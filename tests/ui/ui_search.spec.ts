@@ -32,6 +32,8 @@ test('🔍 엑셀 기반 상품 검색 테스트', async ({ page }) => {
     await expect(matchingProduct.first()).toBeVisible({ timeout: 5000 });
 
 
+
+
     // 스크린샷 저장
     const safeSearchTerm = search_term.replace(/[\/:*?"<>|]/g, '_');
     const screenshotPath = path.join(screenshotDir, `search_${safeSearchTerm}.png`);
