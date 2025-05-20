@@ -33,6 +33,7 @@ test('🔍 엑셀 기반 상품 검색 테스트', async ({ page }) => {
 
     if (count > 0) {
       await expect(results.first()).toBeVisible({ timeout: 10000 });
+      await page.waitForTimeout(3000); 
     } else {
       console.log(`❗검색 결과 없음: ${search_term}`);
     }
