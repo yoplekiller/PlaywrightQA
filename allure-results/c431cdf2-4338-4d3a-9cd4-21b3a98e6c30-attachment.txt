@@ -1,0 +1,14 @@
+엑셀 데이터: [
+  { tc_id: 'TC_001', search_term: '갤럭시S25' },
+  { tc_id: 'TC_002', search_term: '제로콜라' },
+  { tc_id: 'TC_003', search_term: '맥북프로' },
+  { tc_id: 'TC_004', search_term: '아이폰16' },
+  { tc_id: 'TC_005', search_term: '헤드셋' },
+  { tc_id: 'TC_006', search_term: '노트북' },
+  { tc_id: 'TC_007', search_term: '과자세트' },
+  { tc_id: 'TC_008', search_term: '마우스' },
+  { tc_id: 'TC_009', search_term: '키보드' },
+  { tc_id: 'TC_010', search_term: '물' },
+  { tc_id: 'TC_011', search_term: '밥' }
+]
+모든 테스트가 완료되었습니다.

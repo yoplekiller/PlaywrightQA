@@ -1,0 +1,36 @@
+엑셀 데이터: [
+  { tc_id: 'TC_001', search_term: '갤럭시S25' },
+  { tc_id: 'TC_002', search_term: '제로콜라' },
+  { tc_id: 'TC_003', search_term: '사탕' },
+  { tc_id: 'TC_004', search_term: '과자세트' },
+  { tc_id: 'TC_005', search_term: '헤드셋' },
+  { tc_id: 'TC_006', search_term: '노트북' },
+  { tc_id: 'TC_007', search_term: '과자세트' },
+  { tc_id: 'TC_008', search_term: '마우스' },
+  { tc_id: 'TC_009', search_term: '키보드' },
+  { tc_id: 'TC_010', search_term: '물' },
+  { tc_id: 'TC_011', search_term: '밥' }
+]
+📸 스크린샷 경로: C:\Users\jmlim\OneDrive\Desktop\PlaywrightQA\screenshots\search_갤럭시S25.png
+Test Case ID: TC_001, Search Term: 갤럭시S25, Results Count: 0
+📸 스크린샷 경로: C:\Users\jmlim\OneDrive\Desktop\PlaywrightQA\screenshots\search_제로콜라.png
+Test Case ID: TC_002, Search Term: 제로콜라, Results Count: 0
+📸 스크린샷 경로: C:\Users\jmlim\OneDrive\Desktop\PlaywrightQA\screenshots\search_사탕.png
+Test Case ID: TC_003, Search Term: 사탕, Results Count: 0
+📸 스크린샷 경로: C:\Users\jmlim\OneDrive\Desktop\PlaywrightQA\screenshots\search_과자세트.png
+Test Case ID: TC_004, Search Term: 과자세트, Results Count: 0
+📸 스크린샷 경로: C:\Users\jmlim\OneDrive\Desktop\PlaywrightQA\screenshots\search_헤드셋.png
+Test Case ID: TC_005, Search Term: 헤드셋, Results Count: 0
+📸 스크린샷 경로: C:\Users\jmlim\OneDrive\Desktop\PlaywrightQA\screenshots\search_노트북.png
+Test Case ID: TC_006, Search Term: 노트북, Results Count: 0
+📸 스크린샷 경로: C:\Users\jmlim\OneDrive\Desktop\PlaywrightQA\screenshots\search_과자세트.png
+Test Case ID: TC_007, Search Term: 과자세트, Results Count: 0
+📸 스크린샷 경로: C:\Users\jmlim\OneDrive\Desktop\PlaywrightQA\screenshots\search_마우스.png
+Test Case ID: TC_008, Search Term: 마우스, Results Count: 0
+📸 스크린샷 경로: C:\Users\jmlim\OneDrive\Desktop\PlaywrightQA\screenshots\search_키보드.png
+Test Case ID: TC_009, Search Term: 키보드, Results Count: 0
+📸 스크린샷 경로: C:\Users\jmlim\OneDrive\Desktop\PlaywrightQA\screenshots\search_물.png
+Test Case ID: TC_010, Search Term: 물, Results Count: 0
+📸 스크린샷 경로: C:\Users\jmlim\OneDrive\Desktop\PlaywrightQA\screenshots\search_밥.png
+Test Case ID: TC_011, Search Term: 밥, Results Count: 0
+모든 테스트가 완료되었습니다.

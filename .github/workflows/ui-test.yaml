@@ -2,9 +2,9 @@ name: Playwright UI Tests
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ main ]
   pull_request:
-    branches: [ main, develop ]
+    branches: [ main ]
   workflow_dispatch:
   schedule:
     - cron: '0 */4 * * *' # Every 4 hours

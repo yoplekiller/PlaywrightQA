@@ -1,0 +1,1454 @@
+# Test info
+
+- Name: 🔍 엑셀 기반 상품 검색 테스트
+- Location: C:\Users\jmlim\OneDrive\Desktop\PlaywrightQA\tests\ui\ui_search.spec.ts:21:5
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible()
+
+Locator: locator('text=밥').first()
+Expected: visible
+Received: undefined
+Call log:
+  - expect.toBeVisible with timeout 5000ms
+  - waiting for locator('text=밥').first()
+
+    at C:\Users\jmlim\OneDrive\Desktop\PlaywrightQA\tests\ui\ui_search.spec.ts:37:43
+```
+
+# Page snapshot
+
+```yaml
+- link "한정수량 첫 구매 특가, 컬리 인기 상품 100원!":
+  - /url: https://event.kurly.com/lego/event/2023/0911/join/coupon
+- button "배너 하루 안보기":
+  - img
+  - text: 배너 하루 안보기
+- text: 회원가입 로그인 고객센터
+- img "마켓컬리 로고"
+- button "마켓컬리"
+- button "뷰티컬리"
+- textbox "검색어를 입력해주세요": 밥
+- button "delete-search-keyword"
+- button "submit"
+- button "찜하기"
+- button
+- text: 카테고리
+- list:
+  - listitem: 신상품
+  - listitem: 베스트
+  - listitem: 알뜰쇼핑
+  - listitem: 특가/혜택
+- link "샛별·하루 배송안내":
+  - /url: /user-guide/delivery
+- main:
+  - heading "' 밥 '에 대한 검색결과" [level=1]
+  - heading "필터" [level=2]
+  - button "초기화" [disabled]:
+    - img
+    - text: 초기화
+  - list:
+    - listitem:
+      - button "새로나온 69":
+        - button:
+          - img
+        - text: 새로나온 69
+    - listitem:
+      - button "Kurly Only 216":
+        - button:
+          - img
+        - text: Kurly Only 216
+    - listitem:
+      - button "아이콘벌쓰위크 197":
+        - button:
+          - img
+        - img "아이콘"
+        - text: 벌쓰위크 197
+  - button "카테고리":
+    - text: 카테고리
+    - img
+  - navigation:
+    - listitem:
+      - button "도시락·밥류 231":
+        - button:
+          - img
+        - text: 도시락·밥류 231
+    - listitem:
+      - button "식기·그릇 139":
+        - button:
+          - img
+        - text: 식기·그릇 139
+    - listitem:
+      - button "밑반찬 115":
+        - button:
+          - img
+        - text: 밑반찬 115
+    - listitem:
+      - button "주방가전 68":
+        - button:
+          - img
+        - text: 주방가전 68
+    - listitem:
+      - button "햄·통조림·병조림 56":
+        - button:
+          - img
+        - text: 햄·통조림·병조림 56
+    - listitem:
+      - button "김치·젓갈·장류 51":
+        - button:
+          - img
+        - text: 김치·젓갈·장류 51
+    - listitem:
+      - button "밀폐·보관·저장용기 49":
+        - button:
+          - img
+        - text: 밀폐·보관·저장용기 49
+    - listitem:
+      - button "냄비·팬·솥 48":
+        - button:
+          - img
+        - text: 냄비·팬·솥 48
+    - listitem:
+      - button "급식기·급수기 45":
+        - button:
+          - img
+        - text: 급식기·급수기 45
+    - listitem:
+      - button "쌀·잡곡 32":
+        - button:
+          - img
+        - text: 쌀·잡곡 32
+    - button "카테고리 더보기":
+      - text: 카테고리 더보기
+      - img
+  - button "배송":
+    - text: 배송
+    - img
+  - navigation:
+    - listitem:
+      - button "샛별배송 879":
+        - button:
+          - img
+        - text: 샛별배송 879
+    - listitem:
+      - button "판매자배송 540":
+        - button:
+          - img
+        - text: 판매자배송 540
+    - listitem:
+      - button "설치배송 3":
+        - button:
+          - img
+        - text: 설치배송 3
+  - button "포장타입":
+    - text: 포장타입
+    - img
+  - navigation:
+    - listitem:
+      - button "상온 805":
+        - button:
+          - img
+        - text: 상온 805
+    - listitem:
+      - button "냉장 377":
+        - button:
+          - img
+        - text: 냉장 377
+    - listitem:
+      - button "냉동 236":
+        - button:
+          - img
+        - text: 냉동 236
+  - button "가격":
+    - text: 가격
+    - img
+  - navigation:
+    - listitem:
+      - button "5,961원 미만":
+        - button:
+          - img
+        - text: 5,961원 미만
+    - listitem:
+      - button "5,961원 ~ 10,507원":
+        - button:
+          - img
+        - text: 5,961원 ~ 10,507원
+    - listitem:
+      - button "10,507원 ~ 27,325원":
+        - button:
+          - img
+        - text: 10,507원 ~ 27,325원
+    - listitem:
+      - button "27,325원 이상":
+        - button:
+          - img
+        - text: 27,325원 이상
+  - button "브랜드":
+    - text: 브랜드
+    - img
+  - navigation:
+    - list:
+      - listitem:
+        - button "가나다순"
+      - listitem:
+        - button "상품 많은순"
+    - list:
+      - listitem:
+        - button "전체"
+      - listitem:
+        - button "ㄱ"
+      - listitem:
+        - button "ㄴ"
+      - listitem:
+        - button "ㄷ"
+      - listitem:
+        - button "ㄹ"
+      - listitem:
+        - button "ㅁ"
+      - listitem:
+        - button "ㅂ"
+      - listitem:
+        - button "ㅅ"
+      - listitem:
+        - button "ㅇ"
+      - listitem:
+        - button "ㅈ"
+      - listitem:
+        - button "ㅊ"
+      - listitem:
+        - button "ㅋ"
+      - listitem:
+        - button "ㅌ"
+      - listitem:
+        - button "ㅍ"
+      - listitem:
+        - button "ㅎ"
+      - listitem:
+        - button "A-Z"
+      - listitem:
+        - button "ETC"
+    - listitem:
+      - button "가쯔 2":
+        - button:
+          - img
+        - text: 가쯔 2
+    - listitem:
+      - button "강창구찹쌀진순대 1":
+        - button:
+          - img
+        - text: 강창구찹쌀진순대 1
+    - listitem:
+      - button "거대곰탕 2":
+        - button:
+          - img
+        - text: 거대곰탕 2
+    - listitem:
+      - button "고기반찬 1":
+        - button:
+          - img
+        - text: 고기반찬 1
+    - listitem:
+      - button "고래사어묵 1":
+        - button:
+          - img
+        - text: 고래사어묵 1
+    - listitem:
+      - button "고온어다이어트 2":
+        - button:
+          - img
+        - text: 고온어다이어트 2
+    - listitem:
+      - button "광천김 4":
+        - button:
+          - img
+        - text: 광천김 4
+    - listitem:
+      - button "광천해저김 1":
+        - button:
+          - img
+        - text: 광천해저김 1
+    - listitem:
+      - button "군산오징어 1":
+        - button:
+          - img
+        - text: 군산오징어 1
+    - listitem:
+      - button "굽네 6":
+        - button:
+          - img
+        - text: 굽네 6
+    - button "브랜드 더보기":
+      - text: 브랜드 더보기
+      - img
+  - button "유형":
+    - text: 유형
+    - img
+  - navigation:
+    - listitem:
+      - button "Kurly Only 216":
+        - button:
+          - img
+        - text: Kurly Only 216
+    - listitem:
+      - button "희소가치 프로젝트 5":
+        - button:
+          - img
+        - text: 희소가치 프로젝트 5
+  - button "혜택":
+    - text: 혜택
+    - img
+  - navigation:
+    - listitem:
+      - button "할인상품 853":
+        - button:
+          - img
+        - text: 할인상품 853
+    - listitem:
+      - button "한정수량 6":
+        - button:
+          - img
+        - text: 한정수량 6
+  - button "출시":
+    - text: 출시
+    - img
+  - navigation:
+    - listitem:
+      - button "새로나온 69":
+        - button:
+          - img
+        - text: 새로나온 69
+  - button "특정상품 제외":
+    - text: 특정상품 제외
+    - img
+  - navigation:
+    - listitem:
+      - button "반려동물 상품 55":
+        - button:
+          - img
+        - text: 반려동물 상품 55
+  - button "프로모션":
+    - text: 프로모션
+    - img
+  - navigation:
+    - listitem:
+      - button "아이콘벌쓰위크 197":
+        - button:
+          - img
+        - img "아이콘"
+        - text: 벌쓰위크 197
+  - text: 총 1,422건
+  - list:
+    - listitem:
+      - link "추천순":
+        - /url: /search?sword=%EB%B0%A5&page=1&per_page=96&sorted_type=4
+      - img
+    - listitem:
+      - link "신상품순":
+        - /url: /search?sword=%EB%B0%A5&page=1&per_page=96&sorted_type=0
+    - listitem:
+      - link "판매량순":
+        - /url: /search?sword=%EB%B0%A5&page=1&per_page=96&sorted_type=1
+    - listitem:
+      - link "혜택순":
+        - /url: /search?sword=%EB%B0%A5&page=1&per_page=96&sorted_type=5
+    - listitem:
+      - link "낮은 가격순":
+        - /url: /search?sword=%EB%B0%A5&page=1&per_page=96&sorted_type=2
+    - listitem:
+      - link "높은 가격순":
+        - /url: /search?sword=%EB%B0%A5&page=1&per_page=96&sorted_type=3
+  - link "반짝특가 담기 샛별배송 [10주년 기획][실리만] 실리콘 찜기&냉동 밥용기 (3P세트) 전자레인지로 다양한 간편 찜 요리부터 갓 지은 듯 밥 한 끼까지! 63,100원 46%33,900원 Kurly Only":
+    - /url: /goods/1001329906
+    - paragraph: 반짝특가
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [10주년 기획][실리만] 실리콘 찜기&냉동 밥용기 (3P세트)
+    - paragraph: 전자레인지로 다양한 간편 찜 요리부터 갓 지은 듯 밥 한 끼까지!
+    - text: 63,100원 46%33,900원 Kurly Only
+  - link "마감세일 담기 샛별배송 [비움반찬] 견과류지리멸치볶음 달달 고소한 온 가족 반찬 3,400원 10%3,060원 9,999+ Kurly Only":
+    - /url: /goods/5068501
+    - paragraph: 마감세일
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [비움반찬] 견과류지리멸치볶음
+    - paragraph: 달달 고소한 온 가족 반찬
+    - text: 3,400원 10%3,060원
+    - img
+    - text: 9,999+ Kurly Only
+  - link "마감세일 담기 샛별배송 당근채 350g 손쉽게 더하는 산뜻한 매력 5,990원 35%3,893원 9,999+":
+    - /url: /goods/1000094732
+    - paragraph: 마감세일
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 당근채 350g
+    - paragraph: 손쉽게 더하는 산뜻한 매력
+    - text: 5,990원 35%3,893원
+    - img
+    - text: 9,999+
+  - link "마감세일 담기 샛별배송 [쌜모네키친] 오로라 생연어장 2종 (택1) 보들보들 속살에 밴 감칠맛 11,900원 25%8,925원~ 394 Kurly Only":
+    - /url: /goods/1001165358
+    - paragraph: 마감세일
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [쌜모네키친] 오로라 생연어장 2종 (택1)
+    - paragraph: 보들보들 속살에 밴 감칠맛
+    - text: 11,900원 25%8,925원~
+    - img
+    - text: 394 Kurly Only
+  - link "마감세일 담기 샛별배송 [모현상회] 패밀리 모둠회 340g 한 팩으로 즐기는 3가지 생선 35,900원 10%32,310원 240 Kurly Only":
+    - /url: /goods/1000631822
+    - paragraph: 마감세일
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [모현상회] 패밀리 모둠회 340g
+    - paragraph: 한 팩으로 즐기는 3가지 생선
+    - text: 35,900원 10%32,310원
+    - img
+    - text: 240 Kurly Only
+  - link "담기 샛별배송 [만전김] 두번구워 더욱 바삭한 만전 김밥용김 김밥을 위한 필수 재료 2,800원 9,999+":
+    - /url: /goods/5050422
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [만전김] 두번구워 더욱 바삭한 만전 김밥용김
+    - paragraph: 김밥을 위한 필수 재료
+    - text: 2,800원
+    - img
+    - text: 9,999+
+  - link "담기 샛별배송 [풀무원] 고소한 유부초밥 고소한 감칠맛이 매력적인 5,680원 20%4,540원 9,999+":
+    - /url: /goods/5069131
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [풀무원] 고소한 유부초밥
+    - paragraph: 고소한 감칠맛이 매력적인
+    - text: 5,680원 20%4,540원
+    - img
+    - text: 9,999+
+  - link "+5천원쿠폰 담기 샛별배송 [더건강한] 그릴 김밥햄 간편하게 활용하는 도톰한 햄 6,980원 21%5,480원 9,999+":
+    - /url: /goods/5052129
+    - paragraph: +5천원쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [더건강한] 그릴 김밥햄
+    - paragraph: 간편하게 활용하는 도톰한 햄
+    - text: 6,980원 21%5,480원
+    - img
+    - text: 9,999+
+  - link "담기 샛별배송 [일가집] 프리미엄 김밥 세트 525g 완벽한 구성의 김밥 재료 10,980원 15%9,330원 9,999+":
+    - /url: /goods/1000017008
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [일가집] 프리미엄 김밥 세트 525g
+    - paragraph: 완벽한 구성의 김밥 재료
+    - text: 10,980원 15%9,330원
+    - img
+    - text: 9,999+
+  - link "+5천원쿠폰 담기 샛별배송 [햇반/쿡반] 노릇노릇 주먹밥 500g 6종 (택1) 간편하고 든든한 한 끼 8,980원 11%7,980원 9,999+":
+    - /url: /goods/1000185462
+    - paragraph: +5천원쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [햇반/쿡반] 노릇노릇 주먹밥 500g 6종 (택1)
+    - paragraph: 간편하고 든든한 한 끼
+    - text: 8,980원 11%7,980원
+    - img
+    - text: 9,999+
+  - link "담기 샛별배송 [풀무원] 백색 김밥 단무지 3,300원 9,999+":
+    - /url: /goods/5156501
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [풀무원] 백색 김밥 단무지 3,300원
+    - img
+    - text: 9,999+
+  - link "담기 샛별배송 [풀무원] 롤 유부초밥 돌돌 말아 먹는 색다른 유부초밥 6,980원 20%5,580원 9,999+":
+    - /url: /goods/5069129
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [풀무원] 롤 유부초밥
+    - paragraph: 돌돌 말아 먹는 색다른 유부초밥
+    - text: 6,980원 20%5,580원
+    - img
+    - text: 9,999+
+  - link "담기 샛별배송 [풀무원] 꼬마 유부초밥 귀여운 한 입 크기 유부초밥 3,480원 9,999+":
+    - /url: /goods/5069130
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [풀무원] 꼬마 유부초밥
+    - paragraph: 귀여운 한 입 크기 유부초밥
+    - text: 3,480원
+    - img
+    - text: 9,999+
+  - link "+5천원쿠폰 담기 샛별배송 [하선정] 김밥 단무지 맛있는 김밥을 위한 필수 재료 2,680원 7%2,480원 9,999+":
+    - /url: /goods/5156491
+    - paragraph: +5천원쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [하선정] 김밥 단무지
+    - paragraph: 맛있는 김밥을 위한 필수 재료
+    - text: 2,680원 7%2,480원
+    - img
+    - text: 9,999+
+  - link "담기 샛별배송 [풀무원] 새콤달콤유부초밥 벌꿀과 사과 과즙으로 낸 감칠맛 5,680원 20%4,540원 9,999+":
+    - /url: /goods/5103618
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [풀무원] 새콤달콤유부초밥
+    - paragraph: 벌꿀과 사과 과즙으로 낸 감칠맛
+    - text: 5,680원 20%4,540원
+    - img
+    - text: 9,999+
+  - link "+5천원쿠폰 담기 샛별배송 [햇반/쿡반] 노릇노릇 볶음밥 2개입 8종 (택1) CJ 인기 스팸김치볶음밥부터 곤드레나물밥까지 6,580원 24%4,980원 9,999+":
+    - /url: /goods/1000184373
+    - paragraph: +5천원쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [햇반/쿡반] 노릇노릇 볶음밥 2개입 8종 (택1)
+    - paragraph: CJ 인기 스팸김치볶음밥부터 곤드레나물밥까지
+    - text: 6,580원 24%4,980원
+    - img
+    - text: 9,999+
+  - link "담기 샛별배송 [3개 사면 33%] [고래사] 랍스터어묵 (김밥용) 결대로 찢어지는 담백한 맛 3,800원 33%2,540원 9,999+":
+    - /url: /goods/5058880
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [3개 사면 33%] [고래사] 랍스터어묵 (김밥용)
+    - paragraph: 결대로 찢어지는 담백한 맛
+    - text: 3,800원 33%2,540원
+    - img
+    - text: 9,999+
+  - link "최대10% 쿠폰 담기 샛별배송 [조선호텔] 게살볶음밥 420g 품격이 다른 볶음밥 7,900원 14%6,794원 999+":
+    - /url: /goods/1000347446
+    - paragraph: 최대10% 쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [조선호텔] 게살볶음밥 420g
+    - paragraph: 품격이 다른 볶음밥
+    - text: 7,900원 14%6,794원
+    - img
+    - text: 999+
+  - link "담기 샛별배송 [풀무원] 야채 꼬마김밥 KIT 간편하게 완성하는 미니 김밥 5,550원 15%4,700원 999+":
+    - /url: /goods/1000144412
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [풀무원] 야채 꼬마김밥 KIT
+    - paragraph: 간편하게 완성하는 미니 김밥
+    - text: 5,550원 15%4,700원
+    - img
+    - text: 999+
+  - link "+5천원쿠폰 담기 샛별배송 [스팸] 스팸 김밥햄 두툼해서 매력적인 김밥햄 6,480원 15%5,480원 999+":
+    - /url: /goods/1000079182
+    - paragraph: +5천원쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [스팸] 스팸 김밥햄
+    - paragraph: 두툼해서 매력적인 김밥햄
+    - text: 6,480원 15%5,480원
+    - img
+    - text: 999+
+  - link "담기 샛별배송 [집반찬연구소] 나물 비빔밥 (2인분) 기본기 탄탄한 조합 10,800원 15%9,180원 999+ Kurly Only":
+    - /url: /goods/1000474666
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [집반찬연구소] 나물 비빔밥 (2인분)
+    - paragraph: 기본기 탄탄한 조합
+    - text: 10,800원 15%9,180원
+    - img
+    - text: 999+ Kurly Only
+  - link "멤버스1만원쿠폰 담기 샛별배송 [콜린스다이닝] 전복솥밥 키트 건강가득 전복솥밥 18,500원 15%15,725원 999+ Kurly Only":
+    - /url: /goods/1000552445
+    - paragraph: 멤버스1만원쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [콜린스다이닝] 전복솥밥 키트
+    - paragraph: 건강가득 전복솥밥
+    - text: 18,500원 15%15,725원
+    - img
+    - text: 999+ Kurly Only
+  - link "담기 샛별배송 [목우촌] 주부9단 김밥햄 170gX2개 두 팩 묶음으로 든든 5,980원 9,999+":
+    - /url: /goods/5072775
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [목우촌] 주부9단 김밥햄 170gX2개
+    - paragraph: 두 팩 묶음으로 든든
+    - text: 5,980원
+    - img
+    - text: 9,999+
+  - link "담기 샛별배송 [바르다 김선생] 시그니처 주먹밥 2종 바르게 만들어 더욱 안심 6,990원 999+":
+    - /url: /goods/5151454
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [바르다 김선생] 시그니처 주먹밥 2종
+    - paragraph: 바르게 만들어 더욱 안심
+    - text: 6,990원
+    - img
+    - text: 999+
+  - link "최대10% 쿠폰 담기 샛별배송 [한성] 크래미 김밥용 120g*2 김밥에 더하는 맛과 풍미 5,400원 999+":
+    - /url: /goods/1000613814
+    - paragraph: 최대10% 쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [한성] 크래미 김밥용 120g*2
+    - paragraph: 김밥에 더하는 맛과 풍미
+    - text: 5,400원
+    - img
+    - text: 999+
+  - link "담기 샛별배송 [진가네반찬] 불고기 비빔밥 풍성한 재료가 담긴 비빔밥 키트 9,400원 9,999+ Kurly Only":
+    - /url: /goods/5041556
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [진가네반찬] 불고기 비빔밥
+    - paragraph: 풍성한 재료가 담긴 비빔밥 키트
+    - text: 9,400원
+    - img
+    - text: 9,999+ Kurly Only
+  - link "+5천원쿠폰 담기 샛별배송 [비비고] 김밥김 22g (10매) 단단하게 잘 말리는 김 3,980원 12%3,480원 999+":
+    - /url: /goods/1000260451
+    - paragraph: +5천원쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [비비고] 김밥김 22g (10매)
+    - paragraph: 단단하게 잘 말리는 김
+    - text: 3,980원 12%3,480원
+    - img
+    - text: 999+
+  - link "담기 샛별배송 [동원] 그릴리 직화 델리햄 김밥용 150g 직화 불향을 입혀내 더욱 맛 좋은 2,980원 126":
+    - /url: /goods/1001171607
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [동원] 그릴리 직화 델리햄 김밥용 150g
+    - paragraph: 직화 불향을 입혀내 더욱 맛 좋은
+    - text: 2,980원
+    - img
+    - text: "126"
+  - link "담기 샛별배송 [라이틀리] 곤약김밥 5종 (택1) 곤약쌀로 맛있고 가벼운 한 끼 식사 4,900원 15%4,160원 9,999+":
+    - /url: /goods/5138822
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [라이틀리] 곤약김밥 5종 (택1)
+    - paragraph: 곤약쌀로 맛있고 가벼운 한 끼 식사
+    - text: 4,900원 15%4,160원
+    - img
+    - text: 9,999+
+  - link "담기 샛별배송 [풀무원] 국산콩 유부초밥 국내산 콩으로 만들어 담백한 맛 4,280원 9,999+":
+    - /url: /goods/5069132
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [풀무원] 국산콩 유부초밥
+    - paragraph: 국내산 콩으로 만들어 담백한 맛
+    - text: 4,280원
+    - img
+    - text: 9,999+
+  - link "멤버스특가 담기 샛별배송 [LOTS OF LOVE] 봄맛듬뿍 곤드레밥 강원도산 곤드레가 주는 깊은 풍미 7,000원 20%5,600원~ 9,999+ Kurly Only":
+    - /url: /goods/5004962
+    - paragraph: 멤버스특가
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [LOTS OF LOVE] 봄맛듬뿍 곤드레밥
+    - paragraph: 강원도산 곤드레가 주는 깊은 풍미
+    - text: 7,000원 20%5,600원~
+    - img
+    - text: 9,999+ Kurly Only
+  - link "담기 샛별배송 [일품식탁] 김밥단무지 400g 안심하고 넣는 속재료 2,990원 10%2,690원 999+":
+    - /url: /goods/1000524677
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [일품식탁] 김밥단무지 400g
+    - paragraph: 안심하고 넣는 속재료
+    - text: 2,990원 10%2,690원
+    - img
+    - text: 999+
+  - link "최대10% 쿠폰 담기 샛별배송 [올반] 새우볶음밥 (4개입) 짜장소스와 찰떡궁합 (4인분 구성) 11,980원 25%8,980원 9,999+":
+    - /url: /goods/5031704
+    - paragraph: 최대10% 쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [올반] 새우볶음밥 (4개입)
+    - paragraph: 짜장소스와 찰떡궁합 (4인분 구성)
+    - text: 11,980원 25%8,980원
+    - img
+    - text: 9,999+
+  - link "최대10% 쿠폰 담기 샛별배송 [올반] 김치볶음밥 (2개입) [1봉=2인분] 김치와 고소한 모짜렐라 치즈의 조합 6,980원 25%5,230원 9,999+":
+    - /url: /goods/5031706
+    - paragraph: 최대10% 쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [올반] 김치볶음밥 (2개입)
+    - paragraph: "[1봉=2인분] 김치와 고소한 모짜렐라 치즈의 조합"
+    - text: 6,980원 25%5,230원
+    - img
+    - text: 9,999+
+  - link "최대10% 쿠폰 담기 샛별배송 [애슐리] 홈스토랑 볶음밥 6종 (4개입) (택1) 간편하게 갈릭스테이크 볶음밥부터 새우 볶음밥까지 11,900원 20%9,520원~ 999+":
+    - /url: /goods/1000040680
+    - paragraph: 최대10% 쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [애슐리] 홈스토랑 볶음밥 6종 (4개입) (택1)
+    - paragraph: 간편하게 갈릭스테이크 볶음밥부터 새우 볶음밥까지
+    - text: 11,900원 20%9,520원~
+    - img
+    - text: 999+
+  - link "담기 샛별배송 [풀무원] 큰 네모유부초밥 와사비 소스와 단무지를 함께 담은 6,980원 999+":
+    - /url: /goods/1000069599
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [풀무원] 큰 네모유부초밥
+    - paragraph: 와사비 소스와 단무지를 함께 담은
+    - text: 6,980원
+    - img
+    - text: 999+
+  - link "최대10% 쿠폰 담기 샛별배송 [LOTS OF LOVE] 차돌듬뿍 묵은지 볶음밥 묵은지와 차돌박이로 맛을 낸 8,250원 18%6,760원 9,999+ Kurly Only":
+    - /url: /goods/5025689
+    - paragraph: 최대10% 쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [LOTS OF LOVE] 차돌듬뿍 묵은지 볶음밥
+    - paragraph: 묵은지와 차돌박이로 맛을 낸
+    - text: 8,250원 18%6,760원
+    - img
+    - text: 9,999+ Kurly Only
+  - link "담기 샛별배송 [풀무원] 치자 김밥단무지 300g 샛노란 포인트 재료 2,600원 999+":
+    - /url: /goods/1000450200
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [풀무원] 치자 김밥단무지 300g
+    - paragraph: 샛노란 포인트 재료
+    - text: 2,600원
+    - img
+    - text: 999+
+  - link "+5천원쿠폰 담기 샛별배송 [햇반] 현미귀리곤약밥 150g*3입 현미의 구수한 풍미를 살린 7,500원 20%5,980원 999+":
+    - /url: /goods/1000220006
+    - paragraph: +5천원쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [햇반] 현미귀리곤약밥 150g*3입
+    - paragraph: 현미의 구수한 풍미를 살린
+    - text: 7,500원 20%5,980원
+    - img
+    - text: 999+
+  - link "담기 샛별배송 [오뚜기] 오뚜기밥 실속 210gX12 국산 쌀로 지은 즉석밥 실속 구성 13,980원 24%10,500원 999+":
+    - /url: /goods/1000169817
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [오뚜기] 오뚜기밥 실속 210gX12
+    - paragraph: 국산 쌀로 지은 즉석밥 실속 구성
+    - text: 13,980원 24%10,500원
+    - img
+    - text: 999+
+  - link "담기 샛별배송 닭가슴살 곤약볶음밥 3종 (4개입) 택1 부담 없이 즐기는 별미 볶음밥 10,100원 10%9,090원~ 9,999+ Kurly Only":
+    - /url: /goods/1000149207
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 닭가슴살 곤약볶음밥 3종 (4개입) 택1
+    - paragraph: 부담 없이 즐기는 별미 볶음밥
+    - text: 10,100원 10%9,090원~
+    - img
+    - text: 9,999+ Kurly Only
+  - link "+5천원쿠폰 담기 샛별배송 [제일맞게컬리] 현미곤약 주먹밥 3종 (택1) 언제든 부담 없는 저당 한 끼 8,980원 20%7,180원~ 999+ Kurly Only":
+    - /url: /goods/1001191650
+    - paragraph: +5천원쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [제일맞게컬리] 현미곤약 주먹밥 3종 (택1)
+    - paragraph: 언제든 부담 없는 저당 한 끼
+    - text: 8,980원 20%7,180원~
+    - img
+    - text: 999+ Kurly Only
+  - link "담기 샛별배송 [탄단지] 닭가슴살 현미 삼각주먹밥 500g 3종 (택1) 맛있고 간편한 식단 관리 6,600원 15%5,610원 9,999+ Kurly Only":
+    - /url: /goods/5151471
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [탄단지] 닭가슴살 현미 삼각주먹밥 500g 3종 (택1)
+    - paragraph: 맛있고 간편한 식단 관리
+    - text: 6,600원 15%5,610원
+    - img
+    - text: 9,999+ Kurly Only
+  - link "+5천원쿠폰 담기 샛별배송 [CJ] 주부초밥왕 한입 사각 유부초밥 400g 보기 좋고 먹기 좋은 6,680원 33%4,470원 999+":
+    - /url: /goods/1000017018
+    - paragraph: +5천원쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [CJ] 주부초밥왕 한입 사각 유부초밥 400g
+    - paragraph: 보기 좋고 먹기 좋은
+    - text: 6,680원 33%4,470원
+    - img
+    - text: 999+
+  - link "+5천원쿠폰 담기 샛별배송 [CJ] 주부초밥왕 새콤달콤 꼬마 유부초밥 149.2g 앙증맞은 크기의 새콤달콤 유부 3,200원 33%2,140원 497":
+    - /url: /goods/1001027351
+    - paragraph: +5천원쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [CJ] 주부초밥왕 새콤달콤 꼬마 유부초밥 149.2g
+    - paragraph: 앙증맞은 크기의 새콤달콤 유부
+    - text: 3,200원 33%2,140원
+    - img
+    - text: "497"
+  - link "담기 샛별배송 [Kurly's] 바삭하게 구운 김밥김 22g 맥반석 구이까지 세번 구워 낸 3,900원 31%2,690원 9,999+ Kurly Only":
+    - /url: /goods/5061036
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [Kurly's] 바삭하게 구운 김밥김 22g
+    - paragraph: 맥반석 구이까지 세번 구워 낸
+    - text: 3,900원 31%2,690원
+    - img
+    - text: 9,999+ Kurly Only
+  - link "멤버스1만원쿠폰 담기 샛별배송 [성수동 분식] 김밥 2줄 6종 (1택) 알차게 챙기는 한 끼 9,500원 35%6,175원~ 999+ Kurly Only":
+    - /url: /goods/1000352034
+    - paragraph: 멤버스1만원쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [성수동 분식] 김밥 2줄 6종 (1택)
+    - paragraph: 알차게 챙기는 한 끼
+    - text: 9,500원 35%6,175원~
+    - img
+    - text: 999+ Kurly Only
+  - link "담기 샛별배송 [동원] 롤 유부초밥 2종 (고소/새콤) 돌돌 말아서 만드는 4,980원 20%3,980원 206":
+    - /url: /goods/1001218188
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [동원] 롤 유부초밥 2종 (고소/새콤)
+    - paragraph: 돌돌 말아서 만드는
+    - text: 4,980원 20%3,980원
+    - img
+    - text: "206"
+  - link "담기 판매자배송 [무자기] 밥 공기 2종 택1 미니멀한 형태의 원형 밥공기 17,000원 무료배송":
+    - /url: /goods/1000223941
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 [무자기] 밥 공기 2종 택1
+    - paragraph: 미니멀한 형태의 원형 밥공기
+    - text: 17,000원 무료배송
+  - link "담기 샛별배송 [동원] 구운 김밥김 22g (10매) 질 좋은 원초로 만들어 잘 찢어지지 않는 2,980원 13%2,580원 216":
+    - /url: /goods/1001100324
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [동원] 구운 김밥김 22g (10매)
+    - paragraph: 질 좋은 원초로 만들어 잘 찢어지지 않는
+    - text: 2,980원 13%2,580원
+    - img
+    - text: "216"
+  - link "담기 샛별배송 [아우름] 바다를 품은 솥밥키트 2종 (냉동) (택1) 바다의 신선함을 따스히 품은 13,900원 10%12,500원 999+":
+    - /url: /goods/1000098225
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [아우름] 바다를 품은 솥밥키트 2종 (냉동) (택1)
+    - paragraph: 바다의 신선함을 따스히 품은
+    - text: 13,900원 10%12,500원
+    - img
+    - text: 999+
+  - link "+15%쿠폰 담기 샛별배송 [일일특가][비브리브] 꼬박꼬밥 9종 (택1) 꼬박꼬박 간편하게 챙겨 먹는 35,000원 46%18,900원 999+":
+    - /url: /goods/1000221946
+    - paragraph: +15%쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [일일특가][비브리브] 꼬박꼬밥 9종 (택1)
+    - paragraph: 꼬박꼬박 간편하게 챙겨 먹는
+    - text: 35,000원 46%18,900원
+    - img
+    - text: 999+
+  - link "담기 샛별배송 친환경 볶음밥용 채소 120g x 3입 손쉽게 더하는 맛과 색감 5,990원 10%5,390원 999+":
+    - /url: /goods/1000107848
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 친환경 볶음밥용 채소 120g x 3입
+    - paragraph: 손쉽게 더하는 맛과 색감
+    - text: 5,990원 10%5,390원
+    - img
+    - text: 999+
+  - link "담기 샛별배송 [풀무원] 황금밥알 볶음밥 2종 고슬고슬한 식감이 일품 7,480원 999+":
+    - /url: /goods/1000144417
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [풀무원] 황금밥알 볶음밥 2종
+    - paragraph: 고슬고슬한 식감이 일품
+    - text: 7,480원
+    - img
+    - text: 999+
+  - link "담기 샛별배송 [해조랑] 밥 지을 때 넣는 다시마 톡톡 더하는 풍미와 영양 7,850원 731 Kurly Only":
+    - /url: /goods/5053570
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [해조랑] 밥 지을 때 넣는 다시마
+    - paragraph: 톡톡 더하는 풍미와 영양
+    - text: 7,850원
+    - img
+    - text: 731 Kurly Only
+  - link "담기 샛별배송 [오뚜기] 컵밥 국밥 3종 간편하게 즐기는 국밥 한그릇 3,980원 25%2,980원 999+":
+    - /url: /goods/5060176
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [오뚜기] 컵밥 국밥 3종
+    - paragraph: 간편하게 즐기는 국밥 한그릇
+    - text: 3,980원 25%2,980원
+    - img
+    - text: 999+
+  - link "+20% 쿠폰 담기 판매자배송 [덴비] 헤리티지 밥 국 공기 6종 (택1) 31,000원 60%12,400원~ 65 무료배송":
+    - /url: /goods/1000350400
+    - paragraph: +20% 쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 [덴비] 헤리티지 밥 국 공기 6종 (택1) 31,000원 60%12,400원~
+    - img
+    - text: 65 무료배송
+  - link "+20% 쿠폰 담기 판매자배송 [덴비] 엘레멘츠 밥 국 공기 6종 (택1) 35,000원 63%12,900원~ 39 무료배송":
+    - /url: /goods/1000350374
+    - paragraph: +20% 쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 [덴비] 엘레멘츠 밥 국 공기 6종 (택1) 35,000원 63%12,900원~
+    - img
+    - text: 39 무료배송
+  - link "담기 판매자배송 [EME] 나폴레옹 밥 주걱 (펄아이보리) 1p (단품) 38,000원 46%20,500원 무료배송":
+    - /url: /goods/1001071856
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 [EME] 나폴레옹 밥 주걱 (펄아이보리) 1p (단품) 38,000원 46%20,500원 무료배송
+  - link "담기 샛별배송 [아우름] 대나무 통밥 은은하게 퍼지는 대나무 향 6,800원 55 Kurly Only":
+    - /url: /goods/1001296545
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [아우름] 대나무 통밥
+    - paragraph: 은은하게 퍼지는 대나무 향
+    - text: 6,800원
+    - img
+    - text: 55 Kurly Only
+  - link "담기 샛별배송 [오뚜기] 오뚜기밥 큰밥 (300gX4) 아쉬움 없이 즐기는 든든함 7,380원 10%6,640원 999+":
+    - /url: /goods/5095010
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [오뚜기] 오뚜기밥 큰밥 (300gX4)
+    - paragraph: 아쉬움 없이 즐기는 든든함
+    - text: 7,380원 10%6,640원
+    - img
+    - text: 999+
+  - link "최대10% 쿠폰 담기 샛별배송 [외할머니댁] 차돌된장밥 밥알 속 배어든 진한 감칠맛 5,900원 15%5,015원 999+ Kurly Only":
+    - /url: /goods/5094291
+    - paragraph: 최대10% 쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [외할머니댁] 차돌된장밥
+    - paragraph: 밥알 속 배어든 진한 감칠맛
+    - text: 5,900원 15%5,015원
+    - img
+    - text: 999+ Kurly Only
+  - link "담기 샛별배송 [얌이밀] 이유식 4단계(밥/리조또) 6종 (택1) 부드러운 밥의 형태를 갖춘 6,900원 20%5,520원~ 999+":
+    - /url: /goods/5155541
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [얌이밀] 이유식 4단계(밥/리조또) 6종 (택1)
+    - paragraph: 부드러운 밥의 형태를 갖춘
+    - text: 6,900원 20%5,520원~
+    - img
+    - text: 999+
+  - link "담기 샛별배송 [오뚜기] 오뚜기밥 작은밥 (150gX3) 부담 없이 즐기는 한 끼 3,780원 10%3,400원 999+":
+    - /url: /goods/5095009
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [오뚜기] 오뚜기밥 작은밥 (150gX3)
+    - paragraph: 부담 없이 즐기는 한 끼
+    - text: 3,780원 10%3,400원
+    - img
+    - text: 999+
+  - link "+10% 쿠폰 담기 판매자배송 [에포크] 블루림 라운드 (국,밥,면기) 택 1 25,000원 16%20,900원~ 무료배송":
+    - /url: /goods/1001040547
+    - paragraph: +10% 쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 [에포크] 블루림 라운드 (국,밥,면기) 택 1 25,000원 16%20,900원~ 무료배송
+  - link "담기 샛별배송 [마음이가] 약밥 국산 찹쌀로 완성한 쫀득한 식감 7,500원 15%6,350원 999+":
+    - /url: /goods/5114740
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [마음이가] 약밥
+    - paragraph: 국산 찹쌀로 완성한 쫀득한 식감
+    - text: 7,500원 15%6,350원
+    - img
+    - text: 999+
+  - link "담기 샛별배송 [애슐리] 주먹밥 4종 오븐에 구워 더욱 고소한 7,900원 999+":
+    - /url: /goods/1000275030
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [애슐리] 주먹밥 4종
+    - paragraph: 오븐에 구워 더욱 고소한
+    - text: 7,900원
+    - img
+    - text: 999+
+  - link "담기 샛별배송 [쉐푸드] 묵은지 참치 김밥 군침 도는 조합 4,600원 999+":
+    - /url: /goods/1000274936
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [쉐푸드] 묵은지 참치 김밥
+    - paragraph: 군침 도는 조합
+    - text: 4,600원
+    - img
+    - text: 999+
+  - link "+5천원쿠폰 담기 샛별배송 [컬리X햇반] 향긋한 골든퀸현미밥 200g*6입 골든퀸 현미의 구수한 풍미 그대로 12,980원 38%7,980원 999+ Kurly Only":
+    - /url: /goods/1000832403
+    - paragraph: +5천원쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [컬리X햇반] 향긋한 골든퀸현미밥 200g*6입
+    - paragraph: 골든퀸 현미의 구수한 풍미 그대로
+    - text: 12,980원 38%7,980원
+    - img
+    - text: 999+ Kurly Only
+  - link "담기 샛별배송 [11시 45분] 고추장비빔밥 비건 곤약김밥 (2개입) 매콤하게 입맛 돋우는 8,500원 999+":
+    - /url: /goods/1000093640
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [11시 45분] 고추장비빔밥 비건 곤약김밥 (2개입)
+    - paragraph: 매콤하게 입맛 돋우는
+    - text: 8,500원
+    - img
+    - text: 999+
+  - link "담기 샛별배송 [쉐푸드] 유부초밥 (9입) 든든하게 한 끼 해결 7,200원 5%6,840원 671":
+    - /url: /goods/1000274933
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [쉐푸드] 유부초밥 (9입)
+    - paragraph: 든든하게 한 끼 해결
+    - text: 7,200원 5%6,840원
+    - img
+    - text: "671"
+  - link "+20% 쿠폰 담기 판매자배송 [필리빗] 플리세 실버림 밥그릇 120 밥공기 (단품) 49,000원 33%32,830원 무료배송":
+    - /url: /goods/1000403091
+    - paragraph: +20% 쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 [필리빗] 플리세 실버림 밥그릇 120 밥공기 (단품) 49,000원 33%32,830원 무료배송
+  - link "+25% 쿠폰 최대헤택가 17,175원 담기 샛별배송 [락앤락] 바로한끼 안심 도자기 밥 보관 용기 (도자기 4p) 보관과 식사까지 한번에 해결하는 39,000원 41%22,900원 999+ Kurly Only":
+    - /url: /goods/1001068937
+    - paragraph: +25% 쿠폰
+    - text: 최대헤택가 17,175원
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [락앤락] 바로한끼 안심 도자기 밥 보관 용기 (도자기 4p)
+    - paragraph: 보관과 식사까지 한번에 해결하는
+    - text: 39,000원 41%22,900원
+    - img
+    - text: 999+ Kurly Only
+  - link "담기 샛별배송 [차알] 계란볶음밥 (2인분) 불맛 가득 고소한 중식 계란볶음밥 4,900원 25%3,670원 999+":
+    - /url: /goods/5077381
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [차알] 계란볶음밥 (2인분)
+    - paragraph: 불맛 가득 고소한 중식 계란볶음밥
+    - text: 4,900원 25%3,670원
+    - img
+    - text: 999+
+  - link "담기 판매자배송 [덴비] 헤리티지 밥 공기 세트 (2P) 2종 택(1) 덴비코리아 정품 판매 상품 70,000원 64%24,800원~ 무료배송":
+    - /url: /goods/1001176403
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 [덴비] 헤리티지 밥 공기 세트 (2P) 2종 택(1)
+    - paragraph: 덴비코리아 정품 판매 상품
+    - text: 70,000원 64%24,800원~ 무료배송
+  - link "담기 샛별배송 [도산회관] 한우 소보로 주먹밥 달짝지근한 한우 토핑이 가득 12,980원 14%11,162원 153":
+    - /url: /goods/1001207695
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [도산회관] 한우 소보로 주먹밥
+    - paragraph: 달짝지근한 한우 토핑이 가득
+    - text: 12,980원 14%11,162원
+    - img
+    - text: "153"
+  - link "담기 샛별배송 조림 유부초밥 면요리, 초밥에 사용하기 좋은 필수 아이템 14,500원 999+ Kurly Only":
+    - /url: /goods/5006851
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 조림 유부초밥
+    - paragraph: 면요리, 초밥에 사용하기 좋은 필수 아이템
+    - text: 14,500원
+    - img
+    - text: 999+ Kurly Only
+  - link "담기 샛별배송 [맘마밀] 안심밥상 진밥 15개월 3종 (택1) 다양한 식감에 익숙해지는 3,300원 459":
+    - /url: /goods/1000423874
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [맘마밀] 안심밥상 진밥 15개월 3종 (택1)
+    - paragraph: 다양한 식감에 익숙해지는
+    - text: 3,300원
+    - img
+    - text: "459"
+  - link "담기 판매자배송 [레벤호프] 스텐 밥주걱 레벤호프는 건강하고 혁신적인 제품을 만드는 브랜드입니다 25,000원 52%12,000원 무료배송":
+    - /url: /goods/1000871419
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 [레벤호프] 스텐 밥주걱
+    - paragraph: 레벤호프는 건강하고 혁신적인 제품을 만드는 브랜드입니다
+    - text: 25,000원 52%12,000원 무료배송
+  - link "담기 샛별배송 [조선호텔] 새우볶음밥 420g 고소한 감칠맛 가득 7,900원 7%7,347원 308":
+    - /url: /goods/1000817132
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [조선호텔] 새우볶음밥 420g
+    - paragraph: 고소한 감칠맛 가득
+    - text: 7,900원 7%7,347원
+    - img
+    - text: "308"
+  - link "담기 샛별배송 [풀무원] 참치&야채 볶음밥 (2개입) 고소한 참치가 가득 6,980원 217":
+    - /url: /goods/1001044520
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [풀무원] 참치&야채 볶음밥 (2개입)
+    - paragraph: 고소한 참치가 가득
+    - text: 6,980원
+    - img
+    - text: "217"
+  - link "담기 샛별배송 [유노추보] 와규스테이크볶음밥 4입 간편하게 즐기는 맛집 볶음밥 11,900원 999+":
+    - /url: /goods/5155568
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [유노추보] 와규스테이크볶음밥 4입
+    - paragraph: 간편하게 즐기는 맛집 볶음밥
+    - text: 11,900원
+    - img
+    - text: 999+
+  - link "담기 샛별배송 [도블레] 무스비 김밥/주먹밥 만들기 틀 4종 (택1) 피크닉 도시락을 간편하고 즐겁게 4,500원~ 999+":
+    - /url: /goods/5050984
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [도블레] 무스비 김밥/주먹밥 만들기 틀 4종 (택1)
+    - paragraph: 피크닉 도시락을 간편하고 즐겁게
+    - text: 4,500원~
+    - img
+    - text: 999+
+  - link "담기 판매자배송 [홈모먼트] 실리콘 냉동밥 용기 2개구성 (밥팩 용기 2P) 27,000원 37%16,900원 무료배송":
+    - /url: /goods/1000869720
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 [홈모먼트] 실리콘 냉동밥 용기 2개구성 (밥팩 용기 2P) 27,000원 37%16,900원 무료배송
+  - link "담기 샛별배송 [백년가게] 운채 향긋한 모듬나물밥 5가지 나물의 향긋한 조화 8,900원 7%8,277원 999+":
+    - /url: /goods/1000047971
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [백년가게] 운채 향긋한 모듬나물밥
+    - paragraph: 5가지 나물의 향긋한 조화
+    - text: 8,900원 7%8,277원
+    - img
+    - text: 999+
+  - link "+10%쿠폰 담기 샛별배송 [은하수] 한우대창덮밥 입안 가득 퍼지는 고소한 감칠맛 9,900원 15%8,415원 188 Kurly Only":
+    - /url: /goods/1001068042
+    - paragraph: +10%쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [은하수] 한우대창덮밥
+    - paragraph: 입안 가득 퍼지는 고소한 감칠맛
+    - text: 9,900원 15%8,415원
+    - img
+    - text: 188 Kurly Only
+  - link "무료배송+쿠폰 담기 판매자배송 [스토에버] 홈밥 국내생산 냉동밥용기 400ml 24개입 13,900원 28%9,900원 29 무료배송":
+    - /url: /goods/1001309737
+    - paragraph: 무료배송+쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 [스토에버] 홈밥 국내생산 냉동밥용기 400ml 24개입 13,900원 28%9,900원
+    - img
+    - text: 29 무료배송
+  - link "담기 샛별배송 [오타후쿠] 초밥용 식초 새콤한 감칠맛을 더하는 조미 식초 5,480원 999+":
+    - /url: /goods/5068941
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [오타후쿠] 초밥용 식초
+    - paragraph: 새콤한 감칠맛을 더하는 조미 식초
+    - text: 5,480원
+    - img
+    - text: 999+
+  - link "담기 샛별배송 [아우름] 소고기 가득 솥밥키트 간편하게 완성하는 든든한 한 상 13,900원 10%12,500원 214":
+    - /url: /goods/1000499055
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [아우름] 소고기 가득 솥밥키트
+    - paragraph: 간편하게 완성하는 든든한 한 상
+    - text: 13,900원 10%12,500원
+    - img
+    - text: "214"
+  - link "담기 샛별배송 [둥구나무] 산채나물 비빔밥 세트 향긋함이 가득한 7가지 나물 11,500원 999+ 한정수량":
+    - /url: /goods/5114802
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [둥구나무] 산채나물 비빔밥 세트
+    - paragraph: 향긋함이 가득한 7가지 나물
+    - text: 11,500원
+    - img
+    - text: 999+ 한정수량
+  - link "+10% 쿠폰 담기 판매자배송 [REMEMBER] 밥 테이블 무선 램프/Table lamp BOB/LB20 (단품) 다채로운 색감&고품질 독일 리빙 브랜드 99,000원 무료배송":
+    - /url: /goods/1001221985
+    - paragraph: +10% 쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 [REMEMBER] 밥 테이블 무선 램프/Table lamp BOB/LB20 (단품)
+    - paragraph: 다채로운 색감&고품질 독일 리빙 브랜드
+    - text: 99,000원 무료배송
+  - link "+10% 쿠폰 담기 판매자배송 [REMEMBER] 밥 테이블 무선 램프/Table lamp BOB/LB22 (단품) 다채로운 색감&고품질 독일 리빙 브랜드 99,000원 무료배송":
+    - /url: /goods/1001234444
+    - paragraph: +10% 쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 [REMEMBER] 밥 테이블 무선 램프/Table lamp BOB/LB22 (단품)
+    - paragraph: 다채로운 색감&고품질 독일 리빙 브랜드
+    - text: 99,000원 무료배송
+  - link "담기 샛별배송 [오뚜기] 오뚜기밥 잡곡 3종 국산 잡곡으로 지은 즉석밥 5,490원 20%4,390원 999+":
+    - /url: /goods/5077724
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [오뚜기] 오뚜기밥 잡곡 3종
+    - paragraph: 국산 잡곡으로 지은 즉석밥
+    - text: 5,490원 20%4,390원
+    - img
+    - text: 999+
+  - link "담기 샛별배송 [도리깨침] 건나물 비빔밥세트 향긋한 나물의 맛깔나는 조화 12,900원 9,999+ Kurly Only 한정수량":
+    - /url: /goods/5053538
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [도리깨침] 건나물 비빔밥세트
+    - paragraph: 향긋한 나물의 맛깔나는 조화
+    - text: 12,900원
+    - img
+    - text: 9,999+ Kurly Only 한정수량
+  - link "담기 샛별배송 [밥이야] 밥맛좋은밥 라이트 3입 6종 (택1) (냉동) 반으로 똑 나누어 즐기는 즉석밥 7,980원~ 999+":
+    - /url: /goods/1000014689
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [밥이야] 밥맛좋은밥 라이트 3입 6종 (택1) (냉동)
+    - paragraph: 반으로 똑 나누어 즐기는 즉석밥
+    - text: 7,980원~
+    - img
+    - text: 999+
+  - link "+12% 쿠폰 상세보기 판매자배송 [단미] 저당밥솥 저칼로리 다이어트 당뇨 관리 미니 밥솥 DA-RCO01 139,000원 42%79,800원 무료배송":
+    - /url: /goods/1000170340
+    - paragraph: +12% 쿠폰
+    - button "상세보기"
+    - text: 판매자배송 [단미] 저당밥솥 저칼로리 다이어트 당뇨 관리 미니 밥솥 DA-RCO01 139,000원 42%79,800원 무료배송
+  - img "처음 페이지로 이동하기 아이콘"
+  - img "이전 페이지로 이동하기 아이콘"
+  - text: 1 2 3 4 5 6 7 8 9 10
+  - img "다음 페이지로 이동하기 아이콘"
+  - img "마지막 페이지로 이동하기 아이콘"
+- paragraph: 고객행복센터
+- strong: 1644-1107월~토요일 오전 7시 - 오후 6시
+- button "카카오톡 문의"
+- text: 월~토요일
+- img
+- text: 오전 7시 - 오후 6시 일/공휴일
+- img
+- text: 오전 7시 - 오후 1시
+- button "1:1 문의"
+- text: 365일 고객센터 운영시간에 순차적으로 답변드리겠습니다.
+- link "대량주문 문의":
+  - /url: https://docs.google.com/forms/d/e/1FAIpQLScWcjRuN6eWJK-G8x3NwBfE8IyKZIOq7jhD3fUXuKSWwPqzJw/viewform
+- text: 월~금요일
+- img
+- text: 오전 9시 - 오후 6시 점심시간
+- img
+- text: "낮 12시 - 오후 1시 비회원 문의 :"
+- link "help@kurlycorp.com":
+  - /url: mailto:help@kurlycorp.com
+- list:
+  - listitem:
+    - link "컬리소개":
+      - /url: /introduce
+  - listitem:
+    - link "컬리소개영상":
+      - /url: https://www.youtube.com/embed/WEep7BcboMQ?rel=0&showinfo=0&wmode=opaque&enablejsapi=1
+  - listitem:
+    - link "투자정보":
+      - /url: https://ir.kurly.com
+  - listitem:
+    - link "인재채용":
+      - /url: https://kurly.career.greetinghr.com
+  - listitem:
+    - link "이용약관":
+      - /url: /user-terms/agreement
+  - listitem:
+    - link "개인정보처리방침":
+      - /url: /user-terms/privacy-policy
+  - listitem:
+    - link "이용안내":
+      - /url: /user-guide
+- text: "법인명 (상호) : 주식회사 컬리 | 사업자등록번호 : 261-81-23567"
+- link "사업자정보 확인":
+  - /url: https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2618123567&apv_perm_no=
+- text: "통신판매업 : 제 2018-서울강남-01646 호 주소 : 서울특별시 강남구 테헤란로 133, 18층(역삼동) | 대표이사 : 김슬아 채용문의 :"
+- link "recruit@kurlycorp.com":
+  - /url: mailto:recruit@kurlycorp.com
+- text: "팩스: 070 - 7500 - 6098"
+- list:
+  - link "컬리 인스타그램 바로가기":
+    - /url: https://instagram.com/marketkurly
+    - img "컬리 인스타그램 바로가기"
+  - link "컬리 페이스북 바로가기":
+    - /url: https://www.facebook.com/marketkurly
+    - img "컬리 페이스북 바로가기"
+  - link "컬리 네이버블로그 바로가기":
+    - /url: https://blog.naver.com/marketkurly
+    - img "컬리 네이버블로그 바로가기"
+  - link "컬리 유튜브 바로가기":
+    - /url: https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg
+    - img "컬리 유튜브 바로가기"
+- button "isms 로고 [인증범위] 컬리 쇼핑몰 서비스 개발·운영 (심사받지 않은 물리적 인프라 제외) [유효기간] 2025.01.15 ~ 2028.01.14":
+  - img "isms 로고"
+  - paragraph: "[인증범위] 컬리 쇼핑몰 서비스 개발·운영 (심사받지 않은 물리적 인프라 제외) [유효기간] 2025.01.15 ~ 2028.01.14"
+- button "우리은행 로고 고객님이 현금으로 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.":
+  - img "우리은행 로고"
+  - paragraph: 고객님이 현금으로 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.
+- text: 컬리에서 판매되는 상품 중에는 컬리에 입점한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다. 마켓플레이스(오픈마켓) 상품의 경우 컬리는 통신판매중개자로서 통신판매의 당사자가 아닙니다. 컬리는 해당 상품의 주문, 품질, 교환/환불 등 의무와 책임을 부담하지 않습니다.
+- emphasis: © KURLY CORP. ALL RIGHTS RESERVED
+- alert: 검색결과 > 밥 - 마켓컬리
+```
+
+# Test source
+
+```ts
+   1 | import { test, expect } from '@playwright/test';
+   2 | import { allure } from 'allure-playwright'; // ✅ deprecated이지만 지금은 사용 가능
+   3 | import { loadExcelFile } from '../../src/utils/excel_loader';
+   4 | import path from 'path';
+   5 | import fs from 'fs';
+   6 |
+   7 | let searchCases: { tc_id: string; search_term: string }[] = [];
+   8 |
+   9 | const screenshotDir = path.resolve(__dirname, '../../screenshots');
+  10 | if (!fs.existsSync(screenshotDir)) {
+  11 |   fs.mkdirSync(screenshotDir);
+  12 | }
+  13 |
+  14 | test.beforeAll(async () => {
+  15 |   searchCases = await loadExcelFile(
+  16 |     path.resolve(__dirname, '../data/test_case.xlsx')
+  17 |   );
+  18 |   console.log('엑셀 데이터:', searchCases);
+  19 | });
+  20 |
+  21 | test('🔍 엑셀 기반 상품 검색 테스트', async ({ page }) => {
+  22 |   for (const { tc_id, search_term } of searchCases) {
+  23 |     if (!tc_id || !search_term) continue;
+  24 |
+  25 |     // 📝 Allure 테스트 케이스명 기록
+  26 |     allure.label('testCaseId', tc_id); 
+  27 |     allure.description(`검색어 "${search_term}"에 대한 상품 노출 여부 확인`);
+  28 |
+  29 |     await page.goto('https://www.kurly.com/main');
+  30 |     const searchBox = page.getByPlaceholder('검색어를 입력해주세요');
+  31 |     await searchBox.fill(search_term);
+  32 |     await searchBox.press('Enter');
+  33 |     await page.waitForTimeout(4000); // 로딩 안정화용 대기
+  34 |
+  35 |     // ✅ 검색어 포함 텍스트가 화면에 존재하는지 확인
+  36 |     const matchingProduct = page.locator(`text=${search_term}`);
+> 37 |     await expect(matchingProduct.first()).toBeVisible({ timeout: 5000 });
+     |                                           ^ Error: expect(locator).toBeVisible()
+  38 |
+  39 |     // 📸 스크린샷 저장 및 Allure 첨부
+  40 |     const safeSearchTerm = search_term.replace(/[\/:*?"<>|]/g, '_');
+  41 |     const screenshotPath = path.join(screenshotDir, `search_${safeSearchTerm}.png`);
+  42 |     await page.screenshot({ path: screenshotPath });
+  43 |
+  44 |     // ✅ Allure에 첨부
+  45 |     const imageBuffer = fs.readFileSync(screenshotPath);
+  46 |     allure.attachment(`📸 ${search_term} 검색 결과`, imageBuffer, 'image/png');
+  47 |   }
+  48 |
+  49 |   await page.close();
+  50 | });
+  51 |
+  52 | test.afterAll(() => {
+  53 |   console.log('모든 테스트가 완료되었습니다.');
+  54 | });
+  55 |
+```
