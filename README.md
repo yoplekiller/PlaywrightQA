@@ -1,21 +1,27 @@
-# 🧪 Kurly UI 자동화 테스트 (Playwright)
+# Kurly Auto QA with Playwright 🧪
 
-> 엑셀 기반 테스트케이스를 활용한 마켓컬리 UI 검색 기능 자동화  
-> CI/CD 환경에서 Allure Report, Slack 알림까지 통합한 실무형 테스트 파이프라인 구현
+## 📌 프로젝트 개요
+마켓컬리 웹사이트의 주요 기능을 Playwright로 자동화한 테스트 프로젝트입니다.
+--------------------------------------------
+## **🔧대상 서비스**: [마켓컬리](https://www.kurly.com)
+###  테스트 목록
+- 🔍 검색 테스트
+- 🛒 장바구니 담기/수량 증가
+- 🚫 예외: 검색 결과 없음
+- 🔧 API 응답 확인
 
----
-
-## ✅ 프로젝트 개요
-
-- **대상 서비스**: [마켓컬리](https://www.kurly.com)
-- **테스트 항목**:
-  - 상품 검색 기능
-  - 엑셀 기반 검색어 반복 테스트
-  - 검색 결과 존재 여부 확인
 - **기술 스택**:  
   `Playwright`, `TypeScript`, `Excel(xlsx)`, `Slack Webhook`, `Allure Report`, `GitHub Actions`
+-------------------------------------
 
----
+## ▶️ 실행 방법
+```bash
+npm install
+npx playwright test
+📄 결과 보고서
+```
+
+---------------------
 <pre>
 ## 📂 디렉토리 구조
 📦 PLAYWRIGHTQA
