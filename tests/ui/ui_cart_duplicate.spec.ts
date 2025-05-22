@@ -12,6 +12,6 @@ test('test', async ({ page }) => {
   await page.getByRole('button', { name: '상품 이미지 [KF365] 당도선별 수박 4kg' }).click();
   await page.getByRole('button', { name: '1', exact: true }).click();
 
- const quantityLocator = page.locator('p').nth(3);
- await expect(quantityLocator).toHaveText('2');;
+  const quantityLocator = page.locator('p.kpds_j1jks21');
+  await expect(quantityLocator).toHaveText('2');
 });
