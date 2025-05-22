@@ -1,6 +1,9 @@
 import { test, expect } from '@playwright/test';
+import { allure } from 'allure-playwright';
 
-test('test', async ({ page }) => {
+test('상품 중복 담기 기능 확인', async ({ page }) => {
+  allure.description('상품을 장바구니에 중복으로 담기 후, 장바구니에서 수량이 정상적으로 증가하는지 확인합니다.');
+
   await page.goto('https://www.kurly.com/main');
   await page.locator('.css-vdi47h').click();
   await page.getByRole('textbox', { name: '검색어를 입력해주세요' }).fill('수박');

@@ -9,8 +9,6 @@ test('주소 검색 기능 테스트', async ({ page }) => {
   await page.waitForTimeout(5000);
 // });
 
-  
-  await page.getByLabel('배송지를 등록하고구매 가능한 상품을 확인하세요!로그인주소 검색').click();
   const page1Promise = page.waitForEvent('popup');
   await page.getByRole('button', { name: '주소 검색' }).click();
   const page1 = await page1Promise;
