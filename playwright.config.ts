@@ -17,7 +17,7 @@ if (process.env.SLACK_WEBHOOK_TS) {
 }
 
 export default defineConfig({
-    timeout: 150_000,
+    timeout: 70_000,
     retries: 0,
     use: {
         headless: true,
@@ -34,13 +34,13 @@ export default defineConfig({
             name: 'chromium',
             use: { ...devices['Desktop Chrome'] },
         },
-        // {
-        //     name: 'firefox',
-        //     use: { ...devices['Desktop Firefox'] },
-        // },
-        // {
-        //     name: 'Edge',
-        //     use: { ...devices['Desktop Edge'] },
-        // },
+        {
+            name: 'firefox',
+            use: { ...devices['Desktop Firefox'] },
+        },
+        {
+            name: 'Edge',
+            use: { ...devices['Desktop Edge'] },
+        },
     ],
 });
