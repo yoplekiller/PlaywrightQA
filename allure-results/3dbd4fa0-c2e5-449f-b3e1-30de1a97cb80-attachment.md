@@ -1,0 +1,815 @@
+# Test info
+
+- Name: test
+- Location: C:\Users\jmlim\OneDrive\Desktop\PlaywrightQA\tests\ui\ui_cart_duplicate.spec.ts:3:5
+
+# Error details
+
+```
+Error: locator.click: Error: strict mode violation: getByRole('button', { name: '담기' }) resolved to 20 elements:
+    1) <button type="button" class="product-function css-4ypn7b e17x72af0">…</button> aka getByRole('link', { name: '담기 [KF365] 훈제오리 2종 (2입) 17,' }).getByRole('button')
+    2) <button type="button" class="product-function css-4ypn7b e17x72af0">…</button> aka getByRole('link', { name: '담기 [KF365] 완도 전복 5종 (생물) (택1' }).getByRole('button')
+    3) <button type="button" class="product-function css-4ypn7b e17x72af0">…</button> aka getByRole('link', { name: '담기 [데체코] 엑스트라버진 올리브 오일 500mL' }).getByRole('button')
+    4) <button type="button" class="product-function css-4ypn7b e17x72af0">…</button> aka getByRole('link', { name: '담기 [2개 사면 24%][우주인피자] 인기 피자 2' }).getByRole('button')
+    5) <button type="button" class="product-function css-4ypn7b e17x72af0">…</button> aka getByRole('link', { name: '담기 [브룩클린688] 호주산 목초육 치마살 구이용' }).getByRole('button')
+    6) <button type="button" class="product-function css-4ypn7b e17x72af0">…</button> aka getByRole('link', { name: '+15%쿠폰 최대혜택가 : 7,152원 담기 [2' }).getByRole('button')
+    7) <button type="button" class="product-function css-4ypn7b e17x72af0">…</button> aka getByRole('link', { name: '담기 [압구정주꾸미] 주꾸미 볶음 2종 (택1) 8,' }).getByRole('button')
+    8) <button type="button" class="product-function css-4ypn7b e17x72af0">…</button> aka getByRole('link', { name: '담기 [사리원] 소불고기 전골 15,900원 25%' }).getByRole('button')
+    9) <button type="button" class="product-function css-4ypn7b e17x72af0">…</button> aka getByRole('link', { name: '+20%쿠폰 담기 [KF365] 국산 블루베리' }).getByRole('button')
+    10) <button type="button" class="product-function css-4ypn7b e17x72af0">…</button> aka getByRole('link', { name: '최대20' }).getByRole('button')
+    ...
+
+Call log:
+  - waiting for getByRole('button', { name: '담기' })
+
+    at C:\Users\jmlim\OneDrive\Desktop\PlaywrightQA\tests\ui\ui_cart_duplicate.spec.ts:11:50
+```
+
+# Page snapshot
+
+```yaml
+- link "한정수량 첫 구매 특가, 컬리 인기 상품 100원!":
+  - /url: https://event.kurly.com/lego/event/2023/0911/join/coupon
+- button "배너 하루 안보기":
+  - img
+  - text: 배너 하루 안보기
+- text: 회원가입 로그인 고객센터
+- img "마켓컬리 로고"
+- button "마켓컬리"
+- button "뷰티컬리"
+- textbox "검색어를 입력해주세요": 수박
+- button "delete-search-keyword"
+- button "submit"
+- button "찜하기"
+- button
+- text: 카테고리
+- list:
+  - listitem: 신상품
+  - listitem: 베스트
+  - listitem: 알뜰쇼핑
+  - listitem: 특가/혜택
+- link "샛별·하루 배송안내":
+  - /url: /user-guide/delivery
+- main:
+  - heading "' 수박 '에 대한 검색결과" [level=1]
+  - heading "필터" [level=2]
+  - button "초기화" [disabled]:
+    - img
+    - text: 초기화
+  - list:
+    - listitem:
+      - button "새로나온 8":
+        - button:
+          - img
+        - text: 새로나온 8
+    - listitem:
+      - button "아이콘벌쓰위크 6":
+        - button:
+          - img
+        - img "아이콘"
+        - text: 벌쓰위크 6
+  - button "카테고리":
+    - text: 카테고리
+    - img
+  - navigation:
+    - listitem:
+      - button "국산과일 13":
+        - button:
+          - img
+        - text: 국산과일 13
+    - listitem:
+      - button "제철과일 12":
+        - button:
+          - img
+        - text: 제철과일 12
+    - listitem:
+      - button "과일·야채음료 5":
+        - button:
+          - img
+        - text: 과일·야채음료 5
+    - listitem:
+      - button "과자·간식 3":
+        - button:
+          - img
+        - text: 과자·간식 3
+    - listitem:
+      - button "초콜릿·젤리·캔디 2":
+        - button:
+          - img
+        - text: 초콜릿·젤리·캔디 2
+    - listitem:
+      - button "여름 특별관 2":
+        - button:
+          - img
+        - text: 여름 특별관 2
+    - listitem:
+      - button "간편과일 2":
+        - button:
+          - img
+        - text: 간편과일 2
+    - listitem:
+      - button "세제·위생용품 2":
+        - button:
+          - img
+        - text: 세제·위생용품 2
+    - listitem:
+      - button "구강·면도 1":
+        - button:
+          - img
+        - text: 구강·면도 1
+    - listitem:
+      - button "아이스크림 1":
+        - button:
+          - img
+        - text: 아이스크림 1
+    - button "카테고리 더보기":
+      - text: 카테고리 더보기
+      - img
+  - button "배송":
+    - text: 배송
+    - img
+  - navigation:
+    - listitem:
+      - button "샛별배송 26":
+        - button:
+          - img
+        - text: 샛별배송 26
+    - listitem:
+      - button "판매자배송 14":
+        - button:
+          - img
+        - text: 판매자배송 14
+  - button "포장타입":
+    - text: 포장타입
+    - img
+  - navigation:
+    - listitem:
+      - button "상온 16":
+        - button:
+          - img
+        - text: 상온 16
+    - listitem:
+      - button "냉장 21":
+        - button:
+          - img
+        - text: 냉장 21
+    - listitem:
+      - button "냉동 5":
+        - button:
+          - img
+        - text: 냉동 5
+  - button "가격":
+    - text: 가격
+    - img
+  - navigation:
+    - listitem:
+      - button "8,845원 미만":
+        - button:
+          - img
+        - text: 8,845원 미만
+    - listitem:
+      - button "8,845원 ~ 12,900원":
+        - button:
+          - img
+        - text: 8,845원 ~ 12,900원
+    - listitem:
+      - button "12,900원 ~ 21,400원":
+        - button:
+          - img
+        - text: 12,900원 ~ 21,400원
+    - listitem:
+      - button "21,400원 이상":
+        - button:
+          - img
+        - text: 21,400원 이상
+  - button "브랜드":
+    - text: 브랜드
+    - img
+  - navigation:
+    - list:
+      - listitem:
+        - button "가나다순"
+      - listitem:
+        - button "상품 많은순"
+    - list:
+      - listitem:
+        - button "전체"
+      - listitem:
+        - button "ㄹ"
+      - listitem:
+        - button "ㅁ"
+      - listitem:
+        - button "ㅂ"
+      - listitem:
+        - button "ㅅ"
+      - listitem:
+        - button "ㅇ"
+      - listitem:
+        - button "ㅈ"
+      - listitem:
+        - button "ㅋ"
+      - listitem:
+        - button "ㅌ"
+      - listitem:
+        - button "ㅍ"
+      - listitem:
+        - button "ㅎ"
+      - listitem:
+        - button "A-Z"
+    - listitem:
+      - button "락앤락 1":
+        - button:
+          - img
+        - text: 락앤락 1
+    - listitem:
+      - button "롯데웰푸드 1":
+        - button:
+          - img
+        - text: 롯데웰푸드 1
+    - listitem:
+      - button "미스터초이스 1":
+        - button:
+          - img
+        - text: 미스터초이스 1
+    - listitem:
+      - button "바겐슈타이거 1":
+        - button:
+          - img
+        - text: 바겐슈타이거 1
+    - listitem:
+      - button "수미과 2":
+        - button:
+          - img
+        - text: 수미과 2
+    - listitem:
+      - button "시루조아 1":
+        - button:
+          - img
+        - text: 시루조아 1
+    - listitem:
+      - button "엘제이드 1":
+        - button:
+          - img
+        - text: 엘제이드 1
+    - listitem:
+      - button "오리온 1":
+        - button:
+          - img
+        - text: 오리온 1
+    - listitem:
+      - button "제스프리 1":
+        - button:
+          - img
+        - text: 제스프리 1
+    - listitem:
+      - button "카수가이 1":
+        - button:
+          - img
+        - text: 카수가이 1
+    - button "브랜드 더보기":
+      - text: 브랜드 더보기
+      - img
+  - button "유형":
+    - text: 유형
+    - img
+  - navigation:
+    - listitem:
+      - button "희소가치 프로젝트 3":
+        - button:
+          - img
+        - text: 희소가치 프로젝트 3
+  - button "혜택":
+    - text: 혜택
+    - img
+  - navigation:
+    - listitem:
+      - button "할인상품 34":
+        - button:
+          - img
+        - text: 할인상품 34
+  - button "출시":
+    - text: 출시
+    - img
+  - navigation:
+    - listitem:
+      - button "새로나온 8":
+        - button:
+          - img
+        - text: 새로나온 8
+  - button "프로모션":
+    - text: 프로모션
+    - img
+  - navigation:
+    - listitem:
+      - button "아이콘벌쓰위크 6":
+        - button:
+          - img
+        - img "아이콘"
+        - text: 벌쓰위크 6
+  - text: 총 40건
+  - list:
+    - listitem:
+      - link "추천순":
+        - /url: /search?sword=%EC%88%98%EB%B0%95&page=1&per_page=96&sorted_type=4
+      - img
+    - listitem:
+      - link "신상품순":
+        - /url: /search?sword=%EC%88%98%EB%B0%95&page=1&per_page=96&sorted_type=0
+    - listitem:
+      - link "판매량순":
+        - /url: /search?sword=%EC%88%98%EB%B0%95&page=1&per_page=96&sorted_type=1
+    - listitem:
+      - link "혜택순":
+        - /url: /search?sword=%EC%88%98%EB%B0%95&page=1&per_page=96&sorted_type=5
+    - listitem:
+      - link "낮은 가격순":
+        - /url: /search?sword=%EC%88%98%EB%B0%95&page=1&per_page=96&sorted_type=2
+    - listitem:
+      - link "높은 가격순":
+        - /url: /search?sword=%EC%88%98%EB%B0%95&page=1&per_page=96&sorted_type=3
+  - link "+20%쿠폰 담기 샛별배송 [KF365] 당도선별 수박 4kg 이상 시원하고 달콤한 과즙이 듬뿍 29,900원 16%24,900원 999+":
+    - /url: /goods/5136384
+    - paragraph: +20%쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [KF365] 당도선별 수박 4kg 이상
+    - paragraph: 시원하고 달콤한 과즙이 듬뿍
+    - text: 29,900원 16%24,900원
+    - img
+    - text: 999+
+  - link "+20%쿠폰 담기 샛별배송 [KF365] 당도선별 수박 5kg 이상 언제 구입해도 맛있는 수박 39,900원 25%29,900원 9,999+":
+    - /url: /goods/5071669
+    - paragraph: +20%쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [KF365] 당도선별 수박 5kg 이상
+    - paragraph: 언제 구입해도 맛있는 수박
+    - text: 39,900원 25%29,900원
+    - img
+    - text: 9,999+
+  - link "담기 샛별배송 GAP 애플 수박 1kg 작지만 달콤하고 맛있는 애플 수박 17,900원 27%12,900원 999+":
+    - /url: /goods/5038085
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 GAP 애플 수박 1kg
+    - paragraph: 작지만 달콤하고 맛있는 애플 수박
+    - text: 17,900원 27%12,900원
+    - img
+    - text: 999+
+  - link "+15%쿠폰 담기 샛별배송 [수미과] 화채용 조각 수박 600g 간편하게 즐기는 여름의 맛 12,900원 22%9,990원 352":
+    - /url: /goods/1000577911
+    - paragraph: +15%쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [수미과] 화채용 조각 수박 600g
+    - paragraph: 간편하게 즐기는 여름의 맛
+    - text: 12,900원 22%9,990원
+    - img
+    - text: "352"
+  - link "담기 샛별배송 당도선별 흑미 수박 2종 색다른 비주얼의 달콤한 수박 49,900원 32%33,915원~ 818":
+    - /url: /goods/5053493
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 당도선별 흑미 수박 2종
+    - paragraph: 색다른 비주얼의 달콤한 수박
+    - text: 49,900원 32%33,915원~
+    - img
+    - text: "818"
+  - link "+20%쿠폰 담기 샛별배송 [KF365] 당도선별 수박 6kg 이상 수분가득 달콤한 제철 수박 44,900원 22%34,900원 9,999+":
+    - /url: /goods/5025834
+    - paragraph: +20%쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [KF365] 당도선별 수박 6kg 이상
+    - paragraph: 수분가득 달콤한 제철 수박
+    - text: 44,900원 22%34,900원
+    - img
+    - text: 9,999+
+  - link "담기 샛별배송 속노란 블랙망고 수박 2kg 이상 작지만 야무진 이색 수박 24,900원 36%15,920원 143 희소가치 프로젝트":
+    - /url: /goods/5006752
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 속노란 블랙망고 수박 2kg 이상
+    - paragraph: 작지만 야무진 이색 수박
+    - text: 24,900원 36%15,920원
+    - img
+    - text: 143 희소가치 프로젝트
+  - link "반짝특가 최대혜택가 12,255원~ 담기 판매자배송 [앙쥬] 치발기 2종(+케이스) (택1) 30,000원 57%12,900원~ 무료배송":
+    - /url: /goods/1001207321
+    - paragraph: 반짝특가
+    - text: 최대혜택가 12,255원~
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 [앙쥬] 치발기 2종(+케이스) (택1) 30,000원 57%12,900원~ 무료배송
+  - link "담기 샛별배송 마이스터 조원호 생산자의 성주 참외 1.2kg(4~7입) 명인이 길러내어 더욱 청량한 단맛 24,900원 20%19,900원 50":
+    - /url: /goods/1001188109
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 마이스터 조원호 생산자의 성주 참외 1.2kg(4~7입)
+    - paragraph: 명인이 길러내어 더욱 청량한 단맛
+    - text: 24,900원 20%19,900원
+    - img
+    - text: "50"
+  - link "담기 샛별배송 백설 멜론 1.3kg 부드럽게 녹아드는 새하얀 달콤함 13,900원 28%9,990원 343 희소가치 프로젝트":
+    - /url: /goods/5073837
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 백설 멜론 1.3kg
+    - paragraph: 부드럽게 녹아드는 새하얀 달콤함
+    - text: 13,900원 28%9,990원
+    - img
+    - text: 343 희소가치 프로젝트
+  - link "+15%쿠폰 담기 샛별배송 [타코] 수박 주스 330mL 산뜻한 청량감을 선사하는 2,500원 20%2,000원 999+":
+    - /url: /goods/5041704
+    - paragraph: +15%쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [타코] 수박 주스 330mL
+    - paragraph: 산뜻한 청량감을 선사하는
+    - text: 2,500원 20%2,000원
+    - img
+    - text: 999+
+  - link "담기 판매자배송 달콤 시원한 고당도 프리미엄 수박 3~4kg 내외 (12brix이상) (고당도 프리미엄 수박 3~4kg) 달콤 시원한 수박 22,900원 27%16,500원 무료배송":
+    - /url: /goods/1001353532
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 달콤 시원한 고당도 프리미엄 수박 3~4kg 내외 (12brix이상) (고당도 프리미엄 수박 3~4kg)
+    - paragraph: 달콤 시원한 수박
+    - text: 22,900원 27%16,500원 무료배송
+  - link "담기 샛별배송 [엘제이드] 얼린 생 수박주스 250mL 수박 100% 그대로 갈아 넣은 3,400원 999+":
+    - /url: /goods/5056661
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [엘제이드] 얼린 생 수박주스 250mL
+    - paragraph: 수박 100% 그대로 갈아 넣은
+    - text: 3,400원
+    - img
+    - text: 999+
+  - link "담기 판매자배송 달콤 시원한 고당도 프리미엄 수박 4~5kg 내외 (12brix이상) (고당도 프리미엄 수박 4~5kg) 달콤 시원한 수박 27,900원 28%19,900원 무료배송":
+    - /url: /goods/1001353546
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 달콤 시원한 고당도 프리미엄 수박 4~5kg 내외 (12brix이상) (고당도 프리미엄 수박 4~5kg)
+    - paragraph: 달콤 시원한 수박
+    - text: 27,900원 28%19,900원 무료배송
+  - link "담기 샛별배송 초여름 제철과일 5종 (택1) 초여름에 맛보는 달고 상쾌한 과즙 14,900원 33%9,900원~ 9,999+":
+    - /url: /goods/1000523462
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 초여름 제철과일 5종 (택1)
+    - paragraph: 초여름에 맛보는 달고 상쾌한 과즙
+    - text: 14,900원 33%9,900원~
+    - img
+    - text: 9,999+
+  - link "담기 판매자배송 달콤 시원한 고당도 프리미엄 수박 6~7kg 내외 (12brix이상) (고당도 프리미엄 수박 6~7kg) 달콤 시원한 수박 38,900원 20%30,900원 무료배송":
+    - /url: /goods/1001353541
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 달콤 시원한 고당도 프리미엄 수박 6~7kg 내외 (12brix이상) (고당도 프리미엄 수박 6~7kg)
+    - paragraph: 달콤 시원한 수박
+    - text: 38,900원 20%30,900원 무료배송
+  - link "담기 판매자배송 달콤 시원한 고당도 프리미엄 수박 5~6kg 내외 (12brix이상) (고당도 프리미엄 수박 5~6kg) 달콤 시원한 수박 30,900원 16%25,900원 무료배송":
+    - /url: /goods/1001353547
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 달콤 시원한 고당도 프리미엄 수박 5~6kg 내외 (12brix이상) (고당도 프리미엄 수박 5~6kg)
+    - paragraph: 달콤 시원한 수박
+    - text: 30,900원 16%25,900원 무료배송
+  - link "담기 샛별배송 [제주깜놀] 국산 수박주스 3종 (택1) 3,400원 10%3,040원~ 55":
+    - /url: /goods/1001330595
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [제주깜놀] 국산 수박주스 3종 (택1) 3,400원 10%3,040원~
+    - img
+    - text: "55"
+  - link "담기 샛별배송 [미스터초이스] 얼린 생 수박주스 (300mL X 6개) 달콤한 수박 100% 그대로 담은 18,500원 15%15,725원 139":
+    - /url: /goods/1000652103
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [미스터초이스] 얼린 생 수박주스 (300mL X 6개)
+    - paragraph: 달콤한 수박 100% 그대로 담은
+    - text: 18,500원 15%15,725원
+    - img
+    - text: "139"
+  - link "담기 샛별배송 [시루조아] 삼색 설기 3종 (택1) 보기에도 좋고 먹기에도 좋은 떡 8,900원~ 999+":
+    - /url: /goods/1000202617
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [시루조아] 삼색 설기 3종 (택1)
+    - paragraph: 보기에도 좋고 먹기에도 좋은 떡
+    - text: 8,900원~
+    - img
+    - text: 999+
+  - link "+25%쿠폰 담기 판매자배송 [바겐슈타이거] 수박&재료 보관 투명 PC커버 트레이 세트 4종 택1 투명한 PC커버로 더욱 편리해진 트레이 세트! 25,000원 54%11,500원~ 813 무료배송":
+    - /url: /goods/1000423524
+    - paragraph: +25%쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 [바겐슈타이거] 수박&재료 보관 투명 PC커버 트레이 세트 4종 택1
+    - paragraph: 투명한 PC커버로 더욱 편리해진 트레이 세트!
+    - text: 25,000원 54%11,500원~
+    - img
+    - text: 813 무료배송
+  - link "담기 샛별배송 [롯데웰푸드] 0 칼로리 바 75mL X 10개입 3종(택1) 부담 없이 즐기는 인기 아이스크림 6,000원 999+":
+    - /url: /goods/1000551852
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [롯데웰푸드] 0 칼로리 바 75mL X 10개입 3종(택1)
+    - paragraph: 부담 없이 즐기는 인기 아이스크림
+    - text: 6,000원
+    - img
+    - text: 999+
+  - link "담기 판매자배송 [이지앤프리] 6L 수박통 채반 보관용기 세트 2종 (택1) 남은 수박 반통 보관통에 깔끔하게 쏙! 20,900원 33%13,900원~ 무료배송":
+    - /url: /goods/1000227520
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 [이지앤프리] 6L 수박통 채반 보관용기 세트 2종 (택1)
+    - paragraph: 남은 수박 반통 보관통에 깔끔하게 쏙!
+    - text: 20,900원 33%13,900원~ 무료배송
+  - link "담기 샛별배송 [풀무원] 아임리얼 700mL 7종 넉넉히 만끽하는 신선한 주스 10,980원 999+":
+    - /url: /goods/5157237
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [풀무원] 아임리얼 700mL 7종
+    - paragraph: 넉넉히 만끽하는 신선한 주스
+    - text: 10,980원
+    - img
+    - text: 999+
+  - link "담기 샛별배송 [오리온] 시즌한정 여름과일맛 쿠키/파이 4종 (택1) 여름을 닮은 산뜻한 간식 4,320원 3%4,190원~ 798":
+    - /url: /goods/1001331043
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [오리온] 시즌한정 여름과일맛 쿠키/파이 4종 (택1)
+    - paragraph: 여름을 닮은 산뜻한 간식
+    - text: 4,320원 3%4,190원~
+    - img
+    - text: "798"
+  - link "담기 샛별배송 [루덴스] 목 보호 과일캔디 3종 (택1) 펙틴으로 부드럽게 완성한 6,300원 5%5,950원 293":
+    - /url: /goods/1000874938
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [루덴스] 목 보호 과일캔디 3종 (택1)
+    - paragraph: 펙틴으로 부드럽게 완성한
+    - text: 6,300원 5%5,950원
+    - img
+    - text: "293"
+  - link "담기 샛별배송 [카수가이] 과일 구미 6종 (택1) 새콤달콤 과즙을 품은 젤리 3,980원 5%3,780원 373":
+    - /url: /goods/1000499709
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [카수가이] 과일 구미 6종 (택1)
+    - paragraph: 새콤달콤 과즙을 품은 젤리
+    - text: 3,980원 5%3,780원
+    - img
+    - text: "373"
+  - link "담기 샛별배송 [티젠] 제로슈가 홍차 아이스티 4종 (5g X 10개입) (택1) 걱정없는 달콤한 한 잔 4,500원~ 47":
+    - /url: /goods/1001150162
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [티젠] 제로슈가 홍차 아이스티 4종 (5g X 10개입) (택1)
+    - paragraph: 걱정없는 달콤한 한 잔
+    - text: 4,500원~
+    - img
+    - text: "47"
+  - link "담기 판매자배송 [히키키리키키] 유니크 귀여운 과일야채 주방장갑 경쾌한 에너지가 넘치는 일러스트 패턴의 주방장갑 10,900원 12%9,500원 41 무료배송":
+    - /url: /goods/1000678094
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 [히키키리키키] 유니크 귀여운 과일야채 주방장갑
+    - paragraph: 경쾌한 에너지가 넘치는 일러스트 패턴의 주방장갑
+    - text: 10,900원 12%9,500원
+    - img
+    - text: 41 무료배송
+  - link "+5% 쿠폰 담기 판매자배송 [앙쥬] 치발기 단품 (택1) 15,000원 41%8,800원~ 무료배송":
+    - /url: /goods/1001207374
+    - paragraph: +5% 쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 [앙쥬] 치발기 단품 (택1) 15,000원 41%8,800원~ 무료배송
+  - link "멤버스20%쿠폰 담기 판매자배송 [포유렐라] UV차단 프룻 3단 암막 접이식 휴대용 자동우산 5종 (택1) 12,000원 25%8,890원 무료배송":
+    - /url: /goods/1001167746
+    - paragraph: 멤버스20%쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 [포유렐라] UV차단 프룻 3단 암막 접이식 휴대용 자동우산 5종 (택1) 12,000원 25%8,890원 무료배송
+  - link "담기 판매자배송 [히키키리키키]유니크 귀여운 과일야채 앞치마 6종 (택1) 경쾌한 에너지가 넘치는 일러스트 패턴의 생활방수 앞치마 32,900원 9%29,800원 31 무료배송":
+    - /url: /goods/1000678133
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 [히키키리키키]유니크 귀여운 과일야채 앞치마 6종 (택1)
+    - paragraph: 경쾌한 에너지가 넘치는 일러스트 패턴의 생활방수 앞치마
+    - text: 32,900원 9%29,800원
+    - img
+    - text: 31 무료배송
+  - link "담기 샛별배송 [큐라덴] 큐라프록스 BEYOU 비유치약 비건 잇몸 불소치약 60mL 6종 (택1) 100% 식물성, 유해성분 0%, 6가지 맛의 안전한 미백 치약 16,000원 71":
+    - /url: /goods/1001063470
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 샛별배송 [큐라덴] 큐라프록스 BEYOU 비유치약 비건 잇몸 불소치약 60mL 6종 (택1)
+    - paragraph: 100% 식물성, 유해성분 0%, 6가지 맛의 안전한 미백 치약
+    - text: 16,000원
+    - img
+    - text: "71"
+  - link "+10% 쿠폰 담기 판매자배송 [올리앤캐롤] 천연소재 치발기&베이비토이 - 과일 15종 (택1) 27,500원 9%24,800원~ 무료배송":
+    - /url: /goods/1001224614
+    - paragraph: +10% 쿠폰
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 [올리앤캐롤] 천연소재 치발기&베이비토이 - 과일 15종 (택1) 27,500원 9%24,800원~ 무료배송
+  - link "+10% 쿠폰 최대혜택가 29,160원~ 담기 판매자배송 [올리앤캐롤] 천연소재 치발기&베이비토이 - 채소&과일 BEST 모음 (택1) 45,500원 9%41,000원 12 무료배송":
+    - /url: /goods/1001242275
+    - paragraph: +10% 쿠폰
+    - text: 최대혜택가 29,160원~
+    - button "담기":
+      - img
+      - text: 담기
+    - text: 판매자배송 [올리앤캐롤] 천연소재 치발기&베이비토이 - 채소&과일 BEST 모음 (택1) 45,500원 9%41,000원
+    - img
+    - text: 12 무료배송
+  - link "Coming Soon 재입고 알림 샛별배송 [수미과] 조각 수박 400g 혼자서도 부담 없는 간편 수박 15,900원 18%12,900원 999+":
+    - /url: /goods/1000172757
+    - text: Coming Soon
+    - button "재입고 알림":
+      - img
+      - text: 재입고 알림
+    - text: 샛별배송 [수미과] 조각 수박 400g
+    - paragraph: 혼자서도 부담 없는 간편 수박
+    - text: 15,900원 18%12,900원
+    - img
+    - text: 999+
+  - link "Coming Soon 재입고 알림 샛별배송 [수미과] 조각 수박 800g 편하게 누리는 시원한 단맛 29,900원 23%22,900원 999+":
+    - /url: /goods/1000172759
+    - text: Coming Soon
+    - button "재입고 알림":
+      - img
+      - text: 재입고 알림
+    - text: 샛별배송 [수미과] 조각 수박 800g
+    - paragraph: 편하게 누리는 시원한 단맛
+    - text: 29,900원 23%22,900원
+    - img
+    - text: 999+
+  - link "Coming Soon 재입고 알림 샛별배송 세지 멜론 1.6kg 녹진한 달콤함을 근사하게 즐기는 방법 17,900원 27%12,900원 999+ 희소가치 프로젝트":
+    - /url: /goods/5065232
+    - text: Coming Soon
+    - button "재입고 알림":
+      - img
+      - text: 재입고 알림
+    - text: 샛별배송 세지 멜론 1.6kg
+    - paragraph: 녹진한 달콤함을 근사하게 즐기는 방법
+    - text: 17,900원 27%12,900원
+    - img
+    - text: 999+ 희소가치 프로젝트
+  - link "+15%쿠폰 Coming Soon 재입고 알림 샛별배송 당도선별 성주 참외 1.2kg(4~7입) 뽀얀 과육에 담긴 시원한 단맛 14,900원 13%12,900원 668":
+    - /url: /goods/1000458722
+    - paragraph: +15%쿠폰
+    - text: Coming Soon
+    - button "재입고 알림":
+      - img
+      - text: 재입고 알림
+    - text: 샛별배송 당도선별 성주 참외 1.2kg(4~7입)
+    - paragraph: 뽀얀 과육에 담긴 시원한 단맛
+    - text: 14,900원 13%12,900원
+    - img
+    - text: "668"
+  - link "Coming Soon 재입고 알림 판매자배송 [락앤락] 수박 야채 보관용기 6/8L 3종 (택1) 수박/야채 완전 밀폐로 신선보관이 가능한 용기 9,900원 40%5,900원~ 무료배송":
+    - /url: /goods/1000669789
+    - text: Coming Soon
+    - button "재입고 알림":
+      - img
+      - text: 재입고 알림
+    - text: 판매자배송 [락앤락] 수박 야채 보관용기 6/8L 3종 (택1)
+    - paragraph: 수박/야채 완전 밀폐로 신선보관이 가능한 용기
+    - text: 9,900원 40%5,900원~ 무료배송
+- paragraph: 고객행복센터
+- strong: 1644-1107월~토요일 오전 7시 - 오후 6시
+- button "카카오톡 문의"
+- text: 월~토요일
+- img
+- text: 오전 7시 - 오후 6시 일/공휴일
+- img
+- text: 오전 7시 - 오후 1시
+- button "1:1 문의"
+- text: 365일 고객센터 운영시간에 순차적으로 답변드리겠습니다.
+- link "대량주문 문의":
+  - /url: https://docs.google.com/forms/d/e/1FAIpQLScWcjRuN6eWJK-G8x3NwBfE8IyKZIOq7jhD3fUXuKSWwPqzJw/viewform
+- text: 월~금요일
+- img
+- text: 오전 9시 - 오후 6시 점심시간
+- img
+- text: "낮 12시 - 오후 1시 비회원 문의 :"
+- link "help@kurlycorp.com":
+  - /url: mailto:help@kurlycorp.com
+- list:
+  - listitem:
+    - link "컬리소개":
+      - /url: /introduce
+  - listitem:
+    - link "컬리소개영상":
+      - /url: https://www.youtube.com/embed/WEep7BcboMQ?rel=0&showinfo=0&wmode=opaque&enablejsapi=1
+  - listitem:
+    - link "투자정보":
+      - /url: https://ir.kurly.com
+  - listitem:
+    - link "인재채용":
+      - /url: https://kurly.career.greetinghr.com
+  - listitem:
+    - link "이용약관":
+      - /url: /user-terms/agreement
+  - listitem:
+    - link "개인정보처리방침":
+      - /url: /user-terms/privacy-policy
+  - listitem:
+    - link "이용안내":
+      - /url: /user-guide
+- text: "법인명 (상호) : 주식회사 컬리 | 사업자등록번호 : 261-81-23567"
+- link "사업자정보 확인":
+  - /url: https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2618123567&apv_perm_no=
+- text: "통신판매업 : 제 2018-서울강남-01646 호 주소 : 서울특별시 강남구 테헤란로 133, 18층(역삼동) | 대표이사 : 김슬아 채용문의 :"
+- link "recruit@kurlycorp.com":
+  - /url: mailto:recruit@kurlycorp.com
+- text: "팩스: 070 - 7500 - 6098"
+- list:
+  - link "컬리 인스타그램 바로가기":
+    - /url: https://instagram.com/marketkurly
+    - img "컬리 인스타그램 바로가기"
+  - link "컬리 페이스북 바로가기":
+    - /url: https://www.facebook.com/marketkurly
+    - img "컬리 페이스북 바로가기"
+  - link "컬리 네이버블로그 바로가기":
+    - /url: https://blog.naver.com/marketkurly
+    - img "컬리 네이버블로그 바로가기"
+  - link "컬리 유튜브 바로가기":
+    - /url: https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg
+    - img "컬리 유튜브 바로가기"
+- button "isms 로고 [인증범위] 컬리 쇼핑몰 서비스 개발·운영 (심사받지 않은 물리적 인프라 제외) [유효기간] 2025.01.15 ~ 2028.01.14":
+  - img "isms 로고"
+  - paragraph: "[인증범위] 컬리 쇼핑몰 서비스 개발·운영 (심사받지 않은 물리적 인프라 제외) [유효기간] 2025.01.15 ~ 2028.01.14"
+- button "우리은행 로고 고객님이 현금으로 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.":
+  - img "우리은행 로고"
+  - paragraph: 고객님이 현금으로 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.
+- text: 컬리에서 판매되는 상품 중에는 컬리에 입점한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다. 마켓플레이스(오픈마켓) 상품의 경우 컬리는 통신판매중개자로서 통신판매의 당사자가 아닙니다. 컬리는 해당 상품의 주문, 품질, 교환/환불 등 의무와 책임을 부담하지 않습니다.
+- emphasis: © KURLY CORP. ALL RIGHTS RESERVED
+- alert: 검색결과 > 수박 - 마켓컬리
+```
+
+# Test source
+
+```ts
+   1 | import { test, expect } from '@playwright/test';
+   2 |
+   3 | test('test', async ({ page }) => {
+   4 |   await page.goto('https://www.kurly.com/main'); 
+   5 |
+   6 |  
+   7 |   await page.getByRole('textbox', { name: '검색어를 입력해주세요' }).click();
+   8 |   await page.getByRole('textbox', { name: '검색어를 입력해주세요' }).fill('수박');
+   9 |   await page.getByRole('textbox', { name: '검색어를 입력해주세요' }).press('Enter');
+  10 |
+> 11 |   await page.getByRole('button', { name: '담기' }).click();
+     |                                                  ^ Error: locator.click: Error: strict mode violation: getByRole('button', { name: '담기' }) resolved to 20 elements:
+  12 |   await page.getByRole('button', { name: '장바구니 담기' }).click();
+  13 |   await page.getByRole('button', { name: '담기' }).click();
+  14 |   await page.getByRole('button', { name: '장바구니 담기' }).click();
+  15 |
+  16 |   await page.locator('.css-g25h97.e14oy6dx1').click();
+  17 |   await expect(page.getByText("[KF365] 당도선별 수박 4kg 이상")).toBeVisible();
+  18 |
+  19 |   const quantityLocator = page.locator('//p[contains(@class, "kpds_") and text()="2"]');
+  20 |   await expect(quantityLocator).toHaveText('2');
+  21 | });
+  22 |
+```
