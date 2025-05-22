@@ -17,4 +17,12 @@ test('상품 중복 담기 기능 확인', async ({ page }) => {
 
   const quantityLocator = page.locator('p.kpds_j1jks21');
   await expect(quantityLocator).toHaveText('2');
+
+  // 스크린샷 저장
+  const screenshotPath = 'screenshots/cart_duplicate.png';
+  await page.screenshot({ path: screenshotPath });
+  await test.info().attach('장바구니 중복 담기 스크린샷', {
+    body: Buffer.from(await page.screenshot()),
+    contentType: 'image/png',
+  });
 });
