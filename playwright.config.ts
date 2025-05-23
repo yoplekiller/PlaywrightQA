@@ -17,11 +17,11 @@ if (process.env.SLACK_WEBHOOK_TS) {
 }
 
 export default defineConfig({
-    timeout: 150_000,
+    timeout: 70_000,
     retries: 0,
     use: {
         headless: true,
-        viewport: { width: 1280, height: 720 },
+        viewport: { width: 1920, height: 1080 },
         ignoreHTTPSErrors: true,
         trace: 'on',
         screenshot: 'only-on-failure',
