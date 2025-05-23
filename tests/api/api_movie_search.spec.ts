@@ -1,33 +1,29 @@
-// import { test, expect, request } from '@playwright/test';
-// import dotenv from 'dotenv';
-// dotenv.config();
+import { test, expect, request } from '@playwright/test';
+import { allure } from 'allure-playwright';
+import dotenv from 'dotenv';
 
-// const BASE_URL = process.env.TMDB_BASE_URL || 'https://api.themoviedb.org/3';
-// const API_KEY = process.env.TMDB_API_KEY;
+dotenv.config();
 
-// // 🎬 테스트 데이터
-// const movieCases = [
-//   { movie_id: 238, expected_title: "The Godfather" },
-//   { movie_id: 550, expected_title: "Fight Club" },
-//   { movie_id: 603, expected_title: "The Matrix" },
-//   { movie_id: 157336, expected_title: "Interstellar" },
-// ];
+const BASE_URL = process.env.TMDB_BASE_URL || 'https://api.themoviedb.org/';
+const API_KEY = process.env.TMDB_API_KEY!;
 
-// for (const { movie_id, expected_title } of movieCases) {
-// //   test(`🎥 영화 ID ${movie_id} → "${expected_title}" 상세 조회`, async () => {
-//     const apiContext = await request.newContext({
-//       baseURL: BASE_URL,
-//     });
+test('🎬 인기 영화 목록 조회 → 응답 200 및 결과 리스트 확인', async () => {
+  const apiContext = await request.newContext({ baseURL: BASE_URL });
 
-//     const response = await apiContext.get(`/movie/${movie_id}?api_key=${API_KEY}`);
-//     expect(response.status()).toBe(200);
+  const endpoint = `3/movie/popular?api_key=${API_KEY}`;
+  const response = await apiContext.get(endpoint);
+  const status = response.status();
+  const data = await response.json();
 
-//     const data = await response.json();
-//     expect(data.id).toBe(movie_id);
-//     expect(data.title).toBe(expected_title);
+  // ✅ 테스트 검증
+  expect(status).toBe(200);
+  expect(data).toHaveProperty('results');
+  expect(Array.isArray(data.results)).toBe(true);
+  expect(data.results.length).toBeGreaterThan(0);
 
-   
-//     console.log(`✅ ${data.title} 조회 완료`);
-//     console.log('API KEY:', API_KEY);
-//   });
-// }
+  // ✅ Allure 첨부
+  allure.attachment('인기 영화 목록 응답', JSON.stringify(data, null, 2), 'application/json');
+
+  // ✅ 결과 콘솔 출력
+  console.log(`🎉 인기 영화 ${data.results.length}건 조회됨`);
+});
