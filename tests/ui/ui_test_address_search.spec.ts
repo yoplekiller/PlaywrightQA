@@ -4,10 +4,11 @@ import { allure } from 'allure-playwright';
 test('주소 검색 기능 테스트', async ({ page }) => {
   allure.description('주소 검색 기능 테스트');
   await page.goto('https://www.kurly.com/main');
-  await page.setViewportSize({ width: 1280, height: 720 });
   await page.locator('.css-14vnom0.e1n3mt0d1').click();
   await page.waitForTimeout(5000);
 // });
+
+
 
   const page1Promise = page.waitForEvent('popup');
   await page.getByRole('button', { name: '주소 검색' }).click();
