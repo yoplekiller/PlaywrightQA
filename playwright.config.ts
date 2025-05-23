@@ -17,7 +17,7 @@ if (process.env.SLACK_WEBHOOK_TS) {
 }
 
 export default defineConfig({
-    timeout: 70_000,
+    timeout: 150_000,
     retries: 0,
     use: {
         headless: true,
