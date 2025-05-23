@@ -1,4 +1,3 @@
-// // tests/api/test_movie_details.spec.ts
 // import { test, expect, request } from '@playwright/test';
 // import dotenv from 'dotenv';
 // dotenv.config();
@@ -15,7 +14,7 @@
 // ];
 
 // for (const { movie_id, expected_title } of movieCases) {
-//   test(`🎥 영화 ID ${movie_id} → "${expected_title}" 상세 조회`, async () => {
+// //   test(`🎥 영화 ID ${movie_id} → "${expected_title}" 상세 조회`, async () => {
 //     const apiContext = await request.newContext({
 //       baseURL: BASE_URL,
 //     });
@@ -27,7 +26,8 @@
 //     expect(data.id).toBe(movie_id);
 //     expect(data.title).toBe(expected_title);
 
-//     // 콘솔 출력 (선택적)
+   
 //     console.log(`✅ ${data.title} 조회 완료`);
+//     console.log('API KEY:', API_KEY);
 //   });
 // }

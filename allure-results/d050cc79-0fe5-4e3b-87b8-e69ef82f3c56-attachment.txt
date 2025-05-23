@@ -1,0 +1,18 @@
+BASE_URL: https://api.themoviedb.org/3
+API_KEY: 040ab6b57016f82bc6cac7e111efe301
+Request URL: https://api.themoviedb.org/3/movie/popular?api_key=040ab6b57016f82bc6cac7e111efe301
+Status: 404
+Raw response: <html>
+<head><title>404 Not Found</title></head>
+<body>
+<center><h1>404 Not Found</h1></center>
+<hr><center>openresty</center>
+</body>
+</html>
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+
