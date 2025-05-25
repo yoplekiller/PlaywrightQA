@@ -44,6 +44,7 @@ jobs:
       - name: Run API tests
         run: npx playwright test tests/api/ --config=playwright.config.ts --trace=on --workers=1
         env:
+          API_KEY: ${{ secrets.API_KEY_PLAYWRIGHT}} 
           Base_URL: https://api.themoviedb.org/
           SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
           PLAYWRIGHT_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html
