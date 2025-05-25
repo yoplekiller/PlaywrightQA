@@ -41,6 +41,8 @@ jobs:
           PLAYWRIGHT_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html  
           ALLURE_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/allure-report/index.html 
 
+      
+
       - name: Generate Allure Report
         run: |
           npm install -g allure-commandline --save-dev
