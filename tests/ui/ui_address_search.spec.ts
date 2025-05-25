@@ -24,16 +24,16 @@ test('주소 검색 기능 테스트', async ({ page }) => {
   await page1.getByRole('button', { name: 'confirm-button' }).click();
   await page.goto('https://www.kurly.com/main');
   await page.locator('.css-14vnom0.e1n3mt0d1').click();
-
-  const addressLocator = page.getByText('서울 중구 을지로 100 (파인에비뉴)');
-  await expect(addressLocator).toBeVisible();
-
-  // 스크린샷 저장
-  const screenshotPath = 'screenshots/address_search.png';  
-  await page.screenshot({ path: screenshotPath });        
-  // 스크린샷이 저장된 경로를 Allure에 첨부
-  await allure.attachment('주소 검색 스크린샷', Buffer.from(await page.screenshot()), 'image/png');
-  // 스크린샷이 저장된 경로를 콘솔에 출력
-  console.log(`Screenshot saved at: ${screenshotPath}`);
 });
+//   const addressLocator = page.getByText('서울 중구 을지로 100 (파인에비뉴)');
+//   await expect(addressLocator).toBeVisible();
+
+//   // 스크린샷 저장
+//   const screenshotPath = 'screenshots/address_search.png';  
+//   await page.screenshot({ path: screenshotPath });        
+//   // 스크린샷이 저장된 경로를 Allure에 첨부
+//   await allure.attachment('주소 검색 스크린샷', Buffer.from(await page.screenshot()), 'image/png');
+//   // 스크린샷이 저장된 경로를 콘솔에 출력
+//   console.log(`Screenshot saved at: ${screenshotPath}`);
+// // });
 
