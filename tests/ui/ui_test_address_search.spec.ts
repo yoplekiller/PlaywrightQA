@@ -4,8 +4,9 @@ import { allure } from 'allure-playwright';
 test('주소 검색 기능 테스트', async ({ page }) => {
   allure.description('주소 검색 기능 테스트');
   await page.goto('https://www.kurly.com/main');
-  await page.locator('.css-14vnom0.e1n3mt0d1').click();
-  await page.waitForTimeout(5000);
+  const locationBtn = page.locator('.css-14vnom0.e1n3mt0d1');
+  await locationBtn.waitFor({ state: 'visible', timeout: 10000 });
+  await locationBtn.click();
 // });
 
 
