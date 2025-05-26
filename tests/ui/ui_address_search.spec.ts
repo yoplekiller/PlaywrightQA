@@ -1,13 +1,13 @@
-// import { test, expect, Locator } from '@playwright/test';
-// import { allure } from 'allure-playwright';
+import { test, expect, Locator } from '@playwright/test';
+import { allure } from 'allure-playwright';
 
-// test('주소 검색 기능 테스트', async ({ page }) => {
-//   allure.description('주소 검색 기능 테스트');
-//   await page.goto('https://www.kurly.com/main');
-//   const locationBtn = page.locator('.css-14vnom0.e1n3mt0d1');
-//   await locationBtn.waitFor({ state: 'visible', timeout: 10000 });
-//   await locationBtn.click();
-// // });
+test('주소 검색 기능 테스트', async ({ page }) => {
+  allure.description('주소 검색 기능 테스트');
+  await page.goto('https://www.kurly.com/main');
+  const locationBtn = page.locator('.css-14vnom0.e1n3mt0d1');
+  await locationBtn.waitFor({ state: 'visible', timeout: 10000 });
+  await locationBtn.click();
+});
 
 
 
