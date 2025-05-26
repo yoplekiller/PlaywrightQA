@@ -7,11 +7,8 @@ on:
     branches: [ main ]
   workflow_dispatch:
   schedule:
-<<<<<<< HEAD:.github/workflows/ui-test.yaml
-    - cron: '0 */18 * * *' 
-=======
     - cron: '0 */8 * * *' # Every 8 hours
->>>>>>> develop:.github/workflows/playwright-test.yaml
+
 
 jobs:
   test:
@@ -47,15 +44,10 @@ jobs:
           cp -r allure-results/* allure-results-ui/ || true
         env:
           SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
-<<<<<<< HEAD:.github/workflows/ui-test.yaml
-          PLAYWRIGHT_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html  
-          ALLURE_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/allure-report/index.html 
-
-      
-=======
           PLAYWRIGHT_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html
           ALLURE_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/allure-report/index.html
         continue-on-error: true
+
 
       # Run API Tests → allure-results-api
       - name: Run API Tests
@@ -79,7 +71,7 @@ jobs:
           mkdir -p allure-results
           cp -r allure-results-ui/* allure-results/ || true
           cp -r allure-results-api/* allure-results/ || true
->>>>>>> develop:.github/workflows/playwright-test.yaml
+
 
       - name: Generate Allure Report
         if: always()
