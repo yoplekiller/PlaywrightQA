@@ -3,8 +3,13 @@
 // import { allure } from 'allure-playwright';
 // dotenv.config();
 
+<<<<<<< HEAD
 // const BASE_URL = process.env.TMDB_BASE_URL || 'https://api.themoviedb.org/';
 // const API_KEY = process.env.TMDB_API_KEY!;
+=======
+const BASE_URL = process.env.TMDB_BASE_URL || 'https://api.themoviedb.org/3';
+const API_KEY = process.env.TMDB_API_KEY!;
+>>>>>>> develop
 
 // test.describe('🎬 TMDB 영화 API 테스트', () => {
 

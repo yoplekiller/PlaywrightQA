@@ -1,8 +1,13 @@
 import { test, expect } from '@playwright/test';
 import { allure } from 'allure-playwright';
 
+<<<<<<< HEAD
 test('이벤트트 팝업 기능', async ({ page }) => {
   allure.description('이벤트트 팝업이 정상적으로 표시되고, 쿠폰 버튼 클릭 시 쿠폰 페이지로 이동하는지 확인합니다.');
+=======
+test('이벤트 팝업 기능', async ({ page }) => {
+  allure.description('이벤트 팝업이 정상적으로 표시되고, 쿠폰 버튼 클릭 시 쿠폰 페이지로 이동하는지 확인합니다.');
+>>>>>>> develop
   await page.goto('https://www.kurly.com/main');
   await page.getByRole('paragraph').filter({ hasText: /^$/ }).getByRole('link').click();
   await page.waitForTimeout(2000); // Wait for 2 seconds to observe the change
