@@ -35,7 +35,7 @@ jobs:
           rm -rf playwright-report
           mkdir -p screenshots videos logs test-results
 
-      # Run UI Tests → allure-results-ui
+     
       - name: Run UI Tests
         run: |
           npx playwright test tests/ui/ --config=playwright.config.ts --trace=on --workers=1 --reporter=allure-playwright
