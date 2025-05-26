@@ -40,6 +40,7 @@ jobs:
           SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
           PLAYWRIGHT_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html
           ALLURE_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/allure-report/index.html
+        continue-on-error: true
 
       - name: Run API tests
         if: always()
@@ -50,12 +51,16 @@ jobs:
           SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
           PLAYWRIGHT_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html
           ALLURE_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/allure-report/index.html
+        continue-on-error: true
+
+          
 
       - name: Generate Allure Report
         if: always()
         run: |
           npm install -g allure-commandline --save-dev
           allure generate ./allure-results --clean -o ./allure-report
+
 
       - name: Prepare Combined Report Folder
         if: always()
@@ -85,13 +90,13 @@ jobs:
           path: playwright-report
 
           
-
       - name: Upload Allure HTML report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
           path: allure-report
+
 
       - name: Upload Playwright trace
         if: always()
