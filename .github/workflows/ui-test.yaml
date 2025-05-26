@@ -60,8 +60,11 @@ jobs:
       - name: Prepare Combined Report Folder
         if: always()
         run: |
-          mv playwright-report public
-          mv allure-report public/allure-report
+          mkdir -p public/allure-report
+          mv playwright-report public || true
+          mv allure-report public/allure-report || true
+
+
 
       - name: Deploy reports to GitHub Pages
         if: always()
