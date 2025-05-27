@@ -8,13 +8,13 @@ const isCI = process.env.CI === 'true';
 const BASE_URL = isCI
   ? 'https://api.themoviedb.org/3'
   : 'http://localhost:3000';
-  
+
 const API_KEY = process.env.TMDB_API_KEY!;
 
 test('🎬 인기 영화 목록 조회 → 응답 200 및 결과 리스트 확인', async () => {
   const apiContext = await request.newContext({ baseURL: BASE_URL });
 
-  const endpoint = `3/movie/popular?api_key=${API_KEY}`;
+  const endpoint = `/movie/popular?api_key=${API_KEY}`;
   const response = await apiContext.get(endpoint);
   const status = response.status();
   const data = await response.json();

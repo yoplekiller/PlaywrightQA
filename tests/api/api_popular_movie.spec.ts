@@ -7,6 +7,7 @@ const isCI = process.env.CI === 'true';
 const BASE_URL = isCI
   ? 'https://api.themoviedb.org/3'
   : 'http://localhost:3000';
+
 const API_KEY = process.env.TMDB_API_KEY!;
 
 test.describe('🎬 TMDB 영화 API 테스트', () => {
@@ -19,7 +20,7 @@ test.describe('🎬 TMDB 영화 API 테스트', () => {
 
     const apiContext = await request.newContext({ baseURL: BASE_URL });
 
-    const response = await apiContext.get(`3/movie/popular?api_key=${API_KEY}`);
+    const response = await apiContext.get(`/movie/popular?api_key=${API_KEY}`);
     const status = response.status();
     const body = await response.json();
 
