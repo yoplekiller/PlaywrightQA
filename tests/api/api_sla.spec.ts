@@ -1,7 +1,13 @@
 import { test, expect, request }  from '@playwright/test';
-import { allure } from 'allure-playwright';
+import { allure } from 'allure-playwright';]
+import dotenv from 'dotenv';
+dotenv.config();
 
-const BASE_URL = process.env.API_BASE_URL || 'https://api.example.com';
+const isCI = process.env.CI === 'true';
+const BASE_URL = isCI
+    ? 'https://api.themoviedb.org/3'
+    : 'http://localhost:3000';
+
 const API_KEY = process.env.API_KEY || '';
 const SLA_SECONDS = 2;
 const SLA_MILLISECONDS = SLA_SECONDS * 1000;

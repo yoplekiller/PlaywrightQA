@@ -4,7 +4,11 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const BASE_URL = process.env.TMDB_BASE_URL || 'https://api.themoviedb.org/3';
+const isCI = process.env.CI === 'true';
+const BASE_URL = isCI
+  ? 'https://api.themoviedb.org/3'
+  : 'http://localhost:3000';
+  
 const API_KEY = process.env.TMDB_API_KEY!;
 
 test('🎬 인기 영화 목록 조회 → 응답 200 및 결과 리스트 확인', async () => {
