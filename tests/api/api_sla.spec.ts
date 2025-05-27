@@ -1,5 +1,5 @@
-import { test, expect, request }  from '@playwright/test';
-import { allure } from 'allure-playwright';]
+import { test, expect, request } from '@playwright/test';
+import { allure } from 'allure-playwright';
 import dotenv from 'dotenv';
 dotenv.config();
 
