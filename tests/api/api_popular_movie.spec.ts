@@ -44,10 +44,6 @@ test.describe('🎬 TMDB 영화 API 테스트', () => {
     console.log(`✅ 응답 데이터 첫 번째 영화 언어: ${body.results[0].original_language}`);
     console.log(`✅ 응답 데이터 첫 번째 영화 장르: ${body.results[0].genre_ids}`);
     console.log(`✅ 응답 데이터 첫 번째 영화 포스터 URL: https://image.tmdb.org/t/p/w500${body.results[0].poster_path}`);
-    console.log(`✅ 응답 데이터 첫 번째 영화 포스터 URL: https://image.tmdb.org/t/p/w500${body.results[0].poster_path}`);
-    console.log(`✅ 응답 데이터 첫 번째 영화 포스터 URL: https://image.tmdb.org/t/p/w500${body.results[0].poster_path}`);
-    console.log(`✅ 응답 데이터 첫 번째 영화 포스터 URL: https://image.tmdb.org/t/p/w500${body.results[0].poster_path}`);
-    console.log(`✅ 응답 데이터 첫 번째 영화 포스터 URL: https://image.tmdb.org/t/p/w500${body.results[0].poster_path}`);
     
 
     // Allure 첨부 (응답 전문 JSON)
