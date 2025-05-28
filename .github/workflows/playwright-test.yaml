@@ -57,9 +57,6 @@ jobs:
         env:
           TMDB_API_KEY: ${{ secrets.API_KEY_PLAYWRIGHT }}
           TMDB_BASE_URL: https://api.themoviedb.org/3
-          SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
-          PLAYWRIGHT_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html
-          ALLURE_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/allure-report/index.html
         continue-on-error: true
 
       # Merge Allure Results (UI + API)
@@ -141,3 +138,22 @@ jobs:
           name: playwright-test-results
           path: test-results
           if-no-files-found: ignore
+
+      - name: Notify Slack (summary)
+        if: always()
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+          --data '{
+            "text": "*✅ Playwright UI + API 테스트 완료*",
+            "attachments": [
+              {
+                  text": "👉 [Allure 리포트 보기]('"${ALLURE_REPORT_URL}"')\n👉 [Playwright 리포트 보기]('"${PLAYWRIGHT_REPORT_URL}"')",
+                  "color": "#36a64f"
+              } 
+            ]
+           }' $SLACK_WEBHOOK_TS
+        env:
+          SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
+          ALLURE_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/allure-report/index.html
+          PLAYWRIGHT_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html
+
