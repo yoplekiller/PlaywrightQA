@@ -1,0 +1,17 @@
+🌐 BASE_URL: https://api.themoviedb.org/3
+🔑 API_KEY 존재 여부: true
+🔑 API_KEY 앞 6글자: 040ab6
+📡 최종 요청 URL: https://api.themoviedb.org/3movie/popular?api_key=040ab6b57016f82bc6cac7e111efe301&language=ko-KR&page=1
+✅ 상태 코드: 404
+📦 Content-Type: text/html
+📄 응답 본문 앞 300자:
+ <html>
+<head><title>404 Not Found</title></head>
+<body>
+<center><h1>404 Not Found</h1></center>
+<hr><center>openresty</center>
+</body>
+</html>
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding t

@@ -3,12 +3,11 @@ import dotenv from 'dotenv';
 import { allure } from 'allure-playwright';
 dotenv.config();
 
-const isCI = process.env.CI === 'true';
-const BASE_URL = isCI
-  ? 'https://api.themoviedb.org/3'
-  : 'http://localhost:3000';
-
-const API_KEY = process.env.TMDB_API_KEY!;
+const BASE_URL = process.env.TMDB_BASE_URL || 'https://api.themoviedb.org/';
+const API_KEY = process.env.TMDB_API_KEY;
+if (!API_KEY) {
+  throw new Error('TMDB_API_KEY environment variable is not set.');
+}
 
 test.describe('🎬 TMDB 영화 API 테스트', () => {
 
@@ -20,7 +19,7 @@ test.describe('🎬 TMDB 영화 API 테스트', () => {
 
     const apiContext = await request.newContext({ baseURL: BASE_URL });
 
-    const response = await apiContext.get(`/movie/popular?api_key=${API_KEY}`);
+    const response = await apiContext.get(`3/movie/popular?api_key=${API_KEY}`);
     const status = response.status();
     const body = await response.json();
 
