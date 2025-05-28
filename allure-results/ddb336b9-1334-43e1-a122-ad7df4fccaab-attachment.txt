@@ -1,0 +1,3 @@
+📡 요청 주소: https://api.themoviedb.org/3/genre/movie/list?api_key=your_api_key_here&language=ko-KR
+⏱️ 응답 시간: 1.198초
+✅ 응답 상태: 401

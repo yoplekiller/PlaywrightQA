@@ -37,6 +37,7 @@ jobs:
 
      
       - name: Run UI Tests
+        if: always()
         run: |
           npx playwright test tests/ui/ --config=playwright.config.ts --trace=on --workers=1 --reporter=allure-playwright
           mkdir -p allure-results-ui
@@ -141,3 +142,14 @@ jobs:
           name: playwright-test-results
           path: test-results
           if-no-files-found: ignore
+
+      - name: 📣 Send Slack Notification
+        if: always()
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+          --data "{\"text\":\"✅ Playwright 테스트 완료\n🔗 [Allure 리포트]($ALLURE_REPORT_URL)\n🔗 [HTML 리포트]($PLAYWRIGHT_REPORT_URL)\"}" \
+          $SLACK_WEBHOOK_TS
+        env:
+          SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
+          PLAYWRIGHT_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html
+          ALLURE_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/allure-report/index.html
