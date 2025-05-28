@@ -30,7 +30,7 @@ const workbook = XLSX.readFile('tests/data/api_movie.xlsx');
 const sheet = workbook.Sheets[workbook.SheetNames[0]];
 const movieCases: MovieTestCase[] = XLSX.utils.sheet_to_json(sheet);
 
-test.describe('🎬 영화 상세정보 API 테스트', () => {
+test.describe('🎬 영화 상세정보 API 테스트( Dark Night는 잘못된 ID값)', () => {
   let apiContext: APIRequestContext;
 
   // 2. 공통 API context 생성
