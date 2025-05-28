@@ -84,6 +84,7 @@ class SlackReporter implements Reporter {
             { title: '❌Failed', value: `${this.failed}`, short: true },
             { title: '⚠️Skipped', value: `${this.skipped}`, short: true },
           ],
+          text: `${reportLink}${playwrightReportLink}`,
         },
       ],
     };

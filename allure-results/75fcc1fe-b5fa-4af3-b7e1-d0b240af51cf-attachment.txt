@@ -1,0 +1,5 @@
+🔁 응답 상태 코드: 401
+✅ 응답 데이터: {
+  error: 'Missing API key.',
+  how_to_get_one: 'https://reqres.in/signup'
+}
