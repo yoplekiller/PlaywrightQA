@@ -1,0 +1,3 @@
+📡 요청 주소: http://localhost:3000/movie/popular?api_key=${API_KEY}&language=ko-KR&page=1
+⏱️ 응답 시간: 1.618초
+✅ 응답 상태: 200

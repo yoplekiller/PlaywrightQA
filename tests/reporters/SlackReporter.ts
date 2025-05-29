@@ -48,14 +48,14 @@ class SlackReporter implements Reporter {
     const playwrightUrl = process.env.PLAYWRIGHT_REPORT_URL || '';
     const reportLink = allureUrl ? `\n*🔗 Allure 리포트: <${allureUrl}|바로가기>*` : '';
     const playwrightReportLink = playwrightUrl ? `\n*📊 Playwright 리포트: <${playwrightUrl}|결과 보기>*` : '';
-    let failedList = '';
-    if (this.failedDetails.length > 0) {
-      failedList = [
-        '',
-        '*❌ 실패 테스트 목록:*',
-        ...this.failedDetails.map((t, i) => `${i + 1}. [${t.file}] ${t.title}${t.error ? `\n   - Error: ${t.error}` : ''}`)
-      ].join('\n');
-    }
+    // let failedList = '';
+    // if (this.failedDetails.length > 0) {
+    //   failedList = [
+    //     '',
+    //     '*❌ 실패 테스트 목록:*',
+    //     ...this.failedDetails.map((t, i) => `${i + 1}. [${t.file}] ${t.title}${t.error ? `\n   - Error: ${t.error}` : ''}`)
+    //   ].join('\n');
+    // }
 
     const lines = [
       `${emoji} *Playwright 테스트 완료*`,
@@ -66,7 +66,6 @@ class SlackReporter implements Reporter {
       `*⏳총 소요:* ${Math.round(result.duration / 1000)}초`,
       '',
       `*총 테스트:* ${this.total} | *성공:* ${this.passed} | *실패:* ${this.failed} | *스킵:* ${this.skipped}`,
-      failedList,
       reportLink,
       playwrightReportLink,
       
@@ -84,6 +83,7 @@ class SlackReporter implements Reporter {
             { title: '❌Failed', value: `${this.failed}`, short: true },
             { title: '⚠️Skipped', value: `${this.skipped}`, short: true },
           ],
+          text: `${reportLink}${playwrightReportLink}`,
         },
       ],
     };

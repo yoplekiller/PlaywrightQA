@@ -15,10 +15,10 @@ test('🔘 뷰티컬리 버튼 동작 테스트', async ({ page }) => {
 
   // URL 검증
   await expect(page).toHaveURL('https://www.kurly.com/main/beauty');
+  await page.waitForTimeout(2000); // 페이지 로딩 대기
 
   // 📸 스크린샷 저장 및 Allure 첨부
   const screenshotPath = 'screenshots/beauty_kurly_click.png';
   await page.screenshot({ path: screenshotPath });
-
   await allure.attachment('뷰티컬리 이동 결과 화면', Buffer.from(await page.screenshot()), 'image/png');
 });

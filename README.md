@@ -5,14 +5,14 @@
 
 ## **🔧대상 서비스**: [마켓컬리](https://www.kurly.com)
 ###  테스트 목록
-- | 구분 | 설명 |
-|------|------|
-| 🔍 검색 테스트 | 키워드 입력 후 상품 검색 결과 노출 확인 |
-| 🛒 장바구니 담기 / 수량 증가 | 수량 증가 버튼 클릭 후 수량 반영 확인 |
-| 🚫 예외 처리 | 존재하지 않는 키워드 검색 시 "검색 결과 없음" 노출 |
-| 🔧 API 응답 확인 | 인기 상품 API 응답 코드 및 데이터 유효성 확인 |
+✅ Markdown 표 기본 문법
+| 항목 | 설명 | 비고 |
+|------|------|------|
+| 1    | 테스트 시작 | - |
+| 2    | API 응답 확인 | 중요 |
+| 3    | 결과 리포트 | Allure 적용 |
 
-
+  
 - **기술 스택**:  
   `Playwright`, `TypeScript`, `Excel(xlsx)`, `Slack Webhook`, `Allure Report`, `GitHub Actions`
 -------------------------------------
@@ -35,6 +35,7 @@ npx allure open allure-report
 ---------------------
 ## 📂 디렉토리 구조 (중요 폴더 중심 정리)
 <details> <summary>디렉토리 트리 보기</summary>
+<pre>
 📦 PLAYWRIGHTQA
 ├── .github/workflows/ci.yml
 ├── screenshots/                    # 실패 시 스크린샷 저장
@@ -48,10 +49,11 @@ npx allure open allure-report
 │   └── ...
 ├── playwright.config.ts            # Playwright 설정
 ├── .env.example                    # 환경변수 템플릿
-├── README.md</details>
+├── README.md</pre></details>
+
 
 ## 🙋‍♂️ 작성자
-**임재민 (Jaemin Lim)**
+**임재민**
 QA 자동화 & CI/CD 구축 경험
 GitHub: github.com/yoplekiller
 

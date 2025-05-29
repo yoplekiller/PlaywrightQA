@@ -1,4 +1,4 @@
-name: Playwright UI + API Tests
+name: Playwright Tests
 
 on:
   push:
@@ -51,14 +51,13 @@ jobs:
 
       # Run API Tests → allure-results-api
       - name: Run API Tests
-        if: always()
         run: |
           npx playwright test tests/api/ --config=playwright.config.ts --trace=on --workers=1 --reporter=allure-playwright
           mkdir -p allure-results-api
           cp -r allure-results/* allure-results-api/ || true
         env:
-          API_KEY: ${{ secrets.API_KEY_PLAYWRIGHT }} 
-          Base_URL: https://api.themoviedb.org/3
+          TMDB_API_KEY: ${{ secrets.API_KEY_PLAYWRIGHT }}
+          TMDB_BASE_URL: https://api.themoviedb.org/3
           SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
           PLAYWRIGHT_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html
           ALLURE_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/allure-report/index.html
@@ -96,6 +95,7 @@ jobs:
           force_orphan: true
           keep_files: false
           commit_message: 'Deploy Playwright + Allure reports'
+          destination_dir: allure-report
 
       # Upload artifacts (for debugging/download)
       - name: Upload Playwright HTML report
@@ -143,3 +143,5 @@ jobs:
           name: playwright-test-results
           path: test-results
           if-no-files-found: ignore
+
+

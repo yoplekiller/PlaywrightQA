@@ -11,7 +11,7 @@ const reporters: [string, any?][] = [
 
 if (process.env.SLACK_WEBHOOK_TS) {
     reporters.push([
-        './tests/reporters/SlackReporter',
+        './tests/reporters/SlackReporter.ts',
         { webhookUrl: process.env.SLACK_WEBHOOK_TS },
     ]);
 }
@@ -42,5 +42,10 @@ export default defineConfig({
             name: 'Edge',
             use: { ...devices['Desktop Edge'] },
         },
+        {
+            name: 'webkit',
+            use: { ...devices['Desktop Safari'] },
+        }
+
     ],
 });

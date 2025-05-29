@@ -32,6 +32,8 @@ test('🛒 장바구니 상품 추가 및 삭제 확인', async ({ page }, testI
     page.getByText('전체선택 0/0선택삭제장바구니에 담긴 상품이 없습니다')
   ).toBeVisible({ timeout: 5000 });
 
+  await page.waitForTimeout(2000); // 페이지 로딩 대기
+
   // 📸 스크린샷 저장 및 Allure 첨부
   const now = getNowString();
   const browserName = testInfo.project.name;
@@ -47,6 +49,6 @@ test('🛒 장바구니 상품 추가 및 삭제 확인', async ({ page }, testI
   await allure.attachment(
     '🛒 장바구니 상태 확인 스크린샷',
     fs.readFileSync(screenshotPath),
-    'image/png'
+    'ui_cart_cancel/png'
   );
 });

@@ -1,0 +1,3 @@
+📡 요청 주소: https://www.kurly.com/genre/movie/list?api_key=your_api_key_here
+✅ 응답 시간: 0.22초
+✅ 응답 코드: 200
