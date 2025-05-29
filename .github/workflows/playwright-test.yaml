@@ -143,13 +143,34 @@ jobs:
           path: test-results
           if-no-files-found: ignore
 
-      - name: 📣 Send Slack Notification
+
+
+          
+      - name: Notify Slack
         if: always()
-        run: |
-          curl -X POST -H 'Content-type: application/json' \
-          --data "{\"text\":\"✅ Playwright 테스트 완료\n🔗 [Allure 리포트]($ALLURE_REPORT_URL)\n🔗 [HTML 리포트]($PLAYWRIGHT_REPORT_URL)\"}" \
-          $SLACK_WEBHOOK_TS
-        env:
-          SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
-          PLAYWRIGHT_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html
-          ALLURE_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/allure-report/index.html
+        uses: rtCamp/action-slack-notify@v2
+        with:
+          webhook_url: ${{ secrets.SLACK_WEBHOOK_TS }}
+          message: |
+            Playwright tests completed!
+            - UI Tests: [Allure Report](${ { env.ALLURE_REPORT_URL } })
+            - API Tests: [Allure Report](${ { env.ALLURE_REPORT_URL } })
+            - Playwright Report: [Playwright Report](${ { env.PLAYWRIGHT_REPORT_URL } })
+          status: ${{ job.status }}
+          attachments: |
+            {
+              "color": "${{ job.status == 'success' && '#36a64f' || '#ff0000' }}",
+              "fields": [
+                {
+                  "title": "UI Tests",
+                  "value": "[View Report](${ { env.ALLURE_REPORT_URL } })",
+                  "short": true
+                },
+                {
+                  "title": "API Tests",
+                  "value": "[View Report](${ { env.ALLURE_REPORT_URL } })",
+                  "short": true
+                }
+              ]
+            }
+        
