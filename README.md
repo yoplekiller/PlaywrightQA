@@ -35,7 +35,7 @@ npx allure open allure-report
 ---------------------
 ## 📂 디렉토리 구조 (중요 폴더 중심 정리)
 <details> <summary>디렉토리 트리 보기</summary>
-|------|------|------|
+<pre>
 📦 PLAYWRIGHTQA
 ├── .github/workflows/ci.yml
 ├── screenshots/                    # 실패 시 스크린샷 저장
@@ -49,7 +49,8 @@ npx allure open allure-report
 │   └── ...
 ├── playwright.config.ts            # Playwright 설정
 ├── .env.example                    # 환경변수 템플릿
-├── README.md</details>
+├── README.md</pre></details>
+
 
 ## 🙋‍♂️ 작성자
 **임재민 (Jaemin Lim)**
