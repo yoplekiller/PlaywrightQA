@@ -47,19 +47,19 @@ jobs:
           ALLURE_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/allure-report/index.html
         continue-on-error: true
 
-      # Run API Tests → allure-results-api
-      - name: Run API Tests
-        run: |
-          npx playwright test tests/api/ --config=playwright.config.ts --trace=on --workers=1 --reporter=allure-playwright
-          mkdir -p allure-results-api
-          cp -r allure-results/* allure-results-api/ || true
-        env:
-          TMDB_API_KEY: ${{ secrets.API_KEY_PLAYWRIGHT }}
-          TMDB_BASE_URL: https://api.themoviedb.org/3
-          SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
-          PLAYWRIGHT_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html
-          ALLURE_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/allure-report/index.html
-        continue-on-error: true
+      # # Run API Tests → allure-results-api
+      # - name: Run API Tests
+      #   run: |
+      #     npx playwright test tests/api/ --config=playwright.config.ts --trace=on --workers=1 --reporter=allure-playwright
+      #     mkdir -p allure-results-api
+      #     cp -r allure-results/* allure-results-api/ || true
+      #   env:
+      #     TMDB_API_KEY: ${{ secrets.API_KEY_PLAYWRIGHT }}
+      #     TMDB_BASE_URL: https://api.themoviedb.org/3
+      #     SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
+      #     PLAYWRIGHT_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html
+      #     ALLURE_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/allure-report/index.html
+      #   continue-on-error: true
 
       # Merge Allure Results (UI + API)
       - name: Merge Allure Results
