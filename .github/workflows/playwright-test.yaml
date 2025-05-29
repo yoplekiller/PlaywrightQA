@@ -1,4 +1,4 @@
-name: Playwright UI + API Tests
+name: Playwright Tests
 
 on:
   push:
@@ -145,7 +145,6 @@ jobs:
 
 
 
-          
       - name: Notify Slack
         if: always()
         uses: rtCamp/action-slack-notify@v2
