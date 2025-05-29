@@ -68,6 +68,8 @@ jobs:
         if: always()
         run: |
           mkdir -p allure-results
+          mkdir -p allure-results-ui
+          mkdir -p allure-results-api
           cp -r allure-results-ui/* allure-results/ || true
           cp -r allure-results-api/* allure-results/ || true
 
@@ -144,32 +146,3 @@ jobs:
           if-no-files-found: ignore
 
 
-
-      - name: Notify Slack
-        if: always()
-        uses: rtCamp/action-slack-notify@v2
-        with:
-          webhook_url: ${{ secrets.SLACK_WEBHOOK_TS }}
-          message: |
-            Playwright tests completed!
-            - UI Tests: [Allure Report](${ { env.ALLURE_REPORT_URL } })
-            - API Tests: [Allure Report](${ { env.ALLURE_REPORT_URL } })
-            - Playwright Report: [Playwright Report](${ { env.PLAYWRIGHT_REPORT_URL } })
-          status: ${{ job.status }}
-          attachments: |
-            {
-              "color": "${{ job.status == 'success' && '#36a64f' || '#ff0000' }}",
-              "fields": [
-                {
-                  "title": "UI Tests",
-                  "value": "[View Report](${ { env.ALLURE_REPORT_URL } })",
-                  "short": true
-                },
-                {
-                  "title": "API Tests",
-                  "value": "[View Report](${ { env.ALLURE_REPORT_URL } })",
-                  "short": true
-                }
-              ]
-            }
-        

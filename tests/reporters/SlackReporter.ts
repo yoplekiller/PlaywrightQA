@@ -48,13 +48,13 @@ class SlackReporter implements Reporter {
     const playwrightUrl = process.env.PLAYWRIGHT_REPORT_URL || '';
     const reportLink = allureUrl ? `\n*🔗 Allure 리포트: <${allureUrl}|바로가기>*` : '';
     const playwrightReportLink = playwrightUrl ? `\n*📊 Playwright 리포트: <${playwrightUrl}|결과 보기>*` : '';
-    let failedList = '';
-    if (this.failedDetails.length > 0) {
-      failedList = [
-        '',
-        '*❌ 실패 테스트 목록:*',
-        ...this.failedDetails.map((t, i) => `${i + 1}. [${t.file}] ${t.title}${t.error ? `\n   - Error: ${t.error}` : ''}`)
-      ].join('\n');
+    // let failedList = '';
+    // if (this.failedDetails.length > 0) {
+    //   failedList = [
+    //     '',
+    //     '*❌ 실패 테스트 목록:*',
+    //     ...this.failedDetails.map((t, i) => `${i + 1}. [${t.file}] ${t.title}${t.error ? `\n   - Error: ${t.error}` : ''}`)
+    //   ].join('\n');
     }
 
     const lines = [
