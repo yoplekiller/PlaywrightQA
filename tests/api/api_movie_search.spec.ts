@@ -7,17 +7,7 @@ dotenv.config();
 const BASE_URL = process.env.TMDB_BASE_URL || 'https://api.themoviedb.org/';
 const API_KEY = process.env.TMDB_API_KEY!;
 
-<<<<<<< HEAD
-
 test('🎬 인기 영화 목록 조회 → 응답 200 및 결과 리스트 확인', async () => {
-  const apiContext = await request.newContext({ baseURL: BASE_URL });
-=======
-test('🔍 TMDB API 디버깅 테스트', async () => {
-  console.log("🌐 BASE_URL:", BASE_URL);
-  console.log("🔑 API_KEY 존재 여부:", !!API_KEY);
-  console.log("🔑 API_KEY 앞 6글자:", API_KEY?.slice(0, 6));
->>>>>>> develop
-
   const apiContext = await request.newContext({ baseURL: BASE_URL });
   const endpoint = `3/movie/popular?api_key=${API_KEY}&language=ko-KR&page=1`;
 
