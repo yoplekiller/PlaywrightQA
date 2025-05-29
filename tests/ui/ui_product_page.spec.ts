@@ -12,6 +12,8 @@ test('상품 상세페이지 진입 확인', async ({ page }) => {
   await page.getByRole('link', { name: '담기 샛별배송 [KF365] 실속 바나나 1kg 2' }).click();
   await expect(page.getByText('[KF365] 실속 바나나 1kg 2종')).toBeVisible();
 
+  await page.waitForTimeout(2000); // 페이지 로딩 대기
+
   const screenshotPath = 'screenshots/product_detail.png';
   await page.screenshot({ path: screenshotPath });
 

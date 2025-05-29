@@ -5,7 +5,7 @@ test('🔐 [POST] 로그인 성공 시 200 응답 + 토큰 반환', async () => 
     baseURL: 'https://reqres.in',
     extraHTTPHeaders: {
       'Content-Type': 'application/json',
-      'x-api-key': 'reqres-free-v1'  // ✅ API 키 추가
+      'x-api-key': 'reqres-free-v1'  // ✅ API 키
     }
   });
 

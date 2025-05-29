@@ -21,6 +21,7 @@ test('🔲 공백 입력 시, 팝업 노출 확인', async ({ page }, testInfo) 
 
   const popupText = await popup.textContent();
   expect(popupText).toContain('검색어를 입력해주세요');
+  await page.waitForTimeout(2000); // 페이지 로딩 대기
 
   // 📸 스크린샷 저장 + Allure 첨부
   const now = getNowString();

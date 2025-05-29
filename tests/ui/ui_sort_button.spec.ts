@@ -36,7 +36,8 @@ test('🧭 카테고리별 정렬 동작 및 결과 검증', async ({ page }, te
     await expect(firstProduct).toBeVisible({ timeout: 5000 });
 
     // 💡 안정화 대기 (렌더링 지연 대비)
-    await page.waitForTimeout(1500);
+    await page.waitForTimeout(2000);
+    
 
     // 📸 스크린샷 저장 (파일명 안전화)
     const safeName = name.replace(/[^a-zA-Z0-9가-힣]/g, '_');

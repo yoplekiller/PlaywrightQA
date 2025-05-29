@@ -7,6 +7,8 @@ test('이벤트 팝업 기능', async ({ page }) => {
   await page.getByRole('paragraph').filter({ hasText: /^$/ }).getByRole('link').click();
   await page.waitForTimeout(2000); // Wait for 2 seconds to observe the change
   await expect(page).toHaveURL('https://event.kurly.com/lego/event/2023/0911/join/coupon');
+  
+  await page.waitForTimeout(2000); // 페이지 로딩 대기
 
   // 스크린샷 저장
   const screenshotPath = 'screenshots/10th_popup.png';
