@@ -55,7 +55,7 @@ class SlackReporter implements Reporter {
     //     '*❌ 실패 테스트 목록:*',
     //     ...this.failedDetails.map((t, i) => `${i + 1}. [${t.file}] ${t.title}${t.error ? `\n   - Error: ${t.error}` : ''}`)
     //   ].join('\n');
-    }
+    // }
 
     const lines = [
       `${emoji} *Playwright 테스트 완료*`,
@@ -66,7 +66,6 @@ class SlackReporter implements Reporter {
       `*⏳총 소요:* ${Math.round(result.duration / 1000)}초`,
       '',
       `*총 테스트:* ${this.total} | *성공:* ${this.passed} | *실패:* ${this.failed} | *스킵:* ${this.skipped}`,
-      failedList,
       reportLink,
       playwrightReportLink,
       
