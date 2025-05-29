@@ -6,9 +6,6 @@
 ## **🔧대상 서비스**: [마켓컬리](https://www.kurly.com)
 ###  테스트 목록
 ✅ Markdown 표 기본 문법
-lua
-복사
-편집
 | 항목 | 설명 | 비고 |
 |------|------|------|
 | 1    | 테스트 시작 | - |
@@ -38,6 +35,7 @@ npx allure open allure-report
 ---------------------
 ## 📂 디렉토리 구조 (중요 폴더 중심 정리)
 <details> <summary>디렉토리 트리 보기</summary>
+|------|------|------|
 📦 PLAYWRIGHTQA
 ├── .github/workflows/ci.yml
 ├── screenshots/                    # 실패 시 스크린샷 저장
