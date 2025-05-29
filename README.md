@@ -53,7 +53,7 @@ npx allure open allure-report
 
 
 ## 🙋‍♂️ 작성자
-**임재민 (Jaemin Lim)**
+**임재민**
 QA 자동화 & CI/CD 구축 경험
 GitHub: github.com/yoplekiller
 
