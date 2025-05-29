@@ -49,6 +49,6 @@ test('🛒 장바구니 상품 추가 및 삭제 확인', async ({ page }, testI
   await allure.attachment(
     '🛒 장바구니 상태 확인 스크린샷',
     fs.readFileSync(screenshotPath),
-    'image/png'
+    'ui_cart_cancel/png'
   );
 });
