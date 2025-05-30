@@ -14,6 +14,9 @@ if (process.env.SLACK_WEBHOOK_TS) {
         './tests/reporters/SlackReporter.ts',
         { webhookUrl: process.env.SLACK_WEBHOOK_TS },
     ]);
+    
+}else {
+    console.log("⚠️ SLACK_WEBHOOK_TS not defined. Skipping SlackReporter.");
 }
 
 export default defineConfig({
