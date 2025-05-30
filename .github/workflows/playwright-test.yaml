@@ -61,54 +61,54 @@ jobs:
       #     ALLURE_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/allure-report/index.html
       #   continue-on-error: true
 
-      # Merge Allure Results (UI + API)
-      - name: Merge Allure Results
-        if: always()
-        run: |
-          mkdir -p allure-results
-          cp -r allure-results-ui/* allure-results/ || true
-          cp -r allure-results-api/* allure-results/ || true
+      # # Merge Allure Results (UI + API)
+      # - name: Merge Allure Results
+      #   if: always()
+      #   run: |
+      #     mkdir -p allure-results
+      #     cp -r allure-results-ui/* allure-results/ || true
+      #     cp -r allure-results-api/* allure-results/ || true
 
-      - name: Generate Allure Report
-        if: always()
-        run: |
-          npm install -g allure-commandline
-          allure generate ./allure-results --clean -o ./allure-report
+      # - name: Generate Allure Report
+      #   if: always()
+      #   run: |
+      #     npm install -g allure-commandline
+      #     allure generate ./allure-results --clean -o ./allure-report
 
 
-      - name: Deploy reports to GitHub Pages
-        if: always()
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
-          publish_branch: gh-pages
-          force_orphan: true
-          keep_files: false
-          destination_dir: allure-report
+      # - name: Deploy reports to GitHub Pages
+      #   if: always()
+      #   uses: peaceiris/actions-gh-pages@v4
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: .
+      #     publish_branch: gh-pages
+      #     force_orphan: true
+      #     keep_files: false
+      #     destination_dir: allure-report
 
-      # Upload artifacts (for debugging/download)
-      - name: Upload Playwright HTML report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-report
-          path: playwright-report
+      # # Upload artifacts (for debugging/download)
+      # - name: Upload Playwright HTML report
+      #   if: always()
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: playwright-report
+      #     path: playwright-report
 
-      - name: Upload Allure HTML report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-report
-          path: allure-report
+      # - name: Upload Allure HTML report
+      #   if: always()
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: allure-report
+      #     path: allure-report
 
-      - name: Upload screenshots
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-screenshots
-          path: screenshots
-          if-no-files-found: ignore
+      # - name: Upload screenshots
+      #   if: always()
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: playwright-screenshots
+      #     path: screenshots
+      #     if-no-files-found: ignore
 
       # - name: Upload videos
       #   if: always()
