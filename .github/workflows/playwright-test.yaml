@@ -117,28 +117,28 @@ jobs:
           path: screenshots
           if-no-files-found: ignore
 
-      - name: Upload videos
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-video
-          path: videos
-          if-no-files-found: ignore
+      # - name: Upload videos
+      #   if: always()
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: playwright-video
+      #     path: videos
+      #     if-no-files-found: ignore
 
-      - name: Upload logs
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-logs
-          path: logs
-          if-no-files-found: ignore
+      # - name: Upload logs
+      #   if: always()
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: playwright-logs
+      #     path: logs
+      #     if-no-files-found: ignore
 
-      - name: Upload test result files
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-test-results
-          path: test-results
-          if-no-files-found: ignore
+      # - name: Upload test result files
+      #   if: always()
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: playwright-test-results
+      #     path: test-results
+      #     if-no-files-found: ignore
 
 

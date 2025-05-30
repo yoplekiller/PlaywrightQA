@@ -22,7 +22,7 @@
 
  
 //   await page.getByRole('textbox', { name: '아이디를 입력해주세요' }).fill('kurly_id');
-//   await page.getByRole('textbox', { name: '비밀번호를 입력해주세요' }).fill('kurly_pw');
+//   await page.getByRole('text box', { name: '비밀번호를 입력해주세요' }).fill('kurly_pw');
 
   
 //   await page.getByRole('button', { name: '로그인' }).click();
