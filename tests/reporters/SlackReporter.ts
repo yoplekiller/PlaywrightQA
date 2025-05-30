@@ -58,8 +58,8 @@ class SlackReporter implements Reporter {
     // }
 
     const lines = [
-      `${emoji} *Playwright 테스트 완료*`,
-      '',
+      '*Playwright 테스트 완료*`,
+      `*상태:* ${emoji} ${status}`,
       `*📝결과:* ${status}`,
       `*⏲️시작:* ${this.startTime}`,
       `*⏲️종료:* ${now}`,
