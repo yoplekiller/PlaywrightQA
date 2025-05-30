@@ -7,17 +7,10 @@ const reporters: [string, any?][] = [
     ['list'],
     ['allure-playwright'],
     ['html', { outputFolder: 'playwright-report', open: 'never' }],
+    ['./tests/reporters/SlackReporter.ts', { webhookUrl: process.env.SLACK_WEBHOOK_TS }],
 ];
 
-if (process.env.SLACK_WEBHOOK_TS) {
-    reporters.push([
-        './tests/reporters/SlackReporter.ts',
-        { webhookUrl: process.env.SLACK_WEBHOOK_TS },
-    ]);
-    
-}else {
-    console.log("⚠️ SLACK_WEBHOOK_TS not defined. Skipping SlackReporter.");
-}
+
 
 export default defineConfig({
     timeout: 70_000,
