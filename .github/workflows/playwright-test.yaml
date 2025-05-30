@@ -38,8 +38,7 @@ jobs:
      
       - name: Run UI Tests
         run: |
-          npx playwright test tests/ui/ --config=playwright.config.ts --trace=on --workers=1 --reporter=allure-playwright
-          mkdir -p allure-results-ui
+          npx playwright test tests/ui/ --config=playwright.config.ts --trace=on --workers=1 
           cp -r allure-results/* allure-results-ui/ || true
         env:
           SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
@@ -50,7 +49,7 @@ jobs:
       # # Run API Tests → allure-results-api
       # - name: Run API Tests
       #   run: |
-      #     npx playwright test tests/api/ --config=playwright.config.ts --trace=on --workers=1 --reporter=allure-playwright
+      #     npx playwright test tests/api/ --config=playwright.config.ts --trace=on --workers=1 
       #     mkdir -p allure-results-api
       #     cp -r allure-results/* allure-results-api/ || true
       #   env:
