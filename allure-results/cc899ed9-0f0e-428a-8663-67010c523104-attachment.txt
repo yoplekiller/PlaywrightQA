@@ -1,0 +1,8 @@
+🌐 BASE_URL: https://api.themoviedb.org/3
+🔑 API_KEY 존재 여부: true
+🔑 API_KEY 앞 6글자: 040ab6
+📡 최종 요청 URL: https://api.themoviedb.org/33/movie/popular?api_key=040ab6b57016f82bc6cac7e111efe301&language=ko-KR&page=1
+✅ 상태 코드: 200
+📦 Content-Type: application/json;charset=utf-8
+📄 응답 본문 앞 300자:
+ {"page":1,"results":[{"adult":false,"backdrop_path":"/7Zx3wDG5bBtcfk8lcnCWDOLM4Y4.jpg","genre_ids":[10751,35,878],"id":552524,"original_language":"en","original_title":"Lilo & Stitch","overview":"보송보송한 파란 솜털, 호기심 가득한 큰 눈, 장난기 가득한 웃음을 가졌지만 가장 위험한 실험체 취급을 받던 스티치는 우주에서 도망쳐 지구의 하와이 섬에 불시착하게 된다. 단짝 친구를 원
