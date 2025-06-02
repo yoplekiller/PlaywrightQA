@@ -58,6 +58,7 @@ jobs:
           npx playwright test tests/api/ --config=playwright.config.ts --trace=on --workers=1 
           mkdir -p allure-results-api
           cp -r allure-results/* allure-results-api/ || true
+          rm -rf allure-results
         env:
           TMDB_API_KEY: ${{ secrets.API_KEY_PLAYWRIGHT }}
           TMDB_BASE_URL: https://api.themoviedb.org/3
