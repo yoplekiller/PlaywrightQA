@@ -1,0 +1,4 @@
+📌 현재 API_KEY: your_api_key_here
+📡 요청 주소: https://api.themoviedb.org/3/movie/popular?api_key=your_api_key_here&language=ko-KR&page=1
+⏱️ 응답 시간: 4.394초
+✅ 응답 상태: 401

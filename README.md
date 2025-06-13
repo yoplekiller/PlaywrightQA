@@ -1,4 +1,4 @@
-# Kurly Auto QA with Playwright 🧪
+# Kurly UI Auto QA & TMDB API QA with Playwright 🧪
 
 ## 📌 프로젝트 개요
 마켓컬리 웹사이트의 주요 기능을 Playwright로 자동화한 테스트 프로젝트입니다.

@@ -10,11 +10,15 @@ const reporters: [string, any?][] = [
 ];
 
 if (process.env.SLACK_WEBHOOK_TS) {
+    console.log("✅ SLACK_WEBHOOK_TS 감지됨");
     reporters.push([
         './tests/reporters/SlackReporter.ts',
         { webhookUrl: process.env.SLACK_WEBHOOK_TS },
     ]);
 }
+
+
+
 
 export default defineConfig({
     timeout: 70_000,

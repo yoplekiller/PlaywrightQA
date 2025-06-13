@@ -8,11 +8,10 @@ test('상품 중복 담기 기능 확인', async ({ page }) => {
   await page.locator('.css-vdi47h').click();
   await page.getByRole('textbox', { name: '검색어를 입력해주세요' }).fill('수박');
   await page.getByRole('textbox', { name: '검색어를 입력해주세요' }).press('Enter');
-  await page.getByRole('link', { name: '+20%쿠폰 담기 샛별배송 [KF365] 당도선별 수박 4kg 이상 시원하고 달콤한 과즙이 듬뿍 29,900원 16%24,900원 999+' }).getByRole('button').click();
+  await page.getByRole('link', { name: '마감세일 담기 샛별배송 속노란 블랙망고 수박 2kg' }).getByRole('button').click();
   await page.getByRole('button', { name: '장바구니 담기' }).click();
-  await page.getByRole('link', { name: '+20%쿠폰 담기 샛별배송 [KF365] 당도선별 수박 4kg 이상 시원하고 달콤한 과즙이 듬뿍 29,900원 16%24,900원 999+' }).getByRole('button').click();
+  await page.getByRole('link', { name: '마감세일 담기 샛별배송 속노란 블랙망고 수박 2kg' }).getByRole('button').click();
   await page.getByRole('button', { name: '장바구니 담기' }).click();
-  await page.getByRole('button', { name: '상품 이미지 [KF365] 당도선별 수박 4kg' }).click();
   await page.getByRole('button', { name: '1', exact: true }).click();
 
   const quantityLocator = page.locator('p.kpds_j1jks21');
