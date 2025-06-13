@@ -10,9 +10,8 @@ on:
     - cron: '0 */8 * * *' # Every 8 hours
 
 jobs:
-  test:
+  kurly-test:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -33,12 +32,9 @@ jobs:
           rm -rf allure-results
           rm -rf allure-report
           rm -rf playwright-report
-          rm -rf allure-results-ui allure-results-api
-          mkdir -p screenshots videos logs test-results
+          rm -rf allure-results-ui 
          
-
-
-     
+     # Run UI Tests
       - name: Run UI Tests
         run: |
           npx playwright test tests/ui/ --config=playwright.config.ts --trace=on --workers=1 
@@ -52,7 +48,34 @@ jobs:
           ALLURE_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/allure-report/index.html
         continue-on-error: true
 
-      # Run API Tests → allure-results-api
+
+    
+ # Run API Tests 
+  api-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Clean previous results
+        run: |
+          rm -rf allure-results
+          rm -rf allure-report
+          rm -rf playwright-report
+          rm -rf allure-results-api
+
+      
       - name: Run API Tests
         run: |
           npx playwright test tests/api/ --config=playwright.config.ts --trace=on --workers=1 
@@ -67,13 +90,58 @@ jobs:
           ALLURE_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/allure-report/index.html
         continue-on-error: true
 
-      # Merge Allure Results (UI + API)
-      - name: Merge Allure Results
+
+
+
+        
+
+        # Upload artifacts (for debugging/download)
+      - name: Upload Playwright HTML report
         if: always()
-        run: |
-          mkdir -p allure-results
-          cp -r allure-results-ui/* allure-results/ || true
-          cp -r allure-results-api/* allure-results/ || true
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report
+
+      - name: Upload Allure HTML report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: allure-report
+
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-screenshots
+          path: screenshots
+          if-no-files-found: ignore
+
+      - name: Upload videos
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-video
+          path: videos
+          if-no-files-found: ignore
+
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-logs
+          path: logs
+          if-no-files-found: ignore
+
+      - name: Upload test result files
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-test-results
+          path: test-results
+          if-no-files-found: ignore
+
 
       - name: Generate Allure Report
         if: always()

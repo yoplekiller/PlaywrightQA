@@ -15,9 +15,8 @@ if (process.env.SLACK_WEBHOOK_TS) {
         './tests/reporters/SlackReporter.ts',
         { webhookUrl: process.env.SLACK_WEBHOOK_TS },
     ]);
-} else {
-    console.log("❌ SLACK_WEBHOOK_TS 없음. SlackReporter 미사용");
 }
+
 
 
 
