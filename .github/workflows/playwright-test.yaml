@@ -9,9 +9,8 @@ on:
   schedule:
     - cron: '0 */8 * * *' # Every 8 hours
 
-
 jobs:
-  kurly-test:
+  ui-test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -30,15 +29,12 @@ jobs:
 
       - name: Clean previous results
         run: |
-          rm -rf allure-results
-          rm -rf allure-report
-          rm -rf playwright-report
-          rm -rf allure-results-ui 
-         
-     # Run UI Tests
+          rm -rf allure-results allure-report playwright-report allure-results-ui
+          mkdir -p screenshots videos logs test-results
+
       - name: Run UI Tests
         run: |
-          npx playwright test tests/ui/ --config=playwright.config.ts --trace=on --workers=1 
+          npx playwright test tests/ui/ --config=playwright.config.ts --trace=on --workers=1
           mkdir -p allure-results-ui
           mkdir -p playwright-report
           cp -r allure-results/* allure-results-ui/ || true
@@ -49,58 +45,11 @@ jobs:
           ALLURE_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/allure-report/index.html
         continue-on-error: true
 
-
-<<<<<<< HEAD
-      # Run API Tests → allure-results-api
-=======
-    
- # Run API Tests 
-  api-tests:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-      
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps
-
-      - name: Clean previous results
+      - name: Generate Allure Report
         run: |
-          rm -rf allure-results
-          rm -rf allure-report
-          rm -rf playwright-report
-          rm -rf allure-results-api
+          npm install -g allure-commandline
+          allure generate ./allure-results-ui --clean -o ./allure-report
 
-      
->>>>>>> develop
-      - name: Run API Tests
-        run: |
-          npx playwright test tests/api/ --config=playwright.config.ts --trace=on --workers=1 
-          mkdir -p allure-results-api
-          cp -r allure-results/* allure-results-api/ || true
-          rm -rf allure-results
-        env:
-          TMDB_API_KEY: ${{ secrets.API_KEY_PLAYWRIGHT }}
-          TMDB_BASE_URL: https://api.themoviedb.org/3
-          SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
-          PLAYWRIGHT_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html
-          ALLURE_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/allure-report/index.html
-        continue-on-error: true
-
-
-
-
-        
-
-        # Upload artifacts (for debugging/download)
       - name: Upload Playwright HTML report
         if: always()
         uses: actions/upload-artifact@v4
@@ -112,7 +61,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: allure-report
+          name: allure-report-ui
           path: allure-report
 
       - name: Upload screenshots
@@ -146,14 +95,6 @@ jobs:
           name: playwright-test-results
           path: test-results
           if-no-files-found: ignore
-
-
-
-      - name: Generate Allure Report
-        if: always()
-        run: |
-          npm install -g allure-commandline
-          allure generate ./allure-results --clean -o ./allure-report
 
       - name: Deploy Playwright HTML Report
         if: always()
@@ -171,26 +112,56 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./allure-report
-          destination_dir: allure-report
+          destination_dir: allure-report-ui
           publish_branch: gh-pages
           keep_files: true
 
+  api-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-
-
-      # Upload artifacts (for debugging/download)
-      - name: Upload Playwright HTML report
-        if: always()
-        uses: actions/upload-artifact@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          name: playwright-report
-          path: playwright-report
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Clean previous results
+        run: |
+          rm -rf allure-results allure-report playwright-report allure-results-api
+          mkdir -p screenshots videos logs test-results
+
+      - name: Run API Tests
+        run: |
+          npx playwright test tests/api/ --config=playwright.config.ts --trace=on --workers=1
+          mkdir -p allure-results-api
+          cp -r allure-results/* allure-results-api/ || true
+          rm -rf allure-results
+        env:
+          TMDB_API_KEY: ${{ secrets.API_KEY_PLAYWRIGHT }}
+          TMDB_BASE_URL: https://api.themoviedb.org/3
+          SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
+          PLAYWRIGHT_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html
+          ALLURE_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/allure-report/index.html
+        continue-on-error: true
+
+      - name: Generate Allure Report
+        run: |
+          npm install -g allure-commandline
+          allure generate ./allure-results-api --clean -o ./allure-report
 
       - name: Upload Allure HTML report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: allure-report
+          name: allure-report-api
           path: allure-report
 
       - name: Upload screenshots
@@ -225,4 +196,12 @@ jobs:
           path: test-results
           if-no-files-found: ignore
 
-
+      - name: Deploy Allure HTML Report
+        if: always()
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-report
+          destination_dir: allure-report-api
+          publish_branch: gh-pages
+          keep_files: true
