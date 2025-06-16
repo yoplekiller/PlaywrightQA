@@ -46,18 +46,10 @@
 
 //   await page.screenshot({ path: screenshotPath });
 
-<<<<<<< HEAD
-  await allure.attachment(
-    '🛒 장바구니 상태 확인 스크린샷',
-    fs.readFileSync(screenshotPath),
-    'image/png'
-  );
-});
-=======
 //   await allure.attachment(
 //     '🛒 장바구니 상태 확인 스크린샷',
 //     fs.readFileSync(screenshotPath),
 //     'ui_cart_cancel/png'
 //   );
 // });
->>>>>>> develop
+
