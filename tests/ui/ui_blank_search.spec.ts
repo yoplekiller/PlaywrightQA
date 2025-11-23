@@ -1,13 +1,9 @@
 import { test, expect } from '@playwright/test';
-import { allure } from 'allure-playwright'; // ✅ Allure 첨부용
 import { getNowString } from '../../src/utils/dataFormat';
 import fs from 'fs';
 import path from 'path';
 
 test('🔲 공백 입력 시, 팝업 노출 확인', async ({ page }, testInfo) => {
-  // 💬 테스트 설명 추가
-  allure.description('검색창에 아무것도 입력하지 않고 Enter 입력 시, "검색어를 입력해주세요" 팝업이 노출되는지 확인');
-
   await page.goto('https://www.kurly.com/main');
   await page.setViewportSize({ width: 1280, height: 720 });
 
@@ -35,6 +31,4 @@ test('🔲 공백 입력 시, 팝업 노출 확인', async ({ page }, testInfo) 
   }
 
   await page.screenshot({ path: screenshotPath });
-
-  allure.attachment('공백 검색 팝업 스크린샷', fs.readFileSync(screenshotPath), 'image/png');
 });

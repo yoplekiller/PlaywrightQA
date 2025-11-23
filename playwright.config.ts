@@ -8,12 +8,17 @@ const reporters: [string, any?][] = [
     ['html', { outputFolder: 'playwright-report', open: 'never' }],
 ];
 
+console.log("🔍 환경변수 체크:");
+console.log("- SLACK_WEBHOOK_TS:", process.env.SLACK_WEBHOOK_TS ? '설정됨' : '설정안됨');
+
 if (process.env.SLACK_WEBHOOK_TS) {
-    console.log("✅ SLACK_WEBHOOK_TS 감지됨");
+    console.log("✅ SLACK_WEBHOOK_TS 감지됨 - SlackReporter 추가");
     reporters.push([
         './tests/reporters/SlackReporter.ts',
         { webhookUrl: process.env.SLACK_WEBHOOK_TS },
     ]);
+} else {
+    console.log("❌ SLACK_WEBHOOK_TS 없음 - SlackReporter 비활성화");
 }
 
 

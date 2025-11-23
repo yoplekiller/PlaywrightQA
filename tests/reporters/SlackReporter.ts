@@ -16,11 +16,14 @@ class SlackReporter implements Reporter {
 
   constructor(options: { webhookUrl: string }) {
     this.webhookUrl = options.webhookUrl;
+    console.log("🚀 SlackReporter 초기화됨");
+    console.log("📡 웹훅 URL 설정됨:", this.webhookUrl ? "✅" : "❌");
   }
 
   onBegin(config: FullConfig, suite: Suite) {
     this.startTime = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
     this.total = suite.allTests().length;
+    console.log("📝 테스트 시작 - 총 테스트 수:", this.total);
   }
 
   onTestEnd(test: TestCase, result: TestResult) {
@@ -41,6 +44,9 @@ class SlackReporter implements Reporter {
   }
 }
   async onEnd(result: FullResult): Promise<void> {
+    console.log("📊 테스트 완료 - 결과 집계:");
+    console.log("- 전체:", this.total, "성공:", this.passed, "실패:", this.failed, "스킵:", this.skipped);
+    
     const status = result.status.toUpperCase();
     const now = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
     const emoji = status === 'PASSED' ? '✅' : '❌';

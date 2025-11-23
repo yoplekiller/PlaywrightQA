@@ -1,8 +1,6 @@
 import { test, expect } from '@playwright/test';
 
 test('🔘 뷰티컬리 버튼 동작 테스트', async ({ page }) => {
-
-  // 페이지 진입
   await page.goto('https://www.kurly.com/main');
 
   // 버튼 클릭
@@ -14,7 +12,7 @@ test('🔘 뷰티컬리 버튼 동작 테스트', async ({ page }) => {
   await expect(page).toHaveURL('https://www.kurly.com/main/beauty');
   await page.waitForTimeout(2000); // 페이지 로딩 대기
 
-  // 📸 스크린샷 저장 및 Allure 첨부
+  //스크린샷 저장
   const screenshotPath = 'screenshots/beauty_kurly_click.png';
   await page.screenshot({ path: screenshotPath });
 });
