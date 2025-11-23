@@ -1,4 +1,4 @@
-import type { Reporter, FullResult } from '@playwright/test/reporter';
+import type { Reporter, FullResult, FullConfig, Suite, TestCase, TestResult } from '@playwright/test/reporter';
 import dotenv from 'dotenv';
 import axios from 'axios';
 
@@ -18,12 +18,12 @@ class SlackReporter implements Reporter {
     this.webhookUrl = options.webhookUrl;
   }
 
-  onBegin(config, suite) {
+  onBegin(config: FullConfig, suite: Suite) {
     this.startTime = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
     this.total = suite.allTests().length;
   }
 
-  onTestEnd(test, result) {
+  onTestEnd(test: TestCase, result: TestResult) {
   const failedStatuses = ['failed', 'timedOut', 'interrupted', 'crashed'];
 
   if (result.status === 'passed') {
@@ -46,17 +46,7 @@ class SlackReporter implements Reporter {
     const emoji = status === 'PASSED' ? '✅' : '❌';
     const allureUrl = process.env.ALLURE_REPORT_URL || '';
     const playwrightUrl = process.env.PLAYWRIGHT_REPORT_URL || '';
-    const reportLink = allureUrl ? `\n*🔗 Allure 리포트: <${allureUrl}|바로가기>*` : '';
     const playwrightReportLink = playwrightUrl ? `\n*📊 Playwright 리포트: <${playwrightUrl}|결과 보기>*` : '';
-    // let failedList = '';
-    // if (this.failedDetails.length > 0) {
-    //   failedList = [
-    //     '',
-    //     '*❌ 실패 테스트 목록:*',
-    //     ...this.failedDetails.map((t, i) => `${i + 1}. [${t.file}] ${t.title}${t.error ? `\n   - Error: ${t.error}` : ''}`)
-    //   ].join('\n');
-    // }
-
     const lines = [
       '*Playwright 테스트 완료*',
       `*상태:* ${emoji} ${status}`,
@@ -66,7 +56,6 @@ class SlackReporter implements Reporter {
       `*⏳총 소요:* ${Math.round(result.duration / 1000)}초`,
       '',
       `*총 테스트:* ${this.total} | *성공:* ${this.passed} | *실패:* ${this.failed} | *스킵:* ${this.skipped}`,
-      reportLink,
       playwrightReportLink,
       
     ];
