@@ -5,7 +5,6 @@ dotenv.config();
 
 const reporters: [string, any?][] = [
     ['list'],
-    ['allure-playwright'],
     ['html', { outputFolder: 'playwright-report', open: 'never' }],
 ];
 

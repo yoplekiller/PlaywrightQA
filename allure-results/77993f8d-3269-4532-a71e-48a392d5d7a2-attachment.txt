@@ -1,9 +1,0 @@
-✅ 상태 코드: 404
-📄 원본 응답: <html>
-<head><title>404 Not Found</title></head>
-<body>
-<center><h1>404 Not Found</h1></center>
-<hr><center>openresty</center>
-</body>
-</html>
-

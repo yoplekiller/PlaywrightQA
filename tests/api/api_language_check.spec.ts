@@ -7,9 +7,9 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const BASE_URL = process.env.TMDB_BASE_URL || 'https://api.themoviedb.org/';
-const API_KEY = process.env.TMDB_API_KEY;
-if (!API_KEY){
-    throw new Error('TMDB_API_KEY 환경 변수가 설정되지 않았습니다.');
+const API_KEY = process.env.TMDB_API_KEY || 'your_default_api_key_here';
+if (!API_KEY || API_KEY === 'your_default_api_key_here'){
+    console.warn('TMDB_API_KEY 환경 변수가 설정되지 않았습니다. 기본값을 사용합니다.');
 }
 
 
@@ -45,7 +45,7 @@ test.describe('🎬 TMDB 지원 언어 목록이 정상적으로 반환되고 �
             const expectedLanguages = ['ko', 'en', 'ja', 'zh', 'fr', 'de', 'es', 'it'];
             const iso6391 = lang.iso_639_1;
 
-            const found = languages.some(L => lang.iso_639_1 === L.iso_639_1);
+            const found = languages.some((L: any) => lang.iso_639_1 === L.iso_639_1);
             expect(found).toBe(true);
             console.log(`✅ 언어 코드 ${iso6391}가 응답에 포함되어 있음`);
             allure.attachment(

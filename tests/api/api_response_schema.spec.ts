@@ -3,9 +3,9 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 const BASE_URL = process.env.TMDB_BASE_URL || 'https://api.themoviedb.org/';
-const API_KEY = process.env.TMDB_API_KEY;
-if (!API_KEY){
-    throw new Error('TMDB_API_KEY 환경 변수가 설정되지 않았습니다.');
+const API_KEY = process.env.TMDB_API_KEY || 'your_api_key_here';
+if (!process.env.TMDB_API_KEY){
+    console.warn('TMDB_API_KEY 환경 변수가 설정되지 않았습니다. 기본값을 사용합니다.');
 }
 test.describe('TMDB API 응답 스키마 검증', () => {
     test('응답 스키마가 예상과 일치하는지 확인', async () => {

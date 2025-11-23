@@ -1,2 +1,0 @@
-🔁 응답 상태 코드: 400
-✅ 응답 데이터: { error: 'Missing email or username' }

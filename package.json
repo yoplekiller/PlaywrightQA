@@ -2,13 +2,14 @@
   "dependencies": {
     "allure": "^3.0.0-beta.13",
     "axios": "^1.9.0",
-    "dotenv": "^16.5.0",
+    "dotenv": "^16.6.1",
     "env": "^0.0.2",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@playwright/test": "^1.52.0",
     "@types/axios": "^0.9.36",
+    "@types/dotenv": "^6.1.1",
     "@types/node": "^22.15.18",
     "@types/xlsx": "^0.0.35",
     "allure-playwright": "^3.2.2",
