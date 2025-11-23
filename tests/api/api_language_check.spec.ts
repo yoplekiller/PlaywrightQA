@@ -1,8 +1,4 @@
 import {test, expect, request} from '@playwright/test';
-
-import { allure } from 'allure-playwright';
-import { all } from 'axios';
-
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -15,12 +11,6 @@ if (!API_KEY || API_KEY === 'your_default_api_key_here'){
 
 test.describe('🎬 TMDB 지원 언어 목록이 정상적으로 반환되고 주요 언어를 포함하는지 확인', () => {
     test(' 영화 언어별 적용 확인', async () => {
-        allure.label('feature', 'API');
-        allure.label('story', '영화 언어별 적용 확인');
-        allure.description('TMDB API를 활용한 영화 언어별 적용 확인 테스트'); 
-        allure.epic('TMDB API 테스트');
-        // API 컨텍스트 생성
-
         const apiContext = await request.newContext({ baseURL: BASE_URL});
         const response = await apiContext.get(`3/configuration/languages?api_key=${API_KEY}`);
 
@@ -48,11 +38,6 @@ test.describe('🎬 TMDB 지원 언어 목록이 정상적으로 반환되고 �
             const found = languages.some((L: any) => lang.iso_639_1 === L.iso_639_1);
             expect(found).toBe(true);
             console.log(`✅ 언어 코드 ${iso6391}가 응답에 포함되어 있음`);
-            allure.attachment(
-                '언어 응답 JSON',  
-                JSON.stringify(languages, null, 2),
-                'application/json'
-            );
         }
     });
 });

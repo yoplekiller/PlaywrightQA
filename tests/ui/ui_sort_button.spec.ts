@@ -1,11 +1,8 @@
 import { test, expect } from '@playwright/test';
-import { allure } from 'allure-playwright';
 import fs from 'fs';
 import path from 'path';
 
 test('🧭 카테고리별 정렬 동작 및 결과 검증', async ({ page }, testInfo) => {
-  allure.description('검색 후 정렬 탭(신상품순, 판매량순 등)을 클릭했을 때, 첫 번째 상품이 정상적으로 표시되는지 확인하고 각 상태를 스크린샷으로 기록합니다.');
-
   await page.goto('https://www.kurly.com/main');
   const searchBox = page.getByRole('textbox', { name: '검색어를 입력해주세요' });
   await searchBox.click();
