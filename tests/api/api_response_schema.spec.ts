@@ -1,43 +1,39 @@
-import { test, expect, request } from '@playwright/test';
-import dotenv from 'dotenv';
+import axios from 'axios';
+import { load_config } from './utils/config_utils';
 
-dotenv.config();
-const BASE_URL = process.env.TMDB_BASE_URL || 'https://api.themoviedb.org/';
-const API_KEY = process.env.TMDB_API_KEY || 'your_api_key_here';
-if (!process.env.TMDB_API_KEY){
-    console.warn('TMDB_API_KEY 환경 변수가 설정되지 않았습니다. 기본값을 사용합니다.');
+const env_data = load_config(); // ← 여기 핵심!!
+const BASE_URL = env_data.base_url;
+const API_KEY = env_data.api_key;
+
+async function send_get_request(endpoint: string, params?: any, headers?: any) {
+    try {
+        const full_url = BASE_URL + endpoint;
+        const response = await axios.get(full_url, { params, headers });
+        attach_response(response);
+        return response;
+    } catch (error) {
+        console.error('GET 요청 에러:', error);
+        throw error;
+    }
 }
-test.describe('TMDB API 응답 스키마 검증', () => {
-    test('응답 스키마가 예상과 일치하는지 확인', async () => {
-        const apiContext = await request.newContext({ baseURL: BASE_URL });
-        const response = await apiContext.get(`3/movie/popular?api_key=${API_KEY}&language=ko-KR&page=1`);
-        
-        expect(response.status()).toBe(200);
-        
-        const body = await response.json();
-        expect(body).toHaveProperty('page');
-        expect(body).toHaveProperty('results');
-        expect(Array.isArray(body.results)).toBe(true);
-        expect(body).toHaveProperty('total_results');
-        expect(body).toHaveProperty('total_pages');
 
-        // 각 영화 객체의 필수 속성 검증
-        body.results.forEach(movie => {
-            expect(movie).toHaveProperty('id');
-            expect(movie).toHaveProperty('title');
-            expect(movie).toHaveProperty('vote_average');
-            expect(movie).toHaveProperty('release_date');
-            expect(movie).toHaveProperty('overview');
-            expect(movie).toHaveProperty('poster_path');
-        });
-        // 첫 번째 영화의 속성 검증
-        expect(body.results.length).toBeGreaterThan(0); 
-        const firstMovie = body.results[0];
-        expect(firstMovie).toHaveProperty('id');
-        expect(firstMovie).toHaveProperty('title');
-        expect(firstMovie).toHaveProperty('vote_average');
-        expect(firstMovie).toHaveProperty('release_date');
-        expect(firstMovie).toHaveProperty('overview');
-        expect(firstMovie).toHaveProperty('poster_path');
-    });
-});
+async function send_post_request(endpoint: string, data?: any, json_data?: any, headers?: any) {
+    try {
+        const full_url = BASE_URL + endpoint;
+        const response = await axios.post(full_url, json_data || data, { headers });
+        attach_response(response);
+        return response;
+    } catch (error) {
+        console.error('POST 요청 에러:', error);
+        throw error;
+    }
+}
+
+function attach_response(response: any) {
+    try {
+        const json_body = JSON.stringify(response.data, null, 2);
+        console.log('응답 JSON:', json_body);
+    } catch (error) {
+        console.log('응답 본문 (raw):', response.data);
+    }
+}

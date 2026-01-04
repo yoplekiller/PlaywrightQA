@@ -6,6 +6,7 @@ dotenv.config();
 const reporters: [string, any?][] = [
     ['list'],
     ['html', { outputFolder: 'playwright-report', open: 'never' }],
+    ['allure-playwright', { outputFolder: 'allure-results' }],
 ];
 
 console.log("🔍 환경변수 체크:");

@@ -1,4 +1,4 @@
-# Kurly UI Auto QA & TMDB API QA with Playwright 🧪
+# 마켓컬리 UI Auto QA & TMDB API QA with Playwright 🧪
 
 ## 📌 프로젝트 개요
 마켓컬리 웹사이트의 주요 기능을 Playwright로 자동화한 테스트 프로젝트입니다.
@@ -25,12 +25,6 @@ npx playwright test          # 기본 테스트 실행
 npx playwright show-report   # HTML 리포트 확인
 ```
 
-## 📄 Allure Report 실행 방법 (선택)
-
-```bash
-npx allure generate allure-results --clean -o allure-report
-npx allure open allure-report
-```
 
 ---------------------
 ## 📂 디렉토리 구조 (중요 폴더 중심 정리)
@@ -51,9 +45,4 @@ npx allure open allure-report
 ├── .env.example                    # 환경변수 템플릿
 ├── README.md</pre></details>
 
-
-## 🙋‍♂️ 작성자
-**임재민**
-QA 자동화 & CI/CD 구축 경험
-GitHub: github.com/yoplekiller
 
