@@ -316,7 +316,7 @@ export class LoginPage extends BasePage {
 // tests/ui/ui_login.spec.ts - AFTER
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../../src/pages/LoginPage';
-import { allure } from 'allure-playwright';
+import * as allure from 'allure-js-commons';
 import dotenv from 'dotenv';
 
 dotenv.config();

@@ -1,4 +1,4 @@
-import XLSX from 'xlsx';
+import ExcelJS from 'exceljs';
 import * as path from 'path';
 
 export interface SearchCase {
@@ -6,18 +6,44 @@ export interface SearchCase {
   search_term: string;
 }
 
-export function loadExcelFile(filePath: string): SearchCase[] {
-  const absolutePath = path.resolve(__dirname, filePath); // Adjusted path resolution
+export async function loadExcelFile(filePath: string): Promise<SearchCase[]> {
+  const absolutePath = path.resolve(__dirname, filePath);
   if (!require('fs').existsSync(absolutePath)) {
     throw new Error(`Excel file not found at path: ${absolutePath}`);
   }
-  const workbook = XLSX.readFile(absolutePath);
-  const worksheet = workbook.Sheets[workbook.SheetNames[0]];
 
-  const rawData = XLSX.utils.sheet_to_json<any>(worksheet, { defval: '' });
+  const workbook = new ExcelJS.Workbook();
+  await workbook.xlsx.readFile(absolutePath);
 
-  return rawData.map((row: any) => ({
-    tc_id: row.tc_id?.toString() ?? '',
-    search_term: row.search_term?.toString() ?? '',
-  }));
+  const worksheet = workbook.worksheets[0];
+  if (!worksheet) {
+    throw new Error('No worksheet found in Excel file');
+  }
+
+  const rawData: SearchCase[] = [];
+  const headers: string[] = [];
+
+  worksheet.eachRow((row, rowNumber) => {
+    if (rowNumber === 1) {
+      // First row is headers
+      row.eachCell((cell) => {
+        headers.push(cell.value?.toString() ?? '');
+      });
+    } else {
+      // Data rows
+      const rowData: any = {};
+      row.eachCell((cell, colNumber) => {
+        const header = headers[colNumber - 1];
+        if (header) {
+          rowData[header] = cell.value?.toString() ?? '';
+        }
+      });
+      rawData.push({
+        tc_id: rowData.tc_id?.toString() ?? '',
+        search_term: rowData.search_term?.toString() ?? '',
+      });
+    }
+  });
+
+  return rawData;
 }

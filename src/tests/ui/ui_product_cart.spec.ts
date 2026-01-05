@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import * as allure from 'allure-js-commons';
-import { getNowString } from '../../src/utils/dataFormat';
+import { getNowString } from '../../utils/dataFormat';
 import fs from 'fs';
 import path from 'path';
 

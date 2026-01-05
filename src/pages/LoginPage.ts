@@ -4,27 +4,24 @@ import { BasePage } from './BasePage';
 
 export class LoginPage extends BasePage {
 
-    private readonly loginButton: Locator;
+    // Locators for login page elements
     private readonly usernameInput: Locator;
     private readonly passwordInput: Locator;
     private readonly submitButton: Locator;
-    private readonly marketButton: Locator;
-    private readonly beautyButton: Locator;
+    private readonly signupButton: Locator;
+    private readonly naverLoginButton: Locator;
+    private readonly kakaoLoginButton: Locator;
 
     
     constructor(page: Page) {
     super(page);
-    this.loginButton = page.locator('a').filter({ hasText: '로그인' });
-    this.usernameInput = page.getByRole('textbox', { name: '아이디를 입력해주세요' });
-    this.passwordInput = page.getByRole('textbox', { name: '비밀번호를 입력해주세요' });
-    this.submitButton = page.getByRole('button', { name: '로그인' });
-    this.marketButton = page.getByRole('button', { name: '마켓컬리' });
-    this.beautyButton = page.getByRole('button', { name: '뷰티컬리' });
-  }
+    this.usernameInput = page.getByRole('textbox', { name: /아이디를 입력해주세요/i });
+    this.passwordInput = page.getByRole('textbox', { name: /비밀번호를 입력해주세요/i });
+    this.submitButton = page.getByRole('button', { name: /로그인/i });
+    this.signupButton = page.getByRole('button', { name: /회원가입/i });
+    this.naverLoginButton = page.getByRole('button', { name: /네이버로 계속하기/i });
+    this.kakaoLoginButton = page.getByRole('button', { name: /카카오로 계속하기/i });
 
-  
-  async clickLoginButton() {
-    await this.click(this.loginButton)
   }
 
   async fillUsername(username: string) {
@@ -40,17 +37,12 @@ export class LoginPage extends BasePage {
   }
 
   async login(username: string, password: string) {
-    await this.clickLoginButton();
     await this.fillUsername(username);
     await this.fillPassword(password);
     await this.clickSubmit();
   }
 
-   async isMarketButtonVisible(): Promise<boolean> {
-    return await this.marketButton.isVisible({timeout: 5000});
+  async clickSignup() {
+    await this.click(this.signupButton);
   }
-
-  async isBeautyButtonVisible(): Promise<boolean> {
-    return await this.beautyButton.isVisible({timeout: 5000});
-  }
-};
+}
