@@ -26,33 +26,16 @@ test.describe('🎬 TMDB 영화 API 테스트', () => {
     const status = response.status();
     const body = await response.json();
 
-    // Allure 첨부 (응답 전문 JSON)
-    allure.attachment('응답 JSON', JSON.stringify(body, null, 2), 'application/json');
-
     // 테스트 검증
     expect(status).toBe(200);
     expect(body).toHaveProperty('results');
     expect(Array.isArray(body.results)).toBe(true);
     expect(body.results.length).toBeGreaterThan(0);
-    
-    // 결과 콘솔 출력
-    console.log(`🎉 인기 영화 ${body.results.length}건 조회됨`)
-    console.log(`✅ 응답 상태 코드: ${status}`);
-    console.log(`✅ 응답 데이터 타입: ${typeof body}`);
-    console.log(`✅ 응답 데이터: ${JSON.stringify(body, null, 2)}`);
-    console.log(`✅ 응답 데이터 길이: ${body.results.length}`);
-    console.log(`✅ 응답 데이터 첫 번째 영화 제목: ${body.results[0].title}`);
-    console.log(`✅ 응답 데이터 첫 번째 영화 ID: ${body.results[0].id}`);
-    console.log(`✅ 응답 데이터 첫 번째 영화 포스터 경로: ${body.results[0].poster_path}`);
-    console.log(`✅ 응답 데이터 첫 번째 영화 개봉일: ${body.results[0].release_date}`);
-    console.log(`✅ 응답 데이터 첫 번째 영화 평점: ${body.results[0].vote_average}`);
-    console.log(`✅ 응답 데이터 첫 번째 영화 개요: ${body.results[0].overview}`);
-    console.log(`✅ 응답 데이터 첫 번째 영화 언어: ${body.results[0].original_language}`);
-    console.log(`✅ 응답 데이터 첫 번째 영화 장르: ${body.results[0].genre_ids}`);
-    console.log(`✅ 응답 데이터 첫 번째 영화 포스터 URL: https://image.tmdb.org/t/p/w500${body.results[0].poster_path}`);
-    
 
-    // Allure 첨부 (응답 전문 JSON)
+    // 핵심 정보만 로깅
+    console.log(`🎉 인기 영화 ${body.results.length}건 조회됨 - 첫 번째 영화: ${body.results[0].title}`);
+
+    // Allure 리포트에 응답 데이터 첨부
     allure.attachment('응답 JSON', JSON.stringify(body, null, 2), 'application/json');
 
   });

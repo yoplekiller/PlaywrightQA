@@ -10,7 +10,7 @@ export class MainPage extends BasePage {
     private readonly userProfileLink!: Locator;
     private readonly marketButton!: Locator;
     private readonly beautyButton!: Locator;
-    private readonly adressButton!: Locator;
+    private readonly addressButton!: Locator;
     private readonly likeButton!: Locator;
     private readonly cartButton!: Locator;
     
@@ -27,7 +27,7 @@ export class MainPage extends BasePage {
         this.beautyButton = page.getByRole('button', { name: /뷰티컬리/i });
         this.likeButton = page.getByRole('button', { name: /찜하기/i })
         this.cartButton = page.locator('button.css-1e2hf7q.eebvnww2:visible')
-        this.adressButton = page.locator('div.css-gaxl0w.e1m38gux1:visible')
+        this.addressButton = page.locator('div.css-gaxl0w.e1m38gux1:visible')
         
     
     }
@@ -42,8 +42,8 @@ export class MainPage extends BasePage {
     async clickBeautyButton() {
         await this.click(this.beautyButton);
     }
-    async clickAdressButton() {
-        await this.click(this.adressButton);
+    async clickAddressButton() {
+        await this.click(this.addressButton);
     }
     async clickLikeButton() {
         await this.click(this.likeButton);
@@ -61,7 +61,7 @@ export class MainPage extends BasePage {
         }
     }
 
-    private getAdderssIframe(popup: Page) {
+    private getAddressIframe(popup: Page) {
         const firstFrame = popup.frameLocator(`iframe[title="${ADDRESS_CONSTANTS.IFRAME_TITLE_OUTER}"]`);
         const secondFrame = firstFrame.frameLocator(`iframe[title="${ADDRESS_CONSTANTS.IFRAME_TITLE_INNER}"]`);
         return firstFrame.frameLocator('iframe#entryIframe');
@@ -78,7 +78,7 @@ export class MainPage extends BasePage {
         const popupPromise = this.page.waitForEvent('popup');
         await this.page.getByRole('button', { name: ADDRESS_CONSTANTS.BUTTON_ADDRESS_SEARCH }).click();
         const popup = await popupPromise;
-        const addressIframe = this.getAdderssIframe(popup);
+        const addressIframe = this.getAddressIframe(popup);
         const searchBox = addressIframe.getByRole('textbox', { name: ADDRESS_CONSTANTS.PLACEHOLDER_SEARCH_BOX });
         await searchBox.fill(address);
         await addressIframe.getByRole('button', {

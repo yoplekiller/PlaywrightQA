@@ -21,7 +21,7 @@ test('주소 검색 기능 테스트', async ({ page }) => {
 
    await allure.step('주소 검색 및 선택', async () => {
         // 주소 검색 팝업 열고 검색
-        mainPage.clickAdressButton();
+        mainPage.clickAddressButton();
         const { popup, addressIframe } = await mainPage.searchAddressInPopup(TEST_DATA.search);
 
         // 주소 선택 및 상세주소 입력 후 저장
@@ -36,7 +36,7 @@ test('주소 검색 기능 테스트', async ({ page }) => {
     await allure.step('저장된 주소 확인', async () => {
         // 다시 메인으로 돌아가서 주소 확인
         await page.goto('https://www.kurly.com/main');
-        await mainPage.clickAdressButton();
+        await mainPage.clickAddressButton();
         const isVisible = await mainPage.verifyAddressDisplayed(TEST_DATA.expected);
         expect(isVisible).toBe(true);
 
