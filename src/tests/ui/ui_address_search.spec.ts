@@ -1,12 +1,17 @@
 import { test, expect } from '@playwright/test';
 import * as allure from 'allure-js-commons';
 // Make sure to import LoginPage from its module, adjust the path as needed
-import { LoginPage } from '../../pages/LoginPage';
 import { MainPage } from '../../pages/MainPage';
 
 test('주소 검색 기능 테스트', async ({ page }) => {
-  allure.description('주소 검색 기능 테스트');
-
+  allure.description('주소 검색 팝업에서 주소를 검색하고 선택 후 저장하는 기능 테스트');
+  
+  const TEST_DATA = {
+    search: '방이동',
+    expected: '서울 송파구 가락로 232',
+    detail: '222'
+    
+  }
 
   const mainPage = new MainPage(page);
 
@@ -14,38 +19,30 @@ test('주소 검색 기능 테스트', async ({ page }) => {
       await page.goto('https://www.kurly.com/main');
     });
 
-   await allure.step('주소 검색 버튼 클릭 및 주소 검색', async () => {
-      await mainPage.clickAdressButton();
-      await mainPage.adressSearchClick();
+   await allure.step('주소 검색 및 선택', async () => {
+        // 주소 검색 팝업 열고 검색
+        mainPage.clickAdressButton();
+        const { popup, addressIframe } = await mainPage.searchAddressInPopup(TEST_DATA.search);
+
+        // 주소 선택 및 상세주소 입력 후 저장
+        await mainPage.selectAddressInPopup(
+            popup,
+            addressIframe,
+            TEST_DATA.expected,
+            TEST_DATA.detail
+        );
     });
 
-  // 최상위 iframe 접근
-  const firstFrameHandle = await page.frameLocator('iframe[title="우편번호서비스 레이어 프레임"]');
-  const secondFrameHandle = firstFrameHandle.frameLocator('iframe[title="우편번호 검색 프레임"]');
+    await allure.step('저장된 주소 확인', async () => {
+        // 다시 메인으로 돌아가서 주소 확인
+        await page.goto('https://www.kurly.com/main');
+        await mainPage.clickAdressButton();
+        const isVisible = await mainPage.verifyAddressDisplayed(TEST_DATA.expected);
+        expect(isVisible).toBe(true);
 
-  // 예시 텍스트 클릭 및 검색어 입력
-  await secondFrameHandle.getByText('예) 판교역로 166, 분당 주공, 백현동').click();
-  const searchBox = secondFrameHandle.getByRole('textbox', { name: /검색할 도로명/ });
-  await searchBox.fill('서울시 을지로 100');
-  await searchBox.press('Enter');
-  await page.waitForTimeout(3000); // 검색 결과 기다림
+        const addressLocator = page.getByText('서울 송파구 가락로 232 (222)');
+        await expect(addressLocator).toBeVisible();
+    }
 
-  // 주소 선택 및 저장
-  await secondFrameHandle.getByRole('button', { name: /서울 중구 을지로 100/ }).click();
-  await page.getByRole('button', { name: /저장/ }).click();
-  await page.getByRole('button', { name: /확인|확정|confirm/i }).click();
-
-  // 다시 메인으로 돌아가서 주소 확인
-  await page.goto('https://www.kurly.com/main');
-  await page.locator('.css-14vnom0.e1n3mt0d1').click();
-
-  const addressLocator = page.getByText('서울 중구 을지로 100 (파인에비뉴)');
-  await expect(addressLocator).toBeVisible();
-
-  // 스크린샷 저장 및 Allure 첨부
-  const screenshotPath = 'screenshots/address_search.png';
-  await page.screenshot({ path: screenshotPath });
-  await allure.attachment('주소 검색 스크린샷', Buffer.from(await page.screenshot()), 'image/png');
-  console.log(`Screenshot saved at: ${screenshotPath}`);
-
-});
+  );
+}); 
