@@ -1,0 +1,205 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - link "지금 가입하고 최대 1만 2천원 할인 쿠폰 받아가세요!" [ref=e6] [cursor=pointer]:
+        - /url: https://event.kurly.com/lego/event/2023/0911/join/coupon#lc112b1
+        - generic [ref=e7]: 지금 가입하고 최대 1만 2천원 할인 쿠폰 받아가세요!
+      - button "배너 하루 안보기" [ref=e8] [cursor=pointer]:
+        - img [ref=e9]
+        - generic [ref=e14]: 배너 하루 안보기
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - generic [ref=e18] [cursor=pointer]: 회원가입
+          - generic [ref=e20] [cursor=pointer]: 로그인
+          - generic [ref=e23] [cursor=pointer]: 고객센터
+        - generic [ref=e25]:
+          - generic [ref=e26]:
+            - img "마켓컬리 로고" [ref=e27]
+            - button "마켓컬리" [ref=e28] [cursor=pointer]
+            - button "뷰티컬리" [ref=e29] [cursor=pointer]
+          - generic [ref=e31]:
+            - textbox "검색어를 입력해주세요" [ref=e32]
+            - button "submit" [ref=e33] [cursor=pointer]
+          - generic [ref=e34]:
+            - button [disabled] [ref=e35]:
+              - img [ref=e36]
+            - button [ref=e39] [cursor=pointer]:
+              - img [ref=e40]
+            - button "0" [ref=e42] [cursor=pointer]:
+              - img [ref=e43]
+              - generic [ref=e46]: "0"
+      - generic [ref=e48]:
+        - button "카테고리" [ref=e50] [cursor=pointer]:
+          - img [ref=e51]
+          - generic [ref=e53]: 카테고리
+        - generic [ref=e54]:
+          - list [ref=e55]:
+            - listitem [ref=e56]:
+              - link "베스트" [ref=e57] [cursor=pointer]:
+                - /url: /collection-groups/market-best?site=MARKET
+            - listitem [ref=e58]:
+              - link "세일" [ref=e59] [cursor=pointer]:
+                - /url: /collection-groups/market-sales-group?site=MARKET
+            - listitem [ref=e60]:
+              - link "패션" [ref=e61] [cursor=pointer]:
+                - /url: /panels/fashion?site=MARKET
+            - listitem [ref=e62]:
+              - link "리빙" [ref=e63] [cursor=pointer]:
+                - /url: /panels/living?site=MARKET
+            - listitem [ref=e64]:
+              - link "신상" [ref=e65] [cursor=pointer]:
+                - /url: /collection-groups/market-newproduct?site=MARKET
+            - listitem [ref=e66]:
+              - link "특가/혜택" [ref=e67] [cursor=pointer]:
+                - /url: /market-benefit
+          - link "샛별·하루 배송안내" [ref=e68] [cursor=pointer]:
+            - /url: /user-guide/delivery
+            - generic [ref=e69]: 샛별·하루
+            - generic [ref=e70]: 배송안내
+    - generic [ref=e72]:
+      - heading "장바구니" [level=2] [ref=e73]:
+        - paragraph [ref=e74]: 장바구니
+      - generic [ref=e75]:
+        - generic [ref=e76]:
+          - generic [ref=e78]:
+            - generic [ref=e79] [cursor=pointer]:
+              - checkbox "전체선택 0/0" [disabled] [ref=e80]
+              - paragraph [ref=e82]: 전체선택 0/0
+            - button "선택삭제" [disabled] [ref=e83]:
+              - paragraph [ref=e84]: 선택삭제
+          - generic:
+            - generic:
+              - img
+              - paragraph: 장바구니에 담긴 상품이 없습니다
+        - generic [ref=e85]:
+          - generic [ref=e86]:
+            - paragraph [ref=e87]: 결제금액
+            - generic [ref=e88]:
+              - generic [ref=e89]:
+                - generic [ref=e90]:
+                  - paragraph [ref=e91]: 상품금액
+                  - paragraph [ref=e92]: 0원
+                - generic [ref=e93]:
+                  - paragraph [ref=e94]: 상품할인금액
+                  - generic [ref=e95]:
+                    - paragraph [ref=e96]: 0원
+                    - paragraph [ref=e97]: 로그인 후 할인 금액 적용
+                - generic [ref=e98]:
+                  - paragraph [ref=e99]: 배송비
+                  - paragraph [ref=e100]: 0원
+              - generic [ref=e101]:
+                - paragraph [ref=e102]: 결제예정금액
+                - paragraph [ref=e103]: 0원
+              - paragraph [ref=e105]: 쿠폰 · 멤버스 혜택은 주문서에서 적용할 수 있어요
+          - button "로그인" [ref=e106] [cursor=pointer]
+    - generic [ref=e107]:
+      - generic [ref=e108]:
+        - generic [ref=e109]:
+          - generic [ref=e110]:
+            - paragraph [ref=e111]: 고객행복센터
+            - strong [ref=e112]: 1644-1107월~토요일 오전 7시 - 오후 6시
+            - generic [ref=e113]:
+              - generic [ref=e114]:
+                - button "카카오톡 문의" [ref=e115] [cursor=pointer]
+                - generic [ref=e116]:
+                  - text: 월~토요일
+                  - img [ref=e117]
+                  - text: 오전 7시 - 오후 6시
+                  - text: 일/공휴일
+                  - img [ref=e118]
+                  - text: 오전 7시 - 오후 1시
+              - generic [ref=e119]:
+                - button "1:1 문의" [ref=e120] [cursor=pointer]
+                - generic [ref=e121]:
+                  - text: 365일
+                  - text: 고객센터 운영시간에 순차적으로 답변드리겠습니다.
+              - generic [ref=e122]:
+                - link "대량주문 문의" [ref=e123] [cursor=pointer]:
+                  - /url: https://docs.google.com/forms/d/e/1FAIpQLScWcjRuN6eWJK-G8x3NwBfE8IyKZIOq7jhD3fUXuKSWwPqzJw/viewform
+                - generic [ref=e124]:
+                  - text: 월~금요일
+                  - img [ref=e125]
+                  - text: 오전 9시 - 오후 6시
+                  - text: 점심시간
+                  - img [ref=e126]
+                  - text: 낮 12시 - 오후 1시
+            - generic [ref=e127]:
+              - text: "비회원 문의 :"
+              - link "help@kurlycorp.com" [ref=e128] [cursor=pointer]:
+                - /url: mailto:help@kurlycorp.com
+          - generic [ref=e129]:
+            - list [ref=e130]:
+              - listitem [ref=e131]:
+                - link "회사소개" [ref=e132] [cursor=pointer]:
+                  - /url: https://newsroom.kurlycorp.com/
+              - listitem [ref=e133]:
+                - link "컬리소개영상" [ref=e134] [cursor=pointer]:
+                  - /url: https://www.youtube.com/embed/WEep7BcboMQ?rel=0&showinfo=0&wmode=opaque&enablejsapi=1
+              - listitem [ref=e135]:
+                - link "투자정보" [ref=e136] [cursor=pointer]:
+                  - /url: https://newsroom.kurlycorp.com/ir/%ec%9e%ac%eb%ac%b4%ec%a0%95%eb%b3%b4/
+              - listitem [ref=e137]:
+                - link "인재채용" [ref=e138] [cursor=pointer]:
+                  - /url: https://kurly.career.greetinghr.com
+              - listitem [ref=e139]:
+                - link "이용약관" [ref=e140] [cursor=pointer]:
+                  - /url: /user-terms/agreement
+              - listitem [ref=e141]:
+                - link "개인정보처리방침" [ref=e142] [cursor=pointer]:
+                  - /url: https://privacy.kurly.com/kurly/privacypolicy
+              - listitem [ref=e143]:
+                - link "이용안내" [ref=e144] [cursor=pointer]:
+                  - /url: /user-guide
+              - listitem [ref=e145]:
+                - link "입점신청" [ref=e146] [cursor=pointer]:
+                  - /url: https://docs.google.com/forms/d/e/1FAIpQLScKI_Kd1lQAp68r-SIhiOWj0J43C99IvNbgFeT7-X9YLIqteA/viewform?usp=dialog
+            - generic [ref=e147]:
+              - text: "법인명 (상호) : 주식회사 컬리"
+              - generic [ref=e148]: "|"
+              - text: "사업자등록번호 : 261-81-23567"
+              - link "사업자정보 확인" [ref=e149] [cursor=pointer]:
+                - /url: https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2618123567&apv_perm_no=
+              - text: "통신판매업 : 제 2018-서울강남-01646 호"
+              - text: "주소 : 서울특별시 강남구 테헤란로 133, 18층(역삼동)"
+              - generic [ref=e150]: "|"
+              - text: "대표이사 : 김슬아"
+              - text: "채용문의 :"
+              - link "recruit@kurlycorp.com" [ref=e151] [cursor=pointer]:
+                - /url: mailto:recruit@kurlycorp.com
+              - text: "팩스: 070 - 7500 - 6098"
+            - list [ref=e152]:
+              - link "컬리 인스타그램 바로가기" [ref=e153] [cursor=pointer]:
+                - /url: https://instagram.com/marketkurly
+                - img "컬리 인스타그램 바로가기" [ref=e154]
+              - link "컬리 페이스북 바로가기" [ref=e155] [cursor=pointer]:
+                - /url: https://www.facebook.com/marketkurly
+                - img "컬리 페이스북 바로가기" [ref=e156]
+              - link "컬리 네이버블로그 바로가기" [ref=e157] [cursor=pointer]:
+                - /url: https://blog.naver.com/marketkurly
+                - img "컬리 네이버블로그 바로가기" [ref=e158]
+              - link "컬리 유튜브 바로가기" [ref=e159] [cursor=pointer]:
+                - /url: https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg
+                - img "컬리 유튜브 바로가기" [ref=e160]
+        - generic [ref=e161]:
+          - button "isms 로고 [인증범위] 컬리 쇼핑몰 서비스 개발·운영 (심사받지 않은 물리적 인프라 제외) [유효기간] 2025.01.15 ~ 2028.01.14" [ref=e162] [cursor=pointer]:
+            - img "isms 로고" [ref=e163]
+            - paragraph [ref=e164]:
+              - text: "[인증범위] 컬리 쇼핑몰 서비스 개발·운영"
+              - text: (심사받지 않은 물리적 인프라 제외)
+              - text: "[유효기간] 2025.01.15 ~ 2028.01.14"
+          - button "우리은행 로고 고객님이 현금으로 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다." [ref=e165] [cursor=pointer]:
+            - img "우리은행 로고" [ref=e166]
+            - paragraph [ref=e167]:
+              - text: 고객님이 현금으로 결제한 금액에 대해 우리은행과
+              - text: 채무지급보증 계약을 체결하여 안전거래를 보장하고
+              - text: 있습니다.
+      - generic [ref=e168]:
+        - text: 컬리에서 판매되는 상품 중에는 컬리에 입점한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
+        - text: 마켓플레이스(오픈마켓) 상품의 경우 컬리는 통신판매중개자로서 통신판매의 당사자가 아닙니다. 컬리는 해당 상품의 주문, 품질, 교환/환불 등 의무와 책임을 부담하지 않습니다.
+        - emphasis [ref=e169]: © KURLY CORP. ALL RIGHTS RESERVED
+  - alert [ref=e170]
+```

@@ -1,0 +1,83 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Playwright UI test: ui_goods_add_and_verify.spec.ts",
+			"type": "shell",
+			"command": "npx playwright test src/tests/ui/ui_goods_add_and_verify.spec.ts",
+			"group": "test"
+		},
+		{
+			"label": "Run Playwright UI test: ui_goods_add_and_verify.spec.ts (env)",
+			"type": "shell",
+			"command": "npx playwright test src/tests/ui/ui_goods_add_and_verify.spec.ts",
+			"group": "test"
+		},
+		{
+			"label": "Run Playwright UI test: ui_goods_add_and_verify.spec.ts (retry)",
+			"type": "shell",
+			"command": "npx playwright test src/tests/ui/ui_goods_add_and_verify.spec.ts",
+			"group": "test"
+		},
+		{
+			"label": "Run Playwright UI test: ui_goods_add_and_verify.spec.ts (headed)",
+			"type": "shell",
+			"command": "npx playwright test src/tests/ui/ui_goods_add_and_verify.spec.ts --headed",
+			"group": "test"
+		},
+		{
+			"label": "Run Playwright UI test: ui_goods_add_and_verify.spec.ts (headed, refactored search)",
+			"type": "shell",
+			"command": "npx playwright test src/tests/ui/ui_goods_add_and_verify.spec.ts --headed",
+			"group": "test"
+		},
+		{
+			"label": "Run Playwright UI test: ui_goods_add_and_verify.spec.ts (headed, searchGoods method)",
+			"type": "shell",
+			"command": "npx playwright test src/tests/ui/ui_goods_add_and_verify.spec.ts --headed",
+			"group": "test"
+		},
+		{
+			"label": "Run Playwright UI test: ui_favorite_toggle.spec.ts (headed)",
+			"type": "shell",
+			"command": "npx playwright test src/tests/ui/ui_favorite_toggle.spec.ts --headed",
+			"group": "test"
+		},
+		{
+			"label": "Run Playwright UI test: ui_favorite_toggle.spec.ts (headless)",
+			"type": "shell",
+			"command": "npx playwright test src/tests/ui/ui_favorite_toggle.spec.ts",
+			"group": "test"
+		},
+		{
+			"label": "Run Playwright UI test: ui_favorite_toggle.spec.ts (headless, allure)",
+			"type": "shell",
+			"command": "npx playwright test src/tests/ui/ui_favorite_toggle.spec.ts",
+			"group": "test"
+		},
+		{
+			"label": "Run Playwright UI test: ui_favorite_toggle.spec.ts (headless, env fixed)",
+			"type": "shell",
+			"command": "npx playwright test src/tests/ui/ui_favorite_toggle.spec.ts",
+			"group": "test"
+		},
+		{
+			"label": "Run Playwright UI test: ui_favorite_toggle.spec.ts (headless, toast text check)",
+			"type": "shell",
+			"command": "npx playwright test src/tests/ui/ui_favorite_toggle.spec.ts",
+			"group": "test"
+		},
+		{
+			"label": "Run Playwright UI test: ui_favorite_toggle.spec.ts (headless, waitForSelector)",
+			"type": "shell",
+			"command": "npx playwright test src/tests/ui/ui_favorite_toggle.spec.ts",
+			"group": "test"
+		},
+		{
+			"label": "Run Playwright UI test: ui_favorite_toggle.spec.ts (headless, robust toast check)",
+			"type": "shell",
+			"command": "npx playwright test src/tests/ui/ui_favorite_toggle.spec.ts",
+			"group": "test"
+		}
+	]
+}

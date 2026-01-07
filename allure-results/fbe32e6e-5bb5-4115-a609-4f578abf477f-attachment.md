@@ -1,0 +1,533 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - link "지금 가입하고 최대 1만 2천원 할인 쿠폰 받아가세요!" [ref=e6] [cursor=pointer]:
+        - /url: https://event.kurly.com/lego/event/2023/0911/join/coupon#lc112b1
+        - generic [ref=e7]: 지금 가입하고 최대 1만 2천원 할인 쿠폰 받아가세요!
+      - button "배너 하루 안보기" [ref=e8] [cursor=pointer]:
+        - img [ref=e9]
+        - generic [ref=e14]: 배너 하루 안보기
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - generic [ref=e18] [cursor=pointer]: 회원가입
+          - generic [ref=e20] [cursor=pointer]: 로그인
+          - generic [ref=e23] [cursor=pointer]: 고객센터
+        - generic [ref=e25]:
+          - generic [ref=e26]:
+            - img "마켓컬리 로고" [ref=e27]
+            - button "마켓컬리" [ref=e28] [cursor=pointer]
+            - button "뷰티컬리" [ref=e29] [cursor=pointer]
+          - generic [ref=e31]:
+            - textbox "검색어를 입력해주세요" [ref=e32]
+            - button "submit" [ref=e33] [cursor=pointer]
+          - generic [ref=e34]:
+            - button [ref=e35] [cursor=pointer]:
+              - img [ref=e36]
+            - button [ref=e39] [cursor=pointer]:
+              - img [ref=e40]
+            - button "0" [ref=e42] [cursor=pointer]:
+              - img [ref=e43]
+              - generic [ref=e46]: "0"
+      - generic [ref=e48]:
+        - button "카테고리" [ref=e50] [cursor=pointer]:
+          - img [ref=e51]
+          - generic [ref=e53]: 카테고리
+        - generic [ref=e54]:
+          - list [ref=e55]:
+            - listitem [ref=e56]:
+              - link "베스트" [ref=e57] [cursor=pointer]:
+                - /url: /collection-groups/market-best?site=MARKET
+            - listitem [ref=e58]:
+              - link "세일" [ref=e59] [cursor=pointer]:
+                - /url: /collection-groups/market-sales-group?site=MARKET
+            - listitem [ref=e60]:
+              - link "패션" [ref=e61] [cursor=pointer]:
+                - /url: /panels/fashion?site=MARKET
+            - listitem [ref=e62]:
+              - link "리빙" [ref=e63] [cursor=pointer]:
+                - /url: /panels/living?site=MARKET
+            - listitem [ref=e64]:
+              - link "신상" [ref=e65] [cursor=pointer]:
+                - /url: /collection-groups/market-newproduct?site=MARKET
+            - listitem [ref=e66]:
+              - link "특가/혜택" [ref=e67] [cursor=pointer]:
+                - /url: /market-benefit
+          - link "샛별·하루 배송안내" [ref=e68] [cursor=pointer]:
+            - /url: /user-guide/delivery
+            - generic [ref=e69]: 샛별·하루
+            - generic [ref=e70]: 배송안내
+    - generic [ref=e71]:
+      - generic [ref=e72]:
+        - generic [ref=e73]:
+          - paragraph [ref=e76]:
+            - link [ref=e77] [cursor=pointer]:
+              - /url: https://event.kurly.com/lego/event/2023/0911/join/coupon
+              - img [ref=e78]
+          - button "닫기" [ref=e80] [cursor=pointer]
+        - main [ref=e81]:
+          - generic [ref=e82]:
+            - generic [ref=e84]:
+              - link "메인배너" [ref=e86] [cursor=pointer]:
+                - /url: https://www.kurly.com/events/member/friend
+                - img "메인배너" [ref=e89]
+              - link "메인배너" [ref=e91] [cursor=pointer]:
+                - /url: https://event.kurly.com/clay/2601/wonder_kurly
+                - img "메인배너" [ref=e94]
+              - link "메인배너" [ref=e96] [cursor=pointer]:
+                - /url: https://www.kurly.com/categories/107001
+                - img "메인배너" [ref=e99]
+              - link "메인배너" [ref=e101] [cursor=pointer]:
+                - /url: https://www.kurly.com/main/beauty
+                - img "메인배너" [ref=e104]
+              - link "메인배너" [ref=e106] [cursor=pointer]:
+                - /url: https://www.kurly.com/collections/0105lemouton
+                - img "메인배너" [ref=e109]
+              - link "메인배너" [ref=e111] [cursor=pointer]:
+                - /url: https://www.kurly.com/categories/825001
+                - img "메인배너" [ref=e114]
+              - link "메인배너" [ref=e116] [cursor=pointer]:
+                - /url: https://event.kurly.com/lego/event/2026/0105/checkin
+                - img "메인배너" [ref=e119]
+              - link "메인배너" [ref=e121] [cursor=pointer]:
+                - /url: https://www.kurly.com/collections/gpqsrsny
+                - img "메인배너" [ref=e124]
+              - link "메인배너" [ref=e126] [cursor=pointer]:
+                - /url: https://www.kurly.com/collections/jangboginew
+                - img "메인배너" [ref=e129]
+              - link "메인배너" [ref=e131] [cursor=pointer]:
+                - /url: https://event.kurly.com/lego/event/2026/0101/monthlykurly
+                - img "메인배너" [ref=e134]
+              - link "메인배너" [ref=e136] [cursor=pointer]:
+                - /url: https://www.kurly.com/categories/825003
+                - img "메인배너" [ref=e139]
+              - link "메인배너" [ref=e141] [cursor=pointer]:
+                - /url: https://www.kurly.com/categories/321
+                - img "메인배너" [ref=e144]
+              - link "메인배너" [ref=e146] [cursor=pointer]:
+                - /url: https://event.kurly.com/lego/event/2026/0101/chefnrmr
+                - img "메인배너" [ref=e149]
+              - link "메인배너" [ref=e151] [cursor=pointer]:
+                - /url: https://www.kurly.com/categories/583
+                - img "메인배너" [ref=e154]
+              - link "메인배너" [ref=e156] [cursor=pointer]:
+                - /url: https://www.kurly.com/categories/593
+                - img "메인배너" [ref=e159]
+              - link "메인배너" [ref=e161] [cursor=pointer]:
+                - /url: https://www.kurly.com/categories/108?category=108
+                - img "메인배너" [ref=e164]
+              - link "메인배너" [ref=e166] [cursor=pointer]:
+                - /url: https://www.kurly.com/collections/hmr2-kurly-pb
+                - img "메인배너" [ref=e169]
+              - link "메인배너" [ref=e171] [cursor=pointer]:
+                - /url: https://event.kurly.com/lego/event/2025/1226/valueitem
+                - img "메인배너" [ref=e174]
+              - link "메인배너" [ref=e176] [cursor=pointer]:
+                - /url: https://event.kurly.com/lego/event/2025/1226/earlyseol1
+                - img "메인배너" [ref=e179]
+              - link "메인배너" [ref=e181] [cursor=pointer]:
+                - /url: https://www.kurly.com/categories/028
+                - img "메인배너" [ref=e184]
+              - link "메인배너" [ref=e186] [cursor=pointer]:
+                - /url: https://www.kurly.com/categories/107002
+                - img "메인배너" [ref=e189]
+              - link "메인배너" [ref=e191] [cursor=pointer]:
+                - /url: https://www.kurly.com/categories/904
+                - img "메인배너" [ref=e194]
+              - link "메인배너" [ref=e196] [cursor=pointer]:
+                - /url: https://lounge.kurly.com/event/roution/diet
+                - img "메인배너" [ref=e199]
+              - link "메인배너" [ref=e201] [cursor=pointer]:
+                - /url: https://event.kurly.com/lego/event/2026/0105/zipbob
+                - img "메인배너" [ref=e204]
+              - link "메인배너" [ref=e206] [cursor=pointer]:
+                - /url: https://event.kurly.com/lego/event/2027/0108/Butterhouse
+                - img "메인배너" [ref=e209]
+              - link "메인배너" [ref=e211] [cursor=pointer]:
+                - /url: https://event.kurly.com/lego/event/2025/1231/seasonmeal_ep3
+                - img "메인배너" [ref=e214]
+              - link "메인배너" [ref=e216] [cursor=pointer]:
+                - /url: https://event.kurly.com/lego/event/2025/0623/market-event
+                - img "메인배너" [ref=e219]
+              - link "메인배너" [ref=e221] [cursor=pointer]:
+                - /url: https://www.kurly.com/panels/living
+                - img "메인배너" [ref=e224]
+              - link "메인배너" [ref=e226] [cursor=pointer]:
+                - /url: https://event.kurly.com/lego/event/2025/1117/cheesetest
+                - img "메인배너" [ref=e229]
+              - link "메인배너" [ref=e231] [cursor=pointer]:
+                - /url: https://event.kurly.com/clay/2601/wonder_kurly?eventAnchor=section02
+                - img "메인배너" [ref=e234]
+              - link "메인배너" [ref=e236] [cursor=pointer]:
+                - /url: https://www.kurly.com/categories/107003
+                - img "메인배너" [ref=e239]
+              - link "메인배너" [ref=e241] [cursor=pointer]:
+                - /url: https://event.kurly.com/lego/event/2026/0101/plcc
+                - img "메인배너" [ref=e244]
+              - link "메인배너" [ref=e246] [cursor=pointer]:
+                - /url: https://event.kurly.com/lego/event/2026/0101/card-benefit
+                - img "메인배너" [ref=e249]
+              - link "메인배너" [ref=e251] [cursor=pointer]:
+                - /url: https://www.kurly.com/events/member/friend
+                - img "메인배너" [ref=e254]
+              - link "메인배너" [ref=e256] [cursor=pointer]:
+                - /url: https://event.kurly.com/clay/2601/wonder_kurly
+                - img "메인배너" [ref=e259]
+            - button [ref=e260] [cursor=pointer]
+            - button [ref=e261] [cursor=pointer]
+            - generic [ref=e262]:
+              - button [ref=e263] [cursor=pointer]:
+                - img [ref=e265]
+              - button "20 33 전체보기" [ref=e268] [cursor=pointer]:
+                - generic [ref=e269]:
+                  - generic [ref=e270]:
+                    - generic [ref=e271]: "20"
+                    - generic [ref=e273]: "33"
+                  - generic [ref=e274]:
+                    - generic [ref=e275]: 전체보기
+                    - img [ref=e276]
+          - generic [ref=e278]:
+            - generic [ref=e279]:
+              - link "🔥새해 기념 베스트 특가 40% 더보기 아이콘" [ref=e280] [cursor=pointer]:
+                - /url: /collections/2601-wonder-home-01
+                - generic [ref=e281]: 🔥새해 기념 베스트 특가 40%
+                - img "더보기 아이콘" [ref=e283]
+              - paragraph [ref=e284]: 가격 비교 필요 없는 쇼핑 기회, 놓치지 마세요!
+            - generic [ref=e285]:
+              - generic [ref=e287]:
+                - link "멤버스특가 담기 [사미헌] 갈비탕 13,000원 10%11,700원~ 9,999+" [ref=e289] [cursor=pointer]:
+                  - /url: /goods/5026468?collectionCode=2601-wonder-home-01
+                  - paragraph [ref=e296]: 멤버스특가
+                  - button "담기" [ref=e302]:
+                    - img
+                    - text: 담기
+                  - generic [ref=e303]:
+                    - heading "[사미헌] 갈비탕" [level=3] [ref=e304]
+                    - generic [ref=e306]:
+                      - generic [ref=e308]: 13,000원
+                      - generic [ref=e309]:
+                        - generic [ref=e310]: 10%
+                        - generic [ref=e311]: 11,700원~
+                    - generic [ref=e312]:
+                      - img [ref=e314]
+                      - generic [ref=e319]: 9,999+
+                - link "+10%쿠폰 담기 유명산지 설향딸기 500g(등급:특/한단) 24,900원 20%19,900원 9,999+" [ref=e321] [cursor=pointer]:
+                  - /url: /goods/5065323?collectionCode=2601-wonder-home-01
+                  - paragraph [ref=e328]: +10%쿠폰
+                  - button "담기" [ref=e334]:
+                    - img
+                    - text: 담기
+                  - generic [ref=e335]:
+                    - heading "유명산지 설향딸기 500g(등급:특/한단)" [level=3] [ref=e336]
+                    - generic [ref=e338]:
+                      - generic [ref=e340]: 24,900원
+                      - generic [ref=e341]:
+                        - generic [ref=e342]: 20%
+                        - generic [ref=e343]: 19,900원
+                    - generic [ref=e344]:
+                      - img [ref=e346]
+                      - generic [ref=e351]: 9,999+
+                - link "담기 [골라담기] 농심 컵라면 7종 (택2) 6,060원 23%4,650원 9,999+" [ref=e353] [cursor=pointer]:
+                  - /url: /goods/1000667124?collectionCode=2601-wonder-home-01
+                  - button "담기" [ref=e364]:
+                    - img
+                    - text: 담기
+                  - generic [ref=e365]:
+                    - heading "[골라담기] 농심 컵라면 7종 (택2)" [level=3] [ref=e366]
+                    - generic [ref=e368]:
+                      - generic [ref=e370]: 6,060원
+                      - generic [ref=e371]:
+                        - generic [ref=e372]: 23%
+                        - generic [ref=e373]: 4,650원
+                    - generic [ref=e374]:
+                      - img [ref=e376]
+                      - generic [ref=e381]: 9,999+
+                - link "+15%쿠폰 담기 [압구정주꾸미] 주꾸미 볶음 2종 (택1) 8,900원 22%6,900원~ 9,999+" [ref=e383] [cursor=pointer]:
+                  - /url: /goods/1000185200?collectionCode=2601-wonder-home-01
+                  - paragraph [ref=e390]: +15%쿠폰
+                  - button "담기" [ref=e396]:
+                    - img
+                    - text: 담기
+                  - generic [ref=e397]:
+                    - heading "[압구정주꾸미] 주꾸미 볶음 2종 (택1)" [level=3] [ref=e398]
+                    - generic [ref=e400]:
+                      - generic [ref=e402]: 8,900원
+                      - generic [ref=e403]:
+                        - generic [ref=e404]: 22%
+                        - generic [ref=e405]: 6,900원~
+                    - generic [ref=e406]:
+                      - img [ref=e408]
+                      - generic [ref=e413]: 9,999+
+                - link "+최대15%쿠폰 담기 [KF365] 훈제오리 300g ~ 10,500원 38%6,465원~ 9,999+" [ref=e415] [cursor=pointer]:
+                  - /url: /goods/5131915?collectionCode=2601-wonder-home-01
+                  - paragraph [ref=e422]: +최대15%쿠폰
+                  - button "담기" [ref=e428]:
+                    - img
+                    - text: 담기
+                  - generic [ref=e429]:
+                    - heading "[KF365] 훈제오리 300g ~" [level=3] [ref=e430]
+                    - generic [ref=e432]:
+                      - generic [ref=e434]: 10,500원
+                      - generic [ref=e435]:
+                        - generic [ref=e436]: 38%
+                        - generic [ref=e437]: 6,465원~
+                    - generic [ref=e438]:
+                      - img [ref=e440]
+                      - generic [ref=e445]: 9,999+
+                - link "담기 [홍익궁중전통] 육개장 (2인분) 10,800원 20%8,640원 9,999+" [ref=e447] [cursor=pointer]:
+                  - /url: /goods/5128143?collectionCode=2601-wonder-home-01
+                  - button "담기" [ref=e458]:
+                    - img
+                    - text: 담기
+                  - generic [ref=e459]:
+                    - heading "[홍익궁중전통] 육개장 (2인분)" [level=3] [ref=e460]
+                    - generic [ref=e462]:
+                      - generic [ref=e464]: 10,800원
+                      - generic [ref=e465]:
+                        - generic [ref=e466]: 20%
+                        - generic [ref=e467]: 8,640원
+                    - generic [ref=e468]:
+                      - img [ref=e470]
+                      - generic [ref=e475]: 9,999+
+                - link "담기 [KF365] 1+등급 무항생제 특란 20구 7,790원 7%7,244원 9,999+" [ref=e477] [cursor=pointer]:
+                  - /url: /goods/5056791?collectionCode=2601-wonder-home-01
+                  - button "담기" [ref=e488]:
+                    - img
+                    - text: 담기
+                  - generic [ref=e489]:
+                    - heading "[KF365] 1+등급 무항생제 특란 20구" [level=3] [ref=e490]
+                    - generic [ref=e492]:
+                      - generic [ref=e494]: 7,790원
+                      - generic [ref=e495]:
+                        - generic [ref=e496]: 7%
+                        - generic [ref=e497]: 7,244원
+                    - generic [ref=e498]:
+                      - img [ref=e500]
+                      - generic [ref=e505]: 9,999+
+                - link "+15%쿠폰 담기 [우주] 프리미엄 손질 생새우살 200g (냉동)(26/30사이즈) 8,400원 22%6,490원 9,999+" [ref=e507] [cursor=pointer]:
+                  - /url: /goods/5054074?collectionCode=2601-wonder-home-01
+                  - paragraph [ref=e514]: +15%쿠폰
+                  - button "담기" [ref=e520]:
+                    - img
+                    - text: 담기
+                  - generic [ref=e521]:
+                    - heading "[우주] 프리미엄 손질 생새우살 200g (냉동)(26/30사이즈)" [level=3] [ref=e522]
+                    - generic [ref=e524]:
+                      - generic [ref=e526]: 8,400원
+                      - generic [ref=e527]:
+                        - generic [ref=e528]: 22%
+                        - generic [ref=e529]: 6,490원
+                    - generic [ref=e530]:
+                      - img [ref=e532]
+                      - generic [ref=e537]: 9,999+
+                - link "+최대15%쿠폰 담기 [KF365] 양념 칼집 목살구이1kg (냉동) 16,500원 12%14,500원 9,999+" [ref=e539] [cursor=pointer]:
+                  - /url: /goods/1000420040?collectionCode=2601-wonder-home-01
+                  - paragraph [ref=e546]: +최대15%쿠폰
+                  - button "담기" [ref=e552]:
+                    - img
+                    - text: 담기
+                  - generic [ref=e553]:
+                    - heading "[KF365] 양념 칼집 목살구이1kg (냉동)" [level=3] [ref=e554]
+                    - generic [ref=e556]:
+                      - generic [ref=e558]: 16,500원
+                      - generic [ref=e559]:
+                        - generic [ref=e560]: 12%
+                        - generic [ref=e561]: 14,500원
+                    - generic [ref=e562]:
+                      - img [ref=e564]
+                      - generic [ref=e569]: 9,999+
+                - link "담기 [올마레] 춘천 국물 닭갈비 떡볶이 13,900원 20%11,120원 9,999+" [ref=e571] [cursor=pointer]:
+                  - /url: /goods/5050290?collectionCode=2601-wonder-home-01
+                  - button "담기" [ref=e582]:
+                    - img
+                    - text: 담기
+                  - generic [ref=e583]:
+                    - heading "[올마레] 춘천 국물 닭갈비 떡볶이" [level=3] [ref=e584]
+                    - generic [ref=e586]:
+                      - generic [ref=e588]: 13,900원
+                      - generic [ref=e589]:
+                        - generic [ref=e590]: 20%
+                        - generic [ref=e591]: 11,120원
+                    - generic [ref=e592]:
+                      - img [ref=e594]
+                      - generic [ref=e599]: 9,999+
+                - link "담기 [차려낸] 대파 풍미를 더한 새우볶음밥 (4개입) 10,900원 15%9,200원 999+" [ref=e601] [cursor=pointer]:
+                  - /url: /goods/1001502057?collectionCode=2601-wonder-home-01
+                  - button "담기" [ref=e616]:
+                    - img
+                    - text: 담기
+                  - generic [ref=e617]:
+                    - heading "[차려낸] 대파 풍미를 더한 새우볶음밥 (4개입)" [level=3] [ref=e618]
+                    - generic [ref=e620]:
+                      - generic [ref=e622]: 10,900원
+                      - generic [ref=e623]:
+                        - generic [ref=e624]: 15%
+                        - generic [ref=e625]: 9,200원
+                    - generic [ref=e626]:
+                      - img [ref=e628]
+                      - generic [ref=e633]: 999+
+                - link "+최대15%쿠폰 담기 치밥하기 좋은 순살 바베큐치킨 14,990원 10%13,490원 9,999+" [ref=e635] [cursor=pointer]:
+                  - /url: /goods/1000608637?collectionCode=2601-wonder-home-01
+                  - paragraph [ref=e642]: +최대15%쿠폰
+                  - button "담기" [ref=e648]:
+                    - img
+                    - text: 담기
+                  - generic [ref=e649]:
+                    - heading "치밥하기 좋은 순살 바베큐치킨" [level=3] [ref=e650]
+                    - generic [ref=e652]:
+                      - generic [ref=e654]: 14,990원
+                      - generic [ref=e655]:
+                        - generic [ref=e656]: 10%
+                        - generic [ref=e657]: 13,490원
+                    - generic [ref=e658]:
+                      - img [ref=e660]
+                      - generic [ref=e665]: 9,999+
+                - link "담기 고랭지 사과 1.3kg 24,900원 20%19,900원 9,999+" [ref=e667] [cursor=pointer]:
+                  - /url: /goods/5061259?collectionCode=2601-wonder-home-01
+                  - button "담기" [ref=e678]:
+                    - img
+                    - text: 담기
+                  - generic [ref=e679]:
+                    - heading "고랭지 사과 1.3kg" [level=3] [ref=e680]
+                    - generic [ref=e682]:
+                      - generic [ref=e684]: 24,900원
+                      - generic [ref=e685]:
+                        - generic [ref=e686]: 20%
+                        - generic [ref=e687]: 19,900원
+                    - generic [ref=e688]:
+                      - img [ref=e690]
+                      - generic [ref=e695]: 9,999+
+                - link "담기 [제일맞게컬리] 육즙+왕교자 만두 1.01kg 9,980원 10%8,980원 9,999+" [ref=e697] [cursor=pointer]:
+                  - /url: /goods/1000765126?collectionCode=2601-wonder-home-01
+                  - button "담기" [ref=e708]:
+                    - img
+                    - text: 담기
+                  - generic [ref=e709]:
+                    - heading "[제일맞게컬리] 육즙+왕교자 만두 1.01kg" [level=3] [ref=e710]
+                    - generic [ref=e712]:
+                      - generic [ref=e714]: 9,980원
+                      - generic [ref=e715]:
+                        - generic [ref=e716]: 10%
+                        - generic [ref=e717]: 8,980원
+                    - generic [ref=e718]:
+                      - img [ref=e720]
+                      - generic [ref=e725]: 9,999+
+                - link "담기 [KF365] 한돈 삼겹살 구이용 600g~ (냉장) 19,980원 24%15,100원~ 9,999+" [ref=e727] [cursor=pointer]:
+                  - /url: /goods/5056512?collectionCode=2601-wonder-home-01
+                  - button "담기" [ref=e738]:
+                    - img
+                    - text: 담기
+                  - generic [ref=e739]:
+                    - heading "[KF365] 한돈 삼겹살 구이용 600g~ (냉장)" [level=3] [ref=e740]
+                    - generic [ref=e742]:
+                      - generic [ref=e744]: 19,980원
+                      - generic [ref=e745]:
+                        - generic [ref=e746]: 24%
+                        - generic [ref=e747]: 15,100원~
+                    - generic [ref=e748]:
+                      - img [ref=e750]
+                      - generic [ref=e755]: 9,999+
+                - link "+10%쿠폰 담기 [KF365] 밥상의 진미 쌀 10kg 44,900원 22%34,900원 999+" [ref=e757] [cursor=pointer]:
+                  - /url: /goods/5134096?collectionCode=2601-wonder-home-01
+                  - paragraph [ref=e764]: +10%쿠폰
+                  - button "담기" [ref=e770]:
+                    - img
+                    - text: 담기
+                  - generic [ref=e771]:
+                    - heading "[KF365] 밥상의 진미 쌀 10kg" [level=3] [ref=e772]
+                    - generic [ref=e774]:
+                      - generic [ref=e776]: 44,900원
+                      - generic [ref=e777]:
+                        - generic [ref=e778]: 22%
+                        - generic [ref=e779]: 34,900원
+                    - generic [ref=e780]:
+                      - img [ref=e782]
+                      - generic [ref=e787]: 999+
+                - link "담기 [피코크] 조선호텔 배추김치 4kg 43,800원 15%37,230원 9,999+" [ref=e789] [cursor=pointer]:
+                  - /url: /goods/1000068999?collectionCode=2601-wonder-home-01
+                  - button "담기" [ref=e800]:
+                    - img
+                    - text: 담기
+                  - generic [ref=e801]:
+                    - heading "[피코크] 조선호텔 배추김치 4kg" [level=3] [ref=e802]
+                    - generic [ref=e804]:
+                      - generic [ref=e806]: 43,800원
+                      - generic [ref=e807]:
+                        - generic [ref=e808]: 15%
+                        - generic [ref=e809]: 37,230원
+                    - generic [ref=e810]:
+                      - img [ref=e812]
+                      - generic [ref=e817]: 9,999+
+                - link "담기 [KF365] 새콤달콤 당도선별 제주 감귤 2.5kg (로얄과) 19,900원 15%16,900원 9,999+" [ref=e819] [cursor=pointer]:
+                  - /url: /goods/5095355?collectionCode=2601-wonder-home-01
+                  - button "담기" [ref=e830]:
+                    - img
+                    - text: 담기
+                  - generic [ref=e831]:
+                    - heading "[KF365] 새콤달콤 당도선별 제주 감귤 2.5kg (로얄과)" [level=3] [ref=e832]
+                    - generic [ref=e834]:
+                      - generic [ref=e836]: 19,900원
+                      - generic [ref=e837]:
+                        - generic [ref=e838]: 15%
+                        - generic [ref=e839]: 16,900원
+                    - generic [ref=e840]:
+                      - img [ref=e842]
+                      - generic [ref=e847]: 9,999+
+                - link "담기 [사리원] 소불고기 전골 15,900원 25%11,925원 9,999+" [ref=e849] [cursor=pointer]:
+                  - /url: /goods/1000572062?collectionCode=2601-wonder-home-01
+                  - button "담기" [ref=e860]:
+                    - img
+                    - text: 담기
+                  - generic [ref=e861]:
+                    - heading "[사리원] 소불고기 전골" [level=3] [ref=e862]
+                    - generic [ref=e864]:
+                      - generic [ref=e866]: 15,900원
+                      - generic [ref=e867]:
+                        - generic [ref=e868]: 25%
+                        - generic [ref=e869]: 11,925원
+                    - generic [ref=e870]:
+                      - img [ref=e872]
+                      - generic [ref=e877]: 9,999+
+                - link "+최대15%쿠폰 담기 [KF365] 1+ 한우 국거리/불고기/다짐육 골라담기 3종 18,200원 29%12,920원 9,999+" [ref=e879] [cursor=pointer]:
+                  - /url: /goods/1000648449?collectionCode=2601-wonder-home-01
+                  - paragraph [ref=e886]: +최대15%쿠폰
+                  - button "담기" [ref=e892]:
+                    - img
+                    - text: 담기
+                  - generic [ref=e893]:
+                    - heading "[KF365] 1+ 한우 국거리/불고기/다짐육 골라담기 3종" [level=3] [ref=e894]
+                    - generic [ref=e896]:
+                      - generic [ref=e898]: 18,200원
+                      - generic [ref=e899]:
+                        - generic [ref=e900]: 29%
+                        - generic [ref=e901]: 12,920원
+                    - generic [ref=e902]:
+                      - img [ref=e904]
+                      - generic [ref=e909]: 9,999+
+                - link "전체보기" [ref=e912] [cursor=pointer]:
+                  - /url: /collections/2601-wonder-home-01
+                  - generic [ref=e914]: 전체보기
+              - button [ref=e915] [cursor=pointer]
+          - link [ref=e917] [cursor=pointer]:
+            - /url: https://event.kurly.com/clay/2601/wonder_kurly
+      - generic [ref=e924]:
+        - link "샛별, 하루 배송 안내" [ref=e926] [cursor=pointer]:
+          - /url: /user-guide/delivery
+          - generic [ref=e927]:
+            - img [ref=e929]
+            - img "샛별, 하루 배송 안내" [ref=e930]
+        - generic [ref=e931]:
+          - link "컬리 고객 제도" [ref=e932] [cursor=pointer]:
+            - /url: /events/member/vip
+            - generic [ref=e933]: 컬리 고객 제도
+          - link "컬리 큐레이터" [ref=e934] [cursor=pointer]:
+            - /url: https://lounge.kurly.com/curator-program
+            - generic [ref=e935]: 컬리 큐레이터
+          - link "레시피" [ref=e936] [cursor=pointer]:
+            - /url: https://www.kurly.com/recipe
+            - generic [ref=e937]: 레시피
+  - alert [ref=e938]
+```

@@ -19,5 +19,5 @@ export const ADDRESS_CONSTANTS = {
     EXAMPLE_TEXT: '예) 판교역로 166, 분당 주공, 백현동',
 
     // 테스트 데이터 ID
-    INPUT_BOX_TEST_ID: 'input-box'
+    INPUT_BOX_TEST_ID: 'input-box'  
 } as const;

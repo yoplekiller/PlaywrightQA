@@ -18,7 +18,7 @@ test('주소 검색 기능 테스트', async ({ page }) => {
   await allure.step('마켓컬리 메인 페이지 접속', async () => {
       await page.goto('https://www.kurly.com/main');
     });
-
+  
    await allure.step('주소 검색 및 선택', async () => {
         // 주소 검색 팝업 열고 검색
         mainPage.clickAddressButton();

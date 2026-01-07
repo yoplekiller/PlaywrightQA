@@ -12,6 +12,8 @@ export class MainPage extends BasePage {
     private readonly beautyButton!: Locator;
     private readonly addressButton!: Locator;
     private readonly likeButton!: Locator;
+    private readonly searchInput!: Locator;
+    private readonly searchButton!: Locator;
     private readonly cartButton!: Locator;
     
     
@@ -20,12 +22,14 @@ export class MainPage extends BasePage {
 
     constructor(page: Page) {
         super(page);
-        this.searchBox = page.getByRole('textbox', { name: /검색어를 입력해주세요\./i })
-        this.loginButton = page.getByRole('link', { name: /로그인/i });
+        this.searchBox = page.getByRole('textbox', { name: /검색어를 입력해주세요/i })
+        this.loginButton = page.getByText('로그인');
         this.userProfileLink = page.getByRole('link', {name: /.+님$/i});
         this.marketButton = page.getByRole('button', { name: /마켓컬리/i });
         this.beautyButton = page.getByRole('button', { name: /뷰티컬리/i });
-        this.likeButton = page.getByRole('button', { name: /찜하기/i })
+        this.likeButton = page.getByRole('button', { name: /찜하기/i });
+        this.searchInput = page.getByRole('textbox', { name: /검색어를 입력해주세요\./i });
+        this.searchButton = page.getByRole('button', { name: /검색/i });
         this.cartButton = page.locator('button.css-1e2hf7q.eebvnww2:visible')
         this.addressButton = page.locator('div.css-gaxl0w.e1m38gux1:visible')
         
@@ -51,6 +55,14 @@ export class MainPage extends BasePage {
     async clickCartButton() {
         await this.click(this.cartButton);
     }
+    // 검색어 입력 및 검색
+    async fillSearchBox(text: string) {
+        await this.fill(this.searchBox, text);
+    }
+    // 검색 실행
+    async pressEnterInSearchBox() {
+        await this.searchBox.press('Enter');
+    }
 
 
     async isLoggedIn(): Promise<boolean> {
@@ -59,6 +71,11 @@ export class MainPage extends BasePage {
         } catch {
             return false;
         }
+    }
+
+    async searchGoods(goodsName: string) {
+        await this.fillSearchBox(goodsName);
+        await this.pressEnterInSearchBox();
     }
 
     private getAddressIframe(popup: Page) {
@@ -81,9 +98,7 @@ export class MainPage extends BasePage {
         const addressIframe = this.getAddressIframe(popup);
         const searchBox = addressIframe.getByRole('textbox', { name: ADDRESS_CONSTANTS.PLACEHOLDER_SEARCH_BOX });
         await searchBox.fill(address);
-        await addressIframe.getByRole('button', {
-        name: ADDRESS_CONSTANTS.BUTTON_SEARCH
-    }).click();
+        await addressIframe.getByRole('button', { name: ADDRESS_CONSTANTS.BUTTON_SEARCH }).click();
     
     //검색 결과 대기 
     await addressIframe.getByRole('button').first().waitFor({ state: 'visible' });
