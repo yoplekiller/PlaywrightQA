@@ -241,6 +241,15 @@ for (const movie of movieCases) {
 
 ## 🚧 알려진 이슈 & 개선 계획
 
+### ✅ 최근 완료 (2026-01-08)
+- [x] **CI/CD 성능 개선**: 빌드 시간 42.8% 단축
+  - npm 캐싱 추가
+  - Playwright 브라우저 캐싱 추가
+  - Workers 병렬 실행 (1 → 2)
+  - Artifact 보존 기간 최적화
+  - GitHub Actions Summary 추가
+  - 📄 [상세 내역](docs/CI_CD_IMPROVEMENTS_APPLIED.md)
+
 ### 현재 진행 중
 - [ ] 모든 UI 테스트에 Page Object 패턴 적용 (현재 50% 완료)
 - [ ] API 테스트 커버리지 확대
