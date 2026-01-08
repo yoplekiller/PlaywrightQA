@@ -1,0 +1,299 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - generic [ref=e9] [cursor=pointer]: 임재민 님
+          - generic [ref=e13] [cursor=pointer]: 고객센터
+        - generic [ref=e15]:
+          - generic [ref=e16]:
+            - img "마켓컬리 로고" [ref=e17]
+            - button "마켓컬리" [ref=e18] [cursor=pointer]
+            - button "뷰티컬리" [ref=e19] [cursor=pointer]
+          - generic [ref=e21]:
+            - textbox "검색어를 입력해주세요" [ref=e22]
+            - button "submit" [ref=e23] [cursor=pointer]
+          - generic [ref=e24]:
+            - button [disabled] [ref=e25]:
+              - img [ref=e26]
+            - button [ref=e29] [cursor=pointer]:
+              - img [ref=e30]
+            - button "3" [ref=e32] [cursor=pointer]:
+              - img [ref=e33]
+              - generic [ref=e36]: "3"
+      - generic [ref=e38]:
+        - button "카테고리" [ref=e40] [cursor=pointer]:
+          - img [ref=e41]
+          - generic [ref=e43]: 카테고리
+        - generic [ref=e44]:
+          - list [ref=e45]:
+            - listitem [ref=e46]:
+              - link "베스트" [ref=e47] [cursor=pointer]:
+                - /url: /collection-groups/market-best?site=MARKET
+            - listitem [ref=e48]:
+              - link "세일" [ref=e49] [cursor=pointer]:
+                - /url: /collection-groups/market-sales-group?site=MARKET
+            - listitem [ref=e50]:
+              - link "패션" [ref=e51] [cursor=pointer]:
+                - /url: /panels/fashion?site=MARKET
+            - listitem [ref=e52]:
+              - link "리빙" [ref=e53] [cursor=pointer]:
+                - /url: /panels/living?site=MARKET
+            - listitem [ref=e54]:
+              - link "신상" [ref=e55] [cursor=pointer]:
+                - /url: /collection-groups/market-newproduct?site=MARKET
+            - listitem [ref=e56]:
+              - link "특가/혜택" [ref=e57] [cursor=pointer]:
+                - /url: /market-benefit
+          - link "샛별·하루 배송안내" [ref=e58] [cursor=pointer]:
+            - /url: /user-guide/delivery
+            - generic [ref=e59]: 샛별·하루
+            - generic [ref=e60]: 배송안내
+    - generic [ref=e62]:
+      - heading "장바구니" [level=2] [ref=e63]:
+        - paragraph [ref=e64]: 장바구니
+      - generic [ref=e65]:
+        - generic [ref=e66]:
+          - generic [ref=e67]:
+            - generic [ref=e68]:
+              - button "담은 상품 3" [ref=e69] [cursor=pointer]:
+                - paragraph [ref=e70]: 담은 상품 3
+              - button "자주 산 상품" [ref=e72] [cursor=pointer]:
+                - paragraph [ref=e73]: 자주 산 상품
+            - generic [ref=e75]:
+              - generic [ref=e76] [cursor=pointer]:
+                - checkbox "전체선택 2/2" [checked] [ref=e77]
+                - paragraph [ref=e79]: 전체선택 2/2
+              - button "선택삭제" [ref=e80] [cursor=pointer]:
+                - paragraph [ref=e81]: 선택삭제
+          - tooltip "간편하게 재구매하세요" [ref=e82]:
+            - generic [ref=e83]:
+              - paragraph [ref=e85]: 간편하게 재구매하세요
+              - img
+          - generic [ref=e86]:
+            - generic [ref=e89] [cursor=pointer]:
+              - checkbox "샛별배송" [checked] [ref=e90]
+              - paragraph [ref=e92]: 샛별배송
+            - generic [ref=e93]:
+              - generic [ref=e94]:
+                - generic [ref=e95]:
+                  - img [ref=e97]
+                  - paragraph [ref=e99]: 냉동 상품
+                - generic [ref=e100]:
+                  - generic [ref=e101]:
+                    - generic [ref=e103] [cursor=pointer]:
+                      - checkbox [checked] [ref=e104]
+                      - paragraph
+                    - button [ref=e106] [cursor=pointer]:
+                      - img [ref=e107]
+                  - generic [ref=e109]:
+                    - link "[우리쌀 왕호두] 호두과자 (30g X 10개)" [ref=e111] [cursor=pointer]:
+                      - /url: /goods/1001828648
+                      - paragraph [ref=e113]: "[우리쌀 왕호두] 호두과자 (30g X 10개)"
+                    - generic [ref=e114]:
+                      - link [ref=e116] [cursor=pointer]:
+                        - /url: /goods/1001828648
+                        - img [ref=e120]
+                      - generic [ref=e121]:
+                        - paragraph [ref=e125]: 37,800원
+                        - generic [ref=e126]:
+                          - button [ref=e127] [cursor=pointer]:
+                            - img [ref=e128]
+                          - paragraph [ref=e130]: "7"
+                          - button [ref=e131] [cursor=pointer]:
+                            - img [ref=e132]
+              - generic [ref=e134]:
+                - generic [ref=e135]:
+                  - img [ref=e137]
+                  - paragraph [ref=e147]: 상온 상품
+                - generic [ref=e148]:
+                  - generic [ref=e149]:
+                    - generic [ref=e151] [cursor=pointer]:
+                      - checkbox [checked] [ref=e152]
+                      - paragraph
+                    - button [ref=e154] [cursor=pointer]:
+                      - img [ref=e155]
+                  - generic [ref=e157]:
+                    - link "[아티장 비스킷] 밀러스 베이커앤바리스타 더블초콜릿 비스킷 120g [아티장 비스킷] 밀러스 베이커 앤 바리스타 비스킷 4종 (택1)" [ref=e159] [cursor=pointer]:
+                      - /url: /goods/1000760733
+                      - generic [ref=e160]:
+                        - paragraph [ref=e161]: "[아티장 비스킷] 밀러스 베이커앤바리스타 더블초콜릿 비스킷 120g"
+                        - paragraph [ref=e162]: "[아티장 비스킷] 밀러스 베이커 앤 바리스타 비스킷 4종 (택1)"
+                    - generic [ref=e163]:
+                      - link [ref=e165] [cursor=pointer]:
+                        - /url: /goods/1000760733
+                        - img [ref=e169]
+                      - generic [ref=e170]:
+                        - paragraph [ref=e174]: 8,800원
+                        - generic [ref=e175]:
+                          - button [disabled] [ref=e176]:
+                            - img [ref=e177]
+                          - paragraph [ref=e179]: "1"
+                          - button [ref=e180] [cursor=pointer]:
+                            - img [ref=e181]
+            - generic [ref=e183]:
+              - paragraph [ref=e184]: 상품 46,600원 + 배송비 무료
+              - paragraph [ref=e185]: 46,600원
+          - generic [ref=e186]:
+            - generic [ref=e188]:
+              - generic [ref=e189]:
+                - paragraph [ref=e190]: 품절/구매불가
+                - generic [ref=e191]:
+                  - button [ref=e192] [cursor=pointer]:
+                    - img [ref=e193]
+                  - generic:
+                    - button:
+                      - img
+                    - paragraph: 샛별only 상품의 경우, 택배지역에서는 주문이 불가합니다.
+                    - paragraph: 품절, 판매 종료시 구매가 불가합니다.
+              - button "전체삭제" [ref=e196] [cursor=pointer]:
+                - paragraph [ref=e197]: 전체삭제
+            - img [ref=e201]
+          - button "담은 지 60일이 넘은 상품" [ref=e222] [cursor=pointer]:
+            - paragraph [ref=e223]: 담은 지 60일이 넘은 상품
+            - generic [ref=e224]:
+              - generic [ref=e225]:
+                - img [ref=e229]
+                - img [ref=e233]
+                - img [ref=e237]
+              - img [ref=e238]
+        - generic [ref=e240]:
+          - generic [ref=e241]:
+            - generic [ref=e242]:
+              - img [ref=e244]
+              - paragraph [ref=e247]: 배송지
+            - generic [ref=e248]:
+              - paragraph [ref=e250]: 샛별배송
+              - generic [ref=e251]:
+                - paragraph [ref=e253]: 서울 관악구 신림로11길 73-14 601
+                - button "변경" [ref=e254] [cursor=pointer]:
+                  - generic [ref=e255]: 변경
+          - generic [ref=e256]:
+            - paragraph [ref=e257]: 결제금액
+            - generic [ref=e258]:
+              - generic [ref=e259]:
+                - generic [ref=e260]:
+                  - paragraph [ref=e261]: 상품금액
+                  - paragraph [ref=e262]: 46,600원
+                - generic [ref=e263]:
+                  - paragraph [ref=e264]: 상품할인금액
+                  - paragraph [ref=e266]: 0원
+                - generic [ref=e267]:
+                  - paragraph [ref=e268]: 배송비
+                  - paragraph [ref=e269]: 0원
+              - generic [ref=e270]:
+                - paragraph [ref=e271]: 결제예정금액
+                - paragraph [ref=e272]: 46,600원
+              - paragraph [ref=e274]: 쿠폰 · 멤버스 혜택은 주문서에서 적용할 수 있어요
+          - button "46,600원 주문하기" [ref=e276] [cursor=pointer]:
+            - generic [ref=e277]: 46,600원 주문하기
+    - generic [ref=e278]:
+      - generic [ref=e279]:
+        - generic [ref=e280]:
+          - generic [ref=e281]:
+            - paragraph [ref=e282]: 고객행복센터
+            - strong [ref=e283]: 1644-1107월~토요일 오전 7시 - 오후 6시
+            - generic [ref=e284]:
+              - generic [ref=e285]:
+                - button "카카오톡 문의" [ref=e286] [cursor=pointer]
+                - generic [ref=e287]:
+                  - text: 월~토요일
+                  - img [ref=e288]
+                  - text: 오전 7시 - 오후 6시
+                  - text: 일/공휴일
+                  - img [ref=e289]
+                  - text: 오전 7시 - 오후 1시
+              - generic [ref=e290]:
+                - button "1:1 문의" [ref=e291] [cursor=pointer]
+                - generic [ref=e292]:
+                  - text: 365일
+                  - text: 고객센터 운영시간에 순차적으로 답변드리겠습니다.
+              - generic [ref=e293]:
+                - link "대량주문 문의" [ref=e294] [cursor=pointer]:
+                  - /url: https://docs.google.com/forms/d/e/1FAIpQLScWcjRuN6eWJK-G8x3NwBfE8IyKZIOq7jhD3fUXuKSWwPqzJw/viewform
+                - generic [ref=e295]:
+                  - text: 월~금요일
+                  - img [ref=e296]
+                  - text: 오전 9시 - 오후 6시
+                  - text: 점심시간
+                  - img [ref=e297]
+                  - text: 낮 12시 - 오후 1시
+            - generic [ref=e298]:
+              - text: "비회원 문의 :"
+              - link "help@kurlycorp.com" [ref=e299] [cursor=pointer]:
+                - /url: mailto:help@kurlycorp.com
+          - generic [ref=e300]:
+            - list [ref=e301]:
+              - listitem [ref=e302]:
+                - link "회사소개" [ref=e303] [cursor=pointer]:
+                  - /url: https://newsroom.kurlycorp.com/
+              - listitem [ref=e304]:
+                - link "컬리소개영상" [ref=e305] [cursor=pointer]:
+                  - /url: https://www.youtube.com/embed/WEep7BcboMQ?rel=0&showinfo=0&wmode=opaque&enablejsapi=1
+              - listitem [ref=e306]:
+                - link "투자정보" [ref=e307] [cursor=pointer]:
+                  - /url: https://newsroom.kurlycorp.com/ir/%ec%9e%ac%eb%ac%b4%ec%a0%95%eb%b3%b4/
+              - listitem [ref=e308]:
+                - link "인재채용" [ref=e309] [cursor=pointer]:
+                  - /url: https://kurly.career.greetinghr.com
+              - listitem [ref=e310]:
+                - link "이용약관" [ref=e311] [cursor=pointer]:
+                  - /url: /user-terms/agreement
+              - listitem [ref=e312]:
+                - link "개인정보처리방침" [ref=e313] [cursor=pointer]:
+                  - /url: https://privacy.kurly.com/kurly/privacypolicy
+              - listitem [ref=e314]:
+                - link "이용안내" [ref=e315] [cursor=pointer]:
+                  - /url: /user-guide
+              - listitem [ref=e316]:
+                - link "입점신청" [ref=e317] [cursor=pointer]:
+                  - /url: https://docs.google.com/forms/d/e/1FAIpQLScKI_Kd1lQAp68r-SIhiOWj0J43C99IvNbgFeT7-X9YLIqteA/viewform?usp=dialog
+            - generic [ref=e318]:
+              - text: "법인명 (상호) : 주식회사 컬리"
+              - generic [ref=e319]: "|"
+              - text: "사업자등록번호 : 261-81-23567"
+              - link "사업자정보 확인" [ref=e320] [cursor=pointer]:
+                - /url: https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2618123567&apv_perm_no=
+              - text: "통신판매업 : 제 2018-서울강남-01646 호"
+              - text: "주소 : 서울특별시 강남구 테헤란로 133, 18층(역삼동)"
+              - generic [ref=e321]: "|"
+              - text: "대표이사 : 김슬아"
+              - text: "채용문의 :"
+              - link "recruit@kurlycorp.com" [ref=e322] [cursor=pointer]:
+                - /url: mailto:recruit@kurlycorp.com
+              - text: "팩스: 070 - 7500 - 6098"
+            - list [ref=e323]:
+              - link "컬리 인스타그램 바로가기" [ref=e324] [cursor=pointer]:
+                - /url: https://instagram.com/marketkurly
+                - img "컬리 인스타그램 바로가기" [ref=e325]
+              - link "컬리 페이스북 바로가기" [ref=e326] [cursor=pointer]:
+                - /url: https://www.facebook.com/marketkurly
+                - img "컬리 페이스북 바로가기" [ref=e327]
+              - link "컬리 네이버블로그 바로가기" [ref=e328] [cursor=pointer]:
+                - /url: https://blog.naver.com/marketkurly
+                - img "컬리 네이버블로그 바로가기" [ref=e329]
+              - link "컬리 유튜브 바로가기" [ref=e330] [cursor=pointer]:
+                - /url: https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg
+                - img "컬리 유튜브 바로가기" [ref=e331]
+        - generic [ref=e332]:
+          - button "isms 로고 [인증범위] 컬리 쇼핑몰 서비스 개발·운영 (심사받지 않은 물리적 인프라 제외) [유효기간] 2025.01.15 ~ 2028.01.14" [ref=e333] [cursor=pointer]:
+            - img "isms 로고" [ref=e334]
+            - paragraph [ref=e335]:
+              - text: "[인증범위] 컬리 쇼핑몰 서비스 개발·운영"
+              - text: (심사받지 않은 물리적 인프라 제외)
+              - text: "[유효기간] 2025.01.15 ~ 2028.01.14"
+          - button "우리은행 로고 고객님이 현금으로 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다." [ref=e336] [cursor=pointer]:
+            - img "우리은행 로고" [ref=e337]
+            - paragraph [ref=e338]:
+              - text: 고객님이 현금으로 결제한 금액에 대해 우리은행과
+              - text: 채무지급보증 계약을 체결하여 안전거래를 보장하고
+              - text: 있습니다.
+      - generic [ref=e339]:
+        - text: 컬리에서 판매되는 상품 중에는 컬리에 입점한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
+        - text: 마켓플레이스(오픈마켓) 상품의 경우 컬리는 통신판매중개자로서 통신판매의 당사자가 아닙니다. 컬리는 해당 상품의 주문, 품질, 교환/환불 등 의무와 책임을 부담하지 않습니다.
+        - emphasis [ref=e340]: © KURLY CORP. ALL RIGHTS RESERVED
+  - alert [ref=e341]
+```

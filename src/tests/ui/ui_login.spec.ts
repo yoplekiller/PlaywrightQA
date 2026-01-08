@@ -7,8 +7,8 @@ import { LoginPage } from '../../pages/LoginPage';
 
 dotenv.config(); 
 
-const kurly_id = process.env.kurly_id!;
-const kurly_pw = process.env.kurly_pw!;
+const kurly_id = process.env.KURLY_TEST_USER_EMAIL!;
+const kurly_pw = process.env.KURLY_TEST_USER_PASSWORD!;
 
 test('🔐 로그인 후 메인 버튼 확인 테스트', async ({ page }, testInfo) => {
     allure.description('로그인 기능을 사용하여 메인 페이지에 접근한 후, 주요 버튼들이 정상적으로 표시되는지 확인하는 테스트입니다.');

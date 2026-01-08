@@ -3,36 +3,23 @@
  * 새 창으로 열리는 주소 검색 팝업 페이지를 다루는 스크립트
  * @module AddressSearchPage
  */
-import { Page, Locator, FrameLocator } from '@playwright/test';
+import { Page, FrameLocator } from '@playwright/test';
 import { BasePage } from './BasePage';
 import { ADDRESS_CONSTANTS } from '../constants/addressConstants';
 
 
 export class AddressSearchPage extends BasePage {
 
-      // 주소 검색 팝업의 요소들에 대한 Locator 정의
-    private readonly addressInput: Locator;
-    private readonly searchButton: Locator;
-    private readonly firstResultAddress: Locator;
-
     constructor(page: Page) {
         super(page);
-
-        this.addressInput = page.getByRole('textbox', { name: ADDRESS_CONSTANTS.PLACEHOLDER_SEARCH_BOX });
-        this.searchButton = page.getByRole('button', { name: ADDRESS_CONSTANTS.BUTTON_SEARCH });
-        this.firstResultAddress = page.getByRole('button').first();
-
     }
-
-
 
     private getAddressIframe(popup: Page) {
-        const firstFrame = popup.frameLocator(`iframe[title="${ADDRESS_CONSTANTS.IFRAME_TITLE_OUTER}"]`);
-        const secondFrame = firstFrame.frameLocator(`iframe[title="${ADDRESS_CONSTANTS.IFRAME_TITLE_INNER}"]`);
-        return firstFrame.frameLocator('iframe#entryIframe');
+        const outer = popup.frameLocator(`iframe[title="${ADDRESS_CONSTANTS.IFRAME_TITLE_OUTER}"]`);
+        const inner = outer.frameLocator(`iframe[title="${ADDRESS_CONSTANTS.IFRAME_TITLE_INNER}"]`);
+        // ✅ 핵심: inner 기준으로 entryIframe 찾기
+        return inner.frameLocator('iframe#entryIframe');
     }
-     
-    // ===== 주소 검색 관련 Public 메서드 =====
 
 /**
  * 주소 검색 팝업을 열고 주소를 검색합니다
@@ -40,8 +27,11 @@ export class AddressSearchPage extends BasePage {
  * @returns popup과 addressFrame 객체
  */
     async searchAddressInPopup(address: string){
+
         const popupPromise = this.page.waitForEvent('popup');
-        await this.page.getByRole('button', { name: ADDRESS_CONSTANTS.BUTTON_ADDRESS_SEARCH }).click();
+        // Hover and click the exact '주소 검색' button to trigger the popup
+        const addressSearchButton = this.page.getByRole('button', { name: ADDRESS_CONSTANTS.BUTTON_ADDRESS_SEARCH});
+        await addressSearchButton.click();
         const popup = await popupPromise;
         const addressIframe = this.getAddressIframe(popup);
         const searchBox = addressIframe.getByRole('textbox', { name: ADDRESS_CONSTANTS.PLACEHOLDER_SEARCH_BOX });

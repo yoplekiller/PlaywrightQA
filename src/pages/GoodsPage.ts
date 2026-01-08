@@ -13,7 +13,6 @@ export class GoodsPage extends BasePage {
 
         this.likeButtonLocator = page.getByLabel('찜하기'); // 찜하기 버튼
         
-
     }
 
     async clickLikeButton() {
