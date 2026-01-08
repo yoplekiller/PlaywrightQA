@@ -20,12 +20,27 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
 
+      - name: Cache Playwright browsers
+        id: playwright-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-playwright-
+
       - name: Install Playwright browsers
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
         run: npx playwright install --with-deps
+
+      - name: Install Playwright dependencies only
+        if: steps.playwright-cache.outputs.cache-hit == 'true'
+        run: npx playwright install-deps
 
       - name: Clean previous results
         run: |
@@ -39,7 +54,7 @@ jobs:
 
       - name: Run UI Tests
         run: |
-          npx playwright test tests/ui/ --config=playwright.config.ts --trace=on --workers=1
+          npx playwright test tests/ui/ --config=playwright.config.ts --trace=on --workers=2
           mkdir -p allure-results-ui
           mkdir -p playwright-report
           cp -r allure-results/* allure-results-ui/ || true
@@ -62,6 +77,7 @@ jobs:
         with:
           name: playwright-report
           path: playwright-report
+          retention-days: 30
 
       - name: Upload Allure HTML report
         if: always()
@@ -69,6 +85,7 @@ jobs:
         with:
           name: allure-report-ui
           path: allure-report
+          retention-days: 30
 
       - name: Upload screenshots
         if: always()
@@ -77,6 +94,7 @@ jobs:
           name: ui-playwright-screenshots
           path: screenshots
           if-no-files-found: ignore
+          retention-days: 7
 
       - name: Upload videos
         if: always()
@@ -85,6 +103,7 @@ jobs:
           name: ui-playwright-video
           path: videos
           if-no-files-found: ignore
+          retention-days: 7
 
       - name: Upload logs
         if: always()
@@ -93,6 +112,7 @@ jobs:
           name: ui-playwright-logs
           path: logs
           if-no-files-found: ignore
+          retention-days: 7
 
       - name: Upload test result files
         if: always()
@@ -101,6 +121,7 @@ jobs:
           name: ui-playwright-test-results
           path: test-results
           if-no-files-found: ignore
+          retention-days: 7
 
       - name: Deploy Playwright HTML Report
         if: always()
@@ -122,6 +143,19 @@ jobs:
           publish_branch: gh-pages
           keep_files: true
 
+      - name: Create Test Summary
+        if: always()
+        run: |
+          echo "## 🎭 UI Test Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ -f "allure-report/widgets/summary.json" ]; then
+            echo "📊 **Test Statistics:**" >> $GITHUB_STEP_SUMMARY
+            cat allure-report/widgets/summary.json | jq -r '"- Total: \(.statistic.total // 0)\n- Passed: \(.statistic.passed // 0)\n- Failed: \(.statistic.failed // 0)\n- Skipped: \(.statistic.skipped // 0)"' >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "📈 [View Playwright Report](https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html)" >> $GITHUB_STEP_SUMMARY
+          echo "📈 [View Allure Report](https://yoplekiller.github.io/PlaywrightQA/allure-report-ui/index.html)" >> $GITHUB_STEP_SUMMARY
+
   api-test:
     runs-on: ubuntu-latest
     steps:
@@ -132,12 +166,27 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
 
+      - name: Cache Playwright browsers
+        id: playwright-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-playwright-
+
       - name: Install Playwright browsers
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
         run: npx playwright install --with-deps
+
+      - name: Install Playwright dependencies only
+        if: steps.playwright-cache.outputs.cache-hit == 'true'
+        run: npx playwright install-deps
 
       - name: Clean previous results
         run: |
@@ -146,7 +195,7 @@ jobs:
 
       - name: Run API Tests
         run: |
-          npx playwright test tests/api/ --config=playwright.config.ts --trace=on --workers=1
+          npx playwright test tests/api/ --config=playwright.config.ts --trace=on --workers=2
           mkdir -p allure-results-api
           cp -r allure-results/* allure-results-api/ || true
           rm -rf allure-results
@@ -212,3 +261,15 @@ jobs:
           destination_dir: allure-report-api
           publish_branch: gh-pages
           keep_files: true
+
+      - name: Create Test Summary
+        if: always()
+        run: |
+          echo "## 🧪 API Test Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ -f "allure-report/widgets/summary.json" ]; then
+            echo "📊 **Test Statistics:**" >> $GITHUB_STEP_SUMMARY
+            cat allure-report/widgets/summary.json | jq -r '"- Total: \(.statistic.total // 0)\n- Passed: \(.statistic.passed // 0)\n- Failed: \(.statistic.failed // 0)\n- Skipped: \(.statistic.skipped // 0)"' >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "📈 [View Allure Report](https://yoplekiller.github.io/PlaywrightQA/allure-report-api/index.html)" >> $GITHUB_STEP_SUMMARY
