@@ -16,7 +16,6 @@ test.describe('Pick(찜하기) 버튼 기능 테스트', () => {
     test('Pick 버튼 클릭 테스트', async ({ page }) => {
         allure.description('메인 페이지에서 Pick(찜하기) 버튼을 클릭하여 Pick 페이지로 이동하는지 확인하는 테스트');
         
-        const pickPage = new PickPage(page);
         const mainPage = new MainPage(page);
         const loginPage = new LoginPage(page);
 
@@ -46,7 +45,7 @@ test.describe('Pick(찜하기) 버튼 기능 테스트', () => {
 
         await page.goto('https://www.kurly.com/main');
         await mainPage.clickPickButton();
-        await page.waitForTimeout(2000); // 알럿 노출 대기
+        await page.waitForSelector('text=로그인하셔야 본 서비스를 이용하실 수 있습니다.');
 
         // 비로그인 상태면 알럿 노출
         const needLoginAltVisible = await pickPage.isNeedLoginAltVisible();
