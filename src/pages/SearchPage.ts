@@ -32,10 +32,12 @@ export class SearchPage extends BasePage {
     }
 
     async clickFirstGoods() {
+        await this.firstGoods.waitFor({ state: 'visible', timeout: 10000 });
         await this.click(this.firstGoods);
     }
 
     async clickAddCartButton() {
+        await this.addCartButton.waitFor({ state: 'visible', timeout: 10000 });
         await this.click(this.addCartButton);
     }
 
@@ -44,6 +46,7 @@ export class SearchPage extends BasePage {
     }
 
     async clickAddButtonInCartAlt() {
+        await this.addButtonInCartAlt.waitFor({ state: 'visible', timeout: 10000 });
         await this.click(this.addButtonInCartAlt);
     }
 

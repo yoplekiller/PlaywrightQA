@@ -1,4 +1,4 @@
-import { Page, Locator } from '@playwright/test';
+import { Page, Locator, expect } from '@playwright/test';
 import { BasePage } from './BasePage';
 
 
@@ -6,12 +6,14 @@ export class GoodsPage extends BasePage {
 
 
     private readonly likeButtonLocator: Locator;
+    private readonly addGoodsButtonInCart: Locator;
 
     constructor(page: Page) {
         super(page);
 
 
-        this.likeButtonLocator = page.getByLabel('찜하기'); // 찜하기 버튼
+        this.likeButtonLocator = page.getByLabel('찜하기');
+        this.addGoodsButtonInCart = page.getByRole('button', { name: '장바구니 담기' }); // 찜하기 버튼
         
     }
 
@@ -19,6 +21,14 @@ export class GoodsPage extends BasePage {
         await this.click(this.likeButtonLocator); 
 
     }
+    async clickAddGoodsInCartButton(n: number) {
+        for (let i = 0; i < n; i++) {
+            await this.click(this.addGoodsButtonInCart);
+            await expect(this.page.getByText('장바구니에 상품을 담았습니다.')).toBeVisible({timeout: 5000});
+            await expect(this.page.getByText('장바구니에 상품을 담았습니다.')).not.toBeVisible({ timeout: 3000 }); 
+        }
+    }
+
     async isCompletedLikeGoodsVisible(): Promise<boolean> {
       try {
         await this.page.waitForSelector('text=상품을 찜했어요.', { timeout: 3000, state: 'visible' });

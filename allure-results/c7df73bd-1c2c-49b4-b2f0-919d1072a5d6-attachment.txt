@@ -1,0 +1,9 @@
+=== 팝업 URL: https://www.kurly.com/address/shipping-address
+=== iframe 개수: 6
+iframe 0: https://www.kurly.com/address/shipping-address
+iframe 1: about:blank
+iframe 2: https://postcode.map.daum.net/search?origin=https%3A%2F%2Fwww.kurly.com&inc=&indaum=off&banner=on&ubl=on&mode=transmit&vt=layer&amr=on&amj=on&ani=off&sd=on&fi=on&fc=on&plrg=&plrgt=1.5&hmb=off&heb=off&asea=off&smh=off&zo=on&us=on&msi=10&ahs=off&whas=500&sm=off&a51=off&zn=Y&fullpath=%2Faddress%2Fshipping-address
+iframe 3: https://www.google.com/recaptcha/enterprise/anchor?ar=1&k=6LfL9h4rAAAAALGQGLkwj5dpTIoM_NoZciiEaP6b&co=aHR0cHM6Ly93d3cua3VybHkuY29tOjQ0Mw..&hl=en&v=9TiwnJFHeuIw_s0wSd3fiKfN&size=invisible&anchor-ms=20000&execute-ms=30000&cb=mgghgeowfpvt
+iframe 4: about:blank
+iframe 5: about:blank
+=== iframe 요소 개수: 3

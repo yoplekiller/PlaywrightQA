@@ -19,6 +19,10 @@ async fill(locator: Locator, text: string) {
     await locator.fill(text);
 }
 
+
+async hover(locator: Locator) {
+    await locator.hover();
+}
 async waitForSelector(selector: string) {
     await this.page.waitForSelector(selector);
 }

@@ -25,6 +25,7 @@
 ### ✨ 주요 기능
 - ✅ **UI 테스트 자동화**: 마켓컬리 주요 기능 (로그인, 검색, 장바구니 등)
 - ✅ **API 테스트 자동화**: TMDB API 엔드포인트 검증
+- ✅ **이중 iframe 처리**: 다음 우편번호 서비스 연동 (주소 검색 E2E)
 - ✅ **CI/CD 파이프라인**: GitHub Actions 기반 자동 실행 (8시간마다)
 - ✅ **실시간 알림**: Slack Webhook을 통한 테스트 결과 알림 (버튼 클릭으로 리포트 이동)
 - ✅ **리포팅**: Allure Report + Playwright HTML Report (GitHub Pages 자동 배포)
@@ -195,6 +196,38 @@ for (const movie of movieCases) {
 }
 ```
 
+### 5. 주소 검색 E2E (이중 iframe 처리)
+
+**복잡한 iframe 구조를 처리하여 주소 검색 전체 플로우 자동화**
+
+#### 📁 3가지 접근법 제공
+
+| 접근법 | 파일 | 목적 | 복잡도 | 속도 | 실무 추천 |
+|--------|------|------|--------|------|----------|
+| **Simple E2E** | `address-search-simple.spec.ts` | 연동 확인 | ⭐ | 10초 | ✅✅ |
+| **Full E2E** | `address-search-full.spec.ts` | 기술 검증 | ⭐⭐⭐⭐⭐ | 45초 | 학습용 |
+| **API Test** | `address-api.spec.ts` | 핵심 로직 | ⭐ | 2초 | ✅✅✅ |
+
+#### 기술적 도전과제
+
+**이중 iframe 구조:**
+```
+Window (kurly.com)
+  └── iframe (Kurly App)
+        └── Popup (주소 검색)
+              └── iframe (Daum Postcode)
+```
+
+**해결 방법:**
+- `frames()` API로 동적 frame 탐색
+- `waitForSelector()`로 비동기 로딩 처리
+- URL 패턴 매칭으로 정확한 frame 찾기
+
+#### 상세 문서
+- 📖 [주소 검색 가이드](./docs/address-search-guide.md)
+- 🔧 [iframe 처리 기술 문서](./docs/iframe-challenge.md)
+- 💼 [실무 vs 포트폴리오](./docs/실무-vs-포트폴리오.md)
+
 ---
 
 ## 📊 테스트 커버리지
@@ -217,25 +250,67 @@ for (const movie of movieCases) {
 
 ## 🎓 배운 점 & 성장
 
-[여기에 작성: 프로젝트를 진행하며 배운 점을 구체적으로]
-```
-예시:
 ### 기술적 학습
+
+#### iframe 처리
+- **문제**: 이중 iframe 구조에서 요소 접근 실패
+- **시도**: `frameLocator()` → Timeout 에러
+- **해결**: `frames()` + `waitForSelector()` + URL 패턴 매칭
+- **학습**: frameLocator vs frames() 차이, 비동기 로딩 처리 방법
+
+#### Playwright 심화
 - TypeScript의 타입 시스템을 활용한 안전한 코드 작성
 - Playwright의 자동 대기 기능으로 flaky test 문제 해결
-- GitHub Actions에서 환경 변수와 Secrets 관리 방법
+- Page Object Model 패턴 적용으로 유지보수성 향상
+
+#### CI/CD 최적화
+- GitHub Actions에서 환경 변수와 Secrets 관리
+- npm/Playwright 캐싱으로 빌드 시간 42.8% 단축
+- Workers 병렬 실행으로 테스트 속도 개선
 
 ### 문제 해결 경험
-- [문제] xlsx 라이브러리 보안 취약점 발견
-  [해결] exceljs로 마이그레이션하여 보안 이슈 해결
 
-- [문제] Allure import deprecated 경고
-  [해결] allure-js-commons로 변경하여 최신 방식 적용
+#### 보안 이슈
+- **[문제]** xlsx 라이브러리 보안 취약점 발견
+- **[해결]** exceljs로 마이그레이션하여 보안 이슈 해결
 
-### 프로세스 개선
-- 처음엔 모든 기능을 테스트하려 했으나,
-  핵심 사용자 시나리오 위주로 우선순위를 정하는 게 더 효과적임을 깨달음
-```
+#### 레거시 코드
+- **[문제]** Allure import deprecated 경고
+- **[해결]** allure-js-commons로 변경하여 최신 방식 적용
+
+#### iframe 타이밍
+- **[문제]** iframe 로딩 타이밍을 예측할 수 없어 테스트 실패
+- **[해결]** `waitForSelector()` + 충분한 timeout으로 안정성 확보
+
+### 전략적 학습
+
+#### 테스트 피라미드 적용
+- 처음엔 모든 기능을 E2E로 테스트하려 했으나,
+  **핵심은 API 테스트, E2E는 Smoke Test만**이 더 효율적임을 깨달음
+
+#### Trade-off 이해
+- **완벽한 테스트 vs 실용적인 테스트**
+  - Full E2E는 완벽하지만 유지보수 비용이 높음
+  - Simple E2E + API가 실무에서는 더 효과적
+
+#### 외부 의존성 관리
+- 외부 서비스(다음 우편번호)는 **연동만 확인**
+- 핵심 비즈니스 로직은 **API로 검증**하는 것이 안정적
+
+### 실무 감각
+
+#### 우선순위 설정
+- 모든 것을 테스트하려 하지 말고 **핵심 80%**에 집중
+- CI/CD에는 **빠르고 안정적인 테스트**만 포함
+
+#### 문서화의 중요성
+- 코드만큼 **"왜 이렇게 했는지"** 문서가 중요
+- 실패 과정도 **학습의 일부**로 공유
+
+#### 비용 대비 효과
+- **속도**: Simple E2E (10초) vs Full E2E (45초)
+- **안정성**: API Test (⭐⭐⭐⭐⭐) vs Full E2E (⭐⭐)
+- **유지보수**: Simple E2E (쉬움) vs Full E2E (어려움)
 
 ---
 

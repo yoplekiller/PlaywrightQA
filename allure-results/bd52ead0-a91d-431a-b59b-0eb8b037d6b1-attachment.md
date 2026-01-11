@@ -1,0 +1,759 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - link "지금 가입하고 최대 1만 2천원 할인 쿠폰 받아가세요!" [ref=e6] [cursor=pointer]:
+        - /url: https://event.kurly.com/lego/event/2023/0911/join/coupon#lc112b1
+        - generic [ref=e7]: 지금 가입하고 최대 1만 2천원 할인 쿠폰 받아가세요!
+      - button "배너 하루 안보기" [ref=e8] [cursor=pointer]:
+        - img [ref=e9]
+        - generic [ref=e14]: 배너 하루 안보기
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - generic [ref=e18] [cursor=pointer]: 회원가입
+          - generic [ref=e20] [cursor=pointer]: 로그인
+          - generic [ref=e23] [cursor=pointer]: 고객센터
+        - generic [ref=e25]:
+          - generic [ref=e26]:
+            - img "마켓컬리 로고" [ref=e27]
+            - button "마켓컬리" [ref=e28] [cursor=pointer]
+            - button "뷰티컬리" [ref=e29] [cursor=pointer]
+          - generic [ref=e31]:
+            - textbox "검색어를 입력해주세요" [ref=e32]
+            - button "submit" [ref=e33] [cursor=pointer]
+          - generic [ref=e34]:
+            - button [ref=e35] [cursor=pointer]:
+              - img [ref=e36]
+            - button [ref=e39] [cursor=pointer]:
+              - img [ref=e40]
+            - button "0" [ref=e42] [cursor=pointer]:
+              - img [ref=e43]
+              - generic [ref=e46]: "0"
+      - generic [ref=e48]:
+        - button "카테고리" [ref=e50] [cursor=pointer]:
+          - img [ref=e51]
+          - generic [ref=e53]: 카테고리
+        - generic [ref=e54]:
+          - list [ref=e55]:
+            - listitem [ref=e56]:
+              - link "베스트" [ref=e57] [cursor=pointer]:
+                - /url: /collection-groups/market-best?site=MARKET
+            - listitem [ref=e58]:
+              - link "세일" [ref=e59] [cursor=pointer]:
+                - /url: /collection-groups/market-sales-group?site=MARKET
+            - listitem [ref=e60]:
+              - link "패션" [ref=e61] [cursor=pointer]:
+                - /url: /panels/fashion?site=MARKET
+            - listitem [ref=e62]:
+              - link "리빙" [ref=e63] [cursor=pointer]:
+                - /url: /panels/living?site=MARKET
+            - listitem [ref=e64]:
+              - link "신상" [ref=e65] [cursor=pointer]:
+                - /url: /collection-groups/market-newproduct?site=MARKET
+            - listitem [ref=e66]:
+              - link "특가/혜택" [ref=e67] [cursor=pointer]:
+                - /url: /market-benefit
+          - link "샛별·하루 배송안내" [ref=e68] [cursor=pointer]:
+            - /url: /user-guide/delivery
+            - generic [ref=e69]: 샛별·하루
+            - generic [ref=e70]: 배송안내
+    - generic [ref=e72]:
+      - generic [ref=e74]:
+        - link "샛별, 하루 배송 안내" [ref=e76] [cursor=pointer]:
+          - /url: /user-guide/delivery
+          - generic [ref=e77]:
+            - img [ref=e79]
+            - img "샛별, 하루 배송 안내" [ref=e80]
+        - generic [ref=e81]:
+          - link "컬리 고객 제도" [ref=e82] [cursor=pointer]:
+            - /url: /events/member/vip
+            - generic [ref=e83]: 컬리 고객 제도
+          - link "컬리 큐레이터" [ref=e84] [cursor=pointer]:
+            - /url: https://lounge.kurly.com/curator-program
+            - generic [ref=e85]: 컬리 큐레이터
+          - link "레시피" [ref=e86] [cursor=pointer]:
+            - /url: https://www.kurly.com/recipe
+            - generic [ref=e87]: 레시피
+        - generic [ref=e88]:
+          - button [disabled] [ref=e89]:
+            - img [ref=e90]
+          - text: 최근 본 상품
+          - list [ref=e93]:
+            - listitem [ref=e94]:
+              - link "recent-product-1000640850" [ref=e95] [cursor=pointer]:
+                - /url: /goods/1000640850
+                - generic [ref=e96]:
+                  - img [ref=e98]
+                  - img "recent-product-1000640850" [ref=e99]
+          - button [disabled] [ref=e100]:
+            - img [ref=e101]
+      - generic [ref=e103]:
+        - main [ref=e104]:
+          - generic [ref=e105]:
+            - img "[오리온] 초코칩쿠키 256g" [ref=e111]
+            - link "오리온 제과 브랜드관 오리온 제과 정직한 마음으로 만든 맛있는 즐거움 찜하기" [ref=e113] [cursor=pointer]:
+              - /url: /brand/19
+              - generic [ref=e114]:
+                - img "오리온 제과" [ref=e117]
+                - generic [ref=e118]:
+                  - generic [ref=e119]: 브랜드관
+                  - generic [ref=e120]:
+                    - strong [ref=e121]: 오리온 제과
+                    - img [ref=e123]
+                  - paragraph [ref=e125]: 정직한 마음으로 만든 맛있는 즐거움
+                - button "찜하기" [ref=e126]:
+                  - img [ref=e127]
+          - generic [ref=e129]:
+            - generic [ref=e130]:
+              - generic [ref=e132]:
+                - generic [ref=e133]: 샛별배송
+                - generic [ref=e135]:
+                  - generic [ref=e136]: 오리온 제과
+                  - img [ref=e138]
+                  - link [ref=e140] [cursor=pointer]:
+                    - /url: /brand/19
+              - generic [ref=e143] [cursor=pointer]: 후기 1,861건
+            - generic [ref=e144]:
+              - generic [ref=e146]:
+                - heading "[오리온] 초코칩쿠키 256g" [level=1] [ref=e147]
+                - generic [ref=e148]:
+                  - paragraph [ref=e149]: 우유와 환상 궁합
+                  - paragraph [ref=e150]: "원산지: 상품설명/상세정보 참조"
+              - button [ref=e152] [cursor=pointer]:
+                - img [ref=e153]
+            - heading "3,070 원" [level=2] [ref=e159]:
+              - generic [ref=e160]:
+                - generic [ref=e161]: 3,070
+                - generic [ref=e162]: 원
+            - generic [ref=e163]:
+              - generic [ref=e164]:
+                - generic [ref=e165]: 50%
+                - generic [ref=e166]: 1,535
+                - generic [ref=e167]: 원
+                - button [ref=e168] [cursor=pointer]:
+                  - img
+                - button "첫구매 최대혜택가" [ref=e169] [cursor=pointer]:
+                  - generic [ref=e170]: 첫구매 최대혜택가
+                  - img [ref=e171]
+              - button "첫구매라면 1,535원에 구매, 무료배송까지" [ref=e173] [cursor=pointer]:
+                - generic [ref=e174]:
+                  - img [ref=e175]
+                  - generic [ref=e178]:
+                    - text: 첫구매라면
+                    - strong [ref=e179]: 1,535원
+                    - text: 에 구매, 무료배송까지
+                - img [ref=e180]
+            - list [ref=e182]:
+              - listitem [ref=e183]:
+                - term [ref=e184]: 배송
+                - definition [ref=e185]:
+                  - paragraph [ref=e186]: 샛별배송
+                  - paragraph [ref=e187]: 23시 전 주문 시 수도권/충청 내일 아침 7시 전 도착 (그 외 지역 아침 8시 전 도착)
+              - listitem [ref=e188]:
+                - term [ref=e189]: 판매자
+                - definition [ref=e190]:
+                  - paragraph [ref=e191]: 컬리
+              - listitem [ref=e192]:
+                - term [ref=e193]: 포장타입
+                - definition [ref=e194]:
+                  - paragraph [ref=e195]: 상온 (종이포장)
+                  - paragraph [ref=e196]: 택배배송은 에코 포장이 스티로폼으로 대체됩니다.
+              - listitem [ref=e197]:
+                - term [ref=e198]: 중량/용량
+                - definition [ref=e199]:
+                  - paragraph [ref=e200]: 256g (64g X 4개입)
+              - listitem [ref=e201]:
+                - term [ref=e202]: 알레르기정보
+                - definition [ref=e203]:
+                  - paragraph [ref=e204]: "- 밀, 달걀, 우유, 대두, 쇠고기 함유"
+            - generic [ref=e205]:
+              - listitem [ref=e207]:
+                - term [ref=e208]: 상품선택
+                - definition [ref=e209]:
+                  - article [ref=e210]:
+                    - paragraph [ref=e212]: "[오리온] 초코칩쿠키 256g"
+                    - generic [ref=e213]:
+                      - generic [ref=e214]:
+                        - button "수량내리기" [disabled] [ref=e215]
+                        - generic [ref=e216]: "1"
+                        - button "수량올리기" [ref=e217] [cursor=pointer]
+                      - generic [ref=e219]: 3,070원
+              - generic [ref=e223]:
+                - generic [ref=e224]: "총 상품금액 :"
+                - generic [ref=e225]: 3,070
+                - generic [ref=e226]: 원
+              - generic [ref=e227]:
+                - button "찜하기" [ref=e229] [cursor=pointer]:
+                  - img [ref=e230]
+                - button [ref=e232] [cursor=pointer]:
+                  - img [ref=e233]
+                - button "장바구니 담기" [ref=e236] [cursor=pointer]:
+                  - generic [ref=e237]: 장바구니 담기
+        - navigation [ref=e238]:
+          - list [ref=e239]:
+            - listitem [ref=e240]:
+              - generic [ref=e242]: 상품설명
+            - listitem [ref=e243]:
+              - generic [ref=e245]: 상세정보
+            - listitem [ref=e246]:
+              - generic [ref=e247]:
+                - generic [ref=e248]: 후기
+                - generic [ref=e249]: (1,861)
+            - listitem [ref=e250]:
+              - generic [ref=e252]: 문의
+        - generic [ref=e253]:
+          - generic [ref=e257]:
+            - generic [ref=e258]:
+              - img [ref=e260]
+              - generic [ref=e261]:
+                - heading "우유와 환상 궁합 [오리온] 초코칩쿠키" [level=3] [ref=e262]:
+                  - generic [ref=e263]: 우유와 환상 궁합
+                  - text: "[오리온]"
+                  - text: 초코칩쿠키
+                - paragraph [ref=e264]: 바삭바삭한 쿠키 안에 쏙쏙 박혀있는 초코칩쿠키, 우유와 함께하면 그 맛이 배가 되는데요. 마트나 편의점에 나가지 않아도 집에서 편하게 즐길 수 있도록 준비했어요. 필요한 만큼만 1팩씩 구매가 가능하니, 부담 없이 장바구니에 쏙 담아보세요.
+            - generic [ref=e265]:
+              - heading "Kurly's Check Point" [level=3] [ref=e266]:
+                - generic [ref=e267]: Kurly's Check Point
+              - img [ref=e270]
+          - generic [ref=e271]:
+            - img "자세히보기 이미지" [ref=e273]
+            - generic [ref=e274]:
+              - heading "상품고시정보" [level=3] [ref=e275]
+              - list [ref=e276]:
+                - listitem [ref=e277]: 제품명
+                - listitem [ref=e278]: 상품설명 및 상품이미지 참조
+                - listitem [ref=e279]: 식품의 유형
+                - listitem [ref=e280]: 상품설명 및 상품이미지 참조
+                - listitem [ref=e281]: 생산자 및 소재지 (수입품의 경우 생산자, 수입자 및 제조국)
+                - listitem [ref=e282]: 상품설명 및 상품이미지 참조
+                - listitem [ref=e283]: 제조연월일, 소비기한 또는 품질유지기한
+                - listitem [ref=e284]: 상품설명 및 상품이미지 참조
+                - listitem [ref=e285]: 포장단위별 내용물의 용량(중량), 수량
+                - listitem [ref=e286]: 상품설명 및 상품이미지 참조
+                - listitem [ref=e287]: 원재료명 (｢농수산물의 원산지 표시 등에 관한 법률｣에 따른 원산지 표시 포함) 및 함량(원재료 함량 표시대상 식품에 한함)
+                - listitem [ref=e288]: 상품설명 및 상품이미지 참조
+                - listitem [ref=e289]: 영양성분 (영양성분 표시대상 식품에 한함)
+                - listitem [ref=e290]: 상품설명 및 상품이미지 참조
+                - listitem [ref=e291]: 유전자변형식품에 해당하는 경우의 표시
+                - listitem [ref=e292]: 상품설명 및 상품이미지 참조
+                - listitem [ref=e293]: 소비자 안전을 위한 주의사항 (｢식품 등의 표시ㆍ광고에 관한 법률 시행규칙｣ 제5조 및 [별표 2]에 따른 표시사항을 말함)
+                - listitem [ref=e294]: 상품설명 및 상품이미지 참조
+                - listitem [ref=e295]: 수입식품의 경우 “수입식품안전관리 특별법에 따른 수입신고를 필함”의 문구
+                - listitem [ref=e296]: 상품설명 및 상품이미지 참조
+                - listitem [ref=e297]: 소비자 상담 관련 전화번호
+                - listitem [ref=e298]: 상품설명 및 상품이미지 참조
+                - listitem [ref=e299]
+            - generic [ref=e300]:
+              - generic [ref=e301]: WHY KURLY
+              - generic [ref=e302]:
+                - generic [ref=e303]:
+                  - term [ref=e304]: 깐깐한 상품위원회
+                  - definition [ref=e305]:
+                    - text: 나와 내 가족이 먹고 쓸 상품을 고르는
+                    - text: 마음으로 매주 상품을 직접 먹어보고,
+                    - text: 경험해보고 성분, 맛, 안정성 등 다각도의
+                    - text: 기준을 통과한 상품만을 판매합니다.
+                    - generic [ref=e306]: (온라인 기준 / 자사몰, 직구 제외)
+                - generic [ref=e307]:
+                  - term [ref=e308]: 차별화된 Kurly Only 상품
+                  - definition [ref=e309]:
+                    - text: 전국 각지와 해외의 훌륭한 생산자가
+                    - text: 믿고 선택하는 파트너, 컬리.
+                    - text: 3천여 개가 넘는 컬리 단독 브랜드, 스펙의
+                    - text: Kurly Only 상품을 믿고 만나보세요.
+                    - generic [ref=e310]: (온라인 기준 / 자사몰, 직구 제외)
+                - generic [ref=e311]:
+                  - term [ref=e312]: 신선한 풀콜드체인 배송
+                  - definition [ref=e313]:
+                    - text: 온라인 업계 최초로 산지에서 문 앞까지
+                    - text: 상온, 냉장, 냉동 상품을 분리 포장 후
+                    - text: 최적의 온도를 유지하는 냉장 배송 시스템,
+                    - text: 풀콜드체인으로 상품을 신선하게 전해드립니다.
+                    - generic [ref=e314]: (샛별배송에 한함)
+                - generic [ref=e315]:
+                  - term [ref=e316]: 고객, 생산자를 위한 최선의 가격
+                  - definition [ref=e317]:
+                    - text: 매주 대형 마트와 주요 온라인 마트의 가격
+                    - text: 변동 상황을 확인해 신선식품은 품질을
+                    - text: 타협하지 않는 선에서 최선의 가격으로,
+                    - text: 가공식품은 언제나 합리적인 가격으로
+                    - text: 정기 조정합니다.
+                - generic [ref=e318]:
+                  - term [ref=e319]: 환경을 생각하는 지속 가능한 유통
+                  - definition [ref=e320]:
+                    - text: 친환경 포장재부터 생산자가 상품에만
+                    - text: 집중할 수 있는 직매입 유통구조까지,
+                    - text: 지속 가능한 유통을 고민하며 컬리를 있게
+                    - text: 하는 모든 환경(생산자, 커뮤니티, 직원)이
+                    - text: 더 나아질 수 있도록 노력합니다.
+            - generic [ref=e322]:
+              - generic [ref=e323]:
+                - heading "고객행복센터" [level=5] [ref=e324]
+                - paragraph [ref=e325]:
+                  - text: 궁금하신 점이나 서비스 이용에 불편한 점이 있으신가요?
+                  - generic [ref=e326]: 문제가 되는 부분을 사진으로 찍어 아래 중 편하신 방법으로 접수해 주시면 빠르게 도와드리겠습니다.
+              - list [ref=e327]:
+                - listitem [ref=e328]:
+                  - strong [ref=e329]: 전화 문의 1644-1107
+                  - generic [ref=e330]: 월~토요일 오전 7시 - 오후 6시
+                - listitem [ref=e331]:
+                  - strong [ref=e332]: 카카오톡 문의
+                  - generic [ref=e333]: 월~토요일 오전 7시 - 오후 6시
+                  - generic [ref=e334]: 일/공휴일 오전 7시 - 오후 1시
+                  - strong [ref=e335]:
+                    - text: 카카오톡에서 '컬리' 를 검색 후
+                    - text: 대화창에 문의 및 불편사항을
+                    - text: 남겨주세요.
+                - listitem [ref=e336]:
+                  - strong [ref=e337]: 홈페이지 문의
+                  - generic [ref=e338]: 365일
+                  - generic [ref=e339]: 로그인 > 마이컬리 > 1:1 문의
+                  - strong [ref=e340]:
+                    - text: 고객센터 운영 시간에 순차적으로
+                    - text: 답변해드리겠습니다.
+            - generic [ref=e341]:
+              - strong [ref=e342]: 교환 및 환불 안내
+              - paragraph [ref=e343]: 교환 및 환불이 필요하신 경우 [마이컬리 > 주문내역]에서 직접 반품 접수하거나 고객행복센터로 문의해 주시기 바랍니다.
+              - button "닫기" [ref=e344] [cursor=pointer]
+            - generic [ref=e345]:
+              - generic [ref=e346]: 01. 상품에 문제가 있는 경우
+              - paragraph [ref=e347]:
+                - text: 받으신 상품이 표시·광고 내용 또는 계약 내용과 다른 경우에는 상품을 받은 날부터 3개월 이내, 그 사실을 알게 된 날부터 30일 이내에 반품을 요청하실 수 있습니다. 고객행복센터로 문의해 주시기 바랍니다. 상품의 정확한 상태를 확인할 수 있도록 사진을 함께 보내주시면 더 빠른 상담이 가능합니다.
+                - generic [ref=e348]: ※ 배송 상품에 문제가 있는 것으로 확인되면 배송비는 판매자가 부담합니다.
+            - generic [ref=e349]:
+              - generic [ref=e350]: 02. 단순 변심, 주문 착오의 경우
+              - paragraph [ref=e351]:
+                - strong [ref=e352]: 신선 / 냉장 / 냉동 식품
+                - text: 상품의 특성상 재판매가 불가하여 단순 변심, 주문 착오, 주소 오입력 등 고객의 책임 있는 사유로 인한 교환 및 반품이 어려운 점 양해 부탁드립니다. 상품에 따라 조금씩 맛이 다를 수 있으며, 개인의 기호에 따라 같은 상품도 다르게 느끼실 수 있습니다.
+                - strong [ref=e353]: 유통기한 30일 이상 식품 (신선 / 냉장 / 냉동 제외) & 기타 상품 (뷰티 제품, 생활용품)
+                - text: 상품을 받은 날부터 7일 이내 반품 접수가 가능합니다. 직접 접수하시거나 고객행복센터로 문의해 주시기 바랍니다.
+                - generic [ref=e354]: ※ 단순 변심, 주문 착오, 주소 오입력 등 고객의 책임 있는 사유로 인한 교환 및 반품의 경우 고객님께서 왕복배송비 6,000원(배송비를 낸 경우 3,000원)을 부담하셔야 합니다.
+            - generic [ref=e355]:
+              - generic [ref=e356]: 03. 교환·환불이 불가한 경우
+              - paragraph [ref=e357]:
+                - text: 다음에 해당하는 교환·환불 신청은 처리가 어려울 수 있으니 양해 부탁드립니다.
+                - generic [ref=e358]: 고객님의 책임 있는 사유로 상품이 멸실되거나 훼손된 경우 (단, 상품의 내용을 확인하기 위해 포장 등을 훼손한 경우는 제외)
+                - generic [ref=e359]: 고객님의 사용 또는 일부 소비로 상품의 가치가 감소한 경우
+                - generic [ref=e360]: 시간이 지나 다시 판매하기 곤란할 정도로 상품의 가치가 감소한 경우
+                - generic [ref=e361]: 복제가 가능한 상품의 포장이 훼손된 경우
+                - generic [ref=e362]: 고객님의 주문에 따라 개별적으로 생산되는 상품의 제작이 이미 진행된 경우
+                - generic [ref=e363]: 반품 신청 후 14일 내에 물품이 반환되지 않고 고객님과 연락이 되지 않는 경우
+            - generic [ref=e364]:
+              - strong [ref=e365]: 주문 취소 안내
+              - paragraph [ref=e366]:
+                - strong [ref=e367]: "[마이컬리>주문내역]에서 직접 취소하실 수 있습니다."
+              - button "닫기" [ref=e368] [cursor=pointer]
+            - generic [ref=e369]:
+              - generic [ref=e370]: 주문 취소 관련
+              - paragraph [ref=e371]: "- 주문취소는 [마이컬리>주문내역]에서 직접 하실 수 있습니다. - [배송중]부터는 배송이 시작되어 주문 취소가 불가하니, 반품 접수 부탁드립니다(상품에 따라 반품이 불가할 수 있습니다). - 주문취소 및 반품 접수와 관련하여 도움이 필요하신 경우 고객행복센터로 문의해 주시기 바랍니다. - 주문마감 시간에 임박할수록 취소 가능 시간이 짧아질 수 있습니다. - 일부 예약상품은 판매 시 안내된 취소 마감 기한 내에만 취소할 수 있습니다. - 파트너사 판매상품의 경우, 파트너사의 정책에 따라 주문취소가 가능합니다. - 미성년자 결제 시 법정대리인이 그 거래를 취소할 수 있습니다."
+            - generic [ref=e372]:
+              - generic [ref=e373]: 결제 승인 취소 / 환불 관련
+              - paragraph [ref=e374]: "- 카드 환불은 카드사 정책에 따르며, 자세한 사항은 카드사에 문의해주세요. - 결제 취소 시, 사용하신 적립금과 쿠폰도 모두 복원됩니다."
+            - generic [ref=e375]:
+              - strong [ref=e376]: 배송관련 안내
+              - paragraph [ref=e377]: 배송 과정 중 기상 악화 및 도로교통 상황에 따라 부득이하게 지연 배송이 발생될 수 있습니다.
+          - generic [ref=e379]:
+            - heading "상품 후기" [level=2] [ref=e380]
+            - generic [ref=e381]:
+              - button "상품 후기" [ref=e382] [cursor=pointer]:
+                - img "상품 후기" [ref=e384]
+              - button "상품 후기" [ref=e385] [cursor=pointer]:
+                - img "상품 후기" [ref=e387]
+              - button "상품 후기" [ref=e388] [cursor=pointer]:
+                - img "상품 후기" [ref=e390]
+              - button "상품 후기" [ref=e391] [cursor=pointer]:
+                - img "상품 후기" [ref=e393]
+              - button "상품 후기" [ref=e394] [cursor=pointer]:
+                - img "상품 후기" [ref=e396]
+              - button "상품 후기" [ref=e397] [cursor=pointer]:
+                - img "상품 후기" [ref=e399]
+              - button "상품 후기" [ref=e400] [cursor=pointer]:
+                - img "상품 후기" [ref=e402]
+              - button "상품 후기" [ref=e403] [cursor=pointer]:
+                - img "상품 후기" [ref=e405]
+              - generic [ref=e407] [cursor=pointer]: +더보기
+            - generic [ref=e408]:
+              - generic [ref=e409]:
+                - generic [ref=e410]: 총 1,861개
+                - generic [ref=e411]:
+                  - button "추천순" [ref=e412] [cursor=pointer]
+                  - button "최근등록순" [ref=e413] [cursor=pointer]
+              - generic [ref=e414]:
+                - generic [ref=e415]:
+                  - generic [ref=e416]: 공지
+                  - button "[26년 1월 1주] 베스트 후기 선정 안내" [ref=e417] [cursor=pointer]
+                - generic [ref=e418]:
+                  - generic [ref=e419]: 공지
+                  - button "상품후기 적립금 정책 안내" [ref=e420] [cursor=pointer]
+                - generic [ref=e421]:
+                  - generic [ref=e422]: 공지
+                  - button "금주의 베스트 후기 안내" [ref=e423] [cursor=pointer]
+              - generic [ref=e424]:
+                - generic [ref=e426]:
+                  - generic [ref=e428]: 멤버스
+                  - generic [ref=e429]: 홍**
+                - article [ref=e430]:
+                  - generic [ref=e431]:
+                    - heading "[오리온] 초코칩쿠키 256g" [level=3] [ref=e433]
+                    - paragraph [ref=e434]: 오래 먹어두 질리지않는..
+                    - button "리뷰 이미지 썸네일" [ref=e436] [cursor=pointer]:
+                      - generic [ref=e437]:
+                        - img [ref=e439]
+                        - img "리뷰 이미지 썸네일" [ref=e440]
+                    - generic [ref=e441]:
+                      - generic [ref=e442]: 2026.01.11
+                      - button "도움돼요" [ref=e443] [cursor=pointer]:
+                        - generic [ref=e445]: 도움돼요
+              - generic [ref=e446]:
+                - generic [ref=e448]:
+                  - generic [ref=e450]: 멤버스
+                  - generic [ref=e451]: 유**
+                - article [ref=e452]:
+                  - generic [ref=e453]:
+                    - heading "[오리온] 초코칩쿠키 256g" [level=3] [ref=e455]
+                    - paragraph [ref=e456]: 오랜만에 맛있게 먹었어요
+                    - generic [ref=e457]:
+                      - generic [ref=e458]: 2026.01.10
+                      - button "도움돼요" [ref=e459] [cursor=pointer]:
+                        - generic [ref=e461]: 도움돼요
+              - generic [ref=e462]:
+                - generic [ref=e464]:
+                  - generic [ref=e466]: 멤버스
+                  - generic [ref=e467]: 박**
+                - article [ref=e468]:
+                  - generic [ref=e469]:
+                    - heading "[오리온] 초코칩쿠키 256g" [level=3] [ref=e471]
+                    - paragraph [ref=e472]: 아이들방학이라 간식으로 구매했어요
+                    - generic [ref=e473]:
+                      - generic [ref=e474]: 2026.01.10
+                      - button "도움돼요" [ref=e475] [cursor=pointer]:
+                        - generic [ref=e477]: 도움돼요
+              - generic [ref=e478]:
+                - generic [ref=e480]:
+                  - generic [ref=e482]: 멤버스
+                  - generic [ref=e483]: 정**
+                - article [ref=e484]:
+                  - generic [ref=e485]:
+                    - heading "[오리온] 초코칩쿠키 256g" [level=3] [ref=e487]
+                    - paragraph [ref=e488]: 바삭해서 맛있어요 감사합니다
+                    - generic [ref=e489]:
+                      - generic [ref=e490]: 2026.01.09
+                      - button "도움돼요" [ref=e491] [cursor=pointer]:
+                        - generic [ref=e493]: 도움돼요
+              - generic [ref=e494]:
+                - generic [ref=e496]:
+                  - generic [ref=e498]: 멤버스
+                  - generic [ref=e499]: 김**
+                - article [ref=e500]:
+                  - generic [ref=e501]:
+                    - heading "[오리온] 초코칩쿠키 256g" [level=3] [ref=e503]
+                    - paragraph [ref=e504]: 가격착하고 품질조아요..
+                    - generic [ref=e505]:
+                      - generic [ref=e506]: 2026.01.08
+                      - button "도움돼요" [ref=e507] [cursor=pointer]:
+                        - generic [ref=e509]: 도움돼요
+              - generic [ref=e510]:
+                - generic [ref=e512]:
+                  - generic [ref=e514]: 멤버스
+                  - generic [ref=e515]: 최**
+                - article [ref=e516]:
+                  - generic [ref=e517]:
+                    - heading "[오리온] 초코칩쿠키 256g" [level=3] [ref=e519]
+                    - paragraph [ref=e520]: 4팩 만족/맛있지만 성분이 너무 나빠 개선 필요
+                    - button "리뷰 이미지 썸네일" [ref=e522] [cursor=pointer]:
+                      - generic [ref=e523]:
+                        - img [ref=e525]
+                        - img "리뷰 이미지 썸네일" [ref=e526]
+                    - generic [ref=e527]:
+                      - generic [ref=e528]: 2026.01.07
+                      - button "도움돼요" [ref=e529] [cursor=pointer]:
+                        - generic [ref=e531]: 도움돼요
+              - generic [ref=e532]:
+                - generic [ref=e534]:
+                  - generic [ref=e536]: 멤버스
+                  - generic [ref=e537]: 최**
+                - article [ref=e538]:
+                  - generic [ref=e539]:
+                    - heading "[오리온] 초코칩쿠키 256g" [level=3] [ref=e541]
+                    - paragraph [ref=e542]: 맛있는데 성분이 너무 나빠 개선 필요
+                    - button "리뷰 이미지 썸네일" [ref=e544] [cursor=pointer]:
+                      - generic [ref=e545]:
+                        - img [ref=e547]
+                        - img "리뷰 이미지 썸네일" [ref=e548]
+                    - generic [ref=e549]:
+                      - generic [ref=e550]: 2026.01.07
+                      - button "도움돼요" [ref=e551] [cursor=pointer]:
+                        - generic [ref=e553]: 도움돼요
+              - generic [ref=e554]:
+                - generic [ref=e556]:
+                  - generic [ref=e558]: 멤버스
+                  - generic [ref=e559]: 유**
+                - article [ref=e560]:
+                  - generic [ref=e561]:
+                    - heading "[오리온] 초코칩쿠키 256g" [level=3] [ref=e563]
+                    - paragraph [ref=e564]: 달콤하고 맛있습니다
+                    - button "리뷰 이미지 썸네일" [ref=e566] [cursor=pointer]:
+                      - generic [ref=e567]:
+                        - img [ref=e569]
+                        - img "리뷰 이미지 썸네일" [ref=e570]
+                    - generic [ref=e571]:
+                      - generic [ref=e572]: 2026.01.06
+                      - button "도움돼요" [ref=e573] [cursor=pointer]:
+                        - generic [ref=e575]: 도움돼요
+              - generic [ref=e576]:
+                - generic [ref=e579]: 최**
+                - article [ref=e580]:
+                  - generic [ref=e581]:
+                    - heading "[오리온] 초코칩쿠키 256g" [level=3] [ref=e583]
+                    - paragraph [ref=e584]: 초코칩쿠키는 말모 맛잇죠
+                    - generic [ref=e585]:
+                      - generic [ref=e586]: 2026.01.06
+                      - button "도움돼요" [ref=e587] [cursor=pointer]:
+                        - generic [ref=e589]: 도움돼요
+              - generic [ref=e590]:
+                - generic [ref=e592]:
+                  - generic [ref=e594]: 멤버스
+                  - generic [ref=e595]: 강**
+                - article [ref=e596]:
+                  - generic [ref=e597]:
+                    - heading "[오리온] 초코칩쿠키 256g" [level=3] [ref=e599]
+                    - paragraph [ref=e600]: 너무 달지 않고 맛있어요.
+                    - button "리뷰 이미지 썸네일" [ref=e602] [cursor=pointer]:
+                      - generic [ref=e603]:
+                        - img [ref=e605]
+                        - img "리뷰 이미지 썸네일" [ref=e606]
+                    - generic [ref=e607]:
+                      - generic [ref=e608]: 2026.01.06
+                      - button "도움돼요" [ref=e609] [cursor=pointer]:
+                        - generic [ref=e611]: 도움돼요
+              - generic [ref=e612]:
+                - button "이전" [disabled] [ref=e613]:
+                  - generic [ref=e614]: 이전
+                - button "다음" [ref=e615] [cursor=pointer]:
+                  - generic [ref=e617]: 다음
+          - generic [ref=e619]:
+            - button "문의하기" [ref=e621] [cursor=pointer]:
+              - generic [ref=e622]: 문의하기
+            - generic [ref=e623]:
+              - strong [ref=e624]: 상품 문의
+              - list [ref=e625]:
+                - listitem [ref=e626]: 상품에 대한 문의를 남기는 공간입니다. 해당 게시판의 성격과 다른 글은 사전동의 없이 담당 게시판으로 이동될 수 있습니다.
+                - listitem [ref=e627]:
+                  - text: 배송관련, 주문(취소/교환/환불)관련 문의 및 요청사항은 마이컬리 내
+                  - link "1:1 문의" [ref=e628] [cursor=pointer]:
+                    - /url: /mypage/inquiry/list
+                  - text: 에 남겨주세요.
+            - table [ref=e630]:
+              - rowgroup [ref=e631]:
+                - row "제목 작성자 작성일 답변상태" [ref=e632]:
+                  - columnheader "제목" [ref=e633]
+                  - columnheader "작성자" [ref=e634]
+                  - columnheader "작성일" [ref=e635]
+                  - columnheader "답변상태" [ref=e636]
+              - rowgroup [ref=e637]:
+                - row "‌ ‌ ‌ ‌" [ref=e638]:
+                  - cell "‌" [ref=e639]:
+                    - generic [ref=e641]: ‌
+                  - cell "‌" [ref=e642]:
+                    - generic [ref=e644]: ‌
+                  - cell "‌" [ref=e645]:
+                    - generic [ref=e647]: ‌
+                  - cell "‌" [ref=e648]:
+                    - generic [ref=e650]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e651]:
+                  - cell "‌" [ref=e652]:
+                    - generic [ref=e654]: ‌
+                  - cell "‌" [ref=e655]:
+                    - generic [ref=e657]: ‌
+                  - cell "‌" [ref=e658]:
+                    - generic [ref=e660]: ‌
+                  - cell "‌" [ref=e661]:
+                    - generic [ref=e663]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e664]:
+                  - cell "‌" [ref=e665]:
+                    - generic [ref=e667]: ‌
+                  - cell "‌" [ref=e668]:
+                    - generic [ref=e670]: ‌
+                  - cell "‌" [ref=e671]:
+                    - generic [ref=e673]: ‌
+                  - cell "‌" [ref=e674]:
+                    - generic [ref=e676]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e677]:
+                  - cell "‌" [ref=e678]:
+                    - generic [ref=e680]: ‌
+                  - cell "‌" [ref=e681]:
+                    - generic [ref=e683]: ‌
+                  - cell "‌" [ref=e684]:
+                    - generic [ref=e686]: ‌
+                  - cell "‌" [ref=e687]:
+                    - generic [ref=e689]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e690]:
+                  - cell "‌" [ref=e691]:
+                    - generic [ref=e693]: ‌
+                  - cell "‌" [ref=e694]:
+                    - generic [ref=e696]: ‌
+                  - cell "‌" [ref=e697]:
+                    - generic [ref=e699]: ‌
+                  - cell "‌" [ref=e700]:
+                    - generic [ref=e702]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e703]:
+                  - cell "‌" [ref=e704]:
+                    - generic [ref=e706]: ‌
+                  - cell "‌" [ref=e707]:
+                    - generic [ref=e709]: ‌
+                  - cell "‌" [ref=e710]:
+                    - generic [ref=e712]: ‌
+                  - cell "‌" [ref=e713]:
+                    - generic [ref=e715]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e716]:
+                  - cell "‌" [ref=e717]:
+                    - generic [ref=e719]: ‌
+                  - cell "‌" [ref=e720]:
+                    - generic [ref=e722]: ‌
+                  - cell "‌" [ref=e723]:
+                    - generic [ref=e725]: ‌
+                  - cell "‌" [ref=e726]:
+                    - generic [ref=e728]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e729]:
+                  - cell "‌" [ref=e730]:
+                    - generic [ref=e732]: ‌
+                  - cell "‌" [ref=e733]:
+                    - generic [ref=e735]: ‌
+                  - cell "‌" [ref=e736]:
+                    - generic [ref=e738]: ‌
+                  - cell "‌" [ref=e739]:
+                    - generic [ref=e741]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e742]:
+                  - cell "‌" [ref=e743]:
+                    - generic [ref=e745]: ‌
+                  - cell "‌" [ref=e746]:
+                    - generic [ref=e748]: ‌
+                  - cell "‌" [ref=e749]:
+                    - generic [ref=e751]: ‌
+                  - cell "‌" [ref=e752]:
+                    - generic [ref=e754]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e755]:
+                  - cell "‌" [ref=e756]:
+                    - generic [ref=e758]: ‌
+                  - cell "‌" [ref=e759]:
+                    - generic [ref=e761]: ‌
+                  - cell "‌" [ref=e762]:
+                    - generic [ref=e764]: ‌
+                  - cell "‌" [ref=e765]:
+                    - generic [ref=e767]: ‌
+            - generic [ref=e769]:
+              - button "이전" [disabled] [ref=e770]:
+                - generic [ref=e771]: 이전
+              - button "다음" [disabled] [ref=e772]:
+                - generic [ref=e773]: 다음
+      - generic [ref=e774]:
+        - generic [ref=e775]:
+          - generic [ref=e776]:
+            - generic [ref=e777]:
+              - paragraph [ref=e778]: 고객행복센터
+              - strong [ref=e779]: 1644-1107월~토요일 오전 7시 - 오후 6시
+              - generic [ref=e780]:
+                - generic [ref=e781]:
+                  - button "카카오톡 문의" [ref=e782] [cursor=pointer]
+                  - generic [ref=e783]:
+                    - text: 월~토요일
+                    - img [ref=e784]
+                    - text: 오전 7시 - 오후 6시
+                    - text: 일/공휴일
+                    - img [ref=e785]
+                    - text: 오전 7시 - 오후 1시
+                - generic [ref=e786]:
+                  - button "1:1 문의" [ref=e787] [cursor=pointer]
+                  - generic [ref=e788]:
+                    - text: 365일
+                    - text: 고객센터 운영시간에 순차적으로 답변드리겠습니다.
+                - generic [ref=e789]:
+                  - link "대량주문 문의" [ref=e790] [cursor=pointer]:
+                    - /url: https://docs.google.com/forms/d/e/1FAIpQLScWcjRuN6eWJK-G8x3NwBfE8IyKZIOq7jhD3fUXuKSWwPqzJw/viewform
+                  - generic [ref=e791]:
+                    - text: 월~금요일
+                    - img [ref=e792]
+                    - text: 오전 9시 - 오후 6시
+                    - text: 점심시간
+                    - img [ref=e793]
+                    - text: 낮 12시 - 오후 1시
+              - generic [ref=e794]:
+                - text: "비회원 문의 :"
+                - link "help@kurlycorp.com" [ref=e795] [cursor=pointer]:
+                  - /url: mailto:help@kurlycorp.com
+            - generic [ref=e796]:
+              - list [ref=e797]:
+                - listitem [ref=e798]:
+                  - link "회사소개" [ref=e799] [cursor=pointer]:
+                    - /url: https://newsroom.kurlycorp.com/
+                - listitem [ref=e800]:
+                  - link "컬리소개영상" [ref=e801] [cursor=pointer]:
+                    - /url: https://www.youtube.com/embed/WEep7BcboMQ?rel=0&showinfo=0&wmode=opaque&enablejsapi=1
+                - listitem [ref=e802]:
+                  - link "투자정보" [ref=e803] [cursor=pointer]:
+                    - /url: https://newsroom.kurlycorp.com/ir/%ec%9e%ac%eb%ac%b4%ec%a0%95%eb%b3%b4/
+                - listitem [ref=e804]:
+                  - link "인재채용" [ref=e805] [cursor=pointer]:
+                    - /url: https://kurly.career.greetinghr.com
+                - listitem [ref=e806]:
+                  - link "이용약관" [ref=e807] [cursor=pointer]:
+                    - /url: /user-terms/agreement
+                - listitem [ref=e808]:
+                  - link "개인정보처리방침" [ref=e809] [cursor=pointer]:
+                    - /url: https://privacy.kurly.com/kurly/privacypolicy
+                - listitem [ref=e810]:
+                  - link "이용안내" [ref=e811] [cursor=pointer]:
+                    - /url: /user-guide
+                - listitem [ref=e812]:
+                  - link "입점신청" [ref=e813] [cursor=pointer]:
+                    - /url: https://docs.google.com/forms/d/e/1FAIpQLScKI_Kd1lQAp68r-SIhiOWj0J43C99IvNbgFeT7-X9YLIqteA/viewform?usp=dialog
+              - generic [ref=e814]:
+                - text: "법인명 (상호) : 주식회사 컬리"
+                - generic [ref=e815]: "|"
+                - text: "사업자등록번호 : 261-81-23567"
+                - link "사업자정보 확인" [ref=e816] [cursor=pointer]:
+                  - /url: https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2618123567&apv_perm_no=
+                - text: "통신판매업 : 제 2018-서울강남-01646 호"
+                - text: "주소 : 서울특별시 강남구 테헤란로 133, 18층(역삼동)"
+                - generic [ref=e817]: "|"
+                - text: "대표이사 : 김슬아"
+                - text: "채용문의 :"
+                - link "recruit@kurlycorp.com" [ref=e818] [cursor=pointer]:
+                  - /url: mailto:recruit@kurlycorp.com
+                - text: "팩스: 070 - 7500 - 6098"
+              - list [ref=e819]:
+                - link "컬리 인스타그램 바로가기" [ref=e820] [cursor=pointer]:
+                  - /url: https://instagram.com/marketkurly
+                  - img "컬리 인스타그램 바로가기" [ref=e821]
+                - link "컬리 페이스북 바로가기" [ref=e822] [cursor=pointer]:
+                  - /url: https://www.facebook.com/marketkurly
+                  - img "컬리 페이스북 바로가기" [ref=e823]
+                - link "컬리 네이버블로그 바로가기" [ref=e824] [cursor=pointer]:
+                  - /url: https://blog.naver.com/marketkurly
+                  - img "컬리 네이버블로그 바로가기" [ref=e825]
+                - link "컬리 유튜브 바로가기" [ref=e826] [cursor=pointer]:
+                  - /url: https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg
+                  - img "컬리 유튜브 바로가기" [ref=e827]
+          - generic [ref=e828]:
+            - button "isms 로고 [인증범위] 컬리 쇼핑몰 서비스 개발·운영 (심사받지 않은 물리적 인프라 제외) [유효기간] 2025.01.15 ~ 2028.01.14" [ref=e829] [cursor=pointer]:
+              - img "isms 로고" [ref=e830]
+              - paragraph [ref=e831]:
+                - text: "[인증범위] 컬리 쇼핑몰 서비스 개발·운영"
+                - text: (심사받지 않은 물리적 인프라 제외)
+                - text: "[유효기간] 2025.01.15 ~ 2028.01.14"
+            - button "우리은행 로고 고객님이 현금으로 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다." [ref=e832] [cursor=pointer]:
+              - img "우리은행 로고" [ref=e833]
+              - paragraph [ref=e834]:
+                - text: 고객님이 현금으로 결제한 금액에 대해 우리은행과
+                - text: 채무지급보증 계약을 체결하여 안전거래를 보장하고
+                - text: 있습니다.
+        - generic [ref=e835]:
+          - text: 컬리에서 판매되는 상품 중에는 컬리에 입점한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
+          - text: 마켓플레이스(오픈마켓) 상품의 경우 컬리는 통신판매중개자로서 통신판매의 당사자가 아닙니다. 컬리는 해당 상품의 주문, 품질, 교환/환불 등 의무와 책임을 부담하지 않습니다.
+          - emphasis [ref=e836]: © KURLY CORP. ALL RIGHTS RESERVED
+      - img "위로가기 아이콘" [ref=e839]
+  - alert [ref=e840]: 검색결과 > 과자 - 마켓컬리
+```

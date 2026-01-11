@@ -1,0 +1,33 @@
+=== 팝업 URL ===
+https://www.kurly.com/address/shipping-address
+
+=== 팝업 HTML 일부 ===
+<!DOCTYPE html><html lang="ko" data-theme="light"><head><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover"><title>컬리 - 마켓컬리/뷰티컬리</title><meta name="description" content="Better Life for All. 건강한 식재료부터 믿을 수 있는 뷰티, 라이프스타일 상품까지. 나와 내 가족이 사고 싶은 상품을 판매합니다. 내일 아침 문 앞에서 만나요!"><meta name="keywords" content="다이어트, 식단, 닭가슴살, 요리, 치아바타, 레시피, 상차림, 다이어트음식, 이유식, 건강이유식, 뷰티, 화장품"><meta property="og:type" content="website"><meta property="og:site_name" content="컬리 - 마켓컬리/뷰티컬리"><meta property="og:title" content="컬리 - 마켓컬리/뷰티컬리"><meta property="og:description" content="Better Life for All. 건강한 식재료부터 믿을 수 있는 뷰티, 라이프스타일 상품까지. 나와 내 가족이 사고 싶은 상품을 판매합니다. 내일 아침 문 앞에서 만나요!"><meta property="og:image" content="https://res.kurly.com/images/marketkurly/logo/logo_sns_marketkurly.jpg"><meta property="og:url" content="https://www.kurly.com/address/shipping-address"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="컬리 - 마켓컬리/뷰티컬리"><meta property="twitter:description" content="Better Life for All. 건강한 식재료부터 믿을 수 있는 뷰티, 라이프스타일 상품까지. 나와 내 가족이 사고 싶은 상품을 판매합니다. 내일 아침 문 앞에서 만나요!"><meta property="twitter:image" content="https://res.kurly.com/images/marketkurly/logo/logo_sns_marketkurly.jpg"><meta property="twitter:url" content="https://www.kurly.com/address/shipping-address"><link rel="canonical" href="https://www.kurly.com/address/shipping-address"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com"><link rel="preconnect" href="https://product-image.kurly.com"><meta name="theme-color
+
+=== 총 frame 개수: 6 ===
+
+Frame 0:
+  name: 
+  url: https://www.kurly.com/address/shipping-address
+
+Frame 1:
+  name: 
+  url: about:blank
+
+Frame 2:
+  name: 
+  url: https://postcode.map.daum.net/search?origin=https%3A%2F%2Fwww.kurly.com&inc=&indaum=off&banner=on&ubl=on&mode=transmit&vt=layer&amr=on&amj=on&ani=off&sd=on&fi=on&fc=on&plrg=&plrgt=1.5&hmb=off&heb=off&asea=off&smh=off&zo=on&us=on&msi=10&ahs=off&whas=500&sm=off&a51=off&zn=Y&fullpath=%2Faddress%2Fshipping-address
+
+Frame 3:
+  name: a-1ec1qn70kol7
+  url: https://www.google.com/recaptcha/enterprise/anchor?ar=1&k=6LfL9h4rAAAAALGQGLkwj5dpTIoM_NoZciiEaP6b&co=aHR0cHM6Ly93d3cua3VybHkuY29tOjQ0Mw..&hl=en&v=7gg7H51Q-naNfhmCP3_R47ho&size=invisible&anchor-ms=20000&execute-ms=30000&cb=aqjkcsnrl3ia
+
+Frame 4:
+  name: 
+  url: about:blank
+
+Frame 5:
+  name: 
+  url: about:blank
+
+팝업 스크린샷 저장: popup-screenshot.png

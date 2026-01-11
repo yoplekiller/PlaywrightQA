@@ -1,0 +1,7 @@
+=== Daum iframe 찾음 ===
+iframe 내부 input 개수: 0
+
+=== 검색창 찾기 시도 ===
+1. textbox role: 0개
+2. input[type="text"]: 0개
+3. placeholder 있는 input: 0개

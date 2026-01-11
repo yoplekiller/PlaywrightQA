@@ -1,0 +1,1098 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - link "지금 가입하고 최대 1만 2천원 할인 쿠폰 받아가세요!" [ref=e6] [cursor=pointer]:
+        - /url: https://event.kurly.com/lego/event/2023/0911/join/coupon#lc112b1
+        - generic [ref=e7]: 지금 가입하고 최대 1만 2천원 할인 쿠폰 받아가세요!
+      - button "배너 하루 안보기" [ref=e8] [cursor=pointer]:
+        - img [ref=e9]
+        - generic [ref=e14]: 배너 하루 안보기
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - generic [ref=e18] [cursor=pointer]: 회원가입
+          - generic [ref=e20] [cursor=pointer]: 로그인
+          - generic [ref=e23] [cursor=pointer]: 고객센터
+        - generic [ref=e25]:
+          - generic [ref=e26]:
+            - img "마켓컬리 로고" [ref=e27]
+            - button "마켓컬리" [ref=e28] [cursor=pointer]
+            - button "뷰티컬리" [ref=e29] [cursor=pointer]
+          - generic [ref=e31]:
+            - textbox "검색어를 입력해주세요" [active] [ref=e32]: 수박
+            - button "delete-search-keyword" [ref=e33] [cursor=pointer]
+            - button "submit" [ref=e34] [cursor=pointer]
+          - generic [ref=e35]:
+            - button [ref=e36] [cursor=pointer]:
+              - img [ref=e37]
+            - button [ref=e40] [cursor=pointer]:
+              - img [ref=e41]
+            - button "0" [ref=e43] [cursor=pointer]:
+              - img [ref=e44]
+              - generic [ref=e47]: "0"
+      - generic [ref=e49]:
+        - button "카테고리" [ref=e51] [cursor=pointer]:
+          - img [ref=e52]
+          - generic [ref=e54]: 카테고리
+        - generic [ref=e55]:
+          - list [ref=e56]:
+            - listitem [ref=e57]:
+              - link "베스트" [ref=e58] [cursor=pointer]:
+                - /url: /collection-groups/market-best?site=MARKET
+            - listitem [ref=e59]:
+              - link "세일" [ref=e60] [cursor=pointer]:
+                - /url: /collection-groups/market-sales-group?site=MARKET
+            - listitem [ref=e61]:
+              - link "패션" [ref=e62] [cursor=pointer]:
+                - /url: /panels/fashion?site=MARKET
+            - listitem [ref=e63]:
+              - link "리빙" [ref=e64] [cursor=pointer]:
+                - /url: /panels/living?site=MARKET
+            - listitem [ref=e65]:
+              - link "신상" [ref=e66] [cursor=pointer]:
+                - /url: /collection-groups/market-newproduct?site=MARKET
+            - listitem [ref=e67]:
+              - link "특가/혜택" [ref=e68] [cursor=pointer]:
+                - /url: /market-benefit
+          - link "샛별·하루 배송안내" [ref=e69] [cursor=pointer]:
+            - /url: /user-guide/delivery
+            - generic [ref=e70]: 샛별·하루
+            - generic [ref=e71]: 배송안내
+    - main [ref=e74]:
+      - heading "' 수박 '에 대한 검색결과" [level=1] [ref=e76]:
+        - text: "'"
+        - generic [ref=e77]: 수박
+        - text: "'에 대한 검색결과"
+      - generic [ref=e78]:
+        - generic [ref=e79]:
+          - generic [ref=e80]:
+            - heading "필터" [level=2] [ref=e81]
+            - button "초기화" [disabled]:
+              - img
+              - generic: 초기화
+          - list [ref=e83]:
+            - listitem [ref=e84] [cursor=pointer]:
+              - button "Kurly Only 2" [ref=e85]:
+                - generic [ref=e86]:
+                  - button [ref=e87]:
+                    - img [ref=e88]
+                  - generic [ref=e91]: Kurly Only
+                  - generic [ref=e92]: "2"
+            - listitem [ref=e93] [cursor=pointer]:
+              - button "신상품 2" [ref=e94]:
+                - generic [ref=e95]:
+                  - button [ref=e96]:
+                    - img [ref=e97]
+                  - generic [ref=e100]: 신상품
+                  - generic [ref=e101]: "2"
+          - generic [ref=e102]:
+            - generic [ref=e103]:
+              - button "카테고리" [ref=e104] [cursor=pointer]:
+                - generic [ref=e105]: 카테고리
+                - img [ref=e106]
+              - navigation [ref=e108]:
+                - listitem [ref=e109]:
+                  - button "이유·수유용품 7" [ref=e110] [cursor=pointer]:
+                    - generic [ref=e112]:
+                      - button [ref=e113]:
+                        - img [ref=e114]
+                      - generic [ref=e117]: 이유·수유용품
+                      - generic [ref=e118]: "7"
+                - listitem [ref=e119]:
+                  - button "국산과일 5" [ref=e120] [cursor=pointer]:
+                    - generic [ref=e122]:
+                      - button [ref=e123]:
+                        - img [ref=e124]
+                      - generic [ref=e127]: 국산과일
+                      - generic [ref=e128]: "5"
+                - listitem [ref=e129]:
+                  - button "제철과일 5" [ref=e130] [cursor=pointer]:
+                    - generic [ref=e132]:
+                      - button [ref=e133]:
+                        - img [ref=e134]
+                      - generic [ref=e137]: 제철과일
+                      - generic [ref=e138]: "5"
+                - listitem [ref=e139]:
+                  - button "과일·야채음료 5" [ref=e140] [cursor=pointer]:
+                    - generic [ref=e142]:
+                      - button [ref=e143]:
+                        - img [ref=e144]
+                      - generic [ref=e147]: 과일·야채음료
+                      - generic [ref=e148]: "5"
+                - listitem [ref=e149]:
+                  - button "완구·잡화류 5" [ref=e150] [cursor=pointer]:
+                    - generic [ref=e152]:
+                      - button [ref=e153]:
+                        - img [ref=e154]
+                      - generic [ref=e157]: 완구·잡화류
+                      - generic [ref=e158]: "5"
+                - listitem [ref=e159]:
+                  - button "초콜릿·젤리·캔디 4" [ref=e160] [cursor=pointer]:
+                    - generic [ref=e162]:
+                      - button [ref=e163]:
+                        - img [ref=e164]
+                      - generic [ref=e167]: 초콜릿·젤리·캔디
+                      - generic [ref=e168]: "4"
+                - listitem [ref=e169]:
+                  - button "카테고리 랭킹 3" [ref=e170] [cursor=pointer]:
+                    - generic [ref=e172]:
+                      - button [ref=e173]:
+                        - img [ref=e174]
+                      - generic [ref=e177]: 카테고리 랭킹
+                      - generic [ref=e178]: "3"
+                - listitem [ref=e179]:
+                  - button "키즈 브랜드관 2" [ref=e180] [cursor=pointer]:
+                    - generic [ref=e182]:
+                      - button [ref=e183]:
+                        - img [ref=e184]
+                      - generic [ref=e187]: 키즈 브랜드관
+                      - generic [ref=e188]: "2"
+                - listitem [ref=e189]:
+                  - button "과자·간식 2" [ref=e190] [cursor=pointer]:
+                    - generic [ref=e192]:
+                      - button [ref=e193]:
+                        - img [ref=e194]
+                      - generic [ref=e197]: 과자·간식
+                      - generic [ref=e198]: "2"
+                - listitem [ref=e199]:
+                  - button "대용량 과자·간식 2" [ref=e200] [cursor=pointer]:
+                    - generic [ref=e202]:
+                      - button [ref=e203]:
+                        - img [ref=e204]
+                      - generic [ref=e207]: 대용량 과자·간식
+                      - generic [ref=e208]: "2"
+                - button "카테고리 더보기" [ref=e209] [cursor=pointer]:
+                  - text: 카테고리 더보기
+                  - img [ref=e210]
+            - generic [ref=e212]:
+              - button "가격" [ref=e213] [cursor=pointer]:
+                - generic [ref=e214]: 가격
+                - img [ref=e215]
+              - navigation [ref=e217]:
+                - listitem [ref=e218]:
+                  - button "7,287원 미만" [ref=e219] [cursor=pointer]:
+                    - generic [ref=e221]:
+                      - button [ref=e222]:
+                        - img [ref=e223]
+                      - generic [ref=e225]: 7,287원 미만
+                - listitem [ref=e226]:
+                  - button "7,287원 ~ 12,900원" [ref=e227] [cursor=pointer]:
+                    - generic [ref=e229]:
+                      - button [ref=e230]:
+                        - img [ref=e231]
+                      - generic [ref=e233]: 7,287원 ~ 12,900원
+                - listitem [ref=e234]:
+                  - button "12,900원 ~ 27,400원" [ref=e235] [cursor=pointer]:
+                    - generic [ref=e237]:
+                      - button [ref=e238]:
+                        - img [ref=e239]
+                      - generic [ref=e241]: 12,900원 ~ 27,400원
+                - listitem [ref=e242]:
+                  - button "27,400원 이상" [ref=e243] [cursor=pointer]:
+                    - generic [ref=e245]:
+                      - button [ref=e246]:
+                        - img [ref=e247]
+                      - generic [ref=e249]: 27,400원 이상
+            - generic [ref=e250]:
+              - button "브랜드" [ref=e251] [cursor=pointer]:
+                - generic [ref=e252]: 브랜드
+                - img [ref=e253]
+              - navigation [ref=e255]:
+                - list [ref=e256]:
+                  - listitem [ref=e257]:
+                    - button "가나다순" [ref=e258] [cursor=pointer]
+                  - listitem [ref=e259]:
+                    - button "상품 많은순" [ref=e260] [cursor=pointer]
+                - list [ref=e261]:
+                  - listitem [ref=e262]:
+                    - button "전체" [ref=e263] [cursor=pointer]
+                  - listitem [ref=e264]:
+                    - button "ㄱ" [ref=e265] [cursor=pointer]
+                  - listitem [ref=e266]:
+                    - button "ㄹ" [ref=e267] [cursor=pointer]
+                  - listitem [ref=e268]:
+                    - button "ㅁ" [ref=e269] [cursor=pointer]
+                  - listitem [ref=e270]:
+                    - button "ㅂ" [ref=e271] [cursor=pointer]
+                  - listitem [ref=e272]:
+                    - button "ㅅ" [ref=e273] [cursor=pointer]
+                  - listitem [ref=e274]:
+                    - button "ㅇ" [ref=e275] [cursor=pointer]
+                  - listitem [ref=e276]:
+                    - button "ㅋ" [ref=e277] [cursor=pointer]
+                  - listitem [ref=e278]:
+                    - button "ㅌ" [ref=e279] [cursor=pointer]
+                  - listitem [ref=e280]:
+                    - button "ㅍ" [ref=e281] [cursor=pointer]
+                  - listitem [ref=e282]:
+                    - button "ㅎ" [ref=e283] [cursor=pointer]
+                  - listitem [ref=e284]:
+                    - button "A-Z" [ref=e285] [cursor=pointer]
+                - listitem [ref=e286]:
+                  - button "구디푸디 1" [ref=e287] [cursor=pointer]:
+                    - generic [ref=e289]:
+                      - button [ref=e290]:
+                        - img [ref=e291]
+                      - generic [ref=e294]: 구디푸디
+                      - generic [ref=e295]: "1"
+                - listitem [ref=e296]:
+                  - button "롯데 1" [ref=e297] [cursor=pointer]:
+                    - generic [ref=e299]:
+                      - button [ref=e300]:
+                        - img [ref=e301]
+                      - generic [ref=e304]: 롯데
+                      - generic [ref=e305]: "1"
+                - listitem [ref=e306]:
+                  - button "롯데웰푸드 1" [ref=e307] [cursor=pointer]:
+                    - generic [ref=e309]:
+                      - button [ref=e310]:
+                        - img [ref=e311]
+                      - generic [ref=e314]: 롯데웰푸드
+                      - generic [ref=e315]: "1"
+                - listitem [ref=e316]:
+                  - button "루덴스 1" [ref=e317] [cursor=pointer]:
+                    - generic [ref=e319]:
+                      - button [ref=e320]:
+                        - img [ref=e321]
+                      - generic [ref=e324]: 루덴스
+                      - generic [ref=e325]: "1"
+                - listitem [ref=e326]:
+                  - button "미스터이토 1" [ref=e327] [cursor=pointer]:
+                    - generic [ref=e329]:
+                      - button [ref=e330]:
+                        - img [ref=e331]
+                      - generic [ref=e334]: 미스터이토
+                      - generic [ref=e335]: "1"
+                - listitem [ref=e336]:
+                  - button "미스터초이스 1" [ref=e337] [cursor=pointer]:
+                    - generic [ref=e339]:
+                      - button [ref=e340]:
+                        - img [ref=e341]
+                      - generic [ref=e344]: 미스터초이스
+                      - generic [ref=e345]: "1"
+                - listitem [ref=e346]:
+                  - button "바겐슈타이거 1" [ref=e347] [cursor=pointer]:
+                    - generic [ref=e349]:
+                      - button [ref=e350]:
+                        - img [ref=e351]
+                      - generic [ref=e354]: 바겐슈타이거
+                      - generic [ref=e355]: "1"
+                - listitem [ref=e356]:
+                  - button "수미과 2" [ref=e357] [cursor=pointer]:
+                    - generic [ref=e359]:
+                      - button [ref=e360]:
+                        - img [ref=e361]
+                      - generic [ref=e364]: 수미과
+                      - generic [ref=e365]: "2"
+                - listitem [ref=e366]:
+                  - button "시루조아 1" [ref=e367] [cursor=pointer]:
+                    - generic [ref=e369]:
+                      - button [ref=e370]:
+                        - img [ref=e371]
+                      - generic [ref=e374]: 시루조아
+                      - generic [ref=e375]: "1"
+                - listitem [ref=e376]:
+                  - button "앙쥬 4" [ref=e377] [cursor=pointer]:
+                    - generic [ref=e379]:
+                      - button [ref=e380]:
+                        - img [ref=e381]
+                      - generic [ref=e384]: 앙쥬
+                      - generic [ref=e385]: "4"
+                - button "브랜드 더보기" [ref=e386] [cursor=pointer]:
+                  - text: 브랜드 더보기
+                  - img [ref=e387]
+            - generic [ref=e389]:
+              - button "유형" [ref=e390] [cursor=pointer]:
+                - generic [ref=e391]: 유형
+                - img [ref=e392]
+              - navigation [ref=e394]:
+                - listitem [ref=e395]:
+                  - button "Kurly Only 2" [ref=e396] [cursor=pointer]:
+                    - generic [ref=e398]:
+                      - button [ref=e399]:
+                        - img [ref=e400]
+                      - generic [ref=e403]: Kurly Only
+                      - generic [ref=e404]: "2"
+                - listitem [ref=e405]:
+                  - button "희소가치 프로젝트 1" [ref=e406] [cursor=pointer]:
+                    - generic [ref=e408]:
+                      - button [ref=e409]:
+                        - img [ref=e410]
+                      - generic [ref=e413]: 희소가치 프로젝트
+                      - generic [ref=e414]: "1"
+            - generic [ref=e415]:
+              - button "혜택" [ref=e416] [cursor=pointer]:
+                - generic [ref=e417]: 혜택
+                - img [ref=e418]
+              - navigation [ref=e420]:
+                - listitem [ref=e421]:
+                  - button "할인상품 23" [ref=e422] [cursor=pointer]:
+                    - generic [ref=e424]:
+                      - button [ref=e425]:
+                        - img [ref=e426]
+                      - generic [ref=e429]: 할인상품
+                      - generic [ref=e430]: "23"
+            - generic [ref=e431]:
+              - button "출시" [ref=e432] [cursor=pointer]:
+                - generic [ref=e433]: 출시
+                - img [ref=e434]
+              - navigation [ref=e436]:
+                - listitem [ref=e437]:
+                  - button "신상품 2" [ref=e438] [cursor=pointer]:
+                    - generic [ref=e440]:
+                      - button [ref=e441]:
+                        - img [ref=e442]
+                      - generic [ref=e445]: 신상품
+                      - generic [ref=e446]: "2"
+            - generic [ref=e447]:
+              - button "포장타입" [ref=e448] [cursor=pointer]:
+                - generic [ref=e449]: 포장타입
+                - img [ref=e450]
+              - navigation [ref=e452]:
+                - listitem [ref=e453]:
+                  - button "상온 25" [ref=e454] [cursor=pointer]:
+                    - generic [ref=e456]:
+                      - button [ref=e457]:
+                        - img [ref=e458]
+                      - generic [ref=e461]: 상온
+                      - generic [ref=e462]: "25"
+                - listitem [ref=e463]:
+                  - button "냉장 7" [ref=e464] [cursor=pointer]:
+                    - generic [ref=e466]:
+                      - button [ref=e467]:
+                        - img [ref=e468]
+                      - generic [ref=e471]: 냉장
+                      - generic [ref=e472]: "7"
+                - listitem [ref=e473]:
+                  - button "냉동 6" [ref=e474] [cursor=pointer]:
+                    - generic [ref=e476]:
+                      - button [ref=e477]:
+                        - img [ref=e478]
+                      - generic [ref=e481]: 냉동
+                      - generic [ref=e482]: "6"
+            - generic [ref=e483]:
+              - button "배송" [ref=e484] [cursor=pointer]:
+                - generic [ref=e485]: 배송
+                - img [ref=e486]
+              - navigation [ref=e488]:
+                - listitem [ref=e489]:
+                  - button "샛별배송 22" [ref=e490] [cursor=pointer]:
+                    - generic [ref=e492]:
+                      - button [ref=e493]:
+                        - img [ref=e494]
+                      - generic [ref=e497]: 샛별배송
+                      - generic [ref=e498]: "22"
+                - listitem [ref=e499]:
+                  - button "판매자배송 15" [ref=e500] [cursor=pointer]:
+                    - generic [ref=e502]:
+                      - button [ref=e503]:
+                        - img [ref=e504]
+                      - generic [ref=e507]: 판매자배송
+                      - generic [ref=e508]: "15"
+        - generic [ref=e509]:
+          - generic [ref=e510]:
+            - generic [ref=e511]: 총 37건
+            - list [ref=e512]:
+              - listitem [ref=e513]:
+                - link "추천순" [ref=e514]:
+                  - /url: /search?sword=%EC%88%98%EB%B0%95&page=1&per_page=96&sorted_type=4
+                - img [ref=e516]
+              - listitem [ref=e519]:
+                - link "신상품순" [ref=e520] [cursor=pointer]:
+                  - /url: /search?sword=%EC%88%98%EB%B0%95&page=1&per_page=96&sorted_type=0
+              - listitem [ref=e521]:
+                - link "판매량순" [ref=e522] [cursor=pointer]:
+                  - /url: /search?sword=%EC%88%98%EB%B0%95&page=1&per_page=96&sorted_type=1
+              - listitem [ref=e523]:
+                - link "혜택순" [ref=e524] [cursor=pointer]:
+                  - /url: /search?sword=%EC%88%98%EB%B0%95&page=1&per_page=96&sorted_type=5
+              - listitem [ref=e525]:
+                - link "낮은 가격순" [ref=e526] [cursor=pointer]:
+                  - /url: /search?sword=%EC%88%98%EB%B0%95&page=1&per_page=96&sorted_type=2
+              - listitem [ref=e527]:
+                - link "높은 가격순" [ref=e528] [cursor=pointer]:
+                  - /url: /search?sword=%EC%88%98%EB%B0%95&page=1&per_page=96&sorted_type=3
+          - generic [ref=e529]:
+            - link "+10%쿠폰 담기 샛별배송 [KF365] 당도선별 수박 5kg 이상 언제 구입해도 맛있는 수박 49,900원 30%34,900원 9,999+ Kurly Only" [ref=e530] [cursor=pointer]:
+              - /url: /goods/5071669
+              - paragraph [ref=e537]: +10%쿠폰
+              - button "담기" [ref=e539]:
+                - img
+                - text: 담기
+              - generic [ref=e540]:
+                - generic [ref=e541]: 샛별배송
+                - generic [ref=e542]: "[KF365] 당도선별 수박 5kg 이상"
+                - paragraph [ref=e543]: 언제 구입해도 맛있는 수박
+                - generic [ref=e544]:
+                  - generic [ref=e546]: 49,900원
+                  - generic [ref=e547]:
+                    - generic [ref=e548]: 30%
+                    - generic [ref=e549]: 34,900원
+                - generic [ref=e550]:
+                  - img [ref=e552]
+                  - generic [ref=e557]: 9,999+
+                - generic [ref=e559]: Kurly Only
+            - link "+10%쿠폰 담기 샛별배송 [KF365] 당도선별 수박 4kg 이상 시원하고 달콤한 과즙이 듬뿍 39,900원 25%29,900원 999+ Kurly Only" [ref=e560] [cursor=pointer]:
+              - /url: /goods/5136384
+              - paragraph [ref=e567]: +10%쿠폰
+              - button "담기" [ref=e569]:
+                - img
+                - text: 담기
+              - generic [ref=e570]:
+                - generic [ref=e571]: 샛별배송
+                - generic [ref=e572]: "[KF365] 당도선별 수박 4kg 이상"
+                - paragraph [ref=e573]: 시원하고 달콤한 과즙이 듬뿍
+                - generic [ref=e574]:
+                  - generic [ref=e576]: 39,900원
+                  - generic [ref=e577]:
+                    - generic [ref=e578]: 25%
+                    - generic [ref=e579]: 29,900원
+                - generic [ref=e580]:
+                  - img [ref=e582]
+                  - generic [ref=e587]: 999+
+                - generic [ref=e589]: Kurly Only
+            - link "+10%쿠폰 담기 샛별배송 세지 멜론 1.6kg (후숙 필요) 녹진한 달콤함을 근사하게 즐기는 방법 28,900원 999+ 희소가치 프로젝트" [ref=e590] [cursor=pointer]:
+              - /url: /goods/5065232
+              - paragraph [ref=e597]: +10%쿠폰
+              - button "담기" [ref=e599]:
+                - img
+                - text: 담기
+              - generic [ref=e600]:
+                - generic [ref=e601]: 샛별배송
+                - generic [ref=e602]: 세지 멜론 1.6kg (후숙 필요)
+                - paragraph [ref=e603]: 녹진한 달콤함을 근사하게 즐기는 방법
+                - generic [ref=e606]: 28,900원
+                - generic [ref=e607]:
+                  - img [ref=e609]
+                  - generic [ref=e614]: 999+
+                - generic [ref=e616]: 희소가치 프로젝트
+            - link "담기 샛별배송 [엘제이드] 얼린 생 수박주스 250mL 수박 100% 그대로 갈아 넣은 3,400원 999+" [ref=e617] [cursor=pointer]:
+              - /url: /goods/5056661
+              - button "담기" [ref=e628]:
+                - img
+                - text: 담기
+              - generic [ref=e629]:
+                - generic [ref=e630]: 샛별배송
+                - generic [ref=e631]: "[엘제이드] 얼린 생 수박주스 250mL"
+                - paragraph [ref=e632]: 수박 100% 그대로 갈아 넣은
+                - generic [ref=e635]: 3,400원
+                - generic [ref=e636]:
+                  - img [ref=e638]
+                  - generic [ref=e643]: 999+
+            - link "담기 샛별배송 [제주깜놀] 국산 냉동 수박주스 3종 (택1) 3,400원~ 584" [ref=e644] [cursor=pointer]:
+              - /url: /goods/1001330595
+              - button "담기" [ref=e651]:
+                - img
+                - text: 담기
+              - generic [ref=e652]:
+                - generic [ref=e653]: 샛별배송
+                - generic [ref=e654]: "[제주깜놀] 국산 냉동 수박주스 3종 (택1)"
+                - generic [ref=e657]: 3,400원~
+                - generic [ref=e658]:
+                  - img [ref=e660]
+                  - generic [ref=e665]: "584"
+            - link "담기 샛별배송 [미스터초이스] 얼린 생 수박주스 (300mL X 6개) 달콤한 수박 100% 그대로 담은 18,500원 243" [ref=e666] [cursor=pointer]:
+              - /url: /goods/1000652103
+              - button "담기" [ref=e673]:
+                - img
+                - text: 담기
+              - generic [ref=e674]:
+                - generic [ref=e675]: 샛별배송
+                - generic [ref=e676]: "[미스터초이스] 얼린 생 수박주스 (300mL X 6개)"
+                - paragraph [ref=e677]: 달콤한 수박 100% 그대로 담은
+                - generic [ref=e680]: 18,500원
+                - generic [ref=e681]:
+                  - img [ref=e683]
+                  - generic [ref=e688]: "243"
+            - link "담기 샛별배송 [겟프레시] 수박주스 330mL 2종(택1) 3,600원~ 83" [ref=e689] [cursor=pointer]:
+              - /url: /goods/1001349033
+              - button "담기" [ref=e696]:
+                - img
+                - text: 담기
+              - generic [ref=e697]:
+                - generic [ref=e698]: 샛별배송
+                - generic [ref=e699]: "[겟프레시] 수박주스 330mL 2종(택1)"
+                - generic [ref=e702]: 3,600원~
+                - generic [ref=e703]:
+                  - img [ref=e705]
+                  - generic [ref=e710]: "83"
+            - link "담기 샛별배송 [롯데] 젤리셔스 수박바 젤리 448g (56g X 8개입) 시원한 수박맛 젤리 7,680원 11" [ref=e711] [cursor=pointer]:
+              - /url: /goods/1001391063
+              - button "담기" [ref=e718]:
+                - img
+                - text: 담기
+              - generic [ref=e719]:
+                - generic [ref=e720]: 샛별배송
+                - generic [ref=e721]: "[롯데] 젤리셔스 수박바 젤리 448g (56g X 8개입)"
+                - paragraph [ref=e722]: 시원한 수박맛 젤리
+                - generic [ref=e725]: 7,680원
+                - generic [ref=e726]:
+                  - img [ref=e728]
+                  - generic [ref=e733]: "11"
+            - link "담기 샛별배송 [풀무원] 아임리얼 700mL 5종 (택1) 넉넉히 만끽하는 신선한 주스 10,980원 13%9,480원~ 999+" [ref=e734] [cursor=pointer]:
+              - /url: /goods/5157237
+              - button "담기" [ref=e741]:
+                - img
+                - text: 담기
+              - generic [ref=e742]:
+                - generic [ref=e743]: 샛별배송
+                - generic [ref=e744]: "[풀무원] 아임리얼 700mL 5종 (택1)"
+                - paragraph [ref=e745]: 넉넉히 만끽하는 신선한 주스
+                - generic [ref=e746]:
+                  - generic [ref=e748]: 10,980원
+                  - generic [ref=e749]:
+                    - generic [ref=e750]: 13%
+                    - generic [ref=e751]: 9,480원~
+                - generic [ref=e752]:
+                  - img [ref=e754]
+                  - generic [ref=e759]: 999+
+            - link "담기 샛별배송 [시루조아] 삼색 설기 3종 (택1) 보기에도 좋고 먹기에도 좋은 떡 8,900원~ 999+" [ref=e760] [cursor=pointer]:
+              - /url: /goods/1000202617
+              - button "담기" [ref=e767]:
+                - img
+                - text: 담기
+              - generic [ref=e768]:
+                - generic [ref=e769]: 샛별배송
+                - generic [ref=e770]: "[시루조아] 삼색 설기 3종 (택1)"
+                - paragraph [ref=e771]: 보기에도 좋고 먹기에도 좋은 떡
+                - generic [ref=e774]: 8,900원~
+                - generic [ref=e775]:
+                  - img [ref=e777]
+                  - generic [ref=e782]: 999+
+            - link "+15%쿠폰 담기 판매자배송 [바겐슈타이거] 수박&재료 보관 투명 PC커버 트레이 세트 4종 택1 투명한 PC커버로 더욱 편리해진 트레이 세트! 25,000원 40%14,900원~ 821 무료배송" [ref=e783] [cursor=pointer]:
+              - /url: /goods/1000423524
+              - paragraph [ref=e790]: +15%쿠폰
+              - button "담기" [ref=e792]:
+                - img
+                - text: 담기
+              - generic [ref=e793]:
+                - generic [ref=e794]: 판매자배송
+                - generic [ref=e795]: "[바겐슈타이거] 수박&재료 보관 투명 PC커버 트레이 세트 4종 택1"
+                - paragraph [ref=e796]: 투명한 PC커버로 더욱 편리해진 트레이 세트!
+                - generic [ref=e797]:
+                  - generic [ref=e799]: 25,000원
+                  - generic [ref=e800]:
+                    - generic [ref=e801]: 40%
+                    - generic [ref=e802]: 14,900원~
+                - generic [ref=e803]:
+                  - img [ref=e805]
+                  - generic [ref=e810]: "821"
+                - generic [ref=e812]: 무료배송
+            - link "담기 샛별배송 [롯데웰푸드] 0 칼로리 바 3종 (75mL X 10개) (택1) 부담 없이 즐기는 인기 아이스크림 6,000원 999+" [ref=e813] [cursor=pointer]:
+              - /url: /goods/1000551852
+              - button "담기" [ref=e820]:
+                - img
+                - text: 담기
+              - generic [ref=e821]:
+                - generic [ref=e822]: 샛별배송
+                - generic [ref=e823]: "[롯데웰푸드] 0 칼로리 바 3종 (75mL X 10개) (택1)"
+                - paragraph [ref=e824]: 부담 없이 즐기는 인기 아이스크림
+                - generic [ref=e827]: 6,000원
+                - generic [ref=e828]:
+                  - img [ref=e830]
+                  - generic [ref=e835]: 999+
+            - link "담기 샛별배송 [카수가이] 과일 구미 6종 (택1) 새콤달콤 과즙을 품은 젤리 3,980원 10%3,580원 447" [ref=e836] [cursor=pointer]:
+              - /url: /goods/1000499709
+              - button "담기" [ref=e843]:
+                - img
+                - text: 담기
+              - generic [ref=e844]:
+                - generic [ref=e845]: 샛별배송
+                - generic [ref=e846]: "[카수가이] 과일 구미 6종 (택1)"
+                - paragraph [ref=e847]: 새콤달콤 과즙을 품은 젤리
+                - generic [ref=e848]:
+                  - generic [ref=e850]: 3,980원
+                  - generic [ref=e851]:
+                    - generic [ref=e852]: 10%
+                    - generic [ref=e853]: 3,580원
+                - generic [ref=e854]:
+                  - img [ref=e856]
+                  - generic [ref=e861]: "447"
+            - link "담기 판매자배송 [올리앤캐롤] 스태킹볼 3종 (택1) 72,800원 21%57,138원 무료배송" [ref=e862] [cursor=pointer]:
+              - /url: /goods/1001806923
+              - button "담기" [ref=e869]:
+                - img
+                - text: 담기
+              - generic [ref=e870]:
+                - generic [ref=e871]: 판매자배송
+                - generic [ref=e872]: "[올리앤캐롤] 스태킹볼 3종 (택1)"
+                - generic [ref=e873]:
+                  - generic [ref=e875]: 72,800원
+                  - generic [ref=e876]:
+                    - generic [ref=e877]: 21%
+                    - generic [ref=e878]: 57,138원
+                - generic [ref=e880]: 무료배송
+            - link "담기 판매자배송 [올리앤캐롤] 베이비빕 6종 (택1) 48,500원 19%39,160원 무료배송" [ref=e881] [cursor=pointer]:
+              - /url: /goods/1001818230
+              - button "담기" [ref=e888]:
+                - img
+                - text: 담기
+              - generic [ref=e889]:
+                - generic [ref=e890]: 판매자배송
+                - generic [ref=e891]: "[올리앤캐롤] 베이비빕 6종 (택1)"
+                - generic [ref=e892]:
+                  - generic [ref=e894]: 48,500원
+                  - generic [ref=e895]:
+                    - generic [ref=e896]: 19%
+                    - generic [ref=e897]: 39,160원
+                - generic [ref=e899]: 무료배송
+            - link "담기 샛별배송 [루덴스] 목 보호 과일캔디 3종 (택1) 펙틴으로 부드럽게 완성한 6,300원 3%6,110원 542" [ref=e900] [cursor=pointer]:
+              - /url: /goods/1000874938
+              - button "담기" [ref=e907]:
+                - img
+                - text: 담기
+              - generic [ref=e908]:
+                - generic [ref=e909]: 샛별배송
+                - generic [ref=e910]: "[루덴스] 목 보호 과일캔디 3종 (택1)"
+                - paragraph [ref=e911]: 펙틴으로 부드럽게 완성한
+                - generic [ref=e912]:
+                  - generic [ref=e914]: 6,300원
+                  - generic [ref=e915]:
+                    - generic [ref=e916]: 3%
+                    - generic [ref=e917]: 6,110원
+                - generic [ref=e918]:
+                  - img [ref=e920]
+                  - generic [ref=e925]: "542"
+            - link "담기 샛별배송 [티젠] 제로슈가 홍차 아이스티 4종 (5g X 10개) (택1) 걱정없는 달콤한 한 잔 4,500원~ 97" [ref=e926] [cursor=pointer]:
+              - /url: /goods/1001150162
+              - button "담기" [ref=e933]:
+                - img
+                - text: 담기
+              - generic [ref=e934]:
+                - generic [ref=e935]: 샛별배송
+                - generic [ref=e936]: "[티젠] 제로슈가 홍차 아이스티 4종 (5g X 10개) (택1)"
+                - paragraph [ref=e937]: 걱정없는 달콤한 한 잔
+                - generic [ref=e940]: 4,500원~
+                - generic [ref=e941]:
+                  - img [ref=e943]
+                  - generic [ref=e948]: "97"
+            - link "담기 샛별배송 [트라이앵글] 화채 볼 (싱글) 24,000원 36%15,360원 292" [ref=e949] [cursor=pointer]:
+              - /url: /goods/1001421404
+              - button "담기" [ref=e956]:
+                - img
+                - text: 담기
+              - generic [ref=e957]:
+                - generic [ref=e958]: 샛별배송
+                - generic [ref=e959]: "[트라이앵글] 화채 볼 (싱글)"
+                - generic [ref=e960]:
+                  - generic [ref=e962]: 24,000원
+                  - generic [ref=e963]:
+                    - generic [ref=e964]: 36%
+                    - generic [ref=e965]: 15,360원
+                - generic [ref=e966]:
+                  - img [ref=e968]
+                  - generic [ref=e973]: "292"
+            - link "+10% 쿠폰 담기 판매자배송 [앙쥬] 치발기 2종+과즙망 1종 (택1) 37,500원 31%25,555원 무료배송" [ref=e974] [cursor=pointer]:
+              - /url: /goods/1001416767
+              - paragraph [ref=e981]: +10% 쿠폰
+              - button "담기" [ref=e983]:
+                - img
+                - text: 담기
+              - generic [ref=e984]:
+                - generic [ref=e985]: 판매자배송
+                - generic [ref=e986]: "[앙쥬] 치발기 2종+과즙망 1종 (택1)"
+                - generic [ref=e987]:
+                  - generic [ref=e989]: 37,500원
+                  - generic [ref=e990]:
+                    - generic [ref=e991]: 31%
+                    - generic [ref=e992]: 25,555원
+                - generic [ref=e994]: 무료배송
+            - link "담기 샛별배송 [큐라덴] 큐라프록스 BEYOU 비유치약 비건 잇몸 불소치약 60mL 6종 (택1) 100% 식물성, 유해성분 0%, 6가지 맛의 안전한 미백 치약 17,000원 110" [ref=e995] [cursor=pointer]:
+              - /url: /goods/1001063470
+              - button "담기" [ref=e1002]:
+                - img
+                - text: 담기
+              - generic [ref=e1003]:
+                - generic [ref=e1004]: 샛별배송
+                - generic [ref=e1005]: "[큐라덴] 큐라프록스 BEYOU 비유치약 비건 잇몸 불소치약 60mL 6종 (택1)"
+                - paragraph [ref=e1006]: 100% 식물성, 유해성분 0%, 6가지 맛의 안전한 미백 치약
+                - generic [ref=e1009]: 17,000원
+                - generic [ref=e1010]:
+                  - img [ref=e1012]
+                  - generic [ref=e1017]: "110"
+            - link "+15% 쿠폰 담기 판매자배송 [히키키리키키] 유니크 귀여운 과일야채 주방장갑 경쾌한 에너지가 넘치는 일러스트 패턴의 주방장갑 10,900원 12%9,500원 66 무료배송" [ref=e1018] [cursor=pointer]:
+              - /url: /goods/1000678094
+              - paragraph [ref=e1025]: +15% 쿠폰
+              - button "담기" [ref=e1027]:
+                - img
+                - text: 담기
+              - generic [ref=e1028]:
+                - generic [ref=e1029]: 판매자배송
+                - generic [ref=e1030]: "[히키키리키키] 유니크 귀여운 과일야채 주방장갑"
+                - paragraph [ref=e1031]: 경쾌한 에너지가 넘치는 일러스트 패턴의 주방장갑
+                - generic [ref=e1032]:
+                  - generic [ref=e1034]: 10,900원
+                  - generic [ref=e1035]:
+                    - generic [ref=e1036]: 12%
+                    - generic [ref=e1037]: 9,500원
+                - generic [ref=e1038]:
+                  - img [ref=e1040]
+                  - generic [ref=e1045]: "66"
+                - generic [ref=e1047]: 무료배송
+            - link "+15% 쿠폰 담기 판매자배송 [히키키리키키]유니크 귀여운 과일야채 앞치마 6종 (택1) 경쾌한 에너지가 넘치는 일러스트 패턴의 생활방수 앞치마 32,900원 9%29,800원 59 무료배송" [ref=e1048] [cursor=pointer]:
+              - /url: /goods/1000678133
+              - paragraph [ref=e1055]: +15% 쿠폰
+              - button "담기" [ref=e1057]:
+                - img
+                - text: 담기
+              - generic [ref=e1058]:
+                - generic [ref=e1059]: 판매자배송
+                - generic [ref=e1060]: "[히키키리키키]유니크 귀여운 과일야채 앞치마 6종 (택1)"
+                - paragraph [ref=e1061]: 경쾌한 에너지가 넘치는 일러스트 패턴의 생활방수 앞치마
+                - generic [ref=e1062]:
+                  - generic [ref=e1064]: 32,900원
+                  - generic [ref=e1065]:
+                    - generic [ref=e1066]: 9%
+                    - generic [ref=e1067]: 29,800원
+                - generic [ref=e1068]:
+                  - img [ref=e1070]
+                  - generic [ref=e1075]: "59"
+                - generic [ref=e1077]: 무료배송
+            - link "+5% 쿠폰 담기 판매자배송 [앙쥬] 치발기 단품 (택1) 11,300원 5%10,735원~ 무료배송" [ref=e1078] [cursor=pointer]:
+              - /url: /goods/1001207374
+              - paragraph [ref=e1085]: +5% 쿠폰
+              - button "담기" [ref=e1087]:
+                - img
+                - text: 담기
+              - generic [ref=e1088]:
+                - generic [ref=e1089]: 판매자배송
+                - generic [ref=e1090]: "[앙쥬] 치발기 단품 (택1)"
+                - generic [ref=e1091]:
+                  - generic [ref=e1093]: 11,300원
+                  - generic [ref=e1094]:
+                    - generic [ref=e1095]: 5%
+                    - generic [ref=e1096]: 10,735원~
+                - generic [ref=e1098]: 무료배송
+            - link "담기 판매자배송 [포유렐라] UV차단 프룻 3단 암막 접이식 휴대용 자동우산 5종 (택1) 12,000원 25%8,890원 무료배송" [ref=e1099] [cursor=pointer]:
+              - /url: /goods/1001167746
+              - button "담기" [ref=e1106]:
+                - img
+                - text: 담기
+              - generic [ref=e1107]:
+                - generic [ref=e1108]: 판매자배송
+                - generic [ref=e1109]: "[포유렐라] UV차단 프룻 3단 암막 접이식 휴대용 자동우산 5종 (택1)"
+                - generic [ref=e1110]:
+                  - generic [ref=e1112]: 12,000원
+                  - generic [ref=e1113]:
+                    - generic [ref=e1114]: 25%
+                    - generic [ref=e1115]: 8,890원
+                - generic [ref=e1117]: 무료배송
+            - link "+10% 쿠폰 담기 판매자배송 [앙쥬] 국민 치발기 2종+손목(+케이스) (택1) 35,100원 27%25,555원 무료배송" [ref=e1118] [cursor=pointer]:
+              - /url: /goods/1001416768
+              - paragraph [ref=e1125]: +10% 쿠폰
+              - button "담기" [ref=e1127]:
+                - img
+                - text: 담기
+              - generic [ref=e1128]:
+                - generic [ref=e1129]: 판매자배송
+                - generic [ref=e1130]: "[앙쥬] 국민 치발기 2종+손목(+케이스) (택1)"
+                - generic [ref=e1131]:
+                  - generic [ref=e1133]: 35,100원
+                  - generic [ref=e1134]:
+                    - generic [ref=e1135]: 27%
+                    - generic [ref=e1136]: 25,555원
+                - generic [ref=e1138]: 무료배송
+            - link "담기 샛별배송 [롯데] 롤리팝 아이스 원통형 11g X 60개입 네 가지 맛을 한 통에 12,000원 10" [ref=e1139] [cursor=pointer]:
+              - /url: /goods/1001397547
+              - button "담기" [ref=e1146]:
+                - img
+                - text: 담기
+              - generic [ref=e1147]:
+                - generic [ref=e1148]: 샛별배송
+                - generic [ref=e1149]: "[롯데] 롤리팝 아이스 원통형 11g X 60개입"
+                - paragraph [ref=e1150]: 네 가지 맛을 한 통에
+                - generic [ref=e1153]: 12,000원
+                - generic [ref=e1154]:
+                  - img [ref=e1156]
+                  - generic [ref=e1161]: "10"
+            - link "+5% 쿠폰 담기 판매자배송 [앙쥬] 육아 백일 선물 세트 (+케이스) 80,700원 41%47,310원 무료배송" [ref=e1162] [cursor=pointer]:
+              - /url: /goods/1001398789
+              - paragraph [ref=e1169]: +5% 쿠폰
+              - button "담기" [ref=e1171]:
+                - img
+                - text: 담기
+              - generic [ref=e1172]:
+                - generic [ref=e1173]: 판매자배송
+                - generic [ref=e1174]: "[앙쥬] 육아 백일 선물 세트 (+케이스)"
+                - generic [ref=e1175]:
+                  - generic [ref=e1177]: 80,700원
+                  - generic [ref=e1178]:
+                    - generic [ref=e1179]: 41%
+                    - generic [ref=e1180]: 47,310원
+                - generic [ref=e1182]: 무료배송
+            - link "+10% 쿠폰 담기 판매자배송 [앙쥬] 단계별 추천 치발기 3종 1+1+1 37,500원 31%25,555원 무료배송" [ref=e1183] [cursor=pointer]:
+              - /url: /goods/1001398790
+              - paragraph [ref=e1190]: +10% 쿠폰
+              - button "담기" [ref=e1192]:
+                - img
+                - text: 담기
+              - generic [ref=e1193]:
+                - generic [ref=e1194]: 판매자배송
+                - generic [ref=e1195]: "[앙쥬] 단계별 추천 치발기 3종 1+1+1"
+                - generic [ref=e1196]:
+                  - generic [ref=e1198]: 37,500원
+                  - generic [ref=e1199]:
+                    - generic [ref=e1200]: 31%
+                    - generic [ref=e1201]: 25,555원
+                - generic [ref=e1203]: 무료배송
+            - link "최대혜택가 35,464원~ +12% 쿠폰 담기 판매자배송 [올리앤캐롤] 천연소재 치발기&베이비토이 - 채소 17종 (택1) 44,100원 8%40,300원~ 35 무료배송" [ref=e1204] [cursor=pointer]:
+              - /url: /goods/1001224485
+              - generic [ref=e1208]:
+                - generic [ref=e1211]: 최대혜택가 35,464원~
+                - paragraph [ref=e1213]: +12% 쿠폰
+              - button "담기" [ref=e1215]:
+                - img
+                - text: 담기
+              - generic [ref=e1216]:
+                - generic [ref=e1217]: 판매자배송
+                - generic [ref=e1218]: "[올리앤캐롤] 천연소재 치발기&베이비토이 - 채소 17종 (택1)"
+                - generic [ref=e1219]:
+                  - generic [ref=e1221]: 44,100원
+                  - generic [ref=e1222]:
+                    - generic [ref=e1223]: 8%
+                    - generic [ref=e1224]: 40,300원~
+                - generic [ref=e1225]:
+                  - img [ref=e1227]
+                  - generic [ref=e1232]: "35"
+                - generic [ref=e1234]: 무료배송
+            - link "+12% 쿠폰 최대혜택가 24,112원~ 담기 판매자배송 [올리앤캐롤] 천연소재 치발기&베이비토이 - 과일 18종 (택1) 28,600원 4%27,400원~ 무료배송" [ref=e1235] [cursor=pointer]:
+              - /url: /goods/1001224614
+              - generic [ref=e1239]:
+                - paragraph [ref=e1242]: +12% 쿠폰
+                - generic [ref=e1244]: 최대혜택가 24,112원~
+              - button "담기" [ref=e1246]:
+                - img
+                - text: 담기
+              - generic [ref=e1247]:
+                - generic [ref=e1248]: 판매자배송
+                - generic [ref=e1249]: "[올리앤캐롤] 천연소재 치발기&베이비토이 - 과일 18종 (택1)"
+                - generic [ref=e1250]:
+                  - generic [ref=e1252]: 28,600원
+                  - generic [ref=e1253]:
+                    - generic [ref=e1254]: 4%
+                    - generic [ref=e1255]: 27,400원~
+                - generic [ref=e1257]: 무료배송
+            - link "담기 판매자배송 [구디푸디] 일러스트 데코테이프 데코러쉬 25종 (택1) 수정테이프 스타일로 편리한 다꾸 데코테이프 8,000원 32%5,400원 무료배송" [ref=e1258] [cursor=pointer]:
+              - /url: /goods/1000537193
+              - button "담기" [ref=e1265]:
+                - img
+                - text: 담기
+              - generic [ref=e1266]:
+                - generic [ref=e1267]: 판매자배송
+                - generic [ref=e1268]: "[구디푸디] 일러스트 데코테이프 데코러쉬 25종 (택1)"
+                - paragraph [ref=e1269]: 수정테이프 스타일로 편리한 다꾸 데코테이프
+                - generic [ref=e1270]:
+                  - generic [ref=e1272]: 8,000원
+                  - generic [ref=e1273]:
+                    - generic [ref=e1274]: 32%
+                    - generic [ref=e1275]: 5,400원
+                - generic [ref=e1277]: 무료배송
+            - link "+12% 쿠폰 최대혜택가 24,112원~ 담기 판매자배송 [올리앤캐롤] 천연소재 치발기&베이비토이 - 채소&과일 BEST 모음 (택1) 28,600원 4%27,400원~ 82 무료배송" [ref=e1278] [cursor=pointer]:
+              - /url: /goods/1001242275
+              - generic [ref=e1282]:
+                - paragraph [ref=e1285]: +12% 쿠폰
+                - generic [ref=e1287]: 최대혜택가 24,112원~
+              - button "담기" [ref=e1289]:
+                - img
+                - text: 담기
+              - generic [ref=e1290]:
+                - generic [ref=e1291]: 판매자배송
+                - generic [ref=e1292]: "[올리앤캐롤] 천연소재 치발기&베이비토이 - 채소&과일 BEST 모음 (택1)"
+                - generic [ref=e1293]:
+                  - generic [ref=e1295]: 28,600원
+                  - generic [ref=e1296]:
+                    - generic [ref=e1297]: 4%
+                    - generic [ref=e1298]: 27,400원~
+                - generic [ref=e1299]:
+                  - img [ref=e1301]
+                  - generic [ref=e1306]: "82"
+                - generic [ref=e1308]: 무료배송
+            - link "+10%쿠폰 Coming Soon 재입고 알림 샛별배송 [수미과] 조각 수박 400g 혼자서도 부담 없는 간편 수박 13,900원 21%10,900원 999+" [ref=e1309] [cursor=pointer]:
+              - /url: /goods/1000172757
+              - generic [ref=e1313]:
+                - paragraph [ref=e1316]: +10%쿠폰
+                - generic [ref=e1319]: Coming Soon
+              - button "재입고 알림" [ref=e1321]:
+                - img
+                - text: 재입고 알림
+              - generic [ref=e1322]:
+                - generic [ref=e1323]: 샛별배송
+                - generic [ref=e1324]: "[수미과] 조각 수박 400g"
+                - paragraph [ref=e1325]: 혼자서도 부담 없는 간편 수박
+                - generic [ref=e1326]:
+                  - generic [ref=e1328]: 13,900원
+                  - generic [ref=e1329]:
+                    - generic [ref=e1330]: 21%
+                    - generic [ref=e1331]: 10,900원
+                - generic [ref=e1332]:
+                  - img [ref=e1334]
+                  - generic [ref=e1339]: 999+
+            - link "+10%쿠폰 Coming Soon 재입고 알림 샛별배송 [수미과] 화채용 조각 수박 600g 간편하게 즐기는 여름의 맛 17,900원 27%12,900원 785" [ref=e1340] [cursor=pointer]:
+              - /url: /goods/1000577911
+              - generic [ref=e1344]:
+                - paragraph [ref=e1347]: +10%쿠폰
+                - generic [ref=e1350]: Coming Soon
+              - button "재입고 알림" [ref=e1352]:
+                - img
+                - text: 재입고 알림
+              - generic [ref=e1353]:
+                - generic [ref=e1354]: 샛별배송
+                - generic [ref=e1355]: "[수미과] 화채용 조각 수박 600g"
+                - paragraph [ref=e1356]: 간편하게 즐기는 여름의 맛
+                - generic [ref=e1357]:
+                  - generic [ref=e1359]: 17,900원
+                  - generic [ref=e1360]:
+                    - generic [ref=e1361]: 27%
+                    - generic [ref=e1362]: 12,900원
+                - generic [ref=e1363]:
+                  - img [ref=e1365]
+                  - generic [ref=e1370]: "785"
+            - link "Coming Soon 재입고 알림 샛별배송 [미스터이토] 여름한정 수박 초코칩 쿠키 142.5g 여름을 닮은 산뜻한 달콤함 4,490원 43" [ref=e1371] [cursor=pointer]:
+              - /url: /goods/1001297664
+              - generic [ref=e1379]: Coming Soon
+              - button "재입고 알림" [ref=e1381]:
+                - img
+                - text: 재입고 알림
+              - generic [ref=e1382]:
+                - generic [ref=e1383]: 샛별배송
+                - generic [ref=e1384]: "[미스터이토] 여름한정 수박 초코칩 쿠키 142.5g"
+                - paragraph [ref=e1385]: 여름을 닮은 산뜻한 달콤함
+                - generic [ref=e1388]: 4,490원
+                - generic [ref=e1389]:
+                  - img [ref=e1391]
+                  - generic [ref=e1396]: "43"
+            - link "Coming Soon 재입고 알림 샛별배송 [위니비니] 월리의 스위트 쿨링백 367g 귀여운 보냉백에 맛있는 젤리 가득 17,800원 34" [ref=e1397] [cursor=pointer]:
+              - /url: /goods/1001409460
+              - generic [ref=e1405]: Coming Soon
+              - button "재입고 알림" [ref=e1407]:
+                - img
+                - text: 재입고 알림
+              - generic [ref=e1408]:
+                - generic [ref=e1409]: 샛별배송
+                - generic [ref=e1410]: "[위니비니] 월리의 스위트 쿨링백 367g"
+                - paragraph [ref=e1411]: 귀여운 보냉백에 맛있는 젤리 가득
+                - generic [ref=e1414]: 17,800원
+                - generic [ref=e1415]:
+                  - img [ref=e1417]
+                  - generic [ref=e1422]: "34"
+            - link "Coming Soon 재입고 알림 샛별배송 [위니비니] 쿨 앤 사우어 반반 젤리박스 380g 청량함과 짜릿함을 모두 담은 젤리박스 12,400원" [ref=e1423] [cursor=pointer]:
+              - /url: /goods/1001409458
+              - generic [ref=e1431]: Coming Soon
+              - button "재입고 알림" [ref=e1433]:
+                - img
+                - text: 재입고 알림
+              - generic [ref=e1434]:
+                - generic [ref=e1435]: 샛별배송
+                - generic [ref=e1436]: "[위니비니] 쿨 앤 사우어 반반 젤리박스 380g"
+                - paragraph [ref=e1437]: 청량함과 짜릿함을 모두 담은 젤리박스
+                - generic [ref=e1440]: 12,400원
+    - generic [ref=e1444]:
+      - generic [ref=e1445]:
+        - generic [ref=e1446]:
+          - generic [ref=e1447]:
+            - paragraph [ref=e1448]: 고객행복센터
+            - strong [ref=e1449]: 1644-1107월~토요일 오전 7시 - 오후 6시
+            - generic [ref=e1450]:
+              - generic [ref=e1451]:
+                - button "카카오톡 문의" [ref=e1452] [cursor=pointer]
+                - generic [ref=e1453]:
+                  - text: 월~토요일
+                  - img [ref=e1454]
+                  - text: 오전 7시 - 오후 6시
+                  - text: 일/공휴일
+                  - img [ref=e1455]
+                  - text: 오전 7시 - 오후 1시
+              - generic [ref=e1456]:
+                - button "1:1 문의" [ref=e1457] [cursor=pointer]
+                - generic [ref=e1458]:
+                  - text: 365일
+                  - text: 고객센터 운영시간에 순차적으로 답변드리겠습니다.
+              - generic [ref=e1459]:
+                - link "대량주문 문의" [ref=e1460] [cursor=pointer]:
+                  - /url: https://docs.google.com/forms/d/e/1FAIpQLScWcjRuN6eWJK-G8x3NwBfE8IyKZIOq7jhD3fUXuKSWwPqzJw/viewform
+                - generic [ref=e1461]:
+                  - text: 월~금요일
+                  - img [ref=e1462]
+                  - text: 오전 9시 - 오후 6시
+                  - text: 점심시간
+                  - img [ref=e1463]
+                  - text: 낮 12시 - 오후 1시
+            - generic [ref=e1464]:
+              - text: "비회원 문의 :"
+              - link "help@kurlycorp.com" [ref=e1465] [cursor=pointer]:
+                - /url: mailto:help@kurlycorp.com
+          - generic [ref=e1466]:
+            - list [ref=e1467]:
+              - listitem [ref=e1468]:
+                - link "회사소개" [ref=e1469] [cursor=pointer]:
+                  - /url: https://newsroom.kurlycorp.com/
+              - listitem [ref=e1470]:
+                - link "컬리소개영상" [ref=e1471] [cursor=pointer]:
+                  - /url: https://www.youtube.com/embed/WEep7BcboMQ?rel=0&showinfo=0&wmode=opaque&enablejsapi=1
+              - listitem [ref=e1472]:
+                - link "투자정보" [ref=e1473] [cursor=pointer]:
+                  - /url: https://newsroom.kurlycorp.com/ir/%ec%9e%ac%eb%ac%b4%ec%a0%95%eb%b3%b4/
+              - listitem [ref=e1474]:
+                - link "인재채용" [ref=e1475] [cursor=pointer]:
+                  - /url: https://kurly.career.greetinghr.com
+              - listitem [ref=e1476]:
+                - link "이용약관" [ref=e1477] [cursor=pointer]:
+                  - /url: /user-terms/agreement
+              - listitem [ref=e1478]:
+                - link "개인정보처리방침" [ref=e1479] [cursor=pointer]:
+                  - /url: https://privacy.kurly.com/kurly/privacypolicy
+              - listitem [ref=e1480]:
+                - link "이용안내" [ref=e1481] [cursor=pointer]:
+                  - /url: /user-guide
+              - listitem [ref=e1482]:
+                - link "입점신청" [ref=e1483] [cursor=pointer]:
+                  - /url: https://docs.google.com/forms/d/e/1FAIpQLScKI_Kd1lQAp68r-SIhiOWj0J43C99IvNbgFeT7-X9YLIqteA/viewform?usp=dialog
+            - generic [ref=e1484]:
+              - text: "법인명 (상호) : 주식회사 컬리"
+              - generic [ref=e1485]: "|"
+              - text: "사업자등록번호 : 261-81-23567"
+              - link "사업자정보 확인" [ref=e1486] [cursor=pointer]:
+                - /url: https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2618123567&apv_perm_no=
+              - text: "통신판매업 : 제 2018-서울강남-01646 호"
+              - text: "주소 : 서울특별시 강남구 테헤란로 133, 18층(역삼동)"
+              - generic [ref=e1487]: "|"
+              - text: "대표이사 : 김슬아"
+              - text: "채용문의 :"
+              - link "recruit@kurlycorp.com" [ref=e1488] [cursor=pointer]:
+                - /url: mailto:recruit@kurlycorp.com
+              - text: "팩스: 070 - 7500 - 6098"
+            - list [ref=e1489]:
+              - link "컬리 인스타그램 바로가기" [ref=e1490] [cursor=pointer]:
+                - /url: https://instagram.com/marketkurly
+                - img "컬리 인스타그램 바로가기" [ref=e1491]
+              - link "컬리 페이스북 바로가기" [ref=e1492] [cursor=pointer]:
+                - /url: https://www.facebook.com/marketkurly
+                - img "컬리 페이스북 바로가기" [ref=e1493]
+              - link "컬리 네이버블로그 바로가기" [ref=e1494] [cursor=pointer]:
+                - /url: https://blog.naver.com/marketkurly
+                - img "컬리 네이버블로그 바로가기" [ref=e1495]
+              - link "컬리 유튜브 바로가기" [ref=e1496] [cursor=pointer]:
+                - /url: https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg
+                - img "컬리 유튜브 바로가기" [ref=e1497]
+        - generic [ref=e1498]:
+          - button "isms 로고 [인증범위] 컬리 쇼핑몰 서비스 개발·운영 (심사받지 않은 물리적 인프라 제외) [유효기간] 2025.01.15 ~ 2028.01.14" [ref=e1499] [cursor=pointer]:
+            - img "isms 로고" [ref=e1500]
+            - paragraph [ref=e1501]:
+              - text: "[인증범위] 컬리 쇼핑몰 서비스 개발·운영"
+              - text: (심사받지 않은 물리적 인프라 제외)
+              - text: "[유효기간] 2025.01.15 ~ 2028.01.14"
+          - button "우리은행 로고 고객님이 현금으로 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다." [ref=e1502] [cursor=pointer]:
+            - img "우리은행 로고" [ref=e1503]
+            - paragraph [ref=e1504]:
+              - text: 고객님이 현금으로 결제한 금액에 대해 우리은행과
+              - text: 채무지급보증 계약을 체결하여 안전거래를 보장하고
+              - text: 있습니다.
+      - generic [ref=e1505]:
+        - text: 컬리에서 판매되는 상품 중에는 컬리에 입점한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
+        - text: 마켓플레이스(오픈마켓) 상품의 경우 컬리는 통신판매중개자로서 통신판매의 당사자가 아닙니다. 컬리는 해당 상품의 주문, 품질, 교환/환불 등 의무와 책임을 부담하지 않습니다.
+        - emphasis [ref=e1506]: © KURLY CORP. ALL RIGHTS RESERVED
+  - alert [ref=e1507]: 검색결과 > 수박 - 마켓컬리
+```

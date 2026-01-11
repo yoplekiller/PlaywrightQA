@@ -1,0 +1,101 @@
+총 버튼 개수: 34
+
+버튼 0:
+  텍스트: "배너 하루 안보기"
+  aria-label: "null"
+  class: "css-10w9uhr e1p13h9k0"
+
+버튼 1:
+  텍스트: "마켓컬리"
+  aria-label: "null"
+  class: "active css-mxd3pm ekdqe1a0"
+
+버튼 2:
+  텍스트: "뷰티컬리"
+  aria-label: "null"
+  class: "css-mxd3pm ekdqe1a0"
+
+버튼 3:
+  텍스트: ""
+  aria-label: "submit"
+  class: "css-1moujq5 e83fwuh0"
+
+버튼 4:
+  텍스트: ""
+  aria-label: "null"
+  class: "css-1bq61g1"
+
+버튼 5:
+  텍스트: ""
+  aria-label: "null"
+  class: "css-1cs6gj8"
+
+버튼 6:
+  텍스트: "0"
+  aria-label: "null"
+  class: "css-1o9e4kz"
+
+버튼 7:
+  텍스트: "카테고리"
+  aria-label: "null"
+  class: "css-1eccc4o"
+
+버튼 8:
+  텍스트: "닫기"
+  aria-label: "null"
+  class: "css-1uiqp9h ep8zks40"
+
+버튼 9:
+  텍스트: ""
+  aria-label: "null"
+  class: "css-1lsz3kj e9otvnb0"
+
+버튼 10:
+  텍스트: ""
+  aria-label: "null"
+  class: "css-kfz8up e9otvnb0"
+
+버튼 11:
+  텍스트: ""
+  aria-label: "null"
+  class: "css-1arxvdh"
+
+버튼 12:
+  텍스트: "0334전체보기"
+  aria-label: "null"
+  class: "css-pfxiu1"
+
+버튼 13:
+  텍스트: "담기"
+  aria-label: "null"
+  class: "product-function css-4ypn7b e17x72af0"
+
+버튼 14:
+  텍스트: "담기"
+  aria-label: "null"
+  class: "product-function css-4ypn7b e17x72af0"
+
+버튼 15:
+  텍스트: "담기"
+  aria-label: "null"
+  class: "product-function css-4ypn7b e17x72af0"
+
+버튼 16:
+  텍스트: "담기"
+  aria-label: "null"
+  class: "product-function css-4ypn7b e17x72af0"
+
+버튼 17:
+  텍스트: "담기"
+  aria-label: "null"
+  class: "product-function css-4ypn7b e17x72af0"
+
+버튼 18:
+  텍스트: "담기"
+  aria-label: "null"
+  class: "product-function css-4ypn7b e17x72af0"
+
+버튼 19:
+  텍스트: "담기"
+  aria-label: "null"
+  class: "product-function css-4ypn7b e17x72af0"

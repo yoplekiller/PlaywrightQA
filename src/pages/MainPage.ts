@@ -13,6 +13,7 @@ export class MainPage extends BasePage {
     private readonly likeButton!: Locator;
     private readonly searchButton!: Locator;
     private readonly cartButton!: Locator;
+    private readonly addressButton!: Locator;
 
     
     
@@ -29,7 +30,9 @@ export class MainPage extends BasePage {
         this.searchButton = page.getByRole('button', { name: /검색/i });
         this.cartButton = page.locator('button.css-1e2hf7q.eebvnww2:visible')
         this.likeButton = page.locator("//button[@class='css-1cs6gj8']//*[name()='svg']")
-
+        
+        // 주소 버튼 - 헤더의 텍스트 없는 버튼 (class 기반)
+        this.addressButton = page.locator('button.css-1bq61g1').first();
          
     }
 
@@ -50,9 +53,19 @@ export class MainPage extends BasePage {
     async clickCartButton() {
         await this.click(this.cartButton);
     }
+       
+    async hoverAddressButton() {
+        await this.addressButton.waitFor({ state: 'visible', timeout: 10000 });
+        await this.hover(this.addressButton);      
+        await this.page.waitForTimeout(1500);
+    }
+    
     // 검색어 입력 및 검색
     async fillSearchBox(text: string) {
         await this.fill(this.searchBox, text);
+    }
+    async clickSearchButton() {
+        await this.click(this.searchButton);
     }
 
     async clickPickButton() {

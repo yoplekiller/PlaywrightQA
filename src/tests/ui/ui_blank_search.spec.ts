@@ -1,34 +1,27 @@
 import { test, expect } from '@playwright/test';
-import { getNowString } from '../../utils/dataFormat';
-import fs from 'fs';
-import path from 'path';
+import * as allure from 'allure-js-commons';
+import { MainPage } from '../../pages/MainPage';
 
 test('🔲 공백 입력 시, 팝업 노출 확인', async ({ page }, testInfo) => {
-  await page.goto('https://www.kurly.com/main');
-  await page.setViewportSize({ width: 1280, height: 720 });
+  
+  allure.description('메인 페이지 검색창에 공백을 입력하고 검색 시, "검색어를 입력해주세요" 팝업이 정상적으로 노출되는지 확인하는 테스트.');
 
-  const searchBox = page.locator('input[placeholder="검색어를 입력해주세요"]');
-  await searchBox.fill('');
-  await searchBox.press('Enter');
+    const mainpage = new MainPage(page);
 
-  // 🔍 팝업 셀렉터 확인
-  const popup = page.locator('.popup-content.css-15yaaju.e1k5padi2');
-  await expect(popup).toBeVisible({ timeout: 5000 });
+    await allure.step('메인 페이지 접속', async () => {
+      await page.goto('https://www.kurly.com/main');
+      await page.setViewportSize({ width: 1280, height: 720 }); 
+    });
 
-  const popupText = await popup.textContent();
-  expect(popupText).toContain('검색어를 입력해주세요');
-  await page.waitForTimeout(2000); // 페이지 로딩 대기
+    await allure.step('검색창에 공백 입력 후 검색', async () => {
+      await mainpage.searchGoods(" ");
+    }
+  );
 
-  // 📸 스크린샷 저장 + Allure 첨부
-  const now = getNowString();
-  const browserName = testInfo.project.name;
-  const screenshotName = `blank_search_popup_${browserName}_${now}.png`;
-  const screenshotPath = path.join('screenshots', screenshotName);
+  await allure.step('팝업 노출 확인', async () => {
+    const popup = page.locator('.popup-content.css-15yaaju.e1k5padi2');
+    await expect(popup).toBeVisible({ timeout: 5000 });
+    await expect(page.getByText('검색어를 입력해주세요')).toBeVisible();
+  });
 
-  // 폴더 없으면 생성
-  if (!fs.existsSync('screenshots')) {
-    fs.mkdirSync('screenshots');
-  }
-
-  await page.screenshot({ path: screenshotPath });
 });

@@ -21,9 +21,6 @@ test('상품 찜하기 버튼 후 찜하기에 포함되어 있는지 확인', a
   const kurly_pw = process.env.KURLY_TEST_USER_PASSWORD!;
   
   
-
-
-
   await allure.step('마켓컬리 메인 페이지 접속 및 로그인', async () => {
     await page.goto('https://www.kurly.com/main');
     await mainPage.clickLoginButton();

@@ -1,0 +1,5 @@
+=== 1단계: Daum iframe 찾기 ===
+Daum iframe 내부 iframe 개수: 0
+
+=== 2단계: entryIframe 찾기 ===
+✅ entryIframe 발견! input 개수: 0

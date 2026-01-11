@@ -1,0 +1,5 @@
+=== 더 긴 대기 시간 ===
+=== entryIframe 내부 모든 요소 확인 ===
+전체 요소 개수: 0
+input 개수: 0
+entryIframe 안의 iframe 개수: 0
