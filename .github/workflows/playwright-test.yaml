@@ -120,6 +120,7 @@ jobs:
           publish_dir: ./playwright-report
           destination_dir: playwright-report
           publish_branch: gh-pages
+          keep_files: true
 
 
       - name: Deploy Allure HTML Report
@@ -130,7 +131,7 @@ jobs:
           publish_dir: ./allure-report
           destination_dir: allure-report-ui
           publish_branch: gh-pages
-          keep_files: false
+          keep_files: true
 
       - name: Create Test Summary
         if: always()
@@ -238,7 +239,7 @@ jobs:
           publish_dir: ./allure-report
           destination_dir: allure-report-api
           publish_branch: gh-pages
-          keep_files: false
+          keep_files: true
 
 
       - name: Create Test Summary
