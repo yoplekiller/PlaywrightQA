@@ -120,8 +120,7 @@ jobs:
           publish_dir: ./playwright-report
           destination_dir: playwright-report
           publish_branch: gh-pages
-          keep_files: false
-          force_orphan: true
+
 
       - name: Deploy Allure HTML Report
         if: always()
@@ -132,7 +131,6 @@ jobs:
           destination_dir: allure-report-ui
           publish_branch: gh-pages
           keep_files: false
-          force_orphan: true
 
       - name: Create Test Summary
         if: always()
@@ -241,7 +239,7 @@ jobs:
           destination_dir: allure-report-api
           publish_branch: gh-pages
           keep_files: false
-          force_orphan: true
+
 
       - name: Create Test Summary
         if: always()
