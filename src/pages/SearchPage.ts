@@ -93,8 +93,12 @@ export class SearchPage extends BasePage {
         await this.click(goodsLocator);
     }
 
+    goodsSearchResult(name: string): Locator{
+        return this.page.getByText(new RegExp(`'${name}'에 대한 검색결과`));
+    }
 
-
-
-
+    async isGoodsSearchResultVisible(name: string): Promise<boolean> {
+        return await this.goodsSearchResult(name).isVisible();
+         
+  }
 }

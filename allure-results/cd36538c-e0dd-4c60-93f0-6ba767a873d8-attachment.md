@@ -1,0 +1,352 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - link "지금 가입하고 최대 1만 2천원 할인 쿠폰 받아가세요!" [ref=e6] [cursor=pointer]:
+        - /url: https://event.kurly.com/lego/event/2023/0911/join/coupon#lc112b1
+        - generic [ref=e7]: 지금 가입하고 최대 1만 2천원 할인 쿠폰 받아가세요!
+      - button "배너 하루 안보기" [ref=e8] [cursor=pointer]:
+        - img [ref=e9]
+        - generic [ref=e14]: 배너 하루 안보기
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - generic [ref=e18] [cursor=pointer]: 회원가입
+          - generic [ref=e20] [cursor=pointer]: 로그인
+          - generic [ref=e23] [cursor=pointer]: 고객센터
+        - generic [ref=e25]:
+          - generic [ref=e26]:
+            - img "마켓컬리 로고" [ref=e27]
+            - button "마켓컬리" [ref=e28] [cursor=pointer]
+            - button "뷰티컬리" [ref=e29] [cursor=pointer]
+          - generic [ref=e31]:
+            - textbox "검색어를 입력해주세요" [active] [ref=e32]: 밥
+            - button "delete-search-keyword" [ref=e33] [cursor=pointer]
+            - button "submit" [ref=e34] [cursor=pointer]
+          - generic [ref=e35]:
+            - button [ref=e36] [cursor=pointer]:
+              - img [ref=e37]
+            - button [ref=e40] [cursor=pointer]:
+              - img [ref=e41]
+            - button "0" [ref=e43] [cursor=pointer]:
+              - img [ref=e44]
+              - generic [ref=e47]: "0"
+      - generic [ref=e49]:
+        - button "카테고리" [ref=e51] [cursor=pointer]:
+          - img [ref=e52]
+          - generic [ref=e54]: 카테고리
+        - generic [ref=e55]:
+          - list [ref=e56]:
+            - listitem [ref=e57]:
+              - link "베스트" [ref=e58] [cursor=pointer]:
+                - /url: /collection-groups/market-best?site=MARKET
+            - listitem [ref=e59]:
+              - link "세일" [ref=e60] [cursor=pointer]:
+                - /url: /collection-groups/market-sales-group?site=MARKET
+            - listitem [ref=e61]:
+              - link "패션" [ref=e62] [cursor=pointer]:
+                - /url: /panels/fashion?site=MARKET
+            - listitem [ref=e63]:
+              - link "리빙" [ref=e64] [cursor=pointer]:
+                - /url: /panels/living?site=MARKET
+            - listitem [ref=e65]:
+              - link "신상" [ref=e66] [cursor=pointer]:
+                - /url: /collection-groups/market-newproduct?site=MARKET
+            - listitem [ref=e67]:
+              - link "특가/혜택" [ref=e68] [cursor=pointer]:
+                - /url: /market-benefit
+          - link "샛별·하루 배송안내" [ref=e69] [cursor=pointer]:
+            - /url: /user-guide/delivery
+            - generic [ref=e70]: 샛별·하루
+            - generic [ref=e71]: 배송안내
+    - main [ref=e74]:
+      - generic [ref=e75]:
+        - generic [ref=e79]: ‌
+        - generic [ref=e80]:
+          - generic [ref=e83]: ‌
+          - generic [ref=e86]: ‌
+        - generic [ref=e87]:
+          - generic [ref=e88]:
+            - generic [ref=e89]:
+              - generic [ref=e90]: 필터
+              - button "초기화" [ref=e91] [cursor=pointer]:
+                - img [ref=e92]
+                - generic [ref=e95]: 초기화
+            - generic [ref=e96]:
+              - generic [ref=e97]:
+                - generic [ref=e100]: ‌
+                - img [ref=e101]
+              - generic [ref=e103]:
+                - img [ref=e105]
+                - generic [ref=e110]: ‌
+              - generic [ref=e111]:
+                - img [ref=e113]
+                - generic [ref=e118]: ‌
+              - generic [ref=e119]:
+                - img [ref=e121]
+                - generic [ref=e126]: ‌
+              - generic [ref=e127]:
+                - img [ref=e129]
+                - generic [ref=e134]: ‌
+              - generic [ref=e135]:
+                - img [ref=e137]
+                - generic [ref=e142]: ‌
+              - generic [ref=e143]:
+                - img [ref=e145]
+                - generic [ref=e150]: ‌
+              - generic [ref=e151]:
+                - img [ref=e153]
+                - generic [ref=e158]: ‌
+              - generic [ref=e159]:
+                - img [ref=e161]
+                - generic [ref=e166]: ‌
+              - generic [ref=e167]:
+                - img [ref=e169]
+                - generic [ref=e174]: ‌
+              - generic [ref=e175]:
+                - img [ref=e177]
+                - generic [ref=e182]: ‌
+            - generic [ref=e183]:
+              - generic [ref=e184]:
+                - generic [ref=e187]: ‌
+                - img [ref=e188]
+              - generic [ref=e190]:
+                - img [ref=e192]
+                - generic [ref=e197]: ‌
+              - generic [ref=e198]:
+                - img [ref=e200]
+                - generic [ref=e205]: ‌
+              - generic [ref=e206]:
+                - img [ref=e208]
+                - generic [ref=e213]: ‌
+              - generic [ref=e214]:
+                - img [ref=e216]
+                - generic [ref=e221]: ‌
+              - generic [ref=e222]:
+                - img [ref=e224]
+                - generic [ref=e229]: ‌
+              - generic [ref=e230]:
+                - img [ref=e232]
+                - generic [ref=e237]: ‌
+              - generic [ref=e238]:
+                - img [ref=e240]
+                - generic [ref=e245]: ‌
+              - generic [ref=e246]:
+                - img [ref=e248]
+                - generic [ref=e253]: ‌
+              - generic [ref=e254]:
+                - img [ref=e256]
+                - generic [ref=e261]: ‌
+              - generic [ref=e262]:
+                - img [ref=e264]
+                - generic [ref=e269]: ‌
+            - generic [ref=e270]:
+              - generic [ref=e271]:
+                - generic [ref=e274]: ‌
+                - img [ref=e275]
+              - generic [ref=e277]:
+                - img [ref=e279]
+                - generic [ref=e284]: ‌
+              - generic [ref=e285]:
+                - img [ref=e287]
+                - generic [ref=e292]: ‌
+              - generic [ref=e293]:
+                - img [ref=e295]
+                - generic [ref=e300]: ‌
+              - generic [ref=e301]:
+                - img [ref=e303]
+                - generic [ref=e308]: ‌
+              - generic [ref=e309]:
+                - img [ref=e311]
+                - generic [ref=e316]: ‌
+              - generic [ref=e317]:
+                - img [ref=e319]
+                - generic [ref=e324]: ‌
+              - generic [ref=e325]:
+                - img [ref=e327]
+                - generic [ref=e332]: ‌
+              - generic [ref=e333]:
+                - img [ref=e335]
+                - generic [ref=e340]: ‌
+              - generic [ref=e341]:
+                - img [ref=e343]
+                - generic [ref=e348]: ‌
+              - generic [ref=e349]:
+                - img [ref=e351]
+                - generic [ref=e356]: ‌
+          - generic [ref=e358]:
+            - generic [ref=e359]:
+              - generic [ref=e360]:
+                - generic [ref=e363]: ‌
+                - generic [ref=e364]:
+                  - generic [ref=e368]: ‌
+                  - generic [ref=e372]: ‌
+                  - generic [ref=e376]: ‌
+                  - generic [ref=e380]: ‌
+              - generic [ref=e381]:
+                - generic [ref=e384]: ‌
+                - generic [ref=e385]:
+                  - generic [ref=e389]: ‌
+                  - generic [ref=e393]: ‌
+                  - generic [ref=e397]: ‌
+                  - generic [ref=e401]: ‌
+              - generic [ref=e402]:
+                - generic [ref=e405]: ‌
+                - generic [ref=e406]:
+                  - generic [ref=e410]: ‌
+                  - generic [ref=e414]: ‌
+                  - generic [ref=e418]: ‌
+                  - generic [ref=e422]: ‌
+            - generic [ref=e423]:
+              - generic [ref=e424]:
+                - generic [ref=e427]: ‌
+                - generic [ref=e428]:
+                  - generic [ref=e432]: ‌
+                  - generic [ref=e436]: ‌
+                  - generic [ref=e440]: ‌
+                  - generic [ref=e444]: ‌
+              - generic [ref=e445]:
+                - generic [ref=e448]: ‌
+                - generic [ref=e449]:
+                  - generic [ref=e453]: ‌
+                  - generic [ref=e457]: ‌
+                  - generic [ref=e461]: ‌
+                  - generic [ref=e465]: ‌
+              - generic [ref=e466]:
+                - generic [ref=e469]: ‌
+                - generic [ref=e470]:
+                  - generic [ref=e474]: ‌
+                  - generic [ref=e478]: ‌
+                  - generic [ref=e482]: ‌
+                  - generic [ref=e486]: ‌
+            - generic [ref=e487]:
+              - generic [ref=e488]:
+                - generic [ref=e491]: ‌
+                - generic [ref=e492]:
+                  - generic [ref=e496]: ‌
+                  - generic [ref=e500]: ‌
+                  - generic [ref=e504]: ‌
+                  - generic [ref=e508]: ‌
+              - generic [ref=e509]:
+                - generic [ref=e512]: ‌
+                - generic [ref=e513]:
+                  - generic [ref=e517]: ‌
+                  - generic [ref=e521]: ‌
+                  - generic [ref=e525]: ‌
+                  - generic [ref=e529]: ‌
+              - generic [ref=e530]:
+                - generic [ref=e533]: ‌
+                - generic [ref=e534]:
+                  - generic [ref=e538]: ‌
+                  - generic [ref=e542]: ‌
+                  - generic [ref=e546]: ‌
+                  - generic [ref=e550]: ‌
+    - generic [ref=e554]:
+      - generic [ref=e555]:
+        - generic [ref=e556]:
+          - generic [ref=e557]:
+            - paragraph [ref=e558]: 고객행복센터
+            - strong [ref=e559]: 1644-1107월~토요일 오전 7시 - 오후 6시
+            - generic [ref=e560]:
+              - generic [ref=e561]:
+                - button "카카오톡 문의" [ref=e562] [cursor=pointer]
+                - generic [ref=e563]:
+                  - text: 월~토요일
+                  - img [ref=e564]
+                  - text: 오전 7시 - 오후 6시
+                  - text: 일/공휴일
+                  - img [ref=e565]
+                  - text: 오전 7시 - 오후 1시
+              - generic [ref=e566]:
+                - button "1:1 문의" [ref=e567] [cursor=pointer]
+                - generic [ref=e568]:
+                  - text: 365일
+                  - text: 고객센터 운영시간에 순차적으로 답변드리겠습니다.
+              - generic [ref=e569]:
+                - link "대량주문 문의" [ref=e570] [cursor=pointer]:
+                  - /url: https://docs.google.com/forms/d/e/1FAIpQLScWcjRuN6eWJK-G8x3NwBfE8IyKZIOq7jhD3fUXuKSWwPqzJw/viewform
+                - generic [ref=e571]:
+                  - text: 월~금요일
+                  - img [ref=e572]
+                  - text: 오전 9시 - 오후 6시
+                  - text: 점심시간
+                  - img [ref=e573]
+                  - text: 낮 12시 - 오후 1시
+            - generic [ref=e574]:
+              - text: "비회원 문의 :"
+              - link "help@kurlycorp.com" [ref=e575] [cursor=pointer]:
+                - /url: mailto:help@kurlycorp.com
+          - generic [ref=e576]:
+            - list [ref=e577]:
+              - listitem [ref=e578]:
+                - link "회사소개" [ref=e579] [cursor=pointer]:
+                  - /url: https://newsroom.kurlycorp.com/
+              - listitem [ref=e580]:
+                - link "컬리소개영상" [ref=e581] [cursor=pointer]:
+                  - /url: https://www.youtube.com/embed/WEep7BcboMQ?rel=0&showinfo=0&wmode=opaque&enablejsapi=1
+              - listitem [ref=e582]:
+                - link "투자정보" [ref=e583] [cursor=pointer]:
+                  - /url: https://newsroom.kurlycorp.com/ir/%ec%9e%ac%eb%ac%b4%ec%a0%95%eb%b3%b4/
+              - listitem [ref=e584]:
+                - link "인재채용" [ref=e585] [cursor=pointer]:
+                  - /url: https://kurly.career.greetinghr.com
+              - listitem [ref=e586]:
+                - link "이용약관" [ref=e587] [cursor=pointer]:
+                  - /url: /user-terms/agreement
+              - listitem [ref=e588]:
+                - link "개인정보처리방침" [ref=e589] [cursor=pointer]:
+                  - /url: https://privacy.kurly.com/kurly/privacypolicy
+              - listitem [ref=e590]:
+                - link "이용안내" [ref=e591] [cursor=pointer]:
+                  - /url: /user-guide
+              - listitem [ref=e592]:
+                - link "입점신청" [ref=e593] [cursor=pointer]:
+                  - /url: https://docs.google.com/forms/d/e/1FAIpQLScKI_Kd1lQAp68r-SIhiOWj0J43C99IvNbgFeT7-X9YLIqteA/viewform?usp=dialog
+            - generic [ref=e594]:
+              - text: "법인명 (상호) : 주식회사 컬리"
+              - generic [ref=e595]: "|"
+              - text: "사업자등록번호 : 261-81-23567"
+              - link "사업자정보 확인" [ref=e596] [cursor=pointer]:
+                - /url: https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2618123567&apv_perm_no=
+              - text: "통신판매업 : 제 2018-서울강남-01646 호"
+              - text: "주소 : 서울특별시 강남구 테헤란로 133, 18층(역삼동)"
+              - generic [ref=e597]: "|"
+              - text: "대표이사 : 김슬아"
+              - text: "채용문의 :"
+              - link "recruit@kurlycorp.com" [ref=e598] [cursor=pointer]:
+                - /url: mailto:recruit@kurlycorp.com
+              - text: "팩스: 070 - 7500 - 6098"
+            - list [ref=e599]:
+              - link "컬리 인스타그램 바로가기" [ref=e600] [cursor=pointer]:
+                - /url: https://instagram.com/marketkurly
+                - img "컬리 인스타그램 바로가기" [ref=e601]
+              - link "컬리 페이스북 바로가기" [ref=e602] [cursor=pointer]:
+                - /url: https://www.facebook.com/marketkurly
+                - img "컬리 페이스북 바로가기" [ref=e603]
+              - link "컬리 네이버블로그 바로가기" [ref=e604] [cursor=pointer]:
+                - /url: https://blog.naver.com/marketkurly
+                - img "컬리 네이버블로그 바로가기" [ref=e605]
+              - link "컬리 유튜브 바로가기" [ref=e606] [cursor=pointer]:
+                - /url: https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg
+                - img "컬리 유튜브 바로가기" [ref=e607]
+        - generic [ref=e608]:
+          - button "isms 로고 [인증범위] 컬리 쇼핑몰 서비스 개발·운영 (심사받지 않은 물리적 인프라 제외) [유효기간] 2025.01.15 ~ 2028.01.14" [ref=e609] [cursor=pointer]:
+            - img "isms 로고" [ref=e610]
+            - paragraph [ref=e611]:
+              - text: "[인증범위] 컬리 쇼핑몰 서비스 개발·운영"
+              - text: (심사받지 않은 물리적 인프라 제외)
+              - text: "[유효기간] 2025.01.15 ~ 2028.01.14"
+          - button "우리은행 로고 고객님이 현금으로 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다." [ref=e612] [cursor=pointer]:
+            - img "우리은행 로고" [ref=e613]
+            - paragraph [ref=e614]:
+              - text: 고객님이 현금으로 결제한 금액에 대해 우리은행과
+              - text: 채무지급보증 계약을 체결하여 안전거래를 보장하고
+              - text: 있습니다.
+      - generic [ref=e615]:
+        - text: 컬리에서 판매되는 상품 중에는 컬리에 입점한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
+        - text: 마켓플레이스(오픈마켓) 상품의 경우 컬리는 통신판매중개자로서 통신판매의 당사자가 아닙니다. 컬리는 해당 상품의 주문, 품질, 교환/환불 등 의무와 책임을 부담하지 않습니다.
+        - emphasis [ref=e616]: © KURLY CORP. ALL RIGHTS RESERVED
+  - alert [ref=e617]: 검색결과 > 밥 - 마켓컬리
+```

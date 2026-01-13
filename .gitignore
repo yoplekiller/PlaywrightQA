@@ -4,9 +4,6 @@ playwright-report/
 test-results/
 dist/
 *.js
-memo.md
-memo2.md
-memo3.md
 dist/
 .cache/
 allure-report/

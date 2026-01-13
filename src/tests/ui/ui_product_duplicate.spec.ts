@@ -23,7 +23,7 @@ test('상품 중복 담기 기능 확인', async ({ page }) => {
     }
   );
     await allure.step('첫 번째 상품 장바구니에 중복 담기 및 수량 확인', async () => {
-      await goodspage.clickAddGoodsInCartButton(2);      
+      await goodspage.clickAddGoodsInCartButton(2);    // 2번 담기  
       
       await page.goto('https://www.kurly.com/cart');
       await expect(page).toHaveURL('https://www.kurly.com/cart');

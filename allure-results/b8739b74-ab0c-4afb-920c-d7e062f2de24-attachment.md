@@ -1,0 +1,1761 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - link "지금 가입하고 최대 1만 2천원 할인 쿠폰 받아가세요!" [ref=e6] [cursor=pointer]:
+        - /url: https://event.kurly.com/lego/event/2023/0911/join/coupon#lc112b1
+        - generic [ref=e7]: 지금 가입하고 최대 1만 2천원 할인 쿠폰 받아가세요!
+      - button "배너 하루 안보기" [ref=e8] [cursor=pointer]:
+        - img [ref=e9]
+        - generic [ref=e14]: 배너 하루 안보기
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - generic [ref=e18] [cursor=pointer]: 회원가입
+          - generic [ref=e20] [cursor=pointer]: 로그인
+          - generic [ref=e23] [cursor=pointer]: 고객센터
+        - generic [ref=e25]:
+          - generic [ref=e26]:
+            - img "마켓컬리 로고" [ref=e27]
+            - button "마켓컬리" [ref=e28] [cursor=pointer]
+            - button "뷰티컬리" [ref=e29] [cursor=pointer]
+          - generic [ref=e31]:
+            - textbox "검색어를 입력해주세요" [active] [ref=e32]: 갤럭시S25
+            - button "delete-search-keyword" [ref=e33] [cursor=pointer]
+            - button "submit" [ref=e34] [cursor=pointer]
+          - generic [ref=e35]:
+            - button [ref=e36] [cursor=pointer]:
+              - img [ref=e37]
+            - button [ref=e40] [cursor=pointer]:
+              - img [ref=e41]
+            - button "0" [ref=e43] [cursor=pointer]:
+              - img [ref=e44]
+              - generic [ref=e47]: "0"
+      - generic [ref=e49]:
+        - button "카테고리" [ref=e51] [cursor=pointer]:
+          - img [ref=e52]
+          - generic [ref=e54]: 카테고리
+        - generic [ref=e55]:
+          - list [ref=e56]:
+            - listitem [ref=e57]:
+              - link "베스트" [ref=e58] [cursor=pointer]:
+                - /url: /collection-groups/market-best?site=MARKET
+            - listitem [ref=e59]:
+              - link "세일" [ref=e60] [cursor=pointer]:
+                - /url: /collection-groups/market-sales-group?site=MARKET
+            - listitem [ref=e61]:
+              - link "패션" [ref=e62] [cursor=pointer]:
+                - /url: /panels/fashion?site=MARKET
+            - listitem [ref=e63]:
+              - link "리빙" [ref=e64] [cursor=pointer]:
+                - /url: /panels/living?site=MARKET
+            - listitem [ref=e65]:
+              - link "신상" [ref=e66] [cursor=pointer]:
+                - /url: /collection-groups/market-newproduct?site=MARKET
+            - listitem [ref=e67]:
+              - link "특가/혜택" [ref=e68] [cursor=pointer]:
+                - /url: /market-benefit
+          - link "샛별·하루 배송안내" [ref=e69] [cursor=pointer]:
+            - /url: /user-guide/delivery
+            - generic [ref=e70]: 샛별·하루
+            - generic [ref=e71]: 배송안내
+    - main [ref=e74]:
+      - heading "' 갤럭시S25 '에 대한 검색결과" [level=1] [ref=e76]:
+        - text: "'"
+        - generic [ref=e77]: 갤럭시S25
+        - text: "'에 대한 검색결과"
+      - generic [ref=e78]:
+        - generic [ref=e79]:
+          - generic [ref=e80]:
+            - heading "필터" [level=2] [ref=e81]
+            - button "초기화" [disabled]:
+              - img
+              - generic: 초기화
+          - generic [ref=e82]:
+            - generic [ref=e83]:
+              - button "카테고리" [ref=e84] [cursor=pointer]:
+                - generic [ref=e85]: 카테고리
+                - img [ref=e86]
+              - navigation [ref=e88]:
+                - listitem [ref=e89]:
+                  - button "디지털·PC 83" [ref=e90] [cursor=pointer]:
+                    - generic [ref=e92]:
+                      - button [ref=e93]:
+                        - img [ref=e94]
+                      - generic [ref=e97]: 디지털·PC
+                      - generic [ref=e98]: "83"
+                - listitem [ref=e99]:
+                  - button "베스트 랭킹 31" [ref=e100] [cursor=pointer]:
+                    - generic [ref=e102]:
+                      - button [ref=e103]:
+                        - img [ref=e104]
+                      - generic [ref=e107]: 베스트 랭킹
+                      - generic [ref=e108]: "31"
+            - generic [ref=e109]:
+              - button "가격" [ref=e110] [cursor=pointer]:
+                - generic [ref=e111]: 가격
+                - img [ref=e112]
+              - navigation [ref=e114]:
+                - listitem [ref=e115]:
+                  - button "12,875원 미만" [ref=e116] [cursor=pointer]:
+                    - generic [ref=e118]:
+                      - button [ref=e119]:
+                        - img [ref=e120]
+                      - generic [ref=e122]: 12,875원 미만
+                - listitem [ref=e123]:
+                  - button "12,875원 ~ 16,900원" [ref=e124] [cursor=pointer]:
+                    - generic [ref=e126]:
+                      - button [ref=e127]:
+                        - img [ref=e128]
+                      - generic [ref=e130]: 12,875원 ~ 16,900원
+                - listitem [ref=e131]:
+                  - button "16,900원 ~ 23,000원" [ref=e132] [cursor=pointer]:
+                    - generic [ref=e134]:
+                      - button [ref=e135]:
+                        - img [ref=e136]
+                      - generic [ref=e138]: 16,900원 ~ 23,000원
+                - listitem [ref=e139]:
+                  - button "23,000원 이상" [ref=e140] [cursor=pointer]:
+                    - generic [ref=e142]:
+                      - button [ref=e143]:
+                        - img [ref=e144]
+                      - generic [ref=e146]: 23,000원 이상
+            - generic [ref=e147]:
+              - button "브랜드" [ref=e148] [cursor=pointer]:
+                - generic [ref=e149]: 브랜드
+                - img [ref=e150]
+              - navigation [ref=e152]:
+                - list [ref=e153]:
+                  - listitem [ref=e154]:
+                    - button "가나다순" [ref=e155] [cursor=pointer]
+                  - listitem [ref=e156]:
+                    - button "상품 많은순" [ref=e157] [cursor=pointer]
+                - list [ref=e158]:
+                  - listitem [ref=e159]:
+                    - button "전체" [ref=e160] [cursor=pointer]
+                  - listitem [ref=e161]:
+                    - button "ㄹ" [ref=e162] [cursor=pointer]
+                  - listitem [ref=e163]:
+                    - button "ㅂ" [ref=e164] [cursor=pointer]
+                  - listitem [ref=e165]:
+                    - button "ㅅ" [ref=e166] [cursor=pointer]
+                  - listitem [ref=e167]:
+                    - button "ㅇ" [ref=e168] [cursor=pointer]
+                - listitem [ref=e169]:
+                  - button "르메이어 10" [ref=e170] [cursor=pointer]:
+                    - generic [ref=e172]:
+                      - button [ref=e173]:
+                        - img [ref=e174]
+                      - generic [ref=e177]: 르메이어
+                      - generic [ref=e178]: "10"
+                - listitem [ref=e179]:
+                  - button "벨킨 4" [ref=e180] [cursor=pointer]:
+                    - generic [ref=e182]:
+                      - button [ref=e183]:
+                        - img [ref=e184]
+                      - generic [ref=e187]: 벨킨
+                      - generic [ref=e188]: "4"
+                - listitem [ref=e189]:
+                  - button "소유마실 34" [ref=e190] [cursor=pointer]:
+                    - generic [ref=e192]:
+                      - button [ref=e193]:
+                        - img [ref=e194]
+                      - generic [ref=e197]: 소유마실
+                      - generic [ref=e198]: "34"
+                - listitem [ref=e199]:
+                  - button "신지모루 72" [ref=e200] [cursor=pointer]:
+                    - generic [ref=e202]:
+                      - button [ref=e203]:
+                        - img [ref=e204]
+                      - generic [ref=e207]: 신지모루
+                      - generic [ref=e208]: "72"
+                - listitem [ref=e209]:
+                  - button "엘라고 7" [ref=e210] [cursor=pointer]:
+                    - generic [ref=e212]:
+                      - button [ref=e213]:
+                        - img [ref=e214]
+                      - generic [ref=e217]: 엘라고
+                      - generic [ref=e218]: "7"
+            - generic [ref=e219]:
+              - button "혜택" [ref=e220] [cursor=pointer]:
+                - generic [ref=e221]: 혜택
+                - img [ref=e222]
+              - navigation [ref=e224]:
+                - listitem [ref=e225]:
+                  - button "할인상품 141" [ref=e226] [cursor=pointer]:
+                    - generic [ref=e228]:
+                      - button [ref=e229]:
+                        - img [ref=e230]
+                      - generic [ref=e233]: 할인상품
+                      - generic [ref=e234]: "141"
+            - generic [ref=e235]:
+              - button "포장타입" [ref=e236] [cursor=pointer]:
+                - generic [ref=e237]: 포장타입
+                - img [ref=e238]
+              - navigation [ref=e240]:
+                - listitem [ref=e241]:
+                  - button "상온 149" [ref=e242] [cursor=pointer]:
+                    - generic [ref=e244]:
+                      - button [ref=e245]:
+                        - img [ref=e246]
+                      - generic [ref=e249]: 상온
+                      - generic [ref=e250]: "149"
+            - generic [ref=e251]:
+              - button "배송" [ref=e252] [cursor=pointer]:
+                - generic [ref=e253]: 배송
+                - img [ref=e254]
+              - navigation [ref=e256]:
+                - listitem [ref=e257]:
+                  - button "판매자배송 148" [ref=e258] [cursor=pointer]:
+                    - generic [ref=e260]:
+                      - button [ref=e261]:
+                        - img [ref=e262]
+                      - generic [ref=e265]: 판매자배송
+                      - generic [ref=e266]: "148"
+                - listitem [ref=e267]:
+                  - button "샛별배송 1" [ref=e268] [cursor=pointer]:
+                    - generic [ref=e270]:
+                      - button [ref=e271]:
+                        - img [ref=e272]
+                      - generic [ref=e275]: 샛별배송
+                      - generic [ref=e276]: "1"
+        - generic [ref=e277]:
+          - generic [ref=e278]:
+            - generic [ref=e279]: 총 149건
+            - list [ref=e280]:
+              - listitem [ref=e281]:
+                - link "추천순" [ref=e282]:
+                  - /url: /search?sword=%EA%B0%A4%EB%9F%AD%EC%8B%9CS25&page=1&per_page=96&sorted_type=4
+                - img [ref=e284]
+              - listitem [ref=e287]:
+                - link "신상품순" [ref=e288] [cursor=pointer]:
+                  - /url: /search?sword=%EA%B0%A4%EB%9F%AD%EC%8B%9CS25&page=1&per_page=96&sorted_type=0
+              - listitem [ref=e289]:
+                - link "판매량순" [ref=e290] [cursor=pointer]:
+                  - /url: /search?sword=%EA%B0%A4%EB%9F%AD%EC%8B%9CS25&page=1&per_page=96&sorted_type=1
+              - listitem [ref=e291]:
+                - link "혜택순" [ref=e292] [cursor=pointer]:
+                  - /url: /search?sword=%EA%B0%A4%EB%9F%AD%EC%8B%9CS25&page=1&per_page=96&sorted_type=5
+              - listitem [ref=e293]:
+                - link "낮은 가격순" [ref=e294] [cursor=pointer]:
+                  - /url: /search?sword=%EA%B0%A4%EB%9F%AD%EC%8B%9CS25&page=1&per_page=96&sorted_type=2
+              - listitem [ref=e295]:
+                - link "높은 가격순" [ref=e296] [cursor=pointer]:
+                  - /url: /search?sword=%EA%B0%A4%EB%9F%AD%EC%8B%9CS25&page=1&per_page=96&sorted_type=3
+          - generic [ref=e297]:
+            - link "담기 판매자배송 [신지모루] 저반사 매트 필름 강화유리 액정보호필름 (갤럭시) 15시까지 주문시, 당일발송 ! 15,900원 12%13,900원 10 무료배송" [ref=e298] [cursor=pointer]:
+              - /url: /goods/1001087824
+              - button "담기" [ref=e305]:
+                - img
+                - text: 담기
+              - generic [ref=e306]:
+                - generic [ref=e307]: 판매자배송
+                - generic [ref=e308]: "[신지모루] 저반사 매트 필름 강화유리 액정보호필름 (갤럭시)"
+                - paragraph [ref=e309]: 15시까지 주문시, 당일발송 !
+                - generic [ref=e310]:
+                  - generic [ref=e312]: 15,900원
+                  - generic [ref=e313]:
+                    - generic [ref=e314]: 12%
+                    - generic [ref=e315]: 13,900원
+                - generic [ref=e316]:
+                  - img [ref=e318]
+                  - generic [ref=e323]: "10"
+                - generic [ref=e325]: 무료배송
+            - link "담기 판매자배송 [벨킨] 갤럭시 S25 Qi2 마그네틱 케이스 MSB001 29,900원 무료배송" [ref=e326] [cursor=pointer]:
+              - /url: /goods/1001482916
+              - button "담기" [ref=e333]:
+                - img
+                - text: 담기
+              - generic [ref=e334]:
+                - generic [ref=e335]: 판매자배송
+                - generic [ref=e336]: "[벨킨] 갤럭시 S25 Qi2 마그네틱 케이스 MSB001"
+                - generic [ref=e339]: 29,900원
+                - generic [ref=e341]: 무료배송
+            - link "담기 판매자배송 [벨킨] 갤럭시 S25 시리즈 인비지 강화유리 보호필름 갤럭시S25(S24호환) 24,900원 무료배송" [ref=e342] [cursor=pointer]:
+              - /url: /goods/1001419510
+              - button "담기" [ref=e349]:
+                - img
+                - text: 담기
+              - generic [ref=e350]:
+                - generic [ref=e351]: 판매자배송
+                - generic [ref=e352]: "[벨킨] 갤럭시 S25 시리즈 인비지 강화유리 보호필름 갤럭시S25(S24호환)"
+                - generic [ref=e355]: 24,900원
+                - generic [ref=e357]: 무료배송
+            - link "담기 판매자배송 [엘라고] 갤럭시 S25 엣지 슬림 풀커버 투명 케이스 (단품) 21,000원 10%18,900원 무료배송" [ref=e358] [cursor=pointer]:
+              - /url: /goods/1001346034
+              - button "담기" [ref=e365]:
+                - img
+                - text: 담기
+              - generic [ref=e366]:
+                - generic [ref=e367]: 판매자배송
+                - generic [ref=e368]: "[엘라고] 갤럭시 S25 엣지 슬림 풀커버 투명 케이스 (단품)"
+                - generic [ref=e369]:
+                  - generic [ref=e371]: 21,000원
+                  - generic [ref=e372]:
+                    - generic [ref=e373]: 10%
+                    - generic [ref=e374]: 18,900원
+                - generic [ref=e376]: 무료배송
+            - link "담기 판매자배송 [벨킨] 갤럭시 S25 울트라 Qi2 마그네틱 케이스 MSB003 29,900원 무료배송" [ref=e377] [cursor=pointer]:
+              - /url: /goods/1001482906
+              - button "담기" [ref=e384]:
+                - img
+                - text: 담기
+              - generic [ref=e385]:
+                - generic [ref=e386]: 판매자배송
+                - generic [ref=e387]: "[벨킨] 갤럭시 S25 울트라 Qi2 마그네틱 케이스 MSB003"
+                - generic [ref=e390]: 29,900원
+                - generic [ref=e392]: 무료배송
+            - link "담기 판매자배송 [벨킨] 갤럭시 S25 엣지 Qi2 마그네틱 케이스 MSB008 29,900원 무료배송" [ref=e393] [cursor=pointer]:
+              - /url: /goods/1001447510
+              - button "담기" [ref=e400]:
+                - img
+                - text: 담기
+              - generic [ref=e401]:
+                - generic [ref=e402]: 판매자배송
+                - generic [ref=e403]: "[벨킨] 갤럭시 S25 엣지 Qi2 마그네틱 케이스 MSB008"
+                - generic [ref=e406]: 29,900원
+                - generic [ref=e408]: 무료배송
+            - link "담기 판매자배송 [엘라고] 갤럭시 S25 엣지 강화유리 액정보호필름 2매 (단품) 16,000원 19%12,900원 무료배송" [ref=e409] [cursor=pointer]:
+              - /url: /goods/1001346028
+              - button "담기" [ref=e416]:
+                - img
+                - text: 담기
+              - generic [ref=e417]:
+                - generic [ref=e418]: 판매자배송
+                - generic [ref=e419]: "[엘라고] 갤럭시 S25 엣지 강화유리 액정보호필름 2매 (단품)"
+                - generic [ref=e420]:
+                  - generic [ref=e422]: 16,000원
+                  - generic [ref=e423]:
+                    - generic [ref=e424]: 19%
+                    - generic [ref=e425]: 12,900원
+                - generic [ref=e427]: 무료배송
+            - link "담기 판매자배송 [벨킨] 갤럭시 S25엣지 인비지 강화 유리 필름 OVB065fq 23,900원 무료배송" [ref=e428] [cursor=pointer]:
+              - /url: /goods/1001455141
+              - button "담기" [ref=e435]:
+                - img
+                - text: 담기
+              - generic [ref=e436]:
+                - generic [ref=e437]: 판매자배송
+                - generic [ref=e438]: "[벨킨] 갤럭시 S25엣지 인비지 강화 유리 필름 OVB065fq"
+                - generic [ref=e441]: 23,900원
+                - generic [ref=e443]: 무료배송
+            - link "담기 판매자배송 [엘라고] 갤럭시 S25 엣지 맥세이프 슬림 풀커버 투명 케이스 (단품) 31,000원 10%27,900원 무료배송" [ref=e444] [cursor=pointer]:
+              - /url: /goods/1001346039
+              - button "담기" [ref=e451]:
+                - img
+                - text: 담기
+              - generic [ref=e452]:
+                - generic [ref=e453]: 판매자배송
+                - generic [ref=e454]: "[엘라고] 갤럭시 S25 엣지 맥세이프 슬림 풀커버 투명 케이스 (단품)"
+                - generic [ref=e455]:
+                  - generic [ref=e457]: 31,000원
+                  - generic [ref=e458]:
+                    - generic [ref=e459]: 10%
+                    - generic [ref=e460]: 27,900원
+                - generic [ref=e462]: 무료배송
+            - link "담기 판매자배송 [엘라고] 갤럭시 S25 엣지 맥세이프 풀커버 실리콘 케이스 4종 (택1) 31,000원 8%28,500원 무료배송" [ref=e463] [cursor=pointer]:
+              - /url: /goods/1001346029
+              - button "담기" [ref=e470]:
+                - img
+                - text: 담기
+              - generic [ref=e471]:
+                - generic [ref=e472]: 판매자배송
+                - generic [ref=e473]: "[엘라고] 갤럭시 S25 엣지 맥세이프 풀커버 실리콘 케이스 4종 (택1)"
+                - generic [ref=e474]:
+                  - generic [ref=e476]: 31,000원
+                  - generic [ref=e477]:
+                    - generic [ref=e478]: 8%
+                    - generic [ref=e479]: 28,500원
+                - generic [ref=e481]: 무료배송
+            - link "담기 판매자배송 [벨킨] 갤럭시 S25 울트라 인비지 강화유리 보호필름 OVB050fq 24,900원 무료배송" [ref=e482] [cursor=pointer]:
+              - /url: /goods/1001419542
+              - button "담기" [ref=e489]:
+                - img
+                - text: 담기
+              - generic [ref=e490]:
+                - generic [ref=e491]: 판매자배송
+                - generic [ref=e492]: "[벨킨] 갤럭시 S25 울트라 인비지 강화유리 보호필름 OVB050fq"
+                - generic [ref=e495]: 24,900원
+                - generic [ref=e497]: 무료배송
+            - link "담기 판매자배송 [엘라고] 갤럭시 S25 플러스 울트라 하이브리드 케이스 + 필름 세트 3종 (택1) 30,000원 35%19,300원 무료배송" [ref=e498] [cursor=pointer]:
+              - /url: /goods/1001229668
+              - button "담기" [ref=e505]:
+                - img
+                - text: 담기
+              - generic [ref=e506]:
+                - generic [ref=e507]: 판매자배송
+                - generic [ref=e508]: "[엘라고] 갤럭시 S25 플러스 울트라 하이브리드 케이스 + 필름 세트 3종 (택1)"
+                - generic [ref=e509]:
+                  - generic [ref=e511]: 30,000원
+                  - generic [ref=e512]:
+                    - generic [ref=e513]: 35%
+                    - generic [ref=e514]: 19,300원
+                - generic [ref=e516]: 무료배송
+            - link "담기 판매자배송 [엘라고] 갤럭시 S25 울트라 맥세이프 하이브리드 케이스 + 필름 세트 3종 (택1) 40,000원 28%28,500원 무료배송" [ref=e517] [cursor=pointer]:
+              - /url: /goods/1001229651
+              - button "담기" [ref=e524]:
+                - img
+                - text: 담기
+              - generic [ref=e525]:
+                - generic [ref=e526]: 판매자배송
+                - generic [ref=e527]: "[엘라고] 갤럭시 S25 울트라 맥세이프 하이브리드 케이스 + 필름 세트 3종 (택1)"
+                - generic [ref=e528]:
+                  - generic [ref=e530]: 40,000원
+                  - generic [ref=e531]:
+                    - generic [ref=e532]: 28%
+                    - generic [ref=e533]: 28,500원
+                - generic [ref=e535]: 무료배송
+            - link "담기 판매자배송 [엘라고] 갤럭시 S25 울트라 맥세이프 실리콘 케이스 + 필름 세트 3종 (택1) 40,000원 37%24,900원 무료배송" [ref=e536] [cursor=pointer]:
+              - /url: /goods/1001229644
+              - button "담기" [ref=e543]:
+                - img
+                - text: 담기
+              - generic [ref=e544]:
+                - generic [ref=e545]: 판매자배송
+                - generic [ref=e546]: "[엘라고] 갤럭시 S25 울트라 맥세이프 실리콘 케이스 + 필름 세트 3종 (택1)"
+                - generic [ref=e547]:
+                  - generic [ref=e549]: 40,000원
+                  - generic [ref=e550]:
+                    - generic [ref=e551]: 37%
+                    - generic [ref=e552]: 24,900원
+                - generic [ref=e554]: 무료배송
+            - link "담기 판매자배송 [벨킨] 갤럭시 S25+/24+ 시리즈 인비지 강화유리 보호필름 OVB049fq 24,900원 무료배송" [ref=e555] [cursor=pointer]:
+              - /url: /goods/1001419536
+              - button "담기" [ref=e562]:
+                - img
+                - text: 담기
+              - generic [ref=e563]:
+                - generic [ref=e564]: 판매자배송
+                - generic [ref=e565]: "[벨킨] 갤럭시 S25+/24+ 시리즈 인비지 강화유리 보호필름 OVB049fq"
+                - generic [ref=e568]: 24,900원
+                - generic [ref=e570]: 무료배송
+            - link "담기 판매자배송 [르메이어] 갤럭시 카드수납 슬라이드 케이스 11,600원 22%8,970원 무료배송" [ref=e571] [cursor=pointer]:
+              - /url: /goods/1001336303
+              - button "담기" [ref=e578]:
+                - img
+                - text: 담기
+              - generic [ref=e579]:
+                - generic [ref=e580]: 판매자배송
+                - generic [ref=e581]: "[르메이어] 갤럭시 카드수납 슬라이드 케이스"
+                - generic [ref=e582]:
+                  - generic [ref=e584]: 11,600원
+                  - generic [ref=e585]:
+                    - generic [ref=e586]: 22%
+                    - generic [ref=e587]: 8,970원
+                - generic [ref=e589]: 무료배송
+            - link "담기 판매자배송 [신지모루] ECO 소프트 실리콘 뷰티 케이스 (아이폰/갤럭시) 친환경 실리콘 & 보드라운 극세사 보호 15,900원 12%13,900원 무료배송" [ref=e590] [cursor=pointer]:
+              - /url: /goods/1001083418
+              - button "담기" [ref=e597]:
+                - img
+                - text: 담기
+              - generic [ref=e598]:
+                - generic [ref=e599]: 판매자배송
+                - generic [ref=e600]: "[신지모루] ECO 소프트 실리콘 뷰티 케이스 (아이폰/갤럭시)"
+                - paragraph [ref=e601]: 친환경 실리콘 & 보드라운 극세사 보호
+                - generic [ref=e602]:
+                  - generic [ref=e604]: 15,900원
+                  - generic [ref=e605]:
+                    - generic [ref=e606]: 12%
+                    - generic [ref=e607]: 13,900원
+                - generic [ref=e609]: 무료배송
+            - link "담기 판매자배송 [신지모루] 갤럭시 레더포켓 다이어리 지갑형 가죽 케이스 15시까지 주문시, 당일발송 ! 13,900원 14%11,900원 무료배송" [ref=e610] [cursor=pointer]:
+              - /url: /goods/1001170804
+              - button "담기" [ref=e617]:
+                - img
+                - text: 담기
+              - generic [ref=e618]:
+                - generic [ref=e619]: 판매자배송
+                - generic [ref=e620]: "[신지모루] 갤럭시 레더포켓 다이어리 지갑형 가죽 케이스"
+                - paragraph [ref=e621]: 15시까지 주문시, 당일발송 !
+                - generic [ref=e622]:
+                  - generic [ref=e624]: 13,900원
+                  - generic [ref=e625]:
+                    - generic [ref=e626]: 14%
+                    - generic [ref=e627]: 11,900원
+                - generic [ref=e629]: 무료배송
+            - link "담기 판매자배송 [르메이어] 갤럭시 마그네틱 맥세이프 인사이드 투명 케이스 19,000원 29%13,310원~ 무료배송" [ref=e630] [cursor=pointer]:
+              - /url: /goods/1001393221
+              - button "담기" [ref=e637]:
+                - img
+                - text: 담기
+              - generic [ref=e638]:
+                - generic [ref=e639]: 판매자배송
+                - generic [ref=e640]: "[르메이어] 갤럭시 마그네틱 맥세이프 인사이드 투명 케이스"
+                - generic [ref=e641]:
+                  - generic [ref=e643]: 19,000원
+                  - generic [ref=e644]:
+                    - generic [ref=e645]: 29%
+                    - generic [ref=e646]: 13,310원~
+                - generic [ref=e648]: 무료배송
+            - link "담기 판매자배송 [신지모루]빛번짐 방지 카메라 강화유리 2매 (아이폰/갤럭시) 아이폰 16e 신제품 출시! (15시까지 주문시, 당일발송 !) 11,900원 16%9,900원 48 무료배송" [ref=e649] [cursor=pointer]:
+              - /url: /goods/1001170625
+              - button "담기" [ref=e656]:
+                - img
+                - text: 담기
+              - generic [ref=e657]:
+                - generic [ref=e658]: 판매자배송
+                - generic [ref=e659]: "[신지모루]빛번짐 방지 카메라 강화유리 2매 (아이폰/갤럭시)"
+                - paragraph [ref=e660]: 아이폰 16e 신제품 출시! (15시까지 주문시, 당일발송 !)
+                - generic [ref=e661]:
+                  - generic [ref=e663]: 11,900원
+                  - generic [ref=e664]:
+                    - generic [ref=e665]: 16%
+                    - generic [ref=e666]: 9,900원
+                - generic [ref=e667]:
+                  - img [ref=e669]
+                  - generic [ref=e674]: "48"
+                - generic [ref=e676]: 무료배송
+            - link "담기 판매자배송 [신지모루] 에어클로 카드수납 투명 핸드폰 케이스 (아이폰/갤럭시) 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!) 14,900원 26%10,900원 무료배송" [ref=e677] [cursor=pointer]:
+              - /url: /goods/1001625061
+              - button "담기" [ref=e684]:
+                - img
+                - text: 담기
+              - generic [ref=e685]:
+                - generic [ref=e686]: 판매자배송
+                - generic [ref=e687]: "[신지모루] 에어클로 카드수납 투명 핸드폰 케이스 (아이폰/갤럭시)"
+                - paragraph [ref=e688]: 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e689]:
+                  - generic [ref=e691]: 14,900원
+                  - generic [ref=e692]:
+                    - generic [ref=e693]: 26%
+                    - generic [ref=e694]: 10,900원
+                - generic [ref=e696]: 무료배송
+            - link "담기 판매자배송 [신지모루] 충격보호 에어가드 범퍼 케이스 (아이폰/갤럭시) 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!) 18,900원 26%13,900원 무료배송" [ref=e697] [cursor=pointer]:
+              - /url: /goods/1001396025
+              - button "담기" [ref=e704]:
+                - img
+                - text: 담기
+              - generic [ref=e705]:
+                - generic [ref=e706]: 판매자배송
+                - generic [ref=e707]: "[신지모루] 충격보호 에어가드 범퍼 케이스 (아이폰/갤럭시)"
+                - paragraph [ref=e708]: 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e709]:
+                  - generic [ref=e711]: 18,900원
+                  - generic [ref=e712]:
+                    - generic [ref=e713]: 26%
+                    - generic [ref=e714]: 13,900원
+                - generic [ref=e716]: 무료배송
+            - link "담기 판매자배송 [신지모루] 맥세이프 자석 소프트 실리콘 케이스 (아이폰/갤럭시) 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!) 23,900원 25%17,900원~ 무료배송" [ref=e717] [cursor=pointer]:
+              - /url: /goods/1001630453
+              - button "담기" [ref=e724]:
+                - img
+                - text: 담기
+              - generic [ref=e725]:
+                - generic [ref=e726]: 판매자배송
+                - generic [ref=e727]: "[신지모루] 맥세이프 자석 소프트 실리콘 케이스 (아이폰/갤럭시)"
+                - paragraph [ref=e728]: 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e729]:
+                  - generic [ref=e731]: 23,900원
+                  - generic [ref=e732]:
+                    - generic [ref=e733]: 25%
+                    - generic [ref=e734]: 17,900원~
+                - generic [ref=e736]: 무료배송
+            - link "담기 판매자배송 [르메이어] 갤럭시 변색없는 투명 생폰 슬림 케이스 12,870원 23%9,900원 무료배송" [ref=e737] [cursor=pointer]:
+              - /url: /goods/1001392917
+              - button "담기" [ref=e744]:
+                - img
+                - text: 담기
+              - generic [ref=e745]:
+                - generic [ref=e746]: 판매자배송
+                - generic [ref=e747]: "[르메이어] 갤럭시 변색없는 투명 생폰 슬림 케이스"
+                - generic [ref=e748]:
+                  - generic [ref=e750]: 12,870원
+                  - generic [ref=e751]:
+                    - generic [ref=e752]: 23%
+                    - generic [ref=e753]: 9,900원
+                - generic [ref=e755]: 무료배송
+            - link "담기 판매자배송 [신지모루] 에어쉴드 라이트 슬림 젤리 케이스 (아이폰/갤럭시) 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!) 11,900원 42%6,900원 무료배송" [ref=e756] [cursor=pointer]:
+              - /url: /goods/1001630324
+              - button "담기" [ref=e763]:
+                - img
+                - text: 담기
+              - generic [ref=e764]:
+                - generic [ref=e765]: 판매자배송
+                - generic [ref=e766]: "[신지모루] 에어쉴드 라이트 슬림 젤리 케이스 (아이폰/갤럭시)"
+                - paragraph [ref=e767]: 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e768]:
+                  - generic [ref=e770]: 11,900원
+                  - generic [ref=e771]:
+                    - generic [ref=e772]: 42%
+                    - generic [ref=e773]: 6,900원
+                - generic [ref=e775]: 무료배송
+            - link "담기 판매자배송 [신지모루] 에어클로 젤하드 투명 케이스 (아이폰/갤럭시) 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!) 13,900원 14%11,900원 18 무료배송" [ref=e776] [cursor=pointer]:
+              - /url: /goods/1001593028
+              - button "담기" [ref=e783]:
+                - img
+                - text: 담기
+              - generic [ref=e784]:
+                - generic [ref=e785]: 판매자배송
+                - generic [ref=e786]: "[신지모루] 에어클로 젤하드 투명 케이스 (아이폰/갤럭시)"
+                - paragraph [ref=e787]: 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e788]:
+                  - generic [ref=e790]: 13,900원
+                  - generic [ref=e791]:
+                    - generic [ref=e792]: 14%
+                    - generic [ref=e793]: 11,900원
+                - generic [ref=e794]:
+                  - img [ref=e796]
+                  - generic [ref=e801]: "18"
+                - generic [ref=e803]: 무료배송
+            - link "담기 판매자배송 [신지모루] 메탈 링 카메라 강화유리 보호 필름 (아이폰/갤럭시) 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!) 13,900원 14%11,900원 무료배송" [ref=e804] [cursor=pointer]:
+              - /url: /goods/1001152567
+              - button "담기" [ref=e811]:
+                - img
+                - text: 담기
+              - generic [ref=e812]:
+                - generic [ref=e813]: 판매자배송
+                - generic [ref=e814]: "[신지모루] 메탈 링 카메라 강화유리 보호 필름 (아이폰/갤럭시)"
+                - paragraph [ref=e815]: 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e816]:
+                  - generic [ref=e818]: 13,900원
+                  - generic [ref=e819]:
+                    - generic [ref=e820]: 14%
+                    - generic [ref=e821]: 11,900원
+                - generic [ref=e823]: 무료배송
+            - link "담기 판매자배송 [신지모루] 에어 쉴드 4중 보호 투명 케이스 (아이폰/갤럭시) 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!) 15,900원 31%10,900원 무료배송" [ref=e824] [cursor=pointer]:
+              - /url: /goods/1001604130
+              - button "담기" [ref=e831]:
+                - img
+                - text: 담기
+              - generic [ref=e832]:
+                - generic [ref=e833]: 판매자배송
+                - generic [ref=e834]: "[신지모루] 에어 쉴드 4중 보호 투명 케이스 (아이폰/갤럭시)"
+                - paragraph [ref=e835]: 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e836]:
+                  - generic [ref=e838]: 15,900원
+                  - generic [ref=e839]:
+                    - generic [ref=e840]: 31%
+                    - generic [ref=e841]: 10,900원
+                - generic [ref=e843]: 무료배송
+            - link "담기 판매자배송 [신지모루] 에어쉴드 라이트 카드수납 젤리 케이스 (아이폰/갤럭시) 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!) 11,900원 25%8,900원 무료배송" [ref=e844] [cursor=pointer]:
+              - /url: /goods/1001630363
+              - button "담기" [ref=e851]:
+                - img
+                - text: 담기
+              - generic [ref=e852]:
+                - generic [ref=e853]: 판매자배송
+                - generic [ref=e854]: "[신지모루] 에어쉴드 라이트 카드수납 젤리 케이스 (아이폰/갤럭시)"
+                - paragraph [ref=e855]: 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e856]:
+                  - generic [ref=e858]: 11,900원
+                  - generic [ref=e859]:
+                    - generic [ref=e860]: 25%
+                    - generic [ref=e861]: 8,900원
+                - generic [ref=e863]: 무료배송
+            - link "담기 판매자배송 [신지모루] 변색방지 루미가드 TPU 투명 범퍼 케이스 (아이폰/갤럭시) 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!) 16,900원 23%12,900원 무료배송" [ref=e864] [cursor=pointer]:
+              - /url: /goods/1001625063
+              - button "담기" [ref=e871]:
+                - img
+                - text: 담기
+              - generic [ref=e872]:
+                - generic [ref=e873]: 판매자배송
+                - generic [ref=e874]: "[신지모루] 변색방지 루미가드 TPU 투명 범퍼 케이스 (아이폰/갤럭시)"
+                - paragraph [ref=e875]: 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e876]:
+                  - generic [ref=e878]: 16,900원
+                  - generic [ref=e879]:
+                    - generic [ref=e880]: 23%
+                    - generic [ref=e881]: 12,900원
+                - generic [ref=e883]: 무료배송
+            - link "담기 판매자배송 [신지모루] 맥세이프 케이스 M-에어클로 베이직 (아이폰/갤럭시) 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!) 20,900원 9%18,900원 무료배송" [ref=e884] [cursor=pointer]:
+              - /url: /goods/1001604127
+              - button "담기" [ref=e891]:
+                - img
+                - text: 담기
+              - generic [ref=e892]:
+                - generic [ref=e893]: 판매자배송
+                - generic [ref=e894]: "[신지모루] 맥세이프 케이스 M-에어클로 베이직 (아이폰/갤럭시)"
+                - paragraph [ref=e895]: 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e896]:
+                  - generic [ref=e898]: 20,900원
+                  - generic [ref=e899]:
+                    - generic [ref=e900]: 9%
+                    - generic [ref=e901]: 18,900원
+                - generic [ref=e903]: 무료배송
+            - link "담기 판매자배송 [신지모루] 에어로핏 1mm 슬림 하드 케이스 (아이폰/갤럭시) 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!) 14,900원 13%12,900원 무료배송" [ref=e904] [cursor=pointer]:
+              - /url: /goods/1001625065
+              - button "담기" [ref=e911]:
+                - img
+                - text: 담기
+              - generic [ref=e912]:
+                - generic [ref=e913]: 판매자배송
+                - generic [ref=e914]: "[신지모루] 에어로핏 1mm 슬림 하드 케이스 (아이폰/갤럭시)"
+                - paragraph [ref=e915]: 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e916]:
+                  - generic [ref=e918]: 14,900원
+                  - generic [ref=e919]:
+                    - generic [ref=e920]: 13%
+                    - generic [ref=e921]: 12,900원
+                - generic [ref=e923]: 무료배송
+            - link "담기 판매자배송 [신지모루] 풀커버 쉬운부착 PET 복원 휴대폰 액정보호필름 (갤럭시) 15시까지 주문시, 당일발송 ! 10,900원 27%7,900원 무료배송" [ref=e924] [cursor=pointer]:
+              - /url: /goods/1001340460
+              - button "담기" [ref=e931]:
+                - img
+                - text: 담기
+              - generic [ref=e932]:
+                - generic [ref=e933]: 판매자배송
+                - generic [ref=e934]: "[신지모루] 풀커버 쉬운부착 PET 복원 휴대폰 액정보호필름 (갤럭시)"
+                - paragraph [ref=e935]: 15시까지 주문시, 당일발송 !
+                - generic [ref=e936]:
+                  - generic [ref=e938]: 10,900원
+                  - generic [ref=e939]:
+                    - generic [ref=e940]: 27%
+                    - generic [ref=e941]: 7,900원
+                - generic [ref=e943]: 무료배송
+            - link "담기 판매자배송 [신지모루] 충격보호 맥세이프 에어가드 범퍼 하드 케이스 (아이폰/갤럭시) 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!) 21,900원 22%16,900원 무료배송" [ref=e944] [cursor=pointer]:
+              - /url: /goods/1001396024
+              - button "담기" [ref=e951]:
+                - img
+                - text: 담기
+              - generic [ref=e952]:
+                - generic [ref=e953]: 판매자배송
+                - generic [ref=e954]: "[신지모루] 충격보호 맥세이프 에어가드 범퍼 하드 케이스 (아이폰/갤럭시)"
+                - paragraph [ref=e955]: 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e956]:
+                  - generic [ref=e958]: 21,900원
+                  - generic [ref=e959]:
+                    - generic [ref=e960]: 22%
+                    - generic [ref=e961]: 16,900원
+                - generic [ref=e963]: 무료배송
+            - link "담기 판매자배송 [르메이어] 아이폰 갤럭시 고자력 맥세이프 케이스 투명 인사이드 마그네틱 19,890원 23%15,300원 무료배송" [ref=e964] [cursor=pointer]:
+              - /url: /goods/1001392765
+              - button "담기" [ref=e971]:
+                - img
+                - text: 담기
+              - generic [ref=e972]:
+                - generic [ref=e973]: 판매자배송
+                - generic [ref=e974]: "[르메이어] 아이폰 갤럭시 고자력 맥세이프 케이스 투명 인사이드 마그네틱"
+                - generic [ref=e975]:
+                  - generic [ref=e977]: 19,890원
+                  - generic [ref=e978]:
+                    - generic [ref=e979]: 23%
+                    - generic [ref=e980]: 15,300원
+                - generic [ref=e982]: 무료배송
+            - link "담기 판매자배송 [신지모루]에어클로 이중보호 갤럭시 Z폴드7 투명 케이스 15시까지 주문시, 당일발송 ! 15,900원 25%11,900원 무료배송" [ref=e983] [cursor=pointer]:
+              - /url: /goods/1001467927
+              - button "담기" [ref=e990]:
+                - img
+                - text: 담기
+              - generic [ref=e991]:
+                - generic [ref=e992]: 판매자배송
+                - generic [ref=e993]: "[신지모루]에어클로 이중보호 갤럭시 Z폴드7 투명 케이스"
+                - paragraph [ref=e994]: 15시까지 주문시, 당일발송 !
+                - generic [ref=e995]:
+                  - generic [ref=e997]: 15,900원
+                  - generic [ref=e998]:
+                    - generic [ref=e999]: 25%
+                    - generic [ref=e1000]: 11,900원
+                - generic [ref=e1002]: 무료배송
+            - link "담기 판매자배송 [신지모루] 카메라 강화유리 후면 보호 필름 클리어 2매 (아이폰/갤럭시) 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!) 12,900원 15%10,900원 무료배송" [ref=e1003] [cursor=pointer]:
+              - /url: /goods/1001604129
+              - button "담기" [ref=e1010]:
+                - img
+                - text: 담기
+              - generic [ref=e1011]:
+                - generic [ref=e1012]: 판매자배송
+                - generic [ref=e1013]: "[신지모루] 카메라 강화유리 후면 보호 필름 클리어 2매 (아이폰/갤럭시)"
+                - paragraph [ref=e1014]: 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1015]:
+                  - generic [ref=e1017]: 12,900원
+                  - generic [ref=e1018]:
+                    - generic [ref=e1019]: 15%
+                    - generic [ref=e1020]: 10,900원
+                - generic [ref=e1022]: 무료배송
+            - link "담기 판매자배송 [신지모루X모디무드] 맥세이프 케이스 에어클로 베이직 멜로디스타 (아이폰/갤럭시) 모디무드 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!) 21,900원 13%18,900원 무료배송" [ref=e1023] [cursor=pointer]:
+              - /url: /goods/1001795656
+              - button "담기" [ref=e1030]:
+                - img
+                - text: 담기
+              - generic [ref=e1031]:
+                - generic [ref=e1032]: 판매자배송
+                - generic [ref=e1033]: "[신지모루X모디무드] 맥세이프 케이스 에어클로 베이직 멜로디스타 (아이폰/갤럭시)"
+                - paragraph [ref=e1034]: 모디무드 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1035]:
+                  - generic [ref=e1037]: 21,900원
+                  - generic [ref=e1038]:
+                    - generic [ref=e1039]: 13%
+                    - generic [ref=e1040]: 18,900원
+                - generic [ref=e1042]: 무료배송
+            - link "담기 판매자배송 [신지모루X모디무드] 맥세이프 케이스 에어클로 베이직 스타 스핀 (아이폰/갤럭시) 모디무드 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!) 21,900원 13%18,900원 무료배송" [ref=e1043] [cursor=pointer]:
+              - /url: /goods/1001795657
+              - button "담기" [ref=e1050]:
+                - img
+                - text: 담기
+              - generic [ref=e1051]:
+                - generic [ref=e1052]: 판매자배송
+                - generic [ref=e1053]: "[신지모루X모디무드] 맥세이프 케이스 에어클로 베이직 스타 스핀 (아이폰/갤럭시)"
+                - paragraph [ref=e1054]: 모디무드 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1055]:
+                  - generic [ref=e1057]: 21,900원
+                  - generic [ref=e1058]:
+                    - generic [ref=e1059]: 13%
+                    - generic [ref=e1060]: 18,900원
+                - generic [ref=e1062]: 무료배송
+            - link "담기 판매자배송 [신지모루X모디무드] 맥세이프 케이스 에어클로 베이직 크로스 드림 (아이폰/갤럭시) 모디무드 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!) 21,900원 13%18,900원 무료배송" [ref=e1063] [cursor=pointer]:
+              - /url: /goods/1001795445
+              - button "담기" [ref=e1070]:
+                - img
+                - text: 담기
+              - generic [ref=e1071]:
+                - generic [ref=e1072]: 판매자배송
+                - generic [ref=e1073]: "[신지모루X모디무드] 맥세이프 케이스 에어클로 베이직 크로스 드림 (아이폰/갤럭시)"
+                - paragraph [ref=e1074]: 모디무드 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1075]:
+                  - generic [ref=e1077]: 21,900원
+                  - generic [ref=e1078]:
+                    - generic [ref=e1079]: 13%
+                    - generic [ref=e1080]: 18,900원
+                - generic [ref=e1082]: 무료배송
+            - link "담기 판매자배송 [신지모루] 카드수납 에어 쉴드 4중 보호 투명 케이스 (아이폰/갤럭시) 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!) 13,900원 21%10,900원 무료배송" [ref=e1083] [cursor=pointer]:
+              - /url: /goods/1001625066
+              - button "담기" [ref=e1090]:
+                - img
+                - text: 담기
+              - generic [ref=e1091]:
+                - generic [ref=e1092]: 판매자배송
+                - generic [ref=e1093]: "[신지모루] 카드수납 에어 쉴드 4중 보호 투명 케이스 (아이폰/갤럭시)"
+                - paragraph [ref=e1094]: 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1095]:
+                  - generic [ref=e1097]: 13,900원
+                  - generic [ref=e1098]:
+                    - generic [ref=e1099]: 21%
+                    - generic [ref=e1100]: 10,900원
+                - generic [ref=e1102]: 무료배송
+            - link "담기 판매자배송 [신지모루] 맥세이프 자석 스티커 M 메탈 플레이트 아이폰 갤럭시 마그네틱 액세서리 갤럭시/아이폰 호환 맥세이프의 강력한 고정 ! 9,900원 40%5,900원 무료배송" [ref=e1103] [cursor=pointer]:
+              - /url: /goods/1001413252
+              - button "담기" [ref=e1110]:
+                - img
+                - text: 담기
+              - generic [ref=e1111]:
+                - generic [ref=e1112]: 판매자배송
+                - generic [ref=e1113]: "[신지모루] 맥세이프 자석 스티커 M 메탈 플레이트 아이폰 갤럭시 마그네틱 액세서리"
+                - paragraph [ref=e1114]: 갤럭시/아이폰 호환 맥세이프의 강력한 고정 !
+                - generic [ref=e1115]:
+                  - generic [ref=e1117]: 9,900원
+                  - generic [ref=e1118]:
+                    - generic [ref=e1119]: 40%
+                    - generic [ref=e1120]: 5,900원
+                - generic [ref=e1122]: 무료배송
+            - link "담기 판매자배송 [신지모루] 아이폰 갤럭시 AR 무반사 고화질 강화유리 액정 보호 필름 15시까지 주문시, 당일발송 ! 건전지 15,900원 25%11,900원 무료배송" [ref=e1123] [cursor=pointer]:
+              - /url: /goods/1001505091
+              - button "담기" [ref=e1130]:
+                - img
+                - text: 담기
+              - generic [ref=e1131]:
+                - generic [ref=e1132]: 판매자배송
+                - generic [ref=e1133]: "[신지모루] 아이폰 갤럭시 AR 무반사 고화질 강화유리 액정 보호 필름"
+                - paragraph [ref=e1134]: 15시까지 주문시, 당일발송 ! 건전지
+                - generic [ref=e1135]:
+                  - generic [ref=e1137]: 15,900원
+                  - generic [ref=e1138]:
+                    - generic [ref=e1139]: 25%
+                    - generic [ref=e1140]: 11,900원
+                - generic [ref=e1142]: 무료배송
+            - link "담기 판매자배송 [신지모루] 3매 이지 풀커버 자가복원 TPU 액정보호필름 (갤럭시) 15시까지 주문시, 당일발송 ! 14,900원 13%12,900원 무료배송" [ref=e1143] [cursor=pointer]:
+              - /url: /goods/1001340278
+              - button "담기" [ref=e1150]:
+                - img
+                - text: 담기
+              - generic [ref=e1151]:
+                - generic [ref=e1152]: 판매자배송
+                - generic [ref=e1153]: "[신지모루] 3매 이지 풀커버 자가복원 TPU 액정보호필름 (갤럭시)"
+                - paragraph [ref=e1154]: 15시까지 주문시, 당일발송 !
+                - generic [ref=e1155]:
+                  - generic [ref=e1157]: 14,900원
+                  - generic [ref=e1158]:
+                    - generic [ref=e1159]: 13%
+                    - generic [ref=e1160]: 12,900원
+                - generic [ref=e1162]: 무료배송
+            - link "담기 판매자배송 [신지모루] 맥세이프 M 에어클로 라이트 투명 케이스 클리어 (아이폰/갤럭시) 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!) 14,900원 26%10,900원 무료배송" [ref=e1163] [cursor=pointer]:
+              - /url: /goods/1001625060
+              - button "담기" [ref=e1170]:
+                - img
+                - text: 담기
+              - generic [ref=e1171]:
+                - generic [ref=e1172]: 판매자배송
+                - generic [ref=e1173]: "[신지모루] 맥세이프 M 에어클로 라이트 투명 케이스 클리어 (아이폰/갤럭시)"
+                - paragraph [ref=e1174]: 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1175]:
+                  - generic [ref=e1177]: 14,900원
+                  - generic [ref=e1178]:
+                    - generic [ref=e1179]: 26%
+                    - generic [ref=e1180]: 10,900원
+                - generic [ref=e1182]: 무료배송
+            - link "담기 판매자배송 [신지모루X할명수] 손글씨 하마터면 맥세이프 투명 하드 젤리 케이스 (아이폰/갤럭시) 할명수 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!) 19,900원 5%18,900원 무료배송" [ref=e1183] [cursor=pointer]:
+              - /url: /goods/1001755126
+              - button "담기" [ref=e1190]:
+                - img
+                - text: 담기
+              - generic [ref=e1191]:
+                - generic [ref=e1192]: 판매자배송
+                - generic [ref=e1193]: "[신지모루X할명수] 손글씨 하마터면 맥세이프 투명 하드 젤리 케이스 (아이폰/갤럭시)"
+                - paragraph [ref=e1194]: 할명수 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1195]:
+                  - generic [ref=e1197]: 19,900원
+                  - generic [ref=e1198]:
+                    - generic [ref=e1199]: 5%
+                    - generic [ref=e1200]: 18,900원
+                - generic [ref=e1202]: 무료배송
+            - link "담기 판매자배송 [신지모루X할명수] 손글씨 적일많벌 맥세이프 투명 하드 젤리 케이스 (아이폰/갤럭시) 할명수 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!) 19,900원 5%18,900원 무료배송" [ref=e1203] [cursor=pointer]:
+              - /url: /goods/1001755127
+              - button "담기" [ref=e1210]:
+                - img
+                - text: 담기
+              - generic [ref=e1211]:
+                - generic [ref=e1212]: 판매자배송
+                - generic [ref=e1213]: "[신지모루X할명수] 손글씨 적일많벌 맥세이프 투명 하드 젤리 케이스 (아이폰/갤럭시)"
+                - paragraph [ref=e1214]: 할명수 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1215]:
+                  - generic [ref=e1217]: 19,900원
+                  - generic [ref=e1218]:
+                    - generic [ref=e1219]: 5%
+                    - generic [ref=e1220]: 18,900원
+                - generic [ref=e1222]: 무료배송
+            - link "담기 판매자배송 [신지모루X모디무드] 맥세이프 케이스 에어클로 베이직 미드나잇스타 (아이폰/갤럭시) 모디무드 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!) 21,900원 13%18,900원 무료배송" [ref=e1223] [cursor=pointer]:
+              - /url: /goods/1001795446
+              - button "담기" [ref=e1230]:
+                - img
+                - text: 담기
+              - generic [ref=e1231]:
+                - generic [ref=e1232]: 판매자배송
+                - generic [ref=e1233]: "[신지모루X모디무드] 맥세이프 케이스 에어클로 베이직 미드나잇스타 (아이폰/갤럭시)"
+                - paragraph [ref=e1234]: 모디무드 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1235]:
+                  - generic [ref=e1237]: 21,900원
+                  - generic [ref=e1238]:
+                    - generic [ref=e1239]: 13%
+                    - generic [ref=e1240]: 18,900원
+                - generic [ref=e1242]: 무료배송
+            - link "담기 판매자배송 [신지모루X할명수] 손글씨 중꺾그마 맥세이프 투명 하드 젤리 케이스 (아이폰/갤럭시) 할명수 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!) 19,900원 15%16,900원 무료배송" [ref=e1243] [cursor=pointer]:
+              - /url: /goods/1001754383
+              - button "담기" [ref=e1250]:
+                - img
+                - text: 담기
+              - generic [ref=e1251]:
+                - generic [ref=e1252]: 판매자배송
+                - generic [ref=e1253]: "[신지모루X할명수] 손글씨 중꺾그마 맥세이프 투명 하드 젤리 케이스 (아이폰/갤럭시)"
+                - paragraph [ref=e1254]: 할명수 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1255]:
+                  - generic [ref=e1257]: 19,900원
+                  - generic [ref=e1258]:
+                    - generic [ref=e1259]: 15%
+                    - generic [ref=e1260]: 16,900원
+                - generic [ref=e1262]: 무료배송
+            - link "담기 판매자배송 [신지모루] 카드수납 에어 쉴드 4중보호 투명 프라이어 케이스 (아이폰/갤럭시) 아이폰 16e 신제품 출시! (15시까지 주문시, 당일발송 !) 14,900원 26%11,000원 26 무료배송" [ref=e1263] [cursor=pointer]:
+              - /url: /goods/1001153264
+              - button "담기" [ref=e1270]:
+                - img
+                - text: 담기
+              - generic [ref=e1271]:
+                - generic [ref=e1272]: 판매자배송
+                - generic [ref=e1273]: "[신지모루] 카드수납 에어 쉴드 4중보호 투명 프라이어 케이스 (아이폰/갤럭시)"
+                - paragraph [ref=e1274]: 아이폰 16e 신제품 출시! (15시까지 주문시, 당일발송 !)
+                - generic [ref=e1275]:
+                  - generic [ref=e1277]: 14,900원
+                  - generic [ref=e1278]:
+                    - generic [ref=e1279]: 26%
+                    - generic [ref=e1280]: 11,000원
+                - generic [ref=e1281]:
+                  - img [ref=e1283]
+                  - generic [ref=e1288]: "26"
+                - generic [ref=e1290]: 무료배송
+            - link "담기 판매자배송 [신지모루] 2매 빛번짐 방지 카메라 강화유리 후면 액정보호 필름 (아이폰/갤럭시) 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!) 13,900원 14%11,900원 무료배송" [ref=e1291] [cursor=pointer]:
+              - /url: /goods/1001603566
+              - button "담기" [ref=e1298]:
+                - img
+                - text: 담기
+              - generic [ref=e1299]:
+                - generic [ref=e1300]: 판매자배송
+                - generic [ref=e1301]: "[신지모루] 2매 빛번짐 방지 카메라 강화유리 후면 액정보호 필름 (아이폰/갤럭시)"
+                - paragraph [ref=e1302]: 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1303]:
+                  - generic [ref=e1305]: 13,900원
+                  - generic [ref=e1306]:
+                    - generic [ref=e1307]: 14%
+                    - generic [ref=e1308]: 11,900원
+                - generic [ref=e1310]: 무료배송
+            - link "담기 판매자배송 [르메이어] 갤럭시 사생활보호 풀커버 액정보호 휴대폰 강화필름 2매 17,700원 22%13,650원 무료배송" [ref=e1311] [cursor=pointer]:
+              - /url: /goods/1001393332
+              - button "담기" [ref=e1318]:
+                - img
+                - text: 담기
+              - generic [ref=e1319]:
+                - generic [ref=e1320]: 판매자배송
+                - generic [ref=e1321]: "[르메이어] 갤럭시 사생활보호 풀커버 액정보호 휴대폰 강화필름 2매"
+                - generic [ref=e1322]:
+                  - generic [ref=e1324]: 17,700원
+                  - generic [ref=e1325]:
+                    - generic [ref=e1326]: 22%
+                    - generic [ref=e1327]: 13,650원
+                - generic [ref=e1329]: 무료배송
+            - link "담기 판매자배송 [신지모루X할명수] 손글씨 적일많벌 에어클로 투명 하드 젤리 케이스 (아이폰/갤럭시) 할명수 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!) 15,900원 12%13,900원 무료배송" [ref=e1330] [cursor=pointer]:
+              - /url: /goods/1001755128
+              - button "담기" [ref=e1337]:
+                - img
+                - text: 담기
+              - generic [ref=e1338]:
+                - generic [ref=e1339]: 판매자배송
+                - generic [ref=e1340]: "[신지모루X할명수] 손글씨 적일많벌 에어클로 투명 하드 젤리 케이스 (아이폰/갤럭시)"
+                - paragraph [ref=e1341]: 할명수 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1342]:
+                  - generic [ref=e1344]: 15,900원
+                  - generic [ref=e1345]:
+                    - generic [ref=e1346]: 12%
+                    - generic [ref=e1347]: 13,900원
+                - generic [ref=e1349]: 무료배송
+            - link "담기 판매자배송 [신지모루X할명수] 손글씨 하마터면 에어클로 투명 하드 젤리 케이스 (아이폰/갤럭시) 할명수 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!) 15,900원 12%13,900원 무료배송" [ref=e1350] [cursor=pointer]:
+              - /url: /goods/1001755032
+              - button "담기" [ref=e1357]:
+                - img
+                - text: 담기
+              - generic [ref=e1358]:
+                - generic [ref=e1359]: 판매자배송
+                - generic [ref=e1360]: "[신지모루X할명수] 손글씨 하마터면 에어클로 투명 하드 젤리 케이스 (아이폰/갤럭시)"
+                - paragraph [ref=e1361]: 할명수 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1362]:
+                  - generic [ref=e1364]: 15,900원
+                  - generic [ref=e1365]:
+                    - generic [ref=e1366]: 12%
+                    - generic [ref=e1367]: 13,900원
+                - generic [ref=e1369]: 무료배송
+            - link "담기 판매자배송 [신지모루X할명수] 손글씨 중꺾그마 에어클로 투명 하드 젤리 케이스 (아이폰/갤럭시) 할명수 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!) 15,900원 12%13,900원 무료배송" [ref=e1370] [cursor=pointer]:
+              - /url: /goods/1001755033
+              - button "담기" [ref=e1377]:
+                - img
+                - text: 담기
+              - generic [ref=e1378]:
+                - generic [ref=e1379]: 판매자배송
+                - generic [ref=e1380]: "[신지모루X할명수] 손글씨 중꺾그마 에어클로 투명 하드 젤리 케이스 (아이폰/갤럭시)"
+                - paragraph [ref=e1381]: 할명수 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1382]:
+                  - generic [ref=e1384]: 15,900원
+                  - generic [ref=e1385]:
+                    - generic [ref=e1386]: 12%
+                    - generic [ref=e1387]: 13,900원
+                - generic [ref=e1389]: 무료배송
+            - link "담기 판매자배송 [신지모루X모디무드] 투명 케이스 젤리 하드 에어클로 베이직 멜로디스타 (아이폰/갤럭시) 모디무드 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!) 16,900원 17%13,900원 무료배송" [ref=e1390] [cursor=pointer]:
+              - /url: /goods/1001836116
+              - button "담기" [ref=e1397]:
+                - img
+                - text: 담기
+              - generic [ref=e1398]:
+                - generic [ref=e1399]: 판매자배송
+                - generic [ref=e1400]: "[신지모루X모디무드] 투명 케이스 젤리 하드 에어클로 베이직 멜로디스타 (아이폰/갤럭시)"
+                - paragraph [ref=e1401]: 모디무드 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1402]:
+                  - generic [ref=e1404]: 16,900원
+                  - generic [ref=e1405]:
+                    - generic [ref=e1406]: 17%
+                    - generic [ref=e1407]: 13,900원
+                - generic [ref=e1409]: 무료배송
+            - link "담기 판매자배송 [신지모루X모디무드] 투명 케이스 젤리 하드 에어클로 베이직 크로스 드림 (아이폰/갤럭시) 모디무드 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!) 16,900원 17%13,900원 무료배송" [ref=e1410] [cursor=pointer]:
+              - /url: /goods/1001836131
+              - button "담기" [ref=e1417]:
+                - img
+                - text: 담기
+              - generic [ref=e1418]:
+                - generic [ref=e1419]: 판매자배송
+                - generic [ref=e1420]: "[신지모루X모디무드] 투명 케이스 젤리 하드 에어클로 베이직 크로스 드림 (아이폰/갤럭시)"
+                - paragraph [ref=e1421]: 모디무드 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1422]:
+                  - generic [ref=e1424]: 16,900원
+                  - generic [ref=e1425]:
+                    - generic [ref=e1426]: 17%
+                    - generic [ref=e1427]: 13,900원
+                - generic [ref=e1429]: 무료배송
+            - link "담기 판매자배송 [신지모루X모디무드] 투명 케이스 젤리 하드 에어클로 베이직 스타스핀 (아이폰/갤럭시) 모디무드 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!) 16,900원 17%13,900원 무료배송" [ref=e1430] [cursor=pointer]:
+              - /url: /goods/1001836129
+              - button "담기" [ref=e1437]:
+                - img
+                - text: 담기
+              - generic [ref=e1438]:
+                - generic [ref=e1439]: 판매자배송
+                - generic [ref=e1440]: "[신지모루X모디무드] 투명 케이스 젤리 하드 에어클로 베이직 스타스핀 (아이폰/갤럭시)"
+                - paragraph [ref=e1441]: 모디무드 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1442]:
+                  - generic [ref=e1444]: 16,900원
+                  - generic [ref=e1445]:
+                    - generic [ref=e1446]: 17%
+                    - generic [ref=e1447]: 13,900원
+                - generic [ref=e1449]: 무료배송
+            - link "담기 판매자배송 [신지모루] 2배자력 맥세이프 M-에어클로 젤하드 케이스 (아이폰/갤럭시) 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!) 21,900원 13%18,900원 무료배송" [ref=e1450] [cursor=pointer]:
+              - /url: /goods/1001604128
+              - button "담기" [ref=e1457]:
+                - img
+                - text: 담기
+              - generic [ref=e1458]:
+                - generic [ref=e1459]: 판매자배송
+                - generic [ref=e1460]: "[신지모루] 2배자력 맥세이프 M-에어클로 젤하드 케이스 (아이폰/갤럭시)"
+                - paragraph [ref=e1461]: 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1462]:
+                  - generic [ref=e1464]: 21,900원
+                  - generic [ref=e1465]:
+                    - generic [ref=e1466]: 13%
+                    - generic [ref=e1467]: 18,900원
+                - generic [ref=e1469]: 무료배송
+            - link "담기 판매자배송 [신지모루]0.2mm 지문인식 2.5Dx 강화유리 2매 (아이폰/갤럭시) 15시까지 주문시, 당일발송 ! 11,900원 16%9,900원 무료배송" [ref=e1470] [cursor=pointer]:
+              - /url: /goods/1001340459
+              - button "담기" [ref=e1477]:
+                - img
+                - text: 담기
+              - generic [ref=e1478]:
+                - generic [ref=e1479]: 판매자배송
+                - generic [ref=e1480]: "[신지모루]0.2mm 지문인식 2.5Dx 강화유리 2매 (아이폰/갤럭시)"
+                - paragraph [ref=e1481]: 15시까지 주문시, 당일발송 !
+                - generic [ref=e1482]:
+                  - generic [ref=e1484]: 11,900원
+                  - generic [ref=e1485]:
+                    - generic [ref=e1486]: 16%
+                    - generic [ref=e1487]: 9,900원
+                - generic [ref=e1489]: 무료배송
+            - link "담기 판매자배송 [신지모루] 맥세이프 M-에어로핏 베이직 1mm 슬림 케이스 (아이폰/갤럭시) 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!) 18,900원 15%15,900원 무료배송" [ref=e1490] [cursor=pointer]:
+              - /url: /goods/1001625064
+              - button "담기" [ref=e1497]:
+                - img
+                - text: 담기
+              - generic [ref=e1498]:
+                - generic [ref=e1499]: 판매자배송
+                - generic [ref=e1500]: "[신지모루] 맥세이프 M-에어로핏 베이직 1mm 슬림 케이스 (아이폰/갤럭시)"
+                - paragraph [ref=e1501]: 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1502]:
+                  - generic [ref=e1504]: 18,900원
+                  - generic [ref=e1505]:
+                    - generic [ref=e1506]: 15%
+                    - generic [ref=e1507]: 15,900원
+                - generic [ref=e1509]: 무료배송
+            - link "담기 판매자배송 [신지모루] 풀커버 사생활 보호 자가복원 TPU 액정보호필름 2매 (갤럭시) 15시까지 주문시, 당일발송 ! 17,900원 22%13,900원 무료배송" [ref=e1510] [cursor=pointer]:
+              - /url: /goods/1001340189
+              - button "담기" [ref=e1517]:
+                - img
+                - text: 담기
+              - generic [ref=e1518]:
+                - generic [ref=e1519]: 판매자배송
+                - generic [ref=e1520]: "[신지모루] 풀커버 사생활 보호 자가복원 TPU 액정보호필름 2매 (갤럭시)"
+                - paragraph [ref=e1521]: 15시까지 주문시, 당일발송 !
+                - generic [ref=e1522]:
+                  - generic [ref=e1524]: 17,900원
+                  - generic [ref=e1525]:
+                    - generic [ref=e1526]: 22%
+                    - generic [ref=e1527]: 13,900원
+                - generic [ref=e1529]: 무료배송
+            - link "담기 판매자배송 [신지모루X모디무드] 투명 케이스 젤리 하드 에어클로 베이직 미드나잇스타 (아이폰/갤럭시) 모디무드 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!) 16,900원 17%13,900원 무료배송" [ref=e1530] [cursor=pointer]:
+              - /url: /goods/1001836130
+              - button "담기" [ref=e1537]:
+                - img
+                - text: 담기
+              - generic [ref=e1538]:
+                - generic [ref=e1539]: 판매자배송
+                - generic [ref=e1540]: "[신지모루X모디무드] 투명 케이스 젤리 하드 에어클로 베이직 미드나잇스타 (아이폰/갤럭시)"
+                - paragraph [ref=e1541]: 모디무드 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1542]:
+                  - generic [ref=e1544]: 16,900원
+                  - generic [ref=e1545]:
+                    - generic [ref=e1546]: 17%
+                    - generic [ref=e1547]: 13,900원
+                - generic [ref=e1549]: 무료배송
+            - link "담기 판매자배송 [신지모루] 풀커버 저반사 지문방지 액정보호필름 갤럭시 Z플립7 15시까지 주문시, 당일발송 ! 18,900원 21%14,900원 무료배송" [ref=e1550] [cursor=pointer]:
+              - /url: /goods/1001464259
+              - button "담기" [ref=e1557]:
+                - img
+                - text: 담기
+              - generic [ref=e1558]:
+                - generic [ref=e1559]: 판매자배송
+                - generic [ref=e1560]: "[신지모루] 풀커버 저반사 지문방지 액정보호필름 갤럭시 Z플립7"
+                - paragraph [ref=e1561]: 15시까지 주문시, 당일발송 !
+                - generic [ref=e1562]:
+                  - generic [ref=e1564]: 18,900원
+                  - generic [ref=e1565]:
+                    - generic [ref=e1566]: 21%
+                    - generic [ref=e1567]: 14,900원
+                - generic [ref=e1569]: 무료배송
+            - link "담기 판매자배송 [신지모루] 풀커버 저반사 지문방지 액정보호필름 갤럭시 Z폴드7 15시까지 주문시, 당일발송 ! 20,900원 19%16,900원 무료배송" [ref=e1570] [cursor=pointer]:
+              - /url: /goods/1001464258
+              - button "담기" [ref=e1577]:
+                - img
+                - text: 담기
+              - generic [ref=e1578]:
+                - generic [ref=e1579]: 판매자배송
+                - generic [ref=e1580]: "[신지모루] 풀커버 저반사 지문방지 액정보호필름 갤럭시 Z폴드7"
+                - paragraph [ref=e1581]: 15시까지 주문시, 당일발송 !
+                - generic [ref=e1582]:
+                  - generic [ref=e1584]: 20,900원
+                  - generic [ref=e1585]:
+                    - generic [ref=e1586]: 19%
+                    - generic [ref=e1587]: 16,900원
+                - generic [ref=e1589]: 무료배송
+            - link "담기 판매자배송 [신지모루] 풀커버 AR 무반사 고화질 강화유리 액정 보호 필름 (아이폰/갤럭시) 15시까지 주문시, 당일발송 ! 16,900원 23%12,900원 무료배송" [ref=e1590] [cursor=pointer]:
+              - /url: /goods/1001505089
+              - button "담기" [ref=e1597]:
+                - img
+                - text: 담기
+              - generic [ref=e1598]:
+                - generic [ref=e1599]: 판매자배송
+                - generic [ref=e1600]: "[신지모루] 풀커버 AR 무반사 고화질 강화유리 액정 보호 필름 (아이폰/갤럭시)"
+                - paragraph [ref=e1601]: 15시까지 주문시, 당일발송 !
+                - generic [ref=e1602]:
+                  - generic [ref=e1604]: 16,900원
+                  - generic [ref=e1605]:
+                    - generic [ref=e1606]: 23%
+                    - generic [ref=e1607]: 12,900원
+                - generic [ref=e1609]: 무료배송
+            - link "담기 판매자배송 [신지모루X할명수] 손글씨 저를요 맥세이프 투명 하드 젤리 케이스 (아이폰/갤럭시) 할명수 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!) 19,900원 5%18,900원 무료배송" [ref=e1610] [cursor=pointer]:
+              - /url: /goods/1001754549
+              - button "담기" [ref=e1617]:
+                - img
+                - text: 담기
+              - generic [ref=e1618]:
+                - generic [ref=e1619]: 판매자배송
+                - generic [ref=e1620]: "[신지모루X할명수] 손글씨 저를요 맥세이프 투명 하드 젤리 케이스 (아이폰/갤럭시)"
+                - paragraph [ref=e1621]: 할명수 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1622]:
+                  - generic [ref=e1624]: 19,900원
+                  - generic [ref=e1625]:
+                    - generic [ref=e1626]: 5%
+                    - generic [ref=e1627]: 18,900원
+                - generic [ref=e1629]: 무료배송
+            - link "담기 판매자배송 [신지모루X할명수] 손글씨 저를요 에어클로 투명 하드 젤리 케이스 (아이폰/갤럭시) 할명수 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!) 15,900원 12%13,900원 무료배송" [ref=e1630] [cursor=pointer]:
+              - /url: /goods/1001755031
+              - button "담기" [ref=e1637]:
+                - img
+                - text: 담기
+              - generic [ref=e1638]:
+                - generic [ref=e1639]: 판매자배송
+                - generic [ref=e1640]: "[신지모루X할명수] 손글씨 저를요 에어클로 투명 하드 젤리 케이스 (아이폰/갤럭시)"
+                - paragraph [ref=e1641]: 할명수 콜라보 신규 출시 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1642]:
+                  - generic [ref=e1644]: 15,900원
+                  - generic [ref=e1645]:
+                    - generic [ref=e1646]: 12%
+                    - generic [ref=e1647]: 13,900원
+                - generic [ref=e1649]: 무료배송
+            - link "담기 판매자배송 [신지모루]에어가드 맥세이프 링 힌지보호 갤럭시Z플립7 시리즈 투명 케이스 15시까지 주문시, 당일발송 ! 18,900원 21%14,900원 무료배송" [ref=e1650] [cursor=pointer]:
+              - /url: /goods/1001467970
+              - button "담기" [ref=e1657]:
+                - img
+                - text: 담기
+              - generic [ref=e1658]:
+                - generic [ref=e1659]: 판매자배송
+                - generic [ref=e1660]: "[신지모루]에어가드 맥세이프 링 힌지보호 갤럭시Z플립7 시리즈 투명 케이스"
+                - paragraph [ref=e1661]: 15시까지 주문시, 당일발송 !
+                - generic [ref=e1662]:
+                  - generic [ref=e1664]: 18,900원
+                  - generic [ref=e1665]:
+                    - generic [ref=e1666]: 21%
+                    - generic [ref=e1667]: 14,900원
+                - generic [ref=e1669]: 무료배송
+            - link "담기 판매자배송 [신지모루] 저반사 매트 지문방지 코팅 강화유리 액정보호필름 갤럭시 Z플립7 15시까지 주문시, 당일발송 ! 18,900원 21%14,900원 무료배송" [ref=e1670] [cursor=pointer]:
+              - /url: /goods/1001464313
+              - button "담기" [ref=e1677]:
+                - img
+                - text: 담기
+              - generic [ref=e1678]:
+                - generic [ref=e1679]: 판매자배송
+                - generic [ref=e1680]: "[신지모루] 저반사 매트 지문방지 코팅 강화유리 액정보호필름 갤럭시 Z플립7"
+                - paragraph [ref=e1681]: 15시까지 주문시, 당일발송 !
+                - generic [ref=e1682]:
+                  - generic [ref=e1684]: 18,900원
+                  - generic [ref=e1685]:
+                    - generic [ref=e1686]: 21%
+                    - generic [ref=e1687]: 14,900원
+                - generic [ref=e1689]: 무료배송
+            - link "담기 판매자배송 [신지모루] 저반사 매트 지문방지 코팅 강화유리 액정보호필름 갤럭시 Z폴드7 15시까지 주문시, 당일발송 ! 19,900원 20%15,900원 무료배송" [ref=e1690] [cursor=pointer]:
+              - /url: /goods/1001464315
+              - button "담기" [ref=e1697]:
+                - img
+                - text: 담기
+              - generic [ref=e1698]:
+                - generic [ref=e1699]: 판매자배송
+                - generic [ref=e1700]: "[신지모루] 저반사 매트 지문방지 코팅 강화유리 액정보호필름 갤럭시 Z폴드7"
+                - paragraph [ref=e1701]: 15시까지 주문시, 당일발송 !
+                - generic [ref=e1702]:
+                  - generic [ref=e1704]: 19,900원
+                  - generic [ref=e1705]:
+                    - generic [ref=e1706]: 20%
+                    - generic [ref=e1707]: 15,900원
+                - generic [ref=e1709]: 무료배송
+            - link "담기 판매자배송 [신지모루] 사생활 보호 강화유리 풀커버 프라이버시 액정 필름 2매 (아이폰/갤럭시) 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!) 15,900원 18%12,900원 16 무료배송" [ref=e1710] [cursor=pointer]:
+              - /url: /goods/1001603565
+              - button "담기" [ref=e1717]:
+                - img
+                - text: 담기
+              - generic [ref=e1718]:
+                - generic [ref=e1719]: 판매자배송
+                - generic [ref=e1720]: "[신지모루] 사생활 보호 강화유리 풀커버 프라이버시 액정 필름 2매 (아이폰/갤럭시)"
+                - paragraph [ref=e1721]: 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1722]:
+                  - generic [ref=e1724]: 15,900원
+                  - generic [ref=e1725]:
+                    - generic [ref=e1726]: 18%
+                    - generic [ref=e1727]: 12,900원
+                - generic [ref=e1728]:
+                  - img [ref=e1730]
+                  - generic [ref=e1735]: "16"
+                - generic [ref=e1737]: 무료배송
+            - link "담기 판매자배송 [신지모루] 오피디 25W 듀얼포트 PPS 초고속 충전기 초고속 충전 25W 완벽 호환 14,900원 26%10,900원~ 245 무료배송" [ref=e1738] [cursor=pointer]:
+              - /url: /goods/1001202325
+              - button "담기" [ref=e1745]:
+                - img
+                - text: 담기
+              - generic [ref=e1746]:
+                - generic [ref=e1747]: 판매자배송
+                - generic [ref=e1748]: "[신지모루] 오피디 25W 듀얼포트 PPS 초고속 충전기"
+                - paragraph [ref=e1749]: 초고속 충전 25W 완벽 호환
+                - generic [ref=e1750]:
+                  - generic [ref=e1752]: 14,900원
+                  - generic [ref=e1753]:
+                    - generic [ref=e1754]: 26%
+                    - generic [ref=e1755]: 10,900원~
+                - generic [ref=e1756]:
+                  - img [ref=e1758]
+                  - generic [ref=e1763]: "245"
+                - generic [ref=e1765]: 무료배송
+            - link "담기 판매자배송 [르메이어] 갤럭시 풀커버 9H 강화유리 액정보호필름 2매 11,000원 22%8,480원 무료배송" [ref=e1766] [cursor=pointer]:
+              - /url: /goods/1001392971
+              - button "담기" [ref=e1773]:
+                - img
+                - text: 담기
+              - generic [ref=e1774]:
+                - generic [ref=e1775]: 판매자배송
+                - generic [ref=e1776]: "[르메이어] 갤럭시 풀커버 9H 강화유리 액정보호필름 2매"
+                - generic [ref=e1777]:
+                  - generic [ref=e1779]: 11,000원
+                  - generic [ref=e1780]:
+                    - generic [ref=e1781]: 22%
+                    - generic [ref=e1782]: 8,480원
+                - generic [ref=e1784]: 무료배송
+            - link "담기 판매자배송 [신지모루] 아이폰 갤럭시 사생활보호 강화유리 필름 마이크로 루버코팅 액정보호 2매 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!) 15,900원 12%13,900원 18 무료배송" [ref=e1785] [cursor=pointer]:
+              - /url: /goods/1001592936
+              - button "담기" [ref=e1792]:
+                - img
+                - text: 담기
+              - generic [ref=e1793]:
+                - generic [ref=e1794]: 판매자배송
+                - generic [ref=e1795]: "[신지모루] 아이폰 갤럭시 사생활보호 강화유리 필름 마이크로 루버코팅 액정보호 2매"
+                - paragraph [ref=e1796]: 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1797]:
+                  - generic [ref=e1799]: 15,900원
+                  - generic [ref=e1800]:
+                    - generic [ref=e1801]: 12%
+                    - generic [ref=e1802]: 13,900원
+                - generic [ref=e1803]:
+                  - img [ref=e1805]
+                  - generic [ref=e1810]: "18"
+                - generic [ref=e1812]: 무료배송
+            - link "담기 판매자배송 [신지모루] 지문인식 2.5Dx 강화유리 0.2mm 슬림 액정 필름 2매 (아이폰/갤럭시) 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!) 13,900원 14%11,900원 무료배송" [ref=e1813] [cursor=pointer]:
+              - /url: /goods/1001604131
+              - button "담기" [ref=e1820]:
+                - img
+                - text: 담기
+              - generic [ref=e1821]:
+                - generic [ref=e1822]: 판매자배송
+                - generic [ref=e1823]: "[신지모루] 지문인식 2.5Dx 강화유리 0.2mm 슬림 액정 필름 2매 (아이폰/갤럭시)"
+                - paragraph [ref=e1824]: 아이폰 17 시리즈 추가 ! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1825]:
+                  - generic [ref=e1827]: 13,900원
+                  - generic [ref=e1828]:
+                    - generic [ref=e1829]: 14%
+                    - generic [ref=e1830]: 11,900원
+                - generic [ref=e1832]: 무료배송
+            - link "담기 판매자배송 [신지모루] 맥세이프 풀커버 360도 워터락 방수케이스 핸드폰 잠수 방수팩 아이폰/갤럭시 방수케이스 출시! (15시까지 주문시, 당일발송!) 32,900원 21%25,900원 무료배송" [ref=e1833] [cursor=pointer]:
+              - /url: /goods/1001313741
+              - button "담기" [ref=e1840]:
+                - img
+                - text: 담기
+              - generic [ref=e1841]:
+                - generic [ref=e1842]: 판매자배송
+                - generic [ref=e1843]: "[신지모루] 맥세이프 풀커버 360도 워터락 방수케이스 핸드폰 잠수 방수팩 아이폰/갤럭시"
+                - paragraph [ref=e1844]: 방수케이스 출시! (15시까지 주문시, 당일발송!)
+                - generic [ref=e1845]:
+                  - generic [ref=e1847]: 32,900원
+                  - generic [ref=e1848]:
+                    - generic [ref=e1849]: 21%
+                    - generic [ref=e1850]: 25,900원
+                - generic [ref=e1852]: 무료배송
+            - link "담기 판매자배송 [신지모루] 3in1 맥세이프 무선충전 거치대 Qi2 M 윙터보 (애플/갤럭시) 15시까지 주문시, 당일발송 ! 59,800원 21%47,000원 무료배송" [ref=e1853] [cursor=pointer]:
+              - /url: /goods/1000881189
+              - button "담기" [ref=e1860]:
+                - img
+                - text: 담기
+              - generic [ref=e1861]:
+                - generic [ref=e1862]: 판매자배송
+                - generic [ref=e1863]: "[신지모루] 3in1 맥세이프 무선충전 거치대 Qi2 M 윙터보 (애플/갤럭시)"
+                - paragraph [ref=e1864]: 15시까지 주문시, 당일발송 !
+                - generic [ref=e1865]:
+                  - generic [ref=e1867]: 59,800원
+                  - generic [ref=e1868]:
+                    - generic [ref=e1869]: 21%
+                    - generic [ref=e1870]: 47,000원
+                - generic [ref=e1872]: 무료배송
+            - link "담기 판매자배송 [신지모루] 25W ~ 100W 고속 충전기 GaN 접지 생활 어댑터 모음전(4종) 15시까지 주문시, 당일발송 ! 13,900원 28%9,900원~ 11 무료배송" [ref=e1873] [cursor=pointer]:
+              - /url: /goods/1000750174
+              - button "담기" [ref=e1880]:
+                - img
+                - text: 담기
+              - generic [ref=e1881]:
+                - generic [ref=e1882]: 판매자배송
+                - generic [ref=e1883]: "[신지모루] 25W ~ 100W 고속 충전기 GaN 접지 생활 어댑터 모음전(4종)"
+                - paragraph [ref=e1884]: 15시까지 주문시, 당일발송 !
+                - generic [ref=e1885]:
+                  - generic [ref=e1887]: 13,900원
+                  - generic [ref=e1888]:
+                    - generic [ref=e1889]: 28%
+                    - generic [ref=e1890]: 9,900원~
+                - generic [ref=e1891]:
+                  - img [ref=e1893]
+                  - generic [ref=e1898]: "11"
+                - generic [ref=e1900]: 무료배송
+            - link "담기 판매자배송 [신지모루] 카드수납 충격보호 듀얼 아머락 카드 슬롯 케이스 15시까지 주문시, 당일발송 ! 16,900원 17%13,900원 무료배송" [ref=e1901] [cursor=pointer]:
+              - /url: /goods/1001819893
+              - button "담기" [ref=e1908]:
+                - img
+                - text: 담기
+              - generic [ref=e1909]:
+                - generic [ref=e1910]: 판매자배송
+                - generic [ref=e1911]: "[신지모루] 카드수납 충격보호 듀얼 아머락 카드 슬롯 케이스"
+                - paragraph [ref=e1912]: 15시까지 주문시, 당일발송 !
+                - generic [ref=e1913]:
+                  - generic [ref=e1915]: 16,900원
+                  - generic [ref=e1916]:
+                    - generic [ref=e1917]: 17%
+                    - generic [ref=e1918]: 13,900원
+                - generic [ref=e1920]: 무료배송
+            - link "담기 판매자배송 [소유마실] Peach 에폭시범퍼케이스 24,000원 4%23,000원 무료배송" [ref=e1921] [cursor=pointer]:
+              - /url: /goods/1001373109
+              - button "담기" [ref=e1928]:
+                - img
+                - text: 담기
+              - generic [ref=e1929]:
+                - generic [ref=e1930]: 판매자배송
+                - generic [ref=e1931]: "[소유마실] Peach 에폭시범퍼케이스"
+                - generic [ref=e1932]:
+                  - generic [ref=e1934]: 24,000원
+                  - generic [ref=e1935]:
+                    - generic [ref=e1936]: 4%
+                    - generic [ref=e1937]: 23,000원
+                - generic [ref=e1939]: 무료배송
+            - link "담기 판매자배송 [소유마실] Strawberry 에폭시범퍼케이스 24,000원 4%23,000원 무료배송" [ref=e1940] [cursor=pointer]:
+              - /url: /goods/1001378215
+              - button "담기" [ref=e1947]:
+                - img
+                - text: 담기
+              - generic [ref=e1948]:
+                - generic [ref=e1949]: 판매자배송
+                - generic [ref=e1950]: "[소유마실] Strawberry 에폭시범퍼케이스"
+                - generic [ref=e1951]:
+                  - generic [ref=e1953]: 24,000원
+                  - generic [ref=e1954]:
+                    - generic [ref=e1955]: 4%
+                    - generic [ref=e1956]: 23,000원
+                - generic [ref=e1958]: 무료배송
+            - link "담기 판매자배송 [소유마실] green blue 에폭시범퍼케이스 24,000원 4%23,000원 무료배송" [ref=e1959] [cursor=pointer]:
+              - /url: /goods/1001378216
+              - button "담기" [ref=e1966]:
+                - img
+                - text: 담기
+              - generic [ref=e1967]:
+                - generic [ref=e1968]: 판매자배송
+                - generic [ref=e1969]: "[소유마실] green blue 에폭시범퍼케이스"
+                - generic [ref=e1970]:
+                  - generic [ref=e1972]: 24,000원
+                  - generic [ref=e1973]:
+                    - generic [ref=e1974]: 4%
+                    - generic [ref=e1975]: 23,000원
+                - generic [ref=e1977]: 무료배송
+            - link "담기 판매자배송 [소유마실] Brown egg 에폭시범퍼케이스 24,000원 4%23,000원 무료배송" [ref=e1978] [cursor=pointer]:
+              - /url: /goods/1001373108
+              - button "담기" [ref=e1985]:
+                - img
+                - text: 담기
+              - generic [ref=e1986]:
+                - generic [ref=e1987]: 판매자배송
+                - generic [ref=e1988]: "[소유마실] Brown egg 에폭시범퍼케이스"
+                - generic [ref=e1989]:
+                  - generic [ref=e1991]: 24,000원
+                  - generic [ref=e1992]:
+                    - generic [ref=e1993]: 4%
+                    - generic [ref=e1994]: 23,000원
+                - generic [ref=e1996]: 무료배송
+            - link "담기 판매자배송 [소유마실] kaki line 에폭시범퍼케이스 24,000원 4%23,000원 무료배송" [ref=e1997] [cursor=pointer]:
+              - /url: /goods/1001381318
+              - button "담기" [ref=e2004]:
+                - img
+                - text: 담기
+              - generic [ref=e2005]:
+                - generic [ref=e2006]: 판매자배송
+                - generic [ref=e2007]: "[소유마실] kaki line 에폭시범퍼케이스"
+                - generic [ref=e2008]:
+                  - generic [ref=e2010]: 24,000원
+                  - generic [ref=e2011]:
+                    - generic [ref=e2012]: 4%
+                    - generic [ref=e2013]: 23,000원
+                - generic [ref=e2015]: 무료배송
+            - link "담기 판매자배송 [소유마실] Flower mint 에폭시범퍼케이스 24,000원 4%23,000원 무료배송" [ref=e2016] [cursor=pointer]:
+              - /url: /goods/1001381216
+              - button "담기" [ref=e2023]:
+                - img
+                - text: 담기
+              - generic [ref=e2024]:
+                - generic [ref=e2025]: 판매자배송
+                - generic [ref=e2026]: "[소유마실] Flower mint 에폭시범퍼케이스"
+                - generic [ref=e2027]:
+                  - generic [ref=e2029]: 24,000원
+                  - generic [ref=e2030]:
+                    - generic [ref=e2031]: 4%
+                    - generic [ref=e2032]: 23,000원
+                - generic [ref=e2034]: 무료배송
+            - link "담기 판매자배송 [소유마실] Simple black 에폭시범퍼케이스 24,000원 4%23,000원 무료배송" [ref=e2035] [cursor=pointer]:
+              - /url: /goods/1001378921
+              - button "담기" [ref=e2042]:
+                - img
+                - text: 담기
+              - generic [ref=e2043]:
+                - generic [ref=e2044]: 판매자배송
+                - generic [ref=e2045]: "[소유마실] Simple black 에폭시범퍼케이스"
+                - generic [ref=e2046]:
+                  - generic [ref=e2048]: 24,000원
+                  - generic [ref=e2049]:
+                    - generic [ref=e2050]: 4%
+                    - generic [ref=e2051]: 23,000원
+                - generic [ref=e2053]: 무료배송
+            - link "담기 판매자배송 [소유마실] Blissful soyoumasil blue 에폭시범퍼케이스 24,000원 4%23,000원 무료배송" [ref=e2054] [cursor=pointer]:
+              - /url: /goods/1001381219
+              - button "담기" [ref=e2061]:
+                - img
+                - text: 담기
+              - generic [ref=e2062]:
+                - generic [ref=e2063]: 판매자배송
+                - generic [ref=e2064]: "[소유마실] Blissful soyoumasil blue 에폭시범퍼케이스"
+                - generic [ref=e2065]:
+                  - generic [ref=e2067]: 24,000원
+                  - generic [ref=e2068]:
+                    - generic [ref=e2069]: 4%
+                    - generic [ref=e2070]: 23,000원
+                - generic [ref=e2072]: 무료배송
+            - link "담기 판매자배송 [소유마실] Peach Mood Heart 에폭시범퍼케이스 24,000원 4%23,000원 무료배송" [ref=e2073] [cursor=pointer]:
+              - /url: /goods/1001381217
+              - button "담기" [ref=e2080]:
+                - img
+                - text: 담기
+              - generic [ref=e2081]:
+                - generic [ref=e2082]: 판매자배송
+                - generic [ref=e2083]: "[소유마실] Peach Mood Heart 에폭시범퍼케이스"
+                - generic [ref=e2084]:
+                  - generic [ref=e2086]: 24,000원
+                  - generic [ref=e2087]:
+                    - generic [ref=e2088]: 4%
+                    - generic [ref=e2089]: 23,000원
+                - generic [ref=e2091]: 무료배송
+            - link "담기 판매자배송 [소유마실] Simple airy blue 에폭시범퍼케이스 24,000원 4%23,000원 무료배송" [ref=e2092] [cursor=pointer]:
+              - /url: /goods/1001378214
+              - button "담기" [ref=e2099]:
+                - img
+                - text: 담기
+              - generic [ref=e2100]:
+                - generic [ref=e2101]: 판매자배송
+                - generic [ref=e2102]: "[소유마실] Simple airy blue 에폭시범퍼케이스"
+                - generic [ref=e2103]:
+                  - generic [ref=e2105]: 24,000원
+                  - generic [ref=e2106]:
+                    - generic [ref=e2107]: 4%
+                    - generic [ref=e2108]: 23,000원
+                - generic [ref=e2110]: 무료배송
+            - link "담기 판매자배송 [소유마실] berry berry strawberry 에폭시범퍼케이스 24,000원 4%23,000원 무료배송" [ref=e2111] [cursor=pointer]:
+              - /url: /goods/1001371130
+              - button "담기" [ref=e2118]:
+                - img
+                - text: 담기
+              - generic [ref=e2119]:
+                - generic [ref=e2120]: 판매자배송
+                - generic [ref=e2121]: "[소유마실] berry berry strawberry 에폭시범퍼케이스"
+                - generic [ref=e2122]:
+                  - generic [ref=e2124]: 24,000원
+                  - generic [ref=e2125]:
+                    - generic [ref=e2126]: 4%
+                    - generic [ref=e2127]: 23,000원
+                - generic [ref=e2129]: 무료배송
+            - link "담기 판매자배송 [소유마실] Dot point black 에폭시범퍼케이스 24,000원 4%23,000원 무료배송" [ref=e2130] [cursor=pointer]:
+              - /url: /goods/1001371129
+              - button "담기" [ref=e2137]:
+                - img
+                - text: 담기
+              - generic [ref=e2138]:
+                - generic [ref=e2139]: 판매자배송
+                - generic [ref=e2140]: "[소유마실] Dot point black 에폭시범퍼케이스"
+                - generic [ref=e2141]:
+                  - generic [ref=e2143]: 24,000원
+                  - generic [ref=e2144]:
+                    - generic [ref=e2145]: 4%
+                    - generic [ref=e2146]: 23,000원
+                - generic [ref=e2148]: 무료배송
+            - link "담기 판매자배송 [소유마실] Blue Mood Heart 에폭시범퍼케이스 24,000원 4%23,000원 무료배송" [ref=e2149] [cursor=pointer]:
+              - /url: /goods/1001378922
+              - button "담기" [ref=e2156]:
+                - img
+                - text: 담기
+              - generic [ref=e2157]:
+                - generic [ref=e2158]: 판매자배송
+                - generic [ref=e2159]: "[소유마실] Blue Mood Heart 에폭시범퍼케이스"
+                - generic [ref=e2160]:
+                  - generic [ref=e2162]: 24,000원
+                  - generic [ref=e2163]:
+                    - generic [ref=e2164]: 4%
+                    - generic [ref=e2165]: 23,000원
+                - generic [ref=e2167]: 무료배송
+            - link "담기 판매자배송 [소유마실] Tattoo Color Pink 에폭시범퍼케이스 24,000원 4%23,000원 무료배송" [ref=e2168] [cursor=pointer]:
+              - /url: /goods/1001378924
+              - button "담기" [ref=e2175]:
+                - img
+                - text: 담기
+              - generic [ref=e2176]:
+                - generic [ref=e2177]: 판매자배송
+                - generic [ref=e2178]: "[소유마실] Tattoo Color Pink 에폭시범퍼케이스"
+                - generic [ref=e2179]:
+                  - generic [ref=e2181]: 24,000원
+                  - generic [ref=e2182]:
+                    - generic [ref=e2183]: 4%
+                    - generic [ref=e2184]: 23,000원
+                - generic [ref=e2186]: 무료배송
+            - link "담기 판매자배송 [소유마실] Natural line Purple 에폭시범퍼케이스 24,000원 4%23,000원 무료배송" [ref=e2187] [cursor=pointer]:
+              - /url: /goods/1001378213
+              - button "담기" [ref=e2194]:
+                - img
+                - text: 담기
+              - generic [ref=e2195]:
+                - generic [ref=e2196]: 판매자배송
+                - generic [ref=e2197]: "[소유마실] Natural line Purple 에폭시범퍼케이스"
+                - generic [ref=e2198]:
+                  - generic [ref=e2200]: 24,000원
+                  - generic [ref=e2201]:
+                    - generic [ref=e2202]: 4%
+                    - generic [ref=e2203]: 23,000원
+                - generic [ref=e2205]: 무료배송
+            - link "담기 판매자배송 [소유마실] Simple rose pink 에폭시범퍼케이스 24,000원 4%23,000원 무료배송" [ref=e2206] [cursor=pointer]:
+              - /url: /goods/1001373110
+              - button "담기" [ref=e2213]:
+                - img
+                - text: 담기
+              - generic [ref=e2214]:
+                - generic [ref=e2215]: 판매자배송
+                - generic [ref=e2216]: "[소유마실] Simple rose pink 에폭시범퍼케이스"
+                - generic [ref=e2217]:
+                  - generic [ref=e2219]: 24,000원
+                  - generic [ref=e2220]:
+                    - generic [ref=e2221]: 4%
+                    - generic [ref=e2222]: 23,000원
+                - generic [ref=e2224]: 무료배송
+          - generic [ref=e2225]:
+            - img "처음 페이지로 이동하기 아이콘" [ref=e2227] [cursor=pointer]
+            - img "이전 페이지로 이동하기 아이콘" [ref=e2229] [cursor=pointer]
+            - generic [ref=e2230] [cursor=pointer]: "1"
+            - generic [ref=e2231] [cursor=pointer]: "2"
+            - img "다음 페이지로 이동하기 아이콘" [ref=e2233] [cursor=pointer]
+            - img "마지막 페이지로 이동하기 아이콘" [ref=e2235] [cursor=pointer]
+    - generic [ref=e2239]:
+      - generic [ref=e2240]:
+        - generic [ref=e2241]:
+          - generic [ref=e2242]:
+            - paragraph [ref=e2243]: 고객행복센터
+            - strong [ref=e2244]: 1644-1107월~토요일 오전 7시 - 오후 6시
+            - generic [ref=e2245]:
+              - generic [ref=e2246]:
+                - button "카카오톡 문의" [ref=e2247] [cursor=pointer]
+                - generic [ref=e2248]:
+                  - text: 월~토요일
+                  - img [ref=e2249]
+                  - text: 오전 7시 - 오후 6시
+                  - text: 일/공휴일
+                  - img [ref=e2250]
+                  - text: 오전 7시 - 오후 1시
+              - generic [ref=e2251]:
+                - button "1:1 문의" [ref=e2252] [cursor=pointer]
+                - generic [ref=e2253]:
+                  - text: 365일
+                  - text: 고객센터 운영시간에 순차적으로 답변드리겠습니다.
+              - generic [ref=e2254]:
+                - link "대량주문 문의" [ref=e2255] [cursor=pointer]:
+                  - /url: https://docs.google.com/forms/d/e/1FAIpQLScWcjRuN6eWJK-G8x3NwBfE8IyKZIOq7jhD3fUXuKSWwPqzJw/viewform
+                - generic [ref=e2256]:
+                  - text: 월~금요일
+                  - img [ref=e2257]
+                  - text: 오전 9시 - 오후 6시
+                  - text: 점심시간
+                  - img [ref=e2258]
+                  - text: 낮 12시 - 오후 1시
+            - generic [ref=e2259]:
+              - text: "비회원 문의 :"
+              - link "help@kurlycorp.com" [ref=e2260] [cursor=pointer]:
+                - /url: mailto:help@kurlycorp.com
+          - generic [ref=e2261]:
+            - list [ref=e2262]:
+              - listitem [ref=e2263]:
+                - link "회사소개" [ref=e2264] [cursor=pointer]:
+                  - /url: https://newsroom.kurlycorp.com/
+              - listitem [ref=e2265]:
+                - link "컬리소개영상" [ref=e2266] [cursor=pointer]:
+                  - /url: https://www.youtube.com/embed/WEep7BcboMQ?rel=0&showinfo=0&wmode=opaque&enablejsapi=1
+              - listitem [ref=e2267]:
+                - link "투자정보" [ref=e2268] [cursor=pointer]:
+                  - /url: https://newsroom.kurlycorp.com/ir/%ec%9e%ac%eb%ac%b4%ec%a0%95%eb%b3%b4/
+              - listitem [ref=e2269]:
+                - link "인재채용" [ref=e2270] [cursor=pointer]:
+                  - /url: https://kurly.career.greetinghr.com
+              - listitem [ref=e2271]:
+                - link "이용약관" [ref=e2272] [cursor=pointer]:
+                  - /url: /user-terms/agreement
+              - listitem [ref=e2273]:
+                - link "개인정보처리방침" [ref=e2274] [cursor=pointer]:
+                  - /url: https://privacy.kurly.com/kurly/privacypolicy
+              - listitem [ref=e2275]:
+                - link "이용안내" [ref=e2276] [cursor=pointer]:
+                  - /url: /user-guide
+              - listitem [ref=e2277]:
+                - link "입점신청" [ref=e2278] [cursor=pointer]:
+                  - /url: https://docs.google.com/forms/d/e/1FAIpQLScKI_Kd1lQAp68r-SIhiOWj0J43C99IvNbgFeT7-X9YLIqteA/viewform?usp=dialog
+            - generic [ref=e2279]:
+              - text: "법인명 (상호) : 주식회사 컬리"
+              - generic [ref=e2280]: "|"
+              - text: "사업자등록번호 : 261-81-23567"
+              - link "사업자정보 확인" [ref=e2281] [cursor=pointer]:
+                - /url: https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2618123567&apv_perm_no=
+              - text: "통신판매업 : 제 2018-서울강남-01646 호"
+              - text: "주소 : 서울특별시 강남구 테헤란로 133, 18층(역삼동)"
+              - generic [ref=e2282]: "|"
+              - text: "대표이사 : 김슬아"
+              - text: "채용문의 :"
+              - link "recruit@kurlycorp.com" [ref=e2283] [cursor=pointer]:
+                - /url: mailto:recruit@kurlycorp.com
+              - text: "팩스: 070 - 7500 - 6098"
+            - list [ref=e2284]:
+              - link "컬리 인스타그램 바로가기" [ref=e2285] [cursor=pointer]:
+                - /url: https://instagram.com/marketkurly
+                - img "컬리 인스타그램 바로가기" [ref=e2286]
+              - link "컬리 페이스북 바로가기" [ref=e2287] [cursor=pointer]:
+                - /url: https://www.facebook.com/marketkurly
+                - img "컬리 페이스북 바로가기" [ref=e2288]
+              - link "컬리 네이버블로그 바로가기" [ref=e2289] [cursor=pointer]:
+                - /url: https://blog.naver.com/marketkurly
+                - img "컬리 네이버블로그 바로가기" [ref=e2290]
+              - link "컬리 유튜브 바로가기" [ref=e2291] [cursor=pointer]:
+                - /url: https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg
+                - img "컬리 유튜브 바로가기" [ref=e2292]
+        - generic [ref=e2293]:
+          - button "isms 로고 [인증범위] 컬리 쇼핑몰 서비스 개발·운영 (심사받지 않은 물리적 인프라 제외) [유효기간] 2025.01.15 ~ 2028.01.14" [ref=e2294] [cursor=pointer]:
+            - img "isms 로고" [ref=e2295]
+            - paragraph [ref=e2296]:
+              - text: "[인증범위] 컬리 쇼핑몰 서비스 개발·운영"
+              - text: (심사받지 않은 물리적 인프라 제외)
+              - text: "[유효기간] 2025.01.15 ~ 2028.01.14"
+          - button "우리은행 로고 고객님이 현금으로 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다." [ref=e2297] [cursor=pointer]:
+            - img "우리은행 로고" [ref=e2298]
+            - paragraph [ref=e2299]:
+              - text: 고객님이 현금으로 결제한 금액에 대해 우리은행과
+              - text: 채무지급보증 계약을 체결하여 안전거래를 보장하고
+              - text: 있습니다.
+      - generic [ref=e2300]:
+        - text: 컬리에서 판매되는 상품 중에는 컬리에 입점한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
+        - text: 마켓플레이스(오픈마켓) 상품의 경우 컬리는 통신판매중개자로서 통신판매의 당사자가 아닙니다. 컬리는 해당 상품의 주문, 품질, 교환/환불 등 의무와 책임을 부담하지 않습니다.
+        - emphasis [ref=e2301]: © KURLY CORP. ALL RIGHTS RESERVED
+  - alert [ref=e2302]: 검색결과 > 갤럭시S25 - 마켓컬리
+```

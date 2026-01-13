@@ -6,6 +6,7 @@ import * as allure from 'allure-js-commons';
 import { PickPage } from '../../pages/PickPage';
 import dotenv from 'dotenv';
 
+
 dotenv.config();
 
 test.describe('Pick(찜하기) 버튼 기능 테스트', () => {
@@ -19,8 +20,9 @@ test.describe('Pick(찜하기) 버튼 기능 테스트', () => {
         const mainPage = new MainPage(page);
         const loginPage = new LoginPage(page);
 
-        // Go to the main page
-        await page.goto('https://www.kurly.com/main');
+        await allure.step('마켓컬리 메인 페이지 접속', async () => {
+          await page.goto('https://www.kurly.com/main');
+        });
 
         await allure.step('로그인', async () => {
             await mainPage.clickLoginButton();
@@ -40,15 +42,20 @@ test.describe('Pick(찜하기) 버튼 기능 테스트', () => {
     });
 
     test('비로그인 상태에서 Pick 버튼 클릭 시 알럿 노출 확인', async ({ page }) => {
+        
         const mainPage = new MainPage(page);
         const pickPage = new PickPage(page);
 
-        await page.goto('https://www.kurly.com/main');
-        await mainPage.clickPickButton();
-        await page.waitForSelector('text=로그인하셔야 본 서비스를 이용하실 수 있습니다.');
+        allure.description('비로그인 상태에서 Pick(찜하기) 버튼을 클릭했을 때, 로그인 필요 알럿이 노출되는지 확인하는 테스트');
+        
+        await allure.step('마켓컬리 메인 페이지 접속', async () => {
+          await page.goto('https://www.kurly.com/main');     
+        });
 
-        // 비로그인 상태면 알럿 노출
-        const needLoginAltVisible = await pickPage.isNeedLoginAltVisible();
-        expect(needLoginAltVisible).toBe(true);
-    });
+          await allure.step('Pick 버튼 클릭 및 알럿 노출 확인', async () => {
+            await mainPage.clickPickButton();
+            await page.waitForSelector('text=로그인하셔야 본 서비스를 이용하실 수 있습니다.', {timeout: 5000});
+            expect(await pickPage.isNeedLoginAltVisible()).toBe(true);
+          });
+      });
 });
