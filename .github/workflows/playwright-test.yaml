@@ -42,7 +42,7 @@ jobs:
 
       - name: Run UI Tests
         run: |
-          npx playwright test tests/ui/ --config=playwright.config.ts --workers=2
+          npx playwright test src/tests/ui/ --config=playwright.config.ts --workers=2
           mkdir -p allure-results-ui
           cp -r allure-results/* allure-results-ui/ || true
           rm -rf allure-results
@@ -172,7 +172,7 @@ jobs:
 
       - name: Run API Tests
         run: |
-          npx playwright test tests/api/ --config=playwright.config.ts --workers=2
+          npx playwright test src/tests/api/ --config=playwright.config.ts --workers=2
           mkdir -p allure-results-api
           cp -r allure-results/* allure-results-api/ || true
           rm -rf allure-results

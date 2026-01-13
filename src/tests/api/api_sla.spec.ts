@@ -21,13 +21,9 @@ test.describe('🎬 영화 페이지 SLA 응답 시간 테스트', () => {
   for (const endpoint of endpoints) {
     test(`🔄 ${endpoint} 응답 시간 확인`, async ({ request }) => {
       // Allure 메타데이터
-      allure.label('feature', '영화 목록 API 테스트');
-      allure.story('영화 페이지 SLA 응답 시간 테스트');
       allure.description(`SLA 응답 시간 테스트: ${endpoint}`);
       allure.severity('critical');
-      allure.epic('API 응답 시간 검증');
-      console.log('📌 현재 API_KEY:', API_KEY);
-
+  
       const start = Date.now();
       const response = await request.get(`${BASE_URL}${endpoint}`);
       const elapsed = (Date.now() - start) / 1000;
