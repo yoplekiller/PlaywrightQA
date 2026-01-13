@@ -32,7 +32,7 @@ export default defineConfig({
         headless: true,
         viewport: { width: 1920, height: 1080 },
         ignoreHTTPSErrors: true,
-        trace: 'on',
+        trace: 'retain-on-failure',
         screenshot: 'only-on-failure',
         video: 'retain-on-failure',
         baseURL: 'https://www.kurly.com/main',
