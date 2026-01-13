@@ -15,7 +15,7 @@ console.log("- SLACK_WEBHOOK_TS:", process.env.SLACK_WEBHOOK_TS ? '설정됨' : 
 if (process.env.SLACK_WEBHOOK_TS) {
     console.log("✅ SLACK_WEBHOOK_TS 감지됨 - SlackReporter 추가");
     reporters.push([
-        './tests/reporters/SlackReporter.ts',
+        './src/tests/reporters/SlackReporter.ts',
         { webhookUrl: process.env.SLACK_WEBHOOK_TS },
     ]);
 } else {
