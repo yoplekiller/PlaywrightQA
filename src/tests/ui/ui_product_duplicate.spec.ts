@@ -10,6 +10,7 @@ test('상품 중복 담기 기능 확인', async ({ page }) => {
     const mainpage = new MainPage(page);
     const searchpage = new SearchPage(page);
     const goodspage = new GoodsPage(page);
+    const addCount = 2 // 몇 번 담을지 설정
 
     await allure.step('마켓컬리 메인 페이지 접속', async () => {  
       await page.goto('https://www.kurly.com/main');
@@ -23,13 +24,13 @@ test('상품 중복 담기 기능 확인', async ({ page }) => {
     }
   );
     await allure.step('첫 번째 상품 장바구니에 중복 담기 및 수량 확인', async () => {
-      await goodspage.clickAddGoodsInCartButton(2);    // 2번 담기  
+      await goodspage.clickAddGoodsInCartButton(addCount);
       
       await page.goto('https://www.kurly.com/cart');
       await expect(page).toHaveURL('https://www.kurly.com/cart');
 
-      const quantityLocator = page.locator('p.kpds_j1jks21');
-      await expect(quantityLocator).toHaveText('2');
+      const quantityLocator = page.getByText(`$${addCount}`, { exact: true });
+      await expect(quantityLocator).toHaveText(`$${addCount}`);
     }
 
   );

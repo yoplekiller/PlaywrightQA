@@ -1,0 +1,904 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - link "지금 가입하고 최대 1만 2천원 할인 쿠폰 받아가세요!" [ref=e6] [cursor=pointer]:
+        - /url: https://event.kurly.com/lego/event/2023/0911/join/coupon#lc112b1
+        - generic [ref=e7]: 지금 가입하고 최대 1만 2천원 할인 쿠폰 받아가세요!
+      - button "배너 하루 안보기" [ref=e8] [cursor=pointer]:
+        - img [ref=e9]
+        - generic [ref=e14]: 배너 하루 안보기
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - generic [ref=e18] [cursor=pointer]: 회원가입
+          - generic [ref=e20] [cursor=pointer]: 로그인
+          - generic [ref=e23] [cursor=pointer]: 고객센터
+        - generic [ref=e25]:
+          - generic [ref=e26]:
+            - img "마켓컬리 로고" [ref=e27]
+            - button "마켓컬리" [ref=e28] [cursor=pointer]
+            - button "뷰티컬리" [ref=e29] [cursor=pointer]
+          - generic [ref=e31]:
+            - textbox "검색어를 입력해주세요" [ref=e32]
+            - button "submit" [ref=e33] [cursor=pointer]
+          - generic [ref=e34]:
+            - button [ref=e35] [cursor=pointer]:
+              - img [ref=e36]
+            - button [ref=e39] [cursor=pointer]:
+              - img [ref=e40]
+      - generic [ref=e43]:
+        - button "카테고리" [ref=e45] [cursor=pointer]:
+          - img [ref=e46]
+          - generic [ref=e48]: 카테고리
+        - generic [ref=e49]:
+          - list [ref=e50]:
+            - listitem [ref=e51]:
+              - link "베스트" [ref=e52] [cursor=pointer]:
+                - /url: /collection-groups/market-best?site=MARKET
+            - listitem [ref=e53]:
+              - link "세일" [ref=e54] [cursor=pointer]:
+                - /url: /collection-groups/market-sales-group?site=MARKET
+            - listitem [ref=e55]:
+              - link "패션" [ref=e56] [cursor=pointer]:
+                - /url: /panels/fashion?site=MARKET
+            - listitem [ref=e57]:
+              - link "리빙" [ref=e58] [cursor=pointer]:
+                - /url: /panels/living?site=MARKET
+            - listitem [ref=e59]:
+              - link "신상" [ref=e60] [cursor=pointer]:
+                - /url: /collection-groups/market-newproduct?site=MARKET
+            - listitem [ref=e61]:
+              - link "특가/혜택" [ref=e62] [cursor=pointer]:
+                - /url: /market-benefit
+          - generic [ref=e63]:
+            - generic [ref=e64]:
+              - textbox "검색어를 입력해주세요." [ref=e65]
+              - button [ref=e66] [cursor=pointer]:
+                - img [ref=e67]
+            - generic [ref=e69]:
+              - button [ref=e70] [cursor=pointer]:
+                - img [ref=e71]
+              - button [ref=e74] [cursor=pointer]:
+                - img [ref=e75]
+              - button "1" [ref=e77] [cursor=pointer]:
+                - img [ref=e78]
+                - generic [ref=e81]: "1"
+    - generic [ref=e84]:
+      - generic [ref=e86]:
+        - link "샛별, 하루 배송 안내" [ref=e88] [cursor=pointer]:
+          - /url: /user-guide/delivery
+          - generic [ref=e89]:
+            - img [ref=e91]
+            - img "샛별, 하루 배송 안내" [ref=e92]
+        - generic [ref=e93]:
+          - link "컬리 고객 제도" [ref=e94] [cursor=pointer]:
+            - /url: /events/member/vip
+            - generic [ref=e95]: 컬리 고객 제도
+          - link "컬리 큐레이터" [ref=e96] [cursor=pointer]:
+            - /url: https://lounge.kurly.com/curator-program
+            - generic [ref=e97]: 컬리 큐레이터
+          - link "레시피" [ref=e98] [cursor=pointer]:
+            - /url: https://www.kurly.com/recipe
+            - generic [ref=e99]: 레시피
+        - generic [ref=e100]:
+          - button [disabled] [ref=e101]:
+            - img [ref=e102]
+          - text: 최근 본 상품
+          - list [ref=e105]:
+            - listitem [ref=e106]:
+              - link "recent-product-5071669" [ref=e107] [cursor=pointer]:
+                - /url: /goods/5071669
+                - generic [ref=e108]:
+                  - img [ref=e110]
+                  - img "recent-product-5071669" [ref=e111]
+          - button [disabled] [ref=e112]:
+            - img [ref=e113]
+      - generic [ref=e115]:
+        - main [ref=e116]:
+          - generic [ref=e117]:
+            - generic [ref=e124]:
+              - img "상품-대표-이미지 1" [ref=e126]
+              - paragraph [ref=e128]: +10%쿠폰
+            - link "컬리 단독 브랜드관 KF365 찜하기" [ref=e130] [cursor=pointer]:
+              - /url: /brand/88
+              - generic [ref=e131]:
+                - generic [ref=e132]:
+                  - generic [ref=e133]: 컬리 단독 브랜드관
+                  - generic [ref=e134]:
+                    - strong [ref=e135]: KF365
+                    - img [ref=e137]
+                  - paragraph
+                - button "찜하기" [ref=e139]:
+                  - img [ref=e140]
+                  - paragraph [ref=e142]: 1,649
+          - generic [ref=e144]:
+            - generic [ref=e145]:
+              - generic [ref=e147]:
+                - generic [ref=e148]: 샛별배송
+                - generic [ref=e150]:
+                  - generic [ref=e151]: KF365
+                  - img [ref=e153]
+                  - link [ref=e155] [cursor=pointer]:
+                    - /url: /brand/88
+              - generic [ref=e158] [cursor=pointer]: 후기 15,272건
+            - generic [ref=e159]:
+              - generic [ref=e161]:
+                - heading "[KF365] 당도선별 수박 5kg 이상" [level=1] [ref=e162]
+                - generic [ref=e163]:
+                  - paragraph [ref=e164]: 언제 구입해도 맛있는 수박
+                  - paragraph [ref=e165]: "원산지: 국산"
+              - button [ref=e167] [cursor=pointer]:
+                - img [ref=e168]
+            - generic [ref=e173]:
+              - heading "30% 34,900 원" [level=2] [ref=e174]:
+                - generic [ref=e175]: 30%
+                - generic [ref=e176]:
+                  - generic [ref=e177]: 34,900
+                  - generic [ref=e178]: 원
+              - generic [ref=e179]:
+                - generic [ref=e180]: 49,900원
+                - button [ref=e182] [cursor=pointer]:
+                  - img [ref=e183]
+            - generic [ref=e185]:
+              - generic [ref=e186]:
+                - generic [ref=e187]: 36%
+                - generic [ref=e188]: 31,900
+                - generic [ref=e189]: 원
+                - button [ref=e190] [cursor=pointer]:
+                  - img
+                - button "첫구매 최대혜택가" [ref=e191] [cursor=pointer]:
+                  - generic [ref=e192]: 첫구매 최대혜택가
+                  - img [ref=e193]
+              - button "첫구매라면 31,900원에 구매, 무료배송까지" [ref=e195] [cursor=pointer]:
+                - generic [ref=e196]:
+                  - img [ref=e197]
+                  - generic [ref=e200]:
+                    - text: 첫구매라면
+                    - strong [ref=e201]: 31,900원
+                    - text: 에 구매, 무료배송까지
+                - img [ref=e202]
+            - button "신선 카드할인 쿠폰 다운받기" [ref=e204] [cursor=pointer]:
+              - generic [ref=e205]: 신선 카드할인 쿠폰 다운받기
+              - img [ref=e206]
+            - list [ref=e208]:
+              - listitem [ref=e209]:
+                - term [ref=e210]: 배송
+                - definition [ref=e211]:
+                  - paragraph [ref=e212]: 샛별배송
+                  - paragraph [ref=e213]: 23시 전 주문 시 수도권/충청 내일 아침 7시 전 도착 (그 외 지역 아침 8시 전 도착)
+              - listitem [ref=e214]:
+                - term [ref=e215]: 판매자
+                - definition [ref=e216]:
+                  - paragraph [ref=e217]: 컬리
+              - listitem [ref=e218]:
+                - term [ref=e219]: 포장타입
+                - definition [ref=e220]:
+                  - paragraph [ref=e221]: 냉장 (종이포장)
+                  - paragraph [ref=e222]: 택배배송은 에코 포장이 스티로폼으로 대체됩니다.
+              - listitem [ref=e223]:
+                - term [ref=e224]: 판매단위
+                - definition [ref=e225]:
+                  - paragraph [ref=e226]: 1통
+              - listitem [ref=e227]:
+                - term [ref=e228]: 중량/용량
+                - definition [ref=e229]:
+                  - paragraph [ref=e230]: 5kg
+              - listitem [ref=e231]:
+                - term [ref=e232]: 소비기한(또는 유통기한)정보
+                - definition [ref=e233]:
+                  - paragraph [ref=e234]: 농산물이므로 별도의 소비기한은 없으나 가급적 빠르게 드시기 바랍니다.
+              - listitem [ref=e235]:
+                - term [ref=e236]: 당도
+                - definition [ref=e237]:
+                  - paragraph [ref=e238]: 10 Brix 이상
+              - listitem [ref=e239]:
+                - term [ref=e240]: 안내사항
+                - definition [ref=e241]:
+                  - paragraph [ref=e242]: 비파괴 당도선별과 실당도는 차이가 있을 수 있습니다. 식품 특성상 중량은 3% 내외의 차이가 발생할 수 있습니다. 산지 및 농가에 따라 패키지 디자인이 변경될 수 있습니다. 신선식품 특성상 원물마다 크기 및 형태가 일정하지 않을 수 있습니다.
+            - generic [ref=e243]:
+              - listitem [ref=e245]:
+                - term [ref=e246]: 상품선택
+                - definition [ref=e247]:
+                  - article [ref=e249]:
+                    - generic [ref=e251]:
+                      - paragraph [ref=e253]: "[KF365] 당도선별 수박 5kg 이상"
+                      - generic [ref=e254]:
+                        - generic [ref=e255]:
+                          - generic [ref=e256]: 34,900원
+                          - generic [ref=e257]: 49,900원
+                        - generic [ref=e258]:
+                          - img [ref=e260]
+                          - button [disabled] [ref=e262]
+                          - paragraph [ref=e263]: "1"
+                          - img [ref=e265]
+                          - button [ref=e267] [cursor=pointer]
+              - generic [ref=e269]:
+                - generic [ref=e270]: 총 상품금액
+                - generic [ref=e271]: 34,900
+                - generic [ref=e272]: 원
+              - generic [ref=e273]:
+                - button "찜하기" [ref=e275] [cursor=pointer]:
+                  - img [ref=e276]
+                - button [disabled] [ref=e278]:
+                  - img [ref=e279]
+                - button "장바구니 담기" [active] [ref=e282] [cursor=pointer]
+        - navigation [ref=e283]:
+          - list [ref=e284]:
+            - listitem [ref=e285]:
+              - generic [ref=e287]: 상품설명
+            - listitem [ref=e288]:
+              - generic [ref=e290]: 상세정보
+            - listitem [ref=e291]:
+              - generic [ref=e292]:
+                - generic [ref=e293]: 후기
+                - generic [ref=e294]: (15,272)
+            - listitem [ref=e295]:
+              - generic [ref=e297]: 문의
+        - generic [ref=e298]:
+          - generic [ref=e302]:
+            - generic [ref=e303]:
+              - img [ref=e305]
+              - generic [ref=e306]:
+                - heading "시원하고 달콤한 과즙이 듬뿍 [KF365] 당도선별 수박" [level=3] [ref=e307]:
+                  - generic [ref=e308]: 시원하고 달콤한 과즙이 듬뿍
+                  - text: "[KF365] 당도선별 수박"
+                - paragraph [ref=e309]: 맛 좋은 수박을 고르는 일은 생각보다 까다로운데요. 전국 각지의 유명 수박 산지에서 그때그때 맛이 잘 든 수박만 골라 준비했어요. 비파괴 센서로 11 brix 이상의 원물만 선별했죠. 속까지 탐스럽게 익은 수박을 신선한 상태 그대로 배송해드리니, 냉장고에 잠깐 두었다가 시원하게 즐겨보세요.
+            - generic [ref=e310]:
+              - heading "Kurly's Check Point" [level=3] [ref=e311]:
+                - generic [ref=e312]: Kurly's Check Point
+              - img [ref=e315]
+            - generic [ref=e317]:
+              - img [ref=e319]
+              - paragraph [ref=e320]:
+                - strong [ref=e321]: 고르고 고른 당도 높은 수박
+                - text: ・천혜의 환경에서 자라난 수박
+                - text: 함안, 고창, 정읍 등 전국의 수박 명산지에서 재배한 수박이에요. 깨끗한 물이 모여들고, 비옥한 토양을 갖춘 천혜의 환경에서 정성껏 키운 만큼, 풍부한 달콤함과 아삭거리는 식감을 자랑해요.
+                - text: ・우수 농가의 철저한 품질 관리
+                - text: 국내 이름난 산지 중에서도 우수 농가에서 키워낸 수박을 보여드려요. 적절한 온·습도와 양질의 토질 관리 속에서 수박이 잘 자랄 수 있는 최상의 환경을 만들어주죠.
+                - text: ・시기별로 맛보는 가장 맛있는 수박
+                - text: 그때그때 재배된 수박 중에서도 당도 선별을 거친 수박을 엄선해 보내드려요. 덕분에 수박을 맛볼 수 있는 계절 내내 고르게 맛 좋은 수박을 즐길 수 있답니다.
+            - generic [ref=e322]:
+              - heading "Kurly’s Tip" [level=3] [ref=e323]:
+                - generic [ref=e324]: Kurly’s Tip
+              - generic [ref=e326]:
+                - img [ref=e328]
+                - paragraph [ref=e329]:
+                  - strong [ref=e330]: 구입 전 참고사항
+                  - text: ・과육 중앙 부분에서 심지가 발견될 수 있어요. 수박의 생장 과정에서 일어나는 현상으로, 드시는 데에는 지장이 없음을 알려드려요.
+                - img [ref=e332]
+                - paragraph [ref=e333]:
+                  - strong [ref=e334]: 깔끔한 수박 손질법
+                  - text: 1. 위, 아래를 평평하게 자른 수박을 반으로 자르세요.
+                  - text: 2. 넓은 면이 위로 향하게 놓고 사방을 잘라 정사각형으로 만드세요.
+                  - text: 3. 모서리에 남은 껍질을 잘라 다듬으세요.
+                  - text: 4. 과육을 먹기 좋은 크기로 깍둑 썰기하세요.
+                  - text: 5. 용기에 맞게 빈틈없이 담아 보관하세요.
+                  - text: Tip. 썰고 남은 조각 수박은 주스나 스무디로 활용해 보세요.
+                - paragraph [ref=e335]:
+                  - strong [ref=e336]: 보관법
+                  - text: ・자르지 않은 통 수박은 서늘한 곳에 보관하세요. 섭취 2~3시간 전에 냉장고에 두면 더욱 시원하게 드실 수 있습니다.
+                  - text: ・드시고 남은 수박은 Kurly’s tip을 따라 손질한 뒤, 냉장 보관하세요.
+          - generic [ref=e337]:
+            - img "자세히보기 이미지" [ref=e339]
+            - generic [ref=e340]:
+              - heading "상품고시정보" [level=3] [ref=e341]
+              - list [ref=e342]:
+                - listitem [ref=e343]: 품목 또는 명칭
+                - listitem [ref=e344]: 상품설명 및 상품이미지 참조
+                - listitem [ref=e345]: 포장단위별 내용물의 용량(중량), 수량, 크기
+                - listitem [ref=e346]: 1통 / 5kg
+                - listitem [ref=e347]: 생산자, 수입품의 경우 수입자를 함께 표기
+                - listitem [ref=e348]: 상품설명 및 상품이미지 참조
+                - listitem [ref=e349]: ｢농수산물의 원산지 표시 등에 관한 법률｣에 따른 원산지
+                - listitem [ref=e350]: 국산
+                - listitem [ref=e351]: 제조연월일, 소비기한 또는 품질유지기한
+                - listitem [ref=e352]: 상품설명 및 상품이미지 참조
+                - listitem [ref=e353]: 농수산물 – ｢농수산물 품질관리법｣에 따른 유전자변형농수산물 표시, 지리적 표시
+                - listitem [ref=e354]: 해당사항 없음
+                - listitem [ref=e355]: 축산물 - ｢축산법｣에 따른 등급 표시(1++ 등급 국내산 쇠고기의 경우 ｢소ㆍ돼지 식육의 표시방법 및 부위 구분기준｣에 따라 근내지방도 정보를 포함하여 표시), ｢가축 및 축산물 이력관리에 관한 법률｣에 따른 이력관리대상축산물 유무
+                - listitem [ref=e356]: 해당사항 없음
+                - listitem [ref=e357]: 수입 농수축산물 – “수입식품안전관리 특별법에 따른 수입신고를 필함”의 문구
+                - listitem [ref=e358]: 해당사항 없음
+                - listitem [ref=e359]: 상품구성
+                - listitem [ref=e360]: 상품설명 및 상품이미지 참조
+                - listitem [ref=e361]: 보관방법 또는 취급방법
+                - listitem [ref=e362]: 냉장보관
+                - listitem [ref=e363]: 소비자 안전을 위한 주의사항 (｢식품 등의 표시ㆍ광고에 관한 법률 시행규칙｣ 제5조 및 [별표 2]에 따른 표시사항을 말함)
+                - listitem [ref=e364]: 상품설명 및 상품이미지 참조
+                - listitem [ref=e365]: 소비자 상담 관련 전화번호
+                - listitem [ref=e366]: 마켓컬리 고객행복센터(1644-1107)
+            - generic [ref=e367]:
+              - generic [ref=e368]: WHY KURLY
+              - generic [ref=e369]:
+                - generic [ref=e370]:
+                  - term [ref=e371]: 깐깐한 상품위원회
+                  - definition [ref=e372]:
+                    - text: 나와 내 가족이 먹고 쓸 상품을 고르는
+                    - text: 마음으로 매주 상품을 직접 먹어보고,
+                    - text: 경험해보고 성분, 맛, 안정성 등 다각도의
+                    - text: 기준을 통과한 상품만을 판매합니다.
+                    - generic [ref=e373]: (온라인 기준 / 자사몰, 직구 제외)
+                - generic [ref=e374]:
+                  - term [ref=e375]: 차별화된 Kurly Only 상품
+                  - definition [ref=e376]:
+                    - text: 전국 각지와 해외의 훌륭한 생산자가
+                    - text: 믿고 선택하는 파트너, 컬리.
+                    - text: 3천여 개가 넘는 컬리 단독 브랜드, 스펙의
+                    - text: Kurly Only 상품을 믿고 만나보세요.
+                    - generic [ref=e377]: (온라인 기준 / 자사몰, 직구 제외)
+                - generic [ref=e378]:
+                  - term [ref=e379]: 신선한 풀콜드체인 배송
+                  - definition [ref=e380]:
+                    - text: 온라인 업계 최초로 산지에서 문 앞까지
+                    - text: 상온, 냉장, 냉동 상품을 분리 포장 후
+                    - text: 최적의 온도를 유지하는 냉장 배송 시스템,
+                    - text: 풀콜드체인으로 상품을 신선하게 전해드립니다.
+                    - generic [ref=e381]: (샛별배송에 한함)
+                - generic [ref=e382]:
+                  - term [ref=e383]: 고객, 생산자를 위한 최선의 가격
+                  - definition [ref=e384]:
+                    - text: 매주 대형 마트와 주요 온라인 마트의 가격
+                    - text: 변동 상황을 확인해 신선식품은 품질을
+                    - text: 타협하지 않는 선에서 최선의 가격으로,
+                    - text: 가공식품은 언제나 합리적인 가격으로
+                    - text: 정기 조정합니다.
+                - generic [ref=e385]:
+                  - term [ref=e386]: 환경을 생각하는 지속 가능한 유통
+                  - definition [ref=e387]:
+                    - text: 친환경 포장재부터 생산자가 상품에만
+                    - text: 집중할 수 있는 직매입 유통구조까지,
+                    - text: 지속 가능한 유통을 고민하며 컬리를 있게
+                    - text: 하는 모든 환경(생산자, 커뮤니티, 직원)이
+                    - text: 더 나아질 수 있도록 노력합니다.
+            - generic [ref=e389]:
+              - generic [ref=e390]:
+                - heading "고객행복센터" [level=5] [ref=e391]
+                - paragraph [ref=e392]:
+                  - text: 궁금하신 점이나 서비스 이용에 불편한 점이 있으신가요?
+                  - generic [ref=e393]: 문제가 되는 부분을 사진으로 찍어 아래 중 편하신 방법으로 접수해 주시면 빠르게 도와드리겠습니다.
+              - list [ref=e394]:
+                - listitem [ref=e395]:
+                  - strong [ref=e396]: 전화 문의 1644-1107
+                  - generic [ref=e397]: 월~토요일 오전 7시 - 오후 6시
+                - listitem [ref=e398]:
+                  - strong [ref=e399]: 카카오톡 문의
+                  - generic [ref=e400]: 월~토요일 오전 7시 - 오후 6시
+                  - generic [ref=e401]: 일/공휴일 오전 7시 - 오후 1시
+                  - strong [ref=e402]:
+                    - text: 카카오톡에서 '컬리' 를 검색 후
+                    - text: 대화창에 문의 및 불편사항을
+                    - text: 남겨주세요.
+                - listitem [ref=e403]:
+                  - strong [ref=e404]: 홈페이지 문의
+                  - generic [ref=e405]: 365일
+                  - generic [ref=e406]: 로그인 > 마이컬리 > 1:1 문의
+                  - strong [ref=e407]:
+                    - text: 고객센터 운영 시간에 순차적으로
+                    - text: 답변해드리겠습니다.
+            - generic [ref=e408]:
+              - strong [ref=e409]: 교환 및 환불 안내
+              - paragraph [ref=e410]: 교환 및 환불이 필요하신 경우 [마이컬리 > 주문내역]에서 직접 반품 접수하거나 고객행복센터로 문의해 주시기 바랍니다.
+              - button "닫기" [ref=e411] [cursor=pointer]
+            - generic [ref=e412]:
+              - generic [ref=e413]: 01. 상품에 문제가 있는 경우
+              - paragraph [ref=e414]:
+                - text: 받으신 상품이 표시·광고 내용 또는 계약 내용과 다른 경우에는 상품을 받은 날부터 3개월 이내, 그 사실을 알게 된 날부터 30일 이내에 반품을 요청하실 수 있습니다. 고객행복센터로 문의해 주시기 바랍니다. 상품의 정확한 상태를 확인할 수 있도록 사진을 함께 보내주시면 더 빠른 상담이 가능합니다.
+                - generic [ref=e415]: ※ 배송 상품에 문제가 있는 것으로 확인되면 배송비는 판매자가 부담합니다.
+            - generic [ref=e416]:
+              - generic [ref=e417]: 02. 단순 변심, 주문 착오의 경우
+              - paragraph [ref=e418]:
+                - strong [ref=e419]: 신선 / 냉장 / 냉동 식품
+                - text: 상품의 특성상 재판매가 불가하여 단순 변심, 주문 착오, 주소 오입력 등 고객의 책임 있는 사유로 인한 교환 및 반품이 어려운 점 양해 부탁드립니다. 상품에 따라 조금씩 맛이 다를 수 있으며, 개인의 기호에 따라 같은 상품도 다르게 느끼실 수 있습니다.
+                - strong [ref=e420]: 유통기한 30일 이상 식품 (신선 / 냉장 / 냉동 제외) & 기타 상품 (뷰티 제품, 생활용품)
+                - text: 상품을 받은 날부터 7일 이내 반품 접수가 가능합니다. 직접 접수하시거나 고객행복센터로 문의해 주시기 바랍니다.
+                - generic [ref=e421]: ※ 단순 변심, 주문 착오, 주소 오입력 등 고객의 책임 있는 사유로 인한 교환 및 반품의 경우 고객님께서 왕복배송비 6,000원(배송비를 낸 경우 3,000원)을 부담하셔야 합니다.
+            - generic [ref=e422]:
+              - generic [ref=e423]: 03. 교환·환불이 불가한 경우
+              - paragraph [ref=e424]:
+                - text: 다음에 해당하는 교환·환불 신청은 처리가 어려울 수 있으니 양해 부탁드립니다.
+                - generic [ref=e425]: 고객님의 책임 있는 사유로 상품이 멸실되거나 훼손된 경우 (단, 상품의 내용을 확인하기 위해 포장 등을 훼손한 경우는 제외)
+                - generic [ref=e426]: 고객님의 사용 또는 일부 소비로 상품의 가치가 감소한 경우
+                - generic [ref=e427]: 시간이 지나 다시 판매하기 곤란할 정도로 상품의 가치가 감소한 경우
+                - generic [ref=e428]: 복제가 가능한 상품의 포장이 훼손된 경우
+                - generic [ref=e429]: 고객님의 주문에 따라 개별적으로 생산되는 상품의 제작이 이미 진행된 경우
+                - generic [ref=e430]: 반품 신청 후 14일 내에 물품이 반환되지 않고 고객님과 연락이 되지 않는 경우
+            - generic [ref=e431]:
+              - strong [ref=e432]: 주문 취소 안내
+              - paragraph [ref=e433]:
+                - strong [ref=e434]: "[마이컬리>주문내역]에서 직접 취소하실 수 있습니다."
+              - button "닫기" [ref=e435] [cursor=pointer]
+            - generic [ref=e436]:
+              - generic [ref=e437]: 주문 취소 관련
+              - paragraph [ref=e438]: "- 주문취소는 [마이컬리>주문내역]에서 직접 하실 수 있습니다. - [배송중]부터는 배송이 시작되어 주문 취소가 불가하니, 반품 접수 부탁드립니다(상품에 따라 반품이 불가할 수 있습니다). - 주문취소 및 반품 접수와 관련하여 도움이 필요하신 경우 고객행복센터로 문의해 주시기 바랍니다. - 주문마감 시간에 임박할수록 취소 가능 시간이 짧아질 수 있습니다. - 일부 예약상품은 판매 시 안내된 취소 마감 기한 내에만 취소할 수 있습니다. - 파트너사 판매상품의 경우, 파트너사의 정책에 따라 주문취소가 가능합니다. - 미성년자 결제 시 법정대리인이 그 거래를 취소할 수 있습니다."
+            - generic [ref=e439]:
+              - generic [ref=e440]: 결제 승인 취소 / 환불 관련
+              - paragraph [ref=e441]: "- 카드 환불은 카드사 정책에 따르며, 자세한 사항은 카드사에 문의해주세요. - 결제 취소 시, 사용하신 적립금과 쿠폰도 모두 복원됩니다."
+            - generic [ref=e442]:
+              - strong [ref=e443]: 배송관련 안내
+              - paragraph [ref=e444]: 배송 과정 중 기상 악화 및 도로교통 상황에 따라 부득이하게 지연 배송이 발생될 수 있습니다.
+          - generic [ref=e446]:
+            - heading "상품 후기" [level=2] [ref=e447]
+            - generic [ref=e448]:
+              - button "상품 후기" [ref=e449] [cursor=pointer]:
+                - img "상품 후기" [ref=e451]
+              - button "상품 후기" [ref=e452] [cursor=pointer]:
+                - img "상품 후기" [ref=e454]
+              - button "상품 후기" [ref=e455] [cursor=pointer]:
+                - img "상품 후기" [ref=e457]
+              - button "상품 후기" [ref=e458] [cursor=pointer]:
+                - img "상품 후기" [ref=e460]
+              - button "상품 후기" [ref=e461] [cursor=pointer]:
+                - img "상품 후기" [ref=e463]
+              - button "상품 후기" [ref=e464] [cursor=pointer]:
+                - img "상품 후기" [ref=e466]
+              - button "상품 후기" [ref=e467] [cursor=pointer]:
+                - img "상품 후기" [ref=e469]
+              - button "상품 후기" [ref=e470] [cursor=pointer]:
+                - img "상품 후기" [ref=e472]
+              - generic [ref=e474] [cursor=pointer]: +더보기
+            - generic [ref=e475]:
+              - generic [ref=e476]:
+                - generic [ref=e477]: 총 15,272개
+                - generic [ref=e478]:
+                  - button "추천순" [ref=e479] [cursor=pointer]
+                  - button "최근등록순" [ref=e480] [cursor=pointer]
+              - generic [ref=e481]:
+                - generic [ref=e482]:
+                  - generic [ref=e483]: 공지
+                  - button "[26년 1월 1주] 베스트 후기 선정 안내" [ref=e484] [cursor=pointer]
+                - generic [ref=e485]:
+                  - generic [ref=e486]: 공지
+                  - button "상품후기 적립금 정책 안내" [ref=e487] [cursor=pointer]
+                - generic [ref=e488]:
+                  - generic [ref=e489]: 공지
+                  - button "금주의 베스트 후기 안내" [ref=e490] [cursor=pointer]
+              - generic [ref=e491]:
+                - generic [ref=e493]:
+                  - generic [ref=e495]: 베스트
+                  - generic [ref=e496]: 박**
+                - article [ref=e497]:
+                  - generic [ref=e498]:
+                    - heading "[KF365] 당도선별 수박 5kg 이상" [level=3] [ref=e500]
+                    - paragraph [ref=e501]: 우와 너무 맛있어요^^ 요즘 컬리에서 구매하는 과일들 다 성공적이라 살때마다 만족스럽습니다. 후기 열심히 읽어보고 구매했는데, 저한테 온 수박도 달고 수박 맛과 향이 너무 좋았습니다. 1.배송 및 포장 수박만 따로 박스안에 넣어져 왔어요. 겉에는 한손으로 들수있게 튼튼한 봉지로 한번더 감싸져 있어서 주방까지 들고오기 편했습니다. 2. 무게 및 크기 좀 더 큰거 할까 고민 많이했는데, 손질하기 편하고 쓰레기도 덜 나올것 같아서 5키로 했는데 정말 탁월한 선택이었어요! 혼자 들기도 너무 무겁지 않았고, 칼로 자를때도 많이 힘들지 않고, 예쁘게 깍뚝 썰기 해먹기 괜찮은 사이즈였어요^^ 4식구가 넉넉하게 이틀동안 잘 먹었습니다! 3. 11브릭스 이상의 달달한 수박^^ 저는 배송 받은날 오전에 바로 잘랐어요. 수박의 맛과 향이 너무 좋았는데, 수박의 달달함이 진하게 느껴졌어요! 한번 더 사먹어야겠다는 생각이 들더라구요! 맛있는 수박 특징을 얼마전 유튜브에서 봤는데, 배꼽이 큰것보단 작은게 좋고, 겉면이 푸른것보단 노란게 좋고, 꼭지가 탱탱한것보단 시든게 더 좋다고 하더라구요. 제가 받은 수박이 딱 이랬어요😆❤️🍉 예쁘게 깍뚝 썰어서 맛있게 먹었습니다~!
+                    - generic [ref=e502]:
+                      - button "리뷰 이미지 썸네일" [ref=e503] [cursor=pointer]:
+                        - generic [ref=e504]:
+                          - img [ref=e506]
+                          - img "리뷰 이미지 썸네일" [ref=e507]
+                      - button "리뷰 이미지 썸네일" [ref=e508] [cursor=pointer]:
+                        - generic [ref=e509]:
+                          - img [ref=e511]
+                          - img "리뷰 이미지 썸네일" [ref=e512]
+                      - button "리뷰 이미지 썸네일" [ref=e513] [cursor=pointer]:
+                        - generic [ref=e514]:
+                          - img [ref=e516]
+                          - img "리뷰 이미지 썸네일" [ref=e517]
+                      - button "리뷰 이미지 썸네일" [ref=e518] [cursor=pointer]:
+                        - generic [ref=e519]:
+                          - img [ref=e521]
+                          - img "리뷰 이미지 썸네일" [ref=e522]
+                      - button "리뷰 이미지 썸네일" [ref=e523] [cursor=pointer]:
+                        - generic [ref=e524]:
+                          - img [ref=e526]
+                          - img "리뷰 이미지 썸네일" [ref=e527]
+                      - button "리뷰 이미지 썸네일" [ref=e528] [cursor=pointer]:
+                        - generic [ref=e529]:
+                          - img [ref=e531]
+                          - img "리뷰 이미지 썸네일" [ref=e532]
+                    - generic [ref=e533]:
+                      - generic [ref=e534]: 2025.06.28
+                      - button "도움돼요 12" [ref=e535] [cursor=pointer]:
+                        - generic [ref=e537]: 도움돼요 12
+              - generic [ref=e538]:
+                - generic [ref=e540]:
+                  - generic [ref=e541]:
+                    - generic [ref=e542]: 베스트
+                    - generic [ref=e543]: 멤버스
+                  - generic [ref=e544]: 정**
+                - article [ref=e545]:
+                  - generic [ref=e546]:
+                    - heading "[KF365] 당도선별 수박 5kg 이상" [level=3] [ref=e548]
+                    - paragraph [ref=e549]: 올해 컬리에서 구입하는 첫수박이에요🍉 당도선별 5키로 이상 수박이던데 무게도 훌쩍 넘고, 겉보기엔 배꼽도 그렇고 전체적으로 별론대? 싶었는데, 잘라보니 손맛으로 딱 느껴졌어요ㅎㅎ(내생각이 잘못되었구나, 겉으로 보는거랑 다르네) 씨가 너무 많으면 다들 불편해서 별로 안좋아하잖아요. 저는 씨 많은게 좋아요ㅎㅎ 확실히 더 맛나잖아요. 색도 진짜 예쁘고 씨도 많았어요. 맛에 조금 정확한 편이라, 오히려 아주 살짝 너무 익어버린 맛이 나긴 했답니다. 남편과 단둘이, 2인가정이지만 저희는 수박한통 사면 3일이면 먹는거 같아요! 여름에 몇통을 먹는지 모를정도로 많이도 먹고요ㅎㅎ 다음번에 또 주문해보려구요! 제발 다음에도 맛좋은 당도 좋은게 왓음 좋겠어요😉
+                    - generic [ref=e550]:
+                      - button "리뷰 이미지 썸네일" [ref=e551] [cursor=pointer]:
+                        - generic [ref=e552]:
+                          - img [ref=e554]
+                          - img "리뷰 이미지 썸네일" [ref=e555]
+                      - button "리뷰 이미지 썸네일" [ref=e556] [cursor=pointer]:
+                        - generic [ref=e557]:
+                          - img [ref=e559]
+                          - img "리뷰 이미지 썸네일" [ref=e560]
+                      - button "리뷰 이미지 썸네일" [ref=e561] [cursor=pointer]:
+                        - generic [ref=e562]:
+                          - img [ref=e564]
+                          - img "리뷰 이미지 썸네일" [ref=e565]
+                      - button "리뷰 이미지 썸네일" [ref=e566] [cursor=pointer]:
+                        - generic [ref=e567]:
+                          - img [ref=e569]
+                          - img "리뷰 이미지 썸네일" [ref=e570]
+                      - button "리뷰 이미지 썸네일" [ref=e571] [cursor=pointer]:
+                        - generic [ref=e572]:
+                          - img [ref=e574]
+                          - img "리뷰 이미지 썸네일" [ref=e575]
+                    - generic [ref=e576]:
+                      - generic [ref=e577]: 2025.06.02
+                      - button "도움돼요 33" [ref=e578] [cursor=pointer]:
+                        - generic [ref=e580]: 도움돼요 33
+              - generic [ref=e581]:
+                - generic [ref=e583]:
+                  - generic [ref=e584]:
+                    - generic [ref=e585]: 베스트
+                    - generic [ref=e586]: 멤버스
+                  - generic [ref=e587]: 장**
+                - article [ref=e588]:
+                  - generic [ref=e589]:
+                    - heading "[KF365] 당도선별 수박 5kg 이상" [level=3] [ref=e591]
+                    - paragraph [ref=e592]: Kf 6키로 멜론 맛보고 아주 기대가 컸던 5키로 수박!!복불복 같았지만 뽑기 운이 좋아(컬리에서 사면 뽑기운 up!!…. )제기대에 부흥하여 단맛이 느껴지는 수박이었어요!!❤️ 모두 나눠먹는 행복을 느끼라고 아이들의 도시락에 넣어줬습니다!🍉 너무 맛있어서 다행이에요 ㅋㅋ 두통이나 사서 절망이었는대 희망으로 바꼈습니다. 생각보다 너무 빨리 먹어서 재주문해야할거같아요 ㅎㅎ 타채널에서 수박시켰는대 수박인데도 불구하고 주먹만한거 오더니 인증받은 상품 시켜야겠어요~~~ 이제부터 본격적인 여름 컬리수박으로 저는 pick 오늘부터 컬리 수박 홍보좀 해야겠숩니다🤣
+                    - generic [ref=e593]:
+                      - button "리뷰 이미지 썸네일" [ref=e594] [cursor=pointer]:
+                        - generic [ref=e595]:
+                          - img [ref=e597]
+                          - img "리뷰 이미지 썸네일" [ref=e598]
+                      - button "리뷰 이미지 썸네일" [ref=e599] [cursor=pointer]:
+                        - generic [ref=e600]:
+                          - img [ref=e602]
+                          - img "리뷰 이미지 썸네일" [ref=e603]
+                      - button "리뷰 이미지 썸네일" [ref=e604] [cursor=pointer]:
+                        - generic [ref=e605]:
+                          - img [ref=e607]
+                          - img "리뷰 이미지 썸네일" [ref=e608]
+                    - generic [ref=e609]:
+                      - generic [ref=e610]: 2025.05.26
+                      - button "도움돼요 33" [ref=e611] [cursor=pointer]:
+                        - generic [ref=e613]: 도움돼요 33
+              - generic [ref=e614]:
+                - generic [ref=e616]:
+                  - generic [ref=e618]: 멤버스
+                  - generic [ref=e619]: 염**
+                - article [ref=e620]:
+                  - generic [ref=e621]:
+                    - heading "[KF365] 당도선별 수박 5kg 이상" [level=3] [ref=e623]
+                    - paragraph [ref=e624]: 수박이 먹고싶은데 겨울이라 맛이 없겠지 하면서 계속 미루다가 구매했는데 싱싱하고 맛좋은 수박이 와서 너무 기뻤다 겨울인데 수박이 왜 맛있지~~ㅋ재구매의사있다-~~ㅎㅎ
+                    - generic [ref=e625]:
+                      - generic [ref=e626]: 2026.01.18
+                      - button "도움돼요" [ref=e627] [cursor=pointer]:
+                        - generic [ref=e629]: 도움돼요
+              - generic [ref=e630]:
+                - generic [ref=e632]:
+                  - generic [ref=e634]: 멤버스
+                  - generic [ref=e635]: 배**
+                - article [ref=e636]:
+                  - generic [ref=e637]:
+                    - heading "[KF365] 당도선별 수박 5kg 이상" [level=3] [ref=e639]
+                    - paragraph [ref=e640]: 뭐가 달다는 건지 ㅜㅠ
+                    - generic [ref=e641]:
+                      - button "리뷰 이미지 썸네일" [ref=e642] [cursor=pointer]:
+                        - generic [ref=e643]:
+                          - img [ref=e645]
+                          - img "리뷰 이미지 썸네일" [ref=e646]
+                      - button "리뷰 이미지 썸네일" [ref=e647] [cursor=pointer]:
+                        - generic [ref=e648]:
+                          - img [ref=e650]
+                          - img "리뷰 이미지 썸네일" [ref=e651]
+                    - generic [ref=e652]:
+                      - generic [ref=e653]: 2026.01.14
+                      - button "도움돼요 1" [ref=e654] [cursor=pointer]:
+                        - generic [ref=e656]: 도움돼요 1
+              - generic [ref=e657]:
+                - generic [ref=e659]:
+                  - generic [ref=e661]: 멤버스
+                  - generic [ref=e662]: 이**
+                - article [ref=e663]:
+                  - generic [ref=e664]:
+                    - heading "[KF365] 당도선별 수박 5kg 이상" [level=3] [ref=e666]
+                    - paragraph [ref=e667]: 저렴하게 잘 샀어요 만족
+                    - generic [ref=e668]:
+                      - generic [ref=e669]: 2026.01.10
+                      - button "도움돼요" [ref=e670] [cursor=pointer]:
+                        - generic [ref=e672]: 도움돼요
+              - generic [ref=e673]:
+                - generic [ref=e675]:
+                  - generic [ref=e677]: 멤버스
+                  - generic [ref=e678]: 김**
+                - article [ref=e679]:
+                  - generic [ref=e680]:
+                    - heading "[KF365] 당도선별 수박 5kg 이상" [level=3] [ref=e682]
+                    - paragraph [ref=e683]: 겨울수박인데 생각보다 당도가 괜찮았어요. 아이들이 우걱우걱먹어요. 겨울에 수박이라뉘~~ 수박에 등골이 휠각입니다 ㅎㅎ
+                    - button "리뷰 이미지 썸네일" [ref=e685] [cursor=pointer]:
+                      - generic [ref=e686]:
+                        - img [ref=e688]
+                        - img "리뷰 이미지 썸네일" [ref=e689]
+                    - generic [ref=e690]:
+                      - generic [ref=e691]: 2026.01.03
+                      - button "도움돼요" [ref=e692] [cursor=pointer]:
+                        - generic [ref=e694]: 도움돼요
+              - generic [ref=e695]:
+                - generic [ref=e697]:
+                  - generic [ref=e699]: 멤버스
+                  - generic [ref=e700]: 전**
+                - article [ref=e701]:
+                  - generic [ref=e702]:
+                    - heading "[KF365] 당도선별 수박 5kg 이상" [level=3] [ref=e704]
+                    - paragraph [ref=e705]: 아이가 먹고싶다해서 시켰는데~ 아주 좋아하네요~ 수박 추천입니다👍
+                    - generic [ref=e706]:
+                      - button "리뷰 이미지 썸네일" [ref=e707] [cursor=pointer]:
+                        - generic [ref=e708]:
+                          - img [ref=e710]
+                          - img "리뷰 이미지 썸네일" [ref=e711]
+                      - button "리뷰 이미지 썸네일" [ref=e712] [cursor=pointer]:
+                        - generic [ref=e713]:
+                          - img [ref=e715]
+                          - img "리뷰 이미지 썸네일" [ref=e716]
+                    - generic [ref=e717]:
+                      - generic [ref=e718]: 2026.01.01
+                      - button "도움돼요" [ref=e719] [cursor=pointer]:
+                        - generic [ref=e721]: 도움돼요
+              - generic [ref=e722]:
+                - generic [ref=e724]:
+                  - generic [ref=e726]: 멤버스
+                  - generic [ref=e727]: 김**
+                - article [ref=e728]:
+                  - generic [ref=e729]:
+                    - heading "[KF365] 당도선별 수박 5kg 이상" [level=3] [ref=e731]
+                    - paragraph [ref=e732]: 진짜 맛없어요 컬리 과일 절대 시키지 마세요 전반적으로 과일이 맛도 없고 맛없어도 다른 마트와 다르게 환불도 안되요
+                    - button "리뷰 이미지 썸네일" [ref=e734] [cursor=pointer]:
+                      - generic [ref=e735]:
+                        - img [ref=e737]
+                        - img "리뷰 이미지 썸네일" [ref=e738]
+                    - generic [ref=e739]:
+                      - generic [ref=e740]: 2025.12.29
+                      - button "도움돼요 8" [ref=e741] [cursor=pointer]:
+                        - generic [ref=e743]: 도움돼요 8
+                  - generic [ref=e744]:
+                    - generic [ref=e745]:
+                      - generic [ref=e746]: 컬리
+                      - generic [ref=e747]: 2025.12.30
+                    - generic [ref=e748]:
+                      - paragraph [ref=e749]: 안녕하세요. 컬리입니다. ''당도선별''이라는 점을 믿고 구매해 주셨는데, 기대하신 맛에 미치지 못해 실망감을 드린 점 죄송합니다. 해당 상품은 산지에서 비파괴 센서로 11브릭스 이상의 상품만 선별하고 있습니다. 하지만 선별 이후 유통 과정에서 숙도 변화나 개체별 차이로 인해 실제 섭취 시 당도가 기대에 미치지 못했을 가능성이 있습니다. 남겨주신 의견은 담당 부서에 전달하여 산지 선별 기준을 재점검하고, 입고 시 품질 검수 절차를 더욱 강화하겠습니다. 소중한 의견 감사드리며, 더 나은 품질 제공을 위해 점검하겠습니다. 앞으로는 더 만족스러운 경험을 드릴 수 있도록 품질 관리에 최선을 다하겠습니다. 감사합니다. Better Life for All. Kurly
+                      - button "더보기" [ref=e750] [cursor=pointer]
+              - generic [ref=e751]:
+                - generic [ref=e753]:
+                  - generic [ref=e755]: 멤버스
+                  - generic [ref=e756]: 토**
+                - article [ref=e757]:
+                  - generic [ref=e758]:
+                    - heading "[KF365] 당도선별 수박 5kg 이상" [level=3] [ref=e760]
+                    - paragraph [ref=e761]: 수빅귀신을 위해서 비싸도 시텼음 맛있어요
+                    - generic [ref=e762]:
+                      - generic [ref=e763]: 2025.12.28
+                      - button "도움돼요" [ref=e764] [cursor=pointer]:
+                        - generic [ref=e766]: 도움돼요
+              - generic [ref=e767]:
+                - button "이전" [disabled] [ref=e768]:
+                  - generic [ref=e769]: 이전
+                - button "다음" [ref=e770] [cursor=pointer]:
+                  - generic [ref=e772]: 다음
+          - generic [ref=e774]:
+            - button "문의하기" [ref=e776] [cursor=pointer]:
+              - generic [ref=e777]: 문의하기
+            - generic [ref=e778]:
+              - strong [ref=e779]: 상품 문의
+              - list [ref=e780]:
+                - listitem [ref=e781]: 상품에 대한 문의를 남기는 공간입니다. 해당 게시판의 성격과 다른 글은 사전동의 없이 담당 게시판으로 이동될 수 있습니다.
+                - listitem [ref=e782]:
+                  - text: 배송관련, 주문(취소/교환/환불)관련 문의 및 요청사항은 마이컬리 내
+                  - link "1:1 문의" [ref=e783] [cursor=pointer]:
+                    - /url: /mypage/inquiry/list
+                  - text: 에 남겨주세요.
+            - table [ref=e785]:
+              - rowgroup [ref=e786]:
+                - row "제목 작성자 작성일 답변상태" [ref=e787]:
+                  - columnheader "제목" [ref=e788]
+                  - columnheader "작성자" [ref=e789]
+                  - columnheader "작성일" [ref=e790]
+                  - columnheader "답변상태" [ref=e791]
+              - rowgroup [ref=e792]:
+                - row "‌ ‌ ‌ ‌" [ref=e793]:
+                  - cell "‌" [ref=e794]:
+                    - generic [ref=e796]: ‌
+                  - cell "‌" [ref=e797]:
+                    - generic [ref=e799]: ‌
+                  - cell "‌" [ref=e800]:
+                    - generic [ref=e802]: ‌
+                  - cell "‌" [ref=e803]:
+                    - generic [ref=e805]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e806]:
+                  - cell "‌" [ref=e807]:
+                    - generic [ref=e809]: ‌
+                  - cell "‌" [ref=e810]:
+                    - generic [ref=e812]: ‌
+                  - cell "‌" [ref=e813]:
+                    - generic [ref=e815]: ‌
+                  - cell "‌" [ref=e816]:
+                    - generic [ref=e818]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e819]:
+                  - cell "‌" [ref=e820]:
+                    - generic [ref=e822]: ‌
+                  - cell "‌" [ref=e823]:
+                    - generic [ref=e825]: ‌
+                  - cell "‌" [ref=e826]:
+                    - generic [ref=e828]: ‌
+                  - cell "‌" [ref=e829]:
+                    - generic [ref=e831]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e832]:
+                  - cell "‌" [ref=e833]:
+                    - generic [ref=e835]: ‌
+                  - cell "‌" [ref=e836]:
+                    - generic [ref=e838]: ‌
+                  - cell "‌" [ref=e839]:
+                    - generic [ref=e841]: ‌
+                  - cell "‌" [ref=e842]:
+                    - generic [ref=e844]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e845]:
+                  - cell "‌" [ref=e846]:
+                    - generic [ref=e848]: ‌
+                  - cell "‌" [ref=e849]:
+                    - generic [ref=e851]: ‌
+                  - cell "‌" [ref=e852]:
+                    - generic [ref=e854]: ‌
+                  - cell "‌" [ref=e855]:
+                    - generic [ref=e857]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e858]:
+                  - cell "‌" [ref=e859]:
+                    - generic [ref=e861]: ‌
+                  - cell "‌" [ref=e862]:
+                    - generic [ref=e864]: ‌
+                  - cell "‌" [ref=e865]:
+                    - generic [ref=e867]: ‌
+                  - cell "‌" [ref=e868]:
+                    - generic [ref=e870]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e871]:
+                  - cell "‌" [ref=e872]:
+                    - generic [ref=e874]: ‌
+                  - cell "‌" [ref=e875]:
+                    - generic [ref=e877]: ‌
+                  - cell "‌" [ref=e878]:
+                    - generic [ref=e880]: ‌
+                  - cell "‌" [ref=e881]:
+                    - generic [ref=e883]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e884]:
+                  - cell "‌" [ref=e885]:
+                    - generic [ref=e887]: ‌
+                  - cell "‌" [ref=e888]:
+                    - generic [ref=e890]: ‌
+                  - cell "‌" [ref=e891]:
+                    - generic [ref=e893]: ‌
+                  - cell "‌" [ref=e894]:
+                    - generic [ref=e896]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e897]:
+                  - cell "‌" [ref=e898]:
+                    - generic [ref=e900]: ‌
+                  - cell "‌" [ref=e901]:
+                    - generic [ref=e903]: ‌
+                  - cell "‌" [ref=e904]:
+                    - generic [ref=e906]: ‌
+                  - cell "‌" [ref=e907]:
+                    - generic [ref=e909]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e910]:
+                  - cell "‌" [ref=e911]:
+                    - generic [ref=e913]: ‌
+                  - cell "‌" [ref=e914]:
+                    - generic [ref=e916]: ‌
+                  - cell "‌" [ref=e917]:
+                    - generic [ref=e919]: ‌
+                  - cell "‌" [ref=e920]:
+                    - generic [ref=e922]: ‌
+            - generic [ref=e924]:
+              - button "이전" [disabled] [ref=e925]:
+                - generic [ref=e926]: 이전
+              - button "다음" [disabled] [ref=e927]:
+                - generic [ref=e928]: 다음
+      - generic [ref=e929]:
+        - generic [ref=e930]:
+          - generic [ref=e931]:
+            - generic [ref=e932]:
+              - paragraph [ref=e933]: 고객행복센터
+              - strong [ref=e934]: 1644-1107월~토요일 오전 7시 - 오후 6시
+              - generic [ref=e935]:
+                - generic [ref=e936]:
+                  - button "카카오톡 문의" [ref=e937] [cursor=pointer]
+                  - generic [ref=e938]:
+                    - text: 월~토요일
+                    - img [ref=e939]
+                    - text: 오전 7시 - 오후 6시
+                    - text: 일/공휴일
+                    - img [ref=e940]
+                    - text: 오전 7시 - 오후 1시
+                - generic [ref=e941]:
+                  - button "1:1 문의" [ref=e942] [cursor=pointer]
+                  - generic [ref=e943]:
+                    - text: 365일
+                    - text: 고객센터 운영시간에 순차적으로 답변드리겠습니다.
+                - generic [ref=e944]:
+                  - link "대량주문 문의" [ref=e945] [cursor=pointer]:
+                    - /url: https://docs.google.com/forms/d/e/1FAIpQLScWcjRuN6eWJK-G8x3NwBfE8IyKZIOq7jhD3fUXuKSWwPqzJw/viewform
+                  - generic [ref=e946]:
+                    - text: 월~금요일
+                    - img [ref=e947]
+                    - text: 오전 9시 - 오후 6시
+                    - text: 점심시간
+                    - img [ref=e948]
+                    - text: 낮 12시 - 오후 1시
+              - generic [ref=e949]:
+                - text: "비회원 문의 :"
+                - link "help@kurlycorp.com" [ref=e950] [cursor=pointer]:
+                  - /url: mailto:help@kurlycorp.com
+            - generic [ref=e951]:
+              - list [ref=e952]:
+                - listitem [ref=e953]:
+                  - link "회사소개" [ref=e954] [cursor=pointer]:
+                    - /url: https://newsroom.kurlycorp.com/
+                - listitem [ref=e955]:
+                  - link "컬리소개영상" [ref=e956] [cursor=pointer]:
+                    - /url: https://www.youtube.com/embed/WEep7BcboMQ?rel=0&showinfo=0&wmode=opaque&enablejsapi=1
+                - listitem [ref=e957]:
+                  - link "투자정보" [ref=e958] [cursor=pointer]:
+                    - /url: https://newsroom.kurlycorp.com/ir/%ec%9e%ac%eb%ac%b4%ec%a0%95%eb%b3%b4/
+                - listitem [ref=e959]:
+                  - link "인재채용" [ref=e960] [cursor=pointer]:
+                    - /url: https://kurly.career.greetinghr.com
+                - listitem [ref=e961]:
+                  - link "이용약관" [ref=e962] [cursor=pointer]:
+                    - /url: /user-terms/agreement
+                - listitem [ref=e963]:
+                  - link "개인정보처리방침" [ref=e964] [cursor=pointer]:
+                    - /url: https://privacy.kurly.com/kurly/privacypolicy
+                - listitem [ref=e965]:
+                  - link "이용안내" [ref=e966] [cursor=pointer]:
+                    - /url: /user-guide
+                - listitem [ref=e967]:
+                  - link "입점신청" [ref=e968] [cursor=pointer]:
+                    - /url: https://docs.google.com/forms/d/e/1FAIpQLScKI_Kd1lQAp68r-SIhiOWj0J43C99IvNbgFeT7-X9YLIqteA/viewform?usp=dialog
+              - generic [ref=e969]:
+                - text: "법인명 (상호) : 주식회사 컬리"
+                - generic [ref=e970]: "|"
+                - text: "사업자등록번호 : 261-81-23567"
+                - link "사업자정보 확인" [ref=e971] [cursor=pointer]:
+                  - /url: https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2618123567&apv_perm_no=
+                - text: "통신판매업 : 제 2018-서울강남-01646 호"
+                - text: "주소 : 서울특별시 강남구 테헤란로 133, 18층(역삼동)"
+                - generic [ref=e972]: "|"
+                - text: "대표이사 : 김슬아"
+                - text: "채용문의 :"
+                - link "recruit@kurlycorp.com" [ref=e973] [cursor=pointer]:
+                  - /url: mailto:recruit@kurlycorp.com
+                - text: "팩스: 070 - 7500 - 6098"
+              - list [ref=e974]:
+                - link "컬리 인스타그램 바로가기" [ref=e975] [cursor=pointer]:
+                  - /url: https://instagram.com/marketkurly
+                  - img "컬리 인스타그램 바로가기" [ref=e976]
+                - link "컬리 페이스북 바로가기" [ref=e977] [cursor=pointer]:
+                  - /url: https://www.facebook.com/marketkurly
+                  - img "컬리 페이스북 바로가기" [ref=e978]
+                - link "컬리 네이버블로그 바로가기" [ref=e979] [cursor=pointer]:
+                  - /url: https://blog.naver.com/marketkurly
+                  - img "컬리 네이버블로그 바로가기" [ref=e980]
+                - link "컬리 유튜브 바로가기" [ref=e981] [cursor=pointer]:
+                  - /url: https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg
+                  - img "컬리 유튜브 바로가기" [ref=e982]
+          - generic [ref=e983]:
+            - button "isms 로고 [인증범위] 컬리 쇼핑몰 서비스 개발·운영 (심사받지 않은 물리적 인프라 제외) [유효기간] 2025.01.15 ~ 2028.01.14" [ref=e984] [cursor=pointer]:
+              - img "isms 로고" [ref=e985]
+              - paragraph [ref=e986]:
+                - text: "[인증범위] 컬리 쇼핑몰 서비스 개발·운영"
+                - text: (심사받지 않은 물리적 인프라 제외)
+                - text: "[유효기간] 2025.01.15 ~ 2028.01.14"
+            - button "우리은행 로고 고객님이 현금으로 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다." [ref=e987] [cursor=pointer]:
+              - img "우리은행 로고" [ref=e988]
+              - paragraph [ref=e989]:
+                - text: 고객님이 현금으로 결제한 금액에 대해 우리은행과
+                - text: 채무지급보증 계약을 체결하여 안전거래를 보장하고
+                - text: 있습니다.
+        - generic [ref=e990]:
+          - text: 컬리에서 판매되는 상품 중에는 컬리에 입점한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
+          - text: 마켓플레이스(오픈마켓) 상품의 경우 컬리는 통신판매중개자로서 통신판매의 당사자가 아닙니다. 컬리는 해당 상품의 주문, 품질, 교환/환불 등 의무와 책임을 부담하지 않습니다.
+          - emphasis [ref=e991]: © KURLY CORP. ALL RIGHTS RESERVED
+      - button "상품선택" [ref=e993] [cursor=pointer]:
+        - generic [ref=e994]: 상품선택
+        - img [ref=e995]
+      - img "위로가기 아이콘" [ref=e999]
+  - alert [ref=e1000]: 검색결과 > 수박 - 마켓컬리
+```
