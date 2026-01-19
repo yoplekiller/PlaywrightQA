@@ -29,8 +29,8 @@ test('상품 중복 담기 기능 확인', async ({ page }) => {
       await page.goto('https://www.kurly.com/cart');
       await expect(page).toHaveURL('https://www.kurly.com/cart');
 
-      const quantityLocator = page.getByText(`$${addCount}`, { exact: true });
-      await expect(quantityLocator).toHaveText(`$${addCount}`);
+      const quantityLocator = page.getByText(`${addCount}`, { exact: true });
+      await expect(quantityLocator).toHaveText(`${addCount}`);
     }
 
   );
