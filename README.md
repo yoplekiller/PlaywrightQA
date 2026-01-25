@@ -7,7 +7,7 @@
 > 마켓컬리 웹사이트 UI 테스트 + TMDB API 테스트 자동화 프레임워크
 
 📊 [Live Demo - Test Report](https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html) |
-📈 [Allure Report](https://yoplekiller.github.io/PlaywrightQA/allure-report/index.html)
+📈 [Allure Report](https://yoplekiller.github.io/PlaywrightQA/allure-report-ui/index.html)
 
 ---
 

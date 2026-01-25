@@ -25,17 +25,20 @@ export async function loadExcelFile(filePath: string): Promise<SearchCase[]> {
   const rawData: SearchCase[] = [];
   const headers: string[] = [];
 
-  worksheet.eachRow((row, rowNumber) => {
+  worksheet.eachRow((row: ExcelJS.Row, rowNumber: number) => {
     if (rowNumber === 1) {
       // Header row
-      row.eachCell((cell) => {
+      row.eachCell((cell: ExcelJS.Cell) => {
         headers.push(cell.value?.toString() ?? '');
       });
     } else {
       // Data rows
-      const rowData: any = {};
-      row.eachCell((cell, colNumber) => {
-        const header = headers[colNumber - 1];
+      interface RowData {
+        [key: string]: string;
+      }
+      const rowData: RowData = {};
+      row.eachCell((cell: ExcelJS.Cell, colNumber: number) => {
+        const header: string = headers[colNumber - 1];
         if (header) {
           rowData[header] = cell.value?.toString() ?? '';
         }
