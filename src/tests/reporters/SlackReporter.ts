@@ -50,7 +50,6 @@ class SlackReporter implements Reporter {
     const status = result.status.toUpperCase();
     const now = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
     const emoji = status === 'PASSED' ? '✅' : '❌';
-    const allureUrl = process.env.ALLURE_REPORT_URL || '';
     const playwrightUrl = process.env.PLAYWRIGHT_REPORT_URL || '';
 
     // Block Kit 메시지 구성
@@ -123,19 +122,6 @@ class SlackReporter implements Reporter {
         },
         url: playwrightUrl,
         style: 'primary'
-      });
-    }
-
-    if (allureUrl) {
-      buttons.push({
-        type: 'button',
-        text: {
-          type: 'plain_text',
-          text: '📈 Allure Report',
-          emoji: true
-        },
-        url: allureUrl,
-        style: status === 'PASSED' ? 'primary' : 'danger'
       });
     }
 

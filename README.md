@@ -6,8 +6,7 @@
 
 > 마켓컬리 웹사이트 UI 테스트 + TMDB API 테스트 자동화 프레임워크
 
-📊 [Live Demo - Test Report](https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html) |
-📈 [Allure Report](https://yoplekiller.github.io/PlaywrightQA/allure-report-ui/index.html)
+📊 [Live Demo - Test Report](https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html)
 
 ---
 
@@ -25,7 +24,7 @@
 - ✅ **API 테스트 자동화**: TMDB API 엔드포인트 검증
 - ✅ **CI/CD 파이프라인**: GitHub Actions 기반 자동 실행 (8시간마다)
 - ✅ **실시간 알림**: Slack Webhook을 통한 테스트 결과 알림 (버튼 클릭으로 리포트 이동)
-- ✅ **리포팅**: Allure Report + Playwright HTML Report (GitHub Pages 자동 배포)
+- ✅ **리포팅**: Playwright HTML Report (GitHub Pages 자동 배포)
 - ✅ **데이터 드리븐**: ExcelJS를 활용한 테스트 데이터 관리
 - ✅ **Page Object Model**: 유지보수 용이한 코드 구조
 
@@ -37,7 +36,7 @@
 |----------|-------------|
 | **Test Framework** | Playwright 1.52.0 |
 | **Language** | TypeScript 5.8.3 |
-| **Reporting** | Allure Report, Playwright HTML Report |
+| **Reporting** | Playwright HTML Report |
 | **CI/CD** | GitHub Actions |
 | **Notification** | Slack Webhook (Block Kit UI) |
 | **Data Management** | ExcelJS (Excel 기반 테스트 데이터) |
@@ -126,8 +125,8 @@ npm run test:ui
 # API 테스트만 실행
 npm run test:api
 
-# Allure 리포트 생성 및 열기
-npm run report
+# HTML 리포트 열기
+npx playwright show-report
 ```
 
 ---
@@ -233,9 +232,6 @@ for (const movie of movieCases) {
 - **[문제]** xlsx 라이브러리 보안 취약점 발견
 - **[해결]** exceljs로 마이그레이션하여 보안 이슈 해결
 
-#### 레거시 코드
-- **[문제]** Allure import deprecated 경고
-- **[해결]** allure-js-commons로 변경하여 최신 방식 적용
 
 
 ### 실무 감각
@@ -301,7 +297,6 @@ A: SLACK_WEBHOOK_TS 환경 변수 확인
 ## 📝 참고 자료
 
 - [Playwright 공식 문서](https://playwright.dev/)
-- [Allure Report 문서](https://allurereport.org/)
 - [Slack Block Kit](https://api.slack.com/block-kit)
 - [GitHub Actions 문서](https://docs.github.com/en/actions)
 
