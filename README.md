@@ -36,10 +36,12 @@
 |----------|-------------|
 | **Test Framework** | Playwright 1.52.0 |
 | **Language** | TypeScript 5.8.3 |
+| **Browsers** | Chromium, Edge |
 | **Reporting** | Playwright HTML Report |
-| **CI/CD** | GitHub Actions |
+| **CI/CD** | GitHub Actions (8시간 주기 스케줄 실행) |
 | **Notification** | Slack Webhook (Block Kit UI) |
 | **Data Management** | ExcelJS (Excel 기반 테스트 데이터) |
+| **HTTP Client** | Axios 1.9.0 |
 | **Design Pattern** | Page Object Model (POM) |
 
 ---
@@ -53,22 +55,44 @@ PlaywrightQA/
 │       └── playwright-test.yaml      # CI/CD 파이프라인 설정
 │
 ├── src/
-│   ├── pages/                        # Page Object Model
-│   │   ├── BasePage.ts              # 공통 메서드
+│   ├── pages/                        # Page Object Model (7개)
+│   │   ├── BasePage.ts              # 공통 메서드 (기본 클래스)
+│   │   ├── CartPage.ts              # 장바구니 페이지
+│   │   ├── GoodsPage.ts             # 상품 상세 페이지
 │   │   ├── LoginPage.ts             # 로그인 페이지
 │   │   ├── MainPage.ts              # 메인 페이지
+│   │   ├── PickPage.ts              # 찜 페이지
 │   │   └── SearchPage.ts            # 검색 페이지
 │   │
 │   ├── tests/
-│   │   ├── ui/                      # UI 테스트
-│   │   │   ├── ui_login.spec.ts
-│   │   │   ├── ui_product_cart.spec.ts
-│   │   │   └── ...
+│   │   ├── ui/                      # UI 테스트 (8개)
+│   │   │   ├── requires-auth/       # 인증 필요 테스트 (4개)
+│   │   │   │   ├── ui_login.spec.ts
+│   │   │   │   ├── ui_favorite_toggle.spec.ts
+│   │   │   │   ├── ui_goods_add_and_verify.spec.ts
+│   │   │   │   └── ui_pick_page.spec.ts
+│   │   │   ├── ui_address_search.spec.ts
+│   │   │   ├── ui_beauty_btn.spec.ts
+│   │   │   ├── ui_blank_search.spec.ts
+│   │   │   ├── ui_goods_cart.spec.ts
+│   │   │   ├── ui_goods_duplicate.spec.ts
+│   │   │   ├── ui_goods_page.spec.ts
+│   │   │   ├── ui_search.spec.ts
+│   │   │   └── ui_sort_button.spec.ts
 │   │   │
-│   │   ├── api/                     # API 테스트
+│   │   ├── api/                     # API 테스트 (12개)
+│   │   │   ├── api_language_check.spec.ts
+│   │   │   ├── api_login_miss_api_key.spec.ts
+│   │   │   ├── api_login_miss_pw.spec.ts
+│   │   │   ├── api_login_post.spec.ts
+│   │   │   ├── api_movie_director_inform.spec.ts
+│   │   │   ├── api_movie_search.spec.ts
+│   │   │   ├── api_param_validation.spec.ts
+│   │   │   ├── api_popular.search.spec.ts
 │   │   │   ├── api_popular_movie.spec.ts
+│   │   │   ├── api_response_schema.spec.ts
 │   │   │   ├── api_search_movie.spec.ts
-│   │   │   └── ...
+│   │   │   └── api_sla.spec.ts
 │   │   │
 │   │   └── reporters/
 │   │       └── SlackReporter.ts     # Slack 알림 리포터
@@ -76,10 +100,8 @@ PlaywrightQA/
 │   └── utils/
 │       └── excel_loader.ts          # Excel 데이터 로더
 │
-├── tests/
-│   └── data/
-│       └── api_movie.xlsx           # 테스트 데이터
-│
+├── docs/                            # 프로젝트 문서
+├── screenshots/                     # 테스트 스크린샷
 ├── playwright.config.ts             # Playwright 설정
 └── package.json
 ```
@@ -116,7 +138,7 @@ KURLY_TEST_USER_PASSWORD=your_kurly_password
 ### ▶️ 실행 방법
 
 ```bash
-# 전체 테스트 실행
+# 전체 테스트 실행 (Chromium + Edge)
 npm test
 
 # UI 테스트만 실행
@@ -126,7 +148,16 @@ npm run test:ui
 npm run test:api
 
 # HTML 리포트 열기
+npm run report
+# 또는
 npx playwright show-report
+
+# 특정 브라우저로 실행
+npx playwright test --project=chromium
+npx playwright test --project=Edge
+
+# 인증 필요 테스트 포함 실행 (로컬에서)
+npx playwright test src/tests/ui/requires-auth/
 ```
 
 ---
@@ -195,18 +226,31 @@ for (const movie of movieCases) {
 
 ## 📊 테스트 커버리지
 
-| Category | Test Cases | Status |
+| Category | Test Files | Status |
 |----------|-----------|--------|
-| **UI Tests** | 10+ | ✅ |
-| **API Tests** | 5+ | ✅ |
-| **Total** | 15+ | ✅ |
+| **UI Tests (일반)** | 8개 | ✅ |
+| **UI Tests (인증 필요)** | 4개 | ✅ |
+| **API Tests** | 12개 | ✅ |
+| **Page Objects** | 7개 | ✅ |
+| **Total** | 24+ | ✅ |
 
-**주요 테스트 시나리오:**
-- 로그인/로그아웃
-- 상품 검색
-- 장바구니 담기/삭제
-- 찜하기 기능
-- API 응답 검증
+**UI 테스트 시나리오:**
+- 로그인 기능 검증
+- 상품 검색 (빈 검색, 키워드 검색)
+- 상품 상세 페이지 진입
+- 장바구니 담기/중복 담기
+- 찜하기 토글 기능
+- 주소 검색
+- 카테고리 버튼 (뷰티)
+- 정렬 버튼 기능
+
+**API 테스트 시나리오:**
+- TMDB 인기 영화 조회
+- 영화 검색 (키워드, 언어별)
+- 영화 감독 정보 조회
+- 인증 오류 검증 (API Key 누락, 비밀번호 누락)
+- 응답 스키마 검증
+- 파라미터 유효성 검사
 - SLA 응답 시간 체크
 
 ---
@@ -249,23 +293,27 @@ for (const movie of movieCases) {
 
 ## 🚧 알려진 이슈 & 개선 계획
 
-### ✅ 최근 완료 (2026-01-08)
-- [x] **CI/CD 성능 개선**: 빌드 시간 42.8% 단축
+### ✅ 최근 완료
+- [x] **CI/CD 성능 개선** (2026-01-08): 빌드 시간 42.8% 단축
   - npm 캐싱 추가
   - Playwright 브라우저 캐싱 추가
   - Workers 병렬 실행 (1 → 2)
   - Artifact 보존 기간 최적화
   - GitHub Actions Summary 추가
   - 📄 [상세 내역](docs/CI_CD_IMPROVEMENTS_APPLIED.md)
+- [x] **Page Object Model 확장**: 7개 페이지 클래스 구현
+  - BasePage, CartPage, GoodsPage, LoginPage, MainPage, PickPage, SearchPage
+- [x] **크로스 브라우저 테스트**: Chromium + Edge 지원
+- [x] **인증 필요 테스트 분리**: requires-auth 폴더로 구조화
 
 ### 현재 진행 중
-- [ ] 모든 UI 테스트에 Page Object 패턴 적용
 - [ ] API 테스트 커버리지 확대
-- [ ] Excel Data과 연계한 테스트 스크립트 작성
+- [ ] Excel Data와 연계한 테스트 스크립트 작성
 
 ### 향후 계획
 - [ ] 성능 테스트 추가 (Lighthouse CI)
 - [ ] 테스트 데이터 관리 개선 (DB 또는 Fixture 파일)
+- [ ] Firefox, Safari 브라우저 지원 추가
 
 
 ---
