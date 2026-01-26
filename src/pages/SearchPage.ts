@@ -41,6 +41,10 @@ export class SearchPage extends BasePage {
         await this.click(this.addCartButton);
     }
 
+    async isFirstProductVisible(): Promise<boolean> {
+        return await this.firstGoods.isVisible();
+    }
+
     async clickCancelButtonInCartAlt() {
         await this.click(this.cancelButtonInCartAlt);
     }
@@ -100,5 +104,10 @@ export class SearchPage extends BasePage {
     async isGoodsSearchResultVisible(name: string): Promise<boolean> {
         return await this.goodsSearchResult(name).isVisible();
          
+  }
+
+  async clickSortTab(name: string) {
+    const tab = this.page.getByRole('link', { name });
+    await this.click(tab);
   }
 }

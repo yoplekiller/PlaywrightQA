@@ -35,6 +35,18 @@ export class CartPage extends BasePage {
     await this.click(this.addGoodsButton);
   }
 
+  async verifyGoodsQuantity(expectedQuantity: number): Promise<boolean> {
+    const quantityLocator = this.page.locator('.quantity-selector__value');
+    await quantityLocator.waitFor({ state: 'visible', timeout: 5000 });
+    const quantityText = await quantityLocator.textContent();
+    const quantity = Number(quantityText);
+    return quantity === expectedQuantity;
+  }
+
+  async hasGoodsQuantity(expected: number): Promise<boolean> {
+      const quantityText = this.page.getByText(`${expected}`, { exact: true });
+      return await quantityText.isVisible();
+  }
 
 
 

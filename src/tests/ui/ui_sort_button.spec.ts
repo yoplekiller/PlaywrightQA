@@ -16,6 +16,7 @@ test('🧭 카테고리별 정렬 동작 및 결과 검증', async ({ page }, te
     // 마켓컬리 메인 페이지 접속 및 "과자" 검색
     await page.goto('https://www.kurly.com/main');
     await mainpage.searchGoods('과자');
+    await page.waitForURL(/search/); //대기 for navigation
 
     // 검색 결과 페이지로 이동 확인
     const url = page.url();
@@ -33,13 +34,10 @@ test('🧭 카테고리별 정렬 동작 및 결과 검증', async ({ page }, te
 
     for (const name of categories) {
         // 정렬 탭 클릭
-        const tab = page.getByRole('link', { name });
-        await expect(tab).toBeVisible();
-        await tab.click();
+        await searchpage.clickSortTab(name);
 
         // 첫 번째 상품 확인
-        const firstProduct = page.locator('.css-1dry2r1.e1c07x485').first();
-        await expect(firstProduct).toBeVisible({ timeout: 5000 });
+        expect(await searchpage.isFirstProductVisible()).toBe(true);
 
         // 스크린샷 저장
         const safeName = name.replace(/[^a-zA-Z0-9가-힣]/g, '_');

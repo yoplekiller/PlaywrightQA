@@ -1,11 +1,13 @@
 import { test, expect } from '@playwright/test';
-import { CartPage } from '../../pages/CartPage';
-import { LoginPage } from '../../pages/LoginPage';
-import { MainPage } from '../../pages/MainPage';
-import { getNowString } from '../../utils/dataFormat';
-import { SearchPage } from '../../pages/SearchPage';
+// Update the import path below to the correct relative path where CartPage.ts exists
+import { CartPage } from '../../../pages/CartPage'; // <-- FIX THIS PATH if needed
+import { LoginPage } from '../../../pages/LoginPage';
+import { MainPage } from '../../../pages/MainPage';
+import { getNowString } from '../../../utils/dataFormat';
+import { SearchPage } from '../../../pages/SearchPage';
 import fs from 'fs';
 import path from 'path';
+test.use({ storageState: 'auth.json' });
 
 
 test.describe('🛒 상품 추가 및 장바구니 확인 (POM 패턴)', () => {

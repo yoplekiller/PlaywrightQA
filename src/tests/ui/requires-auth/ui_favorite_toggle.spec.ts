@@ -1,9 +1,10 @@
 import { test, expect } from '@playwright/test';
 import dotenv from 'dotenv';
-import { LoginPage } from '../../pages/LoginPage';
-import { MainPage } from '../../pages/MainPage';
-import { GoodsPage } from '../../pages/GoodsPage';
-import { SearchPage } from '../../pages/SearchPage';
+import { LoginPage } from '../../../pages/LoginPage';
+import { MainPage } from '../../../pages/MainPage';
+import { GoodsPage } from '../../../pages/GoodsPage';
+import { SearchPage } from '../../../pages/SearchPage';
+test.use({ storageState: 'auth.json' });
 
 dotenv.config();
 
