@@ -21,7 +21,6 @@
 
 ### ✨ 주요 기능
 - ✅ **UI 테스트 자동화**: 마켓컬리 주요 기능 (로그인, 검색, 장바구니 등)
-- ✅ **API 테스트 자동화**: TMDB API 엔드포인트 검증
 - ✅ **CI/CD 파이프라인**: GitHub Actions 기반 자동 실행 (8시간마다)
 - ✅ **실시간 알림**: Slack Webhook을 통한 테스트 결과 알림 (버튼 클릭으로 리포트 이동)
 - ✅ **리포팅**: Playwright HTML Report (GitHub Pages 자동 배포)
@@ -41,7 +40,6 @@
 | **CI/CD** | GitHub Actions (8시간 주기 스케줄 실행) |
 | **Notification** | Slack Webhook (Block Kit UI) |
 | **Data Management** | ExcelJS (Excel 기반 테스트 데이터) |
-| **HTTP Client** | Axios 1.9.0 |
 | **Design Pattern** | Page Object Model (POM) |
 
 ---
@@ -80,19 +78,6 @@ PlaywrightQA/
 │   │   │   ├── ui_search.spec.ts
 │   │   │   └── ui_sort_button.spec.ts
 │   │   │
-│   │   ├── api/                     # API 테스트 (12개)
-│   │   │   ├── api_language_check.spec.ts
-│   │   │   ├── api_login_miss_api_key.spec.ts
-│   │   │   ├── api_login_miss_pw.spec.ts
-│   │   │   ├── api_login_post.spec.ts
-│   │   │   ├── api_movie_director_inform.spec.ts
-│   │   │   ├── api_movie_search.spec.ts
-│   │   │   ├── api_param_validation.spec.ts
-│   │   │   ├── api_popular.search.spec.ts
-│   │   │   ├── api_popular_movie.spec.ts
-│   │   │   ├── api_response_schema.spec.ts
-│   │   │   ├── api_search_movie.spec.ts
-│   │   │   └── api_sla.spec.ts
 │   │   │
 │   │   └── reporters/
 │   │       └── SlackReporter.ts     # Slack 알림 리포터
@@ -128,7 +113,6 @@ npm install
 npx playwright install
 
 # 4. 환경 변수 설정 (.env 파일 생성)
-TMDB_API_KEY=your_api_key_here
 TMDB_BASE_URL=https://api.themoviedb.org/3
 SLACK_WEBHOOK_TS=your_slack_webhook_url
 KURLY_TEST_USER_EMAIL=your_kurly_id
@@ -210,18 +194,6 @@ test('로그인 테스트', async ({ page }) => {
 
 ### 4. 데이터 드리븐 테스트
 
-**Excel 파일로 테스트 데이터 관리**
-
-```typescript
-// Excel에서 테스트 케이스 로드
-const movieCases = await loadExcelFile('tests/data/api_movie.xlsx');
-
-for (const movie of movieCases) {
-    test(`영화 ID ${movie.movie_id} 검증`, async () => {
-        // 테스트 로직
-    });
-}
-```
 
 
 ## 📊 테스트 커버리지
@@ -230,9 +202,8 @@ for (const movie of movieCases) {
 |----------|-----------|--------|
 | **UI Tests (일반)** | 8개 | ✅ |
 | **UI Tests (인증 필요)** | 4개 | ✅ |
-| **API Tests** | 12개 | ✅ |
 | **Page Objects** | 7개 | ✅ |
-| **Total** | 24+ | ✅ |
+| **Total** | 19+ | ✅ |
 
 **UI 테스트 시나리오:**
 - 로그인 기능 검증
@@ -244,14 +215,6 @@ for (const movie of movieCases) {
 - 카테고리 버튼 (뷰티)
 - 정렬 버튼 기능
 
-**API 테스트 시나리오:**
-- TMDB 인기 영화 조회
-- 영화 검색 (키워드, 언어별)
-- 영화 감독 정보 조회
-- 인증 오류 검증 (API Key 누락, 비밀번호 누락)
-- 응답 스키마 검증
-- 파라미터 유효성 검사
-- SLA 응답 시간 체크
 
 ---
 
@@ -307,7 +270,6 @@ for (const movie of movieCases) {
 - [x] **인증 필요 테스트 분리**: requires-auth 폴더로 구조화
 
 ### 현재 진행 중
-- [ ] API 테스트 커버리지 확대
 - [ ] Excel Data와 연계한 테스트 스크립트 작성
 
 ### 향후 계획
@@ -318,27 +280,6 @@ for (const movie of movieCases) {
 
 ---
 
-## 🔍 트러블슈팅
-
-### 일반적인 문제
-
-**Q: 테스트가 실패하면서 "Timeout" 에러가 발생해요**
-```bash
-A: playwright.config.ts에서 timeout 설정을 늘려보세요
-   또는 네트워크가 느린 경우 waitForLoadState 사용
-```
-
-**Q: 환경 변수가 로드되지 않아요**
-```bash
-A: .env 파일이 프로젝트 루트에 있는지 확인
-   dotenv.config() 호출 확인
-```
-
-**Q: Slack 알림이 오지 않아요**
-```bash
-A: SLACK_WEBHOOK_TS 환경 변수 확인
-   GitHub Actions의 경우 Secrets에 등록했는지 확인
-```
 
 ---
 
