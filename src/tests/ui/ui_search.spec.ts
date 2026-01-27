@@ -32,6 +32,9 @@ test('🔍 엑셀 기반 상품 검색 테스트', async ({ page }) => {
 
         // 검색어로 상품 검색
         await page.goto('https://www.kurly.com/main');
+        await page.setViewportSize({ width: 1280, height: 720 });
+
+        // 로그 테스트 케이스 ID 및 검색어
         await mainpage.searchGoods(search_term);
         await page.waitForTimeout(2000);
 

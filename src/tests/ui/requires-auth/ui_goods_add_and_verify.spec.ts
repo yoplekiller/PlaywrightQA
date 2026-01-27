@@ -1,13 +1,13 @@
 import { test, expect } from '@playwright/test';
 // Update the import path below to the correct relative path where CartPage.ts exists
-import { CartPage } from '../../../pages/CartPage'; // <-- FIX THIS PATH if needed
+import { CartPage } from '../../../pages/CartPage'; 
 import { LoginPage } from '../../../pages/LoginPage';
 import { MainPage } from '../../../pages/MainPage';
 import { getNowString } from '../../../utils/dataFormat';
 import { SearchPage } from '../../../pages/SearchPage';
 import fs from 'fs';
 import path from 'path';
-test.use({ storageState: 'auth.json' });
+
 
 
 test.describe('🛒 상품 추가 및 장바구니 확인 (POM 패턴)', () => {
@@ -24,6 +24,8 @@ test.describe('🛒 상품 추가 및 장바구니 확인 (POM 패턴)', () => {
         // Step 1: 로그인
         await page.goto('https://www.kurly.com/member/login');
         await page.waitForLoadState('domcontentloaded');
+        await page.setViewportSize({ width: 1280, height: 720 });
+        
         await loginPage.login(kurly_id, kurly_pw);
         await page.waitForTimeout(3000);
 

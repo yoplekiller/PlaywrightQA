@@ -12,6 +12,7 @@ test('🛒 검색 → 상세 → 장바구니 담기 → 장바구니 확인', a
 
     // 마켓컬리 메인 페이지 접속
     await page.goto('https://www.kurly.com/main');
+    await page.setViewportSize({ width: 1280, height: 720 });
 
     // 검색어 "과자"로 검색
     await mainpage.searchGoods('과자');
@@ -26,7 +27,7 @@ test('🛒 검색 → 상세 → 장바구니 담기 → 장바구니 확인', a
     // 상품명 확인
     await goodsPage.isProductTitleVisible('[오리온] 초코칩쿠키 256g');
 
-    // 장바구니 페이지 이동 및 담긴 상품 확인
+    // 장바구니 페이지 이동 및 담긴 상품 확인   
     await page.goto('https://www.kurly.com/cart');
     await expect(page).toHaveURL('https://www.kurly.com/cart');
     const expectedProductName = '[오리온] 초코칩쿠키 256g';

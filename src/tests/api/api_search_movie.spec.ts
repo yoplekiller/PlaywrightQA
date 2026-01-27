@@ -1,11 +1,14 @@
 import { test, expect, request, APIRequestContext } from '@playwright/test';
 import ExcelJS from 'exceljs';
 import dotenv from 'dotenv';
+import { ApiClient } from '../../utils/api_client';
 
 dotenv.config();
 
 const BASE_URL = process.env.TMDB_BASE_URL || 'https://api.themoviedb.org/';
 const API_KEY = process.env.TMDB_API_KEY;
+
+//  TMDB_API_KEY 환경 변수가 설정되지 않은 경우 오류 발생
 if (!API_KEY) {
   throw new Error('TMDB_API_KEY environment variable is not set.');
 }

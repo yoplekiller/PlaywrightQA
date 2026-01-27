@@ -5,8 +5,10 @@ import { MainPage } from '../../pages/MainPage';
 test('주소 검색 E2E 플로우 테스트 - 간소화', async ({ page }) => {
     const mainpage = new MainPage(page);
 
-    // 마켓컬리 메인 페이지 접속
+    test.step('마켓컬리 메인 페이지 접속', async () => {
     await page.goto('https://www.kurly.com/main');
+    await page.setViewportSize({ width: 1280, height: 720 });
+    });
 
     // 주소 검색 팝업 열기
     await mainpage.hoverAddressButton();

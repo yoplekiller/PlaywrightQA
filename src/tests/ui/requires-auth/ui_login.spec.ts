@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import dotenv from 'dotenv';
 import { MainPage } from '../../../pages/MainPage';
 import { LoginPage } from '../../../pages/LoginPage';
-test.use({ storageState: 'auth.json' });
+
 
 dotenv.config();
 
@@ -16,6 +16,7 @@ test('🔐 로그인 후 메인 버튼 확인 테스트', async ({ page }, testI
 
     // 마켓컬리 메인 페이지 접속
     await page.goto('https://www.kurly.com/main');
+    await page.setViewportSize({ width: 1280, height: 720 });
 
     // 로그인 수행
     await mainPage.clickLoginButton();

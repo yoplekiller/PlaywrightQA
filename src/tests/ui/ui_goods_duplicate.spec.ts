@@ -13,6 +13,7 @@ test('상품 중복 담기 기능 확인', async ({ page }) => {
 
     // 마켓컬리 메인 페이지 접속
     await page.goto('https://www.kurly.com/main');
+    await page.setViewportSize({ width: 1280, height: 720 });
 
     // 검색어 "수박"으로 검색 및 첫 번째 상품 선택
     await mainpage.searchGoods('수박');

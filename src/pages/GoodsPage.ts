@@ -31,16 +31,7 @@ export class GoodsPage extends BasePage {
         }
     }
 
-    async isCartAddedToastVisible(): Promise<boolean> {
-      try {
-            await expect(this.page.getByText('장바구니에 상품을 담았습니다.')).toBeVisible({timeout: 5000});
-            await expect(this.page.getByText('장바구니에 상품을 담았습니다.')).not.toBeVisible({ timeout: 3000 }); 
-            return true;
-        } catch {
-            return false;
-        }
-    }
-
+ 
     async isCompletedLikeGoodsVisible(): Promise<boolean> {
       try {
         await this.page.waitForSelector('text=상품을 찜했어요.', { timeout: 3000, state: 'visible' });

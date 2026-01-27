@@ -3,7 +3,7 @@ import { MainPage } from '../../../pages/MainPage';
 import { LoginPage } from '../../../pages/LoginPage';
 import { PickPage } from '../../../pages/PickPage';
 import dotenv from 'dotenv';
-test.use({ storageState: 'auth.json' });
+
 
 dotenv.config();
 

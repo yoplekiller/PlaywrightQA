@@ -4,6 +4,8 @@ dotenv.config();
 
 const BASE_URL = process.env.TMDB_BASE_URL || 'https://api.themoviedb.org/';
 const API_KEY = process.env.TMDB_API_KEY || 'your_default_api_key_here';
+
+
 if (!API_KEY || API_KEY === 'your_default_api_key_here'){
     console.warn('TMDB_API_KEY 환경 변수가 설정되지 않았습니다. 기본값을 사용합니다.');
 }
