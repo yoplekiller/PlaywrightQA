@@ -13,6 +13,7 @@ allure-report/
 *.zip
 node_modules/
 *.tgz
+.docs
 
 # 민감한 파일
 auth.json
