@@ -1,5 +1,8 @@
 # Playwright E2E 테스트 자동화
 
+**한국어** | [English](./README.en.md)
+
+[![Playwright Tests](https://github.com/yoplekiller/PlaywrightQA/actions/workflows/playwright-test.yaml/badge.svg)](https://github.com/yoplekiller/PlaywrightQA/actions)
 [![Playwright](https://img.shields.io/badge/Playwright-45ba4b?style=for-the-badge&logo=playwright&logoColor=white)](https://playwright.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)](https://docs.github.com/ko/actions)
@@ -207,6 +210,13 @@ Checkout → 의존성 설치 → 브라우저 설치 → 테스트 실행
 - **CI/CD**: GitHub Actions Secrets 관리, 캐싱 전략, GitHub Pages 자동 배포
 - **문제 해결**: xlsx → ExcelJS 마이그레이션 (보안 취약점), 인증 테스트 분리로 CI 안정성 확보
 - **실무 감각**: 핵심 시나리오 집중, CI에는 빠르고 안정적인 테스트만 포함
+
+---
+
+## 관련 프로젝트
+
+- [QATEST](https://github.com/yoplekiller/QATEST) - Python/Selenium Web + API 테스트
+- [woongjinAppTest](https://github.com/yoplekiller/woongjinAppTest) - Python/Appium 모바일 테스트
 
 ---
 
