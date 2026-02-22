@@ -3,16 +3,16 @@ import { MainPage } from '../../pages/MainPage';
 import { SearchPage } from '../../pages/SearchPage';
 
 test('상품 상세페이지 진입 확인', async ({ page }) => {
-    const mainpage = new MainPage(page);
-    const searchpage = new SearchPage(page);
+    const mainPage = new MainPage(page);
+    const searchPage = new SearchPage(page);
 
     // 마켓컬리 메인 페이지 접속
-    await page.goto('https://www.kurly.com/main');
+    await page.goto('/main');
     await page.setViewportSize({ width: 1280, height: 720 });
 
     // 상품 검색 및 상세페이지 진입
-    await mainpage.searchGoods('바나나');
-    await searchpage.clickFirstGoods();
+    await mainPage.searchGoods('바나나');
+    await searchPage.clickFirstGoods();
 
     // 상품 상세페이지 진입 확인
     const productTitle = page.getByText(/바나나/).first();

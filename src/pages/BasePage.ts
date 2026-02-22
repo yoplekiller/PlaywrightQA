@@ -31,4 +31,8 @@ async takeScreenshot(name: string) {
     await this.page.screenshot({ path: `screenshots/${name}.png` });
 }
 
+async setViewportSize(width: number, height: number) {
+    await this.page.setViewportSize({ width, height });
+}
+
 }

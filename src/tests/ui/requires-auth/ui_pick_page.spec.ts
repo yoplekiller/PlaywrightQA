@@ -17,7 +17,7 @@ test.describe('Pick(찜하기) 버튼 기능 테스트', () => {
         const loginPage = new LoginPage(page);
 
         // 마켓컬리 메인 페이지 접속
-        await page.goto('https://www.kurly.com/main');
+        await page.goto('/main');
 
         // 로그인
         await mainPage.clickLoginButton();
@@ -25,7 +25,7 @@ test.describe('Pick(찜하기) 버튼 기능 테스트', () => {
 
         // 찜하기 버튼 클릭
         await mainPage.clickLikeButton();
-        await page.waitForURL('**/pick/**');
+        await page.waitForURL(/\/pick\//, { timeout: 10000 });
 
         // Pick 페이지로 이동 확인
         const currentUrl = page.url();
@@ -38,7 +38,7 @@ test.describe('Pick(찜하기) 버튼 기능 테스트', () => {
         const pickPage = new PickPage(page);
 
         // 마켓컬리 메인 페이지 접속
-        await page.goto('https://www.kurly.com/main');
+        await page.goto('/main');
 
         // Pick 버튼 클릭 및 알럿 노출 확인
         await mainPage.clickPickButton();

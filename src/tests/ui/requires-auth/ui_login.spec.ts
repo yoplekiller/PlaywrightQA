@@ -9,13 +9,13 @@ dotenv.config();
 const kurly_id = process.env.KURLY_TEST_USER_EMAIL!;
 const kurly_pw = process.env.KURLY_TEST_USER_PASSWORD!;
 
-test('🔐 로그인 후 메인 버튼 확인 테스트', async ({ page }, testInfo) => {
+test('로그인 후 메인 버튼 확인 테스트', async ({ page }, testInfo) => {
     // 페이지 객체 생성
     const mainPage = new MainPage(page);
     const loginPage = new LoginPage(page);
 
     // 마켓컬리 메인 페이지 접속
-    await page.goto('https://www.kurly.com/main');
+    await page.goto('/main');
     await page.setViewportSize({ width: 1280, height: 720 });
 
     // 로그인 수행

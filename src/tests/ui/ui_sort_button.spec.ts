@@ -9,14 +9,14 @@ if (!fs.existsSync('screenshots')) {
     fs.mkdirSync('screenshots');
 }
 
-test('🧭 카테고리별 정렬 동작 및 결과 검증', async ({ page }, testInfo) => {
-    const mainpage = new MainPage(page);
-    const searchpage = new SearchPage(page);
+test('카테고리별 정렬 동작 및 결과 검증', async ({ page }, testInfo) => {
+    const mainPage = new MainPage(page);
+    const searchPage = new SearchPage(page);
 
     // 마켓컬리 메인 페이지 접속 및 "과자" 검색
-    await page.goto('https://www.kurly.com/main');
-    await mainpage.searchGoods('과자');
-    await page.waitForURL(/search/); //대기 for navigation
+    await page.goto('/main');
+    await mainPage.searchGoods('과자');
+    await page.waitForURL(/\/search\//); //대기 for navigation
 
     // 검색 결과 페이지로 이동 확인
     const url = page.url();
@@ -34,10 +34,10 @@ test('🧭 카테고리별 정렬 동작 및 결과 검증', async ({ page }, te
 
     for (const name of categories) {
         // 정렬 탭 클릭
-        await searchpage.clickSortTab(name);
+        await searchPage.clickSortTab(name);
 
         // 첫 번째 상품 확인
-        expect(await searchpage.isFirstProductVisible()).toBe(true);
+        expect(await searchPage.isFirstProductVisible()).toBe(true);
 
         // 스크린샷 저장
         const safeName = name.replace(/[^a-zA-Z0-9가-힣]/g, '_');

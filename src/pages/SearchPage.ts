@@ -97,12 +97,12 @@ export class SearchPage extends BasePage {
         await this.click(goodsLocator);
     }
 
-    goodsSearchResult(name: string): Locator{
+    async goodsSearchResult(name: string): Promise<Locator> {
         return this.page.getByText(new RegExp(`'${name}'에 대한 검색결과`));
     }
 
     async isGoodsSearchResultVisible(name: string): Promise<boolean> {
-        return await this.goodsSearchResult(name).isVisible();
+        return await (await this.goodsSearchResult(name)).isVisible();
          
   }
 
@@ -110,4 +110,35 @@ export class SearchPage extends BasePage {
     const tab = this.page.getByRole('link', { name });
     await this.click(tab);
   }
+
+  // 검색 결과 없음 메시지 확인
+  async isNoSearchResultMessageVisible(): Promise<boolean> {
+    const noResultMessage = this.page.getByText('검색된 상품이 없습니다.');
+    try {
+    await noResultMessage.waitFor({ state: 'visible', timeout: 5000 });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+  // 검색 결과 개수 확인
+  async getSearchResultCount(): Promise<number> {
+    const resultItems = this.page.locator('.css-1dry2r1.e1c07x485');
+    return await resultItems.count();
+  }
+
+  async getProductPrices(): Promise<number[]>{
+    const priceElements = this.page.locator('.price-number'); // 가격 요소 선택자
+    await priceElements.first().waitFor({ state: 'visible', timeout: 5000 });
+
+    const pricesTexts = await priceElements.allTextContents();
+
+    return pricesTexts.map(text => {
+        // 가격 문자열에서 숫자만 추출하여 정수로 변환
+        const numericText = text.replace(/[^0-9]/g, '');
+        return parseInt(numericText, 10);
+    }).filter(n => !isNaN(n)); // 유효한 숫자만 반환
+  }
+
 }

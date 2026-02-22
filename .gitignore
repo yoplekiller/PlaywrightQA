@@ -1,20 +1,27 @@
 node_modules/
+dist/
 .env
+.cache/
+
+# Playwright
 playwright-report/
 test-results/
-dist/
-*.js
-dist/
-.cache/
+screenshots/
+src/screenshots/
+
+# 리포트 / 생성물
 allure-report/
+allure-results/
+accessibility-report-*.json
+searchCases.json
+storageState.json
+
+# 빌드 산출물
+*.js
 *.log
 *.tsbuildinfo
 *.tgz
 *.zip
-node_modules/
-*.tgz
-.docs
 
 # 민감한 파일
 auth.json
-allure-results/

@@ -15,7 +15,7 @@
 
 ## Project Overview
 
-QA Engineer portfolio project implementing E2E test automation for a live production e-commerce website using Playwright + TypeScript.
+QA Engineer portfolio — E2E test automation for Kurly, a live e-commerce site, using Playwright + TypeScript.
 
 ### Key Features
 
@@ -23,6 +23,8 @@ QA Engineer portfolio project implementing E2E test automation for a live produc
 |---------|-------------|
 | **Page Object Model** | 7 page classes for structured automation |
 | **Data-Driven Testing** | External test data management with ExcelJS |
+| **Visual Regression** | Snapshot-based UI change detection |
+| **Accessibility Testing** | WCAG 2.0 validation with axe-core |
 | **CI/CD** | GitHub Actions with 8-hour scheduled runs |
 | **Slack Notifications** | Real-time reporting via Block Kit UI |
 | **Cross-Browser** | Simultaneous Chromium + Edge testing |
@@ -40,6 +42,7 @@ QA Engineer portfolio project implementing E2E test automation for a live produc
 | Reporting | Playwright HTML Report, Slack Block Kit |
 | CI/CD | GitHub Actions |
 | Data | ExcelJS |
+| Accessibility | axe-core |
 
 ---
 
@@ -63,7 +66,7 @@ PlaywrightQA/
 │   ├── tests/
 │   │   ├── ui/                    # UI Tests
 │   │   │   ├── requires-auth/     # Auth required (4)
-│   │   │   └── *.spec.ts          # General tests (8)
+│   │   │   └── *.spec.ts          # General tests (13)
 │   │   ├── data/
 │   │   │   └── test_case.xlsx     # Test data
 │   │   └── reporters/
@@ -71,9 +74,9 @@ PlaywrightQA/
 │   │
 │   └── utils/
 │       ├── excel_loader.ts        # Excel loader
-│       ├── logger.ts              # Test logger
 │       └── dataFormat.ts          # Format utilities
 │
+├── global.setup.ts                # Global setup (auth state, data conversion)
 ├── playwright.config.ts
 └── package.json
 ```
@@ -101,30 +104,35 @@ npm run report        # Open report
 
 ```env
 SLACK_WEBHOOK_TS=your_slack_webhook_url          # Optional
-KURLY_TEST_USER_EMAIL=your_email                 # For auth tests
-KURLY_TEST_USER_PASSWORD=your_password           # For auth tests
+KURLY_EMAIL=your_email                           # For auth tests
+KURLY_PASSWORD=your_password                     # For auth tests
 ```
 
 ---
 
 ## Test Cases
 
-### UI Tests - General (8 tests)
+### UI Tests - General (13 tests)
 
 | Test | Validation |
 |------|------------|
 | `ui_search` | Excel data-driven product search |
 | `ui_blank_search` | Popup display on blank input |
+| `ui_no_search_result` | No results message for non-existent product |
 | `ui_goods_page` | Product detail page navigation |
 | `ui_goods_cart` | Search → Detail → Add to cart |
 | `ui_goods_duplicate` | Duplicate item quantity verification |
 | `ui_beauty_btn` | Beauty Kurly button URL navigation |
 | `ui_address_search` | Address search popup E2E flow |
 | `ui_sort_button` | 6 sort tab iteration and validation |
+| `ui_sort_price` | Price sorting result verification |
+| `ui_visual_regression` | 4-page snapshot comparison (Visual Regression) |
+| `ui_accessibility` | axe-core based WCAG accessibility audit |
+| `ui_responsive` | Responsive layout verification across viewports |
 
 ### UI Tests - Auth Required (4 tests)
 
-Excluded in CI with `testIgnore`, run locally.
+Excluded in CI with `testIgnore`. Runs via `chromium-auth` project using `storageState`.
 
 | Test | Validation |
 |------|------------|
@@ -140,11 +148,11 @@ Excluded in CI with `testIgnore`, run locally.
 ### Page Object Model
 
 ```
-BasePage (common: goto, click, fill, hover, waitForSelector, takeScreenshot)
-  ├── MainPage      Search, navigation
+BasePage (common: goto, click, fill, hover, waitForSelector, takeScreenshot, setViewportSize)
+  ├── MainPage      Search, navigation, address search popup
   ├── LoginPage     Login handling
-  ├── SearchPage    Search results, sorting
-  ├── GoodsPage     Product details, cart
+  ├── SearchPage    Search results, sorting, price extraction
+  ├── GoodsPage     Product details, cart, favorites
   ├── CartPage      Cart verification
   └── PickPage      Favorites page
 ```
@@ -154,9 +162,19 @@ BasePage (common: goto, click, fill, hover, waitForSelector, takeScreenshot)
 ```typescript
 const searchCases = await loadExcelFile('src/tests/data/test_case.xlsx');
 for (const { tc_id, search_term } of searchCases) {
-    await mainpage.searchGoods(search_term);
+    await mainPage.searchGoods(search_term);
 }
 ```
+
+### Visual Regression
+
+```typescript
+await expect(page).toHaveScreenshot('main-page-full.png', {
+    maxDiffPixelRatio: 0.15,
+});
+```
+
+8 snapshots total — 4 per browser (Chromium + Edge).
 
 ### Slack Notifications
 
@@ -196,11 +214,13 @@ Checkout → Install deps → Install browsers → Run tests
 | Setting | Value |
 |---------|-------|
 | Timeout | 70s |
+| Retries | CI: 1 / Local: 0 |
 | Viewport | 1920 x 1080 |
 | Headless | true |
 | Trace | retain-on-failure |
 | Screenshot | only-on-failure |
 | Video | retain-on-failure |
+| Global Setup | Auth state saving + Excel → JSON conversion |
 
 ---
 

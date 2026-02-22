@@ -15,7 +15,7 @@
 
 ## 프로젝트 소개
 
-QA 엔지니어 포트폴리오 프로젝트입니다. Playwright + TypeScript 기반으로 실제 운영 중인 마켓컬리 웹사이트를 대상으로 E2E 테스트를 구현했습니다.
+QA 엔지니어 포트폴리오 프로젝트입니다. Playwright + TypeScript 기반으로 실제 운영 중인 마켓컬리 웹사이트를 대상으로 자동화 테스트 스크립트를 구성하였습니다.
 
 ### 주요 특징
 
@@ -23,6 +23,8 @@ QA 엔지니어 포트폴리오 프로젝트입니다. Playwright + TypeScript �
 |------|------|
 | **Page Object Model** | 7개 페이지 클래스로 구조화 |
 | **데이터 드리븐** | ExcelJS 기반 외부 데이터 관리 |
+| **Visual Regression** | 스냅샷 비교 기반 UI 변경 감지 |
+| **접근성 검사** | axe-core 기반 WCAG 2.0 검증 |
 | **CI/CD** | GitHub Actions 8시간 주기 자동 실행 |
 | **Slack 알림** | Block Kit UI 기반 실시간 리포팅 |
 | **크로스 브라우저** | Chromium + Edge 동시 테스트 |
@@ -40,6 +42,7 @@ QA 엔지니어 포트폴리오 프로젝트입니다. Playwright + TypeScript �
 | Reporting | Playwright HTML Report, Slack Block Kit |
 | CI/CD | GitHub Actions |
 | Data | ExcelJS |
+| Accessibility | axe-core |
 
 ---
 
@@ -63,7 +66,7 @@ PlaywrightQA/
 │   ├── tests/
 │   │   ├── ui/                    # UI 테스트
 │   │   │   ├── requires-auth/     # 인증 필요 (4개)
-│   │   │   └── *.spec.ts          # 일반 테스트 (8개)
+│   │   │   └── *.spec.ts          # 일반 테스트 (13개)
 │   │   ├── data/
 │   │   │   └── test_case.xlsx     # 테스트 데이터
 │   │   └── reporters/
@@ -71,9 +74,9 @@ PlaywrightQA/
 │   │
 │   └── utils/
 │       ├── excel_loader.ts        # Excel 로더
-│       ├── logger.ts              # 테스트 로거
 │       └── dataFormat.ts          # 포맷 유틸
 │
+├── global.setup.ts                # 글로벌 셋업 (로그인 상태 저장, 데이터 변환)
 ├── playwright.config.ts
 └── package.json
 ```
@@ -101,30 +104,35 @@ npm run report        # 리포트 열기
 
 ```env
 SLACK_WEBHOOK_TS=your_slack_webhook_url          # 선택
-KURLY_TEST_USER_EMAIL=your_email                 # 인증 테스트용
-KURLY_TEST_USER_PASSWORD=your_password           # 인증 테스트용
+KURLY_EMAIL=your_email                           # 인증 테스트용
+KURLY_PASSWORD=your_password                     # 인증 테스트용
 ```
 
 ---
 
 ## 테스트 케이스
 
-### UI 테스트 - 일반 (8개)
+### UI 테스트 - 일반 (13개)
 
 | 테스트 | 검증 내용 |
 |--------|-----------|
 | `ui_search` | Excel 데이터 기반 상품 검색 |
 | `ui_blank_search` | 공백 입력 시 팝업 노출 |
+| `ui_no_search_result` | 존재하지 않는 상품 검색 시 결과 없음 표시 |
 | `ui_goods_page` | 상품 상세페이지 진입 |
 | `ui_goods_cart` | 검색 → 상세 → 장바구니 담기 |
 | `ui_goods_duplicate` | 동일 상품 중복 담기 수량 검증 |
 | `ui_beauty_btn` | 뷰티컬리 버튼 URL 이동 |
 | `ui_address_search` | 주소 검색 팝업 E2E 플로우 |
 | `ui_sort_button` | 6개 정렬 탭 순회 및 검증 |
+| `ui_sort_price` | 가격순 정렬 결과 검증 |
+| `ui_visual_regression` | 4개 페이지 스냅샷 비교 (Visual Regression) |
+| `ui_accessibility` | axe-core 기반 WCAG 접근성 검사 |
+| `ui_responsive` | 반응형 뷰포트별 레이아웃 확인 |
 
 ### UI 테스트 - 인증 필요 (4개)
 
-CI에서는 `testIgnore`로 제외되며 로컬에서 별도 실행합니다.
+CI에서는 `testIgnore`로 제외되며, `chromium-auth` 프로젝트에서 `storageState`를 활용하여 실행합니다.
 
 | 테스트 | 검증 내용 |
 |--------|-----------|
@@ -140,11 +148,11 @@ CI에서는 `testIgnore`로 제외되며 로컬에서 별도 실행합니다.
 ### Page Object Model
 
 ```
-BasePage (공통: goto, click, fill, hover, waitForSelector, takeScreenshot)
-  ├── MainPage      검색, 네비게이션
+BasePage (공통: goto, click, fill, hover, waitForSelector, takeScreenshot, setViewportSize)
+  ├── MainPage      검색, 네비게이션, 주소 검색 팝업
   ├── LoginPage     로그인 처리
-  ├── SearchPage    검색 결과, 정렬
-  ├── GoodsPage     상품 상세, 장바구니
+  ├── SearchPage    검색 결과, 정렬, 가격 추출
+  ├── GoodsPage     상품 상세, 장바구니, 찜하기
   ├── CartPage      장바구니 검증
   └── PickPage      찜 페이지
 ```
@@ -154,9 +162,19 @@ BasePage (공통: goto, click, fill, hover, waitForSelector, takeScreenshot)
 ```typescript
 const searchCases = await loadExcelFile('src/tests/data/test_case.xlsx');
 for (const { tc_id, search_term } of searchCases) {
-    await mainpage.searchGoods(search_term);
+    await mainPage.searchGoods(search_term);
 }
 ```
+
+### Visual Regression
+
+```typescript
+await expect(page).toHaveScreenshot('main-page-full.png', {
+    maxDiffPixelRatio: 0.15,
+});
+```
+
+Chromium + Edge 크로스 브라우저 대응으로 총 8개의 테스트를 실행합니다.
 
 ### Slack 알림
 
@@ -196,11 +214,13 @@ Checkout → 의존성 설치 → 브라우저 설치 → 테스트 실행
 | 항목 | 값 |
 |------|-----|
 | Timeout | 70초 |
+| Retries | CI: 1회 / 로컬: 0회 |
 | Viewport | 1920 x 1080 |
 | Headless | true |
 | Trace | retain-on-failure |
 | Screenshot | only-on-failure |
 | Video | retain-on-failure |
+| Global Setup | 로그인 상태 저장 + Excel → JSON 변환 |
 
 ---
 

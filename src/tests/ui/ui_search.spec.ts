@@ -16,34 +16,32 @@ if (!fs.existsSync(screenshotDir)) {
 
 // 테스트 시작 전에 엑셀 파일에서 데이터 로드
 test.beforeAll(async () => {
-    searchCases = await loadExcelFile(
-        path.resolve(__dirname, '../data/test_case.xlsx')
-    );
-    console.log('엑셀 데이터:', searchCases);
+    searchCases = JSON.parse(
+    fs.readFileSync(path.resolve(__dirname, '../data/test_case.json'), 'utf-8')
+  );
 });
 
 
-test('🔍 엑셀 기반 상품 검색 테스트', async ({ page }) => {
-    const mainpage = new MainPage(page);
-    const searchpage = new SearchPage(page);
+test('엑셀 기반 상품 검색 테스트', async ({ page }) => {
+    const mainPage = new MainPage(page);
+    const searchPage = new SearchPage(page);
 
     for (const { tc_id, search_term } of searchCases) {
         if (!tc_id || !search_term) continue;
 
         // 검색어로 상품 검색
-        await page.goto('https://www.kurly.com/main');
+        await page.goto('/main');
         await page.setViewportSize({ width: 1280, height: 720 });
 
         // 로그 테스트 케이스 ID 및 검색어
-        await mainpage.searchGoods(search_term);
-        await page.waitForTimeout(2000);
+        await mainPage.searchGoods(search_term);
+        await page.waitForLoadState('networkidle');
 
         // 검색 결과 확인
         const url = page.url();
-        console.log(`현재 URL: ${url}`);
         const isSearchURL = url.includes(encodeURIComponent(search_term));
         expect(isSearchURL).toBe(true);
-        expect(await searchpage.isGoodsSearchResultVisible(search_term)).toBe(true);
+        expect(await searchPage.isGoodsSearchResultVisible(search_term)).toBe(true);
 
         // 스크린샷 저장
         const safeSearchTerm = search_term.replace(/[\/:*?"<>|]/g, '_');
