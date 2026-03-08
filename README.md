@@ -1,4 +1,4 @@
-# Playwright E2E 테스트 자동화
+# Playwright UI 테스트 자동화
 
 **한국어** | [English](./README.en.md)
 
@@ -7,7 +7,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)](https://docs.github.com/ko/actions)
 
-> 마켓컬리 웹사이트 UI E2E 테스트 자동화 프로젝트
+> 마켓컬리 웹사이트 UI 테스트 자동화 프로젝트
 
 [Live Test Report](https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html)
 
