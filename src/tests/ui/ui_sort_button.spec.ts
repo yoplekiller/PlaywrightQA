@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { MainPage } from '../../pages/MainPage';
 import { SearchPage } from '../../pages/SearchPage';
+import { time } from 'console';
 
 
 if (!fs.existsSync('screenshots')) {
@@ -38,6 +39,7 @@ test('카테고리별 정렬 동작 및 결과 검증', async ({ page }, testInf
 
         // 첫 번째 상품 확인
         expect(await searchPage.isFirstProductVisible()).toBe(true);
+        
 
         // 스크린샷 저장
         const safeName = name.replace(/[^a-zA-Z0-9가-힣]/g, '_');

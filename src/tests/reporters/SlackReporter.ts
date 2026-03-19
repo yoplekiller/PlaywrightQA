@@ -6,10 +6,9 @@
 
   class SlackReporter implements Reporter {
     private webhookUrl: string;
-    private passed = 0;
-    private failed = 0;
-    private skipped = 0;
-    private failedTests: string[] = [];
+    private passedKeys = new Set<string>();
+    private failedKeys = new Set<string>();
+    private skippedKeys = new Set<string>();
     private startTime: string = '';
     private total: number = 0;
     private failedDetails: { title: string, file: string, error?: string }[] = [];
@@ -22,10 +21,10 @@
 
     onBegin(config: FullConfig, suite: Suite) {
       this.startTime = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
-      // 고유 테스트 수 계산 (프로젝트 중복 제거)
-      const uniqueTitles = new Set(suite.allTests().map(t => t.titlePath().join(' > ')));
-      this.total = suite.allTests().length; // 프로젝트별 실행 수 그대로
-    console.log("📝 테스트 시작 - 총 테스트 수:", this.total);
+      // 프로젝트명 제외한 파일경로+테스트명 기준으로 유니크 카운트
+      const uniqueKeys = new Set(suite.allTests().map(t => t.location.file + '>' + t.title));
+      this.total = uniqueKeys.size;
+      console.log("📝 테스트 시작 - 총 테스트 수:", this.total);
     }
 
     onTestEnd(test: TestCase, result: TestResult) {
@@ -36,23 +35,33 @@
         return;
       }
 
+      // 프로젝트명 제외한 유니크 키 (멀티 브라우저 중복 방지)
+      const key = test.location.file + '>' + test.title;
+
       if (result.status === 'passed') {
-        this.passed++;
+        this.passedKeys.add(key);
+        this.failedKeys.delete(key); // 재시도 후 통과 시 실패에서 제거
       } else if (failedStatuses.includes(result.status)) {
-        this.failed++;
-        this.failedTests.push(test.title);
-        this.failedDetails.push({
-          title: test.title,
-          file: test.location?.file || '',
-          error: result.errors?.[0]?.message?.split('\n')[0] || ''
-        });
+        if (!this.passedKeys.has(key)) {
+          this.failedKeys.add(key);
+          if (!this.failedDetails.find(d => d.file === test.location.file && d.title === test.title)) {
+            this.failedDetails.push({
+              title: test.title,
+              file: test.location?.file || '',
+              error: result.errors?.[0]?.message?.split('\n')[0] || ''
+            });
+          }
+        }
       } else if (result.status === 'skipped') {
-        this.skipped++;
+        this.skippedKeys.add(key);
       }
     }
     async onEnd(result: FullResult): Promise<void> {
+      const passed = this.passedKeys.size;
+      const failed = this.failedKeys.size;
+      const skipped = this.skippedKeys.size;
       console.log("📊 테스트 완료 - 결과 집계:");
-      console.log("- 전체:", this.total, "성공:", this.passed, "실패:", this.failed, "스킵:", this.skipped);
+      console.log("- 전체:", this.total, "성공:", passed, "실패:", failed, "스킵:", skipped);
 
       const status = result.status.toUpperCase();
       const now = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
@@ -95,15 +104,15 @@
           fields: [
             {
               type: 'mrkdwn',
-              text: `*✅ 성공:*\n${this.passed}`
+              text: `*✅ 성공:*\n${passed}`
             },
             {
               type: 'mrkdwn',
-              text: `*❌ 실패:*\n${this.failed}`
+              text: `*❌ 실패:*\n${failed}`
             },
             {
               type: 'mrkdwn',
-              text: `*⚠️ 스킵:*\n${this.skipped}`
+              text: `*⚠️ 스킵:*\n${skipped}`
             },
             {
               type: 'mrkdwn',
@@ -142,7 +151,7 @@
       const message = {
         blocks,
         // Fallback text for notifications
-        text: `${emoji} Playwright 테스트 완료 - ${status} (성공: ${this.passed}, 실패: ${this.failed})`
+        text: `${emoji} Playwright 테스트 완료 - ${status} (성공: ${passed}, 실패: ${failed})`
       };
 
       try {
