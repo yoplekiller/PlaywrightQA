@@ -31,7 +31,7 @@
       const failedStatuses = ['failed', 'timedOut', 'interrupted', 'crashed'];
 
       // 최종 시도만 카운트 (retry 중간 결과 제외)
-      if (failedStatuses.includes(result.status) && result.retry < test.retries) {
+      if (result.retry < test.retries && (failedStatuses.includes(result.status) || result.status === 'skipped')) {
         return;
       }
 
@@ -41,9 +41,11 @@
       if (result.status === 'passed') {
         this.passedKeys.add(key);
         this.failedKeys.delete(key); // 재시도 후 통과 시 실패에서 제거
+        this.skippedKeys.delete(key); // 다른 프로젝트에서 통과 시 스킵에서 제거
       } else if (failedStatuses.includes(result.status)) {
         if (!this.passedKeys.has(key)) {
           this.failedKeys.add(key);
+          this.skippedKeys.delete(key); // 다른 프로젝트에서 실패 시 스킵에서 제거
           if (!this.failedDetails.find(d => d.file === test.location.file && d.title === test.title)) {
             this.failedDetails.push({
               title: test.title,
@@ -53,7 +55,9 @@
           }
         }
       } else if (result.status === 'skipped') {
-        this.skippedKeys.add(key);
+        if (!this.passedKeys.has(key) && !this.failedKeys.has(key)) {
+          this.skippedKeys.add(key);
+        }
       }
     }
     async onEnd(result: FullResult): Promise<void> {
