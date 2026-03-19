@@ -6,9 +6,9 @@
 
   class SlackReporter implements Reporter {
     private webhookUrl: string;
-    private passedKeys = new Set<string>();
-    private failedKeys = new Set<string>();
-    private skippedKeys = new Set<string>();
+    private passed = 0;
+    private failed = 0;
+    private skipped = 0;
     private startTime: string = '';
     private failedDetails: { title: string, file: string, error?: string }[] = [];
 
@@ -31,36 +31,27 @@
         return;
       }
 
-      // 프로젝트명 제외한 유니크 키 (멀티 브라우저 중복 방지)
-      const key = test.location.file + '>' + test.title;
-
       if (result.status === 'passed') {
-        this.passedKeys.add(key);
-        this.failedKeys.delete(key);
-        this.skippedKeys.delete(key);
+        this.passed++;
       } else if (failedStatuses.includes(result.status)) {
-        if (!this.passedKeys.has(key)) {
-          this.failedKeys.add(key);
-          this.skippedKeys.delete(key);
-          if (!this.failedDetails.find(d => d.file === test.location.file && d.title === test.title)) {
-            this.failedDetails.push({
-              title: test.title,
-              file: test.location?.file || '',
-              error: result.errors?.[0]?.message?.split('\n')[0] || ''
-            });
-          }
+        this.failed++;
+        // 실패 상세 정보는 중복 없이 (같은 테스트가 여러 프로젝트에서 실패해도 1번만)
+        if (!this.failedDetails.find(d => d.file === test.location.file && d.title === test.title)) {
+          this.failedDetails.push({
+            title: test.title,
+            file: test.location?.file || '',
+            error: result.errors?.[0]?.message?.split('\n')[0] || ''
+          });
         }
       } else if (result.status === 'skipped') {
-        if (!this.passedKeys.has(key) && !this.failedKeys.has(key)) {
-          this.skippedKeys.add(key);
-        }
+        this.skipped++;
       }
     }
     async onEnd(result: FullResult): Promise<void> {
-      const passed = this.passedKeys.size;
-      const failed = this.failedKeys.size;
-      const skipped = this.skippedKeys.size;
-      const total = passed + failed + skipped; // 실제 결과 기준 합산 (HTML 리포트와 동일)
+      const passed = this.passed;
+      const failed = this.failed;
+      const skipped = this.skipped;
+      const total = passed + failed + skipped;
       console.log("📊 테스트 완료 - 결과 집계:");
       console.log("- 전체:", total, "성공:", passed, "실패:", failed, "스킵:", skipped);
 
