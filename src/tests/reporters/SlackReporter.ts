@@ -10,7 +10,6 @@
     private failedKeys = new Set<string>();
     private skippedKeys = new Set<string>();
     private startTime: string = '';
-    private total: number = 0;
     private failedDetails: { title: string, file: string, error?: string }[] = [];
 
     constructor(options: { webhookUrl: string }) {
@@ -21,17 +20,14 @@
 
     onBegin(config: FullConfig, suite: Suite) {
       this.startTime = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
-      // 프로젝트명 제외한 파일경로+테스트명 기준으로 유니크 카운트
-      const uniqueKeys = new Set(suite.allTests().map(t => t.location.file + '>' + t.title));
-      this.total = uniqueKeys.size;
-      console.log("📝 테스트 시작 - 총 테스트 수:", this.total);
+      console.log("📝 테스트 시작");
     }
 
     onTestEnd(test: TestCase, result: TestResult) {
       const failedStatuses = ['failed', 'timedOut', 'interrupted', 'crashed'];
 
-      // 최종 시도만 카운트 (retry 중간 결과 제외)
-      if (result.retry < test.retries && (failedStatuses.includes(result.status) || result.status === 'skipped')) {
+      // 실패 상태의 중간 retry만 제외 (skipped는 retry 안 하므로 항상 처리)
+      if (failedStatuses.includes(result.status) && result.retry < test.retries) {
         return;
       }
 
@@ -40,12 +36,12 @@
 
       if (result.status === 'passed') {
         this.passedKeys.add(key);
-        this.failedKeys.delete(key); // 재시도 후 통과 시 실패에서 제거
-        this.skippedKeys.delete(key); // 다른 프로젝트에서 통과 시 스킵에서 제거
+        this.failedKeys.delete(key);
+        this.skippedKeys.delete(key);
       } else if (failedStatuses.includes(result.status)) {
         if (!this.passedKeys.has(key)) {
           this.failedKeys.add(key);
-          this.skippedKeys.delete(key); // 다른 프로젝트에서 실패 시 스킵에서 제거
+          this.skippedKeys.delete(key);
           if (!this.failedDetails.find(d => d.file === test.location.file && d.title === test.title)) {
             this.failedDetails.push({
               title: test.title,
@@ -64,8 +60,9 @@
       const passed = this.passedKeys.size;
       const failed = this.failedKeys.size;
       const skipped = this.skippedKeys.size;
+      const total = passed + failed + skipped; // 실제 결과 기준 합산 (HTML 리포트와 동일)
       console.log("📊 테스트 완료 - 결과 집계:");
-      console.log("- 전체:", this.total, "성공:", passed, "실패:", failed, "스킵:", skipped);
+      console.log("- 전체:", total, "성공:", passed, "실패:", failed, "스킵:", skipped);
 
       const status = result.status.toUpperCase();
       const now = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
@@ -120,7 +117,7 @@
             },
             {
               type: 'mrkdwn',
-              text: `*📊 총 테스트:*\n${this.total}`
+              text: `*📊 총 테스트:*\n${total}`
             }
           ]
         },
@@ -155,7 +152,7 @@
       const message = {
         blocks,
         // Fallback text for notifications
-        text: `${emoji} Playwright 테스트 완료 - ${status} (성공: ${passed}, 실패: ${failed})`
+        text: `${emoji} Playwright 테스트 완료 - ${status} (성공: ${passed}, 실패: ${failed}, 총: ${total})`
       };
 
       try {
