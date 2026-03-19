@@ -22,27 +22,34 @@ class SlackReporter implements Reporter {
 
   onBegin(config: FullConfig, suite: Suite) {
     this.startTime = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
-    this.total = suite.allTests().length;
+    // 고유 테스트 수 계산 (프로젝트 중복 제거)
+    const uniqueTitles = new Set(suite.allTests().map(t => t.titlePath().join(' > ')));
+    this.total = uniqueTitles.size;
     console.log("📝 테스트 시작 - 총 테스트 수:", this.total);
   }
 
   onTestEnd(test: TestCase, result: TestResult) {
-  const failedStatuses = ['failed', 'timedOut', 'interrupted', 'crashed'];
+    const failedStatuses = ['failed', 'timedOut', 'interrupted', 'crashed'];
 
-  if (result.status === 'passed') {
-    this.passed++;
-  } else if (failedStatuses.includes(result.status)) {
-    this.failed++;
-    this.failedTests.push(test.title);
-    this.failedDetails.push({
-      title: test.title,
-      file: test.location?.file || '',
-      error: result.errors?.[0]?.message?.split('\n')[0] || ''
-    });
-  } else if (result.status === 'skipped') {
-    this.skipped++;
+    // 최종 시도만 카운트 (retry 중간 결과 제외)
+    if (failedStatuses.includes(result.status) && result.retry < test.retries) {
+      return;
+    }
+
+    if (result.status === 'passed') {
+      this.passed++;
+    } else if (failedStatuses.includes(result.status)) {
+      this.failed++;
+      this.failedTests.push(test.title);
+      this.failedDetails.push({
+        title: test.title,
+        file: test.location?.file || '',
+        error: result.errors?.[0]?.message?.split('\n')[0] || ''
+      });
+    } else if (result.status === 'skipped') {
+      this.skipped++;
+    }
   }
-}
   async onEnd(result: FullResult): Promise<void> {
     console.log("📊 테스트 완료 - 결과 집계:");
     console.log("- 전체:", this.total, "성공:", this.passed, "실패:", this.failed, "스킵:", this.skipped);
