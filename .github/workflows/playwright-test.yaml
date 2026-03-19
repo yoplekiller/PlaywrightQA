@@ -102,7 +102,7 @@ jobs:
           publish_dir: ./playwright-report
           destination_dir: playwright-report
           publish_branch: gh-pages
-          keep_files: true
+          force_orphan: true
 
       - name: Create Test Summary
         if: always()
