@@ -26,7 +26,7 @@ QA 엔지니어 포트폴리오 프로젝트입니다. Playwright + TypeScript �
 | **Visual Regression** | 스냅샷 비교 기반 UI 변경 감지 |
 | **접근성 검사** | axe-core 기반 WCAG 2.0 검증 |
 | **CI/CD** | GitHub Actions 8시간 주기 자동 실행 |
-| **Slack 알림** | Block Kit UI 기반 실시간 리포팅 |
+| **Slack 알림** | Block Kit UI 기반 실시간 리포팅 (브라우저별 결과 포함) |
 | **크로스 브라우저** | Chromium + Edge 동시 테스트 |
 | **자동 배포** | GitHub Pages HTML Report |
 
@@ -180,9 +180,16 @@ Chromium + Edge 크로스 브라우저 대응으로 총 8개의 테스트를 실
 
 테스트 종료 시 자동 전송:
 - 테스트 상태 (PASSED / FAILED)
-- 성공/실패/스킵 수량
-- 소요 시간
+- 성공 / 실패 / 스킵 수량 (TC 기준, 중복 제거)
+- 브라우저별 결과 (chromium / chromium-auth / Edge 독립 집계)
+- 시작 시각 / 종료 시각 / 소요 시간
 - Report 바로가기 버튼
+
+> **집계 규칙 (TC 기준, 중복 제거)**
+> - 전체 집계는 HTML 리포터와 동일한 **최악 결과 우선** 방식으로 동작합니다.
+> - 어느 브라우저에서든 1회 이상 실패하면 해당 TC는 **실패**로 집계됩니다.
+> - 스킵은 passed / failed 어느 쪽도 아닌 TC에만 집계됩니다.
+> - retry 중간 실패는 제외하고, 최종 결과만 반영합니다.
 
 ---
 
