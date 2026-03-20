@@ -7,6 +7,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
+test.skip(process.env.CI === 'true', 'Skip in CI');
 test.describe('Pick(찜하기) 버튼 기능 테스트', () => {
 
     const kurly_id = process.env.KURLY_TEST_USER_EMAIL!;

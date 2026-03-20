@@ -9,7 +9,7 @@ import fs from 'fs';
 import path from 'path';
 
 
-
+test.skip(process.env.CI === 'true', 'Skip in CI');
 test.describe('상품 추가 및 장바구니 확인', () => {
 
     test('상품 검색 → 상품 추가 → 장바구니에서 확인', async ({ page }, testInfo) => {

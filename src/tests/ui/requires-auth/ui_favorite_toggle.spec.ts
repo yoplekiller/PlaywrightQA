@@ -8,6 +8,7 @@ import { SearchPage } from '../../../pages/SearchPage';
 
 dotenv.config();
 
+test.skip(process.env.CI === 'true', 'Skip in CI');
 test('상품 찜하기 버튼 후 찜하기에 포함되어 있는지 확인', async ({ page }) => {
     const loginPage = new LoginPage(page);
     const mainPage = new MainPage(page);

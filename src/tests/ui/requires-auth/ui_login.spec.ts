@@ -9,6 +9,7 @@ dotenv.config();
 const kurly_id = process.env.KURLY_TEST_USER_EMAIL!;
 const kurly_pw = process.env.KURLY_TEST_USER_PASSWORD!;
 
+test.skip(process.env.CI === 'true', 'Skip in CI');
 test('로그인 후 메인 버튼 확인 테스트', async ({ page }, testInfo) => {
     // 페이지 객체 생성
     const mainPage = new MainPage(page);
