@@ -41,7 +41,7 @@ class SlackReporter implements Reporter {
     }
 
     const key = test.location.file + '>' + test.title;
-    const projectName = test.titlePath()[0] || 'unknown';
+    const projectName = test.titlePath().find(t => t !== '') || 'unknown';
 
     // 프로젝트별 통계 초기화
     if (!this.projectStats.has(projectName)) {
