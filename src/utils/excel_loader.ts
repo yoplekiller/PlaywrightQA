@@ -9,7 +9,9 @@ export interface SearchCase {
 
 //엑셀 파일에서 테스트 케이스 데이터를 로드하는 함수
 export async function loadExcelFile(filePath: string): Promise<SearchCase[]> {
-  const absolutePath = path.resolve(__dirname, filePath);
+  const absolutePath = path.isAbsolute(filePath)
+    ? filePath
+    : path.resolve(__dirname, filePath);
   if (!require('fs').existsSync(absolutePath)) {
     throw new Error(`Excel file not found at path: ${absolutePath}`);
   }
