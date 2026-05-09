@@ -43,7 +43,7 @@ test.describe('Visual Regression 테스트', () => {
         await mainPage.clickBeautyButton();
 
         // 뷰티컬리 페이지 전환 대기
-        await page.waitForURL(/\/main\/beauty/, { timeout: 10000 });
+        await mainPage.waitForBeautyPage();
         await page.waitForLoadState('domcontentloaded');
 
         await expect(page).toHaveScreenshot('beauty-page-full.png', {

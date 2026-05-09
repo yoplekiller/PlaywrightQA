@@ -18,10 +18,10 @@ test('상품 찜하기 버튼 후 찜하기에 포함되어 있는지 확인', a
     const kurly_pw = process.env.KURLY_TEST_USER_PASSWORD!;
 
     // 마켓컬리 메인 페이지 접속 및 로그인
-    await page.goto('/main');
+    await mainPage.openMainPage();
     await mainPage.clickLoginButton();
     await loginPage.login(kurly_id, kurly_pw);
-    await expect(page.getByRole('link', { name: /.+님$/i })).toBeVisible({ timeout: 10000 });
+    await mainPage.expectLoggedIn();
 
     // 상품 검색 후 찜하기 버튼 클릭
     await mainPage.searchGoods('과자');

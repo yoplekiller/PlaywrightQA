@@ -16,7 +16,7 @@ test('로그인 후 메인 버튼 확인 테스트', async ({ page }, testInfo) 
     const loginPage = new LoginPage(page);
 
     // 마켓컬리 메인 페이지 접속
-    await page.goto('/main');
+    await mainPage.openMainPage();
     await page.setViewportSize({ width: 1280, height: 720 });
 
     // 로그인 수행

@@ -10,12 +10,12 @@ test.describe('가격 정렬 기능테스트', () => {
             const searchPage = new SearchPage(page);
 
             // 메인 페이지 접속
-            await page.goto('https://www.kurly.com/main');
+            await mainPage.openMainPage();
             await page.setViewportSize({ width: 1280, height: 720 });
 
             // 검색어 "사과"로 검색
             await mainPage.searchGoods('사과');
-            await page.waitForURL(/search/, { timeout: 10000 });
+            await mainPage.waitForSearchResults();
 
             // 가격 낮은순 정렬 선택
             await searchPage.clickSortTab('낮은 가격순');
@@ -37,11 +37,11 @@ test.describe('가격 정렬 기능테스트', () => {
         const mainPage = new MainPage(page);
         const searchPage = new SearchPage(page);
 
-        await page.goto('/main');
+        await mainPage.openMainPage();
         await page.setViewportSize({ width: 1280, height: 720 });
 
         await mainPage.searchGoods('과자');
-        await page.waitForURL(/\/search\//, { timeout: 10000 });
+        await mainPage.waitForSearchResults();
 
           // 높은 가격순 클릭
         await searchPage.clickSortTab('높은 가격순');

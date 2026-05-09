@@ -2,9 +2,11 @@ import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import fs from 'fs';
 import path from 'path';
+import { MainPage } from '../../pages/MainPage';
 
 test('메인 페이지 접근성 검사', async ({ page }, testInfo) => {
-    await page.goto('/main');
+    const mainPage = new MainPage(page);
+    await mainPage.openMainPage();
 
     const results = await new AxeBuilder({ page })
         .withTags(['wcag2a', 'wcag2aa'])

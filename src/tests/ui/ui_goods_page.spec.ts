@@ -7,7 +7,7 @@ test('상품 상세페이지 진입 확인', async ({ page }) => {
     const searchPage = new SearchPage(page);
 
     // 마켓컬리 메인 페이지 접속
-    await page.goto('/main');
+    await mainPage.openMainPage();
     await page.setViewportSize({ width: 1280, height: 720 });
 
     // 상품 검색 및 상세페이지 진입
