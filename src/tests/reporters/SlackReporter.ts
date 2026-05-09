@@ -2,6 +2,21 @@ import type { Reporter, FullResult, FullConfig, Suite, TestCase, TestResult } fr
 import dotenv from 'dotenv';
 import axios from 'axios';
 
+import fs from 'fs';
+import path from 'path';
+
+interface AccessibilityViolationItem {
+  url: string;
+  selector: string;
+  ruleId: string;
+  impact?: string;
+}
+
+interface AccessibilityArtifact {
+  summary?: Record<string, number> & { total?: number };
+  violations?: AccessibilityViolationItem[];
+}
+
 dotenv.config();
 
 interface ProjectStat {
@@ -89,6 +104,102 @@ class SlackReporter implements Reporter {
     }
   }
 
+
+  private readAccessibilityArtifact(): AccessibilityArtifact | null {
+    const artifactPath = path.resolve(__dirname, '../../test-results/accessibility-report.json');
+    if (!fs.existsSync(artifactPath)) {
+      return null;
+    }
+
+    try {
+      const raw = fs.readFileSync(artifactPath, 'utf-8');
+      return JSON.parse(raw) as AccessibilityArtifact;
+    } catch (error) {
+      console.warn('⚠️ 접근성 아티팩트 파싱 실패:', error);
+      return null;
+    }
+  }
+
+  private buildAccessibilityBlocks(topN: number = 5): any[] {
+    const artifact = this.readAccessibilityArtifact();
+    if (!artifact) {
+      return [];
+    }
+
+    const summary = {
+      critical: artifact.summary?.critical ?? 0,
+      serious: artifact.summary?.serious ?? 0,
+      moderate: artifact.summary?.moderate ?? 0,
+      minor: artifact.summary?.minor ?? 0,
+      total: artifact.summary?.total ?? 0,
+    };
+
+    const violationItems = artifact.violations ?? [];
+    const repeatedMap = new Map<string, { count: number; impact: string; url: string; selector: string; ruleId: string }>();
+
+    for (const item of violationItems) {
+      const key = `${item.ruleId}@@${item.selector}@@${item.url}`;
+      const previous = repeatedMap.get(key);
+      if (previous) {
+        previous.count += 1;
+      } else {
+        repeatedMap.set(key, {
+          count: 1,
+          impact: item.impact ?? 'minor',
+          url: item.url,
+          selector: item.selector,
+          ruleId: item.ruleId,
+        });
+      }
+    }
+
+    const topViolations = Array.from(repeatedMap.values())
+      .sort((a, b) => b.count - a.count)
+      .slice(0, topN);
+
+    const blocks: any[] = [
+      { type: 'divider' },
+      {
+        type: 'section',
+        text: {
+          type: 'mrkdwn',
+          text: '*♿ 접근성 요약 (axe)*'
+        }
+      },
+      {
+        type: 'section',
+        fields: [
+          { type: 'mrkdwn', text: `*Critical:*\n${summary.critical}` },
+          { type: 'mrkdwn', text: `*Serious:*\n${summary.serious}` },
+          { type: 'mrkdwn', text: `*Moderate:*\n${summary.moderate}` },
+          { type: 'mrkdwn', text: `*Minor:*\n${summary.minor}` },
+        ]
+      },
+      {
+        type: 'context',
+        elements: [
+          { type: 'mrkdwn', text: `총 위반 Rule 수: *${summary.total}*` }
+        ]
+      }
+    ];
+
+    if (topViolations.length > 0) {
+      const topText = topViolations
+        .map((v, idx) => `${idx + 1}. [${v.impact}] *${v.ruleId}* x${v.count}\n• URL: ${v.url}\n• Selector: ${v.selector}`)
+        .join('\n');
+
+      blocks.push({
+        type: 'section',
+        text: {
+          type: 'mrkdwn',
+          text: `*🔁 반복 위반 Top ${topViolations.length}*\n${topText}`
+        }
+      });
+    }
+
+    return blocks;
+  }
+
   async onEnd(result: FullResult): Promise<void> {
     const passed = this.passedKeys.size;
     const failed = this.failedKeys.size;
@@ -150,6 +261,8 @@ class SlackReporter implements Reporter {
       },
       { type: 'divider' }
     ];
+
+    blocks.push(...this.buildAccessibilityBlocks());
 
     if (playwrightUrl) {
       blocks.push({
