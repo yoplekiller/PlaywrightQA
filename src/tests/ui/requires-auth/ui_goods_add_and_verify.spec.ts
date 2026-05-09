@@ -22,15 +22,15 @@ test.describe('상품 추가 및 장바구니 확인', () => {
         const searchPage = new SearchPage(page);
 
         // Step 1: 로그인
-        await page.goto('/member/login');
+        await mainPage.openLoginPage();
         await page.waitForLoadState('domcontentloaded');
         await page.setViewportSize({ width: 1280, height: 720 });
         
         await loginPage.login(kurly_id, kurly_pw);
-        await expect(page.getByRole('link', { name: /.+님$/i })).toBeVisible({ timeout: 10000 });
+        await mainPage.expectLoggedIn();
 
         // Step 2: 메인 페이지로 이동
-        await page.goto('/main');
+        await mainPage.openMainPage();
         await expect(page).toHaveURL(/\/main/);
 
         // Step 3: 상품 검색
@@ -48,7 +48,7 @@ test.describe('상품 추가 및 장바구니 확인', () => {
         await page.waitForLoadState('networkidle');
 
         // Step 6: 장바구니로 이동
-        await page.goto('/cart');
+        await mainPage.openCartPage();
         await expect(page).toHaveURL(/\/cart/);
 
         // Step 7: 장바구니에 상품이 있는지 확인

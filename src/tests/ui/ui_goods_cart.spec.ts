@@ -11,7 +11,7 @@ test('검색 → 상세 → 장바구니 담기 → 장바구니 확인', async 
     const goodsPage = new GoodsPage(page);
 
     // 마켓컬리 메인 페이지 접속
-    await page.goto('/main');
+    await mainPage.openMainPage();
     await page.setViewportSize({ width: 1280, height: 720 });
 
     // 검색어 "과자"로 검색
@@ -29,7 +29,7 @@ test('검색 → 상세 → 장바구니 담기 → 장바구니 확인', async 
     await goodsPage.isProductTitleVisible(productName);
 
     // 장바구니 페이지 이동 및 담긴 상품 확인   
-    await page.goto('/cart');
+    await mainPage.openCartPage();
     await expect(page).toHaveURL('/cart');
     
     const isVible = await cartPage.isVisibleGoodsInCart(productName);

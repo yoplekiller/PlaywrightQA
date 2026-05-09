@@ -9,7 +9,7 @@ test.describe('검색 결과 없음 테스트', () => {
         const searchPage = new SearchPage(page);
 
         // 메인 페이지 접속
-        await page.goto('/main');
+        await mainPage.openMainPage();
         await page.setViewportSize({ width: 1280, height: 720 });
 
         // 존재하지 않는 상품명으로 검색 (의미없는 문자열)
@@ -29,7 +29,7 @@ test.describe('검색 결과 없음 테스트', () => {
         const searchPage = new SearchPage(page);
 
         // 메인 페이지 접속
-        await page.goto('/main');
+        await mainPage.openMainPage();
         await page.setViewportSize({ width: 1280, height: 720 });
 
         // 매우 긴 검색어

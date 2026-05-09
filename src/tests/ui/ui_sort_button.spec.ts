@@ -15,9 +15,9 @@ test('카테고리별 정렬 동작 및 결과 검증', async ({ page }, testInf
     const searchPage = new SearchPage(page);
 
     // 마켓컬리 메인 페이지 접속 및 "과자" 검색
-    await page.goto('/main');
+    await mainPage.openMainPage();
     await mainPage.searchGoods('과자');
-    await page.waitForURL(/\/search\//); //대기 for navigation
+    await mainPage.waitForSearchResults();
 
     // 검색 결과 페이지로 이동 확인
     const url = page.url();

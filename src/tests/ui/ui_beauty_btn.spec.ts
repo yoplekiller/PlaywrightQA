@@ -6,7 +6,7 @@ test('뷰티컬리 버튼 동작 테스트', async ({ page }) => {
     const mainPage = new MainPage(page);
 
         // 마켓컬리 메인 페이지 접속
-        await page.goto('/main');
+        await mainPage.openMainPage();
 
         // 뷰티컬리 버튼 클릭
         await mainPage.clickBeautyButton();

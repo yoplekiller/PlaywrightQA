@@ -30,7 +30,7 @@ test('엑셀 기반 상품 검색 테스트', async ({ page }) => {
         if (!tc_id || !search_term) continue;
 
         // 검색어로 상품 검색
-        await page.goto('/main');
+        await mainPage.openMainPage();
         await page.setViewportSize({ width: 1280, height: 720 });
 
         // 로그 테스트 케이스 ID 및 검색어

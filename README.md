@@ -21,7 +21,7 @@ QA 엔지니어 포트폴리오 프로젝트입니다. Playwright + TypeScript �
 
 | 특징 | 설명 |
 |------|------|
-| **Page Object Model** | 7개 페이지 클래스로 구조화 |
+| **Page Object Model** | 8개 페이지 클래스로 구조화 |
 | **데이터 드리븐** | ExcelJS 기반 외부 데이터 관리 |
 | **Visual Regression** | 스냅샷 비교 기반 UI 변경 감지 |
 | **접근성 검사** | axe-core 기반 WCAG 2.0 검증 |
@@ -61,7 +61,8 @@ PlaywrightQA/
 │   │   ├── SearchPage.ts          # 검색 결과
 │   │   ├── GoodsPage.ts           # 상품 상세
 │   │   ├── CartPage.ts            # 장바구니
-│   │   └── PickPage.ts            # 찜
+│   │   ├── PickPage.ts            # 찜
+│   │   └── AddressPage.ts         # 주소 검색 팝업
 │   │
 │   ├── tests/
 │   │   ├── ui/                    # UI 테스트
@@ -154,7 +155,8 @@ BasePage (공통: goto, click, fill, hover, waitForSelector, takeScreenshot, set
   ├── SearchPage    검색 결과, 정렬, 가격 추출
   ├── GoodsPage     상품 상세, 장바구니, 찜하기
   ├── CartPage      장바구니 검증
-  └── PickPage      찜 페이지
+  ├── PickPage      찜 페이지
+  └── AddressPage   주소 검색 팝업(URL 검증/검색/선택/저장)
 ```
 
 ### 데이터 드리븐 테스트
