@@ -9,9 +9,9 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "types": ["node"]
-    
+    "types": ["node"],
+    "ignoreDeprecations": "6.0"
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "playwright.config.ts"],
   "exclude": ["dist"]    
 }

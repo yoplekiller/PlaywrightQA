@@ -16,11 +16,11 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.1",
-    "@playwright/test": "^1.52.0",
+    "@playwright/test": "^1.59.1",
     "@types/axios": "^0.9.36",
     "@types/dotenv": "^6.1.1",
     "@types/exceljs": "^0.5.3",
-    "@types/node": "^22.15.18",
+    "@types/node": "^22.19.18",
     "typescript": "^5.8.3"
   }
 }
