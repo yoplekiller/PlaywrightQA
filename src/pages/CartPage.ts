@@ -10,9 +10,6 @@ export class CartPage extends BasePage {
     private readonly addGoodsButton: Locator;
 
 
-
-
-
   constructor(page: Page) {
     super(page);
     this.loginButtoninCart = page.getByRole('button', { name: /로그인/i })
@@ -47,9 +44,8 @@ export class CartPage extends BasePage {
       const quantityText = this.page.getByText(`${expected}`, { exact: true });
       return await quantityText.isVisible();
   }
-
-
-
-
+  async expectGoodsQuantity(quantity: number) {
+    return this.page.getByText(String(quantity), { exact: true });
+  }
 
 }

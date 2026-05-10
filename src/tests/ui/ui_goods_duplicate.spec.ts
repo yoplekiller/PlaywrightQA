@@ -28,6 +28,6 @@ test('상품 중복 담기 기능 확인', async ({ page }) => {
     await page.goto('/cart');
     await expect(page).toHaveURL('/cart');
 
-    expect(await cartPage.hasGoodsQuantity(addCount)).toBe(true);
+    await cartPage.expectGoodsQuantity(addCount);
 });
     
