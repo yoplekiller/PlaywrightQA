@@ -16,8 +16,8 @@ if (!fs.existsSync(screenshotDir)) {
 
 // 테스트 시작 전에 엑셀 파일에서 데이터 로드
 test.beforeAll(async () => {
-    searchCases = JSON.parse(
-    fs.readFileSync(path.resolve(__dirname, '../data/test_case.json'), 'utf-8')
+  searchCases = await loadExcelFile(
+    path.resolve(__dirname, '../data/test_case.xlsx')
   );
 });
 
