@@ -14,7 +14,6 @@ type FailureCategory = 'product' | 'automation' | 'environment';
 
 interface FailureGuide {
   category: FailureCategory;
-  likelyCause: string;
   action: string;
 }
 
@@ -31,9 +30,15 @@ const FAILED_STATUSES: TestResult['status'][] = ['failed', 'timedOut', 'interrup
 const MAX_FAILURE_DETAILS = 3;
 
 const CATEGORY_LABELS: Record<FailureCategory, string> = {
-  product: '제품 결함 가능성',
-  automation: '자동화 코드 점검',
-  environment: '환경 이슈 가능성',
+  product: '🐞 제품 결함 가능성',
+  automation: '🛠️ 자동화 코드 점검',
+  environment: '🌐 환경 이슈 가능성',
+};
+
+const CATEGORY_SHORT_LABELS: Record<FailureCategory, string> = {
+  product: '🐞 제품',
+  automation: '🛠️ 자동화',
+  environment: '🌐 환경',
 };
 
 class SlackReporter implements Reporter {
@@ -124,8 +129,10 @@ class SlackReporter implements Reporter {
     console.log('Playwright test run finished:', { total, passed, failed, skipped });
 
     const status = result.status.toUpperCase();
+    const isPassed = status === 'PASSED';
+    const statusLabel = isPassed ? '성공' : '실패';
+    const statusIcon = isPassed ? '✅' : '❌';
     const now = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
-    const statusLabel = status === 'PASSED' ? '성공' : '실패';
     const playwrightUrl = process.env.PLAYWRIGHT_REPORT_URL || '';
 
     const blocks: any[] = [
@@ -133,25 +140,27 @@ class SlackReporter implements Reporter {
         type: 'header',
         text: {
           type: 'plain_text',
-          text: `Playwright 테스트 ${statusLabel}`,
+          text: `${statusIcon} Playwright 테스트 ${statusLabel}`,
           emoji: true,
         },
       },
       {
         type: 'section',
-        fields: [
-          { type: 'mrkdwn', text: `*상태:*\n${status}` },
-          { type: 'mrkdwn', text: `*소요 시간:*\n${Math.round(result.duration / 1000)}초` },
-          { type: 'mrkdwn', text: `*성공/실패/스킵:*\n${passed} / ${failed} / ${skipped}` },
-          { type: 'mrkdwn', text: `*총 테스트:*\n${total}` },
-        ],
+        text: {
+          type: 'mrkdwn',
+          text: [
+            `*📌 상태:* ${status}`,
+            `*⏱️ 소요 시간:* ${Math.round(result.duration / 1000)}초`,
+            `*📊 결과:* ✅ ${passed} / ❌ ${failed} / ⏭️ ${skipped}  *(총 ${total})*`,
+          ].join('\n'),
+        },
       },
       {
         type: 'context',
         elements: [
           {
             type: 'mrkdwn',
-            text: `시작 ${this.startTime} · 종료 ${now}`,
+            text: `🕒 시작 ${this.startTime} · 종료 ${now}`,
           },
         ],
       },
@@ -159,7 +168,7 @@ class SlackReporter implements Reporter {
         type: 'section',
         text: {
           type: 'mrkdwn',
-          text: `*프로젝트별 결과*\n${this.createProjectLines() || '결과 없음'}`,
+          text: `*🧪 프로젝트별 결과*\n${this.createProjectLines() || '결과 없음'}`,
         },
       },
     ];
@@ -175,7 +184,7 @@ class SlackReporter implements Reporter {
         elements: [
           {
             type: 'button',
-            text: { type: 'plain_text', text: 'Playwright Report', emoji: true },
+            text: { type: 'plain_text', text: '📊 Playwright Report', emoji: true },
             url: playwrightUrl,
             style: 'primary',
           },
@@ -185,7 +194,7 @@ class SlackReporter implements Reporter {
 
     const message = {
       blocks,
-      text: `Playwright 테스트 ${statusLabel} - ${status} (성공: ${passed}, 실패: ${failed}, 총 테스트: ${total})`,
+      text: `${statusIcon} Playwright 테스트 ${statusLabel} - ${status} (성공: ${passed}, 실패: ${failed}, 총 테스트: ${total})`,
     };
 
     try {
@@ -211,47 +220,49 @@ class SlackReporter implements Reporter {
   private createProjectLines(): string {
     return Array.from(this.projectStats.entries())
       .map(([name, stat]) => {
-        const skipText = stat.skipped.size > 0 ? ` / 스킵 ${stat.skipped.size}` : '';
-        return `*${name}*: 성공 ${stat.passed.size} / 실패 ${stat.failed.size}${skipText}`;
+        const statusIcon = stat.failed.size > 0 ? '❌' : '✅';
+        const skipText = stat.skipped.size > 0 ? ` / ⏭️ ${stat.skipped.size}` : '';
+        return `${statusIcon} *${name}*: ✅ ${stat.passed.size} / ❌ ${stat.failed.size}${skipText}`;
       })
       .join('\n');
   }
 
   private createFailureSummaryBlocks(): any[] {
     const counts = this.getFailureCategoryCounts();
-    const categorySummary = (Object.keys(CATEGORY_LABELS) as FailureCategory[])
+    const categorySummary = (Object.keys(CATEGORY_SHORT_LABELS) as FailureCategory[])
       .filter(category => counts[category] > 0)
-      .map(category => `${CATEGORY_LABELS[category]} ${counts[category]}건`)
+      .map(category => `${CATEGORY_SHORT_LABELS[category]} ${counts[category]}건`)
       .join(' · ');
 
     const topFailures = this.failedDetails
       .slice(0, MAX_FAILURE_DETAILS)
       .map((detail, index) => {
         const fileName = this.getFileName(detail.file);
+
         return [
-          `*${index + 1}. ${this.cleanTitle(detail.title)}*`,
+          `*${index + 1}. ${this.getCategoryIcon(detail.guide.category)} ${this.cleanTitle(detail.title)}*`,
           `${CATEGORY_LABELS[detail.guide.category]} · ${fileName} · ${this.cleanError(detail.error || detail.status)}`,
-          `조치: ${detail.guide.action}`,
+          `💡 *조치:* ${detail.guide.action}`,
         ].join('\n');
       })
       .join('\n\n');
 
     const hiddenCount = this.failedDetails.length - MAX_FAILURE_DETAILS;
-    const hiddenText = hiddenCount > 0 ? `\n\n추가 실패 ${hiddenCount}건은 Playwright Report에서 확인하세요.` : '';
+    const hiddenText = hiddenCount > 0 ? `\n\n📎 추가 실패 ${hiddenCount}건은 Playwright Report에서 확인하세요.` : '';
 
     return [
       {
         type: 'section',
         text: {
           type: 'mrkdwn',
-          text: `*실패 분석 요약*\n총 ${this.failedDetails.length}건 · ${categorySummary}`,
+          text: `*🔎 실패 분석 요약*\n❌ 총 ${this.failedDetails.length}건 · ${categorySummary}`,
         },
       },
       {
         type: 'section',
         text: {
           type: 'mrkdwn',
-          text: this.truncateSlackText(`*우선 확인할 실패 ${Math.min(this.failedDetails.length, MAX_FAILURE_DETAILS)}건*\n${topFailures}${hiddenText}`),
+          text: this.truncateSlackText(`*🚦 우선 확인할 실패 ${Math.min(this.failedDetails.length, MAX_FAILURE_DETAILS)}건*\n${topFailures}${hiddenText}`),
         },
       },
     ];
@@ -279,7 +290,6 @@ class SlackReporter implements Reporter {
     if (result.status === 'timedOut' || this.includesAny(source, ['timeouterror', 'timeout', 'waiting for'])) {
       return {
         category: 'automation',
-        likelyCause: '화면 로딩, selector 변경, 또는 대기 조건 부족',
         action: 'locator와 wait 조건을 실제 UI 상태 기준으로 점검',
       };
     }
@@ -287,7 +297,6 @@ class SlackReporter implements Reporter {
     if (this.includesAny(source, ['locator', 'strict mode violation', 'resolved to 0 elements', 'element is not visible'])) {
       return {
         category: 'automation',
-        likelyCause: 'DOM 구조 또는 selector 변경',
         action: 'Page Object locator를 최신 DOM 기준으로 수정',
       };
     }
@@ -295,7 +304,6 @@ class SlackReporter implements Reporter {
     if (this.includesAny(source, ['tohaveurl'])) {
       return {
         category: 'automation',
-        likelyCause: '검색/이동 후 URL 변경 대기 조건이 실제 동작과 맞지 않음',
         action: 'URL regex와 검색 완료 기준을 현재 서비스 동작에 맞게 조정',
       };
     }
@@ -303,7 +311,6 @@ class SlackReporter implements Reporter {
     if (this.includesAny(source, ['tobelessthanorequal', 'tobegreaterthanorequal'])) {
       return {
         category: 'product',
-        likelyCause: '정렬 결과가 기대 순서와 다르거나 가격 파싱 로직이 실제 표시값과 다름',
         action: '실제 정렬 동작 확인 후, 결함이면 등록하고 표시값 이슈면 가격 파싱 로직 점검',
       };
     }
@@ -311,7 +318,6 @@ class SlackReporter implements Reporter {
     if (this.includesAny(source, ['tohavetext', 'tohavevalue', 'expected', 'received'])) {
       return {
         category: 'product',
-        likelyCause: '실제 화면 값이 기대 결과와 다름',
         action: '요구사항 기준으로 실제 결과 확인 후 기대값 또는 테스트 데이터 갱신 여부 판단',
       };
     }
@@ -319,7 +325,6 @@ class SlackReporter implements Reporter {
     if (this.includesAny(source, ['snapshot', 'screenshot', 'visual', 'pixel'])) {
       return {
         category: 'product',
-        likelyCause: 'UI가 기준 이미지와 달라짐',
         action: '의도된 디자인 변경인지 확인 후 snapshot 갱신 또는 UI 회귀 결함 등록',
       };
     }
@@ -327,7 +332,6 @@ class SlackReporter implements Reporter {
     if (this.includesAny(source, ['401', '403', 'storagestate', 'login', 'auth', 'unauthorized', 'forbidden'])) {
       return {
         category: 'environment',
-        likelyCause: '로그인 세션 만료 또는 인증/권한 문제',
         action: 'storageState/auth 파일과 CI 환경 변수, 테스트 계정 권한 확인',
       };
     }
@@ -335,14 +339,12 @@ class SlackReporter implements Reporter {
     if (this.includesAny(source, ['500', '502', '503', '504', 'network', 'net::', 'econnreset', 'enotfound'])) {
       return {
         category: 'environment',
-        likelyCause: '서버, 네트워크, 외부 API 상태 불안정',
         action: '재실행으로 재현성 확인 후 서버 로그와 네트워크 상태 점검',
       };
     }
 
     return {
       category: 'automation',
-      likelyCause: '자동 분류 규칙에 걸리지 않은 실패',
       action: 'trace, screenshot, video로 실패 직전 화면 확인',
     };
   }
@@ -352,7 +354,7 @@ class SlackReporter implements Reporter {
   }
 
   private cleanTitle(title: string): string {
-    return title.replace(/:[a-z0-9_+-]+:/gi, '').replace(/\s+/g, ' ').trim();
+    return title.replace(/:[^:\s]+:/g, '').replace(/\s+/g, ' ').trim();
   }
 
   private cleanError(error: string): string {
@@ -364,6 +366,18 @@ class SlackReporter implements Reporter {
 
   private getFileName(filePath: string): string {
     return filePath.split(/[\\/]/).pop() || filePath;
+  }
+
+  private getCategoryIcon(category: FailureCategory): string {
+    if (category === 'product') {
+      return '🐞';
+    }
+
+    if (category === 'environment') {
+      return '🌐';
+    }
+
+    return '🛠️';
   }
 
   private stripAnsi(text: string): string {
