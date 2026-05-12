@@ -241,8 +241,8 @@ class SlackReporter implements Reporter {
 
         return [
           `*${index + 1}. ${this.getCategoryIcon(detail.guide.category)} ${this.cleanTitle(detail.title)}*`,
-          `    ${CATEGORY_LABELS[detail.guide.category]} · ${fileName} · ${this.cleanError(detail.error || detail.status)}`,
-          `    💡 *조치:* ${detail.guide.action}`,
+          `        ${CATEGORY_LABELS[detail.guide.category]} · ${fileName} · ${this.cleanError(detail.error || detail.status)}`,
+          `        💡 *조치:* ${detail.guide.action}`,
         ].join('\n');
       })
       .join('\n\n');
