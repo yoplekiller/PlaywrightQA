@@ -35,7 +35,7 @@ test('엑셀 기반 상품 검색 테스트', async ({ page }) => {
 
         // 로그 테스트 케이스 ID 및 검색어
         await mainPage.searchGoods(search_term);
-        await page.waitForLoadState('networkidle');
+        await expect(page).toHaveURL(/\/search\//, { timeout: 10000 });
 
         // 검색 결과 확인
         const url = page.url();
