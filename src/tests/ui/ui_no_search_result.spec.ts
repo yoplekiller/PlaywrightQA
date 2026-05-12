@@ -17,7 +17,7 @@ test.describe('검색 결과 없음 테스트', () => {
         await mainPage.searchGoods(nonsenseKeyword);
 
         // 검색 결과 페이지로 이동 확인
-        await expect(page).toHaveURL(/\/search\//, { timeout: 10000 });
+        await expect(page).toHaveURL(/\/search(?:\?|$)/, { timeout: 10000 });
 
         // 검색 결과가 없음을 확인 (상품 개수 0개)
         const resultCount = await searchPage.getSearchResultCount();
@@ -37,7 +37,7 @@ test.describe('검색 결과 없음 테스트', () => {
         await mainPage.searchGoods(longKeyword);
 
         // 검색 결과 페이지로 이동 확인 (에러 없이 정상 처리)
-        await expect(page).toHaveURL(/\/search\//, { timeout: 10000 });
+        await expect(page).toHaveURL(/\/search(?:\?|$)/, { timeout: 10000 });
 
         // 결과가 없어도 페이지가 정상 동작하는지 확인
         const resultCount = await searchPage.getSearchResultCount();

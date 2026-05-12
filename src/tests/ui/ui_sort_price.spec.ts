@@ -41,7 +41,7 @@ test.describe('가격 정렬 기능테스트', () => {
         await page.setViewportSize({ width: 1280, height: 720 });
 
         await mainPage.searchGoods('과자');
-        await page.waitForURL(/\/search\//, { timeout: 10000 });
+        await page.waitForURL(/\/search(?:\?|$)/, { timeout: 10000 });
 
           // 높은 가격순 클릭
         await searchPage.clickSortTab('높은 가격순');

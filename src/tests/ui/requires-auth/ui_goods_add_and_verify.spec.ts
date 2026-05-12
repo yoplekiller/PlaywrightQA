@@ -36,7 +36,7 @@ test.describe('상품 추가 및 장바구니 확인', () => {
         // Step 3: 상품 검색
         const searchKeyword = '과자';
         await mainPage.searchGoods(searchKeyword);
-        await expect(page).toHaveURL(/\/search\//, { timeout: 10000 });
+        await expect(page).toHaveURL(/\/search(?:\?|$)/, { timeout: 10000 });
 
         // Step 4: 첫 번째 상품 클릭
         const GoodsNumber = 1;
