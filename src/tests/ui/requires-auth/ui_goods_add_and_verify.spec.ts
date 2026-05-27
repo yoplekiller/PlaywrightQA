@@ -1,10 +1,5 @@
-import { test, expect } from '@playwright/test';
-// Update the import path below to the correct relative path where CartPage.ts exists
-import { CartPage } from '../../../pages/CartPage'; 
-import { LoginPage } from '../../../pages/LoginPage';
-import { MainPage } from '../../../pages/MainPage';
+import { test, expect } from '../../../fixtures/pages';
 import { getNowString } from '../../../utils/dataFormat';
-import { SearchPage } from '../../../pages/SearchPage';
 import fs from 'fs';
 import path from 'path';
 
@@ -12,26 +7,11 @@ import path from 'path';
 test.skip(process.env.CI === 'true', 'Skip in CI');
 test.describe('상품 추가 및 장바구니 확인', () => {
 
-    test('상품 검색 → 상품 추가 → 장바구니에서 확인', async ({ page }, testInfo) => {
-        const kurly_id = process.env.KURLY_TEST_USER_EMAIL!;
-        const kurly_pw = process.env.KURLY_TEST_USER_PASSWORD!;
-
-        const cartPage = new CartPage(page);
-        const loginPage = new LoginPage(page);
-        const mainPage = new MainPage(page);
-        const searchPage = new SearchPage(page);
-
-        // Step 1: 로그인
-        await page.goto('/member/login');
-        await page.waitForLoadState('domcontentloaded');
-        await page.setViewportSize({ width: 1280, height: 720 });
-        
-        await loginPage.login(kurly_id, kurly_pw);
-        await expect(page.getByRole('link', { name: /.+님$/i })).toBeVisible({ timeout: 10000 });
-
-        // Step 2: 메인 페이지로 이동
+    test('상품 검색 → 상품 추가 → 장바구니에서 확인', async ({ page, cartPage, mainPage, searchPage }, testInfo) => {
+        // Step 1: 저장된 로그인 상태 확인
         await page.goto('/main');
-        await expect(page).toHaveURL(/\/main/);
+        await page.setViewportSize({ width: 1280, height: 720 });
+        await expect(page.getByRole('link', { name: /.+님$/i })).toBeVisible({ timeout: 10000 });
 
         // Step 3: 상품 검색
         const searchKeyword = '과자';
@@ -69,7 +49,6 @@ test.describe('상품 추가 및 장바구니 확인', () => {
         });
 
         // 장바구니 비어있지 않음 확인
-        const isEmpty = await cartPage.isCartEmpty().catch(() => false);
-        expect(isEmpty).toBeFalsy();
+        await cartPage.expectCartNotEmpty();
     });
 });

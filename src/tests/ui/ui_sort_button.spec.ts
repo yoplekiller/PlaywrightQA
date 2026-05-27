@@ -1,27 +1,20 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from '../../fixtures/pages';
 import fs from 'fs';
 import path from 'path';
-import { MainPage } from '../../pages/MainPage';
-import { SearchPage } from '../../pages/SearchPage';
-import { time } from 'console';
 
 
 if (!fs.existsSync('screenshots')) {
     fs.mkdirSync('screenshots');
 }
 
-test('카테고리별 정렬 동작 및 결과 검증', async ({ page }, testInfo) => {
-    const mainPage = new MainPage(page);
-    const searchPage = new SearchPage(page);
-
+test('카테고리별 정렬 동작 및 결과 검증', async ({ page, mainPage, searchPage }, testInfo) => {
     // 마켓컬리 메인 페이지 접속 및 "과자" 검색
     await page.goto('/main');
     await mainPage.searchGoods('과자');
-    await page.waitForURL(/\/search(?:\?|$)/); //대기 for navigation
+    await expect(page).toHaveURL(/\/search(?:\?|$)/, { timeout: 10000 });
 
     // 검색 결과 페이지로 이동 확인
-    const url = page.url();
-    expect(url).toContain(encodeURIComponent('과자'));
+    await searchPage.expectSearchUrlContainsTerm('과자');
 
     // 정렬 탭별 동작 및 결과 검증
     const categories = [
@@ -38,7 +31,7 @@ test('카테고리별 정렬 동작 및 결과 검증', async ({ page }, testInf
         await searchPage.clickSortTab(name);
 
         // 첫 번째 상품 확인
-        expect(await searchPage.isFirstProductVisible()).toBe(true);
+        await expect(searchPage.getProductItems().first()).toBeVisible();
         
 
         // 스크린샷 저장

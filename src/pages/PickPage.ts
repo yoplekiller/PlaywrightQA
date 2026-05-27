@@ -1,4 +1,4 @@
-import { Page, Locator, FrameLocator } from '@playwright/test';
+import { expect, Page, Locator } from '@playwright/test';
 import { BasePage } from './BasePage';
 
 
@@ -13,8 +13,7 @@ export class PickPage extends BasePage {
         this.needLoginAlt = page.getByText('로그인하셔야 본 서비스를 이용하실 수 있습니다.');
     }
 
-
-    async isNeedLoginAltVisible(): Promise<boolean> {
-        return await this.needLoginAlt.isVisible();
+    async expectNeedLoginAlertVisible() {
+        await expect(this.needLoginAlt).toBeVisible();
     }
 }

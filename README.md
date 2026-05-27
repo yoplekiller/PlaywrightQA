@@ -22,7 +22,8 @@ QA 엔지니어 포트폴리오 프로젝트입니다. Playwright + TypeScript �
 | 특징 | 설명 |
 |------|------|
 | **Page Object Model** | 7개 페이지 클래스로 구조화 |
-| **데이터 드리븐** | ExcelJS 기반 외부 데이터 관리 |
+| **Custom Fixtures** | Page Object를 fixture로 주입하여 테스트 코드 중복 감소 |
+| **데이터 드리븐** | TS fixture 기반 smoke 데이터 + ExcelJS 외부 데이터 예제 |
 | **Visual Regression** | 스냅샷 비교 기반 UI 변경 감지 |
 | **접근성 검사** | axe-core 기반 WCAG 2.0 검증 |
 | **CI/CD** | GitHub Actions 8시간 주기 자동 실행 |
@@ -64,19 +65,24 @@ PlaywrightQA/
 │   │   └── PickPage.ts            # 찜
 │   │
 │   ├── tests/
+│   │   ├── setup/
+│   │   │   └── auth.setup.ts     # 인증 상태 생성
 │   │   ├── ui/                    # UI 테스트
-│   │   │   ├── requires-auth/     # 인증 필요 (4개)
-│   │   │   └── *.spec.ts          # 일반 테스트 (13개)
+│   │   │   ├── requires-auth/     # 인증 필요 테스트
+│   │   │   └── *.spec.ts          # 일반 UI 테스트
 │   │   ├── data/
-│   │   │   └── test_case.xlsx     # 테스트 데이터
+│   │   │   ├── searchCases.ts     # smoke 검색 데이터
+│   │   │   └── test_case.xlsx     # Excel 데이터 예제
 │   │   └── reporters/
 │   │       └── SlackReporter.ts   # Slack 리포터
+│   │
+│   ├── fixtures/
+│   │   └── pages.ts               # Page Object fixtures
 │   │
 │   └── utils/
 │       ├── excel_loader.ts        # Excel 로더
 │       └── dataFormat.ts          # 포맷 유틸
 │
-├── global.setup.ts                # 글로벌 셋업 (로그인 상태 저장, 데이터 변환)
 ├── playwright.config.ts
 └── package.json
 ```
@@ -95,8 +101,13 @@ npm install
 npx playwright install --with-deps
 
 # 테스트 실행
-npm test              # 전체 실행
-npm run test:ui       # UI 테스트만
+npm test              # Chromium 일반 UI 테스트
+npm run test:ui       # Chromium 일반 UI 테스트
+npm run test:ui:all   # Chromium + Edge 일반 UI 테스트
+npm run test:smoke    # 핵심 검색 smoke 테스트
+npm run test:visual   # Chromium visual regression 테스트
+npm run test:auth     # 인증 필요 테스트
+npm run typecheck     # TypeScript 타입체크
 npm run report        # 리포트 열기
 ```
 
@@ -104,19 +115,19 @@ npm run report        # 리포트 열기
 
 ```env
 SLACK_WEBHOOK_TS=your_slack_webhook_url          # 선택
-KURLY_EMAIL=your_email                           # 인증 테스트용
-KURLY_PASSWORD=your_password                     # 인증 테스트용
+KURLY_TEST_USER_EMAIL=your_email                 # 인증 테스트용
+KURLY_TEST_USER_PASSWORD=your_password           # 인증 테스트용
 ```
 
 ---
 
 ## 테스트 케이스
 
-### UI 테스트 - 일반 (13개)
+### UI 테스트 - 일반
 
 | 테스트 | 검증 내용 |
 |--------|-----------|
-| `ui_search` | Excel 데이터 기반 상품 검색 |
+| `ui_search` | TS fixture 기반 상품 검색 smoke |
 | `ui_blank_search` | 공백 입력 시 팝업 노출 |
 | `ui_no_search_result` | 존재하지 않는 상품 검색 시 결과 없음 표시 |
 | `ui_goods_page` | 상품 상세페이지 진입 |
@@ -130,16 +141,16 @@ KURLY_PASSWORD=your_password                     # 인증 테스트용
 | `ui_accessibility` | axe-core 기반 WCAG 접근성 검사 |
 | `ui_responsive` | 반응형 뷰포트별 레이아웃 확인 |
 
-### UI 테스트 - 인증 필요 (4개)
+### UI 테스트 - 인증 필요
 
-CI에서는 `testIgnore`로 제외되며, `chromium-auth` 프로젝트에서 `storageState`를 활용하여 실행합니다.
+`setup` 프로젝트에서 로그인 상태를 `playwright/.auth/user.json`으로 저장하고, `chromium-auth` 프로젝트에서 `storageState`로 재사용합니다.
 
 | 테스트 | 검증 내용 |
 |--------|-----------|
 | `ui_login` | 로그인 후 프로필 링크 노출 |
 | `ui_favorite_toggle` | 상품 찜하기 토글 |
 | `ui_goods_add_and_verify` | 로그인 → 장바구니 담기 → 확인 |
-| `ui_pick_page` | Pick 페이지 진입 및 알럿 확인 |
+| `ui_pick_page` | 로그인 상태에서 Pick 페이지 진입 |
 
 ---
 
@@ -148,7 +159,7 @@ CI에서는 `testIgnore`로 제외되며, `chromium-auth` 프로젝트에서 `st
 ### Page Object Model
 
 ```
-BasePage (공통: goto, click, fill, hover, waitForSelector, takeScreenshot, setViewportSize)
+BasePage (공통 Page 참조만 보관)
   ├── MainPage      검색, 네비게이션, 주소 검색 팝업
   ├── LoginPage     로그인 처리
   ├── SearchPage    검색 결과, 정렬, 가격 추출
@@ -160,11 +171,14 @@ BasePage (공통: goto, click, fill, hover, waitForSelector, takeScreenshot, set
 ### 데이터 드리븐 테스트
 
 ```typescript
-const searchCases = await loadExcelFile('src/tests/data/test_case.xlsx');
+import { searchCases } from '../data/searchCases';
+
 for (const { tc_id, search_term } of searchCases) {
     await mainPage.searchGoods(search_term);
 }
 ```
+
+ExcelJS 기반 `test_case.xlsx`와 `excel_loader.ts`는 외부 QA 데이터 연동 예제로 유지합니다.
 
 ### Visual Regression
 
@@ -227,7 +241,7 @@ Checkout → 의존성 설치 → 브라우저 설치 → 테스트 실행
 | Trace | retain-on-failure |
 | Screenshot | only-on-failure |
 | Video | retain-on-failure |
-| Global Setup | 로그인 상태 저장 + Excel → JSON 변환 |
+| Auth Setup | setup project + `playwright/.auth/user.json` |
 
 ---
 

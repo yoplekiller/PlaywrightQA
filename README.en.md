@@ -22,7 +22,8 @@ QA Engineer portfolio — E2E test automation for Kurly, a live e-commerce site,
 | Feature | Description |
 |---------|-------------|
 | **Page Object Model** | 7 page classes for structured automation |
-| **Data-Driven Testing** | External test data management with ExcelJS |
+| **Custom Fixtures** | Page Objects injected through Playwright fixtures |
+| **Data-Driven Testing** | TS smoke data fixtures + ExcelJS external data example |
 | **Visual Regression** | Snapshot-based UI change detection |
 | **Accessibility Testing** | WCAG 2.0 validation with axe-core |
 | **CI/CD** | GitHub Actions with 8-hour scheduled runs |
@@ -64,19 +65,24 @@ PlaywrightQA/
 │   │   └── PickPage.ts            # Favorites
 │   │
 │   ├── tests/
+│   │   ├── setup/
+│   │   │   └── auth.setup.ts     # Auth state setup
 │   │   ├── ui/                    # UI Tests
-│   │   │   ├── requires-auth/     # Auth required (4)
-│   │   │   └── *.spec.ts          # General tests (13)
+│   │   │   ├── requires-auth/     # Auth-required tests
+│   │   │   └── *.spec.ts          # General UI tests
 │   │   ├── data/
-│   │   │   └── test_case.xlsx     # Test data
+│   │   │   ├── searchCases.ts     # Smoke search data
+│   │   │   └── test_case.xlsx     # Excel data example
 │   │   └── reporters/
 │   │       └── SlackReporter.ts   # Slack reporter
+│   │
+│   ├── fixtures/
+│   │   └── pages.ts               # Page Object fixtures
 │   │
 │   └── utils/
 │       ├── excel_loader.ts        # Excel loader
 │       └── dataFormat.ts          # Format utilities
 │
-├── global.setup.ts                # Global setup (auth state, data conversion)
 ├── playwright.config.ts
 └── package.json
 ```
@@ -95,8 +101,13 @@ npm install
 npx playwright install --with-deps
 
 # Run tests
-npm test              # Run all
-npm run test:ui       # UI tests only
+npm test              # Chromium general UI tests
+npm run test:ui       # Chromium general UI tests
+npm run test:ui:all   # Chromium + Edge general UI tests
+npm run test:smoke    # Core search smoke test
+npm run test:visual   # Chromium visual regression test
+npm run test:auth     # Auth-required tests
+npm run typecheck     # TypeScript typecheck
 npm run report        # Open report
 ```
 
@@ -104,19 +115,19 @@ npm run report        # Open report
 
 ```env
 SLACK_WEBHOOK_TS=your_slack_webhook_url          # Optional
-KURLY_EMAIL=your_email                           # For auth tests
-KURLY_PASSWORD=your_password                     # For auth tests
+KURLY_TEST_USER_EMAIL=your_email                 # For auth tests
+KURLY_TEST_USER_PASSWORD=your_password           # For auth tests
 ```
 
 ---
 
 ## Test Cases
 
-### UI Tests - General (13 tests)
+### UI Tests - General
 
 | Test | Validation |
 |------|------------|
-| `ui_search` | Excel data-driven product search |
+| `ui_search` | TS fixture based product search smoke |
 | `ui_blank_search` | Popup display on blank input |
 | `ui_no_search_result` | No results message for non-existent product |
 | `ui_goods_page` | Product detail page navigation |
@@ -130,16 +141,16 @@ KURLY_PASSWORD=your_password                     # For auth tests
 | `ui_accessibility` | axe-core based WCAG accessibility audit |
 | `ui_responsive` | Responsive layout verification across viewports |
 
-### UI Tests - Auth Required (4 tests)
+### UI Tests - Auth Required
 
-Excluded in CI with `testIgnore`. Runs via `chromium-auth` project using `storageState`.
+The `setup` project saves login state to `playwright/.auth/user.json`, and the `chromium-auth` project reuses it through `storageState`.
 
 | Test | Validation |
 |------|------------|
 | `ui_login` | Profile link display after login |
 | `ui_favorite_toggle` | Product favorite toggle |
 | `ui_goods_add_and_verify` | Login → Add to cart → Verify |
-| `ui_pick_page` | Pick page access and alert check |
+| `ui_pick_page` | Pick page access with stored auth state |
 
 ---
 
@@ -148,7 +159,7 @@ Excluded in CI with `testIgnore`. Runs via `chromium-auth` project using `storag
 ### Page Object Model
 
 ```
-BasePage (common: goto, click, fill, hover, waitForSelector, takeScreenshot, setViewportSize)
+BasePage (shared Page reference only)
   ├── MainPage      Search, navigation, address search popup
   ├── LoginPage     Login handling
   ├── SearchPage    Search results, sorting, price extraction
@@ -160,11 +171,14 @@ BasePage (common: goto, click, fill, hover, waitForSelector, takeScreenshot, set
 ### Data-Driven Testing
 
 ```typescript
-const searchCases = await loadExcelFile('src/tests/data/test_case.xlsx');
+import { searchCases } from '../data/searchCases';
+
 for (const { tc_id, search_term } of searchCases) {
     await mainPage.searchGoods(search_term);
 }
 ```
+
+The ExcelJS-based `test_case.xlsx` and `excel_loader.ts` remain as an external QA data integration example.
 
 ### Visual Regression
 
@@ -220,7 +234,7 @@ Checkout → Install deps → Install browsers → Run tests
 | Trace | retain-on-failure |
 | Screenshot | only-on-failure |
 | Video | retain-on-failure |
-| Global Setup | Auth state saving + Excel → JSON conversion |
+| Auth Setup | setup project + `playwright/.auth/user.json` |
 
 ---
 
