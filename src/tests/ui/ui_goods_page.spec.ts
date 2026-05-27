@@ -1,11 +1,6 @@
-import { test, expect } from '@playwright/test';
-import { MainPage } from '../../pages/MainPage';
-import { SearchPage } from '../../pages/SearchPage';
+import { test, expect } from '../../fixtures/pages';
 
-test('상품 상세페이지 진입 확인', async ({ page }) => {
-    const mainPage = new MainPage(page);
-    const searchPage = new SearchPage(page);
-
+test('상품 상세페이지 진입 확인', async ({ page, mainPage, searchPage }) => {
     // 마켓컬리 메인 페이지 접속
     await page.goto('/main');
     await page.setViewportSize({ width: 1280, height: 720 });

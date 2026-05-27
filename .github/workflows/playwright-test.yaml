@@ -19,7 +19,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
 
 
@@ -30,25 +30,22 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
 
+      - name: Typecheck
+        run: npm run typecheck
+
       - name: Clean previous results
         run: |
           rm -rf playwright-report
-          mkdir -p screenshots videos logs test-results
+          mkdir -p screenshots logs test-results
       
-      - name: Set Test credentials
-        run: |
-          echo "KURLY_TEST_USER_EMAIL=${{ secrets.KURLY_TEST_USERNAME }}" >> $GITHUB_ENV
-          echo "KURLY_TEST_USER_PASSWORD=${{ secrets.KURLY_TEST_PASSWORD }}" >> $GITHUB_ENV
-
       - name: Run UI Tests
         run: |
-          npx playwright test src/tests/ui/ --config=playwright.config.ts --workers=2
+          npm run test:ui -- --workers=2
           rm -rf test-results/**/*.zip
           du -sh
         env:
           SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
           PLAYWRIGHT_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html
-        continue-on-error: true
 
       - name: Upload Playwright HTML report
         if: always()
@@ -64,15 +61,6 @@ jobs:
         with:
           name: ui-playwright-screenshots
           path: screenshots
-          if-no-files-found: ignore
-          retention-days: 7
-
-      - name: Upload videos
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: ui-playwright-video
-          path: videos
           if-no-files-found: ignore
           retention-days: 7
 
@@ -110,5 +98,3 @@ jobs:
           echo "## 🎭 UI Test Results" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "📈 [View Playwright Report](https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html)" >> $GITHUB_STEP_SUMMARY
-
-  

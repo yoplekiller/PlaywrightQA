@@ -8,6 +8,7 @@ playwright-report/
 test-results/
 screenshots/
 src/screenshots/
+responsive-*.png
 
 # 리포트 / 생성물
 allure-report/
@@ -15,6 +16,7 @@ allure-results/
 accessibility-report-*.json
 searchCases.json
 storageState.json
+playwright/.auth/
 
 # 빌드 산출물
 *.js

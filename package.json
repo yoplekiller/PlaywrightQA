@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "Playwright UI and API testing framework",
   "scripts": {
-    "test": "playwright test",
-    "test:ui": "playwright test src/tests/ui/",
-    "test:api": "playwright test src/tests/api/",
+    "test": "playwright test src/tests/ui/ --project=chromium",
+    "test:ui": "playwright test src/tests/ui/ --project=chromium",
+    "test:ui:all": "playwright test src/tests/ui/ --project=chromium --project=Edge",
+    "test:auth": "playwright test --project=chromium-auth",
+    "test:smoke": "playwright test src/tests/ui/ui_search.spec.ts --project=chromium",
+    "test:visual": "playwright test src/tests/ui/ui_visual_regression.spec.ts --project=chromium",
+    "typecheck": "tsc --noEmit",
     "report": "npx playwright show-report"
   },
   "dependencies": {

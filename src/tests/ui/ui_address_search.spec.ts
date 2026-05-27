@@ -1,13 +1,10 @@
-import { test, expect } from '@playwright/test';
-import { MainPage } from '../../pages/MainPage';
+import { test, expect } from '../../fixtures/pages';
 
 
-test('주소 검색 E2E 플로우 테스트 - 간소화', async ({ page }) => {
-    const mainPage = new MainPage(page);
-
+test('주소 검색 E2E 플로우 테스트 - 간소화', async ({ page, mainPage }) => {
     await test.step('마켓컬리 메인 페이지 접속', async () => {
         await page.goto('/main');
-        await mainPage.setViewportSize(1280, 720);
+        await page.setViewportSize({ width: 1280, height: 720 });
     });
 
     // 주소 검색 팝업 열기

@@ -25,15 +25,15 @@ export class LoginPage extends BasePage {
   }
 
   async fillUsername(username: string) {
-    await this.fill(this.usernameInput, username);
+    await this.usernameInput.fill(username);
   }
 
   async fillPassword(password: string) {
-    await this.fill(this.passwordInput, password);
+    await this.passwordInput.fill(password);
   }
 
   async clickSubmit() {
-    await this.click(this.submitButton);
+    await this.submitButton.click();
   }
 
   async login(username: string, password: string) {
@@ -43,6 +43,6 @@ export class LoginPage extends BasePage {
   }
 
   async clickSignup() {
-    await this.click(this.signupButton);
+    await this.signupButton.click();
   }
 }

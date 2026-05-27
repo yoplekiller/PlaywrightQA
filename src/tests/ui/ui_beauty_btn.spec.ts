@@ -1,10 +1,6 @@
-import { test, expect } from '@playwright/test';
-import { MainPage } from '../../pages/MainPage';
+import { test, expect } from '../../fixtures/pages';
 
-test('뷰티컬리 버튼 동작 테스트', async ({ page }) => {
-    // 페이지 객체 생성
-    const mainPage = new MainPage(page);
-
+test('뷰티컬리 버튼 동작 테스트', async ({ page, mainPage }) => {
         // 마켓컬리 메인 페이지 접속
         await page.goto('/main');
 
