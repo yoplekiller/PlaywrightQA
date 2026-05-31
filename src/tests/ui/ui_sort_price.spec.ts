@@ -1,15 +1,16 @@
 import { test, expect } from '../../fixtures/pages';
+import { products } from '../data/products';
 
 
 test.describe('가격 정렬 기능테스트', () => {
-    test('🔍 가격 낮은순 정렬 기능 확인', async ({ page, mainPage, searchPage }) =>
+    test('가격 낮은순 정렬 기능 확인 @regression', async ({ page, mainPage, searchPage }) =>
         {
             // 메인 페이지 접속
             await page.goto('/main');
             await page.setViewportSize({ width: 1280, height: 720 });
 
             // 검색어 "사과"로 검색
-            await mainPage.searchGoods('사과');
+            await mainPage.searchGoods(products.apple);
             await expect(page).toHaveURL(/\/search(?:\?|$)/, { timeout: 10000 });
 
             // 가격 낮은순 정렬 선택
@@ -28,11 +29,11 @@ test.describe('가격 정렬 기능테스트', () => {
         }
     );
 
-    test('💰 높은 가격순 정렬 시, 가격이 내림차순인지 확인', async ({ page, mainPage, searchPage }) => {
+    test('높은 가격순 정렬 시, 가격이 내림차순인지 확인 @regression', async ({ page, mainPage, searchPage }) => {
         await page.goto('/main');
         await page.setViewportSize({ width: 1280, height: 720 });
 
-        await mainPage.searchGoods('과자');
+        await mainPage.searchGoods(products.snack);
         await expect(page).toHaveURL(/\/search(?:\?|$)/, { timeout: 10000 });
 
           // 높은 가격순 클릭

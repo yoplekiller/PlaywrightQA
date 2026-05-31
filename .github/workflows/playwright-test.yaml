@@ -38,9 +38,20 @@ jobs:
           rm -rf playwright-report
           mkdir -p screenshots logs test-results
       
-      - name: Run UI Tests
+      - name: Run smoke tests for pull requests
+        if: github.event_name == 'pull_request'
         run: |
-          npm run test:ui -- --workers=2
+          npm run test:smoke -- --workers=2
+          rm -rf test-results/**/*.zip
+          du -sh
+        env:
+          SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
+          PLAYWRIGHT_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html
+
+      - name: Run regression tests for main and scheduled runs
+        if: github.event_name != 'pull_request'
+        run: |
+          npm run test:ci
           rm -rf test-results/**/*.zip
           du -sh
         env:
@@ -95,6 +106,8 @@ jobs:
       - name: Create Test Summary
         if: always()
         run: |
-          echo "## 🎭 UI Test Results" >> $GITHUB_STEP_SUMMARY
+          echo "## Playwright UI Test Results" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "📈 [View Playwright Report](https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html)" >> $GITHUB_STEP_SUMMARY
+          echo "- PR: smoke tests only" >> $GITHUB_STEP_SUMMARY
+          echo "- main/schedule/manual: regression tests" >> $GITHUB_STEP_SUMMARY
+          echo "- [View Playwright Report](https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html)" >> $GITHUB_STEP_SUMMARY

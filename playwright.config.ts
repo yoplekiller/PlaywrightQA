@@ -3,13 +3,17 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 const authFile = 'playwright/.auth/user.json';
+const isListMode = process.argv.includes('--list');
 
 const reporters: [string, any?][] = [
     ['list'],
-    ['html', { outputFolder: 'playwright-report', open: 'never' }],
 ];
 
-if (process.env.SLACK_WEBHOOK_TS) {
+if (!isListMode) {
+    reporters.push(['html', { outputFolder: 'playwright-report', open: 'never' }]);
+}
+
+if (!isListMode && process.env.SLACK_WEBHOOK_TS) {
     reporters.push([
         './src/tests/reporters/SlackReporter.ts',
         { webhookUrl: process.env.SLACK_WEBHOOK_TS },

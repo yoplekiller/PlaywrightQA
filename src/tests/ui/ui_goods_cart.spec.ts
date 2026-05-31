@@ -1,12 +1,13 @@
 import { test, expect } from '../../fixtures/pages';
+import { products } from '../data/products';
 
-test('검색 → 상세 → 장바구니 담기 → 장바구니 확인', async ({ page, mainPage, searchPage, cartPage, goodsPage }) => {
+test('검색 → 상세 → 장바구니 담기 → 장바구니 확인 @smoke @regression', async ({ page, mainPage, searchPage, cartPage, goodsPage }) => {
     // 마켓컬리 메인 페이지 접속
     await page.goto('/main');
     await page.setViewportSize({ width: 1280, height: 720 });
 
     // 검색어 "수박"으로 검색
-    await mainPage.searchGoods('수박');
+    await mainPage.searchGoods(products.watermelon);
     await expect(page).toHaveURL(/search/);
 
     // 검색 결과에서 상세 페이지 이동

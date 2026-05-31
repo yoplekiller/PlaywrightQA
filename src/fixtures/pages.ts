@@ -5,6 +5,7 @@ import { LoginPage } from '../pages/LoginPage';
 import { MainPage } from '../pages/MainPage';
 import { PickPage } from '../pages/PickPage';
 import { SearchPage } from '../pages/SearchPage';
+import { attachLocatorDiagnostics } from '../utils/locatorDiagnostics';
 
 type PageFixtures = {
   cartPage: CartPage;
@@ -34,6 +35,10 @@ export const test = base.extend<PageFixtures>({
   searchPage: async ({ page }, use) => {
     await use(new SearchPage(page));
   },
+});
+
+test.afterEach(async ({ page }, testInfo) => {
+  await attachLocatorDiagnostics(page, testInfo);
 });
 
 export { expect };

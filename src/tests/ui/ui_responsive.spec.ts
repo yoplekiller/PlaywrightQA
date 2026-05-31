@@ -7,7 +7,7 @@ import { test, expect } from '@playwright/test';
   ];
 
   for (const vp of viewports) {
-      test(`${vp.name} 뷰포트 레이아웃 테스트`, async ({ page }) => {
+      test(`${vp.name} 뷰포트 레이아웃 테스트 @responsive @regression`, async ({ page }) => {
           await page.setViewportSize({ width: vp.width, height: vp.height });
           await page.goto('/main');
 

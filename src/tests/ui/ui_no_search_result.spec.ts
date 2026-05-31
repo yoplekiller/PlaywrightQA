@@ -2,7 +2,7 @@ import { test, expect } from '../../fixtures/pages';
 
 test.describe('검색 결과 없음 테스트', () => {
 
-    test('🔍 무작위 검색어 입력 시, 검색 페이지 정상 처리', async ({ page, mainPage, searchPage }) => {
+    test('무작위 검색어 입력 시, 검색 페이지 정상 처리 @regression', async ({ page, mainPage, searchPage }) => {
         // 메인 페이지 접속
         await page.goto('/main');
         await page.setViewportSize({ width: 1280, height: 720 });
@@ -20,7 +20,7 @@ test.describe('검색 결과 없음 테스트', () => {
         await expect(page.getByRole('heading', { name: /검색결과/ })).toBeVisible();
     });
 
-    test('🔍 긴 문자열 검색 시, 정상 처리 확인', async ({ page, mainPage, searchPage }) => {
+    test('긴 문자열 검색 시, 정상 처리 확인 @regression', async ({ page, mainPage, searchPage }) => {
         // 메인 페이지 접속
         await page.goto('/main');
         await page.setViewportSize({ width: 1280, height: 720 });

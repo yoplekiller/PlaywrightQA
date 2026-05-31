@@ -1,6 +1,6 @@
 import { test, expect } from '../../fixtures/pages';
 
-test('뷰티컬리 버튼 동작 테스트', async ({ page, mainPage }) => {
+test('뷰티컬리 버튼 동작 테스트 @regression', async ({ page, mainPage }) => {
         // 마켓컬리 메인 페이지 접속
         await page.goto('/main');
 

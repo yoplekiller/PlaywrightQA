@@ -1,7 +1,7 @@
 import { test, expect } from '../../../fixtures/pages';
 
 test.skip(process.env.CI === 'true', 'Skip in CI');
-test('상품 찜하기 버튼 후 찜하기에 포함되어 있는지 확인', async ({ page, mainPage, goodsPage, searchPage }) => {
+test('상품 찜하기 버튼 후 찜하기에 포함되어 있는지 확인 @auth @regression', async ({ page, mainPage, goodsPage, searchPage }) => {
     // 마켓컬리 메인 페이지 접속
     await page.goto('/main');
     await expect(page.getByRole('link', { name: /.+님$/i })).toBeVisible({ timeout: 10000 });

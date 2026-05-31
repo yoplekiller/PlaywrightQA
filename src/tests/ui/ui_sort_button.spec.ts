@@ -1,20 +1,21 @@
 import { test, expect } from '../../fixtures/pages';
 import fs from 'fs';
 import path from 'path';
+import { products } from '../data/products';
 
 
 if (!fs.existsSync('screenshots')) {
     fs.mkdirSync('screenshots');
 }
 
-test('카테고리별 정렬 동작 및 결과 검증', async ({ page, mainPage, searchPage }, testInfo) => {
+test('카테고리별 정렬 동작 및 결과 검증 @regression', async ({ page, mainPage, searchPage }, testInfo) => {
     // 마켓컬리 메인 페이지 접속 및 "과자" 검색
     await page.goto('/main');
-    await mainPage.searchGoods('과자');
+    await mainPage.searchGoods(products.snack);
     await expect(page).toHaveURL(/\/search(?:\?|$)/, { timeout: 10000 });
 
     // 검색 결과 페이지로 이동 확인
-    await searchPage.expectSearchUrlContainsTerm('과자');
+    await searchPage.expectSearchUrlContainsTerm(products.snack);
 
     // 정렬 탭별 동작 및 결과 검증
     const categories = [

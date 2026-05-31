@@ -1,12 +1,13 @@
 import { test, expect } from '../../fixtures/pages';
+import { products } from '../data/products';
 
-test('상품 상세페이지 진입 확인', async ({ page, mainPage, searchPage }) => {
+test('상품 상세페이지 진입 확인 @regression', async ({ page, mainPage, searchPage }) => {
     // 마켓컬리 메인 페이지 접속
     await page.goto('/main');
     await page.setViewportSize({ width: 1280, height: 720 });
 
     // 상품 검색 및 상세페이지 진입
-    await mainPage.searchGoods('바나나');
+    await mainPage.searchGoods(products.banana);
     await searchPage.clickFirstGoods();
 
     // 상품 상세페이지 진입 확인

@@ -1,7 +1,7 @@
 import { test, expect } from '../../fixtures/pages';
 
 
-test('주소 검색 E2E 플로우 테스트 - 간소화', async ({ page, mainPage }) => {
+test('주소 검색 E2E 플로우 테스트 - 간소화 @regression', async ({ page, mainPage }) => {
     await test.step('마켓컬리 메인 페이지 접속', async () => {
         await page.goto('/main');
         await page.setViewportSize({ width: 1280, height: 720 });

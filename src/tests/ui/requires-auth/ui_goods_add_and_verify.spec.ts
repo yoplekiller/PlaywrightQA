@@ -7,7 +7,7 @@ import path from 'path';
 test.skip(process.env.CI === 'true', 'Skip in CI');
 test.describe('상품 추가 및 장바구니 확인', () => {
 
-    test('상품 검색 → 상품 추가 → 장바구니에서 확인', async ({ page, cartPage, mainPage, searchPage }, testInfo) => {
+    test('상품 검색 → 상품 추가 → 장바구니에서 확인 @auth @regression', async ({ page, cartPage, mainPage, searchPage }, testInfo) => {
         // Step 1: 저장된 로그인 상태 확인
         await page.goto('/main');
         await page.setViewportSize({ width: 1280, height: 720 });

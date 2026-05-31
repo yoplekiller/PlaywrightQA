@@ -3,7 +3,7 @@ import AxeBuilder from '@axe-core/playwright';
 import fs from 'fs';
 import path from 'path';
 
-test('메인 페이지 접근성 검사', async ({ page }, testInfo) => {
+test('메인 페이지 접근성 검사 @a11y @regression', async ({ page }, testInfo) => {
     await page.goto('/main');
 
     const results = await new AxeBuilder({ page })

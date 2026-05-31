@@ -9,7 +9,7 @@ if (!fs.existsSync(screenshotDir)) {
     fs.mkdirSync(screenshotDir);
 }
 
-test('상품 검색 smoke 테스트', async ({ page, mainPage, searchPage }) => {
+test('상품 검색 smoke 테스트 @smoke @regression', async ({ page, mainPage, searchPage }) => {
     for (const { tc_id, search_term } of searchCases) {
         // 검색어로 상품 검색
         await page.goto('/main');
