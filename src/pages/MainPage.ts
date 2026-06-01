@@ -12,6 +12,7 @@ export class MainPage extends BasePage {
     private readonly likeButton!: Locator;
     private readonly searchButton!: Locator;
     private readonly addressButton!: Locator;
+    private readonly addressSearchButton!: Locator;
 
 
 
@@ -30,6 +31,7 @@ export class MainPage extends BasePage {
         // Header icon buttons have no accessible name. The address button is the first
         // empty icon button after the search submit button.
         this.addressButton = page.locator('button').filter({ hasText: /^$/ }).nth(1);
+        this.addressSearchButton = page.locator('button', { hasText: /^주소 검색$/ });
 
     }
 
@@ -49,8 +51,23 @@ export class MainPage extends BasePage {
     }
     async hoverAddressButton() {
         await this.addressButton.waitFor({ state: 'visible', timeout: 10000 });
-        await this.addressButton.hover();
-        await this.page.getByRole('button', { name: '주소 검색', exact: true }).waitFor({ state: 'visible', timeout: 10000 });
+        await this.addressButton.scrollIntoViewIfNeeded();
+
+        for (let attempt = 0; attempt < 3; attempt++) {
+            await this.addressButton.hover();
+
+            try {
+                await this.addressSearchButton.waitFor({ state: 'visible', timeout: 3000 });
+                return;
+            } catch (error) {
+                if (attempt === 2) {
+                    throw error;
+                }
+
+                await this.page.mouse.move(0, 0);
+                await this.page.waitForTimeout(300);
+            }
+        }
     }
 
     // 검색어 입력 및 검색
@@ -75,7 +92,7 @@ export class MainPage extends BasePage {
     }
 
     async clickAddressSearchButton() {
-        await this.page.getByRole('button', { name: '주소 검색', exact: true }).click();
+        await this.addressSearchButton.click();
     }
 
     async openAddressSearchPopup(): Promise<Page> {
