@@ -58,6 +58,31 @@ jobs:
           SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
           PLAYWRIGHT_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html
 
+      - name: Checkout AutoTC (release report module)
+        if: always()
+        uses: actions/checkout@v4
+        with:
+          repository: yoplekiller/AutoTC
+          path: AutoTC
+
+      - name: Set up Python
+        if: always()
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install release report dependencies
+        if: always()
+        run: pip install groq requests python-dotenv
+
+      - name: Run AI release report
+        if: always()
+        run: python AutoTC/src/release_report.py playwright-report/results.json
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          PLAYWRIGHT_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html
+
       - name: Upload Playwright HTML report
         if: always()
         uses: actions/upload-artifact@v4

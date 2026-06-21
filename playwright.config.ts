@@ -11,6 +11,7 @@ const reporters: [string, any?][] = [
 
 if (!isListMode) {
     reporters.push(['html', { outputFolder: 'playwright-report', open: 'never' }]);
+    reporters.push(['json', { outputFile: 'playwright-report/results.json' }]);
 }
 
 if (!isListMode && process.env.SLACK_WEBHOOK_TS) {
