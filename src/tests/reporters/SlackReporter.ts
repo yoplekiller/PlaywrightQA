@@ -50,8 +50,8 @@ class SlackReporter implements Reporter {
   private startTime = '';
   private failedDetails: FailedDetail[] = [];
 
-  constructor(options: { webhookUrl: string }) {
-    this.webhookUrl = options.webhookUrl;
+  constructor() {
+    this.webhookUrl = process.env.SLACK_WEBHOOK_TS || '';
     console.log('SlackReporter initialized');
     console.log('Slack webhook configured:', this.webhookUrl ? 'yes' : 'no');
   }

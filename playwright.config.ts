@@ -15,10 +15,7 @@ if (!isListMode) {
 }
 
 if (!isListMode && process.env.SLACK_WEBHOOK_TS) {
-    reporters.push([
-        './src/tests/reporters/SlackReporter.ts',
-        { webhookUrl: process.env.SLACK_WEBHOOK_TS },
-    ]);
+    reporters.push(['./src/tests/reporters/SlackReporter.ts']);
 }
 
 export default defineConfig({
