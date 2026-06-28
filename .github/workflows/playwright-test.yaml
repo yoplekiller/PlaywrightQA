@@ -41,7 +41,7 @@ jobs:
       - name: Run smoke tests for pull requests
         if: github.event_name == 'pull_request'
         run: |
-          npm run test:smoke -- --workers=2
+          npm run test:ui:all
           rm -rf test-results/**/*.zip
           du -sh
         env:
