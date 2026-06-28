@@ -13,25 +13,24 @@ test.describe('상품 추가 및 장바구니 확인', () => {
         await page.setViewportSize({ width: 1280, height: 720 });
         await expect(page.getByRole('link', { name: /.+님$/i })).toBeVisible({ timeout: 10000 });
 
-        // Step 3: 상품 검색
-        const searchKeyword = '과자';
-        await mainPage.searchGoods(searchKeyword);
+        // Step 2: 상품 검색
+        await mainPage.searchGoods('과자');
         await expect(page).toHaveURL(/\/search(?:\?|$)/, { timeout: 10000 });
 
-        // Step 4: 첫 번째 상품 클릭
+        // Step 3: 첫 번째 상품 클릭
         const GoodsNumber = 1;
         await searchPage.clickGoodsByIndex(GoodsNumber - 1);
         await expect(page.locator('h1').first()).toBeVisible({ timeout: 10000 });
 
-        // Step 5: 장바구니 담기
+        // Step 4: 장바구니 담기
         await searchPage.clickAddCartButton();
         await expect(page.getByText('장바구니에 상품을 담았습니다.', { exact: true })).toBeVisible({ timeout: 5000 });
 
-        // Step 6: 장바구니로 이동
+        // Step 5: 장바구니로 이동
         await page.goto('/cart');
         await expect(page).toHaveURL(/\/cart/);
 
-        // Step 7: 장바구니에 상품이 있는지 확인
+        // Step 6: 장바구니에 상품이 있는지 확인
         const now = getNowString();
         const browserName = testInfo.project.name;
         const screenshotName = `cart_verify_${browserName}_${now}.png`;

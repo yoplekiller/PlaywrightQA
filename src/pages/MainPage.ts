@@ -92,15 +92,29 @@ export class MainPage extends BasePage {
     }
 
     async clickAddressSearchButton() {
-        await this.addressSearchButton.click();
+        await this.addressSearchButton.dispatchEvent('click');
     }
 
     async openAddressSearchPopup(): Promise<Page> {
-        await this.hoverAddressButton();
-        const popupPromise = this.page.waitForEvent('popup');
-        await this.clickAddressSearchButton();
-        const popup = await popupPromise;
-        await popup.waitForLoadState('domcontentloaded');
-        return popup;
+        let lastError: unknown;
+
+        for (let attempt = 0; attempt < 3; attempt++) {
+            try {
+                await this.hoverAddressButton();
+
+                const popupPromise = this.page.waitForEvent('popup', { timeout: 10000 });
+                await this.clickAddressSearchButton();
+
+                const popup = await popupPromise;
+                await popup.waitForLoadState('domcontentloaded');
+                return popup;
+            } catch (error) {
+                lastError = error;
+                await this.page.mouse.move(0, 0);
+                await this.page.waitForTimeout(300);
+            }
+        }
+
+        throw lastError;
     }
 }
