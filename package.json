@@ -32,7 +32,6 @@
     "@types/dotenv": "^6.1.1",
     "@types/exceljs": "^0.5.3",
     "@types/node": "^22.19.18",
-    "typescript": "^5.8.3",
-    "checkly": "latest"
+    "typescript": "^5.8.3"
   }
 }
