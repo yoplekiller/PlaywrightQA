@@ -24,8 +24,7 @@ QA Engineer portfolio — E2E test automation for Kurly, a live e-commerce site,
 | **Page Object Model** | 7 page classes for structured automation |
 | **Custom Fixtures** | Page Objects injected through Playwright fixtures |
 | **Data-Driven Testing** | TS smoke data fixtures + ExcelJS external data example |
-| **Visual Regression** | Snapshot-based UI change detection |
-| **Accessibility Testing** | WCAG 2.0 validation with axe-core |
+| **Accessibility Testing** | WCAG 2.0 validation with axe-core (requires 0 critical/serious violations) |
 | **CI/CD** | GitHub Actions with 8-hour scheduled runs |
 | **Slack Notifications** | Real-time reporting via Block Kit UI |
 | **Cross-Browser** | Simultaneous Chromium + Edge testing |
@@ -105,7 +104,6 @@ npm test              # Chromium general UI tests
 npm run test:ui       # Chromium general UI tests
 npm run test:ui:all   # Chromium + Edge general UI tests
 npm run test:smoke    # Core search smoke test
-npm run test:visual   # Chromium visual regression test
 npm run test:auth     # Auth-required tests
 npm run typecheck     # TypeScript typecheck
 npm run report        # Open report
@@ -132,13 +130,13 @@ KURLY_TEST_USER_PASSWORD=your_password           # For auth tests
 | `ui_no_search_result` | No results message for non-existent product |
 | `ui_goods_page` | Product detail page navigation |
 | `ui_goods_cart` | Search → Detail → Add to cart |
-| `ui_goods_duplicate` | Duplicate item quantity verification |
+| `ui_goods_duplicate` | ⚠️ skip - Duplicate item quantity verification |
+| `ui_guest_checkout_requires_login` | Guest cart shows a login button instead of a checkout button |
 | `ui_beauty_btn` | Beauty Kurly button URL navigation |
 | `ui_address_search` | Address search popup E2E flow |
 | `ui_sort_button` | 6 sort tab iteration and validation |
 | `ui_sort_price` | Price sorting result verification |
-| `ui_visual_regression` | 4-page snapshot comparison (Visual Regression) |
-| `ui_accessibility` | axe-core based WCAG accessibility audit |
+| `ui_accessibility` | axe-core based WCAG accessibility audit (requires 0 critical/serious violations) |
 | `ui_responsive` | Responsive layout verification across viewports |
 
 ### UI Tests - Auth Required
@@ -179,16 +177,6 @@ for (const { tc_id, search_term } of searchCases) {
 ```
 
 The ExcelJS-based `test_case.xlsx` and `excel_loader.ts` remain as an external QA data integration example.
-
-### Visual Regression
-
-```typescript
-await expect(page).toHaveScreenshot('main-page-full.png', {
-    maxDiffPixelRatio: 0.15,
-});
-```
-
-8 snapshots total — 4 per browser (Chromium + Edge).
 
 ### Slack Notifications
 
@@ -249,7 +237,7 @@ Checkout → Install deps → Install browsers → Run tests
 
 ## Related Projects
 
-- [QATEST](https://github.com/yoplekiller/QATEST) - Python/Selenium Web + API Testing
+- [QATEST](https://github.com/yoplekiller/QATEST) - Python/Selenium Web UI Testing
 - [woongjinAppTest](https://github.com/yoplekiller/woongjinAppTest) - Python/Appium Mobile Testing
 
 ---

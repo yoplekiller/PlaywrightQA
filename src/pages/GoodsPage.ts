@@ -17,7 +17,7 @@ export class GoodsPage extends BasePage {
         this.productTitleLocator = page.locator('h1').first();
         this.addCartToast = page.getByText('장바구니에 상품을 담았습니다.', { exact: true });
         this.optionSelectButton = page.locator('button:visible').filter({ hasText: '상품을 선택해주세요' }).first();
-        this.optionItems = page.locator('li[class*="e1ci38sl5"]:visible').filter({ hasText: /원/ });
+        this.optionItems = page.locator('li[class*="e13g30ne5"]:visible').filter({ hasText: /원/ });
     }
 
     async clickLikeButton() {

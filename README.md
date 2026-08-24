@@ -24,8 +24,7 @@ QA 엔지니어 포트폴리오 프로젝트입니다. Playwright + TypeScript �
 | **Page Object Model** | 7개 페이지 클래스로 구조화 |
 | **Custom Fixtures** | Page Object를 fixture로 주입하여 테스트 코드 중복 감소 |
 | **데이터 드리븐** | TS fixture 기반 smoke 데이터 + ExcelJS 외부 데이터 예제 |
-| **Visual Regression** | 스냅샷 비교 기반 UI 변경 감지 |
-| **접근성 검사** | axe-core 기반 WCAG 2.0 검증 |
+| **접근성 검사** | axe-core 기반 WCAG 2.0 검증 (critical/serious 위반 0건 요구) |
 | **CI/CD** | GitHub Actions 8시간 주기 자동 실행 |
 | **Slack 알림** | Block Kit UI 기반 실시간 리포팅 (브라우저별 결과 포함) |
 | **크로스 브라우저** | Chromium + Edge 동시 테스트 |
@@ -105,7 +104,6 @@ npm test              # Chromium 일반 UI 테스트
 npm run test:ui       # Chromium 일반 UI 테스트
 npm run test:ui:all   # Chromium + Edge 일반 UI 테스트
 npm run test:smoke    # 핵심 검색 smoke 테스트
-npm run test:visual   # Chromium visual regression 테스트
 npm run test:auth     # 인증 필요 테스트
 npm run typecheck     # TypeScript 타입체크
 npm run report        # 리포트 열기
@@ -132,13 +130,13 @@ KURLY_TEST_USER_PASSWORD=your_password           # 인증 테스트용
 | `ui_no_search_result` | 존재하지 않는 상품 검색 시 결과 없음 표시 |
 | `ui_goods_page` | 상품 상세페이지 진입 |
 | `ui_goods_cart` | 검색 → 상세 → 장바구니 담기 |
-| `ui_goods_duplicate` | 동일 상품 중복 담기 수량 검증 |
+| `ui_goods_duplicate` | ⚠️ skip - 동일 상품 중복 담기 수량 검증 |
+| `ui_guest_checkout_requires_login` | 비회원 장바구니는 결제 버튼 대신 로그인 버튼만 노출됨을 확인 |
 | `ui_beauty_btn` | 뷰티컬리 버튼 URL 이동 |
 | `ui_address_search` | 주소 검색 팝업 E2E 플로우 |
 | `ui_sort_button` | 6개 정렬 탭 순회 및 검증 |
 | `ui_sort_price` | 가격순 정렬 결과 검증 |
-| `ui_visual_regression` | 4개 페이지 스냅샷 비교 (Visual Regression) |
-| `ui_accessibility` | axe-core 기반 WCAG 접근성 검사 |
+| `ui_accessibility` | axe-core 기반 WCAG 접근성 검사 (critical/serious 위반 0건 요구) |
 | `ui_responsive` | 반응형 뷰포트별 레이아웃 확인 |
 
 ### UI 테스트 - 인증 필요
@@ -179,16 +177,6 @@ for (const { tc_id, search_term } of searchCases) {
 ```
 
 ExcelJS 기반 `test_case.xlsx`와 `excel_loader.ts`는 외부 QA 데이터 연동 예제로 유지합니다.
-
-### Visual Regression
-
-```typescript
-await expect(page).toHaveScreenshot('main-page-full.png', {
-    maxDiffPixelRatio: 0.15,
-});
-```
-
-Chromium + Edge 크로스 브라우저 대응으로 총 8개의 테스트를 실행합니다.
 
 ### Slack 알림
 
@@ -256,7 +244,7 @@ Checkout → 의존성 설치 → 브라우저 설치 → 테스트 실행
 
 ## 관련 프로젝트
 
-- [QATEST](https://github.com/yoplekiller/QATEST) - Python/Selenium Web + API 테스트
+- [QATEST](https://github.com/yoplekiller/QATEST) - Python/Selenium Web UI 테스트
 - [woongjinAppTest](https://github.com/yoplekiller/woongjinAppTest) - Python/Appium 모바일 테스트
 
 ---

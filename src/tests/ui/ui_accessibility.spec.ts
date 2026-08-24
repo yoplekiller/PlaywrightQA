@@ -40,5 +40,6 @@ test('메인 페이지 접근성 검사 @a11y @regression', async ({ page }, tes
         contentType: 'application/json',
     });
 
-    expect(results.url).toContain('kurly.com');
+    expect(report.summary.critical, `critical 위반: ${JSON.stringify(report.violations.filter(v => v.impact === 'critical'))}`).toBe(0);
+    expect(report.summary.serious, `serious 위반: ${JSON.stringify(report.violations.filter(v => v.impact === 'serious'))}`).toBe(0);
 });
