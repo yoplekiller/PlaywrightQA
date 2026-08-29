@@ -25,6 +25,7 @@ QA Engineer portfolio — E2E test automation for Kurly, a live e-commerce site,
 | **Custom Fixtures** | Page Objects injected through Playwright fixtures |
 | **Data-Driven Testing** | TS smoke data fixtures + ExcelJS external data example |
 | **Accessibility Testing** | WCAG 2.0 validation with axe-core (requires 0 critical/serious violations) |
+| **Visual Regression Testing** | Pixel-diff comparison of the header region, with Docker-generated baselines to match CI |
 | **CI/CD** | GitHub Actions with 8-hour scheduled runs |
 | **Slack Notifications** | Real-time reporting via Block Kit UI |
 | **Cross-Browser** | Simultaneous Chromium + Edge testing |
@@ -138,6 +139,7 @@ KURLY_TEST_USER_PASSWORD=your_password           # For auth tests
 | `ui_sort_price` | Price sorting result verification |
 | `ui_accessibility` | axe-core based WCAG accessibility audit (requires 0 critical/serious violations) |
 | `ui_responsive` | Responsive layout verification across viewports |
+| `ui_visual_regression` | Visual regression check of the header/GNB region (separate workflow, weekly) |
 
 ### UI Tests - Auth Required
 
@@ -185,6 +187,25 @@ Automatic notification on test completion:
 - Success/Fail/Skip counts
 - Duration
 - Direct link to Report
+
+### Visual Regression Testing
+
+Assertion-based tests check "is a specific condition true", but visual regression tests judge
+differently — they compare a fresh screenshot against a saved **baseline** and measure the
+**pixel diff ratio**.
+
+- **Scope**: the header/GNB region only, not the full main page (fixed via `clip` coordinates).
+  A full-page screenshot fails on nearly every run because of rotating promo banners and price
+  changes — the header rarely changes outside a redesign, making it a stable target for
+  "did the layout break unintentionally".
+- **Pass criteria**: `maxDiffPixelRatio: 0.02` (up to 2% pixel difference passes). This tolerates
+  minor anti-aliasing differences while still failing on real layout regressions, which a human
+  then reviews via the diff image.
+- **Baseline generation**: built inside the project's `Dockerfile` (official Playwright image,
+  same Ubuntu base as CI) rather than locally on Windows — a baseline generated on a different
+  OS would fail in CI every time due to font/anti-aliasing differences.
+- **Separate CI**: runs weekly in its own `visual-regression.yaml` workflow, isolated from the
+  main `Playwright Tests` badge — a UI redesign breaking this test won't turn the main badge red.
 
 ---
 

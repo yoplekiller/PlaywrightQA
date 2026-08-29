@@ -25,6 +25,7 @@ QA 엔지니어 포트폴리오 프로젝트입니다. Playwright + TypeScript �
 | **Custom Fixtures** | Page Object를 fixture로 주입하여 테스트 코드 중복 감소 |
 | **데이터 드리븐** | TS fixture 기반 smoke 데이터 + ExcelJS 외부 데이터 예제 |
 | **접근성 검사** | axe-core 기반 WCAG 2.0 검증 (critical/serious 위반 0건 요구) |
+| **시각적 회귀 테스트** | 헤더 영역 픽셀 diff 비교, Docker 기반 기준 이미지로 CI 환경 일치 |
 | **CI/CD** | GitHub Actions 8시간 주기 자동 실행 |
 | **Slack 알림** | Block Kit UI 기반 실시간 리포팅 (브라우저별 결과 포함) |
 | **크로스 브라우저** | Chromium + Edge 동시 테스트 |
@@ -138,6 +139,7 @@ KURLY_TEST_USER_PASSWORD=your_password           # 인증 테스트용
 | `ui_sort_price` | 가격순 정렬 결과 검증 |
 | `ui_accessibility` | axe-core 기반 WCAG 접근성 검사 (critical/serious 위반 0건 요구) |
 | `ui_responsive` | 반응형 뷰포트별 레이아웃 확인 |
+| `ui_visual_regression` | 헤더(GNB) 영역 시각적 회귀 검사 (별도 workflow, 주 1회) |
 
 ### UI 테스트 - 인증 필요
 
@@ -192,6 +194,23 @@ ExcelJS 기반 `test_case.xlsx`와 `excel_loader.ts`는 외부 QA 데이터 연�
 > - 어느 브라우저에서든 1회 이상 실패하면 해당 TC는 **실패**로 집계됩니다.
 > - 스킵은 passed / failed 어느 쪽도 아닌 TC에만 집계됩니다.
 > - retry 중간 실패는 제외하고, 최종 결과만 반영합니다.
+
+### 시각적 회귀 테스트 (Visual Regression)
+
+assert 기반 테스트는 "특정 조건이 참인가"를 검증하지만, 시각적 회귀 테스트는 판정 기준이 다릅니다 —
+**기준 스크린샷(baseline) 대비 픽셀 diff 비율**로 "이전과 달라졌는가"를 검증합니다.
+
+- **스코프**: 메인 페이지 전체가 아니라 헤더(GNB) 영역만(`clip`으로 좌표 고정). 전체 페이지는
+  프로모션 배너 회전·가격 변동 때문에 매 실행마다 diff가 발생해 신뢰할 수 없는 테스트가 됨.
+  헤더는 리뉴얼 전까지 거의 안 바뀌는 안정적인 영역이라 "레이아웃이 의도치 않게 깨졌는가"를
+  판단하기에 적합함.
+- **통과 기준**: `maxDiffPixelRatio: 0.02` (픽셀 2% 이내 차이는 통과). 안티앨리어싱 등 미세한
+  렌더링 차이는 허용하되, 그 이상은 실패시켜 사람이 diff 이미지를 보고 의도된 변경인지 판단.
+- **기준 이미지 생성**: 로컬(Windows)이 아니라 `Dockerfile`(공식 Playwright 이미지, CI와 동일
+  Ubuntu 기반)로 생성. 렌더링 환경이 다르면 폰트/안티앨리어싱 차이로 기준 이미지 자체가 CI에서
+  항상 실패하기 때문.
+- **CI 분리**: 메인 `Playwright Tests` 워크플로우와 별도로 `visual-regression.yaml`에서 주 1회
+  실행. 시각 테스트가 UI 디자인 변경으로 깨져도 회귀 테스트 배지에는 영향이 없도록 분리.
 
 ---
 

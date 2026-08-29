@@ -1,0 +1,38 @@
+name: Visual Regression
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 1' # 매주 월요일 (헤더 UI는 자주 안 바뀌므로 주 1회로 충분)
+
+jobs:
+  visual-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run visual regression tests
+        run: npm run test:visual
+
+      - name: Upload diff report on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-regression-diff
+          path: |
+            playwright-report
+            test-results
+          retention-days: 14
