@@ -12,7 +12,7 @@ import { test, expect } from '@playwright/test';
           await page.goto('/main');
 
           // 검색창 존재 확인
-          const searchBox = page.getByRole('textbox', { name: /검색어를 입력해주세요/i });
+          const searchBox = page.getByRole('textbox', { name: /^검색어를 입력해주세요$/i });
           await expect(searchBox).toBeVisible();
 
           await page.screenshot({ path: `responsive-${vp.name}.png` });

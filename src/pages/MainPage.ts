@@ -20,7 +20,7 @@ export class MainPage extends BasePage {
 
     constructor(page: Page) {
         super(page);
-        this.searchBox = page.getByRole('textbox', { name: /검색어를 입력해주세요/i })
+        this.searchBox = page.getByRole('textbox', { name: /^검색어를 입력해주세요$/i })
         this.loginButton = page.getByText('로그인');
         this.userProfileLink = page.getByRole('link', {name: /.+님$/i});
         this.marketButton = page.getByRole('button', { name: /마켓컬리/i });
