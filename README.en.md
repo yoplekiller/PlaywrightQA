@@ -37,7 +37,7 @@ QA Engineer portfolio — E2E test automation for Kurly, a live e-commerce site,
 
 | Category | Technology |
 |----------|------------|
-| Framework | Playwright 1.52 |
+| Framework | Playwright 1.59 |
 | Language | TypeScript 5.8 |
 | Browsers | Chromium, Edge |
 | Reporting | Playwright HTML Report, Slack Block Kit |
@@ -131,6 +131,7 @@ KURLY_TEST_USER_PASSWORD=your_password           # For auth tests
 | `ui_no_search_result` | No results message for non-existent product |
 | `ui_goods_page` | Product detail page navigation |
 | `ui_goods_cart` | Search → Detail → Add to cart |
+| `ui_cart_quantity` | Cart quantity is 1 after adding a single item |
 | `ui_goods_duplicate` | ⚠️ skip - Duplicate item quantity verification |
 | `ui_guest_checkout_requires_login` | Guest cart shows a login button instead of a checkout button |
 | `ui_beauty_btn` | Beauty Kurly button URL navigation |
@@ -184,9 +185,12 @@ The ExcelJS-based `test_case.xlsx` and `excel_loader.ts` remain as an external Q
 
 Automatic notification on test completion:
 - Test status (PASSED / FAILED)
-- Success/Fail/Skip counts
-- Duration
+- Success/Fail/Skip counts (deduplicated by TC)
+- Per-browser results (chromium / chromium-auth / Edge tracked independently)
+- Start/end time, duration
 - Direct link to Report
+
+**Automatic failure classification**: when tests fail, the reporter analyzes the error pattern and classifies each failure into one of three categories — 🐞 Possible product defect / 🛠️ Automation code issue / 🌐 Possible environment issue — along with a category-specific action guide (`src/tests/reporters/SlackReporter.ts`). This shortens first-pass triage time when diagnosing a failure.
 
 ### Visual Regression Testing
 
@@ -224,6 +228,10 @@ Checkout → Install deps → Install browsers → Run tests
 → Upload artifacts → Deploy to GitHub Pages → Slack notification
 ```
 
+### AutoTC Integration (Automated Release Judgment)
+
+The same workflow checks out the [AutoTC](https://github.com/yoplekiller/AutoTC) repo and runs `release_report.py` alongside it. It analyzes the Playwright results (`results.json`) to produce a Go / Caution / No-Go release judgment, sent to Slack separately from PlaywrightQA's own SlackReporter (failure classification) — within the same CI run, one message answers "what failed" (SlackReporter) and another answers "should we ship" (AutoTC).
+
 ### Optimizations
 
 - npm + Playwright browser caching
@@ -259,7 +267,8 @@ Checkout → Install deps → Install browsers → Run tests
 ## Related Projects
 
 - [QATEST](https://github.com/yoplekiller/QATEST) - Python/Selenium Web UI Testing
-- [woongjinAppTest](https://github.com/yoplekiller/woongjinAppTest) - Python/Appium Mobile Testing
+- [KurlyApp](https://github.com/yoplekiller/KurlyApp) - Python/Appium Mobile Testing
+- [AutoTC](https://github.com/yoplekiller/AutoTC) - AI-based Test Case Generation
 
 ---
 

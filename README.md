@@ -37,7 +37,7 @@ QA 엔지니어 포트폴리오 프로젝트입니다. Playwright + TypeScript �
 
 | 구분 | 기술 |
 |------|------|
-| Framework | Playwright 1.52 |
+| Framework | Playwright 1.59 |
 | Language | TypeScript 5.8 |
 | Browsers | Chromium, Edge |
 | Reporting | Playwright HTML Report, Slack Block Kit |
@@ -131,6 +131,7 @@ KURLY_TEST_USER_PASSWORD=your_password           # 인증 테스트용
 | `ui_no_search_result` | 존재하지 않는 상품 검색 시 결과 없음 표시 |
 | `ui_goods_page` | 상품 상세페이지 진입 |
 | `ui_goods_cart` | 검색 → 상세 → 장바구니 담기 |
+| `ui_cart_quantity` | 상품 1개 담기 후 장바구니 수량이 1인지 검증 |
 | `ui_goods_duplicate` | ⚠️ skip - 동일 상품 중복 담기 수량 검증 |
 | `ui_guest_checkout_requires_login` | 비회원 장바구니는 결제 버튼 대신 로그인 버튼만 노출됨을 확인 |
 | `ui_beauty_btn` | 뷰티컬리 버튼 URL 이동 |
@@ -189,6 +190,8 @@ ExcelJS 기반 `test_case.xlsx`와 `excel_loader.ts`는 외부 QA 데이터 연�
 - 시작 시각 / 종료 시각 / 소요 시간
 - Report 바로가기 버튼
 
+**실패 자동 분류**: 실패한 테스트가 있으면 에러 패턴을 분석해 🐞 제품 결함 가능성 / 🛠️ 자동화 코드 점검 / 🌐 환경 이슈 가능성 3가지로 자동 분류하고, 카테고리별 조치 가이드까지 함께 표시합니다(`src/tests/reporters/SlackReporter.ts`). 실패 원인 파악을 위한 1차 트리아지 시간을 단축하는 목적입니다.
+
 > **집계 규칙 (TC 기준, 중복 제거)**
 > - 전체 집계는 HTML 리포터와 동일한 **최악 결과 우선** 방식으로 동작합니다.
 > - 어느 브라우저에서든 1회 이상 실패하면 해당 TC는 **실패**로 집계됩니다.
@@ -229,6 +232,10 @@ Checkout → 의존성 설치 → 브라우저 설치 → 테스트 실행
 → Artifact 업로드 → GitHub Pages 배포 → Slack 알림
 ```
 
+### AutoTC 연동 (배포 판단 자동화)
+
+같은 워크플로우에서 [AutoTC](https://github.com/yoplekiller/AutoTC) 레포를 체크아웃해 `release_report.py`를 함께 실행합니다. Playwright 결과(`results.json`)를 분석해 Go / Caution / No-Go 배포 판단을 산출하고, PlaywrightQA 자체 SlackReporter(실패 원인 분류)와는 별도로 Slack에 배포 판단 메시지를 전송합니다 — 같은 CI 실행 안에서 "무엇이 실패했는가"(SlackReporter)와 "그래서 배포해도 되는가"(AutoTC)를 각각 답하는 구조입니다.
+
 ### 최적화
 
 - npm + Playwright 브라우저 캐싱
@@ -264,7 +271,8 @@ Checkout → 의존성 설치 → 브라우저 설치 → 테스트 실행
 ## 관련 프로젝트
 
 - [QATEST](https://github.com/yoplekiller/QATEST) - Python/Selenium Web UI 테스트
-- [woongjinAppTest](https://github.com/yoplekiller/woongjinAppTest) - Python/Appium 모바일 테스트
+- [KurlyApp](https://github.com/yoplekiller/KurlyApp) - Python/Appium 모바일 테스트
+- [AutoTC](https://github.com/yoplekiller/AutoTC) - 테스트 케이스 자동 생성
 
 ---
 
