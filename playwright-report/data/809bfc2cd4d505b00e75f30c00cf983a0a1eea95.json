@@ -1,0 +1,36 @@
+{
+  "url": "https://www.kurly.com/main",
+  "timestamp": "2026-09-07T00:28:48.751Z",
+  "summary": {
+    "total": 4,
+    "critical": 1,
+    "serious": 2,
+    "moderate": 1
+  },
+  "violations": [
+    {
+      "id": "button-name",
+      "impact": "critical",
+      "description": "Ensure buttons have discernible text",
+      "nodes": 2
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": 1
+    },
+    {
+      "id": "link-name",
+      "impact": "serious",
+      "description": "Ensure links have discernible text",
+      "nodes": 1
+    },
+    {
+      "id": "meta-viewport",
+      "impact": "moderate",
+      "description": "Ensure <meta name=\"viewport\"> does not disable text scaling and zooming",
+      "nodes": 1
+    }
+  ]
+}
