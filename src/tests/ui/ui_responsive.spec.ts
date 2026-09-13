@@ -15,6 +15,10 @@ import { test, expect } from '@playwright/test';
           const searchBox = page.getByRole('textbox', { name: /^검색어를 입력해주세요$/i });
           await expect(searchBox).toBeVisible();
 
-          await page.screenshot({ path: `responsive-${vp.name}.png` });
+          // 콘텐츠가 뷰포트 밖으로 삐져나가 가로 스크롤이 생기지 않는지 확인
+          const hasHorizontalScroll = await page.evaluate(
+              () => document.documentElement.scrollWidth > document.documentElement.clientWidth
+          );
+          expect(hasHorizontalScroll).toBe(false);
       });
   }
