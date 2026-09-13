@@ -7,7 +7,7 @@ on:
     branches: [ main ]
   workflow_dispatch:
   schedule:
-    - cron: '0 */8 * * *' # Every 8 hours
+    - cron: '0 0 * * *' # 하루 1회 (00:00 UTC)
 
 jobs:
   ui-test:

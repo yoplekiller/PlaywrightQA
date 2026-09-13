@@ -26,7 +26,7 @@ QA 엔지니어 포트폴리오 프로젝트입니다. Playwright + TypeScript �
 | **데이터 드리븐** | TS fixture 기반 smoke 데이터 + ExcelJS 외부 데이터 예제 |
 | **접근성 검사** | axe-core 기반 WCAG 2.0 검증 (critical/serious 위반 0건 요구) |
 | **시각적 회귀 테스트** | 헤더 영역 픽셀 diff 비교, Docker 기반 기준 이미지로 CI 환경 일치 |
-| **CI/CD** | GitHub Actions 8시간 주기 자동 실행 |
+| **CI/CD** | GitHub Actions 하루 1회 자동 실행 |
 | **Slack 알림** | Block Kit UI 기반 실시간 리포팅 (브라우저별 결과 포함) |
 | **크로스 브라우저** | Chromium + Edge 동시 테스트 |
 | **자동 배포** | GitHub Pages HTML Report |
@@ -223,7 +223,7 @@ assert 기반 테스트는 "특정 조건이 참인가"를 검증하지만, 시�
 
 - `main` 브랜치 push / PR
 - 수동 실행 (`workflow_dispatch`)
-- 8시간 주기 스케줄
+- 하루 1회 스케줄
 
 ### 파이프라인
 
