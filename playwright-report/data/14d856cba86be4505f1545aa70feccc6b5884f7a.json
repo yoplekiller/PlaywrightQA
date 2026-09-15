@@ -1,0 +1,207 @@
+{
+  "testTitle": "가격 낮은순 정렬 기능 확인 @regression",
+  "status": "failed",
+  "expectedStatus": "passed",
+  "url": "https://www.kurly.com/search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2",
+  "pageTitle": "검색결과 > 사과 - 마켓컬리",
+  "classification": {
+    "failureType": "assertion-data-mismatch",
+    "ownerHint": "needs-triage",
+    "recommendedAction": "Compare the actual result with requirements, then decide whether to update test data or log a product defect."
+  },
+  "errorSummary": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m",
+  "locatorCandidates": [
+    {
+      "role": null,
+      "name": "",
+      "text": "지금 가입하고 최대 1만 2천원 할인 쿠폰 받아가세요!",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "배너 하루 안보기",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "회원가입",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "로그인",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "고객센터",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "마켓컬리",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "뷰티컬리",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "delete-search-keyword",
+      "text": "",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "submit",
+      "text": "",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "0",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "카테고리",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "베스트",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "세일",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "패션",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "리빙",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "신상",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "특가/혜택",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "샛별·하루배송안내",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "초기화",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "Kurly Only13",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "멤버스혜택26",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "추석선물특가19",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "쿠폰52",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "카테고리",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "면·양념·오일",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "간식·과자·떡",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "유아동",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "건강식품",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "생수·음료",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "카테고리 더보기",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "가격",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "4,000원 미만",
+      "testId": null
+    }
+  ]
+}
