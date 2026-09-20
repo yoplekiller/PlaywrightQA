@@ -141,6 +141,9 @@ KURLY_TEST_USER_PASSWORD=your_password           # 인증 테스트용
 | `ui_accessibility` | axe-core 기반 WCAG 접근성 검사 (critical/serious 위반 0건 요구) |
 | `ui_responsive` | 반응형 뷰포트별 레이아웃 확인 |
 | `ui_visual_regression` | 헤더(GNB) 영역 시각적 회귀 검사 (별도 workflow, 주 1회) |
+| `ui_pagination` | 검색 결과 페이지네이션(다음/특정페이지/처음/마지막) 동작 |
+| `ui_boundary_values` | 빈 검색어, 장바구니 최소수량(1) 경계값 |
+| `ui_cart_payment_mock` | `payment/calculate` API 목킹 - 결제금액 패널 데이터 바인딩, 서버 에러 처리, 무료배송 표기 일관성(⚠️ 실제 불일치 발견, fail 유지) |
 
 ### UI 테스트 - 인증 필요
 
