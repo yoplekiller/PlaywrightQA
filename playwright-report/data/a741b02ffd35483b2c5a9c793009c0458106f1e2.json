@@ -1,0 +1,129 @@
+{
+  "testTitle": "주소 검색 E2E 플로우 테스트 - 간소화 @regression",
+  "status": "failed",
+  "expectedStatus": "passed",
+  "url": "https://www.kurly.com/main",
+  "pageTitle": "컬리 - 마켓컬리/뷰티컬리",
+  "classification": {
+    "failureType": "locator-or-wait-condition",
+    "ownerHint": "automation",
+    "recommendedAction": "Check the current DOM and update the Page Object locator or wait condition."
+  },
+  "errorSummary": "TimeoutError: page.waitForEvent: Timeout 10000ms exceeded while waiting for event \"popup\"",
+  "locatorCandidates": [
+    {
+      "role": null,
+      "name": "",
+      "text": "지금 가입하고 최대 1만 2천원 할인 쿠폰 받아가세요!",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "배너 하루 안보기",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "회원가입",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "로그인",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "고객센터",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "마켓컬리",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "뷰티컬리",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "submit",
+      "text": "",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "0",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "카테고리",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "베스트",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "세일",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "패션",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "리빙",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "신상",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "특가/혜택",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "샛별·하루배송안내",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "닫기",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "광고",
+      "testId": null
+    }
+  ]
+}

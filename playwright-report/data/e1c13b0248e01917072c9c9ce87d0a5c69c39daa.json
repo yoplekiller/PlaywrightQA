@@ -1,0 +1,195 @@
+{
+  "testTitle": "무료배송(배송비 0원) 표기가 결제금액 패널과 상품 요약 줄에서 일치해야 한다 @regression",
+  "status": "failed",
+  "expectedStatus": "passed",
+  "url": "https://www.kurly.com/cart",
+  "pageTitle": "컬리 - 마켓컬리/뷰티컬리",
+  "classification": {
+    "failureType": "unknown",
+    "ownerHint": "needs-triage",
+    "recommendedAction": "Use trace, screenshot, video, and locator candidates to inspect the state right before failure."
+  },
+  "errorSummary": "Error: 결제금액 패널은 \"0원\", 상품 카드 요약은 \"무료\"로 배송비 표기가 서로 다릅니다.",
+  "locatorCandidates": [
+    {
+      "role": null,
+      "name": "",
+      "text": "지금 가입하고 최대 1만 2천원 할인 쿠폰 받아가세요!",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "배너 하루 안보기",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "회원가입",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "로그인",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "고객센터",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "마켓컬리",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "뷰티컬리",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "submit",
+      "text": "",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "1",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "카테고리",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "베스트",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "세일",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "패션",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "리빙",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "신상",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "특가/혜택",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "샛별·하루배송안내",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "선택삭제",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "[지엔씨푸드] 100% 과육 수박주스 1L",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "Stepper minus",
+      "text": "",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "Stepper plus",
+      "text": "",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "로그인",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "카카오톡 문의",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "1:1 문의",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "대량주문 문의",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "help@kurlycorp.com",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "회사소개",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "컬리소개영상",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "투자정보",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "인재채용",
+      "testId": null
+    }
+  ]
+}
