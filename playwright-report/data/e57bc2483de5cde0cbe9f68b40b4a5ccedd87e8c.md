@@ -1,0 +1,2760 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: src/tests/ui/ui_sort_price.spec.ts >> 가격 정렬 기능테스트 >> 가격 낮은순 정렬 기능 확인 @regression
+- Location: src/tests/ui/ui_sort_price.spec.ts:6:9
+
+# Error details
+
+```
+Error: expect(received).toBeLessThanOrEqual(expected)
+
+Expected: <= 1950
+Received:    3825
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - link "지금 가입하고 최대 1만 2천원 할인 쿠폰 받아가세요!" [ref=e6] [cursor=pointer]:
+        - /url: https://event.kurly.com/lego/event/2023/0911/join/coupon#lc112b1
+        - generic [ref=e7]: 지금 가입하고 최대 1만 2천원 할인 쿠폰 받아가세요!
+      - button "배너 하루 안보기" [ref=e8] [cursor=pointer]:
+        - img [ref=e9]
+        - generic [ref=e14]: 배너 하루 안보기
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - generic [ref=e18] [cursor=pointer]: 회원가입
+          - generic [ref=e20] [cursor=pointer]: 로그인
+          - generic [ref=e23] [cursor=pointer]: 고객센터
+        - generic [ref=e25]:
+          - generic [ref=e26]:
+            - link [ref=e27] [cursor=pointer]:
+              - /url: /main
+              - img [ref=e28]
+            - button "마켓컬리" [ref=e32] [cursor=pointer]
+            - button "뷰티컬리" [ref=e33] [cursor=pointer]
+          - generic [ref=e35]:
+            - textbox "검색어를 입력해주세요" [ref=e36]: 사과
+            - button "delete-search-keyword" [ref=e37] [cursor=pointer]
+            - button "submit" [ref=e38] [cursor=pointer]
+          - generic [ref=e39]:
+            - button [ref=e40] [cursor=pointer]:
+              - img [ref=e41]
+            - button [ref=e44] [cursor=pointer]:
+              - img [ref=e45]
+            - button "0" [ref=e47] [cursor=pointer]:
+              - img [ref=e48]
+              - generic [ref=e51]: "0"
+      - generic [ref=e53]:
+        - button "카테고리" [ref=e55] [cursor=pointer]:
+          - img [ref=e56]
+          - generic [ref=e58]: 카테고리
+        - generic [ref=e59]:
+          - list [ref=e60]:
+            - listitem [ref=e61]:
+              - link "베스트" [ref=e62] [cursor=pointer]:
+                - /url: /collection-groups/market-best-category?site=MARKET
+            - listitem [ref=e63]:
+              - link "세일" [ref=e64] [cursor=pointer]:
+                - /url: /collection-groups/market-sales-group?site=MARKET
+            - listitem [ref=e65]:
+              - link "패션" [ref=e66] [cursor=pointer]:
+                - /url: /panels/fashion?site=MARKET
+            - listitem [ref=e67]:
+              - link "리빙" [ref=e68] [cursor=pointer]:
+                - /url: /panels/living?site=MARKET
+            - listitem [ref=e69]:
+              - link "신상" [ref=e70] [cursor=pointer]:
+                - /url: /collection-groups/market-newproduct?site=MARKET
+            - listitem [ref=e71]:
+              - link "특가/혜택" [ref=e72] [cursor=pointer]:
+                - /url: /market-benefit
+          - link "샛별·하루 배송안내" [ref=e73] [cursor=pointer]:
+            - /url: /user-guide/delivery
+            - generic [ref=e74]: 샛별·하루
+            - generic [ref=e75]: 배송안내
+    - main [ref=e78]:
+      - heading "' 사과 '에 대한 검색결과" [level=1] [ref=e80]:
+        - text: "'"
+        - generic [ref=e81]: 사과
+        - text: "'에 대한 검색결과"
+      - generic [ref=e82]:
+        - generic [ref=e83]:
+          - generic [ref=e84]:
+            - heading "필터" [level=2] [ref=e85]
+            - button "초기화" [disabled]:
+              - img
+              - generic: 초기화
+          - list [ref=e87]:
+            - listitem [ref=e88]:
+              - button "Kurly Only 15" [ref=e89] [cursor=pointer]:
+                - generic [ref=e90]:
+                  - generic:
+                    - generic:
+                      - checkbox
+                      - paragraph
+                  - generic [ref=e91]: Kurly Only
+                  - generic [ref=e92]: "15"
+            - listitem [ref=e93]:
+              - button "아이콘멤버스혜택 11" [ref=e94] [cursor=pointer]:
+                - generic [ref=e95]:
+                  - generic:
+                    - generic:
+                      - checkbox
+                      - paragraph
+                  - generic [ref=e96]:
+                    - img "아이콘" [ref=e97]
+                    - text: 멤버스혜택
+                  - generic [ref=e98]: "11"
+            - listitem [ref=e99]:
+              - button "아이콘원더컬리 11" [ref=e100] [cursor=pointer]:
+                - generic [ref=e101]:
+                  - generic:
+                    - generic:
+                      - checkbox
+                      - paragraph
+                  - generic [ref=e102]:
+                    - img "아이콘" [ref=e103]
+                    - text: 원더컬리
+                  - generic [ref=e104]: "11"
+            - listitem [ref=e105]:
+              - button "쿠폰 26" [ref=e106] [cursor=pointer]:
+                - generic [ref=e107]:
+                  - generic:
+                    - generic:
+                      - checkbox
+                      - paragraph
+                  - generic [ref=e108]: 쿠폰
+                  - generic [ref=e109]: "26"
+          - generic [ref=e110]:
+            - generic [ref=e111]:
+              - button "카테고리" [ref=e112] [cursor=pointer]:
+                - generic [ref=e113]: 카테고리
+                - img [ref=e115]
+              - navigation [ref=e117]:
+                - listitem [ref=e118]:
+                  - button "면·양념·오일" [ref=e119] [cursor=pointer]:
+                    - generic [ref=e120]: 면·양념·오일
+                    - img [ref=e122]
+                - listitem [ref=e124]:
+                  - button "간식·과자·떡" [ref=e125] [cursor=pointer]:
+                    - generic [ref=e126]: 간식·과자·떡
+                    - img [ref=e128]
+                - listitem [ref=e130]:
+                  - button "유아동" [ref=e131] [cursor=pointer]:
+                    - generic [ref=e132]: 유아동
+                    - img [ref=e134]
+                - listitem [ref=e136]:
+                  - button "건강식품" [ref=e137] [cursor=pointer]:
+                    - generic [ref=e138]: 건강식품
+                    - img [ref=e140]
+                - listitem [ref=e142]:
+                  - button "생수·음료" [ref=e143] [cursor=pointer]:
+                    - generic [ref=e144]: 생수·음료
+                    - img [ref=e146]
+                - button "카테고리 더보기" [ref=e148] [cursor=pointer]:
+                  - text: 카테고리 더보기
+                  - img [ref=e149]
+            - generic [ref=e151]:
+              - button "가격" [ref=e152] [cursor=pointer]:
+                - generic [ref=e153]: 가격
+                - img [ref=e155]
+              - navigation [ref=e157]:
+                - listitem [ref=e158]:
+                  - link "4,000원 미만" [ref=e159] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=price%3A-4000
+                    - button "4,000원 미만" [ref=e160]:
+                      - generic [ref=e161]:
+                        - generic:
+                          - radio
+                          - paragraph
+                        - generic [ref=e162]: 4,000원 미만
+                - listitem [ref=e163]:
+                  - link "4,000원 ~ 9,000원" [ref=e164] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=price%3A4000-9000
+                    - button "4,000원 ~ 9,000원" [ref=e165]:
+                      - generic [ref=e166]:
+                        - generic:
+                          - radio
+                          - paragraph
+                        - generic [ref=e167]: 4,000원 ~ 9,000원
+                - listitem [ref=e168]:
+                  - link "9,000원 ~ 25,000원" [ref=e169] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=price%3A9000-25000
+                    - button "9,000원 ~ 25,000원" [ref=e170]:
+                      - generic [ref=e171]:
+                        - generic:
+                          - radio
+                          - paragraph
+                        - generic [ref=e172]: 9,000원 ~ 25,000원
+                - listitem [ref=e173]:
+                  - link "25,000원 이상" [ref=e174] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=price%3A25000-
+                    - button "25,000원 이상" [ref=e175]:
+                      - generic [ref=e176]:
+                        - generic:
+                          - radio
+                          - paragraph
+                        - generic [ref=e177]: 25,000원 이상
+            - generic [ref=e178]:
+              - button "브랜드" [ref=e179] [cursor=pointer]:
+                - generic [ref=e180]: 브랜드
+                - img [ref=e182]
+              - navigation [ref=e184]:
+                - list [ref=e185]:
+                  - listitem [ref=e186]:
+                    - button "가나다순" [ref=e187] [cursor=pointer]
+                  - listitem [ref=e188]:
+                    - button "상품 많은순" [ref=e189] [cursor=pointer]
+                - list [ref=e190]:
+                  - listitem [ref=e191]:
+                    - button "전체" [ref=e192] [cursor=pointer]
+                  - listitem [ref=e193]:
+                    - button "ㄱ" [ref=e194] [cursor=pointer]
+                  - listitem [ref=e195]:
+                    - button "ㄴ" [ref=e196] [cursor=pointer]
+                  - listitem [ref=e197]:
+                    - button "ㄷ" [ref=e198] [cursor=pointer]
+                  - listitem [ref=e199]:
+                    - button "ㄹ" [ref=e200] [cursor=pointer]
+                  - listitem [ref=e201]:
+                    - button "ㅁ" [ref=e202] [cursor=pointer]
+                  - listitem [ref=e203]:
+                    - button "ㅂ" [ref=e204] [cursor=pointer]
+                  - listitem [ref=e205]:
+                    - button "ㅅ" [ref=e206] [cursor=pointer]
+                  - listitem [ref=e207]:
+                    - button "ㅆ" [ref=e208] [cursor=pointer]
+                  - listitem [ref=e209]:
+                    - button "ㅇ" [ref=e210] [cursor=pointer]
+                  - listitem [ref=e211]:
+                    - button "ㅈ" [ref=e212] [cursor=pointer]
+                  - listitem [ref=e213]:
+                    - button "ㅊ" [ref=e214] [cursor=pointer]
+                  - listitem [ref=e215]:
+                    - button "ㅋ" [ref=e216] [cursor=pointer]
+                  - listitem [ref=e217]:
+                    - button "ㅌ" [ref=e218] [cursor=pointer]
+                  - listitem [ref=e219]:
+                    - button "ㅍ" [ref=e220] [cursor=pointer]
+                  - listitem [ref=e221]:
+                    - button "ㅎ" [ref=e222] [cursor=pointer]
+                  - listitem [ref=e223]:
+                    - button "A-Z" [ref=e224] [cursor=pointer]
+                - listitem [ref=e225]:
+                  - link "가그린 1" [ref=e226] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=brand%3Abr-2692
+                    - button "가그린 1" [ref=e227]:
+                      - generic [ref=e228]:
+                        - generic:
+                          - checkbox
+                          - paragraph
+                        - generic [ref=e229]: 가그린
+                        - generic [ref=e230]: "1"
+                - listitem [ref=e231]:
+                  - link "게푸 1" [ref=e232] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=brand%3Abr-6886
+                    - button "게푸 1" [ref=e233]:
+                      - generic [ref=e234]:
+                        - generic:
+                          - checkbox
+                          - paragraph
+                        - generic [ref=e235]: 게푸
+                        - generic [ref=e236]: "1"
+                - listitem [ref=e237]:
+                  - link "그레인온 1" [ref=e238] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=brand%3Abr-6934
+                    - button "그레인온 1" [ref=e239]:
+                      - generic [ref=e240]:
+                        - generic:
+                          - checkbox
+                          - paragraph
+                        - generic [ref=e241]: 그레인온
+                        - generic [ref=e242]: "1"
+                - listitem [ref=e243]:
+                  - link "글루어트 2" [ref=e244] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=brand%3Abr-8678
+                    - button "글루어트 2" [ref=e245]:
+                      - generic [ref=e246]:
+                        - generic:
+                          - checkbox
+                          - paragraph
+                        - generic [ref=e247]: 글루어트
+                        - generic [ref=e248]: "2"
+                - listitem [ref=e249]:
+                  - link "김소영 아티장의 안단테 1" [ref=e250] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=brand%3Abr-1262
+                    - button "김소영 아티장의 안단테 1" [ref=e251]:
+                      - generic [ref=e252]:
+                        - generic:
+                          - checkbox
+                          - paragraph
+                        - generic [ref=e253]: 김소영 아티장의 안단테
+                        - generic [ref=e254]: "1"
+                - listitem [ref=e255]:
+                  - link "김재식헬스푸드 1" [ref=e256] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=brand%3Abr-8078
+                    - button "김재식헬스푸드 1" [ref=e257]:
+                      - generic [ref=e258]:
+                        - generic:
+                          - checkbox
+                          - paragraph
+                        - generic [ref=e259]: 김재식헬스푸드
+                        - generic [ref=e260]: "1"
+                - listitem [ref=e261]:
+                  - link "김정환홍삼 1" [ref=e262] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=brand%3Abr-2165
+                    - button "김정환홍삼 1" [ref=e263]:
+                      - generic [ref=e264]:
+                        - generic:
+                          - checkbox
+                          - paragraph
+                        - generic [ref=e265]: 김정환홍삼
+                        - generic [ref=e266]: "1"
+                - listitem [ref=e267]:
+                  - link "꼬소꼬미 1" [ref=e268] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=brand%3Abr-6541
+                    - button "꼬소꼬미 1" [ref=e269]:
+                      - generic [ref=e270]:
+                        - generic:
+                          - checkbox
+                          - paragraph
+                        - generic [ref=e271]: 꼬소꼬미
+                        - generic [ref=e272]: "1"
+                - listitem [ref=e273]:
+                  - link "나뚜르 드 폼 1" [ref=e274] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=brand%3Abr-8925
+                    - button "나뚜르 드 폼 1" [ref=e275]:
+                      - generic [ref=e276]:
+                        - generic:
+                          - checkbox
+                          - paragraph
+                        - generic [ref=e277]: 나뚜르 드 폼
+                        - generic [ref=e278]: "1"
+                - listitem [ref=e279]:
+                  - link "남양 1" [ref=e280] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=brand%3Abr-8607
+                    - button "남양 1" [ref=e281]:
+                      - generic [ref=e282]:
+                        - generic:
+                          - checkbox
+                          - paragraph
+                        - generic [ref=e283]: 남양
+                        - generic [ref=e284]: "1"
+                - button "브랜드 더보기" [ref=e285] [cursor=pointer]:
+                  - text: 브랜드 더보기
+                  - img [ref=e286]
+            - generic [ref=e288]:
+              - button "유형" [ref=e289] [cursor=pointer]:
+                - generic [ref=e290]: 유형
+                - img [ref=e292]
+              - navigation [ref=e294]:
+                - listitem [ref=e295]:
+                  - link "Kurly Only 15" [ref=e296] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=type%3Akurly_only
+                    - button "Kurly Only 15" [ref=e297]:
+                      - generic [ref=e298]:
+                        - generic:
+                          - checkbox
+                          - paragraph
+                        - generic [ref=e299]: Kurly Only
+                        - generic [ref=e300]: "15"
+                - listitem [ref=e301]:
+                  - link "희소가치 프로젝트 13" [ref=e302] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=type%3Ascarcity_value
+                    - button "희소가치 프로젝트 13" [ref=e303]:
+                      - generic [ref=e304]:
+                        - generic:
+                          - checkbox
+                          - paragraph
+                        - generic [ref=e305]: 희소가치 프로젝트
+                        - generic [ref=e306]: "13"
+            - generic [ref=e307]:
+              - button "혜택" [ref=e308] [cursor=pointer]:
+                - generic [ref=e309]: 혜택
+                - img [ref=e311]
+              - navigation [ref=e313]:
+                - listitem [ref=e314]:
+                  - link "할인상품 258" [ref=e315] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=benefit%3Adiscount
+                    - button "할인상품 258" [ref=e316]:
+                      - generic [ref=e317]:
+                        - generic:
+                          - checkbox
+                          - paragraph
+                        - generic [ref=e318]: 할인상품
+                        - generic [ref=e319]: "258"
+                - listitem [ref=e320]:
+                  - link "쿠폰 26" [ref=e321] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=benefit%3Acoupon
+                    - button "쿠폰 26" [ref=e322]:
+                      - generic [ref=e323]:
+                        - generic:
+                          - checkbox
+                          - paragraph
+                        - generic [ref=e324]: 쿠폰
+                        - generic [ref=e325]: "26"
+            - generic [ref=e326]:
+              - button "출시" [ref=e327] [cursor=pointer]:
+                - generic [ref=e328]: 출시
+                - img [ref=e330]
+              - navigation [ref=e332]:
+                - listitem [ref=e333]:
+                  - link "신상품 20" [ref=e334] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=release_date%3Anew_product
+                    - button "신상품 20" [ref=e335]:
+                      - generic [ref=e336]:
+                        - generic:
+                          - checkbox
+                          - paragraph
+                        - generic [ref=e337]: 신상품
+                        - generic [ref=e338]: "20"
+            - generic [ref=e339]:
+              - button "포장타입" [ref=e340] [cursor=pointer]:
+                - generic [ref=e341]: 포장타입
+                - img [ref=e343]
+              - navigation [ref=e345]:
+                - listitem [ref=e346]:
+                  - link "상온 269" [ref=e347] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=storage_type%3Aambient_temperature
+                    - button "상온 269" [ref=e348]:
+                      - generic [ref=e349]:
+                        - generic:
+                          - checkbox
+                          - paragraph
+                        - generic [ref=e350]: 상온
+                        - generic [ref=e351]: "269"
+                - listitem [ref=e352]:
+                  - link "냉장 115" [ref=e353] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=storage_type%3Acold
+                    - button "냉장 115" [ref=e354]:
+                      - generic [ref=e355]:
+                        - generic:
+                          - checkbox
+                          - paragraph
+                        - generic [ref=e356]: 냉장
+                        - generic [ref=e357]: "115"
+                - listitem [ref=e358]:
+                  - link "냉동 18" [ref=e359] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=storage_type%3Afrozen
+                    - button "냉동 18" [ref=e360]:
+                      - generic [ref=e361]:
+                        - generic:
+                          - checkbox
+                          - paragraph
+                        - generic [ref=e362]: 냉동
+                        - generic [ref=e363]: "18"
+            - generic [ref=e364]:
+              - button "배송" [ref=e365] [cursor=pointer]:
+                - generic [ref=e366]: 배송
+                - img [ref=e368]
+              - navigation [ref=e370]:
+                - listitem [ref=e371]:
+                  - link "샛별배송 358" [ref=e372] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=delivery_type%3Adawn
+                    - button "샛별배송 358" [ref=e373]:
+                      - generic [ref=e374]:
+                        - generic:
+                          - checkbox
+                          - paragraph
+                        - generic [ref=e375]: 샛별배송
+                        - generic [ref=e376]: "358"
+                - listitem [ref=e377]:
+                  - link "판매자배송 40" [ref=e378] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=delivery_type%3Anormal_parcel
+                    - button "판매자배송 40" [ref=e379]:
+                      - generic [ref=e380]:
+                        - generic:
+                          - checkbox
+                          - paragraph
+                        - generic [ref=e381]: 판매자배송
+                        - generic [ref=e382]: "40"
+            - generic [ref=e383]:
+              - button "회원유형" [ref=e384] [cursor=pointer]:
+                - generic [ref=e385]: 회원유형
+                - img [ref=e387]
+              - navigation [ref=e389]:
+                - listitem [ref=e390]:
+                  - link "아이콘멤버스혜택 11" [ref=e391] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=user_group%3Amembers_benefit_10_r
+                    - button "아이콘멤버스혜택 11" [ref=e392]:
+                      - generic [ref=e393]:
+                        - generic:
+                          - checkbox
+                          - paragraph
+                        - generic [ref=e394]:
+                          - img "아이콘" [ref=e395]
+                          - text: 멤버스혜택
+                        - generic [ref=e396]: "11"
+            - generic [ref=e397]:
+              - button "프로모션" [ref=e398] [cursor=pointer]:
+                - generic [ref=e399]: 프로모션
+                - img [ref=e401]
+              - navigation [ref=e403]:
+                - listitem [ref=e404]:
+                  - link "아이콘원더컬리 11" [ref=e405] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=promotion%3Awonderkurly_202610
+                    - button "아이콘원더컬리 11" [ref=e406]:
+                      - generic [ref=e407]:
+                        - generic:
+                          - checkbox
+                          - paragraph
+                        - generic [ref=e408]:
+                          - img "아이콘" [ref=e409]
+                          - text: 원더컬리
+                        - generic [ref=e410]: "11"
+            - generic [ref=e411]:
+              - button "특정상품 제외" [ref=e412] [cursor=pointer]:
+                - generic [ref=e413]: 특정상품 제외
+                - img [ref=e415]
+              - navigation [ref=e417]:
+                - listitem [ref=e418]:
+                  - link "반려동물 상품 9" [ref=e419] [cursor=pointer]:
+                    - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2&filters=exclusion%3Aexclude_pet
+                    - button "반려동물 상품 9" [ref=e420]:
+                      - generic [ref=e421]:
+                        - generic:
+                          - checkbox
+                          - paragraph
+                        - generic [ref=e422]: 반려동물 상품
+                        - generic [ref=e423]: "9"
+        - generic [ref=e424]:
+          - generic [ref=e425]:
+            - generic [ref=e426]: 연관 검색어
+            - list [ref=e427]:
+              - listitem [ref=e428]:
+                - link "햇사과" [ref=e429] [cursor=pointer]:
+                  - /url: /search?sword=%ED%96%87%EC%82%AC%EA%B3%BC&site=MARKET
+              - listitem [ref=e430]:
+                - link "세척사과" [ref=e431] [cursor=pointer]:
+                  - /url: /search?sword=%EC%84%B8%EC%B2%99%EC%82%AC%EA%B3%BC&site=MARKET
+              - listitem [ref=e432]:
+                - link "조각사과" [ref=e433] [cursor=pointer]:
+                  - /url: /search?sword=%EC%A1%B0%EA%B0%81%EC%82%AC%EA%B3%BC&site=MARKET
+              - listitem [ref=e434]:
+                - link "배" [ref=e435] [cursor=pointer]:
+                  - /url: /search?sword=%EB%B0%B0&site=MARKET
+              - listitem [ref=e436]:
+                - link "제수용 사과" [ref=e437] [cursor=pointer]:
+                  - /url: /search?sword=%EC%A0%9C%EC%88%98%EC%9A%A9%20%EC%82%AC%EA%B3%BC&site=MARKET
+              - listitem [ref=e438]:
+                - link "부사" [ref=e439] [cursor=pointer]:
+                  - /url: /search?sword=%EB%B6%80%EC%82%AC&site=MARKET
+              - listitem [ref=e440]:
+                - link "사과세트" [ref=e441] [cursor=pointer]:
+                  - /url: /search?sword=%EC%82%AC%EA%B3%BC%EC%84%B8%ED%8A%B8&site=MARKET
+              - listitem [ref=e442]:
+                - link "사과 선물" [ref=e443] [cursor=pointer]:
+                  - /url: /search?sword=%EC%82%AC%EA%B3%BC%20%EC%84%A0%EB%AC%BC&site=MARKET
+              - listitem [ref=e444]:
+                - link "사과 1개" [ref=e445] [cursor=pointer]:
+                  - /url: /search?sword=%EC%82%AC%EA%B3%BC%201%EA%B0%9C&site=MARKET
+          - generic [ref=e446]:
+            - generic [ref=e447]: 총 398건
+            - list [ref=e448]:
+              - listitem [ref=e449]:
+                - link "추천순" [ref=e450] [cursor=pointer]:
+                  - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=4
+                - img [ref=e452]
+              - listitem [ref=e455]:
+                - link "신상품순" [ref=e456] [cursor=pointer]:
+                  - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=0
+              - listitem [ref=e457]:
+                - link "판매량순" [ref=e458] [cursor=pointer]:
+                  - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=1
+              - listitem [ref=e459]:
+                - link "혜택순" [ref=e460] [cursor=pointer]:
+                  - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=5
+              - listitem [ref=e461]:
+                - link "낮은 가격순" [active] [ref=e462]:
+                  - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=2
+              - listitem [ref=e463]:
+                - link "높은 가격순" [ref=e464] [cursor=pointer]:
+                  - /url: /search?sword=%EC%82%AC%EA%B3%BC&page=1&per_page=96&sorted_type=3
+          - generic [ref=e465]:
+            - link "담기 샛별배송 [롯데웰푸드] Premium 월드콘 160mL 2종 풍성한 토핑이 올라간 1,800원 75%450원~ 첫구매 최대혜택가 첫구매 최대혜택가 210" [ref=e466] [cursor=pointer]:
+              - /url: /goods/1002004088
+              - button "담기" [ref=e472]:
+                - img
+                - text: 담기
+              - generic [ref=e473]:
+                - generic [ref=e474]: 샛별배송
+                - generic [ref=e475]: "[롯데웰푸드] Premium 월드콘 160mL 2종"
+                - paragraph [ref=e476]: 풍성한 토핑이 올라간
+                - generic [ref=e477]:
+                  - generic [ref=e479]: 1,800원
+                  - generic [ref=e480]:
+                    - generic [ref=e481]: 75%
+                    - generic [ref=e482]: 450원~
+                - generic [ref=e483]:
+                  - generic [ref=e484]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e487]:
+                    - img [ref=e488]
+                - generic [ref=e491]:
+                  - img [ref=e493]
+                  - generic [ref=e498]: "210"
+            - link "19세성인인증 담기 샛별배송 [논알콜] 해외 인기 브랜드 논알콜 음료 낱개 골라 담기 22종 다양하게 즐기는 글로벌 논알콜 모음 1,100원 50%550원~ 첫구매 최대혜택가 첫구매 최대혜택가 380" [ref=e499] [cursor=pointer]:
+              - /url: /goods/1002180208
+              - paragraph [ref=e505]: 19세성인인증
+              - button "담기" [ref=e507]:
+                - img
+                - text: 담기
+              - generic [ref=e508]:
+                - generic [ref=e509]: 샛별배송
+                - generic [ref=e510]: "[논알콜] 해외 인기 브랜드 논알콜 음료 낱개 골라 담기 22종"
+                - paragraph [ref=e511]: 다양하게 즐기는 글로벌 논알콜 모음
+                - generic [ref=e512]:
+                  - generic [ref=e514]: 1,100원
+                  - generic [ref=e515]:
+                    - generic [ref=e516]: 50%
+                    - generic [ref=e517]: 550원~
+                - generic [ref=e518]:
+                  - generic [ref=e519]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e522]:
+                    - img [ref=e523]
+                - generic [ref=e526]:
+                  - img [ref=e528]
+                  - generic [ref=e533]: "380"
+            - link "담기 샛별배송 [소이조이] 대두로 만든 단백질 스낵 6종 (택1) 신규 플레이버 출시! 1,700원 55%760원 첫구매 최대혜택가 첫구매 최대혜택가 999+" [ref=e534] [cursor=pointer]:
+              - /url: /goods/1000791609
+              - button "담기" [ref=e540]:
+                - img
+                - text: 담기
+              - generic [ref=e541]:
+                - generic [ref=e542]: 샛별배송
+                - generic [ref=e543]: "[소이조이] 대두로 만든 단백질 스낵 6종 (택1)"
+                - paragraph [ref=e544]: 신규 플레이버 출시!
+                - generic [ref=e545]:
+                  - generic [ref=e547]: 1,700원
+                  - generic [ref=e548]:
+                    - generic [ref=e549]: 55%
+                    - generic [ref=e550]: 760원
+                - generic [ref=e551]:
+                  - generic [ref=e552]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e555]:
+                    - img [ref=e556]
+                - generic [ref=e559]:
+                  - img [ref=e561]
+                  - generic [ref=e566]: 999+
+            - link "담기 샛별배송 [피크닉] 젤리45g 3종, 택1 추억의 피크닛 맛 그대로 1,800원 50%900원 첫구매 최대혜택가 첫구매 최대혜택가 51" [ref=e567] [cursor=pointer]:
+              - /url: /goods/1002136267
+              - button "담기" [ref=e573]:
+                - img
+                - text: 담기
+              - generic [ref=e574]:
+                - generic [ref=e575]: 샛별배송
+                - generic [ref=e576]: "[피크닉] 젤리45g 3종, 택1"
+                - paragraph [ref=e577]: 추억의 피크닛 맛 그대로
+                - generic [ref=e578]:
+                  - generic [ref=e580]: 1,800원
+                  - generic [ref=e581]:
+                    - generic [ref=e582]: 50%
+                    - generic [ref=e583]: 900원
+                - generic [ref=e584]:
+                  - generic [ref=e585]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e588]:
+                    - img [ref=e589]
+                - generic [ref=e592]:
+                  - img [ref=e594]
+                  - generic [ref=e599]: "51"
+            - link "담기 샛별배송 [롯데] 군위 사과 시리즈 11종, 택1 군위군 사과 100%로 만든 가을 디저트 2,130원 57%905원~ 첫구매 최대혜택가 첫구매 최대혜택가 618" [ref=e600] [cursor=pointer]:
+              - /url: /goods/1002482468
+              - button "담기" [ref=e606]:
+                - img
+                - text: 담기
+              - generic [ref=e607]:
+                - generic [ref=e608]: 샛별배송
+                - generic [ref=e609]: "[롯데] 군위 사과 시리즈 11종, 택1"
+                - paragraph [ref=e610]: 군위군 사과 100%로 만든 가을 디저트
+                - generic [ref=e611]:
+                  - generic [ref=e613]: 2,130원
+                  - generic [ref=e614]:
+                    - generic [ref=e615]: 57%
+                    - generic [ref=e616]: 905원~
+                - generic [ref=e617]:
+                  - generic [ref=e618]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e621]:
+                    - img [ref=e622]
+                - generic [ref=e625]:
+                  - img [ref=e627]
+                  - generic [ref=e632]: "618"
+            - link "담기 샛별배송 [청정원] 사과식초 500ml 1,980원 50%990원 첫구매 최대혜택가 첫구매 최대혜택가 999+" [ref=e633] [cursor=pointer]:
+              - /url: /goods/1001489312
+              - button "담기" [ref=e639]:
+                - img
+                - text: 담기
+              - generic [ref=e640]:
+                - generic [ref=e641]: 샛별배송
+                - generic [ref=e642]: "[청정원] 사과식초 500ml"
+                - generic [ref=e643]:
+                  - generic [ref=e645]: 1,980원
+                  - generic [ref=e646]:
+                    - generic [ref=e647]: 50%
+                    - generic [ref=e648]: 990원
+                - generic [ref=e649]:
+                  - generic [ref=e650]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e653]:
+                    - img [ref=e654]
+                - generic [ref=e657]:
+                  - img [ref=e659]
+                  - generic [ref=e664]: 999+
+            - link "담기 샛별배송 [베베스트] 처음먹는 칼슘 현미팝 2종 유기농 현미를 사용해 안심 2,500원 60%995원 첫구매 최대혜택가 첫구매 최대혜택가 999+" [ref=e665] [cursor=pointer]:
+              - /url: /goods/5136681
+              - button "담기" [ref=e671]:
+                - img
+                - text: 담기
+              - generic [ref=e672]:
+                - generic [ref=e673]: 샛별배송
+                - generic [ref=e674]: "[베베스트] 처음먹는 칼슘 현미팝 2종"
+                - paragraph [ref=e675]: 유기농 현미를 사용해 안심
+                - generic [ref=e676]:
+                  - generic [ref=e678]: 2,500원
+                  - generic [ref=e679]:
+                    - generic [ref=e680]: 60%
+                    - generic [ref=e681]: 995원
+                - generic [ref=e682]:
+                  - generic [ref=e683]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e686]:
+                    - img [ref=e687]
+                - generic [ref=e690]:
+                  - img [ref=e692]
+                  - generic [ref=e697]: 999+
+            - link "담기 샛별배송 [청정원] 2배사과식초 500ml 사과식초의 스탠다드 2,180원 50%1,090원 첫구매 최대혜택가 첫구매 최대혜택가 76" [ref=e698] [cursor=pointer]:
+              - /url: /goods/1002051573
+              - button "담기" [ref=e704]:
+                - img
+                - text: 담기
+              - generic [ref=e705]:
+                - generic [ref=e706]: 샛별배송
+                - generic [ref=e707]: "[청정원] 2배사과식초 500ml"
+                - paragraph [ref=e708]: 사과식초의 스탠다드
+                - generic [ref=e709]:
+                  - generic [ref=e711]: 2,180원
+                  - generic [ref=e712]:
+                    - generic [ref=e713]: 50%
+                    - generic [ref=e714]: 1,090원
+                - generic [ref=e715]:
+                  - generic [ref=e716]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e719]:
+                    - img [ref=e720]
+                - generic [ref=e723]:
+                  - img [ref=e725]
+                  - generic [ref=e730]: "76"
+            - link "담기 샛별배송 [하리보] 새콤달콤 사우어 젤리 5종 골라담기 짜릿한 새콤함이 매력적인 2,180원 50%1,090원 첫구매 최대혜택가 첫구매 최대혜택가 999+" [ref=e731] [cursor=pointer]:
+              - /url: /goods/1001241414
+              - button "담기" [ref=e737]:
+                - img
+                - text: 담기
+              - generic [ref=e738]:
+                - generic [ref=e739]: 샛별배송
+                - generic [ref=e740]: "[하리보] 새콤달콤 사우어 젤리 5종 골라담기"
+                - paragraph [ref=e741]: 짜릿한 새콤함이 매력적인
+                - generic [ref=e742]:
+                  - generic [ref=e744]: 2,180원
+                  - generic [ref=e745]:
+                    - generic [ref=e746]: 50%
+                    - generic [ref=e747]: 1,090원
+                - generic [ref=e748]:
+                  - generic [ref=e749]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e752]:
+                    - img [ref=e753]
+                - generic [ref=e756]:
+                  - img [ref=e758]
+                  - generic [ref=e763]: 999+
+            - link "담기 샛별배송 [내아이애] 야채/과일링 7종 (택1) 원물의 맛을 그대로 담아낸 2,300원 50%1,150원~ 첫구매 최대혜택가 첫구매 최대혜택가 204" [ref=e764] [cursor=pointer]:
+              - /url: /goods/1001427208
+              - button "담기" [ref=e770]:
+                - img
+                - text: 담기
+              - generic [ref=e771]:
+                - generic [ref=e772]: 샛별배송
+                - generic [ref=e773]: "[내아이애] 야채/과일링 7종 (택1)"
+                - paragraph [ref=e774]: 원물의 맛을 그대로 담아낸
+                - generic [ref=e775]:
+                  - generic [ref=e777]: 2,300원
+                  - generic [ref=e778]:
+                    - generic [ref=e779]: 50%
+                    - generic [ref=e780]: 1,150원~
+                - generic [ref=e781]:
+                  - generic [ref=e782]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e785]:
+                    - img [ref=e786]
+                - generic [ref=e789]:
+                  - img [ref=e791]
+                  - generic [ref=e796]: "204"
+            - link "담기 샛별배송 [샘표] 100%순발효 사과식초 900ml 상큼한 매력이 살아있는 식초 2,480원 50%1,240원 첫구매 최대혜택가 첫구매 최대혜택가 252" [ref=e797] [cursor=pointer]:
+              - /url: /goods/1000896363
+              - button "담기" [ref=e803]:
+                - img
+                - text: 담기
+              - generic [ref=e804]:
+                - generic [ref=e805]: 샛별배송
+                - generic [ref=e806]: "[샘표] 100%순발효 사과식초 900ml"
+                - paragraph [ref=e807]: 상큼한 매력이 살아있는 식초
+                - generic [ref=e808]:
+                  - generic [ref=e810]: 2,480원
+                  - generic [ref=e811]:
+                    - generic [ref=e812]: 50%
+                    - generic [ref=e813]: 1,240원
+                - generic [ref=e814]:
+                  - generic [ref=e815]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e818]:
+                    - img [ref=e819]
+                - generic [ref=e822]:
+                  - img [ref=e824]
+                  - generic [ref=e829]: "252"
+            - link "담기 샛별배송 [파스퇴르] 바른목장 사과당근 요구르트 (100mL X 5개) 산뜻하고 상큼한 향미 3,250원 61%1,250원 첫구매 최대혜택가 첫구매 최대혜택가 495" [ref=e830] [cursor=pointer]:
+              - /url: /goods/1001468413
+              - button "담기" [ref=e836]:
+                - img
+                - text: 담기
+              - generic [ref=e837]:
+                - generic [ref=e838]: 샛별배송
+                - generic [ref=e839]: "[파스퇴르] 바른목장 사과당근 요구르트 (100mL X 5개)"
+                - paragraph [ref=e840]: 산뜻하고 상큼한 향미
+                - generic [ref=e841]:
+                  - generic [ref=e843]: 3,250원
+                  - generic [ref=e844]:
+                    - generic [ref=e845]: 61%
+                    - generic [ref=e846]: 1,250원
+                - generic [ref=e847]:
+                  - generic [ref=e848]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e851]:
+                    - img [ref=e852]
+                - generic [ref=e855]:
+                  - img [ref=e857]
+                  - generic [ref=e862]: "495"
+            - link "담기 샛별배송 [내아이애] 스스로 스틱 쌀과자 6종 (택1) 손에 쥐고 오래 먹기 좋은 2,500원 50%1,250원 첫구매 최대혜택가 첫구매 최대혜택가 352" [ref=e863] [cursor=pointer]:
+              - /url: /goods/1001427197
+              - button "담기" [ref=e869]:
+                - img
+                - text: 담기
+              - generic [ref=e870]:
+                - generic [ref=e871]: 샛별배송
+                - generic [ref=e872]: "[내아이애] 스스로 스틱 쌀과자 6종 (택1)"
+                - paragraph [ref=e873]: 손에 쥐고 오래 먹기 좋은
+                - generic [ref=e874]:
+                  - generic [ref=e876]: 2,500원
+                  - generic [ref=e877]:
+                    - generic [ref=e878]: 50%
+                    - generic [ref=e879]: 1,250원
+                - generic [ref=e880]:
+                  - generic [ref=e881]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e884]:
+                    - img [ref=e885]
+                - generic [ref=e888]:
+                  - img [ref=e890]
+                  - generic [ref=e895]: "352"
+            - link "담기 샛별배송 [에코맘의산골이유식] 산골과일참 4종 (택1) 신선한 원물만을 그대로 담은 2,600원 50%1,300원 첫구매 최대혜택가 첫구매 최대혜택가 999+" [ref=e896] [cursor=pointer]:
+              - /url: /goods/1000487438
+              - button "담기" [ref=e902]:
+                - img
+                - text: 담기
+              - generic [ref=e903]:
+                - generic [ref=e904]: 샛별배송
+                - generic [ref=e905]: "[에코맘의산골이유식] 산골과일참 4종 (택1)"
+                - paragraph [ref=e906]: 신선한 원물만을 그대로 담은
+                - generic [ref=e907]:
+                  - generic [ref=e909]: 2,600원
+                  - generic [ref=e910]:
+                    - generic [ref=e911]: 50%
+                    - generic [ref=e912]: 1,300원
+                - generic [ref=e913]:
+                  - generic [ref=e914]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e917]:
+                    - img [ref=e918]
+                - generic [ref=e921]:
+                  - img [ref=e923]
+                  - generic [ref=e928]: 999+
+            - link "담기 샛별배송 [베베쿡] 빼빼롱뻥 4종 (택1) 아이가 손에 쥐고 먹기 좋은 간식 3,100원 57%1,310원~ 첫구매 최대혜택가 첫구매 최대혜택가 499" [ref=e929] [cursor=pointer]:
+              - /url: /goods/1000562268
+              - button "담기" [ref=e935]:
+                - img
+                - text: 담기
+              - generic [ref=e936]:
+                - generic [ref=e937]: 샛별배송
+                - generic [ref=e938]: "[베베쿡] 빼빼롱뻥 4종 (택1)"
+                - paragraph [ref=e939]: 아이가 손에 쥐고 먹기 좋은 간식
+                - generic [ref=e940]:
+                  - generic [ref=e942]: 3,100원
+                  - generic [ref=e943]:
+                    - generic [ref=e944]: 57%
+                    - generic [ref=e945]: 1,310원~
+                - generic [ref=e946]:
+                  - generic [ref=e947]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e950]:
+                    - img [ref=e951]
+                - generic [ref=e954]:
+                  - img [ref=e956]
+                  - generic [ref=e961]: "499"
+            - link "담기 샛별배송 [맘마밀] 안심이유식 퓨레 6개월 3종 (택1) 맛과 식감을 배우는 2,680원 50%1,340원 첫구매 최대혜택가 첫구매 최대혜택가 532" [ref=e962] [cursor=pointer]:
+              - /url: /goods/1000423865
+              - button "담기" [ref=e968]:
+                - img
+                - text: 담기
+              - generic [ref=e969]:
+                - generic [ref=e970]: 샛별배송
+                - generic [ref=e971]: "[맘마밀] 안심이유식 퓨레 6개월 3종 (택1)"
+                - paragraph [ref=e972]: 맛과 식감을 배우는
+                - generic [ref=e973]:
+                  - generic [ref=e975]: 2,680원
+                  - generic [ref=e976]:
+                    - generic [ref=e977]: 50%
+                    - generic [ref=e978]: 1,340원
+                - generic [ref=e979]:
+                  - generic [ref=e980]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e983]:
+                    - img [ref=e984]
+                - generic [ref=e987]:
+                  - img [ref=e989]
+                  - generic [ref=e994]: "532"
+            - link "담기 샛별배송 [에코맘의산골이유식] 산골쌀참 3종 (택1) 유기농 재료로 깨끗하게 만든 과자 2,700원 50%1,350원 첫구매 최대혜택가 첫구매 최대혜택가 999+" [ref=e995] [cursor=pointer]:
+              - /url: /goods/1000487580
+              - button "담기" [ref=e1001]:
+                - img
+                - text: 담기
+              - generic [ref=e1002]:
+                - generic [ref=e1003]: 샛별배송
+                - generic [ref=e1004]: "[에코맘의산골이유식] 산골쌀참 3종 (택1)"
+                - paragraph [ref=e1005]: 유기농 재료로 깨끗하게 만든 과자
+                - generic [ref=e1006]:
+                  - generic [ref=e1008]: 2,700원
+                  - generic [ref=e1009]:
+                    - generic [ref=e1010]: 50%
+                    - generic [ref=e1011]: 1,350원
+                - generic [ref=e1012]:
+                  - generic [ref=e1013]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1016]:
+                    - img [ref=e1017]
+                - generic [ref=e1020]:
+                  - img [ref=e1022]
+                  - generic [ref=e1027]: 999+
+            - link "담기 샛별배송 [자연은] 과일주스 1.5L 10종 (택1) 맛있는 즐거움 2,780원 50%1,390원~ 첫구매 최대혜택가 첫구매 최대혜택가 999+" [ref=e1028] [cursor=pointer]:
+              - /url: /goods/1000228254
+              - button "담기" [ref=e1034]:
+                - img
+                - text: 담기
+              - generic [ref=e1035]:
+                - generic [ref=e1036]: 샛별배송
+                - generic [ref=e1037]: "[자연은] 과일주스 1.5L 10종 (택1)"
+                - paragraph [ref=e1038]: 맛있는 즐거움
+                - generic [ref=e1039]:
+                  - generic [ref=e1041]: 2,780원
+                  - generic [ref=e1042]:
+                    - generic [ref=e1043]: 50%
+                    - generic [ref=e1044]: 1,390원~
+                - generic [ref=e1045]:
+                  - generic [ref=e1046]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1049]:
+                    - img [ref=e1050]
+                - generic [ref=e1053]:
+                  - img [ref=e1055]
+                  - generic [ref=e1060]: 999+
+            - link "담기 샛별배송 [룰루맘] 유기농 쌀과자 떡뻥 3종 (택1) 유기농 원료로 만든 2,800원 50%1,400원 첫구매 최대혜택가 첫구매 최대혜택가 216" [ref=e1061] [cursor=pointer]:
+              - /url: /goods/1001433083
+              - button "담기" [ref=e1067]:
+                - img
+                - text: 담기
+              - generic [ref=e1068]:
+                - generic [ref=e1069]: 샛별배송
+                - generic [ref=e1070]: "[룰루맘] 유기농 쌀과자 떡뻥 3종 (택1)"
+                - paragraph [ref=e1071]: 유기농 원료로 만든
+                - generic [ref=e1072]:
+                  - generic [ref=e1074]: 2,800원
+                  - generic [ref=e1075]:
+                    - generic [ref=e1076]: 50%
+                    - generic [ref=e1077]: 1,400원
+                - generic [ref=e1078]:
+                  - generic [ref=e1079]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1082]:
+                    - img [ref=e1083]
+                - generic [ref=e1086]:
+                  - img [ref=e1088]
+                  - generic [ref=e1093]: "216"
+            - link "담기 샛별배송 [내아이애] 떡뻥 쌀과자 6종 (택1) 유기농 쌀로 만든 2,800원 50%1,400원 첫구매 최대혜택가 첫구매 최대혜택가 279" [ref=e1094] [cursor=pointer]:
+              - /url: /goods/1001427190
+              - button "담기" [ref=e1100]:
+                - img
+                - text: 담기
+              - generic [ref=e1101]:
+                - generic [ref=e1102]: 샛별배송
+                - generic [ref=e1103]: "[내아이애] 떡뻥 쌀과자 6종 (택1)"
+                - paragraph [ref=e1104]: 유기농 쌀로 만든
+                - generic [ref=e1105]:
+                  - generic [ref=e1107]: 2,800원
+                  - generic [ref=e1108]:
+                    - generic [ref=e1109]: 50%
+                    - generic [ref=e1110]: 1,400원
+                - generic [ref=e1111]:
+                  - generic [ref=e1112]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1115]:
+                    - img [ref=e1116]
+                - generic [ref=e1119]:
+                  - img [ref=e1121]
+                  - generic [ref=e1126]: "279"
+            - link "19세성인인증 상세보기 샛별배송 [전통주] 배혜정도가 호랑이 생막걸리 무아스파탐 (6도 750mL) 생쌀 발효법이 전하는 깊은 풍미_최소 구매수량 2병 3,300원 57%1,400원 첫구매 최대혜택가 첫구매 최대혜택가 999+" [ref=e1127] [cursor=pointer]:
+              - /url: /goods/1000005402
+              - paragraph [ref=e1133]: 19세성인인증
+              - button "상세보기" [ref=e1135]
+              - generic [ref=e1136]:
+                - generic [ref=e1137]: 샛별배송
+                - generic [ref=e1138]: "[전통주] 배혜정도가 호랑이 생막걸리 무아스파탐 (6도 750mL)"
+                - paragraph [ref=e1139]: 생쌀 발효법이 전하는 깊은 풍미_최소 구매수량 2병
+                - generic [ref=e1140]:
+                  - generic [ref=e1142]: 3,300원
+                  - generic [ref=e1143]:
+                    - generic [ref=e1144]: 57%
+                    - generic [ref=e1145]: 1,400원
+                - generic [ref=e1146]:
+                  - generic [ref=e1147]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1150]:
+                    - img [ref=e1151]
+                - generic [ref=e1154]:
+                  - img [ref=e1156]
+                  - generic [ref=e1161]: 999+
+            - link "담기 샛별배송 [오가닉스토리] 봉지 과자 골라담기 10종 인기 간식만 골라담은 2,800원 50%1,400원~ 첫구매 최대혜택가 첫구매 최대혜택가 330" [ref=e1162] [cursor=pointer]:
+              - /url: /goods/1001395062
+              - button "담기" [ref=e1168]:
+                - img
+                - text: 담기
+              - generic [ref=e1169]:
+                - generic [ref=e1170]: 샛별배송
+                - generic [ref=e1171]: "[오가닉스토리] 봉지 과자 골라담기 10종"
+                - paragraph [ref=e1172]: 인기 간식만 골라담은
+                - generic [ref=e1173]:
+                  - generic [ref=e1175]: 2,800원
+                  - generic [ref=e1176]:
+                    - generic [ref=e1177]: 50%
+                    - generic [ref=e1178]: 1,400원~
+                - generic [ref=e1179]:
+                  - generic [ref=e1180]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1183]:
+                    - img [ref=e1184]
+                - generic [ref=e1187]:
+                  - img [ref=e1189]
+                  - generic [ref=e1194]: "330"
+            - link "담기 샛별배송 [오가닉스토리] 유기농 퍼프 4종 유기농 원료로만 만들어 안심할 수 있는 2,800원 50%1,400원 첫구매 최대혜택가 첫구매 최대혜택가 159" [ref=e1195] [cursor=pointer]:
+              - /url: /goods/1001362010
+              - button "담기" [ref=e1201]:
+                - img
+                - text: 담기
+              - generic [ref=e1202]:
+                - generic [ref=e1203]: 샛별배송
+                - generic [ref=e1204]: "[오가닉스토리] 유기농 퍼프 4종"
+                - paragraph [ref=e1205]: 유기농 원료로만 만들어 안심할 수 있는
+                - generic [ref=e1206]:
+                  - generic [ref=e1208]: 2,800원
+                  - generic [ref=e1209]:
+                    - generic [ref=e1210]: 50%
+                    - generic [ref=e1211]: 1,400원
+                - generic [ref=e1212]:
+                  - generic [ref=e1213]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1216]:
+                    - img [ref=e1217]
+                - generic [ref=e1220]:
+                  - img [ref=e1222]
+                  - generic [ref=e1227]: "159"
+            - link "담기 샛별배송 [청정원] 사과식초 900ml 직접 담가 상큼하게 발효한 3,280원 56%1,440원 첫구매 최대혜택가 첫구매 최대혜택가 31" [ref=e1228] [cursor=pointer]:
+              - /url: /goods/1002051720
+              - button "담기" [ref=e1234]:
+                - img
+                - text: 담기
+              - generic [ref=e1235]:
+                - generic [ref=e1236]: 샛별배송
+                - generic [ref=e1237]: "[청정원] 사과식초 900ml"
+                - paragraph [ref=e1238]: 직접 담가 상큼하게 발효한
+                - generic [ref=e1239]:
+                  - generic [ref=e1241]: 3,280원
+                  - generic [ref=e1242]:
+                    - generic [ref=e1243]: 56%
+                    - generic [ref=e1244]: 1,440원
+                - generic [ref=e1245]:
+                  - generic [ref=e1246]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1249]:
+                    - img [ref=e1250]
+                - generic [ref=e1253]:
+                  - img [ref=e1255]
+                  - generic [ref=e1260]: "31"
+            - link "담기 샛별배송 [베베스트] 처음에 쌀떡뻥 20g 3종, 택1 100% 유기농 처음먹는 쌀과자 3,900원 63%1,440원 첫구매 최대혜택가 첫구매 최대혜택가 36" [ref=e1261] [cursor=pointer]:
+              - /url: /goods/1002049405
+              - button "담기" [ref=e1267]:
+                - img
+                - text: 담기
+              - generic [ref=e1268]:
+                - generic [ref=e1269]: 샛별배송
+                - generic [ref=e1270]: "[베베스트] 처음에 쌀떡뻥 20g 3종, 택1"
+                - paragraph [ref=e1271]: 100% 유기농 처음먹는 쌀과자
+                - generic [ref=e1272]:
+                  - generic [ref=e1274]: 3,900원
+                  - generic [ref=e1275]:
+                    - generic [ref=e1276]: 63%
+                    - generic [ref=e1277]: 1,440원
+                - generic [ref=e1278]:
+                  - generic [ref=e1279]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1282]:
+                    - img [ref=e1283]
+                - generic [ref=e1286]:
+                  - img [ref=e1288]
+                  - generic [ref=e1293]: "36"
+            - link "담기 샛별배송 [오가닉스토리] 유기농 쌀로만든 떡튀밥 6종 종류별로 다채롭게 즐기는 영양 간식 2,900원 50%1,450원~ 첫구매 최대혜택가 첫구매 최대혜택가 678" [ref=e1294] [cursor=pointer]:
+              - /url: /goods/1001362025
+              - button "담기" [ref=e1300]:
+                - img
+                - text: 담기
+              - generic [ref=e1301]:
+                - generic [ref=e1302]: 샛별배송
+                - generic [ref=e1303]: "[오가닉스토리] 유기농 쌀로만든 떡튀밥 6종"
+                - paragraph [ref=e1304]: 종류별로 다채롭게 즐기는 영양 간식
+                - generic [ref=e1305]:
+                  - generic [ref=e1307]: 2,900원
+                  - generic [ref=e1308]:
+                    - generic [ref=e1309]: 50%
+                    - generic [ref=e1310]: 1,450원~
+                - generic [ref=e1311]:
+                  - generic [ref=e1312]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1315]:
+                    - img [ref=e1316]
+                - generic [ref=e1319]:
+                  - img [ref=e1321]
+                  - generic [ref=e1326]: "678"
+            - link "담기 샛별배송 [파스퇴르] 유기농 어린이 주스 사과당근 125mL 2종 (택1) 3,980원 62%1,490원~ 첫구매 최대혜택가 첫구매 최대혜택가 132" [ref=e1327] [cursor=pointer]:
+              - /url: /goods/1001538459
+              - button "담기" [ref=e1333]:
+                - img
+                - text: 담기
+              - generic [ref=e1334]:
+                - generic [ref=e1335]: 샛별배송
+                - generic [ref=e1336]: "[파스퇴르] 유기농 어린이 주스 사과당근 125mL 2종 (택1)"
+                - generic [ref=e1337]:
+                  - generic [ref=e1339]: 3,980원
+                  - generic [ref=e1340]:
+                    - generic [ref=e1341]: 62%
+                    - generic [ref=e1342]: 1,490원~
+                - generic [ref=e1343]:
+                  - generic [ref=e1344]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1347]:
+                    - img [ref=e1348]
+                - generic [ref=e1351]:
+                  - img [ref=e1353]
+                  - generic [ref=e1358]: "132"
+            - link "담기 샛별배송 [파스퇴르] 유기농 어린이 주스 사과배 125mL 2종 (택1) 3,980원 62%1,490원~ 첫구매 최대혜택가 첫구매 최대혜택가 106" [ref=e1359] [cursor=pointer]:
+              - /url: /goods/1001538462
+              - button "담기" [ref=e1365]:
+                - img
+                - text: 담기
+              - generic [ref=e1366]:
+                - generic [ref=e1367]: 샛별배송
+                - generic [ref=e1368]: "[파스퇴르] 유기농 어린이 주스 사과배 125mL 2종 (택1)"
+                - generic [ref=e1369]:
+                  - generic [ref=e1371]: 3,980원
+                  - generic [ref=e1372]:
+                    - generic [ref=e1373]: 62%
+                    - generic [ref=e1374]: 1,490원~
+                - generic [ref=e1375]:
+                  - generic [ref=e1376]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1379]:
+                    - img [ref=e1380]
+                - generic [ref=e1383]:
+                  - img [ref=e1385]
+                  - generic [ref=e1390]: "106"
+            - link "담기 샛별배송 [엘보틀] 스파이크 제로 2종, 택1 무너진 혈당 밸런스 오늘의 무게를 덜어주는 엘보틀 스파이크 제로 3,500원 57%1,495원~ 첫구매 최대혜택가 첫구매 최대혜택가" [ref=e1391] [cursor=pointer]:
+              - /url: /goods/1002173154
+              - button "담기" [ref=e1397]:
+                - img
+                - text: 담기
+              - generic [ref=e1398]:
+                - generic [ref=e1399]: 샛별배송
+                - generic [ref=e1400]: "[엘보틀] 스파이크 제로 2종, 택1"
+                - paragraph [ref=e1401]: 무너진 혈당 밸런스 오늘의 무게를 덜어주는 엘보틀 스파이크 제로
+                - generic [ref=e1402]:
+                  - generic [ref=e1404]: 3,500원
+                  - generic [ref=e1405]:
+                    - generic [ref=e1406]: 57%
+                    - generic [ref=e1407]: 1,495원~
+                - generic [ref=e1408]:
+                  - generic [ref=e1409]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1412]:
+                    - img [ref=e1413]
+            - link "담기 샛별배송 [청정원] 정통사과식초 470ml 3,180원 52%1,500원 첫구매 최대혜택가 첫구매 최대혜택가 109" [ref=e1416] [cursor=pointer]:
+              - /url: /goods/1001489297
+              - button "담기" [ref=e1422]:
+                - img
+                - text: 담기
+              - generic [ref=e1423]:
+                - generic [ref=e1424]: 샛별배송
+                - generic [ref=e1425]: "[청정원] 정통사과식초 470ml"
+                - generic [ref=e1426]:
+                  - generic [ref=e1428]: 3,180원
+                  - generic [ref=e1429]:
+                    - generic [ref=e1430]: 52%
+                    - generic [ref=e1431]: 1,500원
+                - generic [ref=e1432]:
+                  - generic [ref=e1433]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1436]:
+                    - img [ref=e1437]
+                - generic [ref=e1440]:
+                  - img [ref=e1442]
+                  - generic [ref=e1447]: "109"
+            - link "담기 샛별배송 [리틀스푼] 요거트큐브 요거랑 4종 사르르 녹는 새콤달콤 3,000원 50%1,500원 첫구매 최대혜택가 첫구매 최대혜택가 328" [ref=e1448] [cursor=pointer]:
+              - /url: /goods/1001403176
+              - button "담기" [ref=e1454]:
+                - img
+                - text: 담기
+              - generic [ref=e1455]:
+                - generic [ref=e1456]: 샛별배송
+                - generic [ref=e1457]: "[리틀스푼] 요거트큐브 요거랑 4종"
+                - paragraph [ref=e1458]: 사르르 녹는 새콤달콤
+                - generic [ref=e1459]:
+                  - generic [ref=e1461]: 3,000원
+                  - generic [ref=e1462]:
+                    - generic [ref=e1463]: 50%
+                    - generic [ref=e1464]: 1,500원
+                - generic [ref=e1465]:
+                  - generic [ref=e1466]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1469]:
+                    - img [ref=e1470]
+                - generic [ref=e1473]:
+                  - img [ref=e1475]
+                  - generic [ref=e1480]: "328"
+            - link "담기 샛별배송 [백설] 사과식초900ml 3,080원 50%1,540원 첫구매 최대혜택가 첫구매 최대혜택가" [ref=e1481] [cursor=pointer]:
+              - /url: /goods/1001539819
+              - button "담기" [ref=e1487]:
+                - img
+                - text: 담기
+              - generic [ref=e1488]:
+                - generic [ref=e1489]: 샛별배송
+                - generic [ref=e1490]: "[백설] 사과식초900ml"
+                - generic [ref=e1491]:
+                  - generic [ref=e1493]: 3,080원
+                  - generic [ref=e1494]:
+                    - generic [ref=e1495]: 50%
+                    - generic [ref=e1496]: 1,540원
+                - generic [ref=e1497]:
+                  - generic [ref=e1498]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1501]:
+                    - img [ref=e1502]
+            - link "담기 샛별배송 [파인] 세가지맛 과일캔디 2종 (택1) 품종별로 다양하게 맛보는 3,150원 50%1,575원 첫구매 최대혜택가 첫구매 최대혜택가 460" [ref=e1505] [cursor=pointer]:
+              - /url: /goods/1000872639
+              - button "담기" [ref=e1511]:
+                - img
+                - text: 담기
+              - generic [ref=e1512]:
+                - generic [ref=e1513]: 샛별배송
+                - generic [ref=e1514]: "[파인] 세가지맛 과일캔디 2종 (택1)"
+                - paragraph [ref=e1515]: 품종별로 다양하게 맛보는
+                - generic [ref=e1516]:
+                  - generic [ref=e1518]: 3,150원
+                  - generic [ref=e1519]:
+                    - generic [ref=e1520]: 50%
+                    - generic [ref=e1521]: 1,575원
+                - generic [ref=e1522]:
+                  - generic [ref=e1523]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1526]:
+                    - img [ref=e1527]
+                - generic [ref=e1530]:
+                  - img [ref=e1532]
+                  - generic [ref=e1537]: "460"
+            - link "담기 샛별배송 [에코맘의산골이유식] 산골 떡뻥 3종 (택1) 유기농 쌀로 만들어 안심인 3,200원 50%1,600원 첫구매 최대혜택가 첫구매 최대혜택가 604" [ref=e1538] [cursor=pointer]:
+              - /url: /goods/1001431093
+              - button "담기" [ref=e1544]:
+                - img
+                - text: 담기
+              - generic [ref=e1545]:
+                - generic [ref=e1546]: 샛별배송
+                - generic [ref=e1547]: "[에코맘의산골이유식] 산골 떡뻥 3종 (택1)"
+                - paragraph [ref=e1548]: 유기농 쌀로 만들어 안심인
+                - generic [ref=e1549]:
+                  - generic [ref=e1551]: 3,200원
+                  - generic [ref=e1552]:
+                    - generic [ref=e1553]: 50%
+                    - generic [ref=e1554]: 1,600원
+                - generic [ref=e1555]:
+                  - generic [ref=e1556]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1559]:
+                    - img [ref=e1560]
+                - generic [ref=e1563]:
+                  - img [ref=e1565]
+                  - generic [ref=e1570]: "604"
+            - link "담기 샛별배송 [리틀스푼] 싱싱과일칩 2종 국내산 과일을 동결건조한 3,300원 50%1,650원 첫구매 최대혜택가 첫구매 최대혜택가 290" [ref=e1571] [cursor=pointer]:
+              - /url: /goods/1001403180
+              - button "담기" [ref=e1577]:
+                - img
+                - text: 담기
+              - generic [ref=e1578]:
+                - generic [ref=e1579]: 샛별배송
+                - generic [ref=e1580]: "[리틀스푼] 싱싱과일칩 2종"
+                - paragraph [ref=e1581]: 국내산 과일을 동결건조한
+                - generic [ref=e1582]:
+                  - generic [ref=e1584]: 3,300원
+                  - generic [ref=e1585]:
+                    - generic [ref=e1586]: 50%
+                    - generic [ref=e1587]: 1,650원
+                - generic [ref=e1588]:
+                  - generic [ref=e1589]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1592]:
+                    - img [ref=e1593]
+                - generic [ref=e1596]:
+                  - img [ref=e1598]
+                  - generic [ref=e1603]: "290"
+            - link "담기 샛별배송 [저스트그린] 과일칩 3종, 택1 과일 본연의 맛을 담은 3,900원 57%1,658원 첫구매 최대혜택가 첫구매 최대혜택가 70" [ref=e1604] [cursor=pointer]:
+              - /url: /goods/1002373972
+              - button "담기" [ref=e1610]:
+                - img
+                - text: 담기
+              - generic [ref=e1611]:
+                - generic [ref=e1612]: 샛별배송
+                - generic [ref=e1613]: "[저스트그린] 과일칩 3종, 택1"
+                - paragraph [ref=e1614]: 과일 본연의 맛을 담은
+                - generic [ref=e1615]:
+                  - generic [ref=e1617]: 3,900원
+                  - generic [ref=e1618]:
+                    - generic [ref=e1619]: 57%
+                    - generic [ref=e1620]: 1,658원
+                - generic [ref=e1621]:
+                  - generic [ref=e1622]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1625]:
+                    - img [ref=e1626]
+                - generic [ref=e1629]:
+                  - img [ref=e1631]
+                  - generic [ref=e1636]: "70"
+            - link "담기 샛별배송 [남양유업] 1000플러스 프로바이오틱 드링크요거트 2종 (130mL X 8개) 하루 한 병으로 가볍게 채우는 1000억 프로바이오틱스의 활력 3,980원 58%1,660원 첫구매 최대혜택가 첫구매 최대혜택가 135" [ref=e1637] [cursor=pointer]:
+              - /url: /goods/1002209663
+              - button "담기" [ref=e1643]:
+                - img
+                - text: 담기
+              - generic [ref=e1644]:
+                - generic [ref=e1645]: 샛별배송
+                - generic [ref=e1646]: "[남양유업] 1000플러스 프로바이오틱 드링크요거트 2종 (130mL X 8개)"
+                - paragraph [ref=e1647]: 하루 한 병으로 가볍게 채우는 1000억 프로바이오틱스의 활력
+                - generic [ref=e1648]:
+                  - generic [ref=e1650]: 3,980원
+                  - generic [ref=e1651]:
+                    - generic [ref=e1652]: 58%
+                    - generic [ref=e1653]: 1,660원
+                - generic [ref=e1654]:
+                  - generic [ref=e1655]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1658]:
+                    - img [ref=e1659]
+                - generic [ref=e1662]:
+                  - img [ref=e1664]
+                  - generic [ref=e1669]: "135"
+            - link "담기 샛별배송 [해태] 후렌치파이 192g 2종 (택1) 국산 과일 잼을 품은 64겹 파이 3,580원 52%1,695원 첫구매 최대혜택가 첫구매 최대혜택가 999+" [ref=e1670] [cursor=pointer]:
+              - /url: /goods/1000204271
+              - button "담기" [ref=e1676]:
+                - img
+                - text: 담기
+              - generic [ref=e1677]:
+                - generic [ref=e1678]: 샛별배송
+                - generic [ref=e1679]: "[해태] 후렌치파이 192g 2종 (택1)"
+                - paragraph [ref=e1680]: 국산 과일 잼을 품은 64겹 파이
+                - generic [ref=e1681]:
+                  - generic [ref=e1683]: 3,580원
+                  - generic [ref=e1684]:
+                    - generic [ref=e1685]: 52%
+                    - generic [ref=e1686]: 1,695원
+                - generic [ref=e1687]:
+                  - generic [ref=e1688]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1691]:
+                    - img [ref=e1692]
+                - generic [ref=e1695]:
+                  - img [ref=e1697]
+                  - generic [ref=e1702]: 999+
+            - link "담기 샛별배송 [백설] 건강발효 사과식초 오직 과일과 물만 담아낸 3,400원 50%1,700원 첫구매 최대혜택가 첫구매 최대혜택가 999+" [ref=e1703] [cursor=pointer]:
+              - /url: /goods/5052909
+              - button "담기" [ref=e1709]:
+                - img
+                - text: 담기
+              - generic [ref=e1710]:
+                - generic [ref=e1711]: 샛별배송
+                - generic [ref=e1712]: "[백설] 건강발효 사과식초"
+                - paragraph [ref=e1713]: 오직 과일과 물만 담아낸
+                - generic [ref=e1714]:
+                  - generic [ref=e1716]: 3,400원
+                  - generic [ref=e1717]:
+                    - generic [ref=e1718]: 50%
+                    - generic [ref=e1719]: 1,700원
+                - generic [ref=e1720]:
+                  - generic [ref=e1721]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1724]:
+                    - img [ref=e1725]
+                - generic [ref=e1728]:
+                  - img [ref=e1730]
+                  - generic [ref=e1735]: 999+
+            - link "담기 샛별배송 [에코맘의산골이유식] 산골푸딩 3종 (택1) 국내산 과일의 상큼함이 그대로 3,400원 50%1,700원 첫구매 최대혜택가 첫구매 최대혜택가 999+" [ref=e1736] [cursor=pointer]:
+              - /url: /goods/1000487833
+              - button "담기" [ref=e1742]:
+                - img
+                - text: 담기
+              - generic [ref=e1743]:
+                - generic [ref=e1744]: 샛별배송
+                - generic [ref=e1745]: "[에코맘의산골이유식] 산골푸딩 3종 (택1)"
+                - paragraph [ref=e1746]: 국내산 과일의 상큼함이 그대로
+                - generic [ref=e1747]:
+                  - generic [ref=e1749]: 3,400원
+                  - generic [ref=e1750]:
+                    - generic [ref=e1751]: 50%
+                    - generic [ref=e1752]: 1,700원
+                - generic [ref=e1753]:
+                  - generic [ref=e1754]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1757]:
+                    - img [ref=e1758]
+                - generic [ref=e1761]:
+                  - img [ref=e1763]
+                  - generic [ref=e1768]: 999+
+            - link "담기 샛별배송 [청우] 그랑쉘 사과 195g (10입) 기분좋은 향긋함을 품은 쿠키 4,280원 60%1,712원 첫구매 최대혜택가 첫구매 최대혜택가 999+" [ref=e1769] [cursor=pointer]:
+              - /url: /goods/5061289
+              - button "담기" [ref=e1775]:
+                - img
+                - text: 담기
+              - generic [ref=e1776]:
+                - generic [ref=e1777]: 샛별배송
+                - generic [ref=e1778]: "[청우] 그랑쉘 사과 195g (10입)"
+                - paragraph [ref=e1779]: 기분좋은 향긋함을 품은 쿠키
+                - generic [ref=e1780]:
+                  - generic [ref=e1782]: 4,280원
+                  - generic [ref=e1783]:
+                    - generic [ref=e1784]: 60%
+                    - generic [ref=e1785]: 1,712원
+                - generic [ref=e1786]:
+                  - generic [ref=e1787]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1790]:
+                    - img [ref=e1791]
+                - generic [ref=e1794]:
+                  - img [ref=e1796]
+                  - generic [ref=e1801]: 999+
+            - link "담기 샛별배송 [남양유업] 맛있는 드링킹요거트 사과 735mL 신선한 요거트에 상큼한 사과 과즙을 더한 대용량 모닝 드링크 4,080원 57%1,740원 첫구매 최대혜택가 첫구매 최대혜택가 70" [ref=e1802] [cursor=pointer]:
+              - /url: /goods/1002209675
+              - button "담기" [ref=e1808]:
+                - img
+                - text: 담기
+              - generic [ref=e1809]:
+                - generic [ref=e1810]: 샛별배송
+                - generic [ref=e1811]: "[남양유업] 맛있는 드링킹요거트 사과 735mL"
+                - paragraph [ref=e1812]: 신선한 요거트에 상큼한 사과 과즙을 더한 대용량 모닝 드링크
+                - generic [ref=e1813]:
+                  - generic [ref=e1815]: 4,080원
+                  - generic [ref=e1816]:
+                    - generic [ref=e1817]: 57%
+                    - generic [ref=e1818]: 1,740원
+                - generic [ref=e1819]:
+                  - generic [ref=e1820]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1823]:
+                    - img [ref=e1824]
+                - generic [ref=e1827]:
+                  - img [ref=e1829]
+                  - generic [ref=e1834]: "70"
+            - link "담기 샛별배송 [풀무원다논] 액티비아 스무디 골드키위사과 (150mL X 4개) 가볍게 즐기는 과일 스무디 4,980원 65%1,740원 첫구매 최대혜택가 첫구매 최대혜택가 999+" [ref=e1835] [cursor=pointer]:
+              - /url: /goods/5141789
+              - button "담기" [ref=e1841]:
+                - img
+                - text: 담기
+              - generic [ref=e1842]:
+                - generic [ref=e1843]: 샛별배송
+                - generic [ref=e1844]: "[풀무원다논] 액티비아 스무디 골드키위사과 (150mL X 4개)"
+                - paragraph [ref=e1845]: 가볍게 즐기는 과일 스무디
+                - generic [ref=e1846]:
+                  - generic [ref=e1848]: 4,980원
+                  - generic [ref=e1849]:
+                    - generic [ref=e1850]: 65%
+                    - generic [ref=e1851]: 1,740원
+                - generic [ref=e1852]:
+                  - generic [ref=e1853]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1856]:
+                    - img [ref=e1857]
+                - generic [ref=e1860]:
+                  - img [ref=e1862]
+                  - generic [ref=e1867]: 999+
+            - link "담기 샛별배송 [요플레] 바이오 플레 2종 (130mL X 8개) (택1) 프로바이오틱스를 함유한 발효유 3,480원 50%1,740원 첫구매 최대혜택가 첫구매 최대혜택가 9,999+" [ref=e1868] [cursor=pointer]:
+              - /url: /goods/5104154
+              - button "담기" [ref=e1874]:
+                - img
+                - text: 담기
+              - generic [ref=e1875]:
+                - generic [ref=e1876]: 샛별배송
+                - generic [ref=e1877]: "[요플레] 바이오 플레 2종 (130mL X 8개) (택1)"
+                - paragraph [ref=e1878]: 프로바이오틱스를 함유한 발효유
+                - generic [ref=e1879]:
+                  - generic [ref=e1881]: 3,480원
+                  - generic [ref=e1882]:
+                    - generic [ref=e1883]: 50%
+                    - generic [ref=e1884]: 1,740원
+                - generic [ref=e1885]:
+                  - generic [ref=e1886]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1889]:
+                    - img [ref=e1890]
+                - generic [ref=e1893]:
+                  - img [ref=e1895]
+                  - generic [ref=e1900]: 9,999+
+            - link "담기 샛별배송 [청정원] 2배사과식초 900ml 3,770원 53%1,750원 첫구매 최대혜택가 첫구매 최대혜택가 61" [ref=e1901] [cursor=pointer]:
+              - /url: /goods/1001489285
+              - button "담기" [ref=e1907]:
+                - img
+                - text: 담기
+              - generic [ref=e1908]:
+                - generic [ref=e1909]: 샛별배송
+                - generic [ref=e1910]: "[청정원] 2배사과식초 900ml"
+                - generic [ref=e1911]:
+                  - generic [ref=e1913]: 3,770원
+                  - generic [ref=e1914]:
+                    - generic [ref=e1915]: 53%
+                    - generic [ref=e1916]: 1,750원
+                - generic [ref=e1917]:
+                  - generic [ref=e1918]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1921]:
+                    - img [ref=e1922]
+                - generic [ref=e1925]:
+                  - img [ref=e1927]
+                  - generic [ref=e1932]: "61"
+            - link "담기 샛별배송 [토니모리] 포켓 핸드 크림 30ml 3종 (택1) 수시로 바르는 미니 핸드 크림 7,900원 77%1,750원 첫구매 최대혜택가 첫구매 최대혜택가 153" [ref=e1933] [cursor=pointer]:
+              - /url: /goods/1000968265
+              - button "담기" [ref=e1939]:
+                - img
+                - text: 담기
+              - generic [ref=e1940]:
+                - generic [ref=e1941]: 샛별배송
+                - generic [ref=e1942]: "[토니모리] 포켓 핸드 크림 30ml 3종 (택1)"
+                - paragraph [ref=e1943]: 수시로 바르는 미니 핸드 크림
+                - generic [ref=e1944]:
+                  - generic [ref=e1946]: 7,900원
+                  - generic [ref=e1947]:
+                    - generic [ref=e1948]: 77%
+                    - generic [ref=e1949]: 1,750원
+                - generic [ref=e1950]:
+                  - generic [ref=e1951]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1954]:
+                    - img [ref=e1955]
+                - generic [ref=e1958]:
+                  - img [ref=e1960]
+                  - generic [ref=e1965]: "153"
+            - link "담기 샛별배송 [백설] 사과식초1.8L 3,510원 50%1,755원 첫구매 최대혜택가 첫구매 최대혜택가 51" [ref=e1966] [cursor=pointer]:
+              - /url: /goods/1001539817
+              - button "담기" [ref=e1972]:
+                - img
+                - text: 담기
+              - generic [ref=e1973]:
+                - generic [ref=e1974]: 샛별배송
+                - generic [ref=e1975]: "[백설] 사과식초1.8L"
+                - generic [ref=e1976]:
+                  - generic [ref=e1978]: 3,510원
+                  - generic [ref=e1979]:
+                    - generic [ref=e1980]: 50%
+                    - generic [ref=e1981]: 1,755원
+                - generic [ref=e1982]:
+                  - generic [ref=e1983]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e1986]:
+                    - img [ref=e1987]
+                - generic [ref=e1990]:
+                  - img [ref=e1992]
+                  - generic [ref=e1997]: "51"
+            - link "담기 샛별배송 [피크닉] 사과&청포도 드링크 2종 (200mL X 6개) 상큼하고 부드러운 음료 4,000원 55%1,800원 첫구매 최대혜택가 첫구매 최대혜택가 999+" [ref=e1998] [cursor=pointer]:
+              - /url: /goods/1000306765
+              - button "담기" [ref=e2004]:
+                - img
+                - text: 담기
+              - generic [ref=e2005]:
+                - generic [ref=e2006]: 샛별배송
+                - generic [ref=e2007]: "[피크닉] 사과&청포도 드링크 2종 (200mL X 6개)"
+                - paragraph [ref=e2008]: 상큼하고 부드러운 음료
+                - generic [ref=e2009]:
+                  - generic [ref=e2011]: 4,000원
+                  - generic [ref=e2012]:
+                    - generic [ref=e2013]: 55%
+                    - generic [ref=e2014]: 1,800원
+                - generic [ref=e2015]:
+                  - generic [ref=e2016]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2019]:
+                    - img [ref=e2020]
+                - generic [ref=e2023]:
+                  - img [ref=e2025]
+                  - generic [ref=e2030]: 999+
+            - link "멤버스15%쿠폰 담기 샛별배송 [하림펫푸드] 더리얼 퍼프 38g 3종 (택1) 기름에 튀기지 않는 국내산 현미와 동결건조 재료로 만든 저칼로리 간식 3,800원 52%1,805원~ 첫구매 최대혜택가 첫구매 최대혜택가 88 반려동물" [ref=e2031] [cursor=pointer]:
+              - /url: /goods/1002042210
+              - paragraph [ref=e2037]: 멤버스15%쿠폰
+              - button "담기" [ref=e2039]:
+                - img
+                - text: 담기
+              - generic [ref=e2040]:
+                - generic [ref=e2041]: 샛별배송
+                - generic [ref=e2042]: "[하림펫푸드] 더리얼 퍼프 38g 3종 (택1)"
+                - paragraph [ref=e2043]: 기름에 튀기지 않는 국내산 현미와 동결건조 재료로 만든 저칼로리 간식
+                - generic [ref=e2044]:
+                  - generic [ref=e2046]: 3,800원
+                  - generic [ref=e2047]:
+                    - generic [ref=e2048]: 52%
+                    - generic [ref=e2049]: 1,805원~
+                - generic [ref=e2050]:
+                  - generic [ref=e2051]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2054]:
+                    - img [ref=e2055]
+                - generic [ref=e2058]:
+                  - img [ref=e2060]
+                  - generic [ref=e2065]: "88"
+                - generic [ref=e2067]: 반려동물
+            - link "담기 샛별배송 [풀무원] 아임리얼 케일사과 190mL 3,680원 50%1,840원 첫구매 최대혜택가 첫구매 최대혜택가 128" [ref=e2068] [cursor=pointer]:
+              - /url: /goods/1002069289
+              - button "담기" [ref=e2074]:
+                - img
+                - text: 담기
+              - generic [ref=e2075]:
+                - generic [ref=e2076]: 샛별배송
+                - generic [ref=e2077]: "[풀무원] 아임리얼 케일사과 190mL"
+                - generic [ref=e2078]:
+                  - generic [ref=e2080]: 3,680원
+                  - generic [ref=e2081]:
+                    - generic [ref=e2082]: 50%
+                    - generic [ref=e2083]: 1,840원
+                - generic [ref=e2084]:
+                  - generic [ref=e2085]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2088]:
+                    - img [ref=e2089]
+                - generic [ref=e2092]:
+                  - img [ref=e2094]
+                  - generic [ref=e2099]: "128"
+            - link "담기 샛별배송 [풀무원] 아임리얼 ABC 190mL 3,680원 50%1,840원 첫구매 최대혜택가 첫구매 최대혜택가 38" [ref=e2100] [cursor=pointer]:
+              - /url: /goods/1002069295
+              - button "담기" [ref=e2106]:
+                - img
+                - text: 담기
+              - generic [ref=e2107]:
+                - generic [ref=e2108]: 샛별배송
+                - generic [ref=e2109]: "[풀무원] 아임리얼 ABC 190mL"
+                - generic [ref=e2110]:
+                  - generic [ref=e2112]: 3,680원
+                  - generic [ref=e2113]:
+                    - generic [ref=e2114]: 50%
+                    - generic [ref=e2115]: 1,840원
+                - generic [ref=e2116]:
+                  - generic [ref=e2117]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2120]:
+                    - img [ref=e2121]
+                - generic [ref=e2124]:
+                  - img [ref=e2126]
+                  - generic [ref=e2131]: "38"
+            - link "담기 샛별배송 [가그린] 어린이용 구강세정제 380ml 3종 (택1) 알코올 무첨가로 안심 가글 5,500원 66%1,845원 첫구매 최대혜택가 첫구매 최대혜택가 435" [ref=e2132] [cursor=pointer]:
+              - /url: /goods/1001069018
+              - button "담기" [ref=e2138]:
+                - img
+                - text: 담기
+              - generic [ref=e2139]:
+                - generic [ref=e2140]: 샛별배송
+                - generic [ref=e2141]: "[가그린] 어린이용 구강세정제 380ml 3종 (택1)"
+                - paragraph [ref=e2142]: 알코올 무첨가로 안심 가글
+                - generic [ref=e2143]:
+                  - generic [ref=e2145]: 5,500원
+                  - generic [ref=e2146]:
+                    - generic [ref=e2147]: 66%
+                    - generic [ref=e2148]: 1,845원
+                - generic [ref=e2149]:
+                  - generic [ref=e2150]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2153]:
+                    - img [ref=e2154]
+                - generic [ref=e2157]:
+                  - img [ref=e2159]
+                  - generic [ref=e2164]: "435"
+            - link "담기 샛별배송 [오가닉스토리] 유기농 현미 롱롱스틱 4종 손에 쥐고 먹기 좋은 롱스틱 3,700원 50%1,850원 첫구매 최대혜택가 첫구매 최대혜택가 127" [ref=e2165] [cursor=pointer]:
+              - /url: /goods/1001362030
+              - button "담기" [ref=e2171]:
+                - img
+                - text: 담기
+              - generic [ref=e2172]:
+                - generic [ref=e2173]: 샛별배송
+                - generic [ref=e2174]: "[오가닉스토리] 유기농 현미 롱롱스틱 4종"
+                - paragraph [ref=e2175]: 손에 쥐고 먹기 좋은 롱스틱
+                - generic [ref=e2176]:
+                  - generic [ref=e2178]: 3,700원
+                  - generic [ref=e2179]:
+                    - generic [ref=e2180]: 50%
+                    - generic [ref=e2181]: 1,850원
+                - generic [ref=e2182]:
+                  - generic [ref=e2183]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2186]:
+                    - img [ref=e2187]
+                - generic [ref=e2190]:
+                  - img [ref=e2192]
+                  - generic [ref=e2197]: "127"
+            - link "담기 샛별배송 [베베쿡] 리얼푸룻칩 2종, 택1 과일 100% 그대로 4,380원 57%1,850원 첫구매 최대혜택가 첫구매 최대혜택가 13" [ref=e2198] [cursor=pointer]:
+              - /url: /goods/1002203263
+              - button "담기" [ref=e2204]:
+                - img
+                - text: 담기
+              - generic [ref=e2205]:
+                - generic [ref=e2206]: 샛별배송
+                - generic [ref=e2207]: "[베베쿡] 리얼푸룻칩 2종, 택1"
+                - paragraph [ref=e2208]: 과일 100% 그대로
+                - generic [ref=e2209]:
+                  - generic [ref=e2211]: 4,380원
+                  - generic [ref=e2212]:
+                    - generic [ref=e2213]: 57%
+                    - generic [ref=e2214]: 1,850원
+                - generic [ref=e2215]:
+                  - generic [ref=e2216]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2219]:
+                    - img [ref=e2220]
+                - generic [ref=e2223]:
+                  - img [ref=e2225]
+                  - generic [ref=e2230]: "13"
+            - link "19세성인인증 상세보기 샛별배송 [전통주] 애플리즈 애피소드 애플 와인 (3.5도 275mL) 상큼한 사과의 맛과 톡톡 튀는 탄산 3,700원 50%1,850원 첫구매 최대혜택가 첫구매 최대혜택가 137" [ref=e2231] [cursor=pointer]:
+              - /url: /goods/1000743701
+              - paragraph [ref=e2237]: 19세성인인증
+              - button "상세보기" [ref=e2239]
+              - generic [ref=e2240]:
+                - generic [ref=e2241]: 샛별배송
+                - generic [ref=e2242]: "[전통주] 애플리즈 애피소드 애플 와인 (3.5도 275mL)"
+                - paragraph [ref=e2243]: 상큼한 사과의 맛과 톡톡 튀는 탄산
+                - generic [ref=e2244]:
+                  - generic [ref=e2246]: 3,700원
+                  - generic [ref=e2247]:
+                    - generic [ref=e2248]: 50%
+                    - generic [ref=e2249]: 1,850원
+                - generic [ref=e2250]:
+                  - generic [ref=e2251]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2254]:
+                    - img [ref=e2255]
+                - generic [ref=e2258]:
+                  - img [ref=e2260]
+                  - generic [ref=e2265]: "137"
+            - link "담기 샛별배송 [오뚜기] 사과식초 900ml 활용도 만점인 달콤새콤한 식초 3,780원 50%1,890원 첫구매 최대혜택가 첫구매 최대혜택가 9,999+" [ref=e2266] [cursor=pointer]:
+              - /url: /goods/1000627767
+              - button "담기" [ref=e2272]:
+                - img
+                - text: 담기
+              - generic [ref=e2273]:
+                - generic [ref=e2274]: 샛별배송
+                - generic [ref=e2275]: "[오뚜기] 사과식초 900ml"
+                - paragraph [ref=e2276]: 활용도 만점인 달콤새콤한 식초
+                - generic [ref=e2277]:
+                  - generic [ref=e2279]: 3,780원
+                  - generic [ref=e2280]:
+                    - generic [ref=e2281]: 50%
+                    - generic [ref=e2282]: 1,890원
+                - generic [ref=e2283]:
+                  - generic [ref=e2284]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2287]:
+                    - img [ref=e2288]
+                - generic [ref=e2291]:
+                  - img [ref=e2293]
+                  - generic [ref=e2298]: 9,999+
+            - link "담기 샛별배송 [풀무원녹즙] 프레시업(ABC주스/CCA주스) 190mL (택1) 한잔으로 건강하게 관리 3,800원 50%1,900원 첫구매 최대혜택가 첫구매 최대혜택가 978" [ref=e2299] [cursor=pointer]:
+              - /url: /goods/1000500380
+              - button "담기" [ref=e2305]:
+                - img
+                - text: 담기
+              - generic [ref=e2306]:
+                - generic [ref=e2307]: 샛별배송
+                - generic [ref=e2308]: "[풀무원녹즙] 프레시업(ABC주스/CCA주스) 190mL (택1)"
+                - paragraph [ref=e2309]: 한잔으로 건강하게 관리
+                - generic [ref=e2310]:
+                  - generic [ref=e2312]: 3,800원
+                  - generic [ref=e2313]:
+                    - generic [ref=e2314]: 50%
+                    - generic [ref=e2315]: 1,900원
+                - generic [ref=e2316]:
+                  - generic [ref=e2317]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2320]:
+                    - img [ref=e2321]
+                - generic [ref=e2324]:
+                  - img [ref=e2326]
+                  - generic [ref=e2331]: "978"
+            - link "+15% 쿠폰 담기 샛별배송 [케이헬스케어] 아껴줄게 강아지 간식 치실껌 7P 6종 (택1) 천연 소가죽사용으로 피부모질 및 관절 건강에 도움을 주고 우유가 함우되어있어서 더욱더 고소하고 뼈건강에 도움을 주는 간식 6,500원 41%3,825원~ 32 반려동물" [ref=e2332] [cursor=pointer]:
+              - /url: /goods/1002003081
+              - paragraph [ref=e2338]: +15% 쿠폰
+              - button "담기" [ref=e2340]:
+                - img
+                - text: 담기
+              - generic [ref=e2341]:
+                - generic [ref=e2342]: 샛별배송
+                - generic [ref=e2343]: "[케이헬스케어] 아껴줄게 강아지 간식 치실껌 7P 6종 (택1)"
+                - paragraph [ref=e2344]: 천연 소가죽사용으로 피부모질 및 관절 건강에 도움을 주고 우유가 함우되어있어서 더욱더 고소하고 뼈건강에 도움을 주는 간식
+                - generic [ref=e2345]:
+                  - generic [ref=e2347]: 6,500원
+                  - generic [ref=e2348]:
+                    - generic [ref=e2349]: 41%
+                    - generic [ref=e2350]: 3,825원~
+                - generic [ref=e2351]:
+                  - img [ref=e2353]
+                  - generic [ref=e2358]: "32"
+                - generic [ref=e2360]: 반려동물
+            - link "최대 15%쿠폰 담기 샛별배송 [프레벨롱] 짜먹는 국산 과일 퓨레 6종 100% 국산 과일로 만든 3,900원 50%1,950원 첫구매 최대혜택가 첫구매 최대혜택가 999+" [ref=e2361] [cursor=pointer]:
+              - /url: /goods/1000568202
+              - paragraph [ref=e2367]: 최대 15%쿠폰
+              - button "담기" [ref=e2369]:
+                - img
+                - text: 담기
+              - generic [ref=e2370]:
+                - generic [ref=e2371]: 샛별배송
+                - generic [ref=e2372]: "[프레벨롱] 짜먹는 국산 과일 퓨레 6종"
+                - paragraph [ref=e2373]: 100% 국산 과일로 만든
+                - generic [ref=e2374]:
+                  - generic [ref=e2376]: 3,900원
+                  - generic [ref=e2377]:
+                    - generic [ref=e2378]: 50%
+                    - generic [ref=e2379]: 1,950원
+                - generic [ref=e2380]:
+                  - generic [ref=e2381]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2384]:
+                    - img [ref=e2385]
+                - generic [ref=e2388]:
+                  - img [ref=e2390]
+                  - generic [ref=e2395]: 999+
+            - link "담기 샛별배송 [베이비본죽] 과일칩 2종 아이와 함께 즐길 수 있는 건강 간식 3,900원 50%1,950원 첫구매 최대혜택가 첫구매 최대혜택가 116" [ref=e2396] [cursor=pointer]:
+              - /url: /goods/1001255358
+              - button "담기" [ref=e2402]:
+                - img
+                - text: 담기
+              - generic [ref=e2403]:
+                - generic [ref=e2404]: 샛별배송
+                - generic [ref=e2405]: "[베이비본죽] 과일칩 2종"
+                - paragraph [ref=e2406]: 아이와 함께 즐길 수 있는 건강 간식
+                - generic [ref=e2407]:
+                  - generic [ref=e2409]: 3,900원
+                  - generic [ref=e2410]:
+                    - generic [ref=e2411]: 50%
+                    - generic [ref=e2412]: 1,950원
+                - generic [ref=e2413]:
+                  - generic [ref=e2414]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2417]:
+                    - img [ref=e2418]
+                - generic [ref=e2421]:
+                  - img [ref=e2423]
+                  - generic [ref=e2428]: "116"
+            - link "담기 샛별배송 [올가] 순사과칩, 순당근칩, 순연근칩 3종 자꾸 손이 가는 건강간식 3,900원 50%1,950원 첫구매 최대혜택가 첫구매 최대혜택가 144" [ref=e2429] [cursor=pointer]:
+              - /url: /goods/1001335253
+              - button "담기" [ref=e2435]:
+                - img
+                - text: 담기
+              - generic [ref=e2436]:
+                - generic [ref=e2437]: 샛별배송
+                - generic [ref=e2438]: "[올가] 순사과칩, 순당근칩, 순연근칩 3종"
+                - paragraph [ref=e2439]: 자꾸 손이 가는 건강간식
+                - generic [ref=e2440]:
+                  - generic [ref=e2442]: 3,900원
+                  - generic [ref=e2443]:
+                    - generic [ref=e2444]: 50%
+                    - generic [ref=e2445]: 1,950원
+                - generic [ref=e2446]:
+                  - generic [ref=e2447]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2450]:
+                    - img [ref=e2451]
+                - generic [ref=e2454]:
+                  - img [ref=e2456]
+                  - generic [ref=e2461]: "144"
+            - link "담기 샛별배송 [내아이애] 과일칩 4종 (택1) 과일의 맛과 향 그대로 3,900원 50%1,950원 첫구매 최대혜택가 첫구매 최대혜택가 83" [ref=e2462] [cursor=pointer]:
+              - /url: /goods/1001427213
+              - button "담기" [ref=e2468]:
+                - img
+                - text: 담기
+              - generic [ref=e2469]:
+                - generic [ref=e2470]: 샛별배송
+                - generic [ref=e2471]: "[내아이애] 과일칩 4종 (택1)"
+                - paragraph [ref=e2472]: 과일의 맛과 향 그대로
+                - generic [ref=e2473]:
+                  - generic [ref=e2475]: 3,900원
+                  - generic [ref=e2476]:
+                    - generic [ref=e2477]: 50%
+                    - generic [ref=e2478]: 1,950원
+                - generic [ref=e2479]:
+                  - generic [ref=e2480]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2483]:
+                    - img [ref=e2484]
+                - generic [ref=e2487]:
+                  - img [ref=e2489]
+                  - generic [ref=e2494]: "83"
+            - link "담기 샛별배송 [요미요미] 유기농 쌀떡뻥 3종, 택1 정직하게 만든 아이 간식 3,900원 50%1,950원 첫구매 최대혜택가 첫구매 최대혜택가 98" [ref=e2495] [cursor=pointer]:
+              - /url: /goods/5135879
+              - button "담기" [ref=e2501]:
+                - img
+                - text: 담기
+              - generic [ref=e2502]:
+                - generic [ref=e2503]: 샛별배송
+                - generic [ref=e2504]: "[요미요미] 유기농 쌀떡뻥 3종, 택1"
+                - paragraph [ref=e2505]: 정직하게 만든 아이 간식
+                - generic [ref=e2506]:
+                  - generic [ref=e2508]: 3,900원
+                  - generic [ref=e2509]:
+                    - generic [ref=e2510]: 50%
+                    - generic [ref=e2511]: 1,950원
+                - generic [ref=e2512]:
+                  - generic [ref=e2513]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2516]:
+                    - img [ref=e2517]
+                - generic [ref=e2520]:
+                  - img [ref=e2522]
+                  - generic [ref=e2527]: "98"
+            - link "담기 샛별배송 [크라운] 애플샌드 272g 3,940원 50%1,970원 첫구매 최대혜택가 첫구매 최대혜택가 836" [ref=e2528] [cursor=pointer]:
+              - /url: /goods/1000605479
+              - button "담기" [ref=e2534]:
+                - img
+                - text: 담기
+              - generic [ref=e2535]:
+                - generic [ref=e2536]: 샛별배송
+                - generic [ref=e2537]: "[크라운] 애플샌드 272g"
+                - generic [ref=e2538]:
+                  - generic [ref=e2540]: 3,940원
+                  - generic [ref=e2541]:
+                    - generic [ref=e2542]: 50%
+                    - generic [ref=e2543]: 1,970원
+                - generic [ref=e2544]:
+                  - generic [ref=e2545]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2548]:
+                    - img [ref=e2549]
+                - generic [ref=e2552]:
+                  - img [ref=e2554]
+                  - generic [ref=e2559]: "836"
+            - link "담기 샛별배송 [요미요미] 유기농 주스 (125mL X 4개입) 3종 (택1) 설탕이나 보존제를 넣지 않고 과일의 순수한 맛과 영양만을 꽉 담은 4,390원 55%1,975원~ 첫구매 최대혜택가 첫구매 최대혜택가 9,999+" [ref=e2560] [cursor=pointer]:
+              - /url: /goods/5007414
+              - button "담기" [ref=e2566]:
+                - img
+                - text: 담기
+              - generic [ref=e2567]:
+                - generic [ref=e2568]: 샛별배송
+                - generic [ref=e2569]: "[요미요미] 유기농 주스 (125mL X 4개입) 3종 (택1)"
+                - paragraph [ref=e2570]: 설탕이나 보존제를 넣지 않고 과일의 순수한 맛과 영양만을 꽉 담은
+                - generic [ref=e2571]:
+                  - generic [ref=e2573]: 4,390원
+                  - generic [ref=e2574]:
+                    - generic [ref=e2575]: 55%
+                    - generic [ref=e2576]: 1,975원~
+                - generic [ref=e2577]:
+                  - generic [ref=e2578]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2581]:
+                    - img [ref=e2582]
+                - generic [ref=e2585]:
+                  - img [ref=e2587]
+                  - generic [ref=e2592]: 9,999+
+            - link "담기 샛별배송 [청정원] 사과올리고당 700g 사과농책이 포함된 올리고당 4,280원 53%1,985원 첫구매 최대혜택가 첫구매 최대혜택가" [ref=e2593] [cursor=pointer]:
+              - /url: /goods/1002051728
+              - button "담기" [ref=e2599]:
+                - img
+                - text: 담기
+              - generic [ref=e2600]:
+                - generic [ref=e2601]: 샛별배송
+                - generic [ref=e2602]: "[청정원] 사과올리고당 700g"
+                - paragraph [ref=e2603]: 사과농책이 포함된 올리고당
+                - generic [ref=e2604]:
+                  - generic [ref=e2606]: 4,280원
+                  - generic [ref=e2607]:
+                    - generic [ref=e2608]: 53%
+                    - generic [ref=e2609]: 1,985원
+                - generic [ref=e2610]:
+                  - generic [ref=e2611]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2614]:
+                    - img [ref=e2615]
+            - link "담기 샛별배송 [아이배냇] 끙아 젤리 3종 (택1) 고식이섬유로 든든하게 3,980원 50%1,990원 첫구매 최대혜택가 첫구매 최대혜택가 542" [ref=e2618] [cursor=pointer]:
+              - /url: /goods/1000213874
+              - button "담기" [ref=e2624]:
+                - img
+                - text: 담기
+              - generic [ref=e2625]:
+                - generic [ref=e2626]: 샛별배송
+                - generic [ref=e2627]: "[아이배냇] 끙아 젤리 3종 (택1)"
+                - paragraph [ref=e2628]: 고식이섬유로 든든하게
+                - generic [ref=e2629]:
+                  - generic [ref=e2631]: 3,980원
+                  - generic [ref=e2632]:
+                    - generic [ref=e2633]: 50%
+                    - generic [ref=e2634]: 1,990원
+                - generic [ref=e2635]:
+                  - generic [ref=e2636]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2639]:
+                    - img [ref=e2640]
+                - generic [ref=e2643]:
+                  - img [ref=e2645]
+                  - generic [ref=e2650]: "542"
+            - link "담기 샛별배송 [풀무원] 저당 드레싱 4종 부담없이 즐기는 4,980원 60%1,990원 첫구매 최대혜택가 첫구매 최대혜택가 29" [ref=e2651] [cursor=pointer]:
+              - /url: /goods/1002200433
+              - button "담기" [ref=e2657]:
+                - img
+                - text: 담기
+              - generic [ref=e2658]:
+                - generic [ref=e2659]: 샛별배송
+                - generic [ref=e2660]: "[풀무원] 저당 드레싱 4종"
+                - paragraph [ref=e2661]: 부담없이 즐기는
+                - generic [ref=e2662]:
+                  - generic [ref=e2664]: 4,980원
+                  - generic [ref=e2665]:
+                    - generic [ref=e2666]: 60%
+                    - generic [ref=e2667]: 1,990원
+                - generic [ref=e2668]:
+                  - generic [ref=e2669]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2672]:
+                    - img [ref=e2673]
+                - generic [ref=e2676]:
+                  - img [ref=e2678]
+                  - generic [ref=e2683]: "29"
+            - link "멤버스특가 담기 샛별배송 [바름팜] 사과&루꼴라 샐러드 150g 달콤 향긋한 샐러드 4,290원 53%1,995원~ 첫구매 최대혜택가 첫구매 최대혜택가 884 Kurly Only" [ref=e2684] [cursor=pointer]:
+              - /url: /goods/1001765974
+              - paragraph [ref=e2690]: 멤버스특가
+              - button "담기" [ref=e2692]:
+                - img
+                - text: 담기
+              - generic [ref=e2693]:
+                - generic [ref=e2694]: 샛별배송
+                - generic [ref=e2695]: "[바름팜] 사과&루꼴라 샐러드 150g"
+                - paragraph [ref=e2696]: 달콤 향긋한 샐러드
+                - generic [ref=e2697]:
+                  - generic [ref=e2699]: 4,290원
+                  - generic [ref=e2700]:
+                    - generic [ref=e2701]: 53%
+                    - generic [ref=e2702]: 1,995원~
+                - generic [ref=e2703]:
+                  - generic [ref=e2704]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2707]:
+                    - img [ref=e2708]
+                - generic [ref=e2711]:
+                  - img [ref=e2713]
+                  - generic [ref=e2718]: "884"
+                - generic [ref=e2720]: Kurly Only
+            - link "담기 샛별배송 [포케올데이] 저당 애플&스파이시 오리엔탈소스 300g 중독성 있는 단맛과 매콤함 4,990원 60%1,995원 첫구매 최대혜택가 첫구매 최대혜택가" [ref=e2721] [cursor=pointer]:
+              - /url: /goods/1002492554
+              - button "담기" [ref=e2727]:
+                - img
+                - text: 담기
+              - generic [ref=e2728]:
+                - generic [ref=e2729]: 샛별배송
+                - generic [ref=e2730]: "[포케올데이] 저당 애플&스파이시 오리엔탈소스 300g"
+                - paragraph [ref=e2731]: 중독성 있는 단맛과 매콤함
+                - generic [ref=e2732]:
+                  - generic [ref=e2734]: 4,990원
+                  - generic [ref=e2735]:
+                    - generic [ref=e2736]: 60%
+                    - generic [ref=e2737]: 1,995원
+                - generic [ref=e2738]:
+                  - generic [ref=e2739]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2742]:
+                    - img [ref=e2743]
+            - link "담기 샛별배송 [상하목장] 유기농 베이비 요구르트 3종 (85g X 4개) (택1) 우리 아이를 위한 요거트 4,080원 50%2,040원~ 첫구매 최대혜택가 첫구매 최대혜택가 9,999+" [ref=e2746] [cursor=pointer]:
+              - /url: /goods/5008844
+              - button "담기" [ref=e2752]:
+                - img
+                - text: 담기
+              - generic [ref=e2753]:
+                - generic [ref=e2754]: 샛별배송
+                - generic [ref=e2755]: "[상하목장] 유기농 베이비 요구르트 3종 (85g X 4개) (택1)"
+                - paragraph [ref=e2756]: 우리 아이를 위한 요거트
+                - generic [ref=e2757]:
+                  - generic [ref=e2759]: 4,080원
+                  - generic [ref=e2760]:
+                    - generic [ref=e2761]: 50%
+                    - generic [ref=e2762]: 2,040원~
+                - generic [ref=e2763]:
+                  - generic [ref=e2764]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2767]:
+                    - img [ref=e2768]
+                - generic [ref=e2771]:
+                  - img [ref=e2773]
+                  - generic [ref=e2778]: 9,999+
+            - link "담기 샛별배송 [상하목장] 마이리틀 유기농 짜먹는 요거트 3종 (85g X 3개) (택1) 성장기 아이를 위한 유기농 간식 4,080원 50%2,040원 첫구매 최대혜택가 첫구매 최대혜택가 9,999+" [ref=e2779] [cursor=pointer]:
+              - /url: /goods/5052824
+              - button "담기" [ref=e2785]:
+                - img
+                - text: 담기
+              - generic [ref=e2786]:
+                - generic [ref=e2787]: 샛별배송
+                - generic [ref=e2788]: "[상하목장] 마이리틀 유기농 짜먹는 요거트 3종 (85g X 3개) (택1)"
+                - paragraph [ref=e2789]: 성장기 아이를 위한 유기농 간식
+                - generic [ref=e2790]:
+                  - generic [ref=e2792]: 4,080원
+                  - generic [ref=e2793]:
+                    - generic [ref=e2794]: 50%
+                    - generic [ref=e2795]: 2,040원
+                - generic [ref=e2796]:
+                  - generic [ref=e2797]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2800]:
+                    - img [ref=e2801]
+                - generic [ref=e2804]:
+                  - img [ref=e2806]
+                  - generic [ref=e2811]: 9,999+
+            - link "담기 샛별배송 [아침에주스] 사과 950mL 달콤한 국산 사과의 향기가 가득 4,180원 50%2,090원 첫구매 최대혜택가 첫구매 최대혜택가 999+" [ref=e2812] [cursor=pointer]:
+              - /url: /goods/5066352
+              - button "담기" [ref=e2818]:
+                - img
+                - text: 담기
+              - generic [ref=e2819]:
+                - generic [ref=e2820]: 샛별배송
+                - generic [ref=e2821]: "[아침에주스] 사과 950mL"
+                - paragraph [ref=e2822]: 달콤한 국산 사과의 향기가 가득
+                - generic [ref=e2823]:
+                  - generic [ref=e2825]: 4,180원
+                  - generic [ref=e2826]:
+                    - generic [ref=e2827]: 50%
+                    - generic [ref=e2828]: 2,090원
+                - generic [ref=e2829]:
+                  - generic [ref=e2830]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2833]:
+                    - img [ref=e2834]
+                - generic [ref=e2837]:
+                  - img [ref=e2839]
+                  - generic [ref=e2844]: 999+
+            - link "최대 15%쿠폰 담기 샛별배송 [아넬라] 짜먹는 아넬라 HOP 5종 (택1) 행복한 시간을 만드는 과일 퓨레 4,200원 50%2,100원 첫구매 최대혜택가 첫구매 최대혜택가 999+" [ref=e2845] [cursor=pointer]:
+              - /url: /goods/5044542
+              - paragraph [ref=e2851]: 최대 15%쿠폰
+              - button "담기" [ref=e2853]:
+                - img
+                - text: 담기
+              - generic [ref=e2854]:
+                - generic [ref=e2855]: 샛별배송
+                - generic [ref=e2856]: "[아넬라] 짜먹는 아넬라 HOP 5종 (택1)"
+                - paragraph [ref=e2857]: 행복한 시간을 만드는 과일 퓨레
+                - generic [ref=e2858]:
+                  - generic [ref=e2860]: 4,200원
+                  - generic [ref=e2861]:
+                    - generic [ref=e2862]: 50%
+                    - generic [ref=e2863]: 2,100원
+                - generic [ref=e2864]:
+                  - generic [ref=e2865]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2868]:
+                    - img [ref=e2869]
+                - generic [ref=e2872]:
+                  - img [ref=e2874]
+                  - generic [ref=e2879]: 999+
+            - link "담기 샛별배송 [풀무원] 사과 요거트 드레싱 235g 상큼 달콤한 사과와 요거트의 궁합 4,680원 54%2,140원 첫구매 최대혜택가 첫구매 최대혜택가 156" [ref=e2880] [cursor=pointer]:
+              - /url: /goods/1001472382
+              - button "담기" [ref=e2886]:
+                - img
+                - text: 담기
+              - generic [ref=e2887]:
+                - generic [ref=e2888]: 샛별배송
+                - generic [ref=e2889]: "[풀무원] 사과 요거트 드레싱 235g"
+                - paragraph [ref=e2890]: 상큼 달콤한 사과와 요거트의 궁합
+                - generic [ref=e2891]:
+                  - generic [ref=e2893]: 4,680원
+                  - generic [ref=e2894]:
+                    - generic [ref=e2895]: 54%
+                    - generic [ref=e2896]: 2,140원
+                - generic [ref=e2897]:
+                  - generic [ref=e2898]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2901]:
+                    - img [ref=e2902]
+                - generic [ref=e2905]:
+                  - img [ref=e2907]
+                  - generic [ref=e2912]: "156"
+            - link "담기 샛별배송 [요미요미] 유기농 롱롱뻥 사과맛 24g 외출할 때 하나씩 쏙 챙기기 좋은 우리 아이 간식 4,300원 50%2,150원 첫구매 최대혜택가 첫구매 최대혜택가 140" [ref=e2913] [cursor=pointer]:
+              - /url: /goods/1001114957
+              - button "담기" [ref=e2919]:
+                - img
+                - text: 담기
+              - generic [ref=e2920]:
+                - generic [ref=e2921]: 샛별배송
+                - generic [ref=e2922]: "[요미요미] 유기농 롱롱뻥 사과맛 24g"
+                - paragraph [ref=e2923]: 외출할 때 하나씩 쏙 챙기기 좋은 우리 아이 간식
+                - generic [ref=e2924]:
+                  - generic [ref=e2926]: 4,300원
+                  - generic [ref=e2927]:
+                    - generic [ref=e2928]: 50%
+                    - generic [ref=e2929]: 2,150원
+                - generic [ref=e2930]:
+                  - generic [ref=e2931]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2934]:
+                    - img [ref=e2935]
+                - generic [ref=e2938]:
+                  - img [ref=e2940]
+                  - generic [ref=e2945]: "140"
+            - link "담기 샛별배송 [올가] 100% 순수한 과일칩 3종 (택1) 과일의 모양과 맛 그대로 4,300원 50%2,150원 첫구매 최대혜택가 첫구매 최대혜택가 662" [ref=e2946] [cursor=pointer]:
+              - /url: /goods/1000891315
+              - button "담기" [ref=e2952]:
+                - img
+                - text: 담기
+              - generic [ref=e2953]:
+                - generic [ref=e2954]: 샛별배송
+                - generic [ref=e2955]: "[올가] 100% 순수한 과일칩 3종 (택1)"
+                - paragraph [ref=e2956]: 과일의 모양과 맛 그대로
+                - generic [ref=e2957]:
+                  - generic [ref=e2959]: 4,300원
+                  - generic [ref=e2960]:
+                    - generic [ref=e2961]: 50%
+                    - generic [ref=e2962]: 2,150원
+                - generic [ref=e2963]:
+                  - generic [ref=e2964]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e2967]:
+                    - img [ref=e2968]
+                - generic [ref=e2971]:
+                  - img [ref=e2973]
+                  - generic [ref=e2978]: "662"
+            - link "담기 샛별배송 [청정원] 정통사과식초 800ml 사과 본연의 상큼함을 담은 4,800원 54%2,165원 첫구매 최대혜택가 첫구매 최대혜택가 379" [ref=e2979] [cursor=pointer]:
+              - /url: /goods/1000357119
+              - button "담기" [ref=e2985]:
+                - img
+                - text: 담기
+              - generic [ref=e2986]:
+                - generic [ref=e2987]: 샛별배송
+                - generic [ref=e2988]: "[청정원] 정통사과식초 800ml"
+                - paragraph [ref=e2989]: 사과 본연의 상큼함을 담은
+                - generic [ref=e2990]:
+                  - generic [ref=e2992]: 4,800원
+                  - generic [ref=e2993]:
+                    - generic [ref=e2994]: 54%
+                    - generic [ref=e2995]: 2,165원
+                - generic [ref=e2996]:
+                  - generic [ref=e2997]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e3000]:
+                    - img [ref=e3001]
+                - generic [ref=e3004]:
+                  - img [ref=e3006]
+                  - generic [ref=e3011]: "379"
+            - link "담기 샛별배송 [풀무원다논] 하루요거트 사과 (120mL X 4개) 새콤달콤하게 섭취하는 유산균 4,380원 50%2,190원 첫구매 최대혜택가 첫구매 최대혜택가 647" [ref=e3012] [cursor=pointer]:
+              - /url: /goods/1001457994
+              - button "담기" [ref=e3018]:
+                - img
+                - text: 담기
+              - generic [ref=e3019]:
+                - generic [ref=e3020]: 샛별배송
+                - generic [ref=e3021]: "[풀무원다논] 하루요거트 사과 (120mL X 4개)"
+                - paragraph [ref=e3022]: 새콤달콤하게 섭취하는 유산균
+                - generic [ref=e3023]:
+                  - generic [ref=e3025]: 4,380원
+                  - generic [ref=e3026]:
+                    - generic [ref=e3027]: 50%
+                    - generic [ref=e3028]: 2,190원
+                - generic [ref=e3029]:
+                  - generic [ref=e3030]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e3033]:
+                    - img [ref=e3034]
+                - generic [ref=e3037]:
+                  - img [ref=e3039]
+                  - generic [ref=e3044]: "647"
+            - link "담기 샛별배송 [풀무원다논] 하루요거트 포도 (120mL X 4개) 달콤 상큼하게 섭취하는 유산균 4,380원 50%2,190원 첫구매 최대혜택가 첫구매 최대혜택가 441" [ref=e3045] [cursor=pointer]:
+              - /url: /goods/1001457992
+              - button "담기" [ref=e3051]:
+                - img
+                - text: 담기
+              - generic [ref=e3052]:
+                - generic [ref=e3053]: 샛별배송
+                - generic [ref=e3054]: "[풀무원다논] 하루요거트 포도 (120mL X 4개)"
+                - paragraph [ref=e3055]: 달콤 상큼하게 섭취하는 유산균
+                - generic [ref=e3056]:
+                  - generic [ref=e3058]: 4,380원
+                  - generic [ref=e3059]:
+                    - generic [ref=e3060]: 50%
+                    - generic [ref=e3061]: 2,190원
+                - generic [ref=e3062]:
+                  - generic [ref=e3063]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e3066]:
+                    - img [ref=e3067]
+                - generic [ref=e3070]:
+                  - img [ref=e3072]
+                  - generic [ref=e3077]: "441"
+            - link "담기 샛별배송 [상하목장] 유기농 주스 사과 블루베리 케일 (125mL X 4개) 상큼달콤한 풍미를 살린 주스 4,880원 55%2,195원 첫구매 최대혜택가 첫구매 최대혜택가 999+" [ref=e3078] [cursor=pointer]:
+              - /url: /goods/5161550
+              - button "담기" [ref=e3084]:
+                - img
+                - text: 담기
+              - generic [ref=e3085]:
+                - generic [ref=e3086]: 샛별배송
+                - generic [ref=e3087]: "[상하목장] 유기농 주스 사과 블루베리 케일 (125mL X 4개)"
+                - paragraph [ref=e3088]: 상큼달콤한 풍미를 살린 주스
+                - generic [ref=e3089]:
+                  - generic [ref=e3091]: 4,880원
+                  - generic [ref=e3092]:
+                    - generic [ref=e3093]: 55%
+                    - generic [ref=e3094]: 2,195원
+                - generic [ref=e3095]:
+                  - generic [ref=e3096]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e3099]:
+                    - img [ref=e3100]
+                - generic [ref=e3103]:
+                  - img [ref=e3105]
+                  - generic [ref=e3110]: 999+
+            - link "담기 샛별배송 [상하목장] 유기농 주스 2종 (125mL X 4개) 유기농 우유로 부드러움을 더한 4,880원 55%2,195원~ 첫구매 최대혜택가 첫구매 최대혜택가 9,999+" [ref=e3111] [cursor=pointer]:
+              - /url: /goods/5059019
+              - button "담기" [ref=e3117]:
+                - img
+                - text: 담기
+              - generic [ref=e3118]:
+                - generic [ref=e3119]: 샛별배송
+                - generic [ref=e3120]: "[상하목장] 유기농 주스 2종 (125mL X 4개)"
+                - paragraph [ref=e3121]: 유기농 우유로 부드러움을 더한
+                - generic [ref=e3122]:
+                  - generic [ref=e3124]: 4,880원
+                  - generic [ref=e3125]:
+                    - generic [ref=e3126]: 55%
+                    - generic [ref=e3127]: 2,195원~
+                - generic [ref=e3128]:
+                  - generic [ref=e3129]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e3132]:
+                    - img [ref=e3133]
+                - generic [ref=e3136]:
+                  - img [ref=e3138]
+                  - generic [ref=e3143]: 9,999+
+            - 'link "담기 샛별배송 [베이비본죽] 후기 이유식 : 채소&생선 7종 (택1) 9~11개월 아기를 위한 무른 밥 4,900원 55%2,205원~ 첫구매 최대혜택가 첫구매 최대혜택가 999+" [ref=e3144] [cursor=pointer]':
+              - /url: /goods/5036298
+              - button "담기" [ref=e3150]:
+                - img
+                - text: 담기
+              - generic [ref=e3151]:
+                - generic [ref=e3152]: 샛별배송
+                - generic [ref=e3153]: "[베이비본죽] 후기 이유식 : 채소&생선 7종 (택1)"
+                - paragraph [ref=e3154]: 9~11개월 아기를 위한 무른 밥
+                - generic [ref=e3155]:
+                  - generic [ref=e3157]: 4,900원
+                  - generic [ref=e3158]:
+                    - generic [ref=e3159]: 55%
+                    - generic [ref=e3160]: 2,205원~
+                - generic [ref=e3161]:
+                  - generic [ref=e3162]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e3165]:
+                    - img [ref=e3166]
+                - generic [ref=e3169]:
+                  - img [ref=e3171]
+                  - generic [ref=e3176]: 999+
+            - link "담기 샛별배송 [오리온] 비타민 마이구미 294g 5가지 멀티비타민이 쏙! 4,980원 55%2,240원 첫구매 최대혜택가 첫구매 최대혜택가 140" [ref=e3177] [cursor=pointer]:
+              - /url: /goods/1001861627
+              - button "담기" [ref=e3183]:
+                - img
+                - text: 담기
+              - generic [ref=e3184]:
+                - generic [ref=e3185]: 샛별배송
+                - generic [ref=e3186]: "[오리온] 비타민 마이구미 294g"
+                - paragraph [ref=e3187]: 5가지 멀티비타민이 쏙!
+                - generic [ref=e3188]:
+                  - generic [ref=e3190]: 4,980원
+                  - generic [ref=e3191]:
+                    - generic [ref=e3192]: 55%
+                    - generic [ref=e3193]: 2,240원
+                - generic [ref=e3194]:
+                  - generic [ref=e3195]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e3198]:
+                    - img [ref=e3199]
+                - generic [ref=e3202]:
+                  - img [ref=e3204]
+                  - generic [ref=e3209]: "140"
+            - link "19세성인인증 상세보기 샛별배송 [전통주] 중원양조 사랑할때 _사과주 (12도 300mL) 충주 사과의 찬란한 단 맛 4,500원 50%2,250원 첫구매 최대혜택가 첫구매 최대혜택가 853" [ref=e3210] [cursor=pointer]:
+              - /url: /goods/1000005405
+              - paragraph [ref=e3216]: 19세성인인증
+              - button "상세보기" [ref=e3218]
+              - generic [ref=e3219]:
+                - generic [ref=e3220]: 샛별배송
+                - generic [ref=e3221]: "[전통주] 중원양조 사랑할때 _사과주 (12도 300mL)"
+                - paragraph [ref=e3222]: 충주 사과의 찬란한 단 맛
+                - generic [ref=e3223]:
+                  - generic [ref=e3225]: 4,500원
+                  - generic [ref=e3226]:
+                    - generic [ref=e3227]: 50%
+                    - generic [ref=e3228]: 2,250원
+                - generic [ref=e3229]:
+                  - generic [ref=e3230]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e3233]:
+                    - img [ref=e3234]
+                - generic [ref=e3237]:
+                  - img [ref=e3239]
+                  - generic [ref=e3244]: "853"
+            - link "담기 샛별배송 [따옴] 사과주스 730ml 국산 사과 농축 과즙으로 만든 4,580원 50%2,290원 첫구매 최대혜택가 첫구매 최대혜택가 309" [ref=e3245] [cursor=pointer]:
+              - /url: /goods/1001757924
+              - button "담기" [ref=e3251]:
+                - img
+                - text: 담기
+              - generic [ref=e3252]:
+                - generic [ref=e3253]: 샛별배송
+                - generic [ref=e3254]: "[따옴] 사과주스 730ml"
+                - paragraph [ref=e3255]: 국산 사과 농축 과즙으로 만든
+                - generic [ref=e3256]:
+                  - generic [ref=e3258]: 4,580원
+                  - generic [ref=e3259]:
+                    - generic [ref=e3260]: 50%
+                    - generic [ref=e3261]: 2,290원
+                - generic [ref=e3262]:
+                  - generic [ref=e3263]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e3266]:
+                    - img [ref=e3267]
+                - generic [ref=e3270]:
+                  - img [ref=e3272]
+                  - generic [ref=e3277]: "309"
+            - link "담기 샛별배송 [남양] 아이꼬야 동결건조과일/요거트볼 5종 (택1) 본연의 맛과 영양이 그대로 4,580원 50%2,290원 첫구매 최대혜택가 첫구매 최대혜택가 643" [ref=e3278] [cursor=pointer]:
+              - /url: /goods/1000472667
+              - button "담기" [ref=e3284]:
+                - img
+                - text: 담기
+              - generic [ref=e3285]:
+                - generic [ref=e3286]: 샛별배송
+                - generic [ref=e3287]: "[남양] 아이꼬야 동결건조과일/요거트볼 5종 (택1)"
+                - paragraph [ref=e3288]: 본연의 맛과 영양이 그대로
+                - generic [ref=e3289]:
+                  - generic [ref=e3291]: 4,580원
+                  - generic [ref=e3292]:
+                    - generic [ref=e3293]: 50%
+                    - generic [ref=e3294]: 2,290원
+                - generic [ref=e3295]:
+                  - generic [ref=e3296]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e3299]:
+                    - img [ref=e3300]
+                - generic [ref=e3303]:
+                  - img [ref=e3305]
+                  - generic [ref=e3310]: "643"
+            - link "담기 샛별배송 [썬업] 100% 과즙 사과 주스 750mL 달달하게 즐기는 사과 주스 4,600원 50%2,300원 첫구매 최대혜택가 첫구매 최대혜택가 322" [ref=e3311] [cursor=pointer]:
+              - /url: /goods/1000306771
+              - button "담기" [ref=e3317]:
+                - img
+                - text: 담기
+              - generic [ref=e3318]:
+                - generic [ref=e3319]: 샛별배송
+                - generic [ref=e3320]: "[썬업] 100% 과즙 사과 주스 750mL"
+                - paragraph [ref=e3321]: 달달하게 즐기는 사과 주스
+                - generic [ref=e3322]:
+                  - generic [ref=e3324]: 4,600원
+                  - generic [ref=e3325]:
+                    - generic [ref=e3326]: 50%
+                    - generic [ref=e3327]: 2,300원
+                - generic [ref=e3328]:
+                  - generic [ref=e3329]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e3332]:
+                    - img [ref=e3333]
+                - generic [ref=e3336]:
+                  - img [ref=e3338]
+                  - generic [ref=e3343]: "322"
+            - link "담기 샛별배송 [종근당건강] 락토핏 마시는 유산균 3종 (130mL X 4개) (택1) 간편하게 섭취하는 유산균 5,900원 61%2,300원 첫구매 최대혜택가 첫구매 최대혜택가 997" [ref=e3344] [cursor=pointer]:
+              - /url: /goods/1000743024
+              - button "담기" [ref=e3350]:
+                - img
+                - text: 담기
+              - generic [ref=e3351]:
+                - generic [ref=e3352]: 샛별배송
+                - generic [ref=e3353]: "[종근당건강] 락토핏 마시는 유산균 3종 (130mL X 4개) (택1)"
+                - paragraph [ref=e3354]: 간편하게 섭취하는 유산균
+                - generic [ref=e3355]:
+                  - generic [ref=e3357]: 5,900원
+                  - generic [ref=e3358]:
+                    - generic [ref=e3359]: 61%
+                    - generic [ref=e3360]: 2,300원
+                - generic [ref=e3361]:
+                  - generic [ref=e3362]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e3365]:
+                    - img [ref=e3366]
+                - generic [ref=e3369]:
+                  - img [ref=e3371]
+                  - generic [ref=e3376]: "997"
+            - link "담기 샛별배송 [덴마크] 드링킹 요구르트 4종 (275mL X 3개)(택1) 넉넉하게 즐기는 요구르트 4,620원 50%2,310원 첫구매 최대혜택가 첫구매 최대혜택가 999+" [ref=e3377] [cursor=pointer]:
+              - /url: /goods/5135937
+              - button "담기" [ref=e3383]:
+                - img
+                - text: 담기
+              - generic [ref=e3384]:
+                - generic [ref=e3385]: 샛별배송
+                - generic [ref=e3386]: "[덴마크] 드링킹 요구르트 4종 (275mL X 3개)(택1)"
+                - paragraph [ref=e3387]: 넉넉하게 즐기는 요구르트
+                - generic [ref=e3388]:
+                  - generic [ref=e3390]: 4,620원
+                  - generic [ref=e3391]:
+                    - generic [ref=e3392]: 50%
+                    - generic [ref=e3393]: 2,310원
+                - generic [ref=e3394]:
+                  - generic [ref=e3395]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e3398]:
+                    - img [ref=e3399]
+                - generic [ref=e3402]:
+                  - img [ref=e3404]
+                  - generic [ref=e3409]: 999+
+            - link "담기 샛별배송 [남양] 마시는 불가리스 사과 (150mL X 4개입) 상큼한 사과맛 농후발효유 5,980원 60%2,340원 첫구매 최대혜택가 첫구매 최대혜택가 999+" [ref=e3410] [cursor=pointer]:
+              - /url: /goods/1000216162
+              - button "담기" [ref=e3416]:
+                - img
+                - text: 담기
+              - generic [ref=e3417]:
+                - generic [ref=e3418]: 샛별배송
+                - generic [ref=e3419]: "[남양] 마시는 불가리스 사과 (150mL X 4개입)"
+                - paragraph [ref=e3420]: 상큼한 사과맛 농후발효유
+                - generic [ref=e3421]:
+                  - generic [ref=e3423]: 5,980원
+                  - generic [ref=e3424]:
+                    - generic [ref=e3425]: 60%
+                    - generic [ref=e3426]: 2,340원
+                - generic [ref=e3427]:
+                  - generic [ref=e3428]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e3431]:
+                    - img [ref=e3432]
+                - generic [ref=e3435]:
+                  - img [ref=e3437]
+                  - generic [ref=e3442]: 999+
+            - link "담기 샛별배송 [크라운] 마이쮸 혼합팩 2종, 택1 한팩으로 즐기는 다양한 4,980원 52%2,365원 첫구매 최대혜택가 첫구매 최대혜택가 31" [ref=e3443] [cursor=pointer]:
+              - /url: /goods/1002369666
+              - button "담기" [ref=e3449]:
+                - img
+                - text: 담기
+              - generic [ref=e3450]:
+                - generic [ref=e3451]: 샛별배송
+                - generic [ref=e3452]: "[크라운] 마이쮸 혼합팩 2종, 택1"
+                - paragraph [ref=e3453]: 한팩으로 즐기는 다양한
+                - generic [ref=e3454]:
+                  - generic [ref=e3456]: 4,980원
+                  - generic [ref=e3457]:
+                    - generic [ref=e3458]: 52%
+                    - generic [ref=e3459]: 2,365원
+                - generic [ref=e3460]:
+                  - generic [ref=e3461]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e3464]:
+                    - img [ref=e3465]
+                - generic [ref=e3468]:
+                  - img [ref=e3470]
+                  - generic [ref=e3475]: "31"
+            - 'link "담기 샛별배송 [베이비본죽] 완료기 이유식 : 채소&과일 4종(택1) 12개월 이상 아이를 위한 진밥 5,300원 55%2,385원 첫구매 최대혜택가 첫구매 최대혜택가 999+" [ref=e3476] [cursor=pointer]':
+              - /url: /goods/5036346
+              - button "담기" [ref=e3482]:
+                - img
+                - text: 담기
+              - generic [ref=e3483]:
+                - generic [ref=e3484]: 샛별배송
+                - generic [ref=e3485]: "[베이비본죽] 완료기 이유식 : 채소&과일 4종(택1)"
+                - paragraph [ref=e3486]: 12개월 이상 아이를 위한 진밥
+                - generic [ref=e3487]:
+                  - generic [ref=e3489]: 5,300원
+                  - generic [ref=e3490]:
+                    - generic [ref=e3491]: 55%
+                    - generic [ref=e3492]: 2,385원
+                - generic [ref=e3493]:
+                  - generic [ref=e3494]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e3497]:
+                    - img [ref=e3498]
+                - generic [ref=e3501]:
+                  - img [ref=e3503]
+                  - generic [ref=e3508]: 999+
+            - link "담기 샛별배송 [노아주스] 과일주스 260mL 11종 (택1) 그대로 착즙해 더욱 신선한 주스 4,800원 50%2,400원 첫구매 최대혜택가 첫구매 최대혜택가 999+" [ref=e3509] [cursor=pointer]:
+              - /url: /goods/5004388
+              - button "담기" [ref=e3515]:
+                - img
+                - text: 담기
+              - generic [ref=e3516]:
+                - generic [ref=e3517]: 샛별배송
+                - generic [ref=e3518]: "[노아주스] 과일주스 260mL 11종 (택1)"
+                - paragraph [ref=e3519]: 그대로 착즙해 더욱 신선한 주스
+                - generic [ref=e3520]:
+                  - generic [ref=e3522]: 4,800원
+                  - generic [ref=e3523]:
+                    - generic [ref=e3524]: 50%
+                    - generic [ref=e3525]: 2,400원
+                - generic [ref=e3526]:
+                  - generic [ref=e3527]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e3530]:
+                    - img [ref=e3531]
+                - generic [ref=e3534]:
+                  - img [ref=e3536]
+                  - generic [ref=e3541]: 999+
+            - link "+10%쿠폰 담기 판매자배송 [니코트] 감성적인 플레이팅의 완성, 우드 테이블웨어 (택 1) 하나만 사도 무료배송, 니코트 베스트 상품인 우드 식기 골라담기로 GET하세요! 12,600원 61%4,860원~ 999+ 무료배송" [ref=e3542] [cursor=pointer]:
+              - /url: /goods/1000318261
+              - paragraph [ref=e3548]: +10%쿠폰
+              - button "담기" [ref=e3550]:
+                - img
+                - text: 담기
+              - generic [ref=e3551]:
+                - generic [ref=e3552]: 판매자배송
+                - generic [ref=e3553]: "[니코트] 감성적인 플레이팅의 완성, 우드 테이블웨어 (택 1)"
+                - paragraph [ref=e3554]: 하나만 사도 무료배송, 니코트 베스트 상품인 우드 식기 골라담기로 GET하세요!
+                - generic [ref=e3555]:
+                  - generic [ref=e3557]: 12,600원
+                  - generic [ref=e3558]:
+                    - generic [ref=e3559]: 61%
+                    - generic [ref=e3560]: 4,860원~
+                - generic [ref=e3561]:
+                  - img [ref=e3563]
+                  - generic [ref=e3568]: 999+
+                - generic [ref=e3570]: 무료배송
+            - link "멤버스15%쿠폰 담기 샛별배송 [페리오] 키즈 자일리톨 10000 무알콜 제로가글 사과향 320ml 우리아이 충치 예방을 위한 무알콜 불소 가글 14,700원 83%2,450원 첫구매 최대혜택가 첫구매 최대혜택가 111" [ref=e3571] [cursor=pointer]:
+              - /url: /goods/1001368152
+              - paragraph [ref=e3577]: 멤버스15%쿠폰
+              - button "담기" [ref=e3579]:
+                - img
+                - text: 담기
+              - generic [ref=e3580]:
+                - generic [ref=e3581]: 샛별배송
+                - generic [ref=e3582]: "[페리오] 키즈 자일리톨 10000 무알콜 제로가글 사과향 320ml"
+                - paragraph [ref=e3583]: 우리아이 충치 예방을 위한 무알콜 불소 가글
+                - generic [ref=e3584]:
+                  - generic [ref=e3586]: 14,700원
+                  - generic [ref=e3587]:
+                    - generic [ref=e3588]: 83%
+                    - generic [ref=e3589]: 2,450원
+                - generic [ref=e3590]:
+                  - generic [ref=e3591]: 첫구매 최대혜택가
+                  - button "첫구매 최대혜택가" [ref=e3594]:
+                    - img [ref=e3595]
+                - generic [ref=e3598]:
+                  - img [ref=e3600]
+                  - generic [ref=e3605]: "111"
+          - generic [ref=e3606]:
+            - img "처음 페이지로 이동하기 아이콘" [ref=e3608] [cursor=pointer]
+            - img "이전 페이지로 이동하기 아이콘" [ref=e3610] [cursor=pointer]
+            - generic [ref=e3611] [cursor=pointer]: "1"
+            - generic [ref=e3612] [cursor=pointer]: "2"
+            - generic [ref=e3613] [cursor=pointer]: "3"
+            - generic [ref=e3614] [cursor=pointer]: "4"
+            - generic [ref=e3615] [cursor=pointer]: "5"
+            - img "다음 페이지로 이동하기 아이콘" [ref=e3617] [cursor=pointer]
+            - img "마지막 페이지로 이동하기 아이콘" [ref=e3619] [cursor=pointer]
+    - generic [ref=e3623]:
+      - generic [ref=e3624]:
+        - generic [ref=e3625]:
+          - generic [ref=e3626]:
+            - paragraph [ref=e3627]: 고객행복센터
+            - strong [ref=e3628]: 1644-1107월~토요일 오전 7시 - 오후 6시
+            - generic [ref=e3629]:
+              - generic [ref=e3630]:
+                - button "카카오톡 문의" [ref=e3631] [cursor=pointer]
+                - generic [ref=e3632]:
+                  - text: 월~토요일
+                  - img [ref=e3633]
+                  - text: 오전 7시 - 오후 6시
+                  - text: 일/공휴일
+                  - img [ref=e3634]
+                  - text: 오전 7시 - 오후 1시
+              - generic [ref=e3635]:
+                - button "1:1 문의" [ref=e3636] [cursor=pointer]
+                - generic [ref=e3637]:
+                  - text: 365일
+                  - text: 고객센터 운영시간에 순차적으로 답변드리겠습니다.
+              - generic [ref=e3638]:
+                - link "대량주문 문의" [ref=e3639] [cursor=pointer]:
+                  - /url: https://docs.google.com/forms/d/e/1FAIpQLScWcjRuN6eWJK-G8x3NwBfE8IyKZIOq7jhD3fUXuKSWwPqzJw/viewform
+                - generic [ref=e3640]:
+                  - text: 월~금요일
+                  - img [ref=e3641]
+                  - text: 오전 9시 - 오후 6시
+                  - text: 점심시간
+                  - img [ref=e3642]
+                  - text: 낮 12시 - 오후 1시
+            - generic [ref=e3643]:
+              - text: "비회원 문의 :"
+              - link "help@kurlycorp.com" [ref=e3644] [cursor=pointer]:
+                - /url: mailto:help@kurlycorp.com
+          - generic [ref=e3645]:
+            - list [ref=e3646]:
+              - listitem [ref=e3647]:
+                - link "회사소개" [ref=e3648] [cursor=pointer]:
+                  - /url: https://newsroom.kurlycorp.com/
+              - listitem [ref=e3649]:
+                - link "컬리소개영상" [ref=e3650] [cursor=pointer]:
+                  - /url: https://www.youtube.com/embed/WEep7BcboMQ?rel=0&showinfo=0&wmode=opaque&enablejsapi=1
+              - listitem [ref=e3651]:
+                - link "투자정보" [ref=e3652] [cursor=pointer]:
+                  - /url: https://newsroom.kurlycorp.com/ir/%ec%9e%ac%eb%ac%b4%ec%a0%95%eb%b3%b4/
+              - listitem [ref=e3653]:
+                - link "인재채용" [ref=e3654] [cursor=pointer]:
+                  - /url: https://kurly.career.greetinghr.com
+              - listitem [ref=e3655]:
+                - link "이용약관" [ref=e3656] [cursor=pointer]:
+                  - /url: /user-terms/agreement
+              - listitem [ref=e3657]:
+                - link "개인정보처리방침" [ref=e3658] [cursor=pointer]:
+                  - /url: https://privacy.kurly.com/kurly/privacypolicy
+              - listitem [ref=e3659]:
+                - link "이용안내" [ref=e3660] [cursor=pointer]:
+                  - /url: /user-guide
+              - listitem [ref=e3661]:
+                - link "입점신청" [ref=e3662] [cursor=pointer]:
+                  - /url: https://docs.google.com/forms/d/e/1FAIpQLScKI_Kd1lQAp68r-SIhiOWj0J43C99IvNbgFeT7-X9YLIqteA/viewform?usp=dialog
+            - generic [ref=e3663]:
+              - text: "법인명 (상호) : 주식회사 컬리"
+              - generic [ref=e3664]: "|"
+              - text: "사업자등록번호 : 261-81-23567"
+              - link "사업자정보 확인" [ref=e3665] [cursor=pointer]:
+                - /url: https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2618123567&apv_perm_no=
+              - text: "통신판매업 : 제 2018-서울강남-01646 호"
+              - text: "주소 : 서울특별시 강남구 테헤란로 133, 18층(역삼동)"
+              - generic [ref=e3666]: "|"
+              - text: "대표이사 : 김슬아"
+              - text: "채용문의 :"
+              - link "recruit@kurlycorp.com" [ref=e3667] [cursor=pointer]:
+                - /url: mailto:recruit@kurlycorp.com
+              - text: "팩스: 070 - 7500 - 6098"
+            - list [ref=e3668]:
+              - listitem [ref=e3669]:
+                - link "컬리 인스타그램 바로가기" [ref=e3670] [cursor=pointer]:
+                  - /url: https://instagram.com/marketkurly
+                  - img "컬리 인스타그램 바로가기" [ref=e3671]
+              - listitem [ref=e3672]:
+                - link "컬리 페이스북 바로가기" [ref=e3673] [cursor=pointer]:
+                  - /url: https://www.facebook.com/marketkurly
+                  - img "컬리 페이스북 바로가기" [ref=e3674]
+              - listitem [ref=e3675]:
+                - link "컬리 네이버블로그 바로가기" [ref=e3676] [cursor=pointer]:
+                  - /url: https://blog.naver.com/marketkurly
+                  - img "컬리 네이버블로그 바로가기" [ref=e3677]
+              - listitem [ref=e3678]:
+                - link "컬리 유튜브 바로가기" [ref=e3679] [cursor=pointer]:
+                  - /url: https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg
+                  - img "컬리 유튜브 바로가기" [ref=e3680]
+        - generic [ref=e3681]:
+          - button "isms 로고 [인증범위] 컬리 쇼핑몰 서비스 개발·운영 (심사받지 않은 물리적 인프라 제외) [유효기간] 2025.01.15 ~ 2028.01.14" [ref=e3682] [cursor=pointer]:
+            - img "isms 로고" [ref=e3683]
+            - paragraph [ref=e3684]:
+              - text: "[인증범위] 컬리 쇼핑몰 서비스 개발·운영"
+              - text: (심사받지 않은 물리적 인프라 제외)
+              - text: "[유효기간] 2025.01.15 ~ 2028.01.14"
+          - button "우리은행 로고 고객님이 현금으로 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다." [ref=e3685] [cursor=pointer]:
+            - img "우리은행 로고" [ref=e3686]
+            - paragraph [ref=e3687]:
+              - text: 고객님이 현금으로 결제한 금액에 대해 우리은행과
+              - text: 채무지급보증 계약을 체결하여 안전거래를 보장하고
+              - text: 있습니다.
+      - generic [ref=e3688]:
+        - text: 컬리에서 판매되는 상품 중에는 컬리에 입점한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
+        - text: 마켓플레이스(오픈마켓) 상품의 경우 컬리는 통신판매중개자로서 통신판매의 당사자가 아닙니다. 컬리는 해당 상품의 주문, 품질, 교환/환불 등 의무와 책임을 부담하지 않습니다.
+        - emphasis [ref=e3689]: © KURLY CORP. ALL RIGHTS RESERVED
+  - alert [ref=e3690]: 검색결과 > 사과 - 마켓컬리
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '../../fixtures/pages';
+  2  | import { products } from '../data/products';
+  3  | 
+  4  | 
+  5  | test.describe('가격 정렬 기능테스트', () => {
+  6  |     test('가격 낮은순 정렬 기능 확인 @regression', async ({ page, mainPage, searchPage }) =>
+  7  |         {
+  8  |             // 메인 페이지 접속
+  9  |             await page.goto('/main');
+  10 |             await page.setViewportSize({ width: 1280, height: 720 });
+  11 | 
+  12 |             // 검색어 "사과"로 검색
+  13 |             await mainPage.searchGoods(products.apple);
+  14 |             await expect(page).toHaveURL(/\/search(?:\?|$)/, { timeout: 10000 });
+  15 | 
+  16 |             // 가격 낮은순 정렬 선택
+  17 |             await searchPage.clickSortTab('낮은 가격순');
+  18 |             
+  19 | 
+  20 |             // 정렬된 상품들의 가격을 배열로 수집
+  21 |             const prices = await searchPage.getProductPrices();
+  22 | 
+  23 |             expect(prices.length).toBeGreaterThanOrEqual(3);//  검증을 위한 최소 상품 개수
+  24 | 
+  25 |             // 가격이 오름차순으로 정렬되었는지 확인
+  26 |             for (let i = 0; i < prices.length - 1; i++) {
+> 27 |                 expect(prices[i]).toBeLessThanOrEqual(prices[i + 1]);
+     |                                   ^ Error: expect(received).toBeLessThanOrEqual(expected)
+  28 |             }
+  29 |         }
+  30 |     );
+  31 | 
+  32 |     test('높은 가격순 정렬 시, 가격이 내림차순인지 확인 @regression', async ({ page, mainPage, searchPage }) => {
+  33 |         await page.goto('/main');
+  34 |         await page.setViewportSize({ width: 1280, height: 720 });
+  35 | 
+  36 |         await mainPage.searchGoods(products.snack);
+  37 |         await expect(page).toHaveURL(/\/search(?:\?|$)/, { timeout: 10000 });
+  38 | 
+  39 |           // 높은 가격순 클릭
+  40 |         await searchPage.clickSortTab('높은 가격순');
+  41 |         
+  42 | 
+  43 |         const prices = await searchPage.getProductPrices();
+  44 | 
+  45 |         expect(prices.length).toBeGreaterThanOrEqual(3);
+  46 | 
+  47 |           // 내림차순 정렬 확인
+  48 |         for (let i = 0; i < prices.length - 1; i++) {
+  49 |             expect(prices[i]).toBeGreaterThanOrEqual(prices[i + 1]);
+  50 |           }
+  51 |       });
+  52 | 
+  53 | });
+  54 | 
+```
