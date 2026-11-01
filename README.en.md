@@ -114,8 +114,8 @@ npm run report        # Open report
 
 ```env
 SLACK_WEBHOOK_TS=your_slack_webhook_url          # Optional
-KURLY_TEST_USER_EMAIL=your_email                 # For auth tests
-KURLY_TEST_USER_PASSWORD=your_password           # For auth tests
+KURLY_TEST_USERNAME=your_kurly_id                  # For auth tests
+KURLY_TEST_PASSWORD=your_password                # For auth tests
 ```
 
 ---

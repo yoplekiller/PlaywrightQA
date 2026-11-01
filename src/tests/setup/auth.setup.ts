@@ -4,8 +4,8 @@ import path from 'path';
 const authFile = path.resolve(__dirname, '../../../playwright/.auth/user.json');
 
 setup('authenticate Kurly user', async ({ page }) => {
-  const email = process.env.KURLY_TEST_USER_EMAIL || process.env.KURLY_EMAIL;
-  const password = process.env.KURLY_TEST_USER_PASSWORD || process.env.KURLY_PASSWORD;
+  const email = process.env.KURLY_TEST_USERNAME || process.env.KURLY_TEST_USER_EMAIL || process.env.KURLY_EMAIL;
+  const password = process.env.KURLY_TEST_PASSWORD || process.env.KURLY_TEST_USER_PASSWORD || process.env.KURLY_PASSWORD;
 
   setup.skip(!email || !password, 'KURLY test credentials are not configured.');
   if (!email || !password) {
