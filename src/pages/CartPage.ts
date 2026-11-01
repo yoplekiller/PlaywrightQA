@@ -58,8 +58,10 @@ export class CartPage extends BasePage {
     await this.addGoodsButton.click();
   }
 
+  // 페이지 전체에서 숫자 텍스트를 찾으면 장바구니 아이콘 배지 등 다른 "1"과 겹쳐 strict mode 위반이 난다
+  // (2026-11-01 로컬 5/5 실패). 스테퍼 옆 수량 값만 보는 expectItemQuantity 로 위임한다.
   async expectGoodsQuantity(quantity: number) {
-    await expect(this.page.getByText(String(quantity), { exact: true })).toBeVisible();
+    await this.expectItemQuantity(quantity);
   }
 
   async expectGoodsVisible(goodsName: string) {

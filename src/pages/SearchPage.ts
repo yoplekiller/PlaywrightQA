@@ -219,10 +219,14 @@ export class SearchPage extends BasePage {
   // 경계값 테스트: 마지막 페이지에서 다음 페이지 아이콘을 눌러도 더 이상 진행되지 않아야 한다.
   async expectNextPageIsNoOpAtLastPage() {
     const currentPage = this.getCurrentPageParam();
+    const firstProductBefore = await this.productItems.first().textContent();
     await this.nextPageIcon.scrollIntoViewIfNeeded();
     await this.nextPageIcon.click({ force: true });
-    await this.page.waitForTimeout(1000);
+    // "아무 일도 일어나지 않음"을 확인하는 검증이라 기다릴 대상 요소가 없다. 고정 1초 대신
+    // 클릭으로 시작됐을 수 있는 요청이 모두 끝날 때까지(networkidle) 기다린 뒤 URL·목록이 그대로인지 본다.
+    await this.page.waitForLoadState('networkidle', { timeout: 5000 }).catch(() => undefined);
 
     expect(this.getCurrentPageParam()).toBe(currentPage);
+    await expect(this.productItems.first()).toHaveText(firstProductBefore ?? '');
   }
 }

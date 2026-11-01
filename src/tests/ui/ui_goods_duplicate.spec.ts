@@ -1,7 +1,7 @@
 import { test, expect } from '../../fixtures/pages';
 import { products } from '../data/products';
 
-test.skip('상품 중복 담기 기능 확인 @regression', async ({ page, mainPage, searchPage, goodsPage, cartPage }) => {
+test('상품 중복 담기 기능 확인 @regression', async ({ page, mainPage, searchPage, goodsPage, cartPage }) => {
     const addCount = 2; // 몇 번 담을지 설정
 
     // 마켓컬리 메인 페이지 접속
