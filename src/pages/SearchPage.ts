@@ -128,10 +128,17 @@ export class SearchPage extends BasePage {
     return sortTypes[name];
   }
 
+  // 컬리 가격정렬은 카드에 보이는 판매가가 아닌 다른 기준(쿠폰/대표옵션가 등)을 쓰기 때문에
+  // 쿠폰 배지나 옵션가("원~") 상품이 섞이면 보이는 가격 순서가 어긋남(2026-10-11 실측).
+  // 그런 카드는 비교 대상에서 빼고 보이는 가격 그대로 정렬되는 일반 상품만 수집한다.
   async getProductPrices(): Promise<number[]> {
     await this.productItems.first().waitFor({ state: 'visible', timeout: 5000 });
 
     return this.productItems.evaluateAll(items => items
+      .filter(item => {
+        const text = item.textContent ?? '';
+        return !text.includes('쿠폰') && !/원~/.test(text);
+      })
       .map(item => {
         const priceTexts = item.textContent?.match(/\d{1,3}(?:,\d{3})*원/g) ?? [];
         const salePriceText = priceTexts.at(-1);

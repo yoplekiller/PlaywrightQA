@@ -75,6 +75,8 @@ test.describe('장바구니 결제금액 계산 (API 목킹)', () => {
         page,
         cartPage,
     }) => {
+        test.fail(true, 'kurly.com 실사이트 결함 — 배송비 0원 표기가 결제금액 패널("0원")과 상품 요약 줄("무료")에서 다름');
+
         await page.route(PAYMENT_CALCULATE_URL, (route) =>
             route.fulfill({
                 status: 200,
