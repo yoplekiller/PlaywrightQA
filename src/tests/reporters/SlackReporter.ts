@@ -1,14 +1,9 @@
 import type { Reporter, FullResult, FullConfig, Suite, TestCase, TestResult } from '@playwright/test/reporter';
 import dotenv from 'dotenv';
 import axios from 'axios';
+import { Bucket, ClassifiedTest, classifyAll, countBuckets } from './classify';
 
 dotenv.config();
-
-interface ProjectStat {
-  passed: Set<string>;
-  failed: Set<string>;
-  skipped: Set<string>;
-}
 
 type FailureCategory = 'product' | 'automation' | 'environment';
 
@@ -24,6 +19,7 @@ interface FailedDetail {
   status: TestResult['status'];
   error: string;
   guide: FailureGuide;
+  test: TestCase;
 }
 
 const FAILED_STATUSES: TestResult['status'][] = ['failed', 'timedOut', 'interrupted'];
@@ -43,10 +39,7 @@ const CATEGORY_SHORT_LABELS: Record<FailureCategory, string> = {
 
 class SlackReporter implements Reporter {
   private webhookUrl: string;
-  private passedKeys = new Set<string>();
-  private failedKeys = new Set<string>();
-  private skippedKeys = new Set<string>();
-  private projectStats = new Map<string, ProjectStat>();
+  private rootSuite?: Suite;
   private startTime = '';
   private failedDetails: FailedDetail[] = [];
 
@@ -56,77 +49,40 @@ class SlackReporter implements Reporter {
     console.log('Slack webhook configured:', this.webhookUrl ? 'yes' : 'no');
   }
 
-  onBegin(_config: FullConfig, _suite: Suite) {
+  onBegin(_config: FullConfig, suite: Suite) {
+    this.rootSuite = suite;
     this.startTime = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
     console.log('Playwright test run started');
   }
 
+  // 실패 상세(에러 메시지, 원인 분류)만 모아둔다. 통과/실패 집계는 onEnd 에서 classify() 로 한 번에 한다.
+  // 예전엔 result.status 로 직접 셌는데, 그러면 test.fail() 로 표시한 known issue 가 '실패'로 집계됐다.
   onTestEnd(test: TestCase, result: TestResult) {
-    if (FAILED_STATUSES.includes(result.status) && result.retry < test.retries) {
+    if (!FAILED_STATUSES.includes(result.status) || this.failedDetails.some(detail => detail.test === test)) {
       return;
     }
-
-    const key = `${test.location.file}>${test.title}`;
-    const projectName = test.parent.project()?.name || 'unknown';
-    const projectStat = this.getProjectStat(projectName);
-
-    if (result.status === 'passed') {
-      if (!projectStat.failed.has(key)) {
-        projectStat.passed.add(key);
-      }
-
-      if (!this.failedKeys.has(key)) {
-        this.passedKeys.add(key);
-      }
-
-      projectStat.skipped.delete(key);
-      this.skippedKeys.delete(key);
-      return;
-    }
-
-    if (FAILED_STATUSES.includes(result.status)) {
-      projectStat.failed.add(key);
-      projectStat.passed.delete(key);
-      projectStat.skipped.delete(key);
-
-      this.failedKeys.add(key);
-      this.passedKeys.delete(key);
-      this.skippedKeys.delete(key);
-
-      if (!this.failedDetails.find(detail => detail.file === test.location.file && detail.title === test.title)) {
-        const error = this.getErrorSummary(result);
-
-        this.failedDetails.push({
-          title: test.title,
-          file: test.location.file,
-          projectName,
-          status: result.status,
-          error,
-          guide: this.getFailureGuide(test, result, error),
-        });
-      }
-
-      return;
-    }
-
-    if (result.status === 'skipped') {
-      if (!projectStat.passed.has(key) && !projectStat.failed.has(key)) {
-        projectStat.skipped.add(key);
-      }
-
-      if (!this.passedKeys.has(key) && !this.failedKeys.has(key)) {
-        this.skippedKeys.add(key);
-      }
-    }
+    const error = this.getErrorSummary(result);
+    this.failedDetails.push({
+      title: test.title,
+      file: test.location.file,
+      projectName: test.parent.project()?.name || 'unknown',
+      status: result.status,
+      error,
+      guide: this.getFailureGuide(test, result, error),
+      test,
+    });
   }
 
   async onEnd(result: FullResult): Promise<void> {
-    const passed = this.passedKeys.size;
-    const failed = this.failedKeys.size;
-    const skipped = this.skippedKeys.size;
-    const total = passed + failed + skipped;
+    const classified = classifyAll(this.rootSuite?.allTests() ?? []);
+    const counts = countBuckets(classified);
+    const { passed, flaky, knownIssue, failed, skipped } = counts;
+    const total = classified.length;
+    // 진짜 실패(새 회귀/테스트 결함)만 상세 분석 대상으로 남긴다. flaky·known issue 의 실패 기록은 제외.
+    const failedTests = new Set(classified.filter(c => c.bucket === 'failed').map(c => c.test));
+    this.failedDetails = this.failedDetails.filter(detail => failedTests.has(detail.test));
 
-    console.log('Playwright test run finished:', { total, passed, failed, skipped });
+    console.log('Playwright test run finished:', { total, ...counts });
 
     const status = result.status.toUpperCase();
     const isPassed = status === 'PASSED';
@@ -151,7 +107,7 @@ class SlackReporter implements Reporter {
           text: [
             `*📌 상태:* ${status}`,
             `*⏱️ 소요 시간:* ${Math.round(result.duration / 1000)}초`,
-            `*📊 결과:* ✅ ${passed} / ❌ ${failed} / ⏭️ ${skipped}  *(총 ${total})*`,
+            `*📊 결과:* ✅ ${passed} / 🔁 flaky ${flaky} / 📌 known ${knownIssue} / ❌ ${failed} / ⏭️ ${skipped}  *(총 ${total})*`,
           ].join('\n'),
         },
       },
@@ -168,7 +124,7 @@ class SlackReporter implements Reporter {
         type: 'section',
         text: {
           type: 'mrkdwn',
-          text: `*🧪 프로젝트별 결과*\n${this.createProjectLines() || '결과 없음'}`,
+          text: `*🧪 프로젝트별 결과*\n${this.createProjectLines(classified) || '결과 없음'}`,
         },
       },
     ];
@@ -205,24 +161,22 @@ class SlackReporter implements Reporter {
     }
   }
 
-  private getProjectStat(projectName: string): ProjectStat {
-    if (!this.projectStats.has(projectName)) {
-      this.projectStats.set(projectName, {
-        passed: new Set(),
-        failed: new Set(),
-        skipped: new Set(),
-      });
+  private createProjectLines(classified: ClassifiedTest[]): string {
+    const byProject = new Map<string, Record<Bucket, number>>();
+    for (const item of classified) {
+      const name = item.test.parent.project()?.name || 'unknown';
+      if (!byProject.has(name)) byProject.set(name, countBuckets([]));
+      byProject.get(name)![item.bucket] += 1;
     }
-
-    return this.projectStats.get(projectName)!;
-  }
-
-  private createProjectLines(): string {
-    return Array.from(this.projectStats.entries())
-      .map(([name, stat]) => {
-        const statusIcon = stat.failed.size > 0 ? '❌' : '✅';
-        const skipText = stat.skipped.size > 0 ? ` / ⏭️ ${stat.skipped.size}` : '';
-        return `${statusIcon} *${name}*: ✅ ${stat.passed.size} / ❌ ${stat.failed.size}${skipText}`;
+    return Array.from(byProject.entries())
+      .map(([name, c]) => {
+        const statusIcon = c.failed > 0 ? '❌' : '✅';
+        const extras = [
+          c.flaky ? `🔁 ${c.flaky}` : '',
+          c.knownIssue ? `📌 ${c.knownIssue}` : '',
+          c.skipped ? `⏭️ ${c.skipped}` : '',
+        ].filter(Boolean).join(' / ');
+        return `${statusIcon} *${name}*: ✅ ${c.passed} / ❌ ${c.failed}${extras ? ` / ${extras}` : ''}`;
       })
       .join('\n');
   }

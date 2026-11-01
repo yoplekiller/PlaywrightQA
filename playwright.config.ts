@@ -12,6 +12,8 @@ const reporters: [string, any?][] = [
 if (!isListMode) {
     reporters.push(['html', { outputFolder: 'playwright-report', open: 'never' }]);
     reporters.push(['json', { outputFile: 'playwright-report/results.json' }]);
+    // 통과/flaky/known issue/실패 분류표 → test-results/summary.md, CI 에선 GITHUB_STEP_SUMMARY
+    reporters.push(['./src/tests/reporters/SummaryReporter.ts']);
 }
 
 if (!isListMode && process.env.SLACK_WEBHOOK_TS) {
