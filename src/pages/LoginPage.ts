@@ -1,4 +1,4 @@
-import { Page, Locator } from '@playwright/test';
+import { Page, Locator, expect } from '@playwright/test';
 import { BasePage } from './BasePage';
 
 
@@ -40,6 +40,11 @@ export class LoginPage extends BasePage {
     await this.fillUsername(username);
     await this.fillPassword(password);
     await this.clickSubmit();
+  }
+
+  // 아이디/비밀번호 불일치 시 뜨는 안내. 어떤 값이 틀렸는지 알려주지 않는 게 정상(계정 존재 여부 노출 방지).
+  async expectLoginFailedMessage() {
+    await expect(this.page.getByRole('dialog').getByText(/아이디 또는 비밀번호를 확인해주세요/)).toBeVisible({ timeout: 10000 });
   }
 
   async clickSignup() {

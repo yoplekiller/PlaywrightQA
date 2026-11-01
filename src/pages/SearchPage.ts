@@ -81,6 +81,15 @@ export class SearchPage extends BasePage {
     return this.productItems;
   }
 
+  // 화면에 그려진 상품 카드의 상품번호(/goods/{no})를 위에서부터 count 개. API 응답과 순서를 대조할 때 쓴다.
+  async getProductNos(count: number): Promise<number[]> {
+    const hrefs = await this.productItems.evaluateAll(
+      (links, n) => links.slice(0, n as number).map(a => a.getAttribute('href') ?? ''),
+      count,
+    );
+    return hrefs.map(href => Number(href.match(/\/goods\/(\d+)/)?.[1]));
+  }
+
   async expectSearchUrlContainsTerm(name: string) {
     await expect.poll(
       () => this.hasSearchTermInUrl(name),
