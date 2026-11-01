@@ -199,7 +199,7 @@ ExcelJS 기반 `test_case.xlsx`와 `excel_loader.ts`는 외부 QA 데이터 연�
 
 **실행 결과 분류**: `src/tests/reporters/classify.ts`가 `test.outcome()` 기준으로 결과를 ✅ 통과 / 🔁 flaky(재시도 후 통과) / 📌 known issue(`test.fail()`로 표시한 실사이트 결함) / ❌ 실패 / ⏭️ 스킵으로 나눕니다. Slack 메시지와 GitHub Actions 실행 요약(`SummaryReporter.ts` → `GITHUB_STEP_SUMMARY`, `test-results/summary.md`)에 같은 분류표가 나가서, 빨간불이 새 회귀인지 이미 아는 사이트 결함인지 바로 구분됩니다. known issue 테스트가 예상외로 통과하면(사이트가 고친 경우) 실패로 올려 `test.fail()` 제거를 알립니다.
 
-**실패 자동 분류**: 실패한 테스트가 있으면 에러 패턴을 분석해 🐞 제품 결함 가능성 / 🛠️ 자동화 코드 점검 / 🌐 환경 이슈 가능성 3가지로 자동 분류하고, 카테고리별 조치 가이드까지 함께 표시합니다(`src/tests/reporters/SlackReporter.ts`). 실패 원인 파악을 위한 1차 트리아지 시간을 단축하는 목적입니다.
+**실패 자동 분류**: 실패한 테스트가 있으면 에러 패턴을 분석해 🐞 제품 결함 가능성 / 🛠️ 자동화 코드 점검 / 🌐 환경 이슈 가능성 3가지로 자동 분류하고, 카테고리별 조치 가이드까지 함께 표시합니다(`src/tests/reporters/SlackReporter.ts`). 실패 원인을 확인할 때 참고할 수 있도록 구성했습니다.
 
 > **집계 규칙 (TC 기준, 중복 제거)**
 > - 전체 집계는 HTML 리포터와 동일한 **최악 결과 우선** 방식으로 동작합니다.
@@ -249,7 +249,6 @@ Checkout → 의존성 설치 → 브라우저 설치 → 타입체크(tsc) → 
 
 - npm + Playwright 브라우저 캐싱
 - Workers 병렬 실행 (2개)
-- **빌드 시간 42.8% 단축**
 
 ---
 
