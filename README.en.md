@@ -24,7 +24,9 @@ QA Engineer portfolio — E2E test automation for Kurly, a live e-commerce site,
 | **Page Object Model** | 7 page classes for structured automation |
 | **Custom Fixtures** | Page Objects injected through Playwright fixtures |
 | **Data-Driven Testing** | TS smoke data fixtures + ExcelJS external data example |
-| **Accessibility Testing** | WCAG 2.0 validation with axe-core (requires 0 critical/serious violations) |
+| **Accessibility Testing** | WCAG 2.0 validation with axe-core — known site violations tracked as a baseline, fails on any new critical/serious violation |
+| **API+UI Hybrid** | Captures search/sort/cart API responses with `waitForResponse` and cross-checks them against the rendered UI |
+| **Result Classification** | Passed / flaky (passed on retry) / known issue (`test.fail`) / failed / skipped table in the Actions summary and Slack |
 | **Visual Regression Testing** | Pixel-diff comparison of the header region, with Docker-generated baselines to match CI |
 | **CI/CD** | GitHub Actions with 8-hour scheduled runs |
 | **Slack Notifications** | Real-time reporting via Block Kit UI |
@@ -132,13 +134,15 @@ KURLY_TEST_PASSWORD=your_password                # For auth tests
 | `ui_goods_page` | Product detail page navigation |
 | `ui_goods_cart` | Search → Detail → Add to cart |
 | `ui_cart_quantity` | Cart quantity is 1 after adding a single item |
-| `ui_goods_duplicate` | ⚠️ skip - Duplicate item quantity verification |
+| `ui_goods_duplicate` | Add the same item twice → cart quantity is 2 |
 | `ui_guest_checkout_requires_login` | Guest cart shows a login button instead of a checkout button |
 | `ui_beauty_btn` | Beauty Kurly button URL navigation |
 | `ui_address_search` | Address search popup E2E flow |
 | `ui_sort_button` | 6 sort tab iteration and validation |
 | `ui_sort_price` | Price sorting result verification |
-| `ui_accessibility` | axe-core based WCAG accessibility audit (requires 0 critical/serious violations) |
+| `ui_accessibility` | axe-core WCAG audit — 0 new critical/serious violations beyond the known baseline, with a page-loaded precondition |
+| `ui_api_hybrid` | Search API order = card order; price sorts are sorted by effective price in the API and rendered in API order; cart-add API succeeds and cart quantity matches |
+| `ui_login_failed` | Unknown account shows an error dialog and stays logged out; empty submit shows an invalid-input dialog |
 | `ui_responsive` | Responsive layout verification across viewports |
 | `ui_visual_regression` | Visual regression check of the header/GNB region (separate workflow, weekly) |
 

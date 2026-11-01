@@ -38,22 +38,18 @@ jobs:
           rm -rf playwright-report
           mkdir -p screenshots logs test-results
       
-      - name: Run smoke tests for pull requests
+      # PR: 회귀 테스트를 Chromium + Edge 두 브라우저로 (예전 이름 "smoke"는 실제 동작과 달라서 정정)
+      - name: Run regression tests on Chromium + Edge for pull requests
         if: github.event_name == 'pull_request'
-        run: |
-          npm run test:ui:all
-          rm -rf test-results/**/*.zip
-          du -sh
+        run: npm run test:ui:all
         env:
           SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
           PLAYWRIGHT_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html
 
+      # 예전엔 실행 후 test-results/*.zip 을 지워서 재시도 때 남는 trace 까지 삭제됐다 → 실패 원인 분석 불가. 이제 보존해서 업로드.
       - name: Run regression tests for main and scheduled runs
         if: github.event_name != 'pull_request'
-        run: |
-          npm run test:ci
-          rm -rf test-results/**/*.zip
-          du -sh
+        run: npm run test:ci
         env:
           SLACK_WEBHOOK_TS: ${{ secrets.SLACK_WEBHOOK_TS }}
           PLAYWRIGHT_REPORT_URL: https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html
@@ -113,14 +109,15 @@ jobs:
           if-no-files-found: ignore
           retention-days: 7
 
-      - name: Upload test result files
+      # 실패/flaky 테스트의 trace.zip(재시도 시 기록), 스크린샷, 분류표(summary.md)
+      - name: Upload test results (traces, screenshots, summary)
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: ui-playwright-test-results
           path: test-results
           if-no-files-found: ignore
-          retention-days: 7
+          retention-days: 14
 
       - name: Deploy Playwright HTML Report
         if: always()
@@ -132,11 +129,13 @@ jobs:
           publish_branch: gh-pages
           force_orphan: true
 
+      # 통과/flaky/known issue/실패 분류표는 SummaryReporter 가 테스트 실행 중에 이미 요약에 써둔다
       - name: Create Test Summary
         if: always()
         run: |
-          echo "## Playwright UI Test Results" >> $GITHUB_STEP_SUMMARY
+          echo "## 실행 범위 · 리포트" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "- PR: smoke tests only" >> $GITHUB_STEP_SUMMARY
-          echo "- main/schedule/manual: regression tests" >> $GITHUB_STEP_SUMMARY
+          echo "- PR: regression (Chromium + Edge)" >> $GITHUB_STEP_SUMMARY
+          echo "- main/schedule/manual: regression (Chromium, retries 1)" >> $GITHUB_STEP_SUMMARY
+          echo "- 실패·flaky trace: Artifacts > ui-playwright-test-results (npx playwright show-trace)" >> $GITHUB_STEP_SUMMARY
           echo "- [View Playwright Report](https://yoplekiller.github.io/PlaywrightQA/playwright-report/index.html)" >> $GITHUB_STEP_SUMMARY

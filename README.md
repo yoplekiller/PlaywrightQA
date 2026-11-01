@@ -24,7 +24,9 @@ QA 엔지니어 포트폴리오 프로젝트입니다. Playwright + TypeScript �
 | **Page Object Model** | 7개 페이지 클래스로 구조화 |
 | **Custom Fixtures** | Page Object를 fixture로 주입하여 테스트 코드 중복 감소 |
 | **데이터 드리븐** | TS fixture 기반 smoke 데이터 + ExcelJS 외부 데이터 예제 |
-| **접근성 검사** | axe-core 기반 WCAG 2.0 검증 (critical/serious 위반 0건 요구) |
+| **접근성 검사** | axe-core 기반 WCAG 2.0 검증 — 알려진 위반은 기준선으로 관리, 신규 critical/serious 위반 시 실패 |
+| **API+UI 하이브리드** | `waitForResponse`로 검색·정렬·장바구니 API 응답을 잡아 화면 결과와 대조 |
+| **실행 결과 분류** | 통과 / flaky(재시도 통과) / known issue(`test.fail`) / 실패 / 스킵 분류표를 Actions 요약·Slack에 표시 |
 | **시각적 회귀 테스트** | 헤더 영역 픽셀 diff 비교, Docker 기반 기준 이미지로 CI 환경 일치 |
 | **CI/CD** | GitHub Actions 하루 1회 자동 실행 |
 | **Slack 알림** | Block Kit UI 기반 실시간 리포팅 (브라우저별 결과 포함) |
@@ -132,17 +134,19 @@ KURLY_TEST_PASSWORD=your_password                # 인증 테스트용
 | `ui_goods_page` | 상품 상세페이지 진입 |
 | `ui_goods_cart` | 검색 → 상세 → 장바구니 담기 |
 | `ui_cart_quantity` | 상품 1개 담기 후 장바구니 수량이 1인지 검증 |
-| `ui_goods_duplicate` | ⚠️ skip - 동일 상품 중복 담기 수량 검증 |
+| `ui_goods_duplicate` | 동일 상품 2회 담기 → 장바구니 수량 2 검증 |
 | `ui_guest_checkout_requires_login` | 비회원 장바구니는 결제 버튼 대신 로그인 버튼만 노출됨을 확인 |
 | `ui_beauty_btn` | 뷰티컬리 버튼 URL 이동 |
 | `ui_address_search` | 주소 검색 팝업 E2E 플로우 |
 | `ui_sort_button` | 6개 정렬 탭 순회 및 검증 |
 | `ui_sort_price` | 가격순 정렬 결과 검증 |
-| `ui_accessibility` | axe-core 기반 WCAG 접근성 검사 (critical/serious 위반 0건 요구) |
+| `ui_accessibility` | axe-core 기반 WCAG 접근성 검사 — 기준선(사이트 기존 위반) 외 신규 critical/serious 위반 0건, 페이지 로드 사전조건 확인 |
 | `ui_responsive` | 반응형 뷰포트별 레이아웃 확인 |
 | `ui_visual_regression` | 헤더(GNB) 영역 시각적 회귀 검사 (별도 workflow, 주 1회) |
 | `ui_pagination` | 검색 결과 페이지네이션(다음/특정페이지/처음/마지막) 동작 |
 | `ui_boundary_values` | 빈 검색어, 장바구니 최소수량(1) 경계값 |
+| `ui_api_hybrid` | API+UI 하이브리드: 검색 API 순서 = 화면 순서, 가격순 정렬은 API 판매가 기준 정렬 + 화면 순서 일치, 장바구니 담기 API 성공 + 화면 수량 일치 |
+| `ui_login_failed` | 없는 계정 로그인 시 안내 dialog·로그인 안 됨, 빈 값 제출 시 입력값 오류 dialog |
 | `ui_cart_payment_mock` | `payment/calculate` API 목킹 - 결제금액 패널 데이터 바인딩, 서버 에러 처리, 무료배송 표기 일관성(⚠️ 실제 불일치 발견, fail 유지) |
 
 ### UI 테스트 - 인증 필요
@@ -193,13 +197,15 @@ ExcelJS 기반 `test_case.xlsx`와 `excel_loader.ts`는 외부 QA 데이터 연�
 - 시작 시각 / 종료 시각 / 소요 시간
 - Report 바로가기 버튼
 
+**실행 결과 분류**: `src/tests/reporters/classify.ts`가 `test.outcome()` 기준으로 결과를 ✅ 통과 / 🔁 flaky(재시도 후 통과) / 📌 known issue(`test.fail()`로 표시한 실사이트 결함) / ❌ 실패 / ⏭️ 스킵으로 나눕니다. Slack 메시지와 GitHub Actions 실행 요약(`SummaryReporter.ts` → `GITHUB_STEP_SUMMARY`, `test-results/summary.md`)에 같은 분류표가 나가서, 빨간불이 새 회귀인지 이미 아는 사이트 결함인지 바로 구분됩니다. known issue 테스트가 예상외로 통과하면(사이트가 고친 경우) 실패로 올려 `test.fail()` 제거를 알립니다.
+
 **실패 자동 분류**: 실패한 테스트가 있으면 에러 패턴을 분석해 🐞 제품 결함 가능성 / 🛠️ 자동화 코드 점검 / 🌐 환경 이슈 가능성 3가지로 자동 분류하고, 카테고리별 조치 가이드까지 함께 표시합니다(`src/tests/reporters/SlackReporter.ts`). 실패 원인 파악을 위한 1차 트리아지 시간을 단축하는 목적입니다.
 
 > **집계 규칙 (TC 기준, 중복 제거)**
 > - 전체 집계는 HTML 리포터와 동일한 **최악 결과 우선** 방식으로 동작합니다.
-> - 어느 브라우저에서든 1회 이상 실패하면 해당 TC는 **실패**로 집계됩니다.
-> - 스킵은 passed / failed 어느 쪽도 아닌 TC에만 집계됩니다.
-> - retry 중간 실패는 제외하고, 최종 결과만 반영합니다.
+> - 집계는 `classify.ts`의 분류(통과/flaky/known issue/실패/스킵)를 따르고, 브라우저(프로젝트)별로 따로 셉니다.
+> - 재시도 후 통과는 실패가 아니라 flaky로, `test.fail()` 테스트가 예상대로 실패하면 known issue로 집계됩니다.
+> - 실패 상세(원인 분류·조치 가이드)는 진짜 실패에만 붙습니다.
 
 ### 시각적 회귀 테스트 (Visual Regression)
 
@@ -231,8 +237,8 @@ assert 기반 테스트는 "특정 조건이 참인가"를 검증하지만, 시�
 ### 파이프라인
 
 ```
-Checkout → 의존성 설치 → 브라우저 설치 → 테스트 실행
-→ Artifact 업로드 → GitHub Pages 배포 → Slack 알림
+Checkout → 의존성 설치 → 브라우저 설치 → 타입체크(tsc) → 테스트 실행(분류표 → Actions 요약)
+→ Artifact 업로드(trace·스크린샷·summary.md) → GitHub Pages 배포 → Slack 알림
 ```
 
 ### AutoTC 연동 (배포 판단 자동화)
