@@ -1,0 +1,213 @@
+{
+  "testTitle": "상품 상세페이지 진입 확인 @regression",
+  "status": "failed",
+  "expectedStatus": "passed",
+  "url": "https://www.kurly.com/goods/1000608637?collectionCode=2611-blackweek-home-01",
+  "pageTitle": "[일일특가]치밥하기 좋은 순살 바베큐치킨 - 마켓컬리",
+  "classification": {
+    "failureType": "locator-or-wait-condition",
+    "ownerHint": "automation",
+    "recommendedAction": "Check the current DOM and update the Page Object locator or wait condition."
+  },
+  "errorSummary": "TimeoutError: locator.waitFor: Timeout 5000ms exceeded.",
+  "locatorCandidates": [
+    {
+      "role": null,
+      "name": "",
+      "text": "지금 가입하고 최대 1만 2천원 할인 쿠폰 받아가세요!",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "배너 하루 안보기",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "회원가입",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "로그인",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "고객센터",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "마켓컬리",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "뷰티컬리",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "submit",
+      "text": "",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "0",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "카테고리",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "베스트",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "세일",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "패션",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "리빙",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "신상",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "특가/혜택",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "샛별·하루배송안내",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "컬리 고객 제도",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "컬리 큐레이터",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "레시피",
+      "testId": null
+    },
+    {
+      "role": "presentation",
+      "name": "",
+      "text": "최근 3개월간 35,592명이 재구매했어요",
+      "testId": null
+    },
+    {
+      "role": "status",
+      "name": "",
+      "text": "최근 3개월간 35,592명이 재구매했어요",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "양념육2위",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "양념육2위",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "후기 22,366건",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "15,990원",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "첫구매 최대혜택가",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "59%6,495원첫구매 앱 전용가앱 열기",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "Stepper minus",
+      "text": "",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "Stepper plus",
+      "text": "",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "찜하기",
+      "text": "",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "장바구니 담기",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "상품설명",
+      "testId": null
+    }
+  ]
+}

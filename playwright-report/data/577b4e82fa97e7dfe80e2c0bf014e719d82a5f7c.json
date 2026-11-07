@@ -1,0 +1,33 @@
+{
+  "url": "https://www.kurly.com/main",
+  "timestamp": "2026-11-07T00:19:41.427Z",
+  "checkedRules": 29,
+  "known": [
+    {
+      "id": "button-name",
+      "impact": "critical",
+      "nodes": 8,
+      "note": "헤더/배너 아이콘 버튼에 접근성 이름 없음"
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": 62,
+      "note": "프로모션 배지 등 텍스트 대비 부족"
+    },
+    {
+      "id": "image-alt",
+      "impact": "critical",
+      "nodes": 1,
+      "note": "배너 이미지 alt 누락"
+    },
+    {
+      "id": "link-name",
+      "impact": "serious",
+      "nodes": 2,
+      "note": "이미지 링크에 텍스트 없음"
+    }
+  ],
+  "new": [],
+  "fixedSinceBaseline": []
+}
