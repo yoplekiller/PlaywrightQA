@@ -1,0 +1,981 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: src/tests/ui/ui_goods_page.spec.ts >> 상품 상세페이지 진입 확인 @regression
+- Location: src/tests/ui/ui_goods_page.spec.ts:4:5
+
+# Error details
+
+```
+TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+  - waiting for getByText(/바나나/).first() to be visible
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - link "지금 가입하고 최대 1만 2천원 할인 쿠폰 받아가세요!" [ref=e6] [cursor=pointer]:
+        - /url: https://event.kurly.com/lego/event/2023/0911/join/coupon#lc112b1
+        - generic [ref=e7]: 지금 가입하고 최대 1만 2천원 할인 쿠폰 받아가세요!
+      - button "배너 하루 안보기" [ref=e8] [cursor=pointer]:
+        - img [ref=e9]
+        - generic [ref=e14]: 배너 하루 안보기
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - generic [ref=e18] [cursor=pointer]: 회원가입
+          - generic [ref=e20] [cursor=pointer]: 로그인
+          - generic [ref=e23] [cursor=pointer]: 고객센터
+        - generic [ref=e25]:
+          - generic [ref=e26]:
+            - link [ref=e27] [cursor=pointer]:
+              - /url: /main
+              - img [ref=e28]
+            - button "마켓컬리" [ref=e32] [cursor=pointer]
+            - button "뷰티컬리" [ref=e33] [cursor=pointer]
+          - generic [ref=e35]:
+            - textbox "검색어를 입력해주세요" [ref=e36]
+            - button "submit" [ref=e37] [cursor=pointer]
+          - generic [ref=e38]:
+            - button [ref=e39] [cursor=pointer]:
+              - img [ref=e40]
+            - button [ref=e43] [cursor=pointer]:
+              - img [ref=e44]
+            - button "0" [ref=e46] [cursor=pointer]:
+              - img [ref=e47]
+              - generic [ref=e50]: "0"
+      - generic [ref=e52]:
+        - button "카테고리" [ref=e54] [cursor=pointer]:
+          - img [ref=e55]
+          - generic [ref=e57]: 카테고리
+        - generic [ref=e58]:
+          - list [ref=e59]:
+            - listitem [ref=e60]:
+              - link "베스트" [ref=e61] [cursor=pointer]:
+                - /url: /collection-groups/market-best-category?site=MARKET
+            - listitem [ref=e62]:
+              - link "세일" [ref=e63] [cursor=pointer]:
+                - /url: /collection-groups/market-sales-group?site=MARKET
+            - listitem [ref=e64]:
+              - link "패션" [ref=e65] [cursor=pointer]:
+                - /url: /panels/fashion?site=MARKET
+            - listitem [ref=e66]:
+              - link "리빙" [ref=e67] [cursor=pointer]:
+                - /url: /panels/living?site=MARKET
+            - listitem [ref=e68]:
+              - link "신상" [ref=e69] [cursor=pointer]:
+                - /url: /collection-groups/market-newproduct?site=MARKET
+            - listitem [ref=e70]:
+              - link "특가/혜택" [ref=e71] [cursor=pointer]:
+                - /url: /market-benefit
+          - link "샛별·하루 배송안내" [ref=e72] [cursor=pointer]:
+            - /url: /user-guide/delivery
+            - generic [ref=e73]: 샛별·하루
+            - generic [ref=e74]: 배송안내
+    - generic [ref=e77]:
+      - generic [ref=e79]:
+        - link "샛별, 하루 배송 안내" [ref=e81] [cursor=pointer]:
+          - /url: /user-guide/delivery
+          - img "샛별, 하루 배송 안내" [ref=e82]
+        - generic [ref=e83]:
+          - link "컬리 고객 제도" [ref=e84] [cursor=pointer]:
+            - /url: /events/member/vip
+            - generic [ref=e85]: 컬리 고객 제도
+          - link "컬리 큐레이터" [ref=e86] [cursor=pointer]:
+            - /url: https://lounge.kurly.com/curator-program
+            - generic [ref=e87]: 컬리 큐레이터
+          - link "레시피" [ref=e88] [cursor=pointer]:
+            - /url: https://www.kurly.com/recipe
+            - generic [ref=e89]: 레시피
+      - generic [ref=e90]:
+        - main [ref=e91]:
+          - generic [ref=e92]:
+            - generic [ref=e99]:
+              - img "상품-대표-이미지 1" [ref=e100]
+              - paragraph [ref=e102]: +10% 쿠폰
+            - link "압구정 단독 압구정 압구정 상품들을 한 자리에 찜하기" [ref=e104] [cursor=pointer]:
+              - /url: /brand/6287
+              - generic [ref=e105]:
+                - img "압구정" [ref=e107]
+                - generic [ref=e108]:
+                  - generic [ref=e109]:
+                    - generic [ref=e110]: 단독
+                    - generic [ref=e111]:
+                      - strong [ref=e112]: 압구정
+                      - img [ref=e114]
+                  - paragraph [ref=e116]: 압구정 상품들을 한 자리에
+                - button "찜하기" [ref=e117]:
+                  - img [ref=e118]
+                  - paragraph [ref=e120]: 1,251
+          - generic [ref=e122]:
+            - generic [ref=e123]:
+              - generic [ref=e124]:
+                - link "수산가공품 1위" [ref=e127] [cursor=pointer]:
+                  - /url: /ranking/category/909007?site=MARKET
+                  - button "수산가공품 1위" [ref=e128]:
+                    - generic [ref=e129]:
+                      - img [ref=e131]
+                      - generic [ref=e134]: 수산가공품
+                      - generic [ref=e135]: 1위
+                      - img [ref=e137]
+                - generic [ref=e139]:
+                  - generic [ref=e140]: Kurly Only
+                  - img [ref=e142]
+                  - generic [ref=e144]: 샛별배송
+                  - img [ref=e146]
+                  - link "압구정" [ref=e149] [cursor=pointer]:
+                    - /url: /brand/6287
+                    - generic [ref=e150]: 압구정
+                    - img [ref=e152]
+              - generic [ref=e156] [cursor=pointer]: 후기 134,767건
+            - generic [ref=e157]:
+              - generic [ref=e159]:
+                - heading "[압구정주꾸미] 주꾸미 볶음 2종, 택1" [level=1] [ref=e160]
+                - generic [ref=e161]:
+                  - paragraph [ref=e162]: 마늘의 감칠맛이 듬뿍
+                  - paragraph [ref=e163]: "원산지: 상품설명/상세정보 참조"
+              - button [ref=e165] [cursor=pointer]:
+                - img [ref=e166]
+            - generic [ref=e169]:
+              - generic [ref=e172]:
+                - generic [ref=e173]:
+                  - generic [ref=e174]:
+                    - generic [ref=e175]: 22%
+                    - button "9,900원" [ref=e176] [cursor=pointer]:
+                      - generic [ref=e177]: 9,900원
+                      - img [ref=e178]
+                  - generic [ref=e181]:
+                    - generic [ref=e182]: 7,700
+                    - generic [ref=e184]: 원~
+                - generic [ref=e186]:
+                  - generic [ref=e187]:
+                    - generic [ref=e188]: 5,700
+                    - generic [ref=e190]: 원~
+                  - button "첫구매 최대혜택가" [ref=e191] [cursor=pointer]:
+                    - generic [ref=e192]: 첫구매 최대혜택가
+                    - img [ref=e193]
+              - button "61% 3,850 원 첫구매 앱 전용가 앱 열기" [ref=e196] [cursor=pointer]:
+                - generic [ref=e197]:
+                  - generic [ref=e198]:
+                    - generic [ref=e199]: 61%
+                    - generic [ref=e200]:
+                      - generic [ref=e201]: 3,850
+                      - generic [ref=e203]: 원
+                  - generic [ref=e204]:
+                    - generic [ref=e205]: 첫구매 앱 전용가
+                    - img [ref=e207]
+                - generic [ref=e209]:
+                  - generic [ref=e210]: 앱 열기
+                  - img [ref=e211]
+            - button "11월 푸드 브랜드위크 쿠폰팩 받기" [ref=e214] [cursor=pointer]:
+              - generic [ref=e215]: 11월 푸드 브랜드위크 쿠폰팩 받기
+              - img [ref=e216]
+            - list [ref=e218]:
+              - listitem [ref=e219]:
+                - term [ref=e220]: 배송
+                - definition [ref=e221]:
+                  - generic [ref=e222]: 샛별배송 · 내일 아침
+                  - generic [ref=e223]: 23시 전 주문 시 수도권/충청 내일 아침 7시 전 도착 (그 외 지역 아침 8시 전 도착)
+              - listitem [ref=e224]:
+                - term [ref=e225]: 배송비
+                - definition [ref=e226]:
+                  - generic [ref=e227]: 3,000원 (4만원 이상 무료)
+              - listitem [ref=e228]:
+                - term [ref=e229]: 판매자
+                - definition [ref=e230]:
+                  - generic [ref=e231]: 컬리
+              - listitem [ref=e232]:
+                - term [ref=e233]: 단위 당 가격
+                - definition [ref=e234]:
+                  - generic [ref=e235]: 100g 당 2,567원
+              - listitem [ref=e236]:
+                - term [ref=e237]: 포장타입
+                - definition [ref=e238]:
+                  - generic [ref=e239]: 냉동 (종이포장)
+                  - generic [ref=e240]: 택배배송은 스티로폼 혹은 에코포장으로 배송됩니다.
+              - listitem [ref=e241]:
+                - term [ref=e242]: 판매단위
+                - definition [ref=e243]:
+                  - generic [ref=e244]: 1팩
+              - listitem [ref=e245]:
+                - term [ref=e246]: 중량/용량
+                - definition [ref=e247]:
+                  - generic [ref=e248]: 옵션별 상이
+              - listitem [ref=e249]:
+                - term [ref=e250]: 알레르기정보
+                - definition [ref=e251]:
+                  - generic [ref=e252]: 주꾸미볶음 - 대두, 밀 함유 - 이 제품은 알레르기 발생 가능성이 있는 고등어 ,게 , 새우, 오징어 ,조개류(굴, 전복, 홍합을 포함)을 사용한 제품과 같은 제조시설에서 제조 주꾸미삼겹 - 대두, 밀, 돼지고기 함유 - 이 제품은 알레르기 발생 가능성이 있는 고등어 ,게 , 새우, 오징어 ,조개류(굴, 전복, 홍합을 포함)을 사용한 제품과 같은 제조시설에서 제조
+              - listitem [ref=e253]:
+                - term [ref=e254]: 소비기한(또는 유통기한)정보
+                - definition [ref=e255]:
+                  - generic [ref=e256]: 수령일 포함 최소 219일 남은 제품을 보내드립니다.(총 소비기한 365일)
+            - generic [ref=e257]:
+              - listitem [ref=e260]:
+                - term [ref=e261]: 상품선택
+                - definition [ref=e262]:
+                  - generic [ref=e263]:
+                    - generic [ref=e265]:
+                      - img [ref=e266]
+                      - paragraph [ref=e270]: 첫 구매니까, 하나만 사도 무료배송
+                    - button "상품을 선택해주세요" [ref=e272] [cursor=pointer]:
+                      - generic [ref=e273]: 상품을 선택해주세요
+                      - img [ref=e274]
+              - generic [ref=e277]:
+                - generic [ref=e278]: 총 상품금액
+                - generic [ref=e279]: "0"
+                - generic [ref=e280]: 원
+              - generic [ref=e281]:
+                - button "찜하기" [ref=e283] [cursor=pointer]:
+                  - img [ref=e284]
+                - button [disabled] [ref=e286]:
+                  - img [ref=e287]
+                - button "장바구니 담기" [ref=e290] [cursor=pointer]
+        - navigation [ref=e291]:
+          - listitem [ref=e292]:
+            - generic [ref=e294] [cursor=pointer]: 상품설명
+          - listitem [ref=e295]:
+            - generic [ref=e297] [cursor=pointer]: 상세정보
+          - listitem [ref=e298]:
+            - generic [ref=e299] [cursor=pointer]:
+              - generic [ref=e300]: 후기
+              - generic [ref=e301]: (134,767)
+          - listitem [ref=e302]:
+            - generic [ref=e304] [cursor=pointer]: 문의
+        - generic [ref=e305]:
+          - generic [ref=e306]:
+            - article
+            - generic [ref=e307]:
+              - generic [ref=e308]:
+                - paragraph [ref=e311]: 마늘의 감칠맛이 듬뿍
+                - paragraph [ref=e313]: "[압구정주꾸미] 주꾸미 볶음"
+                - paragraph [ref=e315]: 매콤 달콤한 양념을 흠뻑 입은 탱탱한 주꾸미 볶음 하나면 밥 한 공기쯤은 금세 비워낼 수 있죠. 압구정주꾸미는 매콤한 감칠맛을 제대로 살린 주꾸미 볶음을 선보입니다. 양념에 고추장과 고춧가루를 함께 사용해 텁텁함 없이 깔끔한 맛을 내고요. 국내산 다진 마늘을 아낌없이 넣어 알싸함까지 더했답니다. 오롯이 주꾸미와 양념만 담았으니 취향에 따라 야채나 떡 등을 추가해 달달 볶아 주세요. 남은 양념에 볶음밥을 완성해도 별미랍니다.
+              - generic [ref=e316]:
+                - generic [ref=e317]: Check Point
+                - list [ref=e318]:
+                  - listitem [ref=e319]:
+                    - generic [ref=e321]: 생산 유통 과정
+                    - list [ref=e323]:
+                      - listitem [ref=e324]: HACCP 인증 시설에서 위생적으로 제조
+                  - listitem [ref=e325]:
+                    - generic [ref=e327]: 활용법
+                    - list [ref=e329]:
+                      - listitem [ref=e330]: 주꾸미 덮밥, 주꾸미 삼겹살 불고기로 활용
+                      - listitem [ref=e331]: 채소, 떡 등 부재료를 넣어 풍성하게 완성
+                      - listitem [ref=e332]: 취향에 따라 만들어 먹는 마무리 볶음밥
+              - generic [ref=e333]:
+                - generic [ref=e334]: Kurly’s Tip
+                - generic [ref=e335]:
+                  - paragraph [ref=e337]:
+                    - generic [ref=e338]: 이렇게 조리하세요
+                  - generic [ref=e339]:
+                    - paragraph [ref=e340]: 1. 냉동상태의 제품 그대로 찬물에 담그거나 냉장고에서 해동해 주세요.
+                    - paragraph [ref=e341]: 2. 중불로 예열한 팬에 해동한 내용물을 넣고 주꾸미가 익을 때 까지 약 5~10분간 볶아주세요.
+                    - paragraph [ref=e342]
+                - generic [ref=e344]:
+                  - paragraph [ref=e346]:
+                    - generic [ref=e347]: 졸일수록 매운맛이 덜해져요
+                  - generic [ref=e348]:
+                    - list [ref=e349]:
+                      - listitem [ref=e350]: 소스가 많이 맵다고 느껴지시면, 시간을 두고 국물을 자작하게 졸여 주세요. 졸일수록 매운맛은 줄어들고 감칠맛은 올라옵니다.
+                    - paragraph [ref=e351]
+                - generic [ref=e353]:
+                  - paragraph [ref=e355]:
+                    - generic [ref=e356]: 다양한 재료를 추가해 보세요
+                  - list [ref=e358]:
+                    - listitem [ref=e359]: 기호에 따라 준비해둔 채소나 떡, 면사리 등을 추가해도 좋아요.
+                    - listitem [ref=e360]: 남은 양념에 밥과 김가루, 날치알, 참기름을 넣고 볶아 마무리 볶음밥을 완성해 보세요.
+          - generic [ref=e361]:
+            - generic [ref=e363]:
+              - generic [ref=e364]: 상품 이미지
+              - img "[압구정주꾸미] 주꾸미 볶음 300g" [ref=e366]
+              - generic [ref=e367]:
+                - img "[압구정주꾸미] 주꾸미 볶음 300g" [ref=e368]
+                - generic [ref=e369]: "[압구정주꾸미] 주꾸미 볶음 300g"
+              - img "[압구정주꾸미] 주꾸미 볶음 500g" [ref=e371]
+              - generic [ref=e372]:
+                - img "[압구정주꾸미] 주꾸미 볶음 500g" [ref=e373]
+                - generic [ref=e374]: "[압구정주꾸미] 주꾸미 볶음 500g"
+            - generic [ref=e377]:
+              - heading "상품고시정보" [level=3] [ref=e378]
+              - list [ref=e380]:
+                - listitem [ref=e381] [cursor=pointer]:
+                  - generic [ref=e382]: "[압구정주꾸미] 주꾸미 볶음 300g"
+                - listitem [ref=e383] [cursor=pointer]:
+                  - generic [ref=e384]: "[압구정주꾸미] 주꾸미 볶음 500g"
+              - generic [ref=e386]:
+                - generic [ref=e387]: 제품명
+                - generic [ref=e388]: 상품설명 및 상품이미지 참조
+                - generic [ref=e389]: 영양성분표시
+                - generic [ref=e390]: 상품설명 및 상품이미지 참조
+                - generic [ref=e391]: 식품의 유형
+                - generic [ref=e392]: 상품설명 및 상품이미지 참조
+                - generic [ref=e393]: 유전자변형식품 표시
+                - generic [ref=e394]: 상품설명 및 상품이미지 참조
+                - generic [ref=e395]: 생산자 및 소재지 (또는 생산자, 수입자 및 제조국)
+                - generic [ref=e396]: 상품설명 및 상품이미지 참조
+                - generic [ref=e397]: 소비자 안전을 위한 주의사항
+                - generic [ref=e398]: 상품설명 및 상품이미지 참조
+                - generic [ref=e399]: 제조연월일, 소비기한 또는 품질유지기한
+                - generic [ref=e400]: 소비기한이 27.10.16 이후(해당일 포함)인 상품 발송
+                - generic [ref=e401]: 수입식품 여부
+                - generic [ref=e402]: 상품설명 및 상품이미지 참조
+                - generic [ref=e403]: 포장단위별 내용물의 용량(중량), 수량, 크기
+                - generic [ref=e404]: 상품설명 및 상품이미지 참조
+                - generic [ref=e405]: 소비자 상담 관련 전화번호
+                - generic [ref=e406]: 상품설명 및 상품이미지 참조
+                - generic [ref=e407]: 원재료명 및 함량
+                - generic [ref=e408]: 상품설명 및 상품이미지 참조
+            - generic [ref=e409]:
+              - heading "WHY KURLY" [level=3] [ref=e410]
+              - generic [ref=e411]:
+                - generic [ref=e412]:
+                  - term [ref=e413]: 깐깐한 상품위원회
+                  - definition [ref=e414]:
+                    - text: 나와 내 가족이 먹고 쓸 상품을 고르는
+                    - text: 마음으로 매주 상품을 직접 먹어보고,
+                    - text: 경험해보고 성분, 맛, 안정성 등 다각도의
+                    - text: 기준을 통과한 상품만을 판매합니다.
+                    - generic [ref=e415]: (온라인 기준 / 자사몰, 직구 제외)
+                - generic [ref=e416]:
+                  - term [ref=e417]: 차별화된 Kurly Only 상품
+                  - definition [ref=e418]:
+                    - text: 전국 각지와 해외의 훌륭한 생산자가
+                    - text: 믿고 선택하는 파트너, 컬리.
+                    - text: 3천여 개가 넘는 컬리 단독 브랜드, 스펙의
+                    - text: Kurly Only 상품을 믿고 만나보세요.
+                    - generic [ref=e419]: (온라인 기준 / 자사몰, 직구 제외)
+                - generic [ref=e420]:
+                  - term [ref=e421]: 신선한 풀콜드체인 배송
+                  - definition [ref=e422]:
+                    - text: 온라인 업계 최초로 산지에서 문 앞까지
+                    - text: 상온, 냉장, 냉동 상품을 분리 포장 후
+                    - text: 최적의 온도를 유지하는 냉장 배송 시스템,
+                    - text: 풀콜드체인으로 상품을 신선하게 전해드립니다.
+                    - generic [ref=e423]: (샛별배송에 한함)
+                - generic [ref=e424]:
+                  - term [ref=e425]: 고객, 생산자를 위한 최선의 가격
+                  - definition [ref=e426]:
+                    - text: 매주 대형 마트와 주요 온라인 마트의 가격
+                    - text: 변동 상황을 확인해 신선식품은 품질을
+                    - text: 타협하지 않는 선에서 최선의 가격으로,
+                    - text: 가공식품은 언제나 합리적인 가격으로
+                    - text: 정기 조정합니다.
+                - generic [ref=e427]:
+                  - term [ref=e428]: 환경을 생각하는 지속 가능한 유통
+                  - definition [ref=e429]:
+                    - text: 친환경 포장재부터 생산자가 상품에만
+                    - text: 집중할 수 있는 직매입 유통구조까지,
+                    - text: 지속 가능한 유통을 고민하며 컬리를 있게
+                    - text: 하는 모든 환경(생산자, 커뮤니티, 직원)이
+                    - text: 더 나아질 수 있도록 노력합니다.
+            - generic [ref=e431]:
+              - generic [ref=e432]:
+                - heading "고객행복센터" [level=5] [ref=e433]
+                - paragraph [ref=e434]:
+                  - text: 궁금하신 점이나 서비스 이용에 불편한 점이 있으신가요?
+                  - generic [ref=e435]: 문제가 되는 부분을 사진으로 찍어 아래 중 편하신 방법으로 접수해 주시면 빠르게 도와드리겠습니다.
+              - list [ref=e436]:
+                - listitem [ref=e437]:
+                  - strong [ref=e438]: 전화 문의 1644-1107
+                  - generic [ref=e439]: 월~토요일 오전 7시 - 오후 6시
+                - listitem [ref=e440]:
+                  - strong [ref=e441]: 카카오톡 문의
+                  - generic [ref=e442]: 월~토요일 오전 7시 - 오후 6시
+                  - generic [ref=e443]: 일/공휴일 오전 7시 - 오후 1시
+                  - strong [ref=e444]:
+                    - text: 카카오톡에서 '컬리' 를 검색 후
+                    - text: 대화창에 문의 및 불편사항을
+                    - text: 남겨주세요.
+                - listitem [ref=e445]:
+                  - strong [ref=e446]: 홈페이지 문의
+                  - generic [ref=e447]: 365일
+                  - generic [ref=e448]: 로그인 > 마이컬리 > 1:1 문의
+                  - strong [ref=e449]:
+                    - text: 고객센터 운영 시간에 순차적으로
+                    - text: 답변해드리겠습니다.
+            - generic [ref=e450]:
+              - strong [ref=e451]: 교환 및 환불 안내
+              - paragraph [ref=e452]: 교환 및 환불이 필요하신 경우 [마이컬리 > 주문내역]에서 직접 반품 접수하거나 고객행복센터로 문의해 주시기 바랍니다.
+              - button "닫기" [ref=e453] [cursor=pointer]
+            - generic [ref=e454]:
+              - generic [ref=e455]: 01. 상품에 문제가 있는 경우
+              - paragraph [ref=e456]:
+                - text: 받으신 상품이 표시·광고 내용 또는 계약 내용과 다른 경우에는 상품을 받은 날부터 3개월 이내, 그 사실을 알게 된 날부터 30일 이내에 반품을 요청하실 수 있습니다. 고객행복센터로 문의해 주시기 바랍니다. 상품의 정확한 상태를 확인할 수 있도록 사진을 함께 보내주시면 더 빠른 상담이 가능합니다.
+                - generic [ref=e457]: ※ 배송 상품에 문제가 있는 것으로 확인되면 배송비는 판매자가 부담합니다.
+            - generic [ref=e458]:
+              - generic [ref=e459]: 02. 단순 변심, 주문 착오의 경우
+              - paragraph [ref=e460]:
+                - strong [ref=e461]: 신선 / 냉장 / 냉동 식품
+                - text: 상품의 특성상 재판매가 불가하여 단순 변심, 주문 착오, 주소 오입력 등 고객의 책임 있는 사유로 인한 교환 및 반품이 어려운 점 양해 부탁드립니다. 상품에 따라 조금씩 맛이 다를 수 있으며, 개인의 기호에 따라 같은 상품도 다르게 느끼실 수 있습니다.
+                - strong [ref=e462]: 유통기한 30일 이상 식품 (신선 / 냉장 / 냉동 제외) & 기타 상품 (뷰티 제품, 생활용품)
+                - text: 상품을 받은 날부터 7일 이내 반품 접수가 가능합니다. 직접 접수하시거나 고객행복센터로 문의해 주시기 바랍니다.
+                - generic [ref=e463]: ※ 단순 변심, 주문 착오, 주소 오입력 등 고객의 책임 있는 사유로 인한 교환 및 반품의 경우 고객님께서 왕복배송비 6,000원(배송비를 낸 경우 3,000원)을 부담하셔야 합니다.
+            - generic [ref=e464]:
+              - generic [ref=e465]: 03. 교환·환불이 불가한 경우
+              - paragraph [ref=e466]:
+                - text: 다음에 해당하는 교환·환불 신청은 처리가 어려울 수 있으니 양해 부탁드립니다.
+                - generic [ref=e467]: 고객님의 책임 있는 사유로 상품이 멸실되거나 훼손된 경우 (단, 상품의 내용을 확인하기 위해 포장 등을 훼손한 경우는 제외)
+                - generic [ref=e468]: 고객님의 사용 또는 일부 소비로 상품의 가치가 감소한 경우
+                - generic [ref=e469]: 시간이 지나 다시 판매하기 곤란할 정도로 상품의 가치가 감소한 경우
+                - generic [ref=e470]: 복제가 가능한 상품의 포장이 훼손된 경우
+                - generic [ref=e471]: 고객님의 주문에 따라 개별적으로 생산되는 상품의 제작이 이미 진행된 경우
+                - generic [ref=e472]: 반품 신청 후 14일 내에 물품이 반환되지 않고 고객님과 연락이 되지 않는 경우
+            - generic [ref=e473]:
+              - strong [ref=e474]: 주문 취소 안내
+              - paragraph [ref=e475]:
+                - strong [ref=e476]: "[마이컬리>주문내역]에서 직접 취소하실 수 있습니다."
+              - button "닫기" [ref=e477] [cursor=pointer]
+            - generic [ref=e478]:
+              - generic [ref=e479]: 주문 취소 관련
+              - paragraph [ref=e480]: "- 주문취소는 [마이컬리>주문내역]에서 직접 하실 수 있습니다. - [배송중]부터는 배송이 시작되어 주문 취소가 불가하니, 반품 접수 부탁드립니다(상품에 따라 반품이 불가할 수 있습니다). - 주문취소 및 반품 접수와 관련하여 도움이 필요하신 경우 고객행복센터로 문의해 주시기 바랍니다. - 주문마감 시간에 임박할수록 취소 가능 시간이 짧아질 수 있습니다. - 일부 예약상품은 판매 시 안내된 취소 마감 기한 내에만 취소할 수 있습니다. - 파트너사 판매상품의 경우, 파트너사의 정책에 따라 주문취소가 가능합니다. - 미성년자 결제 시 법정대리인이 그 거래를 취소할 수 있습니다."
+            - generic [ref=e481]:
+              - generic [ref=e482]: 결제 승인 취소 / 환불 관련
+              - paragraph [ref=e483]: "- 카드 환불은 카드사 정책에 따르며, 자세한 사항은 카드사에 문의해주세요. - 결제 취소 시, 사용하신 적립금과 쿠폰도 모두 복원됩니다."
+            - generic [ref=e484]:
+              - strong [ref=e485]: 배송관련 안내
+              - paragraph [ref=e486]: 배송 과정 중 기상 악화 및 도로교통 상황에 따라 부득이하게 지연 배송이 발생될 수 있습니다.
+          - generic [ref=e488]:
+            - heading "상품 후기" [level=2] [ref=e489]
+            - generic [ref=e492]:
+              - generic [ref=e493]: 공지
+              - button "상품후기 운영 안내" [ref=e494] [cursor=pointer]
+            - generic [ref=e495]:
+              - button "[압구정주꾸미] 주꾸미 볶음 2종, 택1 후기 이미지" [ref=e496] [cursor=pointer]:
+                - img "[압구정주꾸미] 주꾸미 볶음 2종, 택1 후기 이미지" [ref=e498]
+              - button "[압구정주꾸미] 주꾸미 볶음 2종, 택1 후기 이미지" [ref=e499] [cursor=pointer]:
+                - img "[압구정주꾸미] 주꾸미 볶음 2종, 택1 후기 이미지" [ref=e501]
+              - button "[압구정주꾸미] 주꾸미 볶음 2종, 택1 후기 이미지" [ref=e502] [cursor=pointer]:
+                - img "[압구정주꾸미] 주꾸미 볶음 2종, 택1 후기 이미지" [ref=e504]
+              - button "[압구정주꾸미] 주꾸미 볶음 2종, 택1 후기 이미지" [ref=e505] [cursor=pointer]:
+                - img "[압구정주꾸미] 주꾸미 볶음 2종, 택1 후기 이미지" [ref=e507]
+              - button "[압구정주꾸미] 주꾸미 볶음 2종, 택1 후기 이미지" [ref=e508] [cursor=pointer]:
+                - img "[압구정주꾸미] 주꾸미 볶음 2종, 택1 후기 이미지" [ref=e510]
+              - button "[압구정주꾸미] 주꾸미 볶음 2종, 택1 후기 이미지" [ref=e511] [cursor=pointer]:
+                - img "[압구정주꾸미] 주꾸미 볶음 2종, 택1 후기 이미지" [ref=e513]
+              - button "[압구정주꾸미] 주꾸미 볶음 2종, 택1 후기 이미지" [ref=e514] [cursor=pointer]:
+                - img "[압구정주꾸미] 주꾸미 볶음 2종, 택1 후기 이미지" [ref=e516]
+              - button "[압구정주꾸미] 주꾸미 볶음 2종, 택1 후기 이미지" [ref=e517] [cursor=pointer]:
+                - img "[압구정주꾸미] 주꾸미 볶음 2종, 택1 후기 이미지" [ref=e519]
+              - generic [ref=e521] [cursor=pointer]: +더보기
+            - generic [ref=e522]:
+              - generic [ref=e523]:
+                - generic [ref=e524]: 총 134,767개
+                - generic [ref=e525]:
+                  - generic [ref=e526]:
+                    - button "추천순" [ref=e527] [cursor=pointer]
+                    - button "추천순 정렬 기준 안내" [ref=e528]:
+                      - img [ref=e529]
+                  - button "최근등록순" [ref=e534] [cursor=pointer]
+              - button "상품 옵션" [ref=e536] [cursor=pointer]:
+                - paragraph [ref=e537]:
+                  - generic [ref=e538]: 상품 옵션
+                - img [ref=e540]
+              - generic [ref=e542]:
+                - generic [ref=e544]:
+                  - paragraph [ref=e547]: 멤버스
+                  - generic [ref=e548]: 천**
+                - article [ref=e549]:
+                  - generic [ref=e550]:
+                    - heading "[압구정주꾸미] 주꾸미 볶음 500g" [level=3] [ref=e552]
+                    - paragraph [ref=e553]: 압구정 주꾸미의 주꾸미 볶음은 또또또산템인데요. 재구매 몇번째인지 모를정도로 단골 메뉴입니다. 보장된 양념 맛이 매력적이라 계속 구매하게 됩니다. 식당에서 먹는 것보다 가성비 좋고 통통한 주꾸미가 가득 들어 있어서 참 맛있어요. 2인 가구 기준으로 한끼 먹고나서~ 남은 양념으로 볶음밥 필수!! 이번에는 색다르게 짜장라면과 곁들여 봤는데 야끼우동처럼 맛있더라구요. 오통통한 쭈꾸미와 매콤달콤한 양념이 짜장라면과 어울려 새로운 메뉴가 된답니다. 이 조합으로 꼭 드셔보세요~~! 압꾸미 주꾸미만의 매력은 단독으로 먹어도 끝내주고~ 남은 양념까지 야무지게 활용할 수 있는 점인데요~~ 사진보니 또 군침도네요. 또 구매하려구요❤️
+                    - generic [ref=e554]:
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e555] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e556]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e557] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e558]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e559] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e560]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e561] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e562]
+                    - generic [ref=e563]:
+                      - generic [ref=e564]:
+                        - generic [ref=e565]: 2026.11.12
+                        - button "신고하기" [ref=e568] [cursor=pointer]
+                      - button "도움돼요" [ref=e569] [cursor=pointer]:
+                        - img [ref=e570]
+                        - generic [ref=e572]: 도움돼요
+              - generic [ref=e573]:
+                - generic [ref=e575]:
+                  - paragraph [ref=e578]: 멤버스
+                  - generic [ref=e579]: 김**
+                - article [ref=e580]:
+                  - generic [ref=e581]:
+                    - heading "[압구정주꾸미] 주꾸미 볶음 500g" [level=3] [ref=e583]
+                    - paragraph [ref=e584]: 매콤한 음식이 당길 때 먹기 좋은 압구정 쭈꾸미볶음 밀키트! 집에서도 간편하게 맛있는 쭈꾸미볶음을 즐기고 싶어서 구매해 봤어요. 밀키트라 조리 과정이 복잡하지 않아 좋았어요. 준비된 쭈꾸미와 양념을 팬에 넣고 먹기 좋게 볶아주기만 하면 되니 바쁜 날에도 간편하게 한 끼를 준비할 수 있더라고요. 쭈꾸미는 탱글탱글하면서도 쫄깃한 식감이 살아 있었고, 양념은 매콤달콤하면서 감칠맛이 느껴져 밥과 정말 잘 어울렸어요. 양념이 쭈꾸미에 잘 배어 있어서 한입 먹을 때마다 입맛을 확 살려주는 맛이었답니다. 무엇보다 쭈꾸미볶음은 역시 밥과 함께 먹어야 제맛이죠! 따끈한 밥 위에 쭈꾸미를 올려 먹으니 다른 반찬이 많이 필요 없을 정도였어요. 남은 양념에 밥까지 볶아 먹으면 마지막까지 맛있게 즐길 수 있을 것 같아요. 외식하지 않아도 집에서 간편하게 전문점 스타일의 쭈꾸미볶음을 맛볼 수 있다는 점이 가장 큰 장점이에요. 매콤한 음식 좋아하시는 분들이라면 한 번쯤 드셔보셔도 좋을 것 같아요. 간편한 조리와 맛까지 만족스러웠던 압구정 쭈꾸미볶음! 다음에는 깻잎이나 콩나물도 곁들여서 더욱 푸짐하게 즐겨보려고요 :)
+                    - generic [ref=e585]:
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e586] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e587]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e588] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e589]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e590] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e591]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e592] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e593]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e594] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e595]
+                    - generic [ref=e596]:
+                      - generic [ref=e597]:
+                        - generic [ref=e598]: 2026.11.01
+                        - button "신고하기" [ref=e601] [cursor=pointer]
+                      - button "도움돼요 5" [ref=e602] [cursor=pointer]:
+                        - img [ref=e603]
+                        - generic [ref=e605]: 도움돼요 5
+              - generic [ref=e606]:
+                - generic [ref=e609]: 오**
+                - article [ref=e610]:
+                  - generic [ref=e611]:
+                    - heading "[압구정주꾸미] 주꾸미 볶음 500g" [level=3] [ref=e613]
+                    - paragraph [ref=e614]: 봉지는 참 직관적이고 뭔가 싶은 느낌의 디자인이며, 봉지를 오픈하여 내용물을 보면 더욱 그런 생각이 드는데 하하하 이게 또 보는것과는 다르더라구요 딱 쭈꾸미와 소스! 이 두가지만 들어있는데 음식점에서 먹은듯한 극락의 맛을 표현해줍니다. 저희는 추가로 냉장고에 있는 야채를 몽땅 긁어다가 넣어줬는데 훨~씬 맛있고 풍성했습니다. 처음 조리해봐서 나만의 조리법으로 오랫동안 볶았더니 대왕쭈꾸미가 새끼쭈꾸미 같이 쫄아들었지만 국물은 한강같이 많아져서 밥에 먹을때는 좋더라구요 맵기의 정도는 신라면보다 한단계 위!🚀 맵찔이라 저희에게는 많이 매웠지만 밥에 쓱쓱 비벼 먹으면 극락의 맛입니다. 그리고 맵찔이들은 쌈무와 야채 그리고 오이냉채가 필수 입니다!
+                    - generic [ref=e615]:
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e616] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e617]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e618] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e619]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e620] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e621]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e622] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e623]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e624] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e625]
+                    - generic [ref=e626]:
+                      - generic [ref=e627]:
+                        - generic [ref=e628]: 2026.09.17
+                        - button "신고하기" [ref=e631] [cursor=pointer]
+                      - button "도움돼요 25" [ref=e632] [cursor=pointer]:
+                        - img [ref=e633]
+                        - generic [ref=e635]: 도움돼요 25
+              - generic [ref=e636]:
+                - generic [ref=e639]: 류**
+                - article [ref=e640]:
+                  - generic [ref=e641]:
+                    - heading "[압구정주꾸미] 주꾸미 볶음 500g" [level=3] [ref=e643]
+                    - paragraph [ref=e644]: 압구정쭈꾸미 너무맛있어요 집에서 콩나물 데치고 삼겹살 한근정도 구워서 그기름에 주꾸미 넣어 볶거나 아님.기름은 버리고 주꾸미 한번볶아서 구워놓은 삼겹살 넣고 한번더 볶아서 콩나물은 취향껏 넣어요 저는 거의 1키로 정도먹는거같아요 소스가 넉넉해서 따로 양념은 필요없지만 좀 부족하다싶음 다른양념 좀섞어넣어두 될거같아요 매운거 좋아해서 쭈꾸미에 고추도 쏭쏭 썰어넣음 더매콤해지고 맛있어져요 매운거 잘못드시는분들은 압구정쭈꾸미만으로도 살짝 매콤할거같아요 식당에서 먹는것처럼 조미김이나 일반돌김에 쭈꾸미넣고 고추나 마늘 올리고 마요네즈 찍어먹음 입맛돌게 맛있어요 둘이 먹기 딱좋은 양이예요 압구정쭈꾸미 미리사서 두고두고 먹는답니다ㅎ ㅎ
+                    - generic [ref=e645]:
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e646] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e647]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e648] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e649]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e650] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e651]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e652] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e653]
+                    - generic [ref=e654]:
+                      - generic [ref=e655]:
+                        - generic [ref=e656]: 2026.10.18
+                        - button "신고하기" [ref=e659] [cursor=pointer]
+                      - button "도움돼요 9" [ref=e660] [cursor=pointer]:
+                        - img [ref=e661]
+                        - generic [ref=e663]: 도움돼요 9
+              - generic [ref=e664]:
+                - generic [ref=e666]:
+                  - paragraph [ref=e669]: 멤버스
+                  - generic [ref=e670]: 김**
+                - article [ref=e671]:
+                  - generic [ref=e672]:
+                    - heading "[컬리멤버스] [압구정주꾸미] 주꾸미 볶음 300g" [level=3] [ref=e674]
+                    - paragraph [ref=e675]: 반숙계란, 당근라페,데친 두부와 곁들여 먹었습니다. 간이 완벽해서 별도의 재료를 넣지 않아도 맛있어요!! 예쁘게 한 그릇 요리로 먹으니 대접받는것 같고 기분도 좋았어요! 해동과 조리 시간이 길지 않아 퇴근하고 10분 내로 바로 차려먹을 수 있었어요! 적당히 매운 맛이 스트레스를 확 날려주네요~ 간만에 주문했는데 입맛을 확 잡아당기는 맛이었어요! 다음에 또 주문해서 냉동실에 쟁여둬야할것 같아요 ㅎㅎ 양파,깻잎 등의 야채를 더 넣어서 먹어도 맛있을것 같고 모짜렐라 피자나 면과 같이 먹어도 맛있을것 같아요!! 오늘 식사를 제대로 못 챙겨먹어서 저녁이 제대로된 한 끼였는데 매우 만족했습니다. G7 까르베네 소비뇽과도 매우 잘 어울립니다.
+                    - generic [ref=e676]:
+                      - button "[컬리멤버스] [압구정주꾸미] 주꾸미 볶음 300g 후기 이미지" [ref=e677] [cursor=pointer]:
+                        - img "[컬리멤버스] [압구정주꾸미] 주꾸미 볶음 300g 후기 이미지" [ref=e678]
+                      - button "[컬리멤버스] [압구정주꾸미] 주꾸미 볶음 300g 후기 이미지" [ref=e679] [cursor=pointer]:
+                        - img "[컬리멤버스] [압구정주꾸미] 주꾸미 볶음 300g 후기 이미지" [ref=e680]
+                      - button "[컬리멤버스] [압구정주꾸미] 주꾸미 볶음 300g 후기 이미지" [ref=e681] [cursor=pointer]:
+                        - img "[컬리멤버스] [압구정주꾸미] 주꾸미 볶음 300g 후기 이미지" [ref=e682]
+                    - generic [ref=e683]:
+                      - generic [ref=e684]:
+                        - generic [ref=e685]: 2026.11.12
+                        - button "신고하기" [ref=e688] [cursor=pointer]
+                      - button "도움돼요" [ref=e689] [cursor=pointer]:
+                        - img [ref=e690]
+                        - generic [ref=e692]: 도움돼요
+              - generic [ref=e693]:
+                - generic [ref=e695]:
+                  - paragraph [ref=e698]: 멤버스
+                  - generic [ref=e699]: 이**
+                - article [ref=e700]:
+                  - generic [ref=e701]:
+                    - heading "[컬리멤버스] [압구정주꾸미] 주꾸미 볶음 300g" [level=3] [ref=e703]
+                    - paragraph [ref=e704]: 압구정 쭈꾸미 완전 재구매각입니다!!!! 1. 양념이미너무 맛있습니다. 양념도 넉넉해서 나중에 밥 비벼 먹기도 좋았어요. 2.양은300그람으로 양이 적어요 딱1인분 양 우선 밥을 볶을 수 있는 양념이 흥건히 남은 건 너무 행복한 일입니다. 쭈꾸미는 밥이잖아요. 3. 쭈꾸미가 아주 쫄깃쫄깃하고 식감이 정말 좋습니다. 앞으로 계속 떨어지지않게 쟁여놓고 먹을 것 같아요. 맛있는 거 사서 발견하면 너무기분 좋쟎아요. 입맛이 단짠인데 뭔가 과하지도 않고 덜하지도 않은 정말 음식점에서 먹는 쭈꾸미보다 더 맛있는 것 같아요.
+                    - generic [ref=e705]:
+                      - button "[컬리멤버스] [압구정주꾸미] 주꾸미 볶음 300g 후기 이미지" [ref=e706] [cursor=pointer]:
+                        - img "[컬리멤버스] [압구정주꾸미] 주꾸미 볶음 300g 후기 이미지" [ref=e707]
+                      - button "[컬리멤버스] [압구정주꾸미] 주꾸미 볶음 300g 후기 이미지" [ref=e708] [cursor=pointer]:
+                        - img "[컬리멤버스] [압구정주꾸미] 주꾸미 볶음 300g 후기 이미지" [ref=e709]
+                      - button "[컬리멤버스] [압구정주꾸미] 주꾸미 볶음 300g 후기 이미지" [ref=e710] [cursor=pointer]:
+                        - img "[컬리멤버스] [압구정주꾸미] 주꾸미 볶음 300g 후기 이미지" [ref=e711]
+                    - generic [ref=e712]:
+                      - generic [ref=e713]:
+                        - generic [ref=e714]: 2026.11.11
+                        - button "신고하기" [ref=e717] [cursor=pointer]
+                      - button "도움돼요" [ref=e718] [cursor=pointer]:
+                        - img [ref=e719]
+                        - generic [ref=e721]: 도움돼요
+              - generic [ref=e722]:
+                - generic [ref=e724]:
+                  - paragraph [ref=e727]: 베스트
+                  - generic [ref=e728]: 이**
+                - article [ref=e729]:
+                  - generic [ref=e730]:
+                    - heading "[압구정주꾸미] 주꾸미 볶음 300g" [level=3] [ref=e732]
+                    - paragraph [ref=e733]: 평소 주꾸미 볶음을 좋아해서 압구정 주꾸미를 주문해 보았습니다. 냉동 상태로 배관되어 있어 보관이 편리하고, 조리 방법도 간단해서 누구나 쉽게 즐길 수 있습니다 주꾸미는 신선하고 탱글탱글하며, 양념은 매콤달콤하면서도 감칠맛이 일품입니다. 콩나물이나 삼겹살 등 다양한 재료를 추가하여 취향에 맞게 즐길 수 있으며, 밥 반찬이나 술 안주로도 손색이 없습니다 특히, 주꾸미의 쫄깃한 식감과 양념의 조화가 뛰어나서 한 번 맛보면 멈출 수 없는 매력이 있습니다. 가성비도 훌륭하여 부담 없이 즐길 수 있으며, 캠핑이나 여행 시에도 유용하게 활용할 수 있습니다 주꾸미 볶음을 좋아하는 분들에게 압구정 주꾸미를 강력하게 추천합니다. 신선한 재료와 맛있는 양념, 간편한 조리 방법까지 모두 갖춘 완벽한 제품입니다
+                    - generic [ref=e734]:
+                      - button "[압구정주꾸미] 주꾸미 볶음 300g 후기 이미지" [ref=e735] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 300g 후기 이미지" [ref=e736]
+                      - button "[압구정주꾸미] 주꾸미 볶음 300g 후기 이미지" [ref=e737] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 300g 후기 이미지" [ref=e738]
+                      - button "[압구정주꾸미] 주꾸미 볶음 300g 후기 이미지" [ref=e739] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 300g 후기 이미지" [ref=e740]
+                      - button "[압구정주꾸미] 주꾸미 볶음 300g 후기 이미지" [ref=e741] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 300g 후기 이미지" [ref=e742]
+                      - button "[압구정주꾸미] 주꾸미 볶음 300g 후기 이미지" [ref=e743] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 300g 후기 이미지" [ref=e744]
+                    - generic [ref=e745]:
+                      - generic [ref=e746]:
+                        - generic [ref=e747]: 2026.08.23
+                        - button "신고하기" [ref=e750] [cursor=pointer]
+                      - button "도움돼요 12" [ref=e751] [cursor=pointer]:
+                        - img [ref=e752]
+                        - generic [ref=e754]: 도움돼요 12
+              - generic [ref=e755]:
+                - generic [ref=e757]:
+                  - paragraph [ref=e760]: 멤버스
+                  - generic [ref=e761]: 김**
+                - article [ref=e762]:
+                  - generic [ref=e763]:
+                    - heading "[압구정주꾸미] 주꾸미 볶음 500g" [level=3] [ref=e765]
+                    - paragraph [ref=e766]: 저희 부부 최애템쭈꾸미 오랜만에 주문했어요!!! 쭈꾸미 좋아해서 이것저것 먹어봤는데 컬리 압구정 쭈꾸미는 쭈꾸미도 토실토실 통통하고 무엇보다 양념이 정말 맛있어요❤️ 이번에는 단호박, 양배추, 콩나물, 떡사리까지 듬뿍 넣어 볶아 먹었는데 채소에서 나오는 단맛이 양념이랑 너무 잘 어울리더라고요. 특히 콩나물은 아삭한 식감 덕분에 매운맛도 조금 잡아줘서 꼭 넣는 조합이에요!!! 여기에 대패삼겹살 조금 넣어도 맛있어요~ 마지막 하이라이트는 역시 볶음밥! 남은 양념에 밥 볶아서 들기름 살짝 둘러서 깨 솔솔 뿌려 먹었어요!! 앞으로도 꾸준히 재구매 할 예정인 쭈꾸미랍니다🐙💗
+                    - generic [ref=e767]:
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e768] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e769]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e770] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e771]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e772] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e773]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e774] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e775]
+                    - generic [ref=e776]:
+                      - generic [ref=e777]:
+                        - generic [ref=e778]: 2026.09.24
+                        - button "신고하기" [ref=e781] [cursor=pointer]
+                      - button "도움돼요 8" [ref=e782] [cursor=pointer]:
+                        - img [ref=e783]
+                        - generic [ref=e785]: 도움돼요 8
+              - generic [ref=e786]:
+                - generic [ref=e789]: 이**
+                - article [ref=e790]:
+                  - generic [ref=e791]:
+                    - heading "[압구정주꾸미] 주꾸미 볶음 500g" [level=3] [ref=e793]
+                    - paragraph [ref=e794]: "요즘 날씨도 덥고 입맛도 살짝 떨어질 때, 매콤한 주꾸미 볶음만 한 게 없죠! 오늘은 냉동실에 쟁여둔 밀키트에 냉장고 털이 야채들을 듬뿍 더해, 전문점 부럽지 않은 푸짐한 “대패삼겹 콩나물 주꾸미볶음(쭈삼)”을 만들어 보았습니다. 가족 모두 엄지척하게 만든 초간단 황금 레시피와 솔직한 맛 후기를 공유해 드릴게요. 📌 오늘의 요리 준비물 (재료) • 메인 재료: 압구정 주꾸미 볶음 (500g) 1팩, 대패 삼겹살 먹을 만큼 (300g) • 부재료: 콩나물 크게 한 줌(300g), 양파 1개, 양배추 적당량, 양송이버섯 4~5개 • Tip: 주꾸미 밀키트 자체 양념이 워낙 진하고 맛있어서 야채와 고기를 듬뿍 추가해도 간이 딱 맞아요. 👩‍🍳 맛없을 수가 없는 쭈삼볶음 조리 과정 STEP 1. 부재료 손질하기 가장 먼저 주꾸미에 아삭함과 단맛을 더해줄 야채들을 먹기 좋은 크기로 썰어둡니다. 양파 1개와 식감 좋은 양배추를 썰어두고, 찌개나 볶음에 넣으면 쫄깃하니 맛있는 양송이버섯도 도톰하게 편 썰어 준비했습니다. STEP 2. 대패삼겹살 초벌구이 (잡내 및 기름 제거) 쭈삼을 만들 때 고기를 주꾸미와 처음부터 같이 볶으면 기름이 너무 많이 나오고 고기가 질겨질 수 있어요. 저는 팬에 대패삼겹살을 먼저 바싹 구워준 뒤, 따로 접시에 덜어 기름을 살짝 빼두었습니다. 이렇게 하면 고기 식감도 훨씬 쫄깃하고 전체적인 소스 맛이 깔끔해집니다. STEP 3. 주꾸미와 야채 함께 볶기 오늘의 주인공, 압구정 주꾸미볶음(500g) 등장! 미리 준비해둔 팬에 양배추와 양파를 깔고, 그 위에 해동된 주꾸미를 양념째로 듬뿍 올려줍니다. 주꾸미가 익어가면서 야채에서 기분 좋은 채수가 나와 자작하고 먹음직스러운 비주얼이 나오기 시작해요. 소스가 보글보글 끓을 때쯤 준비한 양송이버섯도 함께 넣어 볶아줍니다. STEP 4. 대패삼겹살과 콩나물 합체! 주꾸미가 통통하게 익어갈 때쯤, 미리 구워둔 대패삼겹살을 올려 양념이 쏙 배어들게 가볍게 섞어줍니다. 마지막 화룡점정으로 깨끗하게 씻어 한번 찐 콩나물을 산처럼 얹어줍니다! 전 쪄서 올렸는데 그냥 씻어서 올려도 됩니다.(콩나물은 너무 오래 익히면 숨이 죽고 질겨지기 때문에, 마지막 단계에 올려 잔열과 양념 스팀으로 아삭하게 익혀주는 게 포인트예요.) 😋 내 손으로 만든 '대패삼겹 콩나물 주꾸미볶음' 맛 평가 • 식감의 대잔치! 통통하고 쫄깃한 주꾸미에 고소한 대패삼겹살, 그리고 마지막에 얹은 콩나물의 아삭함이 입안에서 한데 어우러져 씹는 맛이 예술입니다. • 자연스러운 단맛과 매콤함의 조화 양파와 양배추를 듬뿍 넣었더니 설탕의 인위적인 단맛이 아니라 천연의 부드러운 단맛이 매콤한 주꾸미 양념에 녹아들어 감칠맛이 폭발해요. 중간중간 씹히는 쫄깃한 양송이버섯도 소스를 싹 머금어서 숨은 별미 역할을 톡톡히 합니다. • 압구정 주꾸미 총평 500g이라 주꾸미 양도 꽤 실하고 양념이 아주 넉넉해서 야채와 고기, 콩나물을 잔뜩 추가했는데도 싱거워지지 않고 딱 맛있는 매콤 칼칼함을 유지해 주네요. 캠핑용이나 홈파티 안주로도 정말 손색없을 것 같습니다. 다 먹고 남은 자작한 국물에 김가루랑 참기름 넣고 볶음밥까지 만들어 먹으면 완벽한 마무리인 거 아시죠? 😋 여러분도 냉동실 주꾸미 팩 하나 꺼내서 냉장고 속 야채들과 함께 푸짐한 한 끼 만들어 보세요!"
+                    - generic [ref=e795]:
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e796] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e797]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e798] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e799]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e800] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e801]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e802] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e803]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e804] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e805]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e806] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e807]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e808] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e809]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e810] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e811]
+                    - generic [ref=e812]:
+                      - generic [ref=e813]:
+                        - generic [ref=e814]: 2026.07.15
+                        - button "신고하기" [ref=e817] [cursor=pointer]
+                      - button "도움돼요 74" [ref=e818] [cursor=pointer]:
+                        - img [ref=e819]
+                        - generic [ref=e821]: 도움돼요 74
+              - generic [ref=e822]:
+                - generic [ref=e824]:
+                  - paragraph [ref=e827]: 멤버스
+                  - generic [ref=e828]: 송**
+                - article [ref=e829]:
+                  - generic [ref=e830]:
+                    - heading "[압구정주꾸미] 주꾸미 볶음 500g" [level=3] [ref=e832]
+                    - paragraph [ref=e833]: 매콤한 게 땡겨서 주문했던 쭈꾸미볶음입니다 생각보다 고퀄이라 놀랬어요 실한 쭈꾸미가 들어있어서 야채만 추가해주면 기깔나는 반찬이 되지요!! 사진을 못 남겼는데 사실 압구정 쭈꾸미는 소스가 킥이랍니다 볶음밥을 해먹어도 맛있지만 맨밥에 쓱쓱 비벼서 다른 반찬 넣고 비빔밥처럼 먹어도 정말 맛있어요 매운 거 못 드시는 분들은 치즈를 녹여 함께 먹는 걸 추천합니다 소면 삶아서 사리 해먹어도 정말 맛있을 것 같아요 가성비 좋게 매콤한 거 드실 분들에게 압구정 쭈꾸미 아주 좋은 선택입니다 술안주, 밥반찬 뭐든 다 잘 어울리는 맛도리아이템!!
+                    - generic [ref=e834]:
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e835] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e836]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e837] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e838]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e839] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e840]
+                      - button "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e841] [cursor=pointer]:
+                        - img "[압구정주꾸미] 주꾸미 볶음 500g 후기 이미지" [ref=e842]
+                    - generic [ref=e843]:
+                      - generic [ref=e844]:
+                        - generic [ref=e845]: 2026.09.26
+                        - button "신고하기" [ref=e848] [cursor=pointer]
+                      - button "도움돼요 1" [ref=e849] [cursor=pointer]:
+                        - img [ref=e850]
+                        - generic [ref=e852]: 도움돼요 1
+              - generic [ref=e853]:
+                - button "이전" [disabled] [ref=e854]:
+                  - generic [ref=e855]: 이전
+                - button "다음" [ref=e856] [cursor=pointer]:
+                  - generic [ref=e858]: 다음
+          - generic [ref=e860]:
+            - button "문의하기" [ref=e862] [cursor=pointer]
+            - generic [ref=e863]:
+              - strong [ref=e864]: 상품 문의
+              - list [ref=e865]:
+                - listitem [ref=e866]: 상품에 대한 문의를 남기는 공간입니다. 해당 게시판의 성격과 다른 글은 사전동의 없이 담당 게시판으로 이동될 수 있습니다.
+                - listitem [ref=e867]:
+                  - text: 배송관련, 주문(취소/교환/환불)관련 문의 및 요청사항은 마이컬리 내
+                  - link "1:1 문의" [ref=e868] [cursor=pointer]:
+                    - /url: /mypage/inquiry/list
+                  - text: 에 남겨주세요.
+            - table [ref=e870]:
+              - rowgroup [ref=e871]:
+                - row "제목 작성자 작성일 답변상태" [ref=e872]:
+                  - columnheader "제목" [ref=e873]
+                  - columnheader "작성자" [ref=e874]
+                  - columnheader "작성일" [ref=e875]
+                  - columnheader "답변상태" [ref=e876]
+              - rowgroup [ref=e877]:
+                - row "‌ ‌ ‌ ‌" [ref=e878]:
+                  - cell "‌" [ref=e879]:
+                    - generic [ref=e881]: ‌
+                  - cell "‌" [ref=e882]:
+                    - generic [ref=e884]: ‌
+                  - cell "‌" [ref=e885]:
+                    - generic [ref=e887]: ‌
+                  - cell "‌" [ref=e888]:
+                    - generic [ref=e890]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e891]:
+                  - cell "‌" [ref=e892]:
+                    - generic [ref=e894]: ‌
+                  - cell "‌" [ref=e895]:
+                    - generic [ref=e897]: ‌
+                  - cell "‌" [ref=e898]:
+                    - generic [ref=e900]: ‌
+                  - cell "‌" [ref=e901]:
+                    - generic [ref=e903]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e904]:
+                  - cell "‌" [ref=e905]:
+                    - generic [ref=e907]: ‌
+                  - cell "‌" [ref=e908]:
+                    - generic [ref=e910]: ‌
+                  - cell "‌" [ref=e911]:
+                    - generic [ref=e913]: ‌
+                  - cell "‌" [ref=e914]:
+                    - generic [ref=e916]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e917]:
+                  - cell "‌" [ref=e918]:
+                    - generic [ref=e920]: ‌
+                  - cell "‌" [ref=e921]:
+                    - generic [ref=e923]: ‌
+                  - cell "‌" [ref=e924]:
+                    - generic [ref=e926]: ‌
+                  - cell "‌" [ref=e927]:
+                    - generic [ref=e929]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e930]:
+                  - cell "‌" [ref=e931]:
+                    - generic [ref=e933]: ‌
+                  - cell "‌" [ref=e934]:
+                    - generic [ref=e936]: ‌
+                  - cell "‌" [ref=e937]:
+                    - generic [ref=e939]: ‌
+                  - cell "‌" [ref=e940]:
+                    - generic [ref=e942]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e943]:
+                  - cell "‌" [ref=e944]:
+                    - generic [ref=e946]: ‌
+                  - cell "‌" [ref=e947]:
+                    - generic [ref=e949]: ‌
+                  - cell "‌" [ref=e950]:
+                    - generic [ref=e952]: ‌
+                  - cell "‌" [ref=e953]:
+                    - generic [ref=e955]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e956]:
+                  - cell "‌" [ref=e957]:
+                    - generic [ref=e959]: ‌
+                  - cell "‌" [ref=e960]:
+                    - generic [ref=e962]: ‌
+                  - cell "‌" [ref=e963]:
+                    - generic [ref=e965]: ‌
+                  - cell "‌" [ref=e966]:
+                    - generic [ref=e968]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e969]:
+                  - cell "‌" [ref=e970]:
+                    - generic [ref=e972]: ‌
+                  - cell "‌" [ref=e973]:
+                    - generic [ref=e975]: ‌
+                  - cell "‌" [ref=e976]:
+                    - generic [ref=e978]: ‌
+                  - cell "‌" [ref=e979]:
+                    - generic [ref=e981]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e982]:
+                  - cell "‌" [ref=e983]:
+                    - generic [ref=e985]: ‌
+                  - cell "‌" [ref=e986]:
+                    - generic [ref=e988]: ‌
+                  - cell "‌" [ref=e989]:
+                    - generic [ref=e991]: ‌
+                  - cell "‌" [ref=e992]:
+                    - generic [ref=e994]: ‌
+                - row "‌ ‌ ‌ ‌" [ref=e995]:
+                  - cell "‌" [ref=e996]:
+                    - generic [ref=e998]: ‌
+                  - cell "‌" [ref=e999]:
+                    - generic [ref=e1001]: ‌
+                  - cell "‌" [ref=e1002]:
+                    - generic [ref=e1004]: ‌
+                  - cell "‌" [ref=e1005]:
+                    - generic [ref=e1007]: ‌
+            - generic [ref=e1009]:
+              - button "이전" [disabled] [ref=e1010]:
+                - generic [ref=e1011]: 이전
+              - button "다음" [disabled] [ref=e1012]:
+                - generic [ref=e1013]: 다음
+      - generic [ref=e1014]:
+        - generic [ref=e1015]:
+          - generic [ref=e1016]:
+            - generic [ref=e1017]:
+              - paragraph [ref=e1018]: 고객행복센터
+              - strong [ref=e1019]: 1644-1107월~토요일 오전 7시 - 오후 6시
+              - generic [ref=e1020]:
+                - generic [ref=e1021]:
+                  - button "카카오톡 문의" [ref=e1022] [cursor=pointer]
+                  - generic [ref=e1023]:
+                    - text: 월~토요일
+                    - img [ref=e1024]
+                    - text: 오전 7시 - 오후 6시
+                    - text: 일/공휴일
+                    - img [ref=e1025]
+                    - text: 오전 7시 - 오후 1시
+                - generic [ref=e1026]:
+                  - button "1:1 문의" [ref=e1027] [cursor=pointer]
+                  - generic [ref=e1028]:
+                    - text: 365일
+                    - text: 고객센터 운영시간에 순차적으로 답변드리겠습니다.
+                - generic [ref=e1029]:
+                  - link "대량주문 문의" [ref=e1030] [cursor=pointer]:
+                    - /url: https://docs.google.com/forms/d/e/1FAIpQLScWcjRuN6eWJK-G8x3NwBfE8IyKZIOq7jhD3fUXuKSWwPqzJw/viewform
+                  - generic [ref=e1031]:
+                    - text: 월~금요일
+                    - img [ref=e1032]
+                    - text: 오전 9시 - 오후 6시
+                    - text: 점심시간
+                    - img [ref=e1033]
+                    - text: 낮 12시 - 오후 1시
+              - generic [ref=e1034]:
+                - text: "비회원 문의 :"
+                - link "help@kurlycorp.com" [ref=e1035] [cursor=pointer]:
+                  - /url: mailto:help@kurlycorp.com
+            - generic [ref=e1036]:
+              - list [ref=e1037]:
+                - listitem [ref=e1038]:
+                  - link "회사소개" [ref=e1039] [cursor=pointer]:
+                    - /url: https://newsroom.kurlycorp.com/
+                - listitem [ref=e1040]:
+                  - link "컬리소개영상" [ref=e1041] [cursor=pointer]:
+                    - /url: https://www.youtube.com/embed/WEep7BcboMQ?rel=0&showinfo=0&wmode=opaque&enablejsapi=1
+                - listitem [ref=e1042]:
+                  - link "투자정보" [ref=e1043] [cursor=pointer]:
+                    - /url: https://newsroom.kurlycorp.com/ir/%ec%9e%ac%eb%ac%b4%ec%a0%95%eb%b3%b4/
+                - listitem [ref=e1044]:
+                  - link "인재채용" [ref=e1045] [cursor=pointer]:
+                    - /url: https://kurly.career.greetinghr.com
+                - listitem [ref=e1046]:
+                  - link "이용약관" [ref=e1047] [cursor=pointer]:
+                    - /url: /user-terms/agreement
+                - listitem [ref=e1048]:
+                  - link "개인정보처리방침" [ref=e1049] [cursor=pointer]:
+                    - /url: https://privacy.kurly.com/kurly/privacypolicy
+                - listitem [ref=e1050]:
+                  - link "이용안내" [ref=e1051] [cursor=pointer]:
+                    - /url: /user-guide
+                - listitem [ref=e1052]:
+                  - link "입점신청" [ref=e1053] [cursor=pointer]:
+                    - /url: https://docs.google.com/forms/d/e/1FAIpQLScKI_Kd1lQAp68r-SIhiOWj0J43C99IvNbgFeT7-X9YLIqteA/viewform?usp=dialog
+              - generic [ref=e1054]:
+                - text: "법인명 (상호) : 주식회사 컬리"
+                - generic [ref=e1055]: "|"
+                - text: "사업자등록번호 : 261-81-23567"
+                - link "사업자정보 확인" [ref=e1056] [cursor=pointer]:
+                  - /url: https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2618123567&apv_perm_no=
+                - text: "통신판매업 : 제 2018-서울강남-01646 호"
+                - text: "주소 : 서울특별시 강남구 테헤란로 133, 18층(역삼동)"
+                - generic [ref=e1057]: "|"
+                - text: "대표이사 : 김슬아"
+                - text: "채용문의 :"
+                - link "recruit@kurlycorp.com" [ref=e1058] [cursor=pointer]:
+                  - /url: mailto:recruit@kurlycorp.com
+                - text: "팩스: 070 - 7500 - 6098"
+              - list [ref=e1059]:
+                - listitem [ref=e1060]:
+                  - link "컬리 인스타그램 바로가기" [ref=e1061] [cursor=pointer]:
+                    - /url: https://instagram.com/marketkurly
+                    - img "컬리 인스타그램 바로가기" [ref=e1062]
+                - listitem [ref=e1063]:
+                  - link "컬리 페이스북 바로가기" [ref=e1064] [cursor=pointer]:
+                    - /url: https://www.facebook.com/marketkurly
+                    - img "컬리 페이스북 바로가기" [ref=e1065]
+                - listitem [ref=e1066]:
+                  - link "컬리 네이버블로그 바로가기" [ref=e1067] [cursor=pointer]:
+                    - /url: https://blog.naver.com/marketkurly
+                    - img "컬리 네이버블로그 바로가기" [ref=e1068]
+                - listitem [ref=e1069]:
+                  - link "컬리 유튜브 바로가기" [ref=e1070] [cursor=pointer]:
+                    - /url: https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg
+                    - img "컬리 유튜브 바로가기" [ref=e1071]
+          - generic [ref=e1072]:
+            - button "isms 로고 [인증범위] 컬리 쇼핑몰 서비스 개발·운영 (심사받지 않은 물리적 인프라 제외) [유효기간] 2025.01.15 ~ 2028.01.14" [ref=e1073] [cursor=pointer]:
+              - img "isms 로고" [ref=e1074]
+              - paragraph [ref=e1075]:
+                - text: "[인증범위] 컬리 쇼핑몰 서비스 개발·운영"
+                - text: (심사받지 않은 물리적 인프라 제외)
+                - text: "[유효기간] 2025.01.15 ~ 2028.01.14"
+            - button "우리은행 로고 고객님이 현금으로 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다." [ref=e1076] [cursor=pointer]:
+              - img "우리은행 로고" [ref=e1077]
+              - paragraph [ref=e1078]:
+                - text: 고객님이 현금으로 결제한 금액에 대해 우리은행과
+                - text: 채무지급보증 계약을 체결하여 안전거래를 보장하고
+                - text: 있습니다.
+        - generic [ref=e1079]:
+          - text: 컬리에서 판매되는 상품 중에는 컬리에 입점한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
+          - text: 마켓플레이스(오픈마켓) 상품의 경우 컬리는 통신판매중개자로서 통신판매의 당사자가 아닙니다. 컬리는 해당 상품의 주문, 품질, 교환/환불 등 의무와 책임을 부담하지 않습니다.
+          - emphasis [ref=e1080]: © KURLY CORP. ALL RIGHTS RESERVED
+      - img "위로가기 아이콘" [ref=e1083]
+  - alert [ref=e1084]: "[압구정주꾸미] 주꾸미 볶음 2종, 택1 - 마켓컬리"
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '../../fixtures/pages';
+  2  | import { products } from '../data/products';
+  3  | 
+  4  | test('상품 상세페이지 진입 확인 @regression', async ({ page, mainPage, searchPage }) => {
+  5  |     // 마켓컬리 메인 페이지 접속
+  6  |     await page.goto('/main');
+  7  |     await page.setViewportSize({ width: 1280, height: 720 });
+  8  | 
+  9  |     // 상품 검색 및 상세페이지 진입
+  10 |     await mainPage.searchGoods(products.banana);
+  11 |     await searchPage.clickFirstGoods();
+  12 | 
+  13 |     // 상품 상세페이지 진입 확인
+  14 |     const productTitle = page.getByText(/바나나/).first();
+> 15 |     await productTitle.waitFor({ state: 'visible', timeout: 5000 });
+     |                        ^ TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+  16 |     await expect(productTitle).toBeVisible();
+  17 | });
+  18 | 
+```

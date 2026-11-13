@@ -1,0 +1,219 @@
+{
+  "testTitle": "상품 상세페이지 진입 확인 @regression",
+  "status": "failed",
+  "expectedStatus": "passed",
+  "url": "https://www.kurly.com/goods/1000185200?collectionCode=sale231107",
+  "pageTitle": "[압구정주꾸미] 주꾸미 볶음 2종, 택1 - 마켓컬리",
+  "classification": {
+    "failureType": "locator-or-wait-condition",
+    "ownerHint": "automation",
+    "recommendedAction": "Check the current DOM and update the Page Object locator or wait condition."
+  },
+  "errorSummary": "TimeoutError: locator.waitFor: Timeout 5000ms exceeded.",
+  "locatorCandidates": [
+    {
+      "role": null,
+      "name": "",
+      "text": "지금 가입하고 최대 1만 2천원 할인 쿠폰 받아가세요!",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "배너 하루 안보기",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "회원가입",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "로그인",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "고객센터",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "마켓컬리",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "뷰티컬리",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "submit",
+      "text": "",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "0",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "카테고리",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "베스트",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "세일",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "패션",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "리빙",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "신상",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "특가/혜택",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "샛별·하루배송안내",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "컬리 고객 제도",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "컬리 큐레이터",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "레시피",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "단독압구정압구정 상품들을 한 자리에1,251",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "찜하기",
+      "text": "1,251",
+      "testId": null
+    },
+    {
+      "role": "presentation",
+      "name": "",
+      "text": "최근 3개월간 60,562명이 재구매했어요",
+      "testId": null
+    },
+    {
+      "role": "status",
+      "name": "",
+      "text": "최근 3개월간 60,562명이 재구매했어요",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "수산가공품1위",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "수산가공품1위",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "압구정",
+      "text": "압구정",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "후기 134,767건",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "9,900원",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "첫구매 최대혜택가",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "61%3,850원첫구매 앱 전용가앱 열기",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "11월 푸드 브랜드위크 쿠폰팩 받기",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "",
+      "text": "상품을 선택해주세요",
+      "testId": null
+    },
+    {
+      "role": null,
+      "name": "찜하기",
+      "text": "",
+      "testId": null
+    }
+  ]
+}
